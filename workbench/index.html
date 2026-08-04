@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="智智"/>
+<meta name="theme-color" content="#29b6f6"/>
+<meta name="description" content="智智的幼儿早教工作台 - 认物认知、语言表达、数理思维、英语启蒙、生活常识等多领域学习"/>
+<link rel="manifest" href="manifest.json"/>
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+<link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png"/>
+<link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"/>
+<title>智智 - 幼儿早教工作台</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+html,body{margin:0;padding:0;height:100%;overflow:hidden;background:#f0f7ff}
+#app{height:100%;display:flex;flex-direction:column;max-width:768px;margin:0 auto;background:#fff;position:relative}
+
+/* 横屏适配：侧边栏 + 主内容左右布局 */
+@media (orientation: landscape) and (max-height: 500px) {
+  #app{max-width:100%;flex-direction:row}
+  .topbar{position:absolute;top:0;left:0;right:0;z-index:1000}
+  .brandbar{display:none}
+  .main{flex:1;display:flex;flex-direction:row;margin-top:52px;height:calc(100% - 52px)}
+  .sidebar{width:120px;flex-direction:column;height:100%;overflow-y:auto;padding-top:8px}
+  .menu-item{flex-direction:column;align-items:center;padding:8px 4px}
+  .menu-ic{font-size:22px;margin-right:0;margin-bottom:2px}
+  .menu-tx{font-size:11px}
+  .content{flex:1;height:100%;overflow-y:auto}
+  .tabs{position:sticky;top:0;z-index:100;background:#fff;padding-top:8px}
+}
+
+/* 顶部栏 */
+.topbar{background:linear-gradient(180deg,#4fc3f7,#29b6f6);color:#fff;padding:8px 12px;display:flex;align-items:center;gap:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:100}
+.top-home{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;background:rgba(255,255,255,.2)}
+.top-url{flex:1;background:rgba(255,255,255,.25);border-radius:18px;padding:6px 12px;font-size:13px;display:flex;align-items:center;gap:6px;color:#fff;backdrop-filter:blur(4px)}
+.top-icons{display:flex;align-items:center;gap:12px}
+.top-icon{display:flex;align-items:center;gap:3px;font-size:13px;font-weight:700;cursor:pointer;position:relative}
+.top-icon.star{color:#FFD700;text-shadow:0 0 3px rgba(0,0,0,.2)}
+.sync-dot{position:absolute;top:-4px;right:-4px;width:8px;height:8px;background:#ff5252;border-radius:50%;border:2px solid #4fc3f7}
+
+/* 品牌标题 */
+.brandbar{background:#f8fbff;padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #e3f2fd}
+.brand-ic{font-size:28px}
+.brand-name{font-size:20px;font-weight:800;color:#333}
+.brand-tag{margin-left:auto;font-size:12px;color:#666;background:#e3f2fd;padding:4px 10px;border-radius:12px}
+
+/* 主体布局 */
+.main{flex:1;display:flex;overflow:hidden}
+.sidebar{width:76px;background:linear-gradient(180deg,#e1f5fe,#f0f7ff);overflow-y:auto;overflow-x:hidden;border-right:1px solid #e3f2fd;padding:8px 0;display:flex;flex-direction:column;gap:6px}
+.menu-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;cursor:pointer;border-radius:12px;margin:0 6px;transition:all .2s;position:relative}
+.menu-item:active{transform:scale(.92);background:#b3e5fc!important}
+.menu-item.active{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.menu-item.active{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.menu-item.active::before{content:'';position:absolute;left:-6px;top:50%;transform:translateY(-50%);width:4px;height:24px;background:#29b6f6;border-radius:0 4px 4px 0}
+.menu-ic{font-size:24px}
+.menu-tx{font-size:10px;font-weight:700;color:#555;text-align:center;line-height:1.2;max-width:100%}
+.menu-item.active .menu-tx{color:#0288d1}
+
+.content{flex:1;overflow-y:auto;overflow-x:hidden;background:#f8fbff;padding:12px;position:relative}
+
+/* 通用卡片 */
+.card{background:#fff;border-radius:16px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.05);margin-bottom:12px}
+.card-hd{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.card-icon{font-size:24px}
+.card-title{font-size:18px;font-weight:800;color:#333;flex:1}
+.card-tag{font-size:11px;color:#666;background:#f0f4f8;padding:3px 8px;border-radius:10px}
+
+/* 子标签 */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{background:#fff;border:1px solid #e0e0e0;border-radius:20px;padding:8px 14px;font-size:13px;font-weight:700;color:#666;cursor:pointer;display:flex;align-items:center;gap:4px;transition:all .2s}
+.tab:active{transform:scale(.95)}
+.tab.active{background:#29b6f6;color:#fff;border-color:#29b6f6}
+
+/* 顶部进度 */
+.prog-hd{display:flex;justify-content:flex-start;align-items:center;gap:6px;margin-bottom:10px;font-size:14px;color:#666}
+.prog-hd b{color:#29b6f6}
+
+/* 物品卡片 */
+.item-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.item-card{background:#fff;border:1px solid #e8f0f8;border-radius:16px;padding:12px;text-align:center;position:relative}
+.item-emoji{font-size:48px;margin-bottom:6px;display:flex;align-items:center;justify-content:center;min-height:52px}
+.item-emoji svg{width:48px;height:48px}
+.item-name{font-size:17px;font-weight:800;color:#333}
+.item-pinyin{font-size:13px;color:#888;margin-top:2px}
+.item-desc{font-size:12px;color:#999;margin-top:4px}
+.sound-btn{width:32px;height:32px;border-radius:50%;border:2px solid #29b6f6;background:#fff;color:#29b6f6;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;margin:8px auto 0;transition:all .2s}
+.sound-btn:active{transform:scale(.9);background:#29b6f6;color:#fff}
+
+/* 古诗卡片 */
+.poem-card{background:linear-gradient(180deg,#fff,#f8fbff);border:1px dashed #b3e5fc;border-radius:18px;padding:16px;margin-bottom:12px;text-align:center}
+.poem-title{font-size:20px;font-weight:800;color:#333}
+.poem-author{font-size:13px;color:#888;margin:4px 0 12px}
+.poem-lines{font-size:18px;line-height:2;color:#444;font-weight:500}
+.poem-mean{font-size:13px;color:#666;background:#fff3e0;border-radius:10px;padding:10px;margin:12px 0;text-align:left;line-height:1.6}
+.poem-btns{display:flex;gap:10px;justify-content:center}
+.btn-primary{background:#29b6f6;color:#fff;border:none;border-radius:20px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;transition:transform .1s}
+.btn-primary:active{transform:scale(.95)}
+.btn-gold{background:#ffc107;color:#333;border:none;border-radius:20px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;transition:transform .1s}
+.btn-gold:active{transform:scale(.95)}
+.btn-gold:disabled{background:#e0e0e0;color:#999}
+
+/* 数理思维点数 */
+.count-item{background:#e8f5e9;border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.count-num{font-size:40px;font-weight:800;color:#2e7d32;width:50px;text-align:center}
+.count-emoji{font-size:32px}
+.count-text{flex:1;font-size:15px;font-weight:700;color:#333}
+
+/* 英语卡片 */
+.en-card{background:#fff;border:1px solid #e8f0f8;border-radius:16px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.en-emoji{font-size:42px}
+.en-info{flex:1}
+.en-word{font-size:22px;font-weight:800;color:#1565c0}
+.en-cn{font-size:14px;color:#666}
+.en-sound{width:36px;height:36px;border-radius:50%;border:2px solid #29b6f6;background:#fff;color:#29b6f6;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all .2s}
+.en-sound:active{transform:scale(.9);background:#29b6f6;color:#fff}
+
+/* 字母卡片 */
+.letter-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.letter-card{background:#fff;border:1px solid #e8f0f8;border-radius:18px;padding:14px;text-align:center}
+.letter-big{font-size:42px;font-weight:800;color:#1565c0}
+.letter-word{font-size:16px;font-weight:700;color:#333}
+.letter-cn{font-size:12px;color:#888}
+.letter-emoji{font-size:36px;margin:6px 0}
+.letter-btns{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.letter-btn{width:36px;height:36px;border-radius:50%;border:2px solid #29b6f6;background:#fff;color:#29b6f6;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer}
+.letter-btn.done{background:#29b6f6;color:#fff}
+
+/* 数字卡片 */
+.num-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.num-card{background:#fff;border:1px solid #e8f0f8;border-radius:14px;padding:10px 4px;text-align:center;position:relative;cursor:pointer;transition:transform .1s}
+.num-card:active{transform:scale(.95)}
+.num-card.done{background:#e8f5e9;border-color:#4caf50}
+.num-num{font-size:22px;font-weight:800;color:#333}
+.num-num.done{color:#2e7d32}
+.num-emoji{font-size:22px;margin-top:2px}
+.num-check{position:absolute;top:2px;right:2px;font-size:12px;color:#4caf50;display:none}
+.num-card.done .num-check{display:block}
+
+/* 儿歌 */
+.song-item{background:#fce4ec;border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.song-info{flex:1}
+.song-name{font-size:16px;font-weight:800;color:#880e4f}
+.song-desc{font-size:12px;color:#9e9e9e;margin-top:2px}
+.song-play{width:42px;height:42px;border-radius:50%;background:#ff9800;color:#fff;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .1s}
+.song-play:active{transform:scale(.9)}
+
+/* 美术方格 */
+.art-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px}
+.art-item{background:#fff;border:1px solid #e8f0f8;border-radius:14px;padding:12px 6px;text-align:center;cursor:pointer;transition:all .2s}
+.art-item:active{transform:scale(.95)}
+.art-emoji{font-size:28px;margin-bottom:4px}
+.art-name{font-size:12px;font-weight:700;color:#333;line-height:1.3}
+
+/* 生活常识 */
+.life-item{background:#fff;border:1px solid #e8f0f8;border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.life-ic{font-size:32px;width:42px;text-align:center}
+.life-info{flex:1}
+.life-title{font-size:15px;font-weight:800;color:#333}
+.life-desc{font-size:12px;color:#888;margin-top:2px}
+.life-check{width:32px;height:32px;border-radius:50%;border:2px solid #bdbdbd;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;transition:all .2s}
+.life-check.done{background:#4caf50;border-color:#4caf50}
+
+/* 打卡 */
+.check-row{background:#fff;border:1px solid #e8f0f8;border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.check-ic{font-size:28px}
+.check-info{flex:1}
+.check-name{font-size:15px;font-weight:800;color:#333}
+.check-prog{font-size:13px;color:#888;margin-top:3px}
+.check-status{font-size:13px;font-weight:700;color:#29b6f6;white-space:nowrap}
+.check-status.done{color:#4caf50}
+.check-btn{background:#ffc107;color:#333;border:none;border-radius:16px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer;transition:transform .1s;white-space:nowrap}
+.check-btn:active{transform:scale(.95)}
+.check-btn.done{background:#e0e0e0;color:#999}
+
+/* 日历 */
+.cal-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cal-nav{background:#fff;border:1px solid #e0e0e0;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px}
+.cal-title{font-size:16px;font-weight:800}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;border-radius:10px;background:#fff;color:#333}
+.cal-day.hd{color:#999;background:transparent}
+.cal-day.today{background:#29b6f6;color:#fff}
+.cal-day.checked{background:#e8f5e9;color:#2e7d32;border:2px solid #4caf50}
+
+/* 奖励兑换 */
+.shop-item{background:#fffde7;border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.shop-name{flex:1;font-size:15px;font-weight:800;color:#333;display:flex;align-items:center;gap:8px}
+.shop-ic{font-size:26px}
+.shop-price{font-size:14px;font-weight:700;color:#ff9800;white-space:nowrap}
+.shop-btn{background:#ffc107;color:#333;border:none;border-radius:16px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .1s}
+.shop-btn:active{transform:scale(.95)}
+.shop-btn:disabled{background:#e0e0e0;color:#999}
+
+/* 统计 */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.stat-card{background:linear-gradient(180deg,#fff,#f0f7ff);border:1px solid #e3f2fd;border-radius:16px;padding:14px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:#29b6f6}
+.stat-label{font-size:12px;color:#666;margin-top:4px}
+.progress-item{margin-bottom:12px}
+.progress-hd{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+.progress-bar{height:10px;background:#e0e0e0;border-radius:5px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#29b6f6,#4fc3f7);border-radius:5px;transition:width .3s}
+
+/* 运动卡片 */
+.sport-card{background:#fff;border-radius:18px;overflow:hidden;margin-bottom:12px;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid #e8f0f8}
+.sport-top{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;transition:background .2s}
+.sport-top:active{background:#f0f7ff}
+.sport-emoji{font-size:42px;min-width:52px;text-align:center}
+.sport-info{flex:1}
+.sport-name{font-size:17px;font-weight:800;color:#333}
+.sport-tag{font-size:12px;color:#666;margin-top:2px}
+.sport-star{color:#FFD700;font-size:16px;font-weight:800}
+.sport-expand{width:100%;overflow:hidden;max-height:0;transition:max-height .35s ease}
+.sport-expand.open{max-height:600px}
+.sport-body{padding:0 14px 14px}
+.sport-step{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:14px;color:#444;line-height:1.7}
+.sport-step-num{width:22px;height:22px;border-radius:50%;background:#29b6f6;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.sport-actions{display:flex;gap:8px;margin-top:10px}
+.sport-btn{flex:1;border:none;border-radius:18px;padding:10px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .1s;display:flex;align-items:center;justify-content:center;gap:4px}
+.sport-btn:active{transform:scale(.95)}
+.sport-btn-play{background:#e3f2fd;color:#1565c0}
+.sport-btn-done{background:#ffc107;color:#333}
+.sport-btn-done.done{background:#e0e0e0;color:#999}
+.sport-timer{background:#fff3e0;border-radius:12px;padding:10px;text-align:center;margin-bottom:10px;font-size:14px;color:#e65100;font-weight:700}
+.sport-timer .big{font-size:36px;display:block}
+
+/* Toast */
+.toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)scale(.9);background:rgba(0,0,0,.78);color:#fff;padding:14px 24px;border-radius:18px;font-size:14px;font-weight:700;z-index:1000;opacity:0;pointer-events:none;transition:all .25s;text-align:center;white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,-50%)scale(1)}
+
+/* 动画 */
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+.pop-anim{animation:pop .3s}
+
+/* 植物大战僵尸游戏 - 塔防 */
+/* 植物大战僵尸 - 学习答题游戏 */
+.game-scene{background:linear-gradient(180deg,#a5d6a7,#81c784);border-radius:20px;padding:20px 16px;position:relative;overflow:hidden;min-height:300px}
+.game-lawn{background:linear-gradient(180deg,#8bc34a 0%,#689f38 50%,#558b2f 100%);border-radius:14px;padding:16px;position:relative;min-height:120px;margin-bottom:12px}
+.game-path{height:60px;background:rgba(0,0,0,.1);border-radius:30px;position:relative;overflow:hidden;margin:8px 0}
+.game-zombie-move{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;transition:left .6s ease;z-index:3;filter:drop-shadow(0 3px 6px rgba(0,0,0,.4))}
+.game-zombie-move.hit{animation:zombieShake .3s ease}
+.game-zombie-move.defeat{animation:zombieDefeat .6s ease forwards}
+@keyframes zombieShake{0%,100%{transform:translateY(-50%)}25%{transform:translateY(-60%) rotate(-10deg)}75%{transform:translateY(-40%) rotate(10deg)}}
+@keyframes zombieDefeat{0%{opacity:1;transform:translateY(-50%) scale(1)}100%{opacity:0;transform:translateY(-90%) scale(.3)}}
+.game-plant-def{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:36px;z-index:4;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+.game-plant-def.shoot{animation:plantShoot .3s ease}
+@keyframes plantShoot{0%,100%{transform:translateY(-50%)}50%{transform:translateY(-60%) scale(1.1)}}
+.game-question{background:rgba(255,255,255,.95);border-radius:16px;padding:14px 16px;text-align:center;margin-bottom:10px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.game-question .q-emoji{font-size:48px;display:block;margin-bottom:4px}
+.game-question .q-text{font-size:18px;font-weight:800;color:#333}
+.game-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.game-option{background:#fff;border:2px solid #e0e0e0;border-radius:14px;padding:12px;font-size:18px;font-weight:700;color:#333;cursor:pointer;text-align:center;transition:all .15s;user-select:none}
+.game-option:active{transform:scale(.95)}
+.game-option.correct{background:#c8e6c9!important;border-color:#4caf50!important;color:#2e7d32!important;animation:pop .3s}
+.game-option.wrong{background:#ffcdd2!important;border-color:#ef5350!important;color:#c62828!important;animation:shakeX .3s}
+@keyframes shakeX{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.game-hud-bar{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.9);border-radius:14px;padding:8px 14px;margin-bottom:8px;font-size:14px;font-weight:700}
+.game-hud-item{display:flex;align-items:center;gap:4px}
+.game-start{background:linear-gradient(135deg,#66bb6a,#43a047);border-radius:20px;padding:30px;text-align:center;color:#fff}
+.game-start h2{font-size:24px;margin:0 0 8px}
+.game-start p{font-size:14px;opacity:.9;margin:0 0 20px}
+.game-btn{background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.5);border-radius:16px;padding:14px 24px;font-size:16px;font-weight:700;color:#fff;cursor:pointer;transition:all .2s;display:inline-block}
+.game-btn:active{transform:scale(.95)}
+.game-over{background:rgba(0,0,0,.7);border-radius:20px;padding:30px;text-align:center;color:#fff}
+.game-over h2{font-size:28px;margin:0 0 10px}
+.game-win{background:linear-gradient(135deg,#ffc107,#ff9800);border-radius:20px;padding:30px;text-align:center;color:#fff}
+.game-win h2{font-size:24px;margin:0 0 8px}
+</style>
+<script src="https://beacon.cdn.qq.com/sdk/4.5.9/beacon_web.min.js"></script>
+<script>
+(function(){
+  try{
+    var beacon=new BeaconAction({
+      appkey:'0WEB06U85YBSLJNL',
+      versionCode:'1.0.0',
+      channelID:'share',
+      delay:1000,
+      sessionDuration:30*60*1000,
+      isOversea:false,
+      needReportRqdEvent:false
+    });
+    beacon.onDirectUserAction('preview_page_view',{
+      'url':location.href,
+      'referrer':document.referrer,
+      'title':document.title,
+      'sandbox_id':'bb51d85db7804167b51be3f04059c67b'
+    });
+  }catch(e){}
+})();
+</script></head>
+<body>
+<div id="app">
+  <div class="topbar">
+    <div class="top-home" onclick="goHome()">🏠</div>
+    <div class="top-url">🔒 cloudstudio.club</div>
+    <div style="flex:1"></div>
+    <div class="top-icons">
+      <div class="top-icon star">⭐ <span id="topStars">6</span></div>
+      <div class="top-icon">📝 <span id="topDays">0</span>天</div>
+      <div class="top-icon" onclick="syncAll()" id="syncBtn">📱<span id="syncBadge" style="display:none" class="sync-dot"></span></div>
+    </div>
+  </div>
+  <div class="brandbar">
+    <span class="brand-ic">🐮</span>
+    <span class="brand-name">智智</span>
+    <span class="brand-tag" id="brandTag">科学认知</span>
+  </div>
+  <div class="main">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ============ 数据 ============
+const menuItems=[
+  {id:'renwu',name:'认物认知',icon:'🐘',tag:'科学认知',tabs:['动物','水果','蔬菜'],total:64},
+  {id:'yuyan',name:'语言表达',icon:'💬',tag:'语言领域',tabs:['古诗','儿歌','看图说话'],total:101},
+  {id:'shuli',name:'数理思维',icon:'🔢',tag:'科学·数学',tabs:['点数','对比','形状'],total:31},
+  {id:'yingyu',name:'英语启蒙',icon:'🔤',tag:'语言领域',tabs:['单词','短句'],total:65},
+  {id:'zimu',name:'字母认识',icon:'🆎',tag:'语言·字母',tabs:['大写字母','小写字母','字母表'],total:52},
+  {id:'shuzi',name:'数字1-100',icon:'🔢',tag:'科学·数学',tabs:['1-20','21-50','51-100'],total:100},
+  {id:'yinyue',name:'音乐律动',icon:'🎵',tag:'艺术·音乐',tabs:['儿歌','节奏感知','律动舞蹈'],total:20},
+  {id:'meishu',name:'美术创作',icon:'🎨',tag:'艺术·美术',tabs:['全部'],total:8},
+  {id:'shenghuo',name:'生活常识',icon:'🏠',tag:'健康·社会',tabs:['运动','自理','安全','情绪'],total:36},
+  {id:'game',name:'植物大战僵尸',icon:'🌻',tag:'闯关游戏',tabs:['开始游戏'],total:1},
+  {id:'checkin',name:'每日打卡',icon:'📅',tag:'打卡日历',tabs:['7月'],total:0},
+  {id:'shop',name:'奖励兑换',icon:'🎁',tag:'积分商城',tabs:['全部'],total:0},
+  {id:'stats',name:'学习统计',icon:'📊',tag:'数据面板',tabs:['全部'],total:0}
+];
+
+const renwuData={
+  animal:[
+    {n:'猫',p:'māo',e:'🐱',d:'小花猫'},{n:'狗',p:'gǒu',e:'🐶',d:'小狗跑'},
+    {n:'大象',p:'dà xiàng',e:'🐘',d:'长鼻子'},{n:'兔子',p:'tù zi',e:'🐰',d:'长耳朵'},
+    {n:'小鸟',p:'xiǎo niǎo',e:'🐦',d:'会唱歌'},{n:'鱼',p:'yú',e:'🐟',d:'水中游'},
+    {n:'熊猫',p:'xióng māo',e:'🐼',d:'吃竹子'},{n:'狮子',p:'shī zi',e:'🦁',d:'森林王'},
+    {n:'老虎',p:'lǎo hǔ',e:'🐯',d:'大老虎'},{n:'长颈鹿',p:'cháng jǐng lù',e:'🦒',d:'长脖子'},
+    {n:'猴子',p:'hóu zi',e:'🐒',d:'爬树高手'},{n:'奶牛',p:'nǎi niú',e:'🐄',d:'产牛奶'},
+    {n:'青蛙',p:'qīng wā',e:'🐸',d:'呱呱叫'},{n:'海豚',p:'hǎi tún',e:'🐬',d:'会表演'},
+    {n:'企鹅',p:'qǐ é',e:'🐧',d:'摇摇摆摆'},{n:'蝴蝶',p:'hú dié',e:'🦋',d:'花蝴蝶'},
+    {n:'蜜蜂',p:'mì fēng',e:'🐝',d:'采花蜜'},{n:'鲸鱼',p:'jīng yú',e:'🐋',d:'大海里游'},
+    {n:'马',p:'mǎ',e:'🐴',d:'跑得快'},{n:'乌龟',p:'wū guī',e:'🐢',d:'慢慢爬'},
+    {n:'鹦鹉',p:'yīng wǔ',e:'🦜',d:'会说话'},{n:'猫头鹰',p:'māo tóu yīng',e:'🦉',d:'大眼睛'},
+    {n:'孔雀',p:'kǒng què',e:'🦚',d:'开屏漂亮'},{n:'变色龙',p:'biàn sè lóng',e:'🦎',d:'会变色'},
+  ],
+  fruit:[
+    {n:'苹果',p:'píng guǒ',e:'🍎',d:'红苹果'},{n:'香蕉',p:'xiāng jiāo',e:'🍌',d:'黄香蕉'},
+    {n:'橘子',p:'jú zi',e:'🍊',d:'甜橘子'},{n:'葡萄',p:'pú tao',e:'🍇',d:'紫葡萄'},
+    {n:'西瓜',p:'xī guā',e:'🍉',d:'大西瓜'},{n:'草莓',p:'cǎo méi',e:'🍓',d:'小草莓'},
+    {n:'桃子',p:'táo zi',e:'🍑',d:'水蜜桃'},{n:'梨',p:'lí',e:'🍐',d:'黄梨'},
+    {n:'樱桃',p:'yīng táo',e:'🍒',d:'红樱桃'},{n:'芒果',p:'máng guǒ',e:'🥭',d:'热带水果'},
+    {n:'菠萝',p:'bō luó',e:'🍍',d:'带刺的'},{n:'柠檬',p:'níng méng',e:'🍋',d:'酸酸的'},
+    {n:'猕猴桃',p:'mí hóu táo',e:'🥝',d:'绿果肉'},{n:'蓝莓',p:'lán méi',e:'🫐',d:'小蓝果'},
+    {n:'石榴',p:'shí liú',e:'<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\"><circle cx=\"22\" cy=\"26\" r=\"15\" fill=\"#e74c3c\" stroke=\"#c0392b\" stroke-width=\"2\"/><circle cx=\"22\" cy=\"26\" r=\"8\" fill=\"#f5c6cb\" opacity=\"0.6\"/><circle cx=\"15\" cy=\"22\" r=\"3\" fill=\"#f9d5d5\" opacity=\"0.8\"/><circle cx=\"26\" cy=\"18\" r=\"3\" fill=\"#f9d5d5\" opacity=\"0.8\"/><circle cx=\"30\" cy=\"26\" r=\"3\" fill=\"#f9d5d5\" opacity=\"0.8\"/><line x1=\"22\" y1=\"11\" x2=\"22\" y2=\"4\" stroke=\"#795548\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M22 4 Q20 0 18 4\" stroke=\"#795548\" stroke-width=\"2\" fill=\"none\"/></svg>',d:'红宝石'},{n:'荔枝',p:'lì zhī',e:'<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\"><circle cx=\"18\" cy=\"24\" r=\"11\" fill=\"#d32f2f\" stroke=\"#b71c1c\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"20\" r=\"10\" fill=\"#e53935\" stroke=\"#c62828\" stroke-width=\"2\"/><circle cx=\"24\" cy=\"30\" r=\"9\" fill=\"#ef5350\" stroke=\"#c62828\" stroke-width=\"2\"/><line x1=\"24\" y1=\"10\" x2=\"24\" y2=\"4\" stroke=\"#795548\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><ellipse cx=\"16\" cy=\"7\" rx=\"6\" ry=\"3\" fill=\"#66bb6a\" stroke=\"#43a047\" stroke-width=\"1.5\"/><ellipse cx=\"30\" cy=\"7\" rx=\"5\" ry=\"2.5\" fill=\"#81c784\" stroke=\"#43a047\" stroke-width=\"1\"/><line x1=\"18\" y1=\"10\" x2=\"16\" y2=\"7\" stroke=\"#558b2f\" stroke-width=\"1.5\"/><line x1=\"26\" y1=\"10\" x2=\"30\" y2=\"7\" stroke=\"#558b2f\" stroke-width=\"1.5\"/></svg>',d:'白果肉'},
+    {n:'火龙果',p:'huǒ lóng guǒ',e:'<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\"><ellipse cx=\"22\" cy=\"26\" rx=\"13\" ry=\"15\" fill=\"#e91e63\" stroke=\"#c2185b\" stroke-width=\"2.5\"/><path d=\"M14 16 L10 4 L16 14\" stroke=\"#4caf50\" stroke-width=\"2\" fill=\"#66bb6a\"/><path d=\"M22 12 L22 0\" stroke=\"#4caf50\" stroke-width=\"2\"/><path d=\"M30 16 L34 4 L28 14\" stroke=\"#4caf50\" stroke-width=\"2\" fill=\"#66bb6a\"/><path d=\"M18 18 L22 6\" stroke=\"#4caf50\" stroke-width=\"1.5\"/><path d=\"M26 18 L22 6\" stroke=\"#4caf50\" stroke-width=\"1.5\"/><circle cx=\"22\" cy=\"26\" r=\"7\" fill=\"#fff\" opacity=\"0.5\"/><circle cx=\"18\" cy=\"24\" r=\"1.5\" fill=\"#333\"/><circle cx=\"22\" cy=\"30\" r=\"1.5\" fill=\"#333\"/><circle cx=\"26\" cy=\"24\" r=\"1.5\" fill=\"#333\"/></svg>',d:'红皮白肉'},{n:'榴莲',p:'liú lián',e:'<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\"><ellipse cx=\"22\" cy=\"26\" rx=\"13\" ry=\"12\" fill=\"#9ccc65\" stroke=\"#689f38\" stroke-width=\"2\"/><line x1=\"22\" y1=\"14\" x2=\"22\" y2=\"6\" stroke=\"#795548\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M22 14 L17 7 L27 7 Z\" fill=\"#66bb6a\"/><polygon points=\"9,18 5,13 13,15\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"35,18 39,13 31,15\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"7,28 2,25 10,24\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"37,28 42,25 34,24\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"13,38 8,42 16,38\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"31,38 36,42 28,38\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"22,40 20,45 24,45\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"22,13 20,9 24,9\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"14,22 10,19 15,18\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/><polygon points=\"30,22 34,19 29,18\" fill=\"#ffd54f\" stroke=\"#f9a825\" stroke-width=\"1\"/></svg>',d:'水果之王'},
+    {n:'椰子',p:'yē zi',e:'🥥',d:'长在树上'},{n:'哈密瓜',p:'hā mì guā',e:'🍈',d:'甜瓜'},
+  ],
+  vegetable:[
+    {n:'白菜',p:'bái cài',e:'🥬',d:'大白菜'},{n:'胡萝卜',p:'hú luó bo',e:'🥕',d:'胡萝卜汁'},
+    {n:'西红柿',p:'xī hóng shì',e:'🍅',d:'番茄酱'},{n:'玉米',p:'yù mǐ',e:'🌽',d:'玉米棒'},
+    {n:'土豆',p:'tǔ dòu',e:'🥔',d:'土豆泥'},{n:'蘑菇',p:'mó gu',e:'🍄',d:'蘑菇汤'},
+    {n:'辣椒',p:'là jiāo',e:'🌶️',d:'红辣椒'},{n:'黄瓜',p:'huáng guā',e:'🥒',d:'黄瓜条'},
+    {n:'茄子',p:'qié zi',e:'🍆',d:'紫茄子'},{n:'西兰花',p:'xī lán huā',e:'🥦',d:'绿色蔬菜'},
+    {n:'南瓜',p:'nán guā',e:'🎃',d:'大南瓜'},{n:'洋葱',p:'yáng cōng',e:'🧅',d:'会流泪'},
+    {n:'大蒜',p:'dà suàn',e:'🧄',d:'杀菌'},{n:'红薯',p:'hóng shǔ',e:'🍠',d:'烤红薯'},
+    {n:'豌豆',p:'wān dòu',e:'🫛',d:'绿豌豆'},{n:'莲藕',p:'lián ǒu',e:'🪷',d:'有孔'},
+    {n:'芹菜',p:'qín cài',e:'🥬',d:'脆脆的'},{n:'青椒',p:'qīng jiāo',e:'🫑',d:'灯笼椒'},
+    {n:'冬瓜',p:'dōng guā',e:'<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\"><rect x=\"6\" y=\"16\" width=\"32\" height=\"22\" rx=\"10\" fill=\"#a5d6a7\" stroke=\"#66bb6a\" stroke-width=\"2.5\"/><line x1=\"22\" y1=\"16\" x2=\"22\" y2=\"38\" stroke=\"#81c784\" stroke-width=\"1.5\" opacity=\"0.5\"/><path d=\"M12 27 Q22 24 32 27\" stroke=\"#81c784\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/><path d=\"M12 20 Q22 17 32 20\" stroke=\"#81c784\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/><line x1=\"22\" y1=\"16\" x2=\"22\" y2=\"6\" stroke=\"#795548\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"22\" cy=\"5\" r=\"2.5\" fill=\"#ffcc02\"/></svg>',d:'大冬瓜'},{n:'豆芽',p:'dòu yá',e:'🌱',d:'黄豆芽'},
+  ],
+  people:[
+    {n:'爸爸',p:'bà ba',e:'👨',d:'好爸爸'},{n:'妈妈',p:'mā ma',e:'👩',d:'好妈妈'},
+    {n:'爷爷',p:'yé ye',e:'👴',d:'白胡子'},{n:'奶奶',p:'nǎi nai',e:'👵',d:'慈祥的'},
+    {n:'哥哥',p:'gē ge',e:'👦',d:'大男孩'},{n:'姐姐',p:'jiě jie',e:'👧',d:'扎辫子'},
+    {n:'弟弟',p:'dì di',e:'🧒',e2:'小男孩',d:'小弟弟'},{n:'妹妹',p:'mèi mei',e:'👧',d:'小妹妹'},
+    {n:'老师',p:'lǎo shī',e:'👩‍🏫',d:'教书的人'},{n:'医生',p:'yī shēng',e:'👨‍⚕️',d:'看病的人'},
+    {n:'警察',p:'jǐng chá',e:'👮',d:'抓坏人'},{n:'消防员',p:'xiāo fáng yuán',e:'👨‍🚒',d:'灭火救人'},
+    {n:'厨师',p:'chú shī',e:'👨‍🍳',d:'做菜的人'},{n:'司机',p:'sī jī',e:'👨‍✈️',d:'开车的人'},
+    {n:'农夫',p:'nóng fū',e:'👨‍🌾',d:'种粮食'},{n:'工人',p:'gōng rén',e:'👷',d:'盖房子'},
+    {n:'护士',p:'hù shi',e:'👩‍⚕️',d:'照顾病人'},{n:'邮递员',p:'yóu dì yuán',e:'📮',d:'送信人'},
+    {n:'宇航员',p:'yǔ háng yuán',e:'👨‍🚀',d:'飞太空'},{n:'科学家',p:'kē xué jiā',e:'🔬',d:'做研究'},
+    {n:'画家',p:'huà jiā',e:'🎨',d:'画画的人'},{n:'音乐家',p:'yīn yuè jiā',e:'🎼',d:'弹琴的人'},
+    {n:'运动员',p:'yùn dòng yuán',e:'🏃',d:'跑步快'},{n:'军人',p:'jūn rén',e:'💂',d:'保祖国'},
+  ]
+};
+
+const poems=[
+  {t:'静夜思',a:'李白',lines:'床前明月光，\n疑是地上霜。\n举头望明月，\n低头思故乡。',m:'晚上看到窗前的月光，像地上的霜一样白。抬起头看月亮，想起了远方的家乡。'},
+  {t:'咏鹅',a:'骆宾王',lines:'鹅鹅鹅，\n曲项向天歌。\n白毛浮绿水，\n红掌拨清波。',m:'大白鹅弯着脖子朝天叫，白白的羽毛浮在绿水上，红脚掌划着水波。'},
+  {t:'春晓',a:'孟浩然',lines:'春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。',m:'春天睡得很香，不知不觉天亮了。到处都能听到小鸟在唱歌。昨夜又是风又是雨，不知道花朵被吹落了多少。'},
+  {t:'悯农',a:'李绅',lines:'锄禾日当午，\n汗滴禾下土。\n谁知盘中餐，\n粒粒皆辛苦。',m:'农民伯伯在正午的大太阳下锄草，汗水滴到泥土里。我们碗里的每一粒米饭，都是农民伯伯辛苦种出来的，要珍惜粮食。'},
+  {t:'登鹳雀楼',a:'王之涣',lines:'白日依山尽，\n黄河入海流。\n欲穷千里目，\n更上一层楼。',m:'太阳靠着山慢慢落下去了，黄河水滚滚流向大海。想要看到更远的地方，就要再登上一层楼。'},
+  {t:'望庐山瀑布',a:'李白',lines:'日照香炉生紫烟，\n遥看瀑布挂前川。\n飞流直下三千尺，\n疑是银河落九天。',m:'阳光照着香炉峰升起了紫色的烟雾，远远看到瀑布像白布一样挂在山前。瀑布飞流直下好像有三千尺，就像银河从天上落下来一样。'},
+  {t:'咏柳',a:'贺知章',lines:'碧玉妆成一树高，\n万条垂下绿丝绦。\n不知细叶谁裁出，\n二月春风似剪刀。',m:'高高的柳树像碧玉一样美丽，千万条柳枝像绿色的丝带垂下来。这细细的柳叶是谁裁剪出来的呢？原来是二月的春风像剪刀一样裁出来的。'},
+  {t:'江雪',a:'柳宗元',lines:'千山鸟飞绝，\n万径人踪灭。\n孤舟蓑笠翁，\n独钓寒江雪。',m:'所有的山上都看不到鸟的影子，所有的路上也看不到人的脚印。只有一只小船上，一个披着蓑衣戴着斗笠的老爷爷，在寒冷的江上独自钓鱼。'},
+];
+const songs=[
+  {n:'小星星',d:'跟着节奏拍手唱',lyrics:'一闪一闪亮晶晶，满天都是小星星。挂在天上放光明，好像许多小眼睛。'},
+  {n:'两只老虎',d:'模仿老虎走路动作',lyrics:'两只老虎，两只老虎，跑得快，跑得快。一只没有耳朵，一只没有尾巴，真奇怪，真奇怪。'},
+  {n:'找朋友',d:'和小朋友一起做找朋友的动作',lyrics:'找呀找呀找朋友，找到一个好朋友。敬个礼呀握握手，你是我的好朋友。'},
+  {n:'小兔子乖乖',d:'扮演小兔子和大灰狼对话',lyrics:'小兔子乖乖，把门儿开开。快点儿开开，我要进来。不开不开就不开，妈妈没回来，谁来也不开。'},
+  {n:'拔萝卜',d:'做拔萝卜的用力动作',lyrics:'拔萝卜，拔萝卜，嘿哟嘿哟拔萝卜。老爷爷，老奶奶，小黄狗，小花猫，大家一起拔萝卜。'},
+  {n:'数鸭子',d:'用手指边数边唱',lyrics:'门前大桥下，游过一群鸭。快来快来数一数，二四六七八。咕嘎咕嘎，真呀真多呀。'},
+  {n:'小燕子',d:'轻轻摇晃身体，像燕子飞',lyrics:'小燕子，穿花衣，年年春天来这里。我问燕子你为啥来，燕子说这里的春天最美丽。'}
+];
+const countData=[
+  {n:'太阳',e:'☀️',t:'一个太阳'},{n:'小鸭',e:'🐥',t:'两只小鸭'},{n:'小花',e:'🌸',t:'三朵小花'},{n:'蝴蝶',e:'🦋',t:'四只蝴蝶'},{n:'星星',e:'⭐',t:'五颗星星'},{n:'苹果',e:'🍎',t:'六个苹果'},{n:'彩虹',e:'🌈',t:'七条彩虹'},{n:'气球',e:'🎈',t:'八个气球'},{n:'小鸡',e:'🐤',t:'九只小鸡'},{n:'手指',e:'✋',t:'十个手指'}
+];
+const enWords=[
+  {en:'apple',cn:'苹果',e:'🍎'},{en:'banana',cn:'香蕉',e:'🍌'},{en:'orange',cn:'橘子',e:'🍊'},{en:'grape',cn:'葡萄',e:'🍇'},
+  {en:'watermelon',cn:'西瓜',e:'🍉'},{en:'strawberry',cn:'草莓',e:'🍓'},{en:'peach',cn:'桃子',e:'🍑'},{en:'pear',cn:'梨',e:'🍐'},
+  {en:'cherry',cn:'樱桃',e:'🍒'},{en:'mango',cn:'芒果',e:'🥭'},{en:'lemon',cn:'柠檬',e:'🍋'},{en:'pineapple',cn:'菠萝',e:'🍍'},
+  {en:'cat',cn:'猫',e:'🐱'},{en:'dog',cn:'狗',e:'🐶'},{en:'fish',cn:'鱼',e:'🐟'},{en:'bird',cn:'小鸟',e:'🐦'},
+  {en:'rabbit',cn:'兔子',e:'🐰'},{en:'elephant',cn:'大象',e:'🐘'},{en:'tiger',cn:'老虎',e:'🐯'},{en:'monkey',cn:'猴子',e:'🐒'},
+  {en:'panda',cn:'熊猫',e:'🐼'},{en:'lion',cn:'狮子',e:'🦁'},{en:'bear',cn:'熊',e:'🐻'},{en:'frog',cn:'青蛙',e:'🐸'},
+  {en:'sun',cn:'太阳',e:'☀️'},{en:'moon',cn:'月亮',e:'🌙'},{en:'star',cn:'星星',e:'⭐'},{en:'flower',cn:'花',e:'🌸'},
+  {en:'tree',cn:'树',e:'🌳'},{en:'rain',cn:'下雨',e:'🌧️'},{en:'snow',cn:'下雪',e:'❄️'},{en:'car',cn:'汽车',e:'🚗'},
+  {en:'ball',cn:'球',e:'⚽'},{en:'book',cn:'书',e:'📖'},{en:'milk',cn:'牛奶',e:'🥛'},{en:'egg',cn:'鸡蛋',e:'🥚'},
+  {en:'bread',cn:'面包',e:'🍞'},{en:'cake',cn:'蛋糕',e:'🎂'},{en:'water',cn:'水',e:'💧'},{en:'rice',cn:'米饭',e:'🍚'},
+];
+const letters=[
+  {l:'A',w:'Apple',cn:'苹果',e:'🍎',s:'ei'},{l:'B',w:'Ball',cn:'球',e:'⚽',s:'bi'},{l:'C',w:'Cat',cn:'猫',e:'🐱',s:'xi'},{l:'D',w:'Dog',cn:'狗',e:'🐶',s:'di'},{l:'E',w:'Egg',cn:'鸡蛋',e:'🥚',s:'yi'},{l:'F',w:'Fish',cn:'鱼',e:'🐟',s:'ai fu'},
+  {l:'G',w:'Grapes',cn:'葡萄',e:'🍇',s:'ji'},{l:'H',w:'Hat',cn:'帽子',e:'🎩',s:'eich'},{l:'I',w:'Ice cream',cn:'冰淇淋',e:'🍦',s:'ai'},{l:'J',w:'Juice',cn:'果汁',e:'🧃',s:'jei'},{l:'K',w:'Kite',cn:'风筝',e:'🪁',s:'kei'},{l:'L',w:'Lion',cn:'狮子',e:'🦁',s:'el'},
+  {l:'M',w:'Moon',cn:'月亮',e:'🌙',s:'em'},{l:'N',w:'Nest',cn:'鸟窝',e:'🪺',s:'en'},{l:'O',w:'Orange',cn:'橙子',e:'🍊',s:'ou'},{l:'P',w:'Panda',cn:'熊猫',e:'🐼',s:'pi'},{l:'Q',w:'Queen',cn:'女王',e:'👸',s:'kiu'},{l:'R',w:'Rabbit',cn:'兔子',e:'🐰',s:'ar'},
+  {l:'S',w:'Sun',cn:'太阳',e:'☀️',s:'es'},{l:'T',w:'Tiger',cn:'老虎',e:'🐯',s:'ti'},{l:'U',w:'Umbrella',cn:'雨伞',e:'☂️',s:'yu'},{l:'V',w:'Violin',cn:'小提琴',e:'🎻',s:'vi'},{l:'W',w:'Whale',cn:'鲸鱼',e:'🐳',s:'dabelyu'},{l:'X',w:'Xylophone',cn:'木琴',e:'🎹',s:'eks'},
+  {l:'Y',w:'Yacht',cn:'帆船',e:'⛵',s:'wai'},{l:'Z',w:'Zebra',cn:'斑马',e:'🦓',s:'zi'}
+];
+const numberEmojis=['🍊','🍌','🍇','🍓','🎈','⭐','🌸','🐝','🦋','🍎','🍊','🍌','🍇','🍓','🎈','⭐','🌸','🐝','🦋','🍎'];
+const artItems=[
+  {e:'🖍️',n:'涂色画',d:'给黑白图案涂色'},{e:'👆',n:'手指画',d:'手指蘸颜料画画'},{e:'📄',n:'折纸',d:'用彩纸折形状'},{e:'🏺',n:'黏土造型',d:'用黏土捏东西'},{e:'🖼️',n:'拼贴画',d:'把材料拼贴成画'},{e:'🎨',n:'色彩认知',d:'认识红黄蓝三原色'},{e:'✂️',n:'剪纸',d:'用安全剪刀剪形状'},{e:'🍃',n:'拓印画',d:'用物品蘸颜料印图案'}
+];
+const lifeSafety=[
+  {i:'🤝',t:'防走失',d:'出门要牵好大人的手，不乱跑'},{i:'🚫',t:'陌生人安全',d:'不跟陌生人走，不吃陌生人给的东西'},{i:'⚡',t:'水电安全',d:'不碰电源插座，不玩水龙头热水'},{i:'🩹',t:'受伤处理',d:'摔倒了要告诉大人，不要害怕说'},{i:'📣',t:'被欺负求助',d:'有人欺负你要大声说"不要碰我"，告诉老师和爸妈'}
+];
+const rewards=[
+  {n:'一块钱',p:10,e:'💰'},{n:'吃薯条',p:20,e:'🍟'},{n:'吃糖果',p:20,e:'🍬'},{n:'买贴纸',p:25,e:'⭐'},{n:'吃冰淇淋',p:30,e:'🍦'},{n:'买橡皮泥',p:30,e:'🎨'},{n:'玩iPad 15分钟',p:40,e:'📱'},{n:'看电视30分钟',p:50,e:'📺'},{n:'吃汉堡',p:70,e:'🍔'},{n:'买泡泡机',p:80,e:'🫧'},{n:'买拼图',p:90,e:'🧩'}
+];
+
+// ============ 状态 ============
+let state=loadState();
+function defaultState(){
+  return{
+    stars:6,totalDays:0,streak:0,lastDate:'',
+    learned:{},checks:{},calendar:{},moduleDone:{},checkinToday:{},
+    curTab:{},lastLearnedReset:'',curCalYear:0,curCalMonth:0
+  };
+}
+function loadState(){
+  try{const r=localStorage.getItem('xiaoningmeng');if(r)return{...defaultState(),...JSON.parse(r)};}catch(e){}
+  return defaultState();
+}
+function saveState(){
+  state._syncTime=Date.now();
+  localStorage.setItem('xiaoningmeng',JSON.stringify(state));
+  scheduleSyncUpload();
+}
+
+// ============ 语音朗读（本地 MP3 → speechSynthesis → Google TTS）============
+const ttsCache={};
+let speaking=false;
+
+// 本地音频文件映射表：文本 -> 文件名
+const audioMap = {
+  // 动物
+  '猫，māo，小花猫':'animal_0.mp3',
+  '狗，gǒu，小狗跑':'animal_1.mp3',
+  '大象，dà xiàng，长鼻子':'animal_2.mp3',
+  '兔子，tù zi，长耳朵':'animal_3.mp3',
+  '小鸟，xiǎo niǎo，会唱歌':'animal_4.mp3',
+  '鱼，yú，水中游':'animal_5.mp3',
+  '熊猫，xióng māo，吃竹子':'animal_6.mp3',
+  '狮子，shī zi，森林王':'animal_7.mp3',
+  '老虎，lǎo hǔ，大老虎':'animal_8.mp3',
+  '长颈鹿，cháng jǐng lù，长脖子':'animal_9.mp3',
+  '猴子，hóu zi，爬树高手':'animal_10.mp3',
+  '奶牛，nǎi niú，产牛奶':'animal_11.mp3',
+  '青蛙，qīng wā，呱呱叫':'animal_12.mp3',
+  '海豚，hǎi tún，会表演':'animal_13.mp3',
+  '企鹅，qǐ é，摇摇摆摆':'animal_14.mp3',
+  '蝴蝶，hú dié，花蝴蝶':'animal_15.mp3',
+  '蜜蜂，mì fēng，采花蜜':'animal_16.mp3',
+  '鲸鱼，jīng yú，大海里游':'animal_17.mp3',
+  '马，mǎ，跑得快':'animal_18.mp3',
+  '乌龟，wū guī，慢慢爬':'animal_19.mp3',
+  '鹦鹉，yīng wǔ，会说话':'animal_20.mp3',
+  '猫头鹰，māo tóu yīng，大眼睛':'animal_21.mp3',
+  '孔雀，kǒng què，开屏漂亮':'animal_22.mp3',
+  '变色龙，biàn sè lóng，会变色':'animal_23.mp3',
+  // 水果
+  '苹果，píng guǒ，红苹果':'fruit_0.mp3',
+  '香蕉，xiāng jiāo，黄香蕉':'fruit_1.mp3',
+  '橘子，jú zi，甜橘子':'fruit_2.mp3',
+  '葡萄，pú tao，紫葡萄':'fruit_3.mp3',
+  '西瓜，xī guā，大西瓜':'fruit_4.mp3',
+  '草莓，cǎo méi，小草莓':'fruit_5.mp3',
+  '桃子，táo zi，水蜜桃':'fruit_6.mp3',
+  '梨，lí，黄梨':'fruit_7.mp3',
+  '樱桃，yīng táo，红樱桃':'fruit_8.mp3',
+  '芒果，máng guǒ，热带水果':'fruit_9.mp3',
+  '菠萝，bō luó，带刺的':'fruit_10.mp3',
+  '柠檬，níng méng，酸酸的':'fruit_11.mp3',
+  '猕猴桃，mí hóu táo，绿果肉':'fruit_12.mp3',
+  '蓝莓，lán méi，小蓝果':'fruit_13.mp3',
+  '石榴，shí liú，红宝石':'fruit_14.mp3',
+  '荔枝，lì zhī，白果肉':'fruit_15.mp3',
+  '火龙果，huǒ lóng guǒ，红皮白肉':'fruit_16.mp3',
+  '榴莲，liú lián，水果之王':'fruit_17.mp3',
+  '椰子，yē zi，长在树上':'fruit_18.mp3',
+  '哈密瓜，hā mì guā，甜瓜':'fruit_19.mp3',
+  // 蔬菜
+  '白菜，bái cài，大白菜':'vegetable_0.mp3',
+  '胡萝卜，hú luó bo，胡萝卜汁':'vegetable_1.mp3',
+  '西红柿，xī hóng shì，番茄酱':'vegetable_2.mp3',
+  '玉米，yù mǐ，玉米棒':'vegetable_3.mp3',
+  '土豆，tǔ dòu，土豆泥':'vegetable_4.mp3',
+  '蘑菇，mó gu，蘑菇汤':'vegetable_5.mp3',
+  '辣椒，là jiāo，红辣椒':'vegetable_6.mp3',
+  '黄瓜，huáng guā，黄瓜条':'vegetable_7.mp3',
+  '茄子，qié zi，紫茄子':'vegetable_8.mp3',
+  '西兰花，xī lán huā，绿色蔬菜':'vegetable_9.mp3',
+  '南瓜，nán guā，大南瓜':'vegetable_10.mp3',
+  '洋葱，yáng cōng，会流泪':'vegetable_11.mp3',
+  '大蒜，dà suàn，杀菌':'vegetable_12.mp3',
+  '红薯，hóng shǔ，烤红薯':'vegetable_13.mp3',
+  '豌豆，wān dòu，绿豌豆':'vegetable_14.mp3',
+  '莲藕，lián ǒu，有孔':'vegetable_15.mp3',
+  '芹菜，qín cài，脆脆的':'vegetable_16.mp3',
+  '青椒，qīng jiāo，灯笼椒':'vegetable_17.mp3',
+  '冬瓜，dōng guā，大冬瓜':'vegetable_18.mp3',
+  '豆芽，dòu yá，黄豆芽':'vegetable_19.mp3',
+  // 人物
+  '爸爸，bà ba，好爸爸':'people_0.mp3',
+  '妈妈，mā ma，好妈妈':'people_1.mp3',
+  '爷爷，yé ye，白胡子':'people_2.mp3',
+  '奶奶，nǎi nai，慈祥的':'people_3.mp3',
+  '哥哥，gē ge，大男孩':'people_4.mp3',
+  '姐姐，jiě jie，扎辫子':'people_5.mp3',
+  '弟弟，dì di，小弟弟':'people_6.mp3',
+  '妹妹，mèi mei，小妹妹':'people_7.mp3',
+  '老师，lǎo shī，教书的人':'people_8.mp3',
+  '医生，yī shēng，看病的人':'people_9.mp3',
+  '警察，jǐng chá，抓坏人':'people_10.mp3',
+  '消防员，xiāo fáng yuán，灭火救人':'people_11.mp3',
+  '厨师，chú shī，做菜的人':'people_12.mp3',
+  '司机，sī jī，开车的人':'people_13.mp3',
+  '农夫，nóng fū，种粮食':'people_14.mp3',
+  '工人，gōng rén，盖房子':'people_15.mp3',
+  '护士，hù shi，照顾病人':'people_16.mp3',
+  '邮递员，yóu dì yuán，送信人':'people_17.mp3',
+  '宇航员，yǔ háng yuán，飞太空':'people_18.mp3',
+  '科学家，kē xué jiā，做研究':'people_19.mp3',
+  '画家，huà jiā，画画的人':'people_20.mp3',
+  '音乐家，yīn yuè jiā，弹琴的人':'people_21.mp3',
+  '运动员，yùn dòng yuán，跑步快':'people_22.mp3',
+  '军人，jūn rén，保祖国':'people_23.mp3',
+};
+
+// 音频 key 映射（用于直接传 key 的场景）
+const keyAudioMap = {
+  // 古诗
+  'poem_0':'poem_0.mp3','poem_1':'poem_1.mp3','poem_2':'poem_2.mp3','poem_3':'poem_3.mp3',
+  'poem_4':'poem_4.mp3','poem_5':'poem_5.mp3','poem_6':'poem_6.mp3','poem_7':'poem_7.mp3',
+  // 儿歌
+  'song_0':'song_0.mp3','song_1':'song_1.mp3','song_2':'song_2.mp3','song_3':'song_3.mp3',
+  'song_4':'song_4.mp3','song_5':'song_5.mp3','song_6':'song_6.mp3',
+  // 数理
+  'count_0':'count_0.mp3','count_1':'count_1.mp3','count_2':'count_2.mp3','count_3':'count_3.mp3',
+  'count_4':'count_4.mp3','count_5':'count_5.mp3','count_6':'count_6.mp3',
+  'count_7':'count_7.mp3','count_8':'count_8.mp3','count_9':'count_9.mp3',
+  // 数字
+  'number_1':'number_1.mp3','number_2':'number_2.mp3','number_3':'number_3.mp3','number_4':'number_4.mp3',
+  'number_5':'number_5.mp3','number_6':'number_6.mp3','number_7':'number_7.mp3','number_8':'number_8.mp3',
+  'number_9':'number_9.mp3','number_10':'number_10.mp3','number_11':'number_11.mp3','number_12':'number_12.mp3',
+  'number_13':'number_13.mp3','number_14':'number_14.mp3','number_15':'number_15.mp3','number_16':'number_16.mp3',
+  'number_17':'number_17.mp3','number_18':'number_18.mp3','number_19':'number_19.mp3','number_20':'number_20.mp3',
+  'number_21':'number_21.mp3','number_22':'number_22.mp3','number_23':'number_23.mp3','number_24':'number_24.mp3',
+  'number_25':'number_25.mp3','number_26':'number_26.mp3','number_27':'number_27.mp3','number_28':'number_28.mp3',
+  'number_29':'number_29.mp3','number_30':'number_30.mp3','number_31':'number_31.mp3','number_32':'number_32.mp3',
+  'number_33':'number_33.mp3','number_34':'number_34.mp3','number_35':'number_35.mp3','number_36':'number_36.mp3',
+  'number_37':'number_37.mp3','number_38':'number_38.mp3','number_39':'number_39.mp3','number_40':'number_40.mp3',
+  'number_41':'number_41.mp3','number_42':'number_42.mp3','number_43':'number_43.mp3','number_44':'number_44.mp3',
+  'number_45':'number_45.mp3','number_46':'number_46.mp3','number_47':'number_47.mp3','number_48':'number_48.mp3',
+  'number_49':'number_49.mp3','number_50':'number_50.mp3','number_51':'number_51.mp3','number_52':'number_52.mp3',
+  'number_53':'number_53.mp3','number_54':'number_54.mp3','number_55':'number_55.mp3','number_56':'number_56.mp3',
+  'number_57':'number_57.mp3','number_58':'number_58.mp3','number_59':'number_59.mp3','number_60':'number_60.mp3',
+  'number_61':'number_61.mp3','number_62':'number_62.mp3','number_63':'number_63.mp3','number_64':'number_64.mp3',
+  'number_65':'number_65.mp3','number_66':'number_66.mp3','number_67':'number_67.mp3','number_68':'number_68.mp3',
+  'number_69':'number_69.mp3','number_70':'number_70.mp3','number_71':'number_71.mp3','number_72':'number_72.mp3',
+  'number_73':'number_73.mp3','number_74':'number_74.mp3','number_75':'number_75.mp3','number_76':'number_76.mp3',
+  'number_77':'number_77.mp3','number_78':'number_78.mp3','number_79':'number_79.mp3','number_80':'number_80.mp3',
+  'number_81':'number_81.mp3','number_82':'number_82.mp3','number_83':'number_83.mp3','number_84':'number_84.mp3',
+  'number_85':'number_85.mp3','number_86':'number_86.mp3','number_87':'number_87.mp3','number_88':'number_88.mp3',
+  'number_89':'number_89.mp3','number_90':'number_90.mp3','number_91':'number_91.mp3','number_92':'number_92.mp3',
+  'number_93':'number_93.mp3','number_94':'number_94.mp3','number_95':'number_95.mp3','number_96':'number_96.mp3',
+  'number_97':'number_97.mp3','number_98':'number_98.mp3','number_99':'number_99.mp3','number_100':'number_100.mp3',
+  // 英文
+  'en_0':'en_0.mp3','en_1':'en_1.mp3','en_2':'en_2.mp3','en_3':'en_3.mp3',
+  'en_4':'en_4.mp3','en_5':'en_5.mp3','en_6':'en_6.mp3','en_7':'en_7.mp3',
+  'en_8':'en_8.mp3','en_9':'en_9.mp3','en_10':'en_10.mp3','en_11':'en_11.mp3',
+  'en_12':'en_12.mp3','en_13':'en_13.mp3','en_14':'en_14.mp3','en_15':'en_15.mp3',
+  'en_16':'en_16.mp3','en_17':'en_17.mp3','en_18':'en_18.mp3','en_19':'en_19.mp3',
+  'en_20':'en_20.mp3','en_21':'en_21.mp3','en_22':'en_22.mp3','en_23':'en_23.mp3',
+  'en_24':'en_24.mp3','en_25':'en_25.mp3','en_26':'en_26.mp3','en_27':'en_27.mp3',
+  'en_28':'en_28.mp3','en_29':'en_29.mp3','en_30':'en_30.mp3','en_31':'en_31.mp3',
+  'en_32':'en_32.mp3','en_33':'en_33.mp3','en_34':'en_34.mp3','en_35':'en_35.mp3',
+  'en_36':'en_36.mp3','en_37':'en_37.mp3','en_38':'en_38.mp3','en_39':'en_39.mp3',
+  // 字母
+  'letter_0':'letter_0.mp3','letter_1':'letter_1.mp3','letter_2':'letter_2.mp3',
+  'letter_3':'letter_3.mp3','letter_4':'letter_4.mp3','letter_5':'letter_5.mp3',
+  'letter_6':'letter_6.mp3','letter_7':'letter_7.mp3','letter_8':'letter_8.mp3',
+  'letter_9':'letter_9.mp3','letter_10':'letter_10.mp3','letter_11':'letter_11.mp3',
+  'letter_12':'letter_12.mp3','letter_13':'letter_13.mp3','letter_14':'letter_14.mp3',
+  'letter_15':'letter_15.mp3','letter_16':'letter_16.mp3','letter_17':'letter_17.mp3',
+  'letter_18':'letter_18.mp3','letter_19':'letter_19.mp3','letter_20':'letter_20.mp3',
+  'letter_21':'letter_21.mp3','letter_22':'letter_22.mp3','letter_23':'letter_23.mp3',
+  'letter_24':'letter_24.mp3','letter_25':'letter_25.mp3',
+  // 美术
+  'art_0':'art_0.mp3','art_1':'art_1.mp3','art_2':'art_2.mp3','art_3':'art_3.mp3',
+  'art_4':'art_4.mp3','art_5':'art_5.mp3','art_6':'art_6.mp3','art_7':'art_7.mp3',
+  // 安全
+  'safety_0':'safety_0.mp3','safety_1':'safety_1.mp3','safety_2':'safety_2.mp3',
+  'safety_3':'safety_3.mp3','safety_4':'safety_4.mp3',
+  // 运动
+  'sport_0':'sport_0.mp3','sport_1':'sport_1.mp3','sport_2':'sport_2.mp3','sport_3':'sport_3.mp3',
+  'sport_4':'sport_4.mp3','sport_5':'sport_5.mp3','sport_6':'sport_6.mp3','sport_7':'sport_7.mp3',
+  'sport_8':'sport_8.mp3','sport_9':'sport_9.mp3',
+  // 自理
+  'zili_0':'zili_0.mp3','zili_1':'zili_1.mp3','zili_2':'zili_2.mp3','zili_3':'zili_3.mp3',
+  'zili_4':'zili_4.mp3','zili_5':'zili_5.mp3','zili_6':'zili_6.mp3','zili_7':'zili_7.mp3',
+  // 情绪
+  'emotion_0':'emotion_0.mp3','emotion_1':'emotion_1.mp3','emotion_2':'emotion_2.mp3','emotion_3':'emotion_3.mp3',
+  'emotion_4':'emotion_4.mp3','emotion_5':'emotion_5.mp3','emotion_6':'emotion_6.mp3','emotion_7':'emotion_7.mp3',
+  // 其他
+  'shape':'shape.mp3','compare':'compare.mp3',
+  // 英语短句
+  'phrase_0':'phrase_0.mp3','phrase_1':'phrase_1.mp3','phrase_2':'phrase_2.mp3','phrase_3':'phrase_3.mp3',
+  'phrase_4':'phrase_4.mp3','phrase_5':'phrase_5.mp3','phrase_6':'phrase_6.mp3','phrase_7':'phrase_7.mp3',
+  // 看图说话
+  'kantu_0':'kantu_0.mp3','kantu_1':'kantu_1.mp3','kantu_2':'kantu_2.mp3','kantu_3':'kantu_3.mp3',
+  'kantu_4':'kantu_4.mp3','kantu_5':'kantu_5.mp3','kantu_6':'kantu_6.mp3','kantu_7':'kantu_7.mp3',
+};
+
+function speak(text,audioKey){
+  if(!text)return;
+  // 1. 如果传了 audioKey，直接用本地音频
+  if(audioKey && keyAudioMap[audioKey]){ playLocalAudio(keyAudioMap[audioKey],text); return; }
+  // 2. 查本地音频映射
+  const localFile = audioMap[text] || findLocalAudio(text);
+  if(localFile){
+    playLocalAudio(localFile,text);
+    return;
+  }
+  // 3. 本地没有，用浏览器内置语音
+  if(window.speechSynthesis && window.SpeechSynthesisUtterance){
+    if(useSpeechSynthesis(text,'zh-CN'))return;
+  }
+  // 4. 最后用 Google TTS
+  const url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=zh-CN&q='+encodeURIComponent(text.slice(0,180));
+  playTTS(url);
+}
+
+function speakEn(text,audioKey){
+  if(!text)return;
+  // 如果传了 audioKey，直接用本地音频
+  if(audioKey && keyAudioMap[audioKey]){ playLocalAudio(keyAudioMap[audioKey],text); return; }
+  // 查本地英文音频
+  const localFile = findLocalAudioEn(text);
+  if(localFile){
+    playLocalAudio(localFile,text);
+    return;
+  }
+  if(window.speechSynthesis && window.SpeechSynthesisUtterance){
+    if(useSpeechSynthesis(text,'en-US'))return;
+  }
+  const url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q='+encodeURIComponent(text.slice(0,180));
+  playTTS(url);
+}
+
+// 播放本地音频文件
+function playLocalAudio(filename,text){
+  const old=document.getElementById('ttsAudio');
+  if(old){old.pause();old.remove();}
+  if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
+  
+  const a=document.createElement('audio');
+  a.id='ttsAudio';a.preload='auto';a.style.display='none';
+  a.src='audio/'+filename;
+  
+  let played=false;
+  let timeout=setTimeout(()=>{
+    if(!played){
+      speaking=false;a.remove();
+      // 降级：用浏览器语音合成
+      if(text && window.speechSynthesis && window.SpeechSynthesisUtterance){
+        useSpeechSynthesis(text,'zh-CN');
+      }
+    }
+  },5000);
+  
+  a.oncanplaythrough=()=>{if(played)return;played=true;clearTimeout(timeout);speaking=true;a.play().catch(()=>{});};
+  a.onloadeddata=()=>{if(played)return;played=true;clearTimeout(timeout);speaking=true;a.play().catch(()=>{});};
+  a.onended=()=>{speaking=false;clearTimeout(timeout);a.remove();};
+  a.onerror=()=>{
+    clearTimeout(timeout);speaking=false;a.remove();
+    // 降级：MP3 不存在时用浏览器语音合成
+    if(text && window.speechSynthesis && window.SpeechSynthesisUtterance){
+      useSpeechSynthesis(text,'zh-CN');
+    }
+  };
+  
+  document.body.appendChild(a);
+  a.load();
+}
+
+// 根据文本模糊匹配本地音频
+function findLocalAudio(text){
+  for(let key in audioMap){
+    if(text===key || text.indexOf(key)>=0 || key.indexOf(text)>=0){
+      return audioMap[key];
+    }
+  }
+  // 数字
+  const numMatch=text.match(/^(\d+)$/);
+  if(numMatch && numMatch[1]<=20){
+    return 'number_'+numMatch[1]+'.mp3';
+  }
+  return null;
+}
+
+function findLocalAudioEn(text){
+  const enMap={'apple':'en_0.mp3','banana':'en_1.mp3','orange':'en_2.mp3','grape':'en_3.mp3',
+    'watermelon':'en_4.mp3','strawberry':'en_5.mp3','peach':'en_6.mp3'};
+  const lower=text.toLowerCase().trim();
+  if(enMap[lower])return enMap[lower];
+  // 字母
+  const letterMap={'a for apple':'letter_0.mp3','b for ball':'letter_1.mp3','c for cat':'letter_2.mp3',
+    'd for dog':'letter_3.mp3','e for egg':'letter_4.mp3','f for fish':'letter_5.mp3',
+    'g for grapes':'letter_6.mp3','h for hat':'letter_7.mp3','i for ice cream':'letter_8.mp3',
+    'j for juice':'letter_9.mp3','k for kite':'letter_10.mp3','l for lion':'letter_11.mp3',
+    'm for moon':'letter_12.mp3','n for nest':'letter_13.mp3','o for orange':'letter_14.mp3',
+    'p for panda':'letter_15.mp3','q for queen':'letter_16.mp3','r for rabbit':'letter_17.mp3',
+    's for sun':'letter_18.mp3','t for tiger':'letter_19.mp3','u for umbrella':'letter_20.mp3',
+    'v for violin':'letter_21.mp3','w for whale':'letter_22.mp3','x for xylophone':'letter_23.mp3',
+    'y for yacht':'letter_24.mp3','z for zebra':'letter_25.mp3'};
+  if(letterMap[lower])return letterMap[lower];
+  return null;
+}
+
+function playTTS(url){
+  const old=document.getElementById('ttsAudio');
+  if(old){old.pause();old.remove();}
+  if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
+  speaking=false;
+  
+  const a=document.createElement('audio');
+  a.id='ttsAudio';a.preload='auto';a.style.display='none';
+  
+  let played=false;
+  let timeout=setTimeout(()=>{if(!played){speaking=false;a.remove();}},8000);
+  
+  a.oncanplaythrough=()=>{if(played)return;played=true;clearTimeout(timeout);speaking=true;a.play().catch(()=>{});};
+  a.onloadeddata=()=>{if(played)return;played=true;clearTimeout(timeout);speaking=true;a.play().catch(()=>{});};
+  a.onended=()=>{speaking=false;clearTimeout(timeout);a.remove();};
+  a.onerror=()=>{clearTimeout(timeout);if(!played){speaking=false;}a.remove();};
+  
+  a.src=url;
+  document.body.appendChild(a);
+  a.load();
+}
+
+// 浏览器内置语音合成（备选方案）
+let voicesReady=false;
+function initSpeechSynthesis(){
+  if(!window.speechSynthesis)return;
+  try{
+    if(speechSynthesis.getVoices&&speechSynthesis.getVoices().length>0){voicesReady=true;}
+    if(speechSynthesis.onvoiceschanged!==undefined){speechSynthesis.onvoiceschanged=()=>{voicesReady=true;};}
+  }catch(e){}
+}
+
+function useSpeechSynthesis(text,lang){
+  if(!window.speechSynthesis||!window.SpeechSynthesisUtterance||!text){return false;}
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(text);
+    u.lang=lang||'zh-CN';
+    u.rate=0.85;u.pitch=1.1;u.volume=1;
+    const voices=speechSynthesis.getVoices();
+    if(voices&&voices.length>0){
+      const zhVoice=voices.find(v=>v.lang&&v.lang.startsWith('zh'));
+      if(zhVoice)u.voice=zhVoice;
+    }
+    u.onstart=()=>{speaking=true;};
+    u.onend=()=>{speaking=false;};
+    u.onerror=()=>{speaking=false;};
+    speechSynthesis.speak(u);
+    setTimeout(()=>{try{if(speaking)speechSynthesis.resume();}catch(e){}},100);
+    return true;
+  }catch(e){return false;}
+}
+
+try{initSpeechSynthesis();}catch(e){}
+
+
+// ============ 渲染菜单 ============
+function renderMenu(){
+  const sb=document.getElementById('sidebar');
+  sb.innerHTML=menuItems.map(m=>{
+    const active=m.id===state.curMenu?'active':'';
+    return `<div class="menu-item ${active}" data-id="${m.id}"><div class="menu-ic">${m.icon}</div><div class="menu-tx">${m.name}</div></div>`;
+  }).join('');
+  sb.querySelectorAll('.menu-item').forEach(el=>{
+    el.addEventListener('click',()=>{
+      state.curMenu=el.dataset.id;
+      renderMenu();
+      renderContent();
+      // 触觉反馈
+      if(navigator.vibrate)navigator.vibrate(20);
+    });
+  });
+}
+
+// ============ 渲染内容 ============
+function renderContent(){
+  const m=menuItems.find(x=>x.id===state.curMenu)||menuItems[0];
+  document.getElementById('brandTag').textContent=m.tag;
+  const ct=document.getElementById('content');
+  ct.innerHTML='';
+  ct.scrollTop=0;
+  switch(m.id){
+    case 'renwu':renderRenwu(ct,m);break;
+    case 'yuyan':renderYuyan(ct,m);break;
+    case 'shuli':renderShuli(ct,m);break;
+    case 'yingyu':renderYingyu(ct,m);break;
+    case 'zimu':renderZimu(ct,m);break;
+    case 'shuzi':renderShuzi(ct,m);break;
+    case 'yinyue':renderYinyue(ct,m);break;
+    case 'meishu':renderMeishu(ct,m);break;
+    case 'shenghuo':renderShenghuo(ct,m);break;
+    case 'game':renderGame(ct,m);break;
+    case 'checkin':renderCheckin(ct,m);break;
+    case 'shop':renderShop(ct,m);break;
+    case 'stats':renderStats(ct,m);break;
+    default:renderRenwu(ct,m);
+  }
+  updateTop();
+}
+
+function renderTabs(ct,m,onTab){
+  const tab=state.curTab[m.id]||m.tabs[0];
+  const div=document.createElement('div');div.className='tabs';
+  div.innerHTML=m.tabs.map(t=>`<div class="tab ${t===tab?'active':''}" data-t="${t}">${t}</div>`).join('');
+  div.querySelectorAll('.tab').forEach(el=>{
+    el.addEventListener('click',()=>{state.curTab[m.id]=el.dataset.t;saveState();renderContent();});
+  });
+  ct.appendChild(div);
+  return tab;
+}
+
+function cardTemplate(title,icon,tag){
+  return `<div class="card"><div class="card-hd"><span class="card-icon">${icon}</span><span class="card-title">${title}</span>${tag?`<span class="card-tag">${tag}</span>`:''}</div>`;
+}
+
+// 认物认知
+function renderRenwu(ct,m){
+  const tab=renderTabs(ct,m);
+  const data=renwuData[tab==='动物'?'animal':tab==='水果'?'fruit':tab==='蔬菜'?'vegetable':tab==='人物'?'people':'animal']||[];
+  const key='renwu_'+tab;
+  const learned=state.learned[key]||[];
+  ct.insertAdjacentHTML('beforeend',`
+    <div class="prog-hd">今日认知进度 <b>${learned.length}</b>/${data.length}</div>
+    <div class="item-grid" id="renwuGrid"></div>
+  `);
+  const grid=document.getElementById('renwuGrid');
+  data.forEach((it,i)=>{
+    const isDone=learned.includes(i);
+    const el=document.createElement('div');el.className='item-card';
+    el.innerHTML=`<div class="item-emoji">${it.e}</div><div class="item-name">${it.n}</div><div class="item-pinyin">${it.p}</div><div class="item-desc">${it.d}</div><button class="sound-btn">🔊</button>`;
+    el.querySelector('.sound-btn').addEventListener('click',e=>{e.stopPropagation();speak(`${it.n}，${it.p}，${it.d}`);});
+    el.addEventListener('click',()=>{
+      if(!isDone){learned.push(i);state.learned[key]=learned;saveState();showToast(`+2⭐ 认识了${it.n}`);addStars(2);}else{speak(`${it.n}，${it.p}`);}
+      renderContent();
+    });
+    grid.appendChild(el);
+  });
+}
+
+// 语言表达
+function renderYuyan(ct,m){
+  const tab=renderTabs(ct,m);
+  if(tab==='古诗'){
+    ct.insertAdjacentHTML('beforeend','<div id="poemList"></div>');
+    const list=document.getElementById('poemList');
+    poems.forEach((p,idx)=>{
+      const key='poem_'+idx;const done=!!state.learned[key];
+      const card=document.createElement('div');card.className='poem-card';
+      card.innerHTML=`<div class="poem-title">${p.t}</div><div class="poem-author">[${p.a}]</div><div class="poem-lines">${p.lines.replace(/\n/g,'<br>')}</div><div class="poem-mean">💡 ${p.m}</div><div class="poem-btns"><button class="btn-primary">🔊 朗读</button><button class="btn-gold ${done?'done':''}">${done?'✅ 已学会':'⭐ 学会了'}</button></div>`;
+      const btns=card.querySelectorAll('button');
+      btns[0].addEventListener('click',()=>speak(`${p.t}，${p.a}。${p.lines.replace(/\n/g,'，')}`,'poem_'+idx));
+      btns[1].addEventListener('click',()=>{
+        if(done){showToast('已经学会啦！');return;}
+        if(state.stars<1){showToast('星星不够哦');return;}
+        state.stars-=1;state.learned[key]=true;saveState();
+        showToast('✅ 学会了！+2⭐');addStars(2);renderContent();
+      });
+      list.appendChild(card);
+    });
+  }else if(tab==='儿歌'){
+    ct.insertAdjacentHTML('beforeend','<div id="songList"></div>');
+    const list=document.getElementById('songList');
+    songs.forEach((s,idx)=>{
+      const el=document.createElement('div');el.className='song-item';
+      el.innerHTML=`<div class="song-info"><div class="song-name">${s.n}</div><div class="song-desc">${s.d}</div></div><button class="song-play">▶</button>`;
+      el.querySelector('.song-play').addEventListener('click',()=>{speak(s.lyrics||s.n,'song_'+idx);});
+      list.appendChild(el);
+    });
+  }else{
+    // 看图说话
+    const kanTuData=[
+      {e:'🐱🎣',t:'小猫钓鱼',scene:'小猫在河边钓鱼',q:'小猫钓到了几条鱼？',a:'小猫钓到了三条鱼，它很开心！'},
+      {e:'🐰🥕',t:'小兔吃萝卜',scene:'小兔子在草地上吃胡萝卜',q:'小兔子在吃什么？',a:'小兔子在吃胡萝卜，胡萝卜真好吃！'},
+      {e:'🐻🍯',t:'小熊找蜂蜜',scene:'小熊爬上树找蜂蜜',q:'小熊为什么要爬树？',a:'小熊想找甜甜的蜂蜜吃！'},
+      {e:'🐶🏠',t:'小狗看家',scene:'小狗坐在家门口看家',q:'小狗在做什么？',a:'小狗在看家，它很认真地保护房子。'},
+      {e:'🦋🌸',t:'蝴蝶采花',scene:'蝴蝶在花丛中飞来飞去',q:'蝴蝶在哪里飞？',a:'蝴蝶在花丛中飞舞，花儿真漂亮！'},
+      {e:'🐘💦',t:'大象洗澡',scene:'大象用鼻子喷水洗澡',q:'大象用什么洗澡？',a:'大象用长鼻子喷水洗澡，真好玩！'},
+      {e:'🐧❄️',t:'企鹅滑冰',scene:'小企鹅在冰面上滑行',q:'企鹅在冰上做什么？',a:'小企鹅在冰上滑冰，摇摇摆摆真可爱！'},
+      {e:'🐮🌿',t:'奶牛吃草',scene:'奶牛在草地上吃草',q:'奶牛吃了草会产出什么？',a:'奶牛吃了青草，会产出好喝的牛奶！'},
+    ];
+    ct.insertAdjacentHTML('beforeend','<div style="font-size:13px;color:#888;text-align:center;margin-bottom:10px">👇 点击卡片听故事，学着讲出来！</div><div id="kantuList"></div>');
+    const list=document.getElementById('kantuList');
+    kanTuData.forEach((kt,idx)=>{
+      const key='yuyan_kantu_'+idx;const done=!!state.learned[key];
+      const div=document.createElement('div');
+      div.className='sport-card';
+      div.innerHTML=`
+        <div class="sport-top" data-idx="${idx}">
+          <div class="sport-emoji">${kt.e}</div>
+          <div class="sport-info">
+            <div class="sport-name">${kt.t}</div>
+            <div class="sport-tag">${kt.scene}</div>
+          </div>
+          ${done?'<span style="font-size:18px;color:#4caf50">✅</span>':''}
+        </div>
+        <div class="sport-expand" id="kantuBody_${idx}">
+          <div class="sport-body">
+            <div style="background:#fff3e0;border-radius:10px;padding:10px;margin-bottom:8px;font-size:14px;color:#e65100;font-weight:700">❓ ${kt.q}</div>
+            <div style="background:#e8f5e9;border-radius:10px;padding:10px;margin-bottom:10px;font-size:14px;color:#2e7d32;font-weight:700">💡 ${kt.a}</div>
+            <div class="sport-actions">
+              <button class="sport-btn sport-btn-play" data-idx="${idx}">🔊 听示范</button>
+              <button class="sport-btn sport-btn-done ${done?'done':''}" data-idx="${idx}">${done?'✅ 已讲完':'✅ 我讲完了'}</button>
+            </div>
+          </div>
+        </div>
+      `;
+      div.querySelector('.sport-top').addEventListener('click',()=>{
+        const body=document.getElementById('kantuBody_'+idx);
+        const isOpen=body.classList.contains('open');
+        document.querySelectorAll('.sport-expand.open').forEach(el=>el.classList.remove('open'));
+        if(!isOpen)body.classList.add('open');
+      });
+      div.querySelector('.sport-btn-play').addEventListener('click',(e)=>{
+        e.stopPropagation();
+        speak(kt.a,'kantu_'+idx);
+      });
+      div.querySelector('.sport-btn-done').addEventListener('click',(e)=>{
+        e.stopPropagation();
+        if(done){showToast('已完成过啦');return;}
+        state.learned[key]=true;saveState();addStars(2);
+        showToast('+2⭐ 讲得真棒！');
+        renderContent();
+      });
+      list.appendChild(div);
+    });
+    const allDone=kanTuData.every((_,i)=>!!state.learned['yuyan_kantu_'+i]);
+    if(!allDone){
+      ct.insertAdjacentHTML('beforeend','<button class="btn-gold" style="width:100%;margin-top:12px" id="finishAllKantu">🏆 全部讲完了</button>');
+      document.getElementById('finishAllKantu').addEventListener('click',()=>{
+        kanTuData.forEach((_,i)=>{state.learned['yuyan_kantu_'+i]=true;});
+        saveState();addStars(16);showToast('🎉 +16⭐ 看图说话小达人！');
+        finishModule('yuyan');renderContent();
+      });
+    }
+  }
+}
+
+// 数理思维
+function renderShuli(ct,m){
+  const tab=renderTabs(ct,m);
+  if(tab==='点数'){
+    ct.insertAdjacentHTML('beforeend','<div id="countList"></div>');
+    const list=document.getElementById('countList');
+    countData.forEach((c,idx)=>{
+      const el=document.createElement('div');el.className='count-item';
+      const num=idx+1;
+      const emojis=Array(num).fill(c.e).join('');
+      el.innerHTML=`<div class="count-num">${num}</div><div class="count-emoji">${emojis}</div><div class="count-text">${c.t}</div><button class="sound-btn">🔊</button>`;
+    el.querySelector('.sound-btn').addEventListener('click',e=>{e.stopPropagation();speak(`${num}，${c.t}`,'count_'+idx);});
+    el.addEventListener('click',()=>{speak(`${num}，${c.t}`,'count_'+idx);finishItem('shuli_dianshu',idx,2);});
+      list.appendChild(el);
+    });
+  }else if(tab==='对比'){
+    ct.insertAdjacentHTML('beforeend',cardTemplate('对比游戏','⚖️')+'<div style="padding:20px;text-align:center"><div style="font-size:60px">🐘 🐭</div><div style="font-size:16px;font-weight:700;margin-top:10px">大象大，老鼠小</div><button class="btn-primary" style="margin-top:16px" onclick="speak(\'大象大，老鼠小\',\'compare\')">🔊 朗读</button><button class="btn-gold" style="margin-top:16px" onclick="finishModule(\'shuli\')">✅ 学会了</button></div></div>');
+  }else{
+    ct.insertAdjacentHTML('beforeend',cardTemplate('形状认知','🔺')+'<div style="padding:20px;text-align:center;font-size:50px">🔴 🟦 🔺</div><div style="text-align:center;font-weight:700">圆形、正方形、三角形</div><button class="btn-primary" style="display:block;margin:16px auto" onclick="speak(\'圆形，正方形，三角形\',\'shape\')">🔊 朗读</button><button class="btn-gold" style="display:block;margin:0 auto" onclick="finishModule(\'shuli\')">✅ 学会了</button></div>');
+  }
+}
+
+// 英语启蒙
+function renderYingyu(ct,m){
+  const tab=renderTabs(ct,m);
+  if(tab==='单词'){
+    ct.insertAdjacentHTML('beforeend','<div id="enList"></div>');
+    const list=document.getElementById('enList');
+    enWords.forEach((w,idx)=>{
+      const key='yingyu_'+idx;const done=!!state.learned[key];
+      const el=document.createElement('div');el.className='en-card';
+      el.innerHTML=`<div class="en-emoji">${w.e}</div><div class="en-info"><div class="en-word">${w.en}</div><div class="en-cn">${w.cn}</div></div><button class="en-sound">🔊</button>${done?'<span style="color:#4caf50;font-size:20px">✓</span>':'<button class="btn-gold" style="padding:6px 12px;font-size:12px">学会</button>'}`;
+      el.querySelector('.en-sound').addEventListener('click',e=>{e.stopPropagation();speakEn(w.en,'en_'+idx);});
+      const learnBtn=el.querySelector('.btn-gold');
+      if(learnBtn)learnBtn.addEventListener('click',e=>{e.stopPropagation();state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会了 ${w.en}`);renderContent();});
+      list.appendChild(el);
+    });
+  }else{
+    const phrases=[
+      {en:'Hello',cn:'你好'},
+      {en:'Thank you',cn:'谢谢你'},
+      {en:'Good morning',cn:'早上好'},
+      {en:'Goodbye',cn:'再见'},
+      {en:'I love you',cn:'我爱你'},
+      {en:'How are you',cn:'你好吗'},
+      {en:'I am happy',cn:'我很开心'},
+      {en:'Nice to meet you',cn:'很高兴见到你'},
+    ];
+    ct.insertAdjacentHTML('beforeend',cardTemplate('英语短句','💬')+'<div id="phraseList" style="padding:4px 0"></div>');
+    const list=document.getElementById('phraseList');
+    phrases.forEach((p,idx)=>{
+      const key='yingyu_phrase_'+idx;const done=!!state.learned[key];
+      const el=document.createElement('div');el.className='en-card';
+      el.innerHTML=`<div class="en-emoji">💬</div><div class="en-info"><div class="en-word">${p.en}</div><div class="en-cn">${p.cn}</div></div><button class="en-sound">🔊</button>${done?'<span style="color:#4caf50;font-size:20px">✓</span>':'<button class="btn-gold" style="padding:6px 12px;font-size:12px">学会</button>'}`;
+      el.querySelector('.en-sound').addEventListener('click',e=>{e.stopPropagation();speakEn(p.en,'phrase_'+idx);});
+      const learnBtn=el.querySelector('.btn-gold');
+      if(learnBtn)learnBtn.addEventListener('click',e=>{e.stopPropagation();state.learned[key]=true;saveState();addStars(2);showToast('+2⭐ 学会了 '+p.en);renderContent();});
+      list.appendChild(el);
+    });
+    ct.insertAdjacentHTML('beforeend','<button class="btn-gold" style="width:100%;margin-top:12px" onclick="finishModule(\'yingyu\')">✅ 全部学会了</button>');
+  }
+}
+
+// 字母认识
+function renderZimu(ct,m){
+  const tab=renderTabs(ct,m);
+  if(tab==='字母表'){
+    ct.insertAdjacentHTML('beforeend',cardTemplate('字母表','🔤')+'<div style="font-size:28px;font-weight:800;text-align:center;line-height:1.8;padding:20px 0">A B C D E F G<br>H I J K L M N<br>O P Q R S T U<br>V W X Y Z</div><button class="btn-primary" style="width:100%" onclick="speakEn(\'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z\')">🔊 朗读字母表</button></div>');
+    return;
+  }
+  ct.insertAdjacentHTML('beforeend','<div class="letter-grid" id="letterGrid"></div>');
+  const grid=document.getElementById('letterGrid');
+  letters.forEach((L,idx)=>{
+    const key='zimu_'+(tab==='大写字母'?'upper':'lower')+'_'+idx;const done=!!state.learned[key];
+    const lShow=tab==='大写字母'?L.l:L.l.toLowerCase();
+    const el=document.createElement('div');el.className='letter-card';
+    el.innerHTML=`<div class="letter-emoji">${L.e}</div><div class="letter-big">${lShow}</div><div class="letter-word">${L.w}</div><div class="letter-cn">${L.cn}</div><div class="letter-btns"><button class="letter-btn">🔊</button><button class="letter-btn ${done?'done':''}">${done?'✓':'学'}</button></div>`;
+    const btns=el.querySelectorAll('.letter-btn');
+    btns[0].addEventListener('click',e=>{e.stopPropagation();speakEn(`${lShow} for ${L.w}`,'letter_'+idx);});
+    btns[1].addEventListener('click',e=>{e.stopPropagation();if(done){showToast('已学会');return;}state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会了字母 ${lShow}`);renderContent();});
+    grid.appendChild(el);
+  });
+}
+
+// 数字1-100
+function renderShuzi(ct,m){
+  const tab=renderTabs(ct,m);
+  const start=tab==='1-20'?1:tab==='21-50'?21:51;
+  const end=tab==='1-20'?20:tab==='21-50'?50:100;
+  ct.insertAdjacentHTML('beforeend','<div class="num-grid" id="numGrid"></div>');
+  const grid=document.getElementById('numGrid');
+  for(let i=start;i<=end;i++){
+    const key='num_'+i;const done=!!state.learned[key];
+    const el=document.createElement('div');el.className='num-card'+(done?' done':'');
+    el.innerHTML=`<span class="num-check">✓</span><div class="num-num ${done?'done':''}">${i}</div><div class="num-emoji">${numberEmojis[(i-1)%20]}</div>`;
+    el.addEventListener('click',()=>{
+      if(!done){state.learned[key]=true;saveState();addStars(1);showToast(`+1⭐ 认识了数字 ${i}`);}else{speak(String(i),'number_'+i);}
+      renderContent();
+    });
+    grid.appendChild(el);
+  }
+  ct.insertAdjacentHTML('beforeend',`
+    <div class="card" style="margin-top:12px;text-align:center">
+      <div style="font-size:16px;font-weight:800;margin-bottom:10px">🎵 数字歌</div>
+      <div style="font-size:14px;color:#666;line-height:1.8">12345，上山打老虎🐯<br>67890，数字真有趣🎉<br>数一数，认一认，我是聪明小宝贝！</div>
+      <button class="btn-primary" style="margin-top:10px" onclick="speak('12345，上山打老虎。67890，数字真有趣。数一数，认一认，我是聪明小宝贝！')">🔊 听数字歌</button>
+    </div>
+  `);
+}
+
+// 音乐律动
+function renderYinyue(ct,m){
+  const tab=renderTabs(ct,m);
+  if(tab==='儿歌'){
+    ct.insertAdjacentHTML('beforeend','<div id="songList2"></div>');
+    const list=document.getElementById('songList2');
+    songs.forEach((s,idx)=>{
+      const el=document.createElement('div');el.className='song-item';
+      el.innerHTML=`<div class="song-info"><div class="song-name">${s.n}</div><div class="song-desc">${s.d}</div></div><button class="song-play">▶</button>`;
+      el.querySelector('.song-play').addEventListener('click',()=>{
+        // 先播放，再延迟打卡（避免 renderContent 打断音频）
+        speak(s.lyrics||s.n,'song_'+idx);
+        const key='yinyue_song_'+idx;
+        if(!state.learned[key]){
+          state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会唱${s.n}`);
+          // 延迟刷新，等音频播放
+          setTimeout(()=>renderContent(),1500);
+        }
+      });
+      list.appendChild(el);
+    });
+  }else if(tab==='节奏感知'){
+    // 节奏感知：多个具体节奏练习
+    const rhythms=[
+      {n:'拍拍手',e:'👏',t:'一二三四，拍拍拍拍',d:'双手有节奏地拍四下，像小兔子跳跳'},
+      {n:'跺跺脚',e:'👣',t:'咚 咚 咚 咚',d:'双脚轻轻跺地，感受重音'},
+      {n:'拍肩膀',e:'👐',t:'啪 啪 啪 啪',d:'左右手轮流拍肩膀'},
+      {n:'拍桌子',e:'✋',t:'哒哒 哒哒哒',d:'快两下、慢三下，练习变化节奏'},
+      {n:'摇沙锤',e:'🪇',t:'沙沙 沙沙沙',d:'左右摇晃，像小沙锤唱歌'},
+      {n:'敲小鼓',e:'🥁',t:'咚咚 锵',d:'重拍敲鼓，结尾来一声锵'}
+    ];
+    ct.insertAdjacentHTML('beforeend',cardTemplate('🥁 节奏感知','跟着节奏做动作')+'<div id="rhythmList"></div>');
+    const list=document.getElementById('rhythmList');
+    rhythms.forEach((r,idx)=>{
+      const key='yinyue_rhythm_'+idx;
+      const done=!!state.learned[key];
+      const el=document.createElement('div');
+      el.className='life-item';
+      el.innerHTML=`<div class="life-ic" style="font-size:36px">${r.e}</div><div class="life-info"><div class="life-title">${r.n}</div><div class="life-desc">${r.t}</div><div style="font-size:11px;color:#999;margin-top:3px">${r.d}</div></div><button class="life-check ${done?'done':''}">${done?'✓':'○'}</button>`;
+      el.querySelector('.life-check').addEventListener('click',()=>{
+        if(state.learned[key]){
+          delete state.learned[key];
+          state.stars=Math.max(0,state.stars-2);
+          saveState();updateTop();
+          showToast('已取消，-2⭐');
+        }else{
+          speak(`${r.n}，${r.t}`,'rhythm_'+idx);
+          state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会${r.n}`);
+        }
+        renderContent();
+      });
+      list.appendChild(el);
+    });
+    // 完成整个模块打卡
+    ct.insertAdjacentHTML('beforeend','<button class="btn-gold" style="width:100%;margin-top:16px" id="finishRhythm">✅ 完成节奏感知</button>');
+    document.getElementById('finishRhythm').addEventListener('click',()=>{finishModule('yinyue');renderContent();});
+  }else{
+    // 律动舞蹈：多个具体舞蹈动作
+    const dances=[
+      {n:'小兔子跳',e:'🐰',m:'双手放头顶当耳朵，双脚并拢轻轻跳',d:'一二一二，小兔子蹦蹦跳'},
+      {n:'小鸟飞飞',e:'🐦',m:'双臂张开像翅膀，左右摇摆身体',d:'飞呀飞，小鸟飞过高山'},
+      {n:'小鸭子走',e:'🦆',m:'双手放身后，摇摇摆摆走',d:'嘎嘎嘎，小鸭子去散步'},
+      {n:'大象甩鼻',e:'🐘',m:'一只手当长鼻子，左右甩动',d:'大象鼻子长，甩呀甩'},
+      {n:'小猴爬树',e:'🐒',m:'双手交替向上爬，脚尖踮起',d:'爬呀爬，小猴爬到树顶上'},
+      {n:'蝴蝶翩翩',e:'🦋',m:'双臂上下扇动，转一个圈',d:'蝴蝶飞，花儿笑'}
+    ];
+    ct.insertAdjacentHTML('beforeend',cardTemplate('💃 律动舞蹈','跟着音乐动起来')+'<div id="danceList"></div>');
+    const list=document.getElementById('danceList');
+    dances.forEach((d,idx)=>{
+      const key='yinyue_dance_'+idx;
+      const done=!!state.learned[key];
+      const el=document.createElement('div');
+      el.className='life-item';
+      el.innerHTML=`<div class="life-ic" style="font-size:36px">${d.e}</div><div class="life-info"><div class="life-title">${d.n}</div><div class="life-desc">${d.m}</div><div style="font-size:11px;color:#999;margin-top:3px">${d.d}</div></div><button class="life-check ${done?'done':''}">${done?'✓':'○'}</button>`;
+      el.querySelector('.life-check').addEventListener('click',()=>{
+        if(state.learned[key]){
+          delete state.learned[key];
+          state.stars=Math.max(0,state.stars-2);
+          saveState();updateTop();
+          showToast('已取消，-2⭐');
+        }else{
+          speak(`${d.n}，${d.m}`,'dance_'+idx);
+          state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会${d.n}`);
+        }
+        renderContent();
+      });
+      list.appendChild(el);
+    });
+    // 完成整个模块打卡
+    ct.insertAdjacentHTML('beforeend','<button class="btn-gold" style="width:100%;margin-top:16px" id="finishDance">✅ 完成律动舞蹈</button>');
+    document.getElementById('finishDance').addEventListener('click',()=>{finishModule('yinyue');renderContent();});
+  }
+}
+
+// 美术创作
+function renderMeishu(ct,m){
+  ct.insertAdjacentHTML('beforeend','<div class="art-grid" id="artGrid"></div>');
+  const grid=document.getElementById('artGrid');
+  artItems.forEach((a,idx)=>{
+    const key='meishu_'+idx;const done=!!state.learned[key];
+    const el=document.createElement('div');el.className='art-item'+(done?' done':'');
+    el.innerHTML=`<div class="art-emoji">${a.e}</div><div class="art-name">${a.n}</div><div style="font-size:10px;color:#999;line-height:1.2;margin-top:2px">${a.d}</div>`;
+    el.addEventListener('click',()=>openArtActivity(idx,a));
+    grid.appendChild(el);
+  });
+}
+
+// 美术活动弹层
+function openArtActivity(idx,a){
+  const key='meishu_'+idx;const done=!!state.learned[key];
+  const overlay=document.createElement('div');
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;display:flex;align-items:center;justify-content:center;padding:16px';
+  const modal=document.createElement('div');
+  modal.style.cssText='background:#fff;border-radius:24px;padding:20px;width:100%;max-width:420px;max-height:85vh;overflow-y:auto;animation:popIn .25s ease';
+  
+  let content='';
+  if(idx===0){
+      // 涂色画 - Canvas画板
+    content=`
+      <div style="font-size:20px;font-weight:800;text-align:center;margin-bottom:4px">🖍️ 涂色画</div>
+      <div style="font-size:13px;color:#888;text-align:center;margin-bottom:8px">选颜色，选图案，开始涂色吧！</div>
+      <div style="display:flex;gap:8px;justify-content:center;margin-bottom:10px;flex-wrap:wrap" id="patternSwitcher">
+        ${['🐰小兔','🐟小鱼','🐢海龟','🦀螃蟹','🐸青蛙','🪑椅子','🗑️垃圾桶','🧱积木'].map((p,i)=>`<button class="tab ${i===0?'active':''}" data-p="${i}" style="font-size:12px;padding:6px 10px">${p}</button>`).join('')}
+      </div>
+      <canvas id="colorCanvas" width="360" height="360" style="border:2px solid #e0e0e0;border-radius:16px;display:block;margin:0 auto;background:#fff;touch-action:none;max-width:100%"></canvas>
+      <div style="display:flex;gap:8px;justify-content:center;margin:12px 0;flex-wrap:wrap" id="colorPicker">
+        ${['#ff7675','#fdcb6e','#55efc4','#74b9ff','#a29bfe','#fd79a8','#e17055','#00b894','#fdcb6e','#6c5ce7','#dfe6e9','#2d3436'].map(c=>`<div class="color-dot" data-c="${c}" style="width:32px;height:32px;border-radius:50%;background:${c};cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)"></div>`).join('')}
+      </div>
+      <div style="display:flex;gap:8px;justify-content:center">
+        <button class="btn-primary" id="clearColor" style="font-size:13px;padding:8px 16px">🔄 清除</button>
+        <button class="btn-gold" id="finishColor" style="font-size:13px;padding:8px 16px">${done?'✅ 已完成':'✅ 完成涂色'}</button>
+      </div>
+    `;
+  }else if(idx===5){
+    // 色彩认知
+    content=`
+      <div style="font-size:20px;font-weight:800;text-align:center;margin-bottom:4px">🎨 色彩认知</div>
+      <div style="font-size:13px;color:#888;text-align:center;margin-bottom:12px">认识红黄蓝三原色</div>
+      <div style="display:flex;gap:12px;justify-content:center;margin:16px 0">
+        <div style="text-align:center"><div style="width:70px;height:70px;border-radius:50%;background:#e74c3c;margin:0 auto"></div><div style="font-size:14px;font-weight:700;margin-top:6px">红色</div></div>
+        <div style="text-align:center"><div style="width:70px;height:70px;border-radius:50%;background:#f1c40f;margin:0 auto"></div><div style="font-size:14px;font-weight:700;margin-top:6px">黄色</div></div>
+        <div style="text-align:center"><div style="width:70px;height:70px;border-radius:50%;background:#3498db;margin:0 auto"></div><div style="font-size:14px;font-weight:700;margin-top:6px">蓝色</div></div>
+      </div>
+      <div style="background:#fff3e0;border-radius:12px;padding:12px;font-size:13px;color:#666;line-height:1.6;margin:12px 0">
+        💡 红色+黄色=橙色🟠<br>黄色+蓝色=绿色🟢<br>红色+蓝色=紫色🟣
+      </div>
+      <button class="btn-gold" style="width:100%" onclick="finishArt(${idx},'${a.n}',this)">${done?'✅ 已完成':'✅ 我学会了'}</button>
+    `;
+  }else{
+    // 其他美术活动
+    const tips={
+      1:'用手指在屏幕上画圈圈，模拟手指画动作👆<br><br>💡 小贴士：在家可以用颜料在纸上画哦！',
+      2:'跟着步骤折纸：<br>1. 把纸对折<br>2. 再对折<br>3. 翻转<br>4. 完成！<br><br>💡 折纸锻炼小手灵活度',
+      3:'想象你在用黏土捏一个小动物<br><br>🐱 捏一个猫咪耳朵<br>🐶 捏一个狗狗尾巴<br><br>💡 黏土锻炼手指力量',
+      4:'把不同形状拼在一起：<br>🔴 + 🟦 = 房子<br>🔺 + 🔴 = 冰淇淋<br><br>💡 拼贴画培养创造力',
+      6:'想象用安全剪刀剪纸：<br>✂️ 剪一条直线<br>✂️ 剪一个圆形<br>✂️ 剪一朵花<br><br>💡 剪纸锻炼手眼协调',
+      7:'用树叶或硬币蘸颜料印图案：<br>🍃 树叶印<br>🪙 硬币印<br><br>💡 拓印画发现生活之美'
+    };
+    content=`
+      <div style="font-size:20px;font-weight:800;text-align:center;margin-bottom:4px">${a.e} ${a.n}</div>
+      <div style="font-size:13px;color:#888;text-align:center;margin-bottom:12px">${a.d}</div>
+      <div style="background:#f0f7ff;border-radius:12px;padding:16px;font-size:14px;color:#555;line-height:1.8;margin:12px 0">${tips[idx]||'发挥创意，动手创作吧！'}</div>
+      <button class="btn-gold" style="width:100%" onclick="finishArt(${idx},'${a.n}',this)">${done?'✅ 已完成':'✅ 我完成了'}</button>
+    `;
+  }
+  
+  modal.innerHTML=`<div style="text-align:right;margin-bottom:8px"><span style="font-size:24px;cursor:pointer;color:#999" id="artClose">✕</span></div>${content}`;
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+  
+  overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.remove();});
+  document.getElementById('artClose').addEventListener('click',()=>overlay.remove());
+  
+  // 涂色画逻辑
+  if(idx===0){
+    setTimeout(()=>{
+      const cvs=document.getElementById('colorCanvas');
+      const ctx=cvs.getContext('2d');
+      let curColor='#ff7675';let drawing=false;
+      
+      // 画线稿 - 6个可爱动物图案 (画布360x360)
+      const patterns=[
+        {
+          name:'🐰 小兔子',
+          draw:()=>{
+            // 身体
+            ctx.beginPath();ctx.ellipse(180,240,55,65,0,0,Math.PI*2);ctx.stroke();
+            // 头
+            ctx.beginPath();ctx.arc(180,140,50,0,Math.PI*2);ctx.stroke();
+            // 长耳朵
+            ctx.beginPath();ctx.ellipse(150,60,16,40,-.1,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(210,60,16,40,.1,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(150,60,10,30,-.1,0,Math.PI*2);ctx.fillStyle='#eee';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.ellipse(210,60,10,30,.1,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            // 眼睛
+            ctx.beginPath();ctx.arc(160,125,9,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(200,125,9,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(163,123,4,0,Math.PI*2);ctx.fillStyle='#bbb';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.arc(203,123,4,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            // 鼻子+嘴
+            ctx.beginPath();ctx.arc(180,142,5,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(180,147);ctx.lineTo(180,155);ctx.stroke();
+            ctx.beginPath();ctx.arc(180,158,6,.2,Math.PI-.2);ctx.stroke();
+            // 胡须
+            for(let s of[-1,1]){
+              ctx.beginPath();ctx.moveTo(150+s*10,138);ctx.lineTo(120+s*20,132);ctx.stroke();
+              ctx.beginPath();ctx.moveTo(150+s*10,143);ctx.lineTo(120+s*20,143);ctx.stroke();
+              ctx.beginPath();ctx.moveTo(150+s*10,148);ctx.lineTo(120+s*20,154);ctx.stroke();
+            }
+            // 脚
+            ctx.beginPath();ctx.ellipse(140,305,18,12,0,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(220,305,18,12,0,0,Math.PI*2);ctx.stroke();
+            // 尾巴
+            ctx.beginPath();ctx.arc(235,220,15,0,Math.PI*2);ctx.stroke();
+          }
+        },
+        {
+          name:'🐟 小鱼',
+          draw:()=>{
+            // 身体
+            ctx.beginPath();ctx.ellipse(180,180,80,50,0,0,Math.PI*2);ctx.stroke();
+            // 尾巴
+            ctx.beginPath();ctx.moveTo(100,180);ctx.lineTo(50,130);ctx.lineTo(70,180);ctx.lineTo(50,230);ctx.closePath();ctx.stroke();
+            // 眼睛
+            ctx.beginPath();ctx.arc(230,165,15,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(235,162,7,0,Math.PI*2);ctx.fillStyle='#bbb';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            // 嘴
+            ctx.beginPath();ctx.arc(260,185,5,.5,Math.PI-.5);ctx.stroke();
+            // 鳍
+            ctx.beginPath();ctx.moveTo(170,130);ctx.lineTo(140,90);ctx.lineTo(200,140);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(170,230);ctx.lineTo(140,270);ctx.lineTo(200,220);ctx.stroke();
+            // 鳞片
+            for(let i=0;i<4;i++){
+              ctx.beginPath();ctx.arc(140+i*30,180,20,0,Math.PI*2);ctx.stroke();
+            }
+            // 气泡
+            ctx.beginPath();ctx.arc(270,130,8,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(285,105,5,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(295,85,3,0,Math.PI*2);ctx.stroke();
+          }
+        },
+        {
+          name:'🐢 海龟',
+          draw:()=>{
+            // 龟壳
+            ctx.beginPath();ctx.ellipse(180,200,80,55,0,0,Math.PI*2);ctx.stroke();
+            // 壳纹
+            ctx.beginPath();ctx.moveTo(180,145);ctx.lineTo(180,255);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(100,200);ctx.lineTo(260,200);ctx.stroke();
+            for(let i=0;i<6;i++){
+              const a=i*Math.PI/3-Math.PI/2;
+              ctx.beginPath();ctx.ellipse(180,200,30,18,a,0,Math.PI*2);ctx.stroke();
+            }
+            // 头
+            ctx.beginPath();ctx.arc(180,120,30,0,Math.PI*2);ctx.stroke();
+            // 眼睛
+            ctx.beginPath();ctx.arc(165,112,6,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(195,112,6,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(167,110,3,0,Math.PI*2);ctx.fillStyle='#bbb';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.arc(197,110,3,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            // 嘴
+            ctx.beginPath();ctx.arc(180,130,6,.3,Math.PI-.3);ctx.stroke();
+            // 脚
+            ctx.beginPath();ctx.ellipse(110,250,15,10,-.3,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(250,250,15,10,.3,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(120,155,12,8,-.2,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(240,155,12,8,.2,0,Math.PI*2);ctx.stroke();
+            // 尾巴
+            ctx.beginPath();ctx.moveTo(180,255);ctx.lineTo(170,280);ctx.lineTo(190,280);ctx.closePath();ctx.stroke();
+          }
+        },
+        {
+          name:'🦀 小螃蟹',
+          draw:()=>{
+            // 身体
+            ctx.beginPath();ctx.ellipse(180,180,55,40,0,0,Math.PI*2);ctx.stroke();
+            // 眼睛柄
+            ctx.beginPath();ctx.moveTo(155,145);ctx.lineTo(145,110);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(205,145);ctx.lineTo(215,110);ctx.stroke();
+            ctx.beginPath();ctx.arc(145,105,10,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(215,105,10,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(147,103,5,0,Math.PI*2);ctx.fillStyle='#bbb';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.arc(217,103,5,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            // 嘴
+            ctx.beginPath();ctx.arc(180,175,10,.2,Math.PI-.2);ctx.stroke();
+            // 大钳子
+            ctx.beginPath();ctx.moveTo(125,160);ctx.lineTo(80,130);ctx.lineTo(70,150);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(80,130);ctx.lineTo(60,115);ctx.lineTo(85,125);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(235,160);ctx.lineTo(280,130);ctx.lineTo(290,150);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(280,130);ctx.lineTo(300,115);ctx.lineTo(275,125);ctx.stroke();
+            // 小脚
+            for(let i=0;i<3;i++){
+              ctx.beginPath();ctx.moveTo(130+i*8,180+i*8);ctx.lineTo(100+i*5,210+i*10);ctx.stroke();
+              ctx.beginPath();ctx.moveTo(230-i*8,180+i*8);ctx.lineTo(260-i*5,210+i*10);ctx.stroke();
+            }
+            // 壳纹
+            ctx.beginPath();ctx.arc(180,170,20,.5,Math.PI-.5);ctx.stroke();
+          }
+        },
+        {
+          name:'🐸 青蛙',
+          draw:()=>{
+            // 身体
+            ctx.beginPath();ctx.ellipse(180,200,60,50,0,0,Math.PI*2);ctx.stroke();
+            // 头（略宽）
+            ctx.beginPath();ctx.ellipse(180,130,55,42,0,0,Math.PI*2);ctx.stroke();
+            // 大眼睛
+            ctx.beginPath();ctx.arc(145,105,22,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(215,105,22,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(145,105,14,0,Math.PI*2);ctx.fillStyle='#eee';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.arc(215,105,14,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.arc(148,102,7,0,Math.PI*2);ctx.fillStyle='#bbb';ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            ctx.beginPath();ctx.arc(218,102,7,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#bbb';ctx.stroke();
+            // 大嘴
+            ctx.beginPath();ctx.arc(180,145,25,.3,Math.PI-.3);ctx.stroke();
+            // 腿
+            ctx.beginPath();ctx.ellipse(120,240,20,12,-.2,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(240,240,20,12,.2,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(130,300,18,10,0,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(230,300,18,10,0,0,Math.PI*2);ctx.stroke();
+            // 脚趾
+            for(let x of[115,130,145]){
+              ctx.beginPath();ctx.moveTo(x,308);ctx.lineTo(x-5,320);ctx.stroke();
+            }
+            for(let x of[215,230,245]){
+              ctx.beginPath();ctx.moveTo(x,308);ctx.lineTo(x+5,320);ctx.stroke();
+            }
+          }
+        },
+        {
+          name:'🪑 小椅子',
+          draw:()=>{
+            // 椅背
+            ctx.beginPath();ctx.roundRect(110,70,140,50,10);ctx.stroke();
+            // 椅背装饰横条
+            ctx.beginPath();ctx.moveTo(120,90);ctx.lineTo(240,90);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(120,105);ctx.lineTo(240,105);ctx.stroke();
+            // 椅背两侧立柱
+            ctx.beginPath();ctx.roundRect(105,65,18,130,6);ctx.stroke();
+            ctx.beginPath();ctx.roundRect(237,65,18,130,6);ctx.stroke();
+            // 椅背顶部圆球
+            ctx.beginPath();ctx.arc(114,62,10,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.arc(246,62,10,0,Math.PI*2);ctx.stroke();
+            // 座面
+            ctx.beginPath();ctx.roundRect(90,190,180,35,8);ctx.stroke();
+            // 座面厚度线
+            ctx.beginPath();ctx.moveTo(95,215);ctx.lineTo(265,215);ctx.stroke();
+            // 前腿
+            ctx.beginPath();ctx.moveTo(100,225);ctx.lineTo(95,320);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(260,225);ctx.lineTo(265,320);ctx.stroke();
+            // 后腿
+            ctx.beginPath();ctx.moveTo(115,225);ctx.lineTo(110,320);ctx.stroke();
+            ctx.beginPath();ctx.moveTo(245,225);ctx.lineTo(250,320);ctx.stroke();
+            // 横档（腿之间）
+            ctx.beginPath();ctx.moveTo(100,280);ctx.lineTo(260,280);ctx.stroke();
+            // 地面线
+            ctx.beginPath();ctx.moveTo(50,322);ctx.lineTo(310,322);ctx.stroke();
+          }
+        },
+        {
+          name:'🗑️ 垃圾桶',
+          draw:()=>{
+            // 桶盖
+            ctx.beginPath();ctx.ellipse(180,100,80,18,0,0,Math.PI*2);ctx.stroke();
+            ctx.beginPath();ctx.ellipse(180,100,70,14,0,0,Math.PI*2);ctx.stroke();
+            // 盖子把手
+            ctx.beginPath();ctx.roundRect(165,85,30,12,4);ctx.stroke();
+            // 桶身（梯形）
+            ctx.beginPath();ctx.moveTo(110,110);ctx.lineTo(130,300);ctx.lineTo(230,300);ctx.lineTo(250,110);ctx.stroke();
+            // 桶身竖条纹
+            for(let i=1;i<5;i++){
+              const x=130+i*20;
+              const x2=110+i*20;
+              ctx.beginPath();ctx.moveTo(x2,110);ctx.lineTo(x,300);ctx.stroke();
+            }
+            // 回收标志（三角箭头）
+            const cx=180,cy=200,r=22;
+            for(let i=0;i<3;i++){
+              const a1=i*Math.PI*2/3-Math.PI/2;
+              const a2=(i+1)*Math.PI*2/3-Math.PI/2;
+              ctx.beginPath();
+              ctx.moveTo(cx+Math.cos(a1)*r,cy+Math.sin(a1)*r);
+              ctx.lineTo(cx+Math.cos(a2)*r,cy+Math.sin(a2)*r);
+              ctx.stroke();
+              // 箭头
+              const ax=cx+Math.cos(a2)*r,ay=cy+Math.sin(a2)*r;
+              ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(ax-4,ay-6);ctx.stroke();
+              ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(ax+5,ay-3);ctx.stroke();
+            }
+            // 底座
+            ctx.beginPath();ctx.roundRect(120,300,120,12,4);ctx.stroke();
+          }
+        },
+        {
+          name:'🧱 积木',
+          draw:()=>{
+            // 大方块积木（底部左）
+            ctx.beginPath();ctx.roundRect(60,200,90,90,8);ctx.stroke();
+            ctx.beginPath();ctx.arc(105,245,20,0,Math.PI*2);ctx.stroke(); // 圆圈
+            ctx.beginPath();ctx.arc(105,245,10,0,Math.PI*2);ctx.stroke();
+            // 长条积木（底部中）
+            ctx.beginPath();ctx.roundRect(160,220,140,70,6);ctx.stroke();
+            // 长条上的字母
+            ctx.font='bold 32px sans-serif';ctx.fillStyle='#bbb';
+            ctx.fillText('A',175,265);ctx.strokeStyle='#bbb';ctx.strokeText('A',175,265);
+            ctx.fillText('B',215,265);ctx.strokeText('B',215,265);
+            ctx.fillText('C',255,265);ctx.strokeText('C',255,265);
+            // 三角形积木（顶部左，屋顶状）
+            ctx.beginPath();ctx.moveTo(70,200);ctx.lineTo(115,140);ctx.lineTo(160,200);ctx.closePath();ctx.stroke();
+            ctx.beginPath();ctx.arc(115,180,12,0,Math.PI*2);ctx.stroke();
+            // 拱形积木（顶部右）
+            ctx.beginPath();ctx.moveTo(170,200);ctx.lineTo(170,160);ctx.stroke();
+            ctx.beginPath();ctx.arc(210,160,40,Math.PI,0);ctx.stroke();
+            ctx.beginPath();ctx.lineTo(250,200);ctx.stroke();
+            // 小方块积木（最顶）
+            ctx.beginPath();ctx.roundRect(200,130,50,35,5);ctx.stroke();
+            ctx.beginPath();ctx.arc(225,147,8,0,Math.PI*2);ctx.stroke();
+            // 星星装饰
+            ctx.font='20px sans-serif';ctx.fillStyle='#bbb';
+            ctx.fillText('★',90,175);ctx.strokeStyle='#bbb';ctx.strokeText('★',90,175);
+            // 地面线
+            ctx.beginPath();ctx.moveTo(40,295);ctx.lineTo(320,295);ctx.stroke();
+          }
+        }
+      ];
+      let curPattern=0;
+      
+      function drawOutline(){
+        ctx.clearRect(0,0,cvs.width,cvs.height);
+        ctx.fillStyle='#fff';ctx.fillRect(0,0,cvs.width,cvs.height);
+        ctx.strokeStyle='#bbb';ctx.lineWidth=2.5;ctx.lineCap='round';ctx.lineJoin='round';
+        patterns[curPattern].draw();
+      }
+      drawOutline();
+      
+      function getPos(e){
+        const r=cvs.getBoundingClientRect();
+        const sx=cvs.width/r.width,sy=cvs.height/r.height;
+        const touch = e.touches && e.touches.length ? e.touches[0] : (e.changedTouches && e.changedTouches.length ? e.changedTouches[0] : null);
+        const clientX = touch ? touch.clientX : e.clientX;
+        const clientY = touch ? touch.clientY : e.clientY;
+        return{x:(clientX-r.left)*sx,y:(clientY-r.top)*sy};
+      }
+      
+      function startDraw(e){e.preventDefault();drawing=true;const p=getPos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);}
+      function moveDraw(e){e.preventDefault();if(!drawing)return;const p=getPos(e);ctx.strokeStyle=curColor;ctx.lineWidth=12;ctx.lineCap='round';ctx.lineJoin='round';ctx.globalAlpha=0.5;ctx.lineTo(p.x,p.y);ctx.stroke();ctx.beginPath();ctx.moveTo(p.x,p.y);}
+      function endDraw(e){e.preventDefault();drawing=false;ctx.globalAlpha=1;}
+      
+      cvs.addEventListener('touchstart',startDraw,{passive:false});
+      cvs.addEventListener('touchmove',moveDraw,{passive:false});
+      cvs.addEventListener('touchend',endDraw,{passive:false});
+      cvs.addEventListener('touchcancel',endDraw,{passive:false});
+      cvs.addEventListener('mousedown',startDraw);
+      cvs.addEventListener('mousemove',moveDraw);
+      cvs.addEventListener('mouseup',endDraw);
+      cvs.addEventListener('mouseleave',endDraw);
+      cvs.addEventListener('mousedown',startDraw);
+      cvs.addEventListener('mousemove',moveDraw);
+      cvs.addEventListener('mouseup',endDraw);
+      
+      document.querySelectorAll('.color-dot').forEach(d=>{
+        d.addEventListener('click',()=>{
+          curColor=d.dataset.c;
+          document.querySelectorAll('.color-dot').forEach(x=>x.style.transform='scale(1)');
+          d.style.transform='scale(1.3)';
+          d.style.border='3px solid #333';
+          setTimeout(()=>{d.style.border='2px solid #fff';},200);
+        });
+      });
+      
+      // 图案切换
+      document.querySelectorAll('#patternSwitcher .tab').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          curPattern=parseInt(btn.dataset.p);
+          document.querySelectorAll('#patternSwitcher .tab').forEach(t=>t.classList.remove('active'));
+          btn.classList.add('active');
+          drawOutline();
+        });
+      });
+      
+      document.getElementById('clearColor').addEventListener('click',drawOutline);
+      document.getElementById('finishColor').addEventListener('click',function(){
+        if(done){showToast('已完成');overlay.remove();return;}
+        state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 完成涂色画`);overlay.remove();renderContent();
+      });
+    },100);
+  }
+}
+
+function finishArt(idx,name,btn){
+  const key='meishu_'+idx;
+  if(state.learned[key]){showToast('已完成');return;}
+  state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 完成${name}`);
+  // 关闭弹层
+  const ov=document.querySelector('div[style*="position:fixed"][style*="z-index:500"]');
+  if(ov)ov.remove();
+  renderContent();
+}
+
+// 生活常识
+// 运动数据
+const sportData=[
+  {e:'🦘',n:'袋鼠跳跳跳',tag:'下肢力量·协调',steps:['双脚并拢，双手放在胸前像小袋鼠','膝盖微微弯曲，像弹簧一样','用力向前跳，跳得越高越远越好','连续跳10下，休息一下再来一轮'],timer:'每组10次，做3组',star:3},
+  {e:'🐸',n:'青蛙蹲跳',tag:'腿部力量·爆发',steps:['蹲下来，双手放在地上像小青蛙','双腿用力蹬地，向前跳出去','落地时轻轻蹲下，保持平衡','连续跳5次，看能跳多远'],timer:'每组5次，做3组',star:3},
+  {e:'🐻',n:'小熊爬行',tag:'全身协调·核心',steps:['双手撑地，膝盖也跪在地上','像小熊一样向前爬，左手右脚同时动','再换右手左脚，交替前进','从房间一头爬到另一头，再爬回来'],timer:'来回2趟，做2组',star:3},
+  {e:'🦩',n:'火烈鸟单脚站',tag:'平衡能力·专注',steps:['站直身体，双手叉腰','慢慢抬起一只脚，脚底贴住另一条腿','保持平衡不要晃，像火烈鸟一样','数到20，然后换脚再来一次'],timer:'每只脚20秒，做3轮',star:2},
+  {e:'🐰',n:'小兔子跳',tag:'协调·节奏感',steps:['双手举到头顶当作兔耳朵','双脚并拢，脚尖轻轻点地','跟着节拍左右跳、前后跳','边跳边唱："小白兔白又白，两只耳朵竖起来"'],timer:'跳30秒，做3组',star:2},
+  {e:'🐒',n:'猴子吊臂',tag:'上肢力量·抓握',steps:['找到一根安全的横杆（或让大人拉着手）','双手抓紧横杆，像猴子一样悬挂','试着把脚离地，坚持几秒钟','慢慢放下来，甩甩手臂休息'],timer:'每次5-10秒，做5次',star:3},
+  {e:'🏃',n:'折返跑',tag:'速度·敏捷',steps:['找一个安全的空地，放两个标记物','从一个标记物快速跑到另一个','摸到标记物后转身跑回来','来回算1次，看看10次要多久'],timer:'10次往返，做2组',star:3},
+  {e:'🦀',n:'螃蟹横走',tag:'横向移动·协调',steps:['蹲下来，双手撑地，屁股离地','像螃蟹一样横着走','先向右走5步，再向左走5步','注意不要碰到家具'],timer:'来回5趟，做2组',star:2},
+  {e:'🌈',n:'彩虹伸展操',tag:'柔韧性·放松',steps:['站直，双手举过头顶，像彩虹一样弯弯的','向左弯腰，手也跟着弯过去','再向右弯腰','向前弯腰，手去摸脚趾，再慢慢站起来'],timer:'每个方向保持5秒，做3轮',star:2},
+  {e:'⚽',n:'踢球小将',tag:'眼脚协调·精准',steps:['找一个软球，放在地上','退后两步，小跑上前用脚内侧踢球','瞄准一个方向踢出去','把球捡回来，换只脚再踢'],timer:'左右脚各踢10次',star:3}
+];
+
+function renderShenghuo(ct,m){
+  const tab=renderTabs(ct,m);
+  if(tab==='安全'){
+    ct.insertAdjacentHTML('beforeend','<div id="lifeList"></div>');
+    const list=document.getElementById('lifeList');
+    lifeSafety.forEach((it,idx)=>{
+      const key='life_safe_'+idx;const done=!!state.learned[key];
+      const el=document.createElement('div');el.className='life-item';
+      el.innerHTML=`<div class="life-ic">${it.i}</div><div class="life-info"><div class="life-title">${it.t}</div><div class="life-desc">${it.d}</div></div><button class="life-check ${done?'done':''}">${done?'✓':'○'}</button>`;
+      el.querySelector('.life-check').addEventListener('click',()=>{
+        if(state.learned[key]){
+          delete state.learned[key];
+          state.stars=Math.max(0,state.stars-2);
+          saveState();updateTop();
+          showToast('已取消，-2⭐');
+        }else{
+          state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 记住了${it.t}`);
+        }
+        renderContent();
+      });
+      list.appendChild(el);
+    });
+  }else if(tab==='运动'){
+    // 统计运动完成数
+    const doneCount=sportData.filter((_,i)=>!!state.learned['sport_'+i]).length;
+    const total=sportData.length;
+    const pct=Math.round(doneCount/total*100);
+    ct.insertAdjacentHTML('beforeend',`
+      <div class="card" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);text-align:center">
+        <div style="font-size:14px;color:#2e7d32;font-weight:700;margin-bottom:8px">🏆 运动进度：${doneCount}/${total} 项完成</div>
+        <div class="progress-bar" style="height:12px"><div class="progress-fill" style="width:${pct}%;background:linear-gradient(90deg,#4caf50,#8bc34a)"></div></div>
+        <div style="font-size:12px;color:#666;margin-top:4px">完成全部运动可获得 ${sportData.reduce((s,it)=>s+it.star,0)}⭐</div>
+      </div>
+      <div style="font-size:13px;color:#888;margin-bottom:10px;text-align:center">👇 点击运动卡片查看动作步骤，记得跟着做哦！</div>
+    `);
+    sportData.forEach((sp,idx)=>{
+      const key='sport_'+idx;const done=!!state.learned[key];
+      const div=document.createElement('div');div.className='sport-card';
+      div.innerHTML=`
+        <div class="sport-top" data-idx="${idx}">
+          <div class="sport-emoji">${sp.e}</div>
+          <div class="sport-info">
+            <div class="sport-name">${sp.n}</div>
+            <div class="sport-tag">🏷️ ${sp.tag}</div>
+          </div>
+          <div class="sport-star">${'⭐'.repeat(sp.star)}</div>
+          ${done?'<span style="font-size:18px;color:#4caf50">✅</span>':''}
+        </div>
+        <div class="sport-expand" id="sportBody_${idx}">
+          <div class="sport-body">
+            <div class="sport-timer">⏱️ <span class="big">${sp.timer}</span></div>
+            ${sp.steps.map((s,i)=>`<div class="sport-step"><span class="sport-step-num">${i+1}</span><span>${s}</span></div>`).join('')}
+            <div class="sport-actions">
+              <button class="sport-btn sport-btn-play" data-idx="${idx}">🔊 朗读步骤</button>
+              <button class="sport-btn sport-btn-done ${done?'done':''}" data-idx="${idx}">${done?'✅ 已完成':'✅ 完成打卡'}</button>
+            </div>
+          </div>
+        </div>
+      `;
+      // 展开/收起
+      div.querySelector('.sport-top').addEventListener('click',()=>{
+        const body=document.getElementById('sportBody_'+idx);
+        const isOpen=body.classList.contains('open');
+        // 关闭其他
+        document.querySelectorAll('.sport-expand.open').forEach(el=>el.classList.remove('open'));
+        if(!isOpen){body.classList.add('open');}
+      });
+      // 朗读按钮
+      div.querySelector('.sport-btn-play').addEventListener('click',(e)=>{
+        e.stopPropagation();
+        const stepsText=sp.steps.join('，');
+        speak(sp.n+'：'+stepsText,'sport_'+idx);
+      });
+      // 完成按钮
+      div.querySelector('.sport-btn-done').addEventListener('click',(e)=>{
+        e.stopPropagation();
+        if(state.learned[key]){
+          delete state.learned[key];
+          state.stars=Math.max(0,state.stars-sp.star);
+          saveState();updateTop();
+          showToast('已取消，-'+sp.star+'⭐');
+        }else{
+          state.learned[key]=true;saveState();addStars(sp.star);
+          showToast(`+${sp.star}⭐ 完成${sp.n}！真棒！`);
+        }
+        renderContent();
+      });
+      ct.appendChild(div);
+    });
+    // 全部完成按钮
+    const allDone=sportData.every((_,i)=>!!state.learned['sport_'+i]);
+    if(!allDone){
+      const btnWrap=document.createElement('div');
+      btnWrap.style.cssText='text-align:center;margin-top:14px';
+      btnWrap.innerHTML='<button class="btn-gold" style="width:100%;font-size:15px" id="finishAllSport">🏆 今日运动全部完成</button>';
+      btnWrap.querySelector('#finishAllSport').addEventListener('click',()=>{
+        const remaining=sportData.filter((_,i)=>!state.learned['sport_'+i]);
+        if(remaining.length===0){showToast('全部完成啦！');return;}
+        const totalStars=remaining.reduce((s,it)=>s+it.star,0);
+        remaining.forEach((_,i)=>state.learned['sport_'+sportData.findIndex(sd=>sd===remaining[i])]=true);
+        saveState();addStars(totalStars);
+        showToast(`🎉 +${totalStars}⭐ 运动达人！全部完成！`);
+        finishModule('shenghuo');
+        renderContent();
+      });
+      ct.appendChild(btnWrap);
+    }
+  }else if(tab==='自理'){
+    ct.insertAdjacentHTML('beforeend',cardTemplate('🧦 自己的事情自己做','🌟')+`
+      <div id="ziliList"></div>
+      <button class="btn-gold" style="width:100%;margin-top:12px" id="finishZili">✅ 完成自理学习</button>
+    `);
+    const ziliData=[
+      {e:'👕',t:'自己穿衣服',d:'早上起床自己穿上衣和裤子，扣好扣子'},
+      {e:'👟',t:'自己穿鞋子',d:'分清左右脚，自己系好魔术贴或鞋带'},
+      {e:'🪥',t:'自己刷牙',d:'挤牙膏，上上下下刷干净，漱口吐水'},
+      {e:'🥄',t:'自己吃饭',d:'用勺子或筷子自己吃饭，不挑食不浪费'},
+      {e:'🧹',t:'收拾玩具',d:'玩完玩具后自己收拾好，放回原来的位置'},
+      {e:'🚽',t:'自己上厕所',d:'自己脱裤子、擦屁股、冲水、洗手'},
+      {e:'🛏️',t:'整理床铺',d:'起床后自己叠被子，把枕头放整齐'},
+      {e:'🧦',t:'自己穿袜子',d:'分清袜子的正反面，自己穿好袜子'}
+    ];
+    const list=document.getElementById('ziliList');
+    ziliData.forEach((it,idx)=>{
+      const key='zili_'+idx;const done=!!state.learned[key];
+      const el=document.createElement('div');el.className='life-item';
+      el.innerHTML=`<div class="life-ic">${it.e}</div><div class="life-info"><div class="life-title">${it.t}</div><div class="life-desc">${it.d}</div></div><button class="life-check ${done?'done':''}">${done?'✓':'○'}</button>`;
+      el.querySelector('.life-check').addEventListener('click',()=>{
+        if(state.learned[key]){
+          delete state.learned[key];
+          state.stars=Math.max(0,state.stars-2);
+          saveState();updateTop();
+          showToast('已取消，-2⭐');
+        }else{
+          state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会了${it.t}`);
+        }
+        renderContent();
+      });
+      list.appendChild(el);
+    });
+    document.getElementById('finishZili').addEventListener('click',()=>{finishModule('shenghuo');renderContent();});
+  }else if(tab==='情绪'){
+    ct.insertAdjacentHTML('beforeend',cardTemplate('😊 情绪小管家','🌟')+`
+      <div id="emotionList"></div>
+      <button class="btn-gold" style="width:100%;margin-top:12px" id="finishEmotion">✅ 完成情绪学习</button>
+    `);
+    const emotionData=[
+      {e:'😊',t:'开心',d:'开心的时候可以笑一笑，也可以和爸爸妈妈分享快乐',color:'#4caf50'},
+      {e:'😢',t:'难过',d:'难过的时候可以哭一哭，也可以告诉大人"我不开心"',color:'#42a5f5'},
+      {e:'😡',t:'生气',d:'生气的时候可以深呼吸，数到10，或者去跑一跑',color:'#ef5350'},
+      {e:'😨',t:'害怕',d:'害怕的时候可以抱住大人，告诉自己"我很安全"',color:'#ab47bc'},
+      {e:'😴',t:'累了',d:'累了就去休息一下，喝点水，睡个午觉就会好',color:'#78909c'},
+      {e:'🤗',t:'爱',d:'用抱抱来表达爱，对家人说"我爱你"',color:'#ec407a'},
+      {e:'😤',t:'委屈',d:'觉得委屈就大声说出来，不要憋在心里',color:'#ff9800'},
+      {e:'🤩',t:'兴奋',d:'兴奋的时候可以跳一跳，但要小心不要碰到东西',color:'#ffd54f'}
+    ];
+    const list=document.getElementById('emotionList');
+    emotionData.forEach((it,idx)=>{
+      const key='emo_'+idx;const done=!!state.learned[key];
+      const el=document.createElement('div');el.className='life-item';
+      el.style.cssText=`border-left:4px solid ${it.color}`;
+      el.innerHTML=`<div class="life-ic">${it.e}</div><div class="life-info"><div class="life-title">${it.t}</div><div class="life-desc">${it.d}</div></div><button class="life-check ${done?'done':''}">${done?'✓':'○'}</button>`;
+      el.querySelector('.life-check').addEventListener('click',()=>{
+        if(state.learned[key]){
+          delete state.learned[key];
+          state.stars=Math.max(0,state.stars-2);
+          saveState();updateTop();
+          showToast('已取消，-2⭐');
+        }else{
+          state.learned[key]=true;saveState();addStars(2);showToast(`+2⭐ 学会了${it.t}`);
+        }
+        renderContent();
+      });
+      list.appendChild(el);
+    });
+    document.getElementById('finishEmotion').addEventListener('click',()=>{finishModule('shenghuo');renderContent();});
+  }
+}
+
+// 植物大战僵尸 - 学习答题游戏
+let gameState=null;
+let gameLock=false; // 防止快速连击
+
+// 题库：幼儿园小班~中班水平
+const gameQuestions=[
+  // 认识颜色（看颜色找名字）
+  {q:'这是什么颜色？',e:'🔴',opts:['红色','蓝色','黄色','绿色'],ans:0,cat:'颜色'},
+  {q:'这是什么颜色？',e:'🔵',opts:['红色','蓝色','黄色','绿色'],ans:1,cat:'颜色'},
+  {q:'这是什么颜色？',e:'🟡',opts:['紫色','蓝色','黄色','红色'],ans:2,cat:'颜色'},
+  {q:'这是什么颜色？',e:'🟢',opts:['红色','黄色','绿色','蓝色'],ans:2,cat:'颜色'},
+  {q:'这是什么颜色？',e:'🟣',opts:['绿色','紫色','红色','蓝色'],ans:1,cat:'颜色'},
+  {q:'🍊 橙子是什么颜色？',e:'🍊',opts:['红色','蓝色','橙色','绿色'],ans:2,cat:'颜色'},
+  {q:'🍌 香蕉是什么颜色？',e:'🍌',opts:['红色','蓝色','黄色','紫色'],ans:2,cat:'颜色'},
+  {q:'🍉 西瓜的皮是什么颜色？',e:'🍉',opts:['红色','绿色','黄色','蓝色'],ans:1,cat:'颜色'},
+  // 认识动物
+  {q:'哪个动物会飞？',e:'🕊️',opts:['小狗','小鸟','小鱼','小猪'],ans:1,cat:'动物'},
+  {q:'哪个动物会游泳？',e:'🏊',opts:['小鸟','小猫','小鱼','小鸡'],ans:2,cat:'动物'},
+  {q:'哪个动物鼻子最长？',e:'🐘',opts:['大象','兔子','小猫','小狗'],ans:0,cat:'动物'},
+  {q:'哪个动物脖子最长？',e:'🦒',opts:['大象','长颈鹿','小狗','小猫'],ans:1,cat:'动物'},
+  {q:'哪个动物爱吃竹子？',e:'🐼',opts:['熊猫','老虎','狮子','猴子'],ans:0,cat:'动物'},
+  {q:'汪汪叫的是什么动物？',e:'🐶',opts:['小猫','小鸡','小狗','小鸭'],ans:2,cat:'动物'},
+  {q:'喵喵叫的是什么动物？',e:'🐱',opts:['小狗','小猫','小鸡','小猪'],ans:1,cat:'动物'},
+  {q:'嘎嘎叫的是什么动物？',e:'🦆',opts:['小鸡','小狗','小猫','小鸭'],ans:3,cat:'动物'},
+  // 认识水果
+  {q:'这是什么水果？',e:'🍎',opts:['香蕉','苹果','西瓜','葡萄'],ans:1,cat:'水果'},
+  {q:'这是什么水果？',e:'🍌',opts:['苹果','西瓜','香蕉','草莓'],ans:2,cat:'水果'},
+  {q:'这是什么水果？',e:'🍇',opts:['葡萄','苹果','香蕉','橙子'],ans:0,cat:'水果'},
+  {q:'这是什么水果？',e:'🍓',opts:['苹果','香蕉','草莓','西瓜'],ans:2,cat:'水果'},
+  {q:'这是什么水果？',e:'🍑',opts:['苹果','桃子','西瓜','葡萄'],ans:1,cat:'水果'},
+  {q:'🍉 西瓜里面是什么颜色？',e:'🍉',opts:['绿色','黄色','红色','蓝色'],ans:2,cat:'水果'},
+  // 认识形状
+  {q:'这是什么形状？',e:'⭕',opts:['三角形','圆形','正方形','长方形'],ans:1,cat:'形状'},
+  {q:'这是什么形状？',e:'🔺',opts:['圆形','正方形','三角形','长方形'],ans:2,cat:'形状'},
+  {q:'这是什么形状？',e:'🟦',opts:['圆形','三角形','正方形','长方形'],ans:2,cat:'形状'},
+  {q:'球是什么形状的？',e:'⚽',opts:['方的','圆的','三角的','长的'],ans:1,cat:'形状'},
+  // 数数
+  {q:'图里有几个苹果？',e:'🍎🍎🍎',opts:['2个','3个','4个','5个'],ans:1,cat:'数数'},
+  {q:'图里有几只小鸡？',e:'🐤🐤',opts:['1只','2只','3只','4只'],ans:1,cat:'数数'},
+  {q:'图里有几颗星星？',e:'⭐',opts:['1颗','2颗','3颗','4颗'],ans:0,cat:'数数'},
+  {q:'图里有几只蝴蝶？',e:'🦋🦋🦋🦋',opts:['2只','3只','4只','5只'],ans:2,cat:'数数'},
+  {q:'图里有几朵花？',e:'🌸🌸🌸🌸🌸',opts:['3朵','4朵','5朵','6朵'],ans:2,cat:'数数'},
+  // 大小/长短
+  {q:'🐘 和 🐭 谁大？',e:'🐘🐭',opts:['大象大','老鼠大','一样大','不知道'],ans:0,cat:'比较'},
+  {q:'🦒 和 🐱 谁高？',e:'🦒🐱',opts:['小猫高','长颈鹿高','一样高','不知道'],ans:1,cat:'比较'},
+  {q:'📏 和 ✏️ 谁长？',e:'📏✏️',opts:['尺子长','铅笔长','一样长','不知道'],ans:0,cat:'比较'},
+  // 生活常识
+  {q:'我们用什么吃饭？',e:'🍚',opts:['筷子/勺子','铅笔','玩具','书'],ans:0,cat:'常识'},
+  {q:'下雨天要用什么？',e:'🌧️',opts:['太阳镜','雨伞','帽子','玩具'],ans:1,cat:'常识'},
+  {q:'早上起床要做什么？',e:'🌅',opts:['睡觉','刷牙洗脸','看电视','出去玩'],ans:1,cat:'常识'},
+  {q:'红灯亮了应该？',e:'🚦',opts:['快走','停下来','慢慢走','跑过去'],ans:1,cat:'常识'},
+  {q:'119是什么电话？',e:'🚒',opts:['警察','火警','急救','外卖'],ans:1,cat:'常识'},
+  {q:'哪个是蔬菜？',e:'🥬',opts:['苹果','香蕉','白菜','西瓜'],ans:2,cat:'常识'},
+];
+
+function renderGame(ct,m){
+  renderTabs(ct,m);
+  if(!gameState){gameState={phase:'start'};}
+  if(gameState.phase==='start'){
+    ct.insertAdjacentHTML('beforeend',`
+      <div class="game-start">
+        <div style="font-size:60px;margin-bottom:10px">🌻⚔️🧟</div>
+        <h2>植物大战僵尸</h2>
+        <p>🧟 僵尸来袭！回答问题，让豌豆射手打败它！</p>
+        <div style="font-size:14px;opacity:.85;margin-bottom:16px;line-height:1.6">
+          🧟 答对一题 → 植物发射子弹 +1⭐<br>
+          ❌ 答错一题 → 僵尸前进一步<br>
+          🏁 打败5只僵尸 → 通关 +5⭐<br>
+          💀 僵尸走到终点 → 游戏结束
+        </div>
+        <button class="game-btn" onclick="startGame()">🚀 开始战斗</button>
+      </div>
+    `);
+  }else if(gameState.phase==='playing'){
+    renderGamePlay(ct,m);
+  }else if(gameState.phase==='win'){
+    ct.insertAdjacentHTML('beforeend',`
+      <div class="game-win">
+        <div style="font-size:60px">🎉🏆🎉</div>
+        <h2>恭喜通关！</h2>
+        <p>你击败了所有僵尸！</p>
+        <div style="font-size:16px;line-height:2;margin:16px 0">⚡ 击败僵尸：${gameState.killed}只<br>❌ 答错次数：${gameState.missed}次<br>🌟 获得奖励：+5⭐</div>
+        <button class="game-btn" onclick="startGame()">🔄 再玩一次</button>
+      </div>
+    `);
+  }else if(gameState.phase==='lose'){
+    ct.insertAdjacentHTML('beforeend',`
+      <div class="game-over">
+        <div style="font-size:60px">💀💔💀</div>
+        <h2>游戏结束</h2>
+        <p>僵尸突破了防线...</p>
+        <div style="font-size:16px;line-height:2;margin:16px 0">⚡ 击败僵尸：${gameState.killed}只<br>❌ 答错次数：${gameState.missed}次</div>
+        <button class="game-btn" onclick="startGame()">🔄 再试一次</button>
+      </div>
+    `);
+  }
+}
+
+function startGame(){
+  gameLock=false;
+  gameState={
+    phase:'playing',killed:0,missed:0,maxMiss:3,targetKill:5,
+    currentQ:null,usedQ:[],zombiePos:0,zombieSteps:5,
+    zombies:[{emoji:'🧟',name:'普通僵尸'},{emoji:'🧟‍♂️',name:'路障僵尸'},{emoji:'💀',name:'铁桶僵尸'},{emoji:'👻',name:'小鬼僵尸'},{emoji:'🧌',name:'大僵尸'}]
+  };
+  renderContent();
+  nextQuestion();
+}
+
+function nextQuestion(){
+  const gs=gameState;
+  if(gs.phase!=='playing')return;
+  gameLock=false;
+  // 选一个没用过的题
+  const available=gameQuestions.filter((_,i)=>!gs.usedQ.includes(i));
+  if(available.length===0){gs.usedQ=[];return nextQuestion();}
+  const idx=Math.floor(Math.random()*available.length);
+  const origIdx=gameQuestions.indexOf(available[idx]);
+  gs.usedQ.push(origIdx);
+  gs.currentQ=available[idx];
+  gs.zombiePos=0;
+  updateGameUI();
+}
+
+function answerQuestion(idx){
+  if(!gameState||gameState.phase!=='playing')return;
+  if(gameLock)return;
+  gameLock=true;
+  const gs=gameState;
+  const q=gs.currentQ;
+  if(!q)return;
+
+  const opts=document.querySelectorAll('.game-option');
+  if(idx===q.ans){
+    // 答对了！
+    opts[idx].classList.add('correct');
+    const plantEl=document.getElementById('gamePlant');
+    if(plantEl){plantEl.classList.add('shoot');setTimeout(()=>plantEl.classList.remove('shoot'),300);}
+    const zombieEl=document.getElementById('gameZombie');
+    if(zombieEl){zombieEl.classList.add('hit');setTimeout(()=>zombieEl.classList.add('defeat'),300);}
+    gs.killed++;
+    addStars(1);
+    showToast('✅ 答对了！+'+(q.cat==='数学'?'🧮':q.cat==='语文'?'📖':q.cat==='英语'?'🔤':'🌍')+' +1⭐');
+    if(navigator.vibrate)navigator.vibrate([30,50,30]);
+    setTimeout(()=>{
+      if(gs.killed>=gs.targetKill){
+        gs.phase='win';
+        addStars(5);
+        renderContent();
+      }else{
+        nextQuestion();
+      }
+    },800);
+  }else{
+    // 答错了
+    opts[idx].classList.add('wrong');
+    opts[q.ans].classList.add('correct');
+    gs.missed++;
+    gs.zombiePos++;
+    const zombieEl=document.getElementById('gameZombie');
+    if(zombieEl)zombieEl.style.left=(gs.zombiePos/gs.zombieSteps*100)+'%';
+    showToast('❌ 再想想！僵尸前进了！');
+    if(navigator.vibrate)navigator.vibrate([100,50,100]);
+    setTimeout(()=>{
+      if(gs.missed>=gs.maxMiss){
+        gs.phase='lose';
+        renderContent();
+      }else if(gs.zombiePos>=gs.zombieSteps){
+        gs.phase='lose';
+        renderContent();
+      }else{
+        gameLock=false;
+        updateGameUI();
+      }
+    },800);
+  }
+}
+
+function updateGameUI(){
+  const gs=gameState;
+  if(!gs||gs.phase!=='playing')return;
+  const q=gs.currentQ;
+  if(!q)return;
+
+  const scene=document.getElementById('gameScene');
+  if(!scene)return;
+
+  // 更新HUD
+  const hud=document.getElementById('gameHud');
+  if(hud)hud.innerHTML=`
+    <span class="game-hud-item">🌻 植物</span>
+    <span class="game-hud-item">⚡ 击败：${gs.killed}/${gs.targetKill}</span>
+    <span class="game-hud-item">❌ 失误：${gs.missed}/${gs.maxMiss}</span>
+    <span class="game-hud-item">${q.cat==='数学'?'🧮':q.cat==='语文'?'📖':q.cat==='英语'?'🔤':'🌍'} ${q.cat}</span>
+  `;
+
+  // 更新草坪
+  const lawn=document.getElementById('gameLawn');
+  if(lawn){
+    const zombieEmoji=gs.zombies[Math.min(gs.killed,gs.zombies.length-1)].emoji;
+    lawn.innerHTML=`
+      <div class="game-path">
+        <div class="game-plant-def" id="gamePlant">🥔</div>
+        <div class="game-zombie-move" id="gameZombie" style="left:${gs.zombiePos/gs.zombieSteps*100}%">${zombieEmoji}</div>
+        <div style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:24px;opacity:.6">🏁</div>
+      </div>
+    `;
+  }
+
+  // 更新题目
+  const qBox=document.getElementById('gameQBox');
+  if(qBox){
+    const shuffled=[...q.opts];
+    qBox.innerHTML=`
+      <div class="game-question">
+        <span class="q-emoji">${q.e}</span>
+        <span class="q-text">${q.q}</span>
+      </div>
+      <div class="game-options">
+        ${shuffled.map((o,i)=>`<div class="game-option" onclick="answerQuestion(${i})">${o}</div>`).join('')}
+      </div>
+    `;
+  }
+}
+
+function renderGamePlay(ct,m){
+  const gs=gameState;
+  ct.insertAdjacentHTML('beforeend',`
+    <div class="game-scene" id="gameScene">
+      <div class="game-hud-bar" id="gameHud">
+        <span class="game-hud-item">🌻 植物</span>
+        <span class="game-hud-item">⚡ 击败：${gs.killed}/${gs.targetKill}</span>
+        <span class="game-hud-item">❌ 失误：${gs.missed}/${gs.maxMiss}</span>
+      </div>
+      <div class="game-lawn" id="gameLawn">
+        <div class="game-path">
+          <div class="game-plant-def" id="gamePlant">🥔</div>
+          <div class="game-zombie-move" id="gameZombie" style="left:0%">🧟</div>
+          <div style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:24px;opacity:.6">🏁</div>
+        </div>
+      </div>
+      <div id="gameQBox"></div>
+    </div>
+  `);
+  setTimeout(updateGameUI,50);
+}
+
+// 每日打卡
+function renderCheckin(ct,m){
+  // 支持月份切换的日历
+  if(!state.curCalMonth)state.curCalMonth=new Date().getMonth();
+  if(!state.curCalYear)state.curCalYear=new Date().getFullYear();
+  
+  const now=new Date();
+  const year=state.curCalYear;
+  const month=state.curCalMonth;
+  const monthName=(month+1)+'月';
+  const monthStr=year+'年'+monthName;
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const firstDay=new Date(year,month,1).getDay();
+  const todayDate=now.getDate();
+  const todayMonth=now.getMonth();
+  const todayYear=now.getFullYear();
+  
+  const doneCount=menuItems.slice(0,9).map(x=>getModuleDone(x.id)).filter(x=>x>0).length;
+  ct.insertAdjacentHTML('beforeend','<div id="checkList"></div><div class="card"><div class="card-hd"><span class="card-icon">📅</span><span class="card-title">'+monthStr+'</span></div><div class="cal-hd"><button class="cal-nav" id="calPrev">◀</button><span class="cal-title">'+monthStr+'</span><button class="cal-nav" id="calNext">▶</button></div><div class="cal-grid" id="calGrid"></div></div>');
+  
+  const list=document.getElementById('checkList');
+  const todayStr=new Date().toDateString();
+  // 初始化今日打卡记录（按日期重置）
+  if(!state.checkinToday||state.checkinToday._date!==todayStr){
+    state.checkinToday={_date:todayStr};
+  }
+  menuItems.slice(0,9).forEach(mi=>{
+    const d=getModuleDone(mi.id);const total=mi.total;
+    const isDone=!!state.checkinToday[mi.id];
+    const el=document.createElement('div');el.className='check-row';
+    el.innerHTML=`<div class="check-ic">${mi.icon}</div><div class="check-info"><div class="check-name">${mi.name}（${mi.tag}）</div><div class="check-prog">${d}/${total} ${isDone?'✅今日已打卡':'+2★'}</div></div><span class="check-status ${isDone?'done':''}">${isDone?'已完成':'未完成'}</span><button class="check-btn ${isDone?'done':''}">${isDone?'取消':'打卡'}</button>`;
+    el.querySelector('button').addEventListener('click',()=>{
+      if(isDone){
+        resetModule(mi.id);
+      }else{
+        finishModule(mi.id);
+      }
+    });
+    list.appendChild(el);
+  });
+  // 日历
+  const calGrid=document.getElementById('calGrid');
+  const days=['日','一','二','三','四','五','六'];
+  calGrid.innerHTML=days.map(d=>`<div class="cal-day hd">${d}</div>`).join('');
+  // 填充前面空白
+  for(let i=0;i<firstDay;i++){
+    calGrid.insertAdjacentHTML('beforeend','<div class="cal-day" style="visibility:hidden">0</div>');
+  }
+  for(let i=1;i<=daysInMonth;i++){
+    const dateStr=year+'-'+String(month+1).padStart(2,'0')+'-'+String(i).padStart(2,'0');
+    const checked=!!state.calendar[dateStr];
+    const isToday=(i===todayDate&&month===todayMonth&&year===todayYear);
+    calGrid.insertAdjacentHTML('beforeend',`<div class="cal-day ${checked?'checked':''} ${isToday?'today':''}">${i}</div>`);
+  }
+  // 绑定月份切换
+  document.getElementById('calPrev').addEventListener('click',()=>{
+    state.curCalMonth--;
+    if(state.curCalMonth<0){state.curCalMonth=11;state.curCalYear--;}
+    renderContent();
+  });
+  document.getElementById('calNext').addEventListener('click',()=>{
+    state.curCalMonth++;
+    if(state.curCalMonth>11){state.curCalMonth=0;state.curCalYear++;}
+    renderContent();
+  });
+}
+
+// 奖励兑换
+function renderShop(ct,m){
+  ct.insertAdjacentHTML('beforeend','<div class="card"><div class="card-hd"><span class="card-icon">⭐</span><span class="card-title">当前余额：'+state.stars+'颗星星</span></div></div><div id="shopList"></div>');
+  const list=document.getElementById('shopList');
+  rewards.forEach(r=>{
+    const can=state.stars>=r.p;
+    const el=document.createElement('div');el.className='shop-item';
+    el.innerHTML=`<div class="shop-name"><span class="shop-ic">${r.e||'🎁'}</span><span>${r.n}</span></div><div class="shop-price">${r.p}★</div><button class="shop-btn" ${can?'':'disabled'}>${can?'兑换':'星星不足'}</button>`;
+    el.querySelector('button').addEventListener('click',()=>{
+      if(!can)return;
+      state.stars-=r.p;saveState();showToast(`🎉 兑换成功：${r.n}`);renderContent();
+    });
+    list.appendChild(el);
+  });
+}
+
+// 学习统计
+function renderStats(ct,m){
+  const totalLearned=Object.keys(state.learned).length;
+  const checkCount=Object.keys(state.moduleDone).length;
+  ct.insertAdjacentHTML('beforeend',`
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-num" id="stDays">${state.totalDays}</div><div class="stat-label">总打卡天数</div></div>
+      <div class="stat-card"><div class="stat-num" id="stStreak">${state.streak}</div><div class="stat-label">连续打卡</div></div>
+      <div class="stat-card"><div class="stat-num" id="stStars">${state.stars}</div><div class="stat-label">总星星数</div></div>
+      <div class="stat-card"><div class="stat-num" id="stLearn">${totalLearned}</div><div class="stat-label">已学项目</div></div>
+    </div>
+    <div class="card"><div class="card-hd"><span class="card-icon">📊</span><span class="card-title">各领域学习进度</span></div><div id="progressList"></div></div>
+    <div style="text-align:center;color:#666;font-size:13px;padding:10px">总学习量：${totalLearned}项</div>
+    <div class="card"><div class="card-hd"><span class="card-icon">💾</span><span class="card-title">数据备份</span></div>
+      <div style="display:flex;gap:10px;justify-content:center;padding:6px 0 10px">
+        <button class="tab" style="border:1px solid #29b6f6;color:#29b6f6;background:#fff" onclick="exportData()">导出数据</button>
+        <button class="tab" style="border:1px solid #29b6f6;color:#29b6f6;background:#fff" onclick="importData()">导入数据</button>
+      </div>
+      <div style="font-size:12px;color:#888;text-align:center;padding:0 10px 6px">换手机/平板时用导出/导入备份，或点击顶部 📱 自动同步</div>
+    </div>
+  `);
+  const pl=document.getElementById('progressList');
+  menuItems.slice(0,9).forEach(mi=>{
+    const d=getModuleDone(mi.id);const pct=Math.min(100,Math.round(d/mi.total*100));
+    pl.insertAdjacentHTML('beforeend',`
+      <div class="progress-item">
+        <div class="progress-hd"><span>${mi.name}</span><span>${d}/${mi.total} (${pct}%)</span></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+      </div>
+    `);
+  });
+}
+
+// ============ 工具函数 ============
+function getModuleDone(mid){
+  let count=0;
+  Object.keys(state.learned).forEach(k=>{
+    if(k.startsWith(mid)||(mid==='renwu'&&k.startsWith('renwu_'))||(mid==='yuyan'&&k.startsWith('yuyan_'))||(mid==='shuli'&&k.startsWith('shuli_'))||(mid==='yingyu'&&k.startsWith('yingyu_'))||(mid==='zimu'&&k.startsWith('zimu_'))||(mid==='shuzi'&&k.startsWith('num_'))||(mid==='yinyue'&&k.startsWith('yinyue_'))||(mid==='meishu'&&k.startsWith('meishu_'))||(mid==='shenghuo'&&(k.startsWith('life_')||k.startsWith('zili_')||k.startsWith('sport_')||k.startsWith('emo_'))))count++;
+  });
+  return Math.max(count,state.moduleDone[mid]||0);
+}
+function finishItem(prefix,idx,stars){
+  const key=prefix+'_'+idx;if(state.learned[key])return;
+  state.learned[key]=true;saveState();addStars(stars);showToast(`+${stars}⭐ 完成学习`);
+  renderContent();
+}
+function finishModule(mid){
+  const today=new Date().toDateString();
+  // 初始化今日打卡记录
+  if(!state.checkinToday||state.checkinToday._date!==today){
+    state.checkinToday={_date:today};
+  }
+  // 每天只增加一次 totalDays 和 streak
+  if(state.lastDate!==today){
+    state.lastDate=today;
+    const yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);
+    if(state.lastCheck!==yesterday.toDateString())state.streak=0;
+    state.streak++;state.totalDays++;
+  }
+  state.moduleDone[mid]=(state.moduleDone[mid]||0)+1;
+  state.checkinToday[mid]=true;
+  const now=new Date();
+  const dk=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+  state.calendar[dk]=true;state.lastCheck=today;
+  saveState();addStars(2);showToast('✅ 打卡成功 +2⭐');
+  renderContent();
+}
+function resetModule(mid){
+  // 撤销该模块的今日打卡
+  const today=new Date().toDateString();
+  if(!state.checkinToday||state.checkinToday._date!==today){
+    state.checkinToday={_date:today};
+  }
+  delete state.checkinToday[mid];
+  if(state.moduleDone[mid])state.moduleDone[mid]--;
+  state.stars=Math.max(0,state.stars-2);
+  // 检查今天是否还有其他模块打卡
+  const anyTodayDone=menuItems.slice(0,9).some(x=>state.checkinToday[x.id]);
+  if(!anyTodayDone){
+    const now=new Date();
+    const dk=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+    delete state.calendar[dk];
+    const calDays=Object.keys(state.calendar||{}).filter(k=>state.calendar[k]).length;
+    state.totalDays=calDays;
+    if(state.streak>calDays)state.streak=calDays;
+    state.lastDate='';state.lastCheck='';
+  }
+  saveState();updateTop();
+  showToast('已取消打卡，-2⭐');
+  renderContent();
+}
+function addStars(n){
+  state.stars+=n;saveState();updateTop();
+}
+function updateTop(){
+  document.getElementById('topStars').textContent=state.stars;
+  document.getElementById('topDays').textContent=state.totalDays;
+}
+function goHome(){state.curMenu='renwu';renderMenu();renderContent();}
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),1800);
+}
+
+// ============ 初始化 ============
+function init(){
+  try{
+    if(!state.curMenu)state.curMenu='renwu';
+    // 每日归零：清除昨天的 learned 学习记录（保留星星/打卡/日历等永久数据）
+    const today=new Date().toDateString();
+    if(state.lastLearnedReset!==today){
+      state.learned={};
+      state.lastLearnedReset=today;
+      saveState();
+    }
+    // 校正 totalDays：用日历实际打卡天数
+    const calDays=Object.keys(state.calendar||{}).filter(k=>state.calendar[k]).length;
+    if(calDays>0&&calDays!==state.totalDays){
+      state.totalDays=calDays;
+      if(state.streak>calDays)state.streak=calDays;
+      saveState();
+    }
+    renderMenu();renderContent();
+    // 启动时从云端拉取数据
+    setTimeout(syncDownload, 1500);
+  }catch(e){console.error('init error:',e);}
+}
+init();
+
+// ============ 多设备同步 ============
+let syncUploadTimer=null;
+let syncFailCount=0;
+
+function getDeviceId(){
+  let id=localStorage.getItem('xiaoningmeng_device_id');
+  if(!id){
+    id='dev_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,8);
+    localStorage.setItem('xiaoningmeng_device_id',id);
+  }
+  return id;
+}
+const DEVICE_ID=getDeviceId();
+
+function deepMergeObjects(a,b){
+  const res={};
+  const keys=new Set([...Object.keys(a||{}),...Object.keys(b||{})]);
+  keys.forEach(k=>{res[k]=(a&&a[k])||(b&&b[k])||true;});
+  return res;
+}
+
+function mergeState(local, cloud){
+  if(!cloud||cloud.stars===undefined)return local;
+  const merged={...local};
+  merged.stars=Math.max(local.stars||0, cloud.stars||0);
+  merged.totalDays=Math.max(local.totalDays||0, cloud.totalDays||0);
+  merged.streak=Math.max(local.streak||0, cloud.streak||0);
+  merged.learned=deepMergeObjects(local.learned, cloud.learned);
+  merged.checks=deepMergeObjects(local.checks, cloud.checks);
+  merged.calendar=deepMergeObjects(local.calendar, cloud.calendar);
+  merged.moduleDone=deepMergeObjects(local.moduleDone, cloud.moduleDone);
+  merged.checkinToday=deepMergeObjects(local.checkinToday, cloud.checkinToday);
+  // curTab 不合并，保留本地
+  if(cloud._syncTime)merged._syncTime=Math.max(local._syncTime||0, cloud._syncTime);
+  return merged;
+}
+
+async function syncUpload(){
+  try{
+    const payload={data: state, updated_at: state._syncTime||Date.now(), _device: DEVICE_ID};
+    const resp=await fetch('/api/sync',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    });
+    const r=await resp.json();
+    if(r.ok){
+      syncFailCount=0;
+      updateSyncBadge();
+      return true;
+    }
+  }catch(e){console.log('sync upload fail',e);}
+  syncFailCount++;
+  updateSyncBadge();
+  return false;
+}
+
+async function syncDownload(){
+  try{
+    const resp=await fetch('/api/sync');
+    const r=await resp.json();
+    if(r.ok && r.data){
+      const cloud=r.data;
+      // 总是合并，不管时间戳——两台设备可能各有新数据
+      const merged=mergeState(state, cloud);
+      state=merged;
+      saveState();
+      renderContent();
+      updateTop();
+      syncFailCount=0;
+      updateSyncBadge();
+      return true;
+    }
+    // 云端无数据，正常情况
+    syncFailCount=0;
+    updateSyncBadge();
+    return true;
+  }catch(e){console.log('sync download fail',e);}
+  syncFailCount++;
+  updateSyncBadge();
+  return false;
+}
+
+async function syncAll(){
+  showToast('☁️ 正在同步...');
+  // 先下载合并云端数据
+  const down=await syncDownload();
+  if(!down){showToast('❌ 同步失败，请检查网络');return;}
+  // 再把合并后的数据上传
+  const up=await syncUpload();
+  if(up)showToast('✅ 同步完成');
+  else showToast('⚠️ 下载成功，上传失败');
+}
+
+function scheduleSyncUpload(){
+  if(syncUploadTimer)clearTimeout(syncUploadTimer);
+  syncUploadTimer=setTimeout(()=>{
+    syncUpload().catch(()=>{});
+  }, 3000);
+}
+
+function updateSyncBadge(){
+  const badge=document.getElementById('syncBadge');
+  if(badge)badge.style.display=syncFailCount>=3?'inline-block':'none';
+}
+
+// ============ 导出/导入数据 ============
+function exportData(){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download='xiaoningmeng_backup_'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('💾 数据已导出');
+}
+
+function importData(){
+  const input=document.createElement('input');
+  input.type='file';input.accept='.json,application/json';
+  input.onchange=(e)=>{
+    const file=e.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=()=>{
+      try{
+        const imported=JSON.parse(reader.result);
+        if(imported.stars!==undefined){
+          state=mergeState(state, imported);
+          saveState();
+          updateTop();renderContent();
+          syncUpload();
+          showToast('✅ 数据导入成功并已上传');
+        }else showToast('❌ 文件格式不正确');
+      }catch{showToast('❌ 文件解析失败');}
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+// ============ 注册 Service Worker (PWA) ============
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+</script>
+</body>
+</html>
