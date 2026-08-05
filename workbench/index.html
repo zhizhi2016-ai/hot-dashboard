@@ -2338,6 +2338,37 @@ async function syncDownload(){
   return false;
 }
 
+// UTF-8安全的base64编码
+function utf8ToBase64(str){
+  try{
+    // 现代浏览器API
+    const bytes=new TextEncoder().encode(str);
+    let bin='';
+    bytes.forEach(b=>bin+=String.fromCharCode(b));
+    return btoa(bin);
+  }catch(e){
+    // 兼容旧浏览器
+    return btoa(unescape(encodeURIComponent(str)));
+  }
+}
+
+// 获取文件当前的sha（用于更新）
+async function getFileSha(token){
+  try{
+    const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}
+    });
+    if(resp.ok){
+      const data=await resp.json();
+      return data.sha;
+    }
+    return null;
+  }catch(e){
+    console.log('get sha fail',e);
+    return null;
+  }
+}
+
 // GitHub API: 上传同步数据
 async function syncUpload(){
   const token=getSyncToken();
@@ -2345,34 +2376,33 @@ async function syncUpload(){
   try{
     state._syncTime=Date.now();
     state._device=DEVICE_ID;
-    const content=btoa(unescape(encodeURIComponent(JSON.stringify(state))));
-    // 先获取当前文件的sha（如果存在）
-    let sha=null;
-    try{
-      const checkResp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
-        headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}
-      });
-      if(checkResp.ok){
-        const checkData=await checkResp.json();
-        sha=checkData.sha;
-      }
-    }catch(e){}
-    // 上传/更新文件
-    const body={message:'sync: '+DEVICE_ID+' '+new Date().toISOString().slice(0,16),content:content};
+    const jsonStr=JSON.stringify(state);
+    const content=utf8ToBase64(jsonStr);
+    // 获取当前文件的sha（必须！否则422）
+    const sha=await getFileSha(token);
+    // 构造请求body
+    const body={message:'sync from '+DEVICE_ID+' at '+new Date().toISOString().slice(0,16),content:content};
     if(sha)body.sha=sha;
+    // 上传
     const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
       method:'PUT',
       headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
       body:JSON.stringify(body)
     });
     const r=await resp.json();
-    if(r.content||r.commit){
+    if(resp.ok && (r.content||r.commit)){
       syncFailCount=0;updateSyncBadge();
-      return true;
+      return {ok:true};
     }
-  }catch(e){console.log('sync upload fail',e);}
-  syncFailCount++;updateSyncBadge();
-  return false;
+    // 上传失败，返回错误信息
+    console.log('sync upload fail', resp.status, r.message);
+    syncFailCount++;updateSyncBadge();
+    return {ok:false, status:resp.status, msg:r.message||JSON.stringify(r).slice(0,200)};
+  }catch(e){
+    console.log('sync upload fail',e);
+    syncFailCount++;updateSyncBadge();
+    return {ok:false, status:0, msg:e.message};
+  }
 }
 
 async function syncAll(){
@@ -2382,10 +2412,20 @@ async function syncAll(){
   }
   showToast('☁️ 正在同步...');
   const down=await syncDownload();
-  if(!down){showToast('❌ 同步失败，请检查Token或网络');return;}
+  if(!down){showToast('❌ 下载失败，请检查Token或网络');return;}
   const up=await syncUpload();
-  if(up)showToast('✅ 同步完成');
-  else showToast('⚠️ 下载成功，上传失败');
+  if(up.ok){
+    showToast('✅ 同步完成');
+  }else{
+    // 显示详细错误
+    let msg='⚠️ 上传失败';
+    if(up.status===422) msg='⚠️ 上传失败(422)：云端文件冲突，请稍后再试';
+    else if(up.status===401) msg='⚠️ Token无效';
+    else if(up.status===403) msg='⚠️ 无权限或限流';
+    else if(up.status===404) msg='⚠️ 仓库路径不存在';
+    if(up.msg)msg+='\n'+up.msg;
+    showToast(msg);
+  }
 }
 
 function scheduleSyncUpload(){
