@@ -2137,12 +2137,21 @@ function renderStats(ct,m){
     </div>
     <div class="card"><div class="card-hd"><span class="card-icon">📊</span><span class="card-title">各领域学习进度</span></div><div id="progressList"></div></div>
     <div style="text-align:center;color:#666;font-size:13px;padding:10px">总学习量：${totalLearned}项</div>
-    <div class="card"><div class="card-hd"><span class="card-icon">💾</span><span class="card-title">数据备份</span></div>
+    <div class="card"><div class="card-hd"><span class="card-icon">💾</span><span class="card-title">数据备份与同步</span></div>
       <div style="display:flex;gap:10px;justify-content:center;padding:6px 0 10px">
         <button class="tab" style="border:1px solid #29b6f6;color:#29b6f6;background:#fff" onclick="exportData()">导出数据</button>
         <button class="tab" style="border:1px solid #29b6f6;color:#29b6f6;background:#fff" onclick="importData()">导入数据</button>
       </div>
-      <div style="font-size:12px;color:#888;text-align:center;padding:0 10px 6px">换手机/平板时用导出/导入备份，或点击顶部 📱 自动同步</div>
+      <div style="font-size:12px;color:#888;text-align:center;padding:0 10px 6px">换手机/平板时用导出/导入备份，或设置下方Token后点击顶部 📱 云同步</div>
+      <div style="border-top:1px solid #e3f2fd;margin:8px 0;padding-top:10px">
+        <div style="font-size:13px;font-weight:700;color:#333;margin-bottom:6px">☁️ 多手机云同步设置</div>
+        <div style="font-size:11px;color:#888;margin-bottom:8px;line-height:1.5">输入GitHub Token开启云同步。每台手机只需输入一次，之后点击顶部📱按钮即可同步。Token生成：<a href="https://github.com/settings/tokens/new?scopes=repo&description=workbench-sync" target="_blank" style="color:#29b6f6">点这里</a>，勾选repo权限</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input id="syncTokenInput" type="password" placeholder="ghp_..." style="flex:1;border:1px solid #e0e0e0;border-radius:8px;padding:8px 10px;font-size:13px" value="${getSyncToken()}" />
+          <button class="tab" style="background:#29b6f6;color:#fff;border:none;padding:8px 14px" onclick="saveSyncToken()">保存</button>
+        </div>
+        <div id="syncStatus" style="font-size:11px;margin-top:6px;text-align:center">${hasSyncToken()?'<span style="color:#4caf50">✅ 已设置Token，可点击顶部📱同步</span>':'<span style="color:#999">未设置Token</span>'}</div>
+      </div>
     </div>
   `);
   const pl=document.getElementById('progressList');
@@ -2253,9 +2262,22 @@ function init(){
 }
 init();
 
-// ============ 多设备同步 ============
+// ============ 多设备同步（GitHub API 方案） ============
 let syncUploadTimer=null;
 let syncFailCount=0;
+const SYNC_REPO='zhizhi2016-ai/hot-dashboard';
+const SYNC_PATH='workbench/sync-data.json';
+
+function getSyncToken(){
+  return localStorage.getItem('gh_sync_token')||'';
+}
+function setSyncToken(t){
+  if(t) localStorage.setItem('gh_sync_token',t);
+  else localStorage.removeItem('gh_sync_token');
+}
+function hasSyncToken(){
+  return !!getSyncToken();
+}
 
 function getDeviceId(){
   let id=localStorage.getItem('xiaoningmeng_device_id');
@@ -2285,63 +2307,82 @@ function mergeState(local, cloud){
   merged.calendar=deepMergeObjects(local.calendar, cloud.calendar);
   merged.moduleDone=deepMergeObjects(local.moduleDone, cloud.moduleDone);
   merged.checkinToday=deepMergeObjects(local.checkinToday, cloud.checkinToday);
-  // curTab 不合并，保留本地
   if(cloud._syncTime)merged._syncTime=Math.max(local._syncTime||0, cloud._syncTime);
   return merged;
 }
 
-async function syncUpload(){
+// GitHub API: 读取同步数据
+async function syncDownload(){
+  const token=getSyncToken();
+  if(!token){console.log('sync: no token');return false;}
   try{
-    const payload={data: state, updated_at: state._syncTime||Date.now(), _device: DEVICE_ID};
-    const resp=await fetch('/api/sync',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload)
+    const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}
     });
-    const r=await resp.json();
-    if(r.ok){
-      syncFailCount=0;
-      updateSyncBadge();
+    if(resp.status===404){
+      // 云端还没有同步文件，正常情况
+      syncFailCount=0;updateSyncBadge();
       return true;
     }
-  }catch(e){console.log('sync upload fail',e);}
-  syncFailCount++;
-  updateSyncBadge();
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    const data=await resp.json();
+    const cloud=JSON.parse(atob(data.content));
+    // 合并云端数据
+    const merged=mergeState(state, cloud);
+    state=merged;
+    saveState();renderContent();updateTop();
+    syncFailCount=0;updateSyncBadge();
+    return true;
+  }catch(e){console.log('sync download fail',e);}
+  syncFailCount++;updateSyncBadge();
   return false;
 }
 
-async function syncDownload(){
+// GitHub API: 上传同步数据
+async function syncUpload(){
+  const token=getSyncToken();
+  if(!token){console.log('sync: no token');return false;}
   try{
-    const resp=await fetch('/api/sync');
+    state._syncTime=Date.now();
+    state._device=DEVICE_ID;
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(state))));
+    // 先获取当前文件的sha（如果存在）
+    let sha=null;
+    try{
+      const checkResp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
+        headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}
+      });
+      if(checkResp.ok){
+        const checkData=await checkResp.json();
+        sha=checkData.sha;
+      }
+    }catch(e){}
+    // 上传/更新文件
+    const body={message:'sync: '+DEVICE_ID+' '+new Date().toISOString().slice(0,16),content:content};
+    if(sha)body.sha=sha;
+    const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
+      method:'PUT',
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
     const r=await resp.json();
-    if(r.ok && r.data){
-      const cloud=r.data;
-      // 总是合并，不管时间戳——两台设备可能各有新数据
-      const merged=mergeState(state, cloud);
-      state=merged;
-      saveState();
-      renderContent();
-      updateTop();
-      syncFailCount=0;
-      updateSyncBadge();
+    if(r.content||r.commit){
+      syncFailCount=0;updateSyncBadge();
       return true;
     }
-    // 云端无数据，正常情况
-    syncFailCount=0;
-    updateSyncBadge();
-    return true;
-  }catch(e){console.log('sync download fail',e);}
-  syncFailCount++;
-  updateSyncBadge();
+  }catch(e){console.log('sync upload fail',e);}
+  syncFailCount++;updateSyncBadge();
   return false;
 }
 
 async function syncAll(){
+  if(!hasSyncToken()){
+    showToast('请先在「学习统计」页面设置同步Token');
+    return;
+  }
   showToast('☁️ 正在同步...');
-  // 先下载合并云端数据
   const down=await syncDownload();
-  if(!down){showToast('❌ 同步失败，请检查网络');return;}
-  // 再把合并后的数据上传
+  if(!down){showToast('❌ 同步失败，请检查Token或网络');return;}
   const up=await syncUpload();
   if(up)showToast('✅ 同步完成');
   else showToast('⚠️ 下载成功，上传失败');
@@ -2357,6 +2398,8 @@ function scheduleSyncUpload(){
 function updateSyncBadge(){
   const badge=document.getElementById('syncBadge');
   if(badge)badge.style.display=syncFailCount>=3?'inline-block':'none';
+  const btn=document.getElementById('syncBtn');
+  if(btn)btn.style.color=hasSyncToken()?'':'#ccc';
 }
 
 // ============ 导出/导入数据 ============
@@ -2392,6 +2435,22 @@ function importData(){
     reader.readAsText(file);
   };
   input.click();
+}
+
+// 保存同步Token
+function saveSyncToken(){
+  const val=document.getElementById('syncTokenInput').value.trim();
+  if(val){
+    setSyncToken(val);
+    showToast('✅ Token已保存，可点击顶部📱同步');
+    // 立即尝试同步一次
+    setTimeout(()=>syncAll(),500);
+  }else{
+    setSyncToken('');
+    showToast('已清除Token');
+  }
+  updateSyncBadge();
+  renderContent();
 }
 
 // ============ 注册 Service Worker (PWA) ============
