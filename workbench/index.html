@@ -2369,40 +2369,54 @@ async function getFileSha(token){
   }
 }
 
-// GitHub API: 上传同步数据
+// GitHub API: 上传同步数据（带自动重试处理并发冲突）
 async function syncUpload(){
   const token=getSyncToken();
-  if(!token){console.log('sync: no token');return false;}
-  try{
-    state._syncTime=Date.now();
-    state._device=DEVICE_ID;
-    const jsonStr=JSON.stringify(state);
-    const content=utf8ToBase64(jsonStr);
-    // 获取当前文件的sha（必须！否则422）
-    const sha=await getFileSha(token);
-    // 构造请求body
-    const body={message:'sync from '+DEVICE_ID+' at '+new Date().toISOString().slice(0,16),content:content};
-    if(sha)body.sha=sha;
-    // 上传
-    const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
-      method:'PUT',
-      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
-      body:JSON.stringify(body)
-    });
-    const r=await resp.json();
-    if(resp.ok && (r.content||r.commit)){
-      syncFailCount=0;updateSyncBadge();
-      return {ok:true};
+  if(!token){console.log('sync: no token');return {ok:false,msg:'no token'};}
+
+  // 最多重试3次，处理并发冲突
+  for(let attempt=1; attempt<=3; attempt++){
+    try{
+      state._syncTime=Date.now();
+      state._device=DEVICE_ID;
+      const jsonStr=JSON.stringify(state);
+      const content=utf8ToBase64(jsonStr);
+      // 每次都获取最新sha
+      const sha=await getFileSha(token);
+      const body={message:'sync from '+DEVICE_ID+' at '+new Date().toISOString().slice(0,16),content:content};
+      if(sha)body.sha=sha;
+      // 上传
+      const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
+        method:'PUT',
+        headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+        body:JSON.stringify(body)
+      });
+      const r=await resp.json();
+      if(resp.ok && (r.content||r.commit)){
+        syncFailCount=0;updateSyncBadge();
+        return {ok:true};
+      }
+      // 422 sha冲突 → 自动重试
+      if(resp.status===422 && attempt<3){
+        console.log('sha conflict, retrying... attempt',attempt+1);
+        await new Promise(r=>setTimeout(r,800));
+        continue;
+      }
+      // 其他错误
+      console.log('sync upload fail', resp.status, r.message);
+      syncFailCount++;updateSyncBadge();
+      return {ok:false, status:resp.status, msg:r.message||JSON.stringify(r).slice(0,200)};
+    }catch(e){
+      console.log('sync upload fail attempt',attempt,e);
+      if(attempt>=3){
+        syncFailCount++;updateSyncBadge();
+        return {ok:false, status:0, msg:e.message};
+      }
+      await new Promise(r=>setTimeout(r,800));
     }
-    // 上传失败，返回错误信息
-    console.log('sync upload fail', resp.status, r.message);
-    syncFailCount++;updateSyncBadge();
-    return {ok:false, status:resp.status, msg:r.message||JSON.stringify(r).slice(0,200)};
-  }catch(e){
-    console.log('sync upload fail',e);
-    syncFailCount++;updateSyncBadge();
-    return {ok:false, status:0, msg:e.message};
   }
+  syncFailCount++;updateSyncBadge();
+  return {ok:false, msg:'max retries exceeded'};
 }
 
 async function syncAll(){
@@ -2411,15 +2425,17 @@ async function syncAll(){
     return;
   }
   showToast('☁️ 正在同步...');
+  // 先下载云端数据，确保本地是最新的
   const down=await syncDownload();
   if(!down){showToast('❌ 下载失败，请检查Token或网络');return;}
+  // 上传（会自动重试处理并发冲突）
   const up=await syncUpload();
   if(up.ok){
     showToast('✅ 同步完成');
   }else{
     // 显示详细错误
     let msg='⚠️ 上传失败';
-    if(up.status===422) msg='⚠️ 上传失败(422)：云端文件冲突，请稍后再试';
+    if(up.status===422) msg='⚠️ 上传失败(422)：云端冲突，已重试3次仍失败，请稍后再试';
     else if(up.status===401) msg='⚠️ Token无效';
     else if(up.status===403) msg='⚠️ 无权限或限流';
     else if(up.status===404) msg='⚠️ 仓库路径不存在';
