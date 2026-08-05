@@ -2262,14 +2262,9 @@ function init(){
 }
 init();
 
-// ============ 多设备同步（GitHub API 方案）============
+// ============ 多设备同步（通过 /api/sync 代理调用 GitHub API） ============
 let syncUploadTimer=null;
 let syncFailCount=0;
-const SYNC_REPO='zhizhi2016-ai/hot-dashboard';
-// 用目录路径+文件名，因为Contents API对目录内容的处理更稳定
-const SYNC_DIR='workbench-sync';
-const SYNC_FILENAME='data.json';
-const SYNC_PATH=SYNC_DIR+'/'+SYNC_FILENAME;
 
 function getSyncToken(){
   return localStorage.getItem('gh_sync_token')||'';
@@ -2314,59 +2309,24 @@ function mergeState(local, cloud){
   return merged;
 }
 
-// UTF-8安全的base64编码
-function utf8ToBase64(str){
-  try{
-    const bytes=new TextEncoder().encode(str);
-    let bin='';
-    bytes.forEach(b=>bin+=String.fromCharCode(b));
-    return btoa(bin);
-  }catch(e){
-    return btoa(unescape(encodeURIComponent(str)));
-  }
-}
-
-// 获取文件信息（含sha），强制不走缓存
-async function getFileInfo(token){
-  try{
-    const url='https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH+'?t='+Date.now()+Math.random();
-    const resp=await fetch(url,{
-      cache:'no-store',
-      headers:{
-        'Authorization':'token '+token,
-        'Accept':'application/vnd.github.v3+json',
-        'Cache-Control':'no-cache, no-store, must-revalidate',
-        'Pragma':'no-cache'
-      }
-    });
-    if(resp.ok){
-      const data=await resp.json();
-      return {sha:data.sha, content:data.content};
-    }
-    if(resp.status===404)return null;
-    return null;
-  }catch(e){
-    console.log('get file info fail',e);
-    return null;
-  }
-}
-
-// GitHub API: 读取同步数据
+// 通过 /api/sync 代理：下载云端数据
 async function syncDownload(){
   const token=getSyncToken();
   if(!token){console.log('sync: no token');return false;}
   try{
-    const info=await getFileInfo(token);
-    if(!info){
-      // 云端还没有同步文件，正常情况
+    const resp=await fetch('/api/sync?token='+encodeURIComponent(token),{
+      method:'GET',
+      headers:{'Content-Type':'application/json'}
+    });
+    const r=await resp.json();
+    if(r.ok && r.data){
+      const merged=mergeState(state, r.data);
+      state=merged;
+      saveState();renderContent();updateTop();
       syncFailCount=0;updateSyncBadge();
       return true;
     }
-    const cloud=JSON.parse(atob(info.content.replace(/\s/g,'')));
-    // 合并云端数据
-    const merged=mergeState(state, cloud);
-    state=merged;
-    saveState();renderContent();updateTop();
+    // 云端无数据，正常
     syncFailCount=0;updateSyncBadge();
     return true;
   }catch(e){console.log('sync download fail',e);}
@@ -2374,124 +2334,31 @@ async function syncDownload(){
   return false;
 }
 
-// GitHub API: 创建新文件（不需要sha）
-async function createSyncFile(token, content){
-  const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
-    method:'PUT',
-    cache:'no-store',
-    headers:{
-      'Authorization':'token '+token,
-      'Accept':'application/vnd.github.v3+json',
-      'Content-Type':'application/json',
-      'Cache-Control':'no-cache'
-    },
-    body:JSON.stringify({
-      message:'sync create from '+DEVICE_ID,
-      content:content
-    })
-  });
-  return resp;
-}
-
-// GitHub API: 更新文件（需要正确的sha）
-async function updateSyncFile(token, content, sha){
-  const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
-    method:'PUT',
-    cache:'no-store',
-    headers:{
-      'Authorization':'token '+token,
-      'Accept':'application/vnd.github.v3+json',
-      'Content-Type':'application/json',
-      'Cache-Control':'no-cache'
-    },
-    body:JSON.stringify({
-      message:'sync update from '+DEVICE_ID,
-      content:content,
-      sha:sha
-    })
-  });
-  return resp;
-}
-
-// GitHub API: 删除文件（释放sha）
-async function deleteSyncFile(token, sha){
-  const resp=await fetch('https://api.github.com/repos/'+SYNC_REPO+'/contents/'+SYNC_PATH,{
-    method:'DELETE',
-    cache:'no-store',
-    headers:{
-      'Authorization':'token '+token,
-      'Accept':'application/vnd.github.v3+json',
-      'Content-Type':'application/json',
-      'Cache-Control':'no-cache'
-    },
-    body:JSON.stringify({
-      message:'sync delete from '+DEVICE_ID,
-      sha:sha
-    })
-  });
-  return resp;
-}
-
-// 上传同步数据（采用"删除+创建"避免sha冲突，最多重试5次）
+// 通过 /api/sync 代理：上传同步数据
 async function syncUpload(){
   const token=getSyncToken();
   if(!token){console.log('sync: no token');return {ok:false,msg:'no token'};}
-
-  for(let attempt=1; attempt<=5; attempt++){
-    try{
-      state._syncTime=Date.now();
-      state._device=DEVICE_ID;
-      const jsonStr=JSON.stringify(state);
-      const content=utf8ToBase64(jsonStr);
-
-      // 先获取文件信息
-      const info=await getFileInfo(token);
-      let resp;
-      if(info && info.sha){
-        // 文件存在：尝试更新
-        resp=await updateSyncFile(token, content, info.sha);
-        // 如果更新失败且是sha冲突，删除再创建
-        if(!resp.ok && resp.status===422){
-          console.log('sha conflict, deleting and recreating...');
-          const delResp=await deleteSyncFile(token, info.sha);
-          // 删除后重新获取sha再删一次（极端情况）
-          if(!delResp.ok && delResp.status===409){
-            await new Promise(r=>setTimeout(r,attempt*500));
-            continue;
-          }
-          // 然后创建
-          resp=await createSyncFile(token, content);
-        }
-      }else{
-        // 文件不存在：直接创建
-        resp=await createSyncFile(token, content);
-      }
-
-      if(resp.ok){
-        syncFailCount=0;updateSyncBadge();
-        return {ok:true};
-      }
-      // 其他错误
-      const r=await resp.json().catch(()=>({}));
-      console.log('sync upload fail', resp.status, r.message);
-      // 422重试
-      if(resp.status===422 && attempt<5){
-        await new Promise(r=>setTimeout(r,attempt*800));
-        continue;
-      }
-      syncFailCount++;updateSyncBadge();
-      return {ok:false, status:resp.status, msg:r.message||'upload failed'};
-    }catch(e){
-      console.log('sync upload fail attempt',attempt,e);
-      if(attempt>=5){
-        syncFailCount++;updateSyncBadge();
-        return {ok:false, status:0, msg:e.message};
-      }
-      await new Promise(r=>setTimeout(r,attempt*800));
+  try{
+    state._syncTime=Date.now();
+    state._device=DEVICE_ID;
+    const resp=await fetch('/api/sync',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({token:token, data:state})
+    });
+    const r=await resp.json();
+    if(r.ok){
+      syncFailCount=0;updateSyncBadge();
+      return {ok:true};
     }
+    console.log('sync upload fail', r.msg);
+    syncFailCount++;updateSyncBadge();
+    return {ok:false, msg:r.msg||'upload failed'};
+  }catch(e){
+    console.log('sync upload fail',e);
+    syncFailCount++;updateSyncBadge();
+    return {ok:false, msg:e.message};
   }
-  syncFailCount++;updateSyncBadge();
-  return {ok:false, msg:'max retries exceeded'};
 }
 
 async function syncAll(){
@@ -2500,20 +2367,14 @@ async function syncAll(){
     return;
   }
   showToast('☁️ 正在同步...');
-  // 先下载云端数据
   const down=await syncDownload();
-  if(!down){showToast('❌ 下载失败，请检查Token或网络');return;}
-  // 上传（自动重试处理冲突）
+  if(!down){showToast('❌ 下载失败，请检查网络');return;}
   const up=await syncUpload();
   if(up.ok){
     showToast('✅ 同步完成');
   }else{
     let msg='⚠️ 上传失败';
-    if(up.status===422) msg='⚠️ 仍有冲突，请稍后再试';
-    else if(up.status===401) msg='⚠️ Token无效';
-    else if(up.status===403) msg='⚠️ 无权限或限流';
-    else if(up.status===404) msg='⚠️ 仓库路径不存在';
-    if(up.msg)msg+='\n'+up.msg;
+    if(up.msg)msg+='：'+up.msg;
     showToast(msg);
   }
 }
