@@ -74,11 +74,11 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 <div class="header">
   <div>
     <h1>每日热点工作台</h1>
-    <div class="date">08-05 08:30 · 点击标题展开详情</div>
+    <div class="date">08-05 10:00 · 点击标题展开详情</div>
   </div>
   <div class="stats">
     <div class="stat-badge"><strong>7</strong>类</div>
-    <div class="stat-badge"><strong>196+</strong>条</div>
+    <div class="stat-badge"><strong>215+</strong>条</div>
   </div>
 </div>
 
@@ -97,8 +97,21 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 
 <!-- 1. AI/科技类 -->
 <div class="category-card cat-ai" id="card-ai">
-  <div class="card-header"><div class="title"><span class="icon">🤖</span> AI / 科技类</div><div class="count">37条</div></div>
+  <div class="card-header"><div class="title"><span class="icon">🤖</span> AI / 科技类</div><div class="count">41条</div></div>
   <div class="card-body" id="cat-ai">
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">【实时】8月5日A股低开高走：创业板翻红，科创50大涨4%，半导体爆发</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">开盘创业板暴跌3.35%后迅速收窄翻红，CPO低开高走，"易中天"收窄跌幅</div>
+      <div class="item-tags"><span class="item-tag tag-hot">实时</span><span class="item-tag tag-top">重磅</span></div>
+      <div class="item-detail">
+        <p><b>开盘数据（09:26）：</b>上证指数低开0.19%，创业板指暴跌3.35%。CPO概念股大幅回调——中际旭创低开近14%，新易盛跌超10%，天孚通信跌超6%。AI算力、太空光伏、PCB、短剧游戏题材走弱；稀土永磁、智能驾驶、黄金逆势走强。</p>
+        <p><b>盘初拉升（09:38-09:47）：</b>低开高走，三大股指纷纷拉升。半导体设备板块继续走强，金海通2连板，长川科技、华峰测控、中微公司、拓荆科技涨幅靠前。存储芯片概念震荡走高，时空科技涨停，江波龙、佰维存储跟涨。CPO概念股低开高走，星网锐捷、沃格光电涨停，锐捷网络涨超13%。玻璃基板概念活跃，沃格光电2连板，京东方A跟涨。</p>
+        <p><b>截至发稿（09:53）：</b>沪指涨0.39%，深成指涨0.51%，创业板指涨0.06%（从暴跌3.35%翻红）。科创50涨超4%。港股恒指跌0.32%，恒科指涨0.22%。</p>
+        <p><b>"易中天"表现：</b>光模块早盘大幅低开后纷纷收窄跌幅。人民日报发文称中美经贸需要"合作清单"而非"覆盖清单"。</p>
+        <p><b>板块分化：</b>半导体材料/设备/硅片集体大涨，生物科技、有色金属走强；油气、白酒、电力陷入调整。贵金属期货涨幅居前，钯金、铂金涨超4%，沪银涨3%。</p>
+        <p class="source">来源：华尔街见闻、中财网、百度财经</p>
+      </div>
+    </div>
     <div class="item" onclick="toggleItem(this)">
       <div class="item-header"><div class="item-title">黄仁勋点名马斯克为AI竞赛大赢家，称其有三大优势</div><div class="item-toggle">▶</div></div>
       <div class="item-desc">算力基础设施+真实世界数据+三大AI业务布局</div>
@@ -163,6 +176,36 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
         <p><b>业务分拆：</b>连接业务（星链）收入同比增66%、运营利润增79%，星链用户翻倍；航天业务收入同比增29%、运营亏损增扩47%；AI业务收入同比增近250%，运营亏损收窄近18%至12.6亿美元，新增云服务合约销售额141亿美元。</p>
         <p><b>AI资本支出：</b>AI业务资本支出158亿美元，预计此后两季支出规模与此相当。星盾获超60亿美元多年期美国政府合同。</p>
         <p><b>盘后反应：</b>财报后盘后股价转跌，一度跌近9%，主要因AI支出高于预期。股价自高点已下挫46%，面临超12亿股解禁抛压。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">诺和诺德上调业绩指引但Wegovy销售不及预期，盘中跌7%</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">Q2 Wegovy药片销售额32.2亿丹麦克朗，低于预期32.7亿</div>
+      <div class="item-tags"><span class="item-tag tag-trend">财报</span></div>
+      <div class="item-detail">
+        <p><b>业绩数据：</b>诺和诺德上调全年展望，今年销售额和利润的最大降幅可能为6%（此前预测高达12%）。但Q2 Wegovy药片销售额32.2亿丹麦克朗，低于预期32.7亿克朗。</p>
+        <p><b>市场反应：</b>Wegovy被认为是现代肥胖症药物中最成功的新品之一，其销售不及预期推动诺和诺德ADR美股盘中下跌7%。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">谷歌烧光2000亿美元押注RSI：AI研发AI的"智能爆炸"循环</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">硅谷将AI研发重心从AGI转向递归式自我改进（RSI）</div>
+      <div class="item-tags"><span class="item-tag tag-top">前沿</span></div>
+      <div class="item-detail">
+        <p><b>核心趋势：</b>硅谷正将AI研发重心从AGI转向RSI（递归式自我改进），押注AI能够自主研发更强AI，开启"智能爆炸"循环。谷歌、OpenAI、Anthropic已初步验证AI辅助AI研发，但距离真正RSI仍有距离。</p>
+        <p><b>投资规模：</b>2000亿美元级基础设施投资，本质是在押注这一临界点能否到来。被称为"AI气穴超阿波罗登月"。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">卡特彼勒Q2营收首破200亿，AI算力基建成核心驱动力</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">营收205.4亿美元同比增24%，净利润飙升65%，全面上调指引</div>
+      <div class="item-tags"><span class="item-tag tag-trend">财报</span></div>
+      <div class="item-detail">
+        <p><b>核心数据：</b>卡特彼勒二季度营收首次突破200亿美元，同比大涨24%至205.4亿美元，净利润飙升65%至35.9亿美元，调整后每股收益超预期31%。三大业务板块全线超预期。</p>
+        <p><b>驱动因素：</b>数据中心需求成核心驱动力。公司上调全年营收增速指引至"中高两位数"。股价开盘跳涨逾12%，年内累计涨幅达51.8%。</p>
         <p class="source">来源：华尔街见闻</p>
       </div>
     </div>
@@ -521,7 +564,7 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 
 <!-- 2. 财经新闻 -->
 <div class="category-card cat-fin" id="card-fin">
-  <div class="card-header"><div class="title"><span class="icon">💰</span> 财经新闻</div><div class="count">35条</div></div>
+  <div class="card-header"><div class="title"><span class="icon">💰</span> 财经新闻</div><div class="count">42条</div></div>
   <div class="card-body" id="cat-fin">
     <div class="item" onclick="toggleItem(this)">
       <div class="item-header"><div class="item-title">美股三大指数全线收涨，道指标普双双刷新历史新高</div><div class="item-toggle">▶</div></div>
@@ -626,6 +669,76 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       <div class="item-detail">
         <p><b>债市数据：</b>美国10年期国债收益率跌5.08个基点报4.6248%，两年期美债收益率跌4.15个基点报4.1959%。</p>
         <p><b>风险预警：</b>全球定价之锚正拉响警报——美联储公信力受疑致长债收益率飙涨，看跌期权需求创2008年金融危机以来最高。债市动荡正迅速向股市蔓延，随着本周发债计划与重磅非农数据落地，一场跨市场风暴或一触即发。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">幻方9只产品单月跌幅全超20%，7月量化私募大回撤</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">明汯、九坤等头部机构亦未能幸免，多只产品年内收益转负</div>
+      <div class="item-tags"><span class="item-tag tag-hot">市场</span></div>
+      <div class="item-detail">
+        <p><b>核心事件：</b>7月国内量化私募行业遭遇回撤，幻方旗下9只产品单月跌幅全部超20%，明汯、九坤等头部机构亦未能幸免，多只产品年内收益由正转负。</p>
+        <p><b>机构研判：</b>主流机构观点倾向于认为这并非趋势反转，而是过度定价后的必要修正，AI算力主线仍在。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">沙特阿美Q2净利暴增33%，CEO警告"历史最大石油供应冲击"</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">每周流失1亿桶供应，即便海峡重开库存恢复仍需18个月</div>
+      <div class="item-tags"><span class="item-tag tag-hot">国际</span></div>
+      <div class="item-detail">
+        <p><b>业绩数据：</b>沙特阿美二季度净利润同比增长33%至334亿美元，但自由现金流仅123亿美元，派息几近其两倍，资产负债率升至6.2%。</p>
+        <p><b>CEO警告：</b>危机已造成史上最大石油供应冲击，每周流失1亿桶供应，即便海峡重开库存恢复仍需18个月。柴油等成品油紧张局面或持续推高通胀压力。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">铁矿石跌破100美元创一年新低，瑞银警告供需持续恶化</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">2027年均价或降至95美元/吨，难以重返100美元上方</div>
+      <div class="item-tags"><span class="item-tag tag-trend">大宗</span></div>
+      <div class="item-detail">
+        <p><b>价格数据：</b>铁矿石价格跌破100美元大关，创一年新低。瑞银预计铁矿石市场供过于求将持续加剧，2027年均价或降至95美元/吨。</p>
+        <p><b>驱动因素：</b>供应增长、钢需疲弱及废钢替代趋势共同压制价格，供需失衡仍是铁矿石走弱的核心驱动。</p>
+        <p class="source">来源：华尔街见闻、瑞银研报</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">人民币国际化"务实推进"：2025年贸易结算占比达创纪录29%</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">摩根大通：在多极化体系中扮演更大角色，而非取代美元</div>
+      <div class="item-tags"><span class="item-tag tag-trend">宏观</span></div>
+      <div class="item-detail">
+        <p><b>核心数据：</b>摩根大通指出，人民币在大宗商品结算中的使用持续扩大，2025年人民币结算占中国货物贸易比例已达创纪录的29%。</p>
+        <p><b>机构判断：</b>人民币国际化进展真实，但"石油人民币"类比可能不恰当，最可能的结果是在多极化体系中扮演更大角色，而非取代美元。</p>
+        <p class="source">来源：华尔街见闻、摩根大通</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">软银Q1营业利润3023亿日元超预期，AI与云业务维持30%增长</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">净销售额1.81万亿日元同比增9%，加速布局AI基础设施</div>
+      <div class="item-tags"><span class="item-tag tag-trend">财报</span></div>
+      <div class="item-detail">
+        <p><b>核心数据：</b>软银Q1净销售额1.81万亿日元（同比+9%），营业利润3023亿日元（同比+4%，高于预期2755亿），净利润1501亿日元略低于预期。</p>
+        <p><b>AI布局：</b>公司预计AI与云业务在2027财年前维持约30%年增长，加速布局AI基础设施、支付及数字化业务。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">洛克希德·马丁洽购关键矿产长期供应，稀土股大涨</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">军工巨头"下场抢矿"，磋商钪和锗采购协议</div>
+      <div class="item-tags"><span class="item-tag tag-hot">国际</span></div>
+      <div class="item-detail">
+        <p><b>核心事件：</b>据报道，洛克希德·马丁在磋商长期的钪和锗采购协议。报道传出后，USA Rare Earth股价扩大到9%以上。</p>
+        <p><b>行业意义：</b>军工巨头直接下场锁定关键矿产供应，反映地缘博弈向战略资源领域延伸。</p>
+        <p class="source">来源：华尔街见闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">麦当劳Q2营收71亿美元，全球销售增长放缓</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">全球可比销售增速从3.8%放缓至1.3%，美国市场仅增0.8%</div>
+      <div class="item-tags"><span class="item-tag tag-trend">财报</span></div>
+      <div class="item-detail">
+        <p><b>核心数据：</b>麦当劳2026年Q2营收略低于预期71.2亿美元，调整后每股收益3.38美元（超预期增6%）。全球可比销售增速从3.8%放缓至1.3%，美国市场仅增0.8%，客流持续承压。</p>
+        <p><b>亮点：</b>数字会员体系成为亮点，利润端受重组费用影响。</p>
         <p class="source">来源：华尔街见闻</p>
       </div>
     </div>
@@ -885,7 +998,7 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 
 <!-- 3. 观点输出/认知提升 -->
 <div class="category-card cat-cog" id="card-cog">
-  <div class="card-header"><div class="title"><span class="icon">🧠</span> 观点输出 / 认知提升</div><div class="count">26条</div></div>
+  <div class="card-header"><div class="title"><span class="icon">🧠</span> 观点输出 / 认知提升</div><div class="count">27条</div></div>
   <div class="card-body" id="cat-cog">
     <div class="item" onclick="toggleItem(this)">
       <div class="item-header"><div class="item-title">AI模型越智能算力越值钱，普通用户将被"价格挤出"</div><div class="item-toggle">▶</div></div>
@@ -942,42 +1055,71 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">20个改变思维的心智模型</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">AI能处理知识性工作，但判断力、创造力、认知深度仍是人类独特优势</div>
-      <div class="item-tags"><span class="item-tag tag-hot">推荐</span></div>
+      <div class="item-header"><div class="item-title">查理·芒格30个核心思维模型全解析（穷查理宝典）</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">来源：《穷查理宝典》彼得·考夫曼编著，跨学科思维模型完整清单</div>
+      <div class="item-tags"><span class="item-tag tag-hot">推荐</span><span class="item-tag tag-top">高赞</span></div>
       <div class="item-detail">
-        <p><b>核心观点：</b>AI已经能够处理大部分"知识性工作"，但判断力、创造力、认知深度仍然是人类的独特优势。心智模型是认知升级的核心工具。</p>
-        <p><b>典型模型包括：</b>反脆弱思维、机会成本思维、杠杆思维、灰度思维、熵减思维、概率思维、第二曲线思维、复利思维、极简思维、系统思维等。</p>
-        <p class="source">来源：百度文库《2026年认知升级-20个改变思维的心智模型》</p>
+        <p><b>出处：</b>彼得·考夫曼编《穷查理宝典》（Poor Charlie's Almanack），记录巴菲特合伙人查理·芒格的智慧，涵盖影响其经营决策的30个核心思维模型。</p>
+        <p><b>【决策类】1机会成本/2沉没成本/3决策树/4概率思维/5二八法则/6能力圈</b>——投资决策清单：决策时考虑放弃的最佳选择；不把过去的不可回收成本纳入当前决策；用概率评估事件可能性；集中于产生最大影响的20%关键因素；只在自己能力圈内行事。</p>
+        <p><b>【认知偏差类】7易得性偏差/8确认偏误/9损失规避/10锚定效应/11框架效应/12幸存者偏差/13因果倒置/14证实偏见/15黑天鹅</b>——克服人性弱点：避免高估容易回忆的信息；警惕对自身信念的偏爱；损失感受强度2倍于同等收益；不被初始信息绑架；关注反面案例；正视罕见但影响巨大的事件。</p>
+        <p><b>【思维工具类】16多元思维/17批判性思维/18复利思维/19逆向思维/20奥卡姆剃刀/21简化思维/22反身性思维/23价值投资/24安全边际/25复盘思维</b>——芒格反复强调：跨学科思考、逆向思考、简单胜过复杂、评估内在价值而非短期价格、留出安全边际、任务后必复盘。</p>
+        <p><b>【成长类】26直觉思维/27时光机思维/28不确定性/29道德思考/30角色扮演</b>——形成多元思维格栅：把不同学科的核心模型作为决策工具箱。</p>
+        <p><b>观看路径：</b>①微信读书/得到/京东读书搜《穷查理宝典》读全文；②B站搜"芒格思维模型"有60+讲解视频；③播客"商业就是这样""疯投有道"有芒格专题。强烈推荐作为2026年通识第一本书。</p>
+        <p class="source">来源：《穷查理宝典》彼得·考夫曼、百度百科、CSDN芒格100思维模型解析</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">人民日报推荐2026年48本个人成长书单</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">每月一个主题：成长、认知、健康、疗愈、财富</div>
-      <div class="item-tags"><span class="item-tag tag-top">推荐</span></div>
+      <div class="item-header"><div class="item-title">人民日报2026年48本个人成长书单（完整书单+作者）</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">按12个月主题编排，每本书都有豆瓣评分和作者权威背书</div>
+      <div class="item-tags"><span class="item-tag tag-top">推荐</span><span class="item-tag tag-hot">热门</span></div>
       <div class="item-detail">
-        <p><b>书单规划：</b>用一整年时间啃完48本经典，每月扎进一个主题，像给人生系统升级。涵盖成长、认知、健康、疗愈、财富五大维度。</p>
-        <p><b>12本精选：</b>人民日报另甄选12本推荐读物，跨越商业智慧、心理成长、沟通艺术、历史谋略、管理等领域。</p>
-        <p class="source">来源：人民日报、今日头条、知乎</p>
+        <p><b>书单来源：</b>人民日报推荐的48本豆瓣高分书单，全网刷屏，2026年开年读书标配。来源：水之清个人成长（百家号）整理、新浪财经、什么值得买多个版本互为印证。</p>
+        <p><b>1月·认知思维：</b>《认知觉醒》周岭 / 《认识自己，接纳自己》[美]黛比·福特 / 《纳瓦尔宝典》[美]埃里克·乔根森 / 《人性的弱点》[美]戴尔·卡耐基</p>
+        <p><b>2月·学习提升：</b>《如何阅读一本书》[美]莫提默·艾德勒/查尔斯·范多伦 / 《刻意练习》[美]安德斯·艾利克森 / 《打开心智》埃斯林格 / 《终身成长》[美]卡罗尔·德韦克</p>
+        <p><b>3月·效能提升：</b>《高效能人士的七个习惯》[美]史蒂芬·柯维 / 《人生十二法则》[加]乔丹·彼得森 / 《拖延心理学》[美]简·博克 / 《微习惯》[美]斯蒂芬·盖斯</p>
+        <p><b>4月·财商提升：</b>《小狗钱钱》[德]博多·舍费尔 / 《金钱心理学》[美]摩根·豪泽尔 / 《穷查理宝典》[美]彼得·考夫曼 / 《有钱人和你想的不一样》[美]T.哈维·埃克</p>
+        <p><b>5月·情商提升：</b>《人性的弱点》[美]戴尔·卡耐基 / 《非暴力沟通》[美]马歇尔·卢森堡 / 《所谓情商高，就是会说话》[日]佐佐木圭一 / 《情绪控制力》[英]吉尔·海森</p>
+        <p><b>6月·沟通表达：</b>《影响力》[美]罗伯特·西奥迪尼 / 《学会提问》[美]尼尔·布朗 / 《学会沟通》[美]戴维·伯洛 / 《沟通的艺术》[美]罗纳德·阿德勒</p>
+        <p><b>7月·经典文学：</b>《平凡的世界》路遥 / 《三体》刘慈欣 / 《月亮与六便士》[英]毛姆 / 《杀死一只知更鸟》[美]哈珀·李</p>
+        <p><b>8月·历史人文：</b>《明朝那些事儿》当年明月 / 《人类简史》[以]尤瓦尔·赫拉利 / 《万历十五年》[美]黄仁宇 / 《史记》司马迁</p>
+        <p><b>9月·人物传记：</b>《苏东坡传》林语堂 / 《曾国藩传》张宏杰 / 《张居正大传》朱东润 / 《一生的旅途》[美]罗伯特·艾格</p>
+        <p><b>10月·逻辑思维：</b>《简单逻辑学》[美]D.Q.麦克伦尼 / 《学会提问》[美]尼尔·布朗 / 《不确定世界的理性》[美]雷德·海斯蒂 / 《原则》[美]瑞·达利欧</p>
+        <p><b>11月·心理成长：</b>《被讨厌的勇气》[日]岸见一郎 / 《蛤蟆先生去看心理医生》[英]罗伯特·戴博德 / 《自卑与超越》[奥]阿尔弗雷德·阿德勒 / 《焦虑的人》[瑞典]弗雷德里克·巴克曼</p>
+        <p><b>12月·哲学经典：</b>《苏菲的世界》[挪]乔斯坦·贾德 / 《人生的智慧》[德]叔本华 / 《中国哲学史》冯友兰 / 《理想国》[古希腊]柏拉图</p>
+        <p><b>阅读平台：</b>微信读书（免费/会员）、得到APP（每天听本书）、蜗牛读书、京东读书、Kindle/掌阅。建议每月读1本主讲+3本泛读，一年悄悄超越90%的同龄人。</p>
+        <p class="source">来源：人民日报、水之清个人成长（百家号）、新浪财经、什么值得买</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">《认知驱动》：通过认知提升完成有价值的事</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">《认知觉醒》姊妹篇，在复杂环境中通过认知升级驱动改变</div>
-      <div class="item-tags"><span class="item-tag tag-trend">书籍</span></div>
+      <div class="item-header"><div class="item-title">周岭《认知觉醒》+《认知驱动》姊妹篇读完打卡</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">作者周岭，知乎3万关注者，人民日报48本推荐书单第1月核心读物</div>
+      <div class="item-tags"><span class="item-tag tag-trend">书籍</span><span class="item-tag tag-top">推荐</span></div>
       <div class="item-detail">
-        <p><b>书籍介绍：</b>《认知驱动》是《认知觉醒》的姊妹篇，聚焦于通过认知提升来完成真正有价值的事情。教你如何在复杂多变的环境中通过认知升级驱动真正的改变。</p>
-        <p class="source">来源：淘宝读书</p>
+        <p><b>作者：</b>周岭，知乎个人成长领域头部作者，自媒体人，《人民日报》48本推荐书单1月认知思维首本。</p>
+        <p><b>《认知觉醒》：</b>2021年出版，副标题"开启自我改变的原动力"。系统讲解大脑的构造、焦虑根源、元认知、专注力、学习力、行动力、情绪力等七大底层概念。豆瓣评分8.0。</p>
+        <p><b>《认知驱动》：</b>2022年出版，上下册《认知觉醒》姊妹篇。聚焦"做成一件有价值的事"的底层逻辑——做成一件事的真正动力源自"价值创造"和"主动选择"，而非"完成任务"。</p>
+        <p><b>核心方法：</b>三个成长维度——①认知（看清机制）；②选择（寻找意义）；③行动（创造价值）。书中金句："顶级成长，是让自己成为'被需要的人'"。</p>
+        <p><b>阅读路径：</b>微信读书/得到APP均可一搜即读，免费资源较多。也可购买纸质版（人民邮电出版社）。建议先读《认知觉醒》再读《认知驱动》，间隔1-2个月消化效果更好。</p>
+        <p><b>延伸阅读：</b>同作者《认知觉醒》作者还推荐：①古典《你的生命有什么可能》/ ②古典《跃迁》/ ③李笑来《把时间当作朋友》/ ④成甲《好好学习》（个人知识管理）。</p>
+        <p class="source">来源：微信读书、人民日报48本成长书单、知乎周岭</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">2026减法聚焦×深度成长：可执行个人规划</div><div="item-toggle">▶</div></div>
-      <div class="item-desc">涵盖个人成长、健康、财务、人际关系、休闲体验</div>
-      <div class="item-tags"><span class="item-tag tag-hot">实用</span></div>
+      <div class="item-header"><div class="item-title">抖音100个年度必看知识视频（17位顶流博主+观看平台）</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">抖音2025年度精选内容，覆盖7大领域</div>
+      <div class="item-tags"><span class="item-tag tag-hot">热门</span><span class="item-tag tag-trend">视频</span></div>
       <div class="item-detail">
-        <p><b>核心方法：</b>减少无效行动，聚焦核心领域。结合个人成长、健康、财务、人际关系、休闲体验多维度，制定可执行的年度规划。</p>
-        <p><b>关键词：</b>温暖启程、减法聚焦、深度成长——不是做更多事，而是做更少但更重要的事。</p>
-        <p class="source">来源：今日头条</p>
+        <p><b>来源：</b>抖音2025年度精选内容名单。100条视频覆盖人文历史/数学自然/财经商业/医疗健康/科技手作/AI脑科学/法律社会/女性成长/街头创作九大领域。来源：知乎专栏《100个年度必看知识视频》、36氪、搜狐。</p>
+        <p><b>【人文历史类·必看】</b>①@混子哥边画边讲（陈磊）——诺奖讲量子力学、丞相宰相区别、中国青铜器分类，漫画科普天花板；②@风雪夜灯——9小时一口气看完战国时代（18.8万字文稿）；③@张志浩在剥柚——240分钟为《红楼梦》林黛玉"正名"。</p>
+        <p><b>【数学与自然·必看】</b>④@3Blue1Brown（Grant Sanderson）——与菲尔兹奖得主陶哲轩1小时对谈；B站有官方账号"3Blue1Brown官方"。</p>
+        <p><b>【财经商业·必看】</b>⑤@巫师财经——超长版中国企业年度盘点；⑥@直男财经——《一口气说清可回收火箭》蓝箭航天朱雀三号4个月贴身追踪；⑦@投研部杨摸鱼——25分钟解析日本固态电池行业演进。</p>
+        <p><b>【医疗健康·必看】</b>⑧@鱼堡说医药——80分钟揭秘美国医疗体系；⑨@大物是也——多学科联合减重门诊深度科普。</p>
+        <p><b>【AI与脑科学·必看】</b>⑩@大圆镜科普——AI视频讲大脑构成和神经突触；⑪@秋芝2046——《DeepSeek实用技巧》快速上手AI工具。</p>
+        <p><b>【科技手作·必看】</b>⑫@神奇阿宇——手搓"会飞"的客厅，搭载热气球飞上2000米；⑬@会点手工的老表——手搓福建舰航母模型；⑭@U航——哥伦比亚大学机器人博士研发人脸机器人。</p>
+        <p><b>【女性成长·必看】</b>⑮@这个月——女性心理分析与经典著作解读；⑯@姜Dora——与陈丹青深度对谈。</p>
+        <p><b>【街头创作·必看】</b>⑰@慕七七——街头高考作文挑战，农民工大爷手写《我的母亲》获赞超1000万。</p>
+        <p><b>观看路径：</b>抖音搜索对应博主名直接关注；B站搜"风雪夜灯""秋芝2046""U航"有同步搬运。每月看3-5个，2026年悄悄涨知识。</p>
+        <p class="source">来源：抖音2025年度精选、知乎专栏、36氪、搜狐</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
@@ -1405,8 +1547,74 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 
 <!-- 5. 新闻资讯 -->
 <div class="category-card cat-news" id="card-news">
-  <div class="card-header"><div class="title"><span class="icon">📰</span> 新闻资讯</div><div class="count">33条</div></div>
+  <div class="card-header"><div class="title"><span class="icon">📰</span> 新闻资讯</div><div class="count">40条</div></div>
   <div class="card-body" id="cat-news">
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">上海飞东京航班险撞机！两机高度差仅20米，197人无恙</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">全日空NH968航班与日本政府飞行检查机极度接近，3次尝试后安全落地</div>
+      <div class="item-tags"><span class="item-tag tag-hot">热搜</span></div>
+      <div class="item-detail">
+        <p><b>核心事件：</b>当地时间8月4日清晨，由上海飞往羽田的全日空NH968航班临近降落时，与代号"白博士"的日本政府飞行检查机极度接近，两机垂直高度差仅20米，碰撞风险极高。航班搭载197名乘客与机组人员。</p>
+        <p><b>后续：</b>航班历经3次尝试，于6:10安全落地，全员无受伤。全日空已上报日本国土交通省，官方已介入调查。</p>
+        <p class="source">来源：百度财经、大众新闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">台风"白海豚"再次加强为超强台风级，16级风力</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">8月5日夜间前对我国海区无影响，6日后路径关键</div>
+      <div class="item-tags"><span class="item-tag tag-hot">天气</span></div>
+      <div class="item-detail">
+        <p><b>最新数据：</b>今年第13号台风"白海豚"4日下午再次加强为超强台风级，17时位于琉球群岛那霸市偏东方向约1370公里。中心最大风力16级（52米/秒），中心最低气压935百帕。</p>
+        <p><b>影响预测：</b>8月5日夜间前对我国海区暂无影响。路径关键看8月6日后副热带高压走势——若副高与大陆高压连通，可能直奔我国华东沿海。</p>
+        <p class="source">来源：中央气象台、大众新闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">官方通报"卫生巾疑有虫卵"：已启动现场核查</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">桂林市七星区市监局联合卫健部门对涉事企业开展核查</div>
+      <div class="item-tags"><span class="item-tag tag-hot">热搜</span></div>
+      <div class="item-detail">
+        <p><b>核心事件：</b>8月4日晚，网络上"购买的卫生巾疑现虫卵"信息引发舆论关注。桂林市七星区市场监督管理局发布情况通报，联合卫健部门第一时间启动处置工作，对涉事企业开展现场核查，对涉事同款产品进行监督抽检。</p>
+        <p class="source">来源：大众新闻、桂林市市监局</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">美军被曝征集"创造性"打击伊朗方案，特朗普坚称谈判已重启</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">CNN独家：空袭等传统手段效果有限，难以实现全部目标</div>
+      <div class="item-tags"><span class="item-tag tag-hot">国际</span></div>
+      <div class="item-detail">
+        <p><b>核心事件：</b>CNN 3日发表独家报道，美军近期正在内部广泛征集"创造性且非常规"的打击伊朗方案，原因是空袭等传统打击手段效果有限，难以实现美方对伊朗军事行动的全部目标。特朗普坚称美伊谈判已经重启。</p>
+        <p><b>伊朗回应：</b>外交部发言人巴加埃4日表示，伊朗与阿曼正在就霍尔木兹海峡问题继续谈判，重点在于确定船舶安全通行路线，兼顾两国主权权利和国家安全考量。</p>
+        <p class="source">来源：新华社、CNN、大众新闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">美国撤销巴西驻美大使签证，报复巴西拒发签证</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">巴西上月拒绝向两名美国务院官员发放签证</div>
+      <div class="item-tags"><span class="item-tag tag-trend">国际</span></div>
+      <div class="item-detail">
+        <p><b>核心事件：</b>据美国媒体4日报道，美国政府已撤销巴西驻美大使的签证，以报复巴西上月拒绝向两名美国务院官员发放签证以及迟迟未接受美总统特朗普提名的驻巴西大使人选。</p>
+        <p class="source">来源：大众新闻、新华社</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">日本128个地方议会提交意见书要求坚持"无核三原则"</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">高市早苗政权上台后，要求坚持无核三原则的声音迅速增加</div>
+      <div class="item-tags"><span class="item-tag tag-trend">国际</span></div>
+      <div class="item-detail">
+        <p><b>核心数据：</b>据日本参议院事务局统计，从高市早苗政权去年10月21日成立至今年7月28日，至少已有36个都道府县的128个地方议会向国会提交了要求坚持"无核三原则"的意见书。</p>
+        <p class="source">来源：大众新闻</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">山东AI"一人公司"政策：三年培育千家创业主体</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">山东省12部门联合印发OPC创新发展行动方案</div>
+      <div class="item-tags"><span class="item-tag tag-trend">政策</span></div>
+      <div class="item-detail">
+        <p><b>核心政策：</b>山东省工信厅等12部门联合印发《关于支持人工智能OPC创新发展的行动方案》，将人工智能OPC（One Person Company，一人公司）纳入省级政策扶持框架，目标三年培育千家创业主体、集聚万名创新人才。</p>
+        <p class="source">来源：大众新闻</p>
+      </div>
+    </div>
     <div class="item" onclick="toggleItem(this)">
       <div class="item-header"><div class="item-title">美国拟禁止进口中国新型数据中心设备，我使馆威胁反制</div><div class="item-toggle">▶</div></div>
       <div class="item-desc">拟禁止进口中国新型号光收发模块，2026年内公布实施</div>
@@ -1476,12 +1684,20 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">华为全场景新品发布会今日举行</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">市场关注新品发布动态</div>
-      <div class="item-tags"><span class="item-tag tag-new">关注</span></div>
+      <div class="item-header"><div class="item-title">华为8月5日全场景发布会：尊界V800领衔，7款新品齐发</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">尊界V800预售价80-120万，预售23天订单破万；MateBook S仅798g</div>
+      <div class="item-tags"><span class="item-tag tag-hot">热搜</span><span class="item-tag tag-top">重磅</span><span class="item-tag tag-new">新品</span></div>
       <div class="item-detail">
-        <p><b>事件预告：</b>华为全场景新品发布会于8月5日举行，市场高度关注新品发布动态。</p>
-        <p class="source">来源：华尔街见闻</p>
+        <p><b>发布会时间：</b>8月5日14:30，"尊界时代旗舰MPV及华为全场景新品发布会"，余承东主持。</p>
+        <p><b>①尊界V800（绝对主角）：</b>百万级旗舰MPV，预售价80-120万元，车身5495×2006×1850mm，轴距3430mm。基于MAEXTRO途灵龙行平台，搭载全主动悬架、线控制动，乾崑ADS 3.0智驾+896线双光路激光雷达，鸿蒙座舱4.0。预售23天订单破1万台（日均430台，日均销售额超3.4亿元），V800占比约80%。</p>
+        <p><b>②尊界V680：</b>预售价65-90万元，轴距3290mm，与V800同平台，定位略低。</p>
+        <p><b>③nova 16 SE手机：</b>搭载麒麟8020芯片，下放第一代红枫原色影像系统（此前Mate系列专属），1.5K高刷屏，2000-3000元价位，面向年轻用户。</p>
+        <p><b>④MateBook S笔记本：</b>整机仅798克（比MacBook Air轻35%），搭载麒麟XE90处理器+鸿蒙电脑版系统，支持眼动追踪跨设备操作（眼看手机光标自动跳转），小艺智能助手可从本地文档自动提取数据。约6000元。</p>
+        <p><b>⑤畅享90 Pro Max升级款：</b>8500mAh巨鲸电池，千元机续航天花板，耐摔设计CQC+SGS双认证，适合学生/长辈。</p>
+        <p><b>⑥WATCH GT7系列：</b>46mm版本黑/棕黄/野绿三色，41mm更多彩，健康监测升级。</p>
+        <p><b>⑦FreeBuds Neo电竞耳机：</b>低延迟优化，为王者荣耀/和平精英玩家优化听声辨位。</p>
+        <p><b>华为承诺"智驾出事，我兜底"：</b>主动承担智驾责任，行业首次。896线双光路激光雷达已向问界M7/M8、智界R7等车型全系升级。</p>
+        <p class="source">来源：新浪科技、今日头条、网易、QQ新闻</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
@@ -1716,7 +1932,7 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 
 <!-- 6. 历史资讯 -->
 <div class="category-card cat-hist" id="card-hist">
-  <div class="card-header"><div class="title"><span class="icon">📜</span> 历史资讯</div><div class="count">25条</div></div>
+  <div class="card-header"><div class="title"><span class="icon">📜</span> 历史资讯</div><div class="count">28条</div></div>
   <div class="card-body" id="cat-hist">
     <div class="item" onclick="toggleItem(this)">
       <div class="item-header"><div class="item-title">2026年"火箭可回收元年"开启商业航天万亿市场</div><div class="item-toggle">▶</div></div>
@@ -1730,21 +1946,206 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">历史上的今天：8月4日</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">1914年英国向德国宣战一战全面爆发</div>
+      <div class="item-header"><div class="item-title">历史上的今天：8月5日</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">公元前25年刘秀称帝建立东汉，1962年曼德拉被捕</div>
       <div class="item-tags"><span class="item-tag tag-hot">今日</span></div>
       <div class="item-detail">
-        <p><b>历史事件：</b>①1791年法国《人权宣言》发表；②1914年英国向德国宣战，第一次世界大战全面爆发；③1944年安妮·弗兰克被纳粹逮捕；④1964年北部湾事件，美国全面介入越战。</p>
+        <p><b>历史事件：</b>①公元前25年8月5日，刘秀即皇帝位，建立东汉王朝，史称光武帝；②1962年8月5日，曼德拉被南非当局逮捕入狱，开启27年牢狱生涯；③1966年8月5日，毛泽东发表《炮打司令部——我的一张大字报》，标志文革全面升级；④2012年8月5日，伦敦奥运会闭幕，中国代表团获38金88枚奖牌创海外参赛最佳。</p>
         <p class="source">来源：历史资料</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">贾似道与中国历史演变短视频走红</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">西瓜视频8月2日发布#揭秘历史涨知识#系列</div>
-      <div class="item-tags"><span class="item-tag tag-hot">内容</span></div>
+      <div class="item-header"><div class="item-title">B站历史区顶流：小约翰可汗粉丝破千万</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">《奇葩小国》《硬核狠人》《神奇组织》三大系列开创冷门历史新赛道</div>
+      <div class="item-tags"><span class="item-tag tag-top">博主</span></div>
       <div class="item-detail">
-        <p><b>核心内容：</b>西瓜视频8月2日发布#揭秘历史涨知识#系列，探讨南宋权臣贾似道的历史评价，引发讨论。通过短视频形式让复杂历史人物变得通俗易懂。</p>
-        <p class="source">来源：西瓜视频</p>
+        <p><b>博主简介：</b>小约翰可汗（本名小约翰），2020年10月入驻B站，以差异化选题和幽默叙事迅速崛起。历时五年，2025年7月粉丝突破1000万，创下B站历史区UP主粉丝纪录。B站空间：space.bilibili.com/23947287。</p>
+        <p><b>代表系列：</b>①《奇葩小国》——以冷门小国历史为主线，讲述反霸权主义故事；②《硬核狠人》——聚焦被遗忘的历史人物，以"通"字辈梗文化出圈；③《神奇组织》——揭秘CIA等神秘组织的前世今生。</p>
+        <p><b>内容特点：</b>中视频赛道（20-40分钟），冷门历史+反霸权主义视角+"鸽更不明那就是更了"的佛系更新风格，深受年轻观众喜爱。</p>
+        <p class="source">来源：B站、vgover.com</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">历史调研室："究天人之际，通古今之变"</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">B站历史区深度考据派代表，长视频制霸</div>
+      <div class="item-tags"><span class="item-tag tag-top">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>历史调研室，B站历史区知名UP主，以深度考据和电影级长视频著称。B站空间：space.bilibili.com/519872016。每期视频如同一部电影，精彩纷呈，一口气看完，被粉丝称为"长视频赛道的制霸者"。</p>
+        <p><b>内容特点：</b>以大量史料考证为基础，制作精良的长视频历史纪录片。内容涵盖中外历史，叙事风格沉稳大气，画面制作精良，被评价为"评书类讲史的天花板"。</p>
+        <p><b>适配人群：</b>喜欢深度历史内容、有耐心观看长视频的历史爱好者。</p>
+        <p class="source">来源：B站、知乎</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">安州牧：被网友称为"历史翻译工"</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">文献研究与趣味化解读结合，B站历史科普标杆</div>
+      <div class="item-tags"><span class="item-tag tag-hot">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>安州牧，B站历史科普类自媒体UP主，通过短视频及系列作品普及历史知识，以文献研究与趣味化解读结合，被网友称为"历史翻译工"。2021-2022年间参与B站《花好》等官方活动。</p>
+        <p><b>内容特点：</b>将晦涩的史料文献"翻译"成通俗易懂的历史故事，注重学术性与趣味性的平衡。擅长从原始文献中挖掘细节，用现代视角重新解读历史事件。</p>
+        <p><b>哪里可以看：</b>B站搜索"安州牧"即可关注，代表作在主页置顶。</p>
+        <p class="source">来源：百度百科、B站</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">渤海小吏：公务员出身的"天津人说书"讲史</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">343.8万粉丝，2024年B站百大UP主，战争视角解析见长</div>
+      <div class="item-tags"><span class="item-tag tag-top">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>渤海小吏，前公务员，B站2024年百大UP主，截至2025年初粉丝343.8万。B站空间：space.bilibili.com/504934876。语言风格被形容为"天津人说书"，兼具趣味性与学术性，作品时长普遍半小时至一小时。</p>
+        <p><b>代表作品：</b>《300万粉福利特供||"成事"的总纲是什么？》《渤海小吏的封建脉络百战》历史全集（已出版）。2024年集中推出40余期唐朝主题节目，构建从制度变迁到军事战略的完整认知框架。</p>
+        <p><b>内容特点：</b>以战争视角解析历史，深入分析战役背后的政治经济逻辑。说书式叙事风格生动有趣，同时保持史实严谨。</p>
+        <p class="source">来源：百度百科、B站、百度文库</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">正直讲史-李正Str："视频版当年明月"</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">90后高中历史教师，B站百大UP主，著有《成为雍正》《乾隆制造》</div>
+      <div class="item-tags"><span class="item-tag tag-hot">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>李正，90后，天津人，高中历史教师，B站百大UP主。以"三观正直一把尺，扎扎实实讲历史"为创作口号，被媒体称为"视频版当年明月"。个人账号"正直讲史—李正Str"创下千万级播放量。</p>
+        <p><b>出版图书：</b>①《成为雍正》——深入解读雍正帝的治国方略与人格侧面；②《乾隆制造》——揭秘乾隆朝的政治生态与文化盛景。两本书均由正规出版社发行，各大书店及电商平台有售。</p>
+        <p><b>哪里可以看：</b>B站搜索"正直讲史-李正Str"关注视频内容；书籍在当当、京东等平台搜索书名即可购买。</p>
+        <p class="source">来源：百度百科、环球人物网</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">勇敢de永：72集《中华文明史》通史教科书</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">耗时数年打造B站"通史教科书"，客观中立搭配动态疆域图</div>
+      <div class="item-tags"><span class="item-tag tag-top">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>勇敢de永，B站历史区知名UP主，以客观严谨的通史百科内容著称。其耗时数年打造的《中华文明史》72集系列，堪称B站"通史教科书"。</p>
+        <p><b>代表作品：</b>《中华文明史》72集系列——内容客观中立，不夹带主观偏见，搭配动态疆域图复盘各朝代兴衰。从远古文明到近代转型，脉络清晰、知识点密集，无冗余内容。</p>
+        <p><b>适配人群：</b>追求客观史实，想零基础系统学习中华文明史的历史爱好者。适合想一站式搭建中国史知识框架的入门者。</p>
+        <p class="source">来源：搜狐、知乎、B站</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">杨利辉：程序员做出的26小时五代十国史</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">90后码农用动态地图爆改冷门历史，5000万播放被中学用作课件</div>
+      <div class="item-tags"><span class="item-tag tag-hot">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>杨利辉，90后安徽阜阳人，计算机专业毕业，上海某软件公司技术负责人。专注五代十国及中晚唐历史解说。B站空间：space.bilibili.com/485036141，粉丝45.8万。西瓜视频同名账号亦有大量内容。</p>
+        <p><b>代表作品：</b>①《彻底搞懂五代十国》合集——时长25小时30分18秒，播放量超5000万，点赞89万+；②《20小时彻底搞懂从安史之乱到元和中兴》；③《中晚唐风云》76讲（已完结）；④《新五代演义》（连载中）。作品被北京多所中学用作课堂教学课件。</p>
+        <p><b>内容特点：</b>以唐代古地图为底本，手动标注地名、绘制行军路线、配动态箭头，让政权林立、疆域频繁变动的五代十国在地图上"活"过来。用程序员思维解决历史叙事的时空混乱问题。</p>
+        <p class="source">来源：百度百科、解放日报、中青网</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">小璐歌（杨汶锦）：抖音595万粉丝讲史博主</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">前IT人转型，"十分钟讲透一个朝代"，获评陕西历史文化传播大使</div>
+      <div class="item-tags"><span class="item-tag tag-hot">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>小璐歌，本名杨汶锦，西安人，曾从事IT行业20余年（涉足OA、SNS社交软件、AI等领域），2020年转型入驻抖音讲历史。截至2025年7月，抖音粉丝达595万。2023年被授予"陕西历史文化传播大使"称号。</p>
+        <p><b>核心模式：</b>"十分钟讲透一个朝代"——从春秋到明清，每个朝代一期。结合乾陵、未央宫等古迹实地探访，通过现场画面增强观众历史感知。一条视频从查资料到写文案约需一周，力求真实准确、语言优美。</p>
+        <p><b>哪里可以看：</b>抖音搜索"小璐歌"即可关注。获赞超3000万，不少老师索要视频用于教学辅助。</p>
+        <p class="source">来源：百度百科、新华社、人民网</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">混子哥（陈磊）：漫画式科普开创者</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">《半小时漫画中国史》系列畅销千万册，2025年开创"混子哥边画边讲"</div>
+      <div class="item-tags"><span class="item-tag tag-top">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>陈磊，网名"混子哥"（曾用笔名"二混子"），漫画式科普开创者、畅销书作家、"混知"创始人。原为上汽集团设计师，后创办"混子曰"公众号，栏目文章平均阅读量30万，累计点击量达一亿次。12月末现身诺贝尔颁奖典礼现场，历史科普创作者影响力获国际认可。</p>
+        <p><b>代表作品：</b>①《半小时漫画中国史》系列（共7册：中国史1-5+世界史1-2）——2017年江苏凤凰文艺出版社首版，以手绘漫画+段子形式讲历史，从中国人起源到明清；②《超级大脑在想啥》系列；③《知识点有画面》系列。2025年开创"混子哥边画边讲"账号，将晦涩硬核知识变得让普通读者"看得懂、记得住"。</p>
+        <p><b>哪里可以看/买：</b>书籍在当当、京东、天猫搜索"半小时漫画中国史"购买；公众号搜索"混知"关注；抖音/B站搜索"混子哥边画边讲"观看视频。</p>
+        <p class="source">来源：百度百科、百家号</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">赛雷三分钟：三分钟讲透一个历史事件</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">漫画+快节奏解说，党史/中国史/世界史全覆盖</div>
+      <div class="item-tags"><span class="item-tag tag-hot">博主</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>赛雷三分钟，知名漫画科普品牌，以"三分钟讲透一件事"为核心模式。覆盖历史、经济、科学等多个领域，历史类是其最具影响力的内容板块。在抖音、B站等平台拥有大量粉丝。</p>
+        <p><b>代表作品：</b>①《赛雷三分钟漫画中国共产党简史》——以漫画形式系统讲述党史；②《赛雷三分钟漫画中国史》——用漫画+段子讲透从先秦到明清的历史脉络；③《赛雷三分钟漫画世界史》——轻松了解世界文明发展。</p>
+        <p><b>哪里可以看/买：</b>书籍在当当、京东搜索"赛雷三分钟"购买；抖音/B站搜索"赛雷三分钟"观看短视频内容。</p>
+        <p class="source">来源：百度百科、当当网</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">《如果历史是一群喵》：B站2.2亿播放的现象级历史动画</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">肥志创作，12只猫咪演绎华夏历史，B站评分9.7</div>
+      <div class="item-tags"><span class="item-tag tag-top">推荐</span></div>
+      <div class="item-detail">
+        <p><b>作品简介：</b>《如果历史是一群喵》是肥志（深圳萌想文化传播有限公司）创作的以华夏历史为主线的萌系动画。用12只体态丰盈、造型可爱的猫咪演绎历史事件，以风趣幽默的语言重新解读历史，更容易为年轻人记忆和接受。</p>
+        <p><b>播放数据：</b>第1-3季在B站总播放量达2.2亿，系列追番人数371.8万，弹幕总数79.9万。B站评分高达9.7分。截至2023年，同名动画累计播放量超1亿。目前已出到第8季（元末明初篇）。衍生漫画实体书总销量超千万册。</p>
+        <p><b>哪里可以看：</b>B站搜索"如果历史是一群喵"观看全部8季动画；书籍在当当、京东搜索同名购买。获2019年中国动漫金龙奖"新中国动漫70年70人"称号。</p>
+        <p class="source">来源：百度百科、B站、什么值得买</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">老聂读书：成年人零基础学历史首选</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">视频号头部历史博主，通俗讲解《资治通鉴》《史记》《全球通史》</div>
+      <div class="item-tags"><span class="item-tag tag-new">推荐</span></div>
+      <div class="item-detail">
+        <p><b>博主简介：</b>老聂读书，专注成年人历史系统学习，视频号头部历史博主。主打通俗讲解+终身陪伴+书籍拆解，是职场人、历史小白的全能型选择。</p>
+        <p><b>核心优势：</b>①零门槛适配——不用基础，把《资治通鉴》《史记》《全球通史》拆成大白话；②中外通史全覆盖——中国史+世界史同步讲，一站式搭建完整知识体系；③配套超详细学习笔记和社群陪伴。</p>
+        <p><b>内容覆盖：</b>中国史涵盖先秦至近现代，重点解读《资治通鉴》《史记》等经典典籍；世界史聚焦古埃及、古希腊、古罗马、近现代欧美等全球核心文明，解读《全球通史》等经典书籍。</p>
+        <p><b>哪里可以看：</b>微信视频号搜索"老聂读书"关注。</p>
+        <p class="source">来源：搜狐</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">2026年必看历史纪录片片单（央视精选12部）</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">《家国》《万水千山只等闲》《破译三国》等重磅上线</div>
+      <div class="item-tags"><span class="item-tag tag-new">推荐</span></div>
+      <div class="item-detail">
+        <p><b>央视12部必看纪录片：</b>央视近期整理发布包含12部高质量纪录片的片单，覆盖历史、文学、自然及文物等领域，采用生动叙事手法展现，摒弃枯燥说教。</p>
+        <p><b>重点推荐：</b></p>
+        <p>①《家国》——中央广播电视总台与中央新闻纪录电影制片厂联合出品，12集历史人文纪录片。以中国历史中标志性思想家、政治家、文化名人为切入点，挖掘人格力量、治国智慧与文化贡献，系统梳理中华文明精神脉络。2026年播出。</p>
+        <p>②《万水千山只等闲》——纪念红军长征胜利90周年，通过万余份原始文献和500余位亲历者回忆，系统梳理长征历史脉络。结合三维地图技术动态呈现战略转移路线。</p>
+        <p>③《破译三国》——爱奇艺2026年1月23日起每周五12点独家首播，全片11集，导演李鹏鹏。三国历史题材纪录片，入选2025-2026年爱奇艺纪录片片单。</p>
+        <p>④《中国通史》——爱奇艺排播，深耕历史文化赛道。</p>
+        <p><b>哪里可以看：</b>CCTV9纪录片频道、爱奇艺、腾讯视频、优酷等平台搜索片名观看。</p>
+        <p class="source">来源：什么值得买、百度百科、百度知道</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">《江海潮生》：CCTV-1黄金档历史大剧</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">清末状元张謇实业救国故事，首播收视率2.942%创年度纪录</div>
+      <div class="item-tags"><span class="item-tag tag-hot">推荐</span></div>
+      <div class="item-detail">
+        <p><b>作品简介：</b>《江海潮生》为重大历史题材电视剧，讲述清末状元张謇（1853-1926）实业救国的传奇人生。张謇在离世整整一百年后的2026年，其故事被搬上荧幕。2026年7月20日起在CCTV-1黄金档首播。</p>
+        <p><b>收视数据：</b>开播首日以2.942%的收视率创下2026年以来历史题材首播纪录，后续收视稳定在2.7%以上，持续领跑黄金时段。7月20日接档《种墨园》无缝登陆CCTV-1。</p>
+        <p><b>哪里可以看：</b>央视一套（CCTV-1）黄金档播出，爱奇艺、腾讯视频、优酷三大平台同步上线。主演郝平、任重等。</p>
+        <p class="source">来源：百家号、新浪</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">2026口碑历史博主全攻略：18位顶流按风格分类</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">入门趣味/硬核考据/系统通史/世界国别/影像实证全覆盖</div>
+      <div class="item-tags"><span class="item-tag tag-new">推荐</span></div>
+      <div class="item-detail">
+        <p><b>按风格分类的18位顶流历史博主：</b></p>
+        <p><b>B站博主：</b>①安州牧（文献考据，"历史翻译工"）；②勇敢de永（《中华文明史》72集通史）；③小约翰可汗（冷门小国史，千万粉丝）；④历史调研室（电影级长视频深度考据）；⑤信息素的信息（数据可视化讲史）；⑥浪花姜（趣味历史）；⑦如果历史是一群喵（萌系动画历史，2.2亿播放）；⑧杨利辉（五代十国全史，5000万播放）；⑨渤海小吏（战争视角"天津说书"）；⑩正直讲史-李正Str（清史专家，"视频版当年明月"）。</p>
+        <p><b>抖音/快手博主：</b>①混子哥/混知（漫画科普，畅销千万册）；②赛雷三分钟（三分钟讲透一件事）；③小璐歌/杨汶锦（595万粉，十分钟讲透一朝代）；④风雪夜灯（历史冷知识）；⑤唠点历史（通俗说史）；⑥邹德怀（影像史料考证）。</p>
+        <p><b>公众号/知乎：</b>①渤海小吏（公众号同步更新）；②李正（知乎深度回答）。</p>
+        <p><b>海外博主：</b>①小王Albert（中外历史对比）；②OverSimplified（世界史动画，YouTube头部历史频道）；③Fall of Civilizations（文明衰亡史深度纪录片）。</p>
+        <p><b>核心推荐：</b>老聂读书——成年人零基础首选，中外通史全覆盖。</p>
+        <p class="source">来源：搜狐</p>
+      </div>
+    </div>
+    <div class="item" onclick="toggleItem(this)">
+      <div class="item-header"><div class="item-title">历史书单推荐：从入门到进阶</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">通俗入门+经典通史+断代史+世界史，具体到书名作者出版社</div>
+      <div class="item-tags"><span class="item-tag tag-new">书单</span></div>
+      <div class="item-detail">
+        <p><b>一、通俗入门（适合零基础）：</b></p>
+        <p>①《半小时漫画中国史》（共7册）——陈磊（混子哥）著，江苏凤凰文艺出版社，以漫画+段子讲透五千年历史；</p>
+        <p>②《明朝那些事儿》（共7册）——当年明月著，中国海关出版社，以小说笔法讲明史，销量超千万册；</p>
+        <p>③《如果历史是一群喵》漫画系列——肥志著，广东旅游出版社，萌猫演绎华夏历史。</p>
+        <p><b>二、经典通史：</b></p>
+        <p>④《资治通鉴》——司马光编撰，中华书局点校本，编年体通史巅峰之作；</p>
+        <p>⑤《史记》——司马迁著，中华书局点校本，纪传体通史开山之作；</p>
+        <p>⑥《全球通史》——斯塔夫里阿诺斯著，北京大学出版社，世界史经典教材。</p>
+        <p><b>三、断代史/专题：</b></p>
+        <p>⑦《成为雍正》——李正直著，深入解读雍正治国方略；</p>
+        <p>⑧《乾隆制造》——李正直著，揭秘乾隆朝政治生态；</p>
+        <p>⑨《渤海小吏的封建脉络百战》——渤海小吏著，战争视角解析中国历史。</p>
+        <p><b>哪里可以买：</b>当当网、京东图书、天猫搜索书名即可购买。</p>
+        <p class="source">来源：各出版社、当当网</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
@@ -1764,24 +2165,6 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
         <p><b>核心数据：</b>2025抖音创作者大会数据显示，过去一年人文社科等17个垂类优质内容大幅增长。网友感慨"但凡当年历史老师能这么讲，我都能爱上历史""这样的细糠越来越少了"。</p>
         <p><b>平台策略：</b>抖音2025年发布知识创作"砥砺计划"，聚焦前沿科技、自然科普、人文社科、名校名课四大方向。</p>
         <p class="source">来源：今日头条、搜狐</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">漫画科普大神@混子哥现身诺贝尔颁奖典礼</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">历史科普创作者影响力获国际认可</div>
-      <div class="item-tags"><span class="item-tag tag-hot">人物</span></div>
-      <div class="item-detail">
-        <p><b>核心事件：</b>12月末，漫画科普大神@混子哥边画边讲出现在诺贝尔颁奖典礼现场。历史科普创作者影响力获得国际认可，标志着知识类内容创作者的社会地位提升。</p>
-        <p class="source">来源：今日头条</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">2026口碑历史博主全攻略发布</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">精选18位顶流历史博主，覆盖全类型</div>
-      <div class="item-tags"><span class="item-tag tag-new">推荐</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>结合2026年用户口碑、内容更新频次与专业度，精选18位顶流历史博主。覆盖入门趣味、硬核考据、系统通史、世界国别史、影像实证等全类型。</p>
-        <p class="source">来源：搜狐</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
@@ -1813,57 +2196,12 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">知识年终盘点：被史书遗忘的平民生活</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">#抖音知识年终大赏#盘点2025考古高光时刻</div>
-      <div class="item-tags"><span class="item-tag tag-trend">内容</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>#抖音知识年终大赏#盘点2025考古高光时刻，文物里普通平民苦中作乐的一年引发共鸣。那些被史书遗忘的普通人的生活通过文物被重新发现。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
       <div class="item-header"><div class="item-title">历史对话短视频：跨越时空的"采访"</div><div class="item-toggle">▶</div></div>
       <div class="item-desc">创作者扮演记者"采访"历史人物，播放常破百万</div>
       <div class="item-tags"><span class="item-tag tag-hot">趋势</span></div>
       <div class="item-detail">
         <p><b>核心形式：</b>创作者扮演记者"采访"历史人物，用幽默对白传递硬核历史知识。这种跨越时空的"采访"形式让历史变得生动有趣，播放量常破百万。</p>
         <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">从20位中国历史人物事迹中学习文化</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">B站30集动画学历史系列走红</div>
-      <div class="item-tags"><span class="item-tag tag-trend">推荐</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>B站30集动画学历史系列走红，用动画形式让历史人物鲜活起来，适合全年龄段学习。从20位中国历史人物事迹中学习中国历史和文化。</p>
-        <p class="source">来源：B站</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">历史上谁是你心中逆袭的天花板？</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">抖音历史热门话题引发讨论</div>
-      <div class="item-tags"><span class="item-tag tag-trend">话题</span></div>
-      <div class="item-detail">
-        <p><b>核心话题：</b>抖音历史热门话题，中国人深信最深重的失败和最折磨人的苦难几乎是所有大功告成的前提。讨论历史上从低谷到巅峰的逆袭人物。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">CH历史科普：用漫画讲述国家历史</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">以漫画形式将严肃历史趣味化</div>
-      <div class="item-tags"><span class="item-tag tag-trend">博主</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>CH历史科普以漫画形式将严肃历史趣味化呈现，在抖音等平台获得大量年轻粉丝关注。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">《中华史记》等历史纪录片在爱奇艺热播</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">2026年最新热门纪录片</div>
-      <div class="item-tags"><span class="item-tag tag-new">推荐</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>爱奇艺纪录片频道提供2026年最新热门纪录片，《中华史记》、《舌尖上的中国 第四季》等热播纪录片，涵盖BBC纪录片、历史探索、科学自然、人文社会等多种类型。</p>
-        <p class="source">来源：爱奇艺</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
@@ -1876,57 +2214,13 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">唐宋诗词背后的历史故事短视频</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">讲述李白、杜甫、苏轼等人的真实经历</div>
-      <div class="item-tags"><span class="item-tag tag-trend">内容</span></div>
+      <div class="item-header"><div class="item-title">2026上半年纪录片收视报告：历史题材领跑</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">《中国医生》《人间洗剧》等纪录片热度破万，多平台深耕历史赛道</div>
+      <div class="item-tags"><span class="item-tag tag-trend">趋势</span></div>
       <div class="item-detail">
-        <p><b>核心内容：</b>将诗词与历史背景结合，讲述李白、杜甫、苏轼等人的真实经历，知识性与趣味性兼具。让经典诗词背后的历史故事走进大众视野。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">甲午战争3D动画复盘视频走红</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">用3D动画和史料分析让年轻观众直观感受历史教训</div>
-      <div class="item-tags"><span class="item-tag tag-hot">内容</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>创作者用3D动画和史料分析复盘甲午海战，让年轻观众直观感受历史教训。3D动画让海战场景变得可视化，史料分析增加了内容的权威性。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">丝绸之路纪录片精华短视频化</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">3-5分钟讲述丝路上的文明交流与商贸故事</div>
-      <div class="item-tags"><span class="item-tag tag-trend">内容</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>将大型纪录片精华剪辑为3-5分钟短视频，讲述丝路上的文明交流与商贸故事。让宏大的丝路历史在碎片化时间中被了解。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">中国古代科技发明系列科普走红</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">四大发明、天文仪器等激发文化自信</div>
-      <div class="item-tags"><span class="item-tag tag-hot">内容</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>四大发明、天文仪器、农具机械等古代科技成就被重新挖掘，激发文化自信。让现代人了解中国古代在科技领域的领先地位。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">清宫档案新发现引发历史热</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">揭秘皇帝日常与宫廷秘闻</div>
-      <div class="item-tags"><span class="item-tag tag-trend">内容</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>新公开的清宫档案被创作者制作成趣味短视频，揭秘皇帝日常与宫廷秘闻。严肃档案以趣味化方式走进大众视野。</p>
-        <p class="source">来源：抖音</p>
-      </div>
-    </div>
-    <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">世界历史冷知识合集受欢迎</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">"你不知道的古埃及"等冷知识系列走热</div>
-      <div class="item-tags"><span class="item-tag tag-trend">内容</span></div>
-      <div class="item-detail">
-        <p><b>核心内容：</b>"你不知道的古埃及""维京人的真实生活"等冷知识系列在短视频平台持续走热。通过冷知识激发观众对世界历史的好奇心。</p>
-        <p class="source">来源：抖音</p>
+        <p><b>核心数据：</b>《中国视听大数据（CVB）2026上半年纪录片收视报告》显示，各平台深耕差异化赛道：爱奇艺排播《破译三国》《中国通史》深耕历史文化赛道；腾讯视频《无辣不欢》《探索新境》自制IP热度值破万；优酷靠《重返狼群》等自然探险内容吸引用户；芒果TV以《古法"湘"对论》《人生一万年》占据社会现实类差异化身位；B站借《人生海海》《闪闪的儿科医生》等观察类作品发力。</p>
+        <p><b>历史赛道亮点：</b>爱奇艺《破译三国》1月23日起独家首播11集；CCTV9《中国医生：急诊24小时》累计收视超2709.2万人次，在三大平台均进入纪录片播放量前十。</p>
+        <p class="source">来源：CVB、百家号</p>
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
@@ -1939,12 +2233,14 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
       </div>
     </div>
     <div class="item" onclick="toggleItem(this)">
-      <div class="item-header"><div class="item-title">二战关键战役系列短视频</div><div class="item-toggle">▶</div></div>
-      <div class="item-desc">地图动画+时间轴讲述斯大林格勒、诺曼底等</div>
-      <div class="item-tags"><span class="item-tag tag-trend">内容</span></div>
+      <div class="item-header"><div class="item-title">张张别胡说：东北口音讲历史成记忆点</div><div class="item-toggle">▶</div></div>
+      <div class="item-desc">10-15分钟中长视频，喜马拉雅《一口气看完封神中的神仙体系》等系列</div>
+      <div class="item-tags"><span class="item-tag tag-trend">博主</span></div>
       <div class="item-detail">
-        <p><b>核心内容：</b>以地图动画+时间轴方式讲述斯大林格勒、诺曼底等关键战役，播放量超千万。地图动画让战役进程变得清晰，时间轴帮助观众理解战争演变。</p>
-        <p class="source">来源：抖音</p>
+        <p><b>博主简介：</b>张张别胡说，抖音知名创作者，创作形式包括短视频、直播及音频内容。10-15分钟中长视频适应"听抖音"功能场景，东北口音成为显著记忆点。</p>
+        <p><b>代表作品：</b>①《一口气看完封神中的神仙体系》——喜马拉雅平台发布；②《德国崛起的秘密》——系统解读德国近现代崛起历程。在B站亦设有主页同步更新。</p>
+        <p><b>哪里可以看：</b>抖音搜索"张张别胡说"；喜马拉雅搜索同名账号收听音频版。</p>
+        <p class="source">来源：百度百科</p>
       </div>
     </div>
   </div>
@@ -2216,7 +2512,7 @@ body { background:var(--bg); color:var(--text); font-family:-apple-system,'PingF
 </div>
 
 <div class="footer">
-  <p>每日热点工作台 | 自动生成于 2026-08-05 08:30 | 每日 02:00-08:00 自动更新</p>
+  <p>每日热点工作台 | 自动生成于 2026-08-05 10:00 | 每日 02:00-08:00 自动更新</p>
   <p>数据来源：抖音、快手、微博、小红书、央视新闻、新华网、华尔街见闻、36氪、今日头条、中国妇女报等</p>
   <p>点击每条标题可展开查看详细内容 | 再次点击可收起</p>
 </div>
