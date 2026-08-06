@@ -33,36 +33,53 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          OWNER=zhizhi2016-ai
-          REPO=hot-dashboard
+          python3 <<'PY'
+          import base64, json, os, urllib.request, datetime
 
-          SHA=$(curl -sH "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/$OWNER/$REPO/contents/index.html?ref=main" \
-            | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
+          token = os.environ['GITHUB_TOKEN']
+          owner, repo = 'zhizhi2016-ai', 'hot-dashboard'
+          api_url = f'https://api.github.com/repos/{owner}/{repo}/contents/index.html?ref=main'
 
-          B64=$(base64 -w 0 index.html)
-          MSG="Auto update $(date +%Y.%m.%d)"
+          print('Step 1: 获取当前 index.html 的 SHA...')
+          req = urllib.request.Request(api_url, headers={
+            'Authorization': f'token {token}',
+            'Accept': 'application/vnd.github.v3+json'
+          })
+          try:
+            with urllib.request.urlopen(req) as resp:
+              data = json.loads(resp.read().decode('utf-8'))
+              sha = data['sha']
+              print(f'  SHA: {sha}')
+          except Exception as e:
+            print(f'  获取 SHA 失败: {e}')
+            raise
 
-          python3 - "$MSG" "$SHA" <<'PY'
-          import json, sys, base64
-          msg, sha = sys.argv[1], sys.argv[2]
+          print('Step 2: 读取并编码 index.html...')
           with open('index.html', 'rb') as f:
             content = base64.b64encode(f.read()).decode('utf-8')
+          print(f'  文件大小: {len(content)} bytes (base64)')
+
+          print('Step 3: 调用 GitHub API 更新文件...')
+          msg = datetime.datetime.now().strftime('Auto update %Y.%m.%d')
           payload = json.dumps({
             'message': msg,
             'content': content,
             'sha': sha,
             'branch': 'main'
-          }, ensure_ascii=False)
-          print(payload)
-          PY > payload.json
+          }, ensure_ascii=False).encode('utf-8')
 
-          curl -X PUT \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Content-Type: application/json" \
-            -d @payload.json \
-            "https://api.github.com/repos/$OWNER/$REPO/contents/index.html"
+          req = urllib.request.Request(api_url, data=payload, method='PUT', headers={
+            'Authorization': f'token {token}',
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          })
+          try:
+            with urllib.request.urlopen(req) as resp:
+              result = json.loads(resp.read().decode('utf-8'))
+              print(f'  更新成功: {result["commit"]["html_url"]}')
+          except urllib.error.HTTPError as e:
+            print(f'  更新失败 HTTP {e.code}: {e.read().decode("utf-8")}')
+            raise
 
-          echo "Done"
+          print('Done')
+          PY
