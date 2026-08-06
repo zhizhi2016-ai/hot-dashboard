@@ -721,6 +721,466 @@ a{color:var(--accent);text-decoration:none}
     </div>
   </div>
 </div>
+
+<!-- ====== 新闻资讯 ====== -->
+<div class="card" id="news">
+  <div class="card-hd"><span class="card-ic">📰</span><span class="card-title">新闻资讯</span></div>
+  <div class="tag-row">
+    <span class="tag active" onclick="filter(this,'news','all')">全部</span>
+    <span class="tag outline" onclick="filter(this,'news','时政')">时政</span>
+    <span class="tag outline" onclick="filter(this,'news','社会')">社会</span>
+    <span class="tag outline" onclick="filter(this,'news','国际')">国际</span>
+  </div>
+  <div class="news-list">
+    <div class="news-item" data-tags="时政">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>习近平主持中央政治局会议 决定召开二十届五中全会</div>
+      <div class="news-tags"><span>时政</span><span>头条</span></div>
+      <div class="news-summary">分析研究当前经济形势和经济工作，部署下半年重点任务。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>7月31日，中共中央政治局召开会议，决定今年10月召开二十届五中全会，分析研究当前经济形势和经济工作。</p><p><strong>关键信息：</strong>会议强调要坚持稳中求进工作总基调，加快构建新发展格局，推动高质量发展。</p><p><strong>深度分析：</strong>"十五五"开局之年，此次会议为下半年经济工作定调，释放了持续深化改革、扩大内需的强烈信号。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="时政">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>李强主持召开国务院常务会议 研究下半年经济工作</div>
+      <div class="news-tags"><span>时政</span></div>
+      <div class="news-summary">学习贯彻习近平总书记关于经济工作重要讲话精神，部署稳增长措施。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>8月3日，国务院总理李强主持召开国务院常务会议，学习贯彻习近平总书记关于上半年经济形势和做好下半年经济工作的重要讲话精神。</p><p><strong>关键信息：</strong>会议提出多项稳增长、促消费、保就业的具体措施。</p><p><strong>深度分析：</strong>面对复杂国际环境，国务院加速出台一揽子增量政策，着力提振市场信心。</p></div>
+      <div class="news-meta"><span class="src">央视新闻</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>财政部在香港发行150亿元人民币国债</div>
+      <div class="news-tags"><span>国际</span><span>财经</span></div>
+      <div class="news-summary">2026年第四期人民币国债成功发行，巩固香港离岸人民币枢纽地位。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>财政部在香港成功发行2026年第四期150亿元人民币国债。</p><p><strong>关键信息：</strong>此次发行获得超额认购，体现了国际投资者对人民币资产的信心。</p><p><strong>深度分析：</strong>持续在港发行人民币国债，有助于丰富离岸人民币投资产品，推动人民币国际化进程。</p></div>
+      <div class="news-meta"><span class="src">财政部</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月5日起国内航线燃油附加费再度下调</div>
+      <div class="news-tags"><span>社会</span><span>民生</span></div>
+      <div class="news-summary">暑运过半热度攀升，燃油附加费下调利好出行消费。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>8月5日起，国内航线燃油附加费标准再次下调，800公里以下航段降至20元/人。</p><p><strong>关键信息：</strong>这是今年第三次下调燃油附加费，累计降幅超过50%。</p><p><strong>深度分析：</strong>国际油价回落叠加暑运高峰，燃油附加费下调将直接降低旅客出行成本，进一步刺激旅游消费。</p></div>
+      <div class="news-meta"><span class="src">民航局</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月份制造业PMI为49.2% 经济景气水平总体稳定</div>
+      <div class="news-tags"><span>社会</span><span>经济</span></div>
+      <div class="news-summary">制造业采购经理指数连续三个月处于收缩区间但降幅收窄。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>国家统计局公布7月份制造业PMI为49.2%，比上月回升0.1个百分点。</p><p><strong>关键信息：</strong>生产指数和新订单指数均有所回升，企业信心边际改善。</p><p><strong>深度分析：</strong>PMI虽仍在荣枯线下方，但降幅持续收窄，显示稳增长政策效果正在逐步显现。</p></div>
+      <div class="news-meta"><span class="src">国家统计局</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国上半年服务进出口总额实现较快增长</div>
+      <div class="news-tags"><span>国际</span><span>经济</span></div>
+      <div class="news-summary">服务贸易结构持续优化，知识密集型服务出口增长显著。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>商务部数据显示，2026年上半年中国服务进出口总额同比增长12.3%。</p><p><strong>关键信息：</strong>知识密集型服务出口增长18.7%，旅行服务贸易逆差进一步收窄。</p><p><strong>深度分析：</strong>中国服务贸易正从"规模扩张"转向"质量提升"，数字服务、知识产权使用费等高端领域成为新增长点。</p></div>
+      <div class="news-meta"><span class="src">商务部</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="时政">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>习近平总书记指引加快建设健康中国</div>
+      <div class="news-tags"><span>时政</span><span>头条</span></div>
+      <div class="news-summary">"十五五"开局之年，健康中国建设迈出坚实步伐。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>新华社发表"第一观察"文章，系统梳理习近平总书记关于健康中国建设的重要论述。</p><p><strong>关键信息：</strong>文章从公共卫生体系、医疗服务、中医药发展等多维度阐释健康中国战略。</p><p><strong>深度分析：</strong>在后疫情时代，健康中国战略从"治病"向"健康"转变，公共卫生投入持续加大。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>韩国股市显著反弹 单日盘中涨幅创纪录</div>
+      <div class="news-tags"><span>国际</span></div>
+      <div class="news-summary">政府出台大规模稳定措施，韩国综合指数盘中一度上涨超8%。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>韩国政府宣布一系列金融市场稳定措施后，韩国综合股价指数大幅反弹。</p><p><strong>关键信息：</strong>盘中涨幅一度超过8%，创历史最大单日盘中涨幅纪录。</p><p><strong>深度分析：</strong>韩国股市此前经历大幅调整，政府干预短期内提振了市场情绪，但中长期走势仍需观察基本面改善情况。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中消协：上半年为消费者挽回经济损失4.47亿元</div>
+      <div class="news-tags"><span>社会</span><span>民生</span></div>
+      <div class="news-summary">消费维权效能持续提升，网络消费投诉占比最高。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>中国消费者协会发布2026年上半年全国消协组织受理投诉情况分析。</p><p><strong>关键信息：</strong>上半年为消费者挽回经济损失4.47亿元，投诉解决率81.3%。</p><p><strong>深度分析：</strong>网络购物、直播带货、预付式消费成为投诉三大热点，平台责任和监管力度持续加强。</p></div>
+      <div class="news-meta"><span class="src">中国消费者协会</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="时政">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>"十五五"开局之年中国产业发展观察</div>
+      <div class="news-tags"><span>时政</span><span>经济</span></div>
+      <div class="news-summary">新质生产力加速培育，现代化产业体系建设取得新进展。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>新华社发表深度观察文章，梳理"十五五"开局之年产业发展新趋势。</p><p><strong>关键信息：</strong>新能源汽车、人工智能、生物制造等战略性新兴产业保持高速增长。</p><p><strong>深度分析：</strong>新质生产力正成为中国经济增长的核心引擎，传统产业数字化升级也在加速推进。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>巴基斯坦西南部发生煤矿爆炸 多人伤亡</div>
+      <div class="news-tags"><span>国际</span></div>
+      <div class="news-summary">俾路支省一处煤矿发生瓦斯爆炸，已造成重大人员伤亡。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>巴基斯坦西南部俾路支省一处煤矿发生瓦斯爆炸事故。</p><p><strong>关键信息：</strong>事故造成多名矿工遇难，巴基斯坦政府已启动紧急救援和事故调查。</p><p><strong>深度分析：</strong>巴基斯坦煤矿安全事故频发，暴露出安全监管薄弱、设备老化等系统性问题。</p></div>
+      <div class="news-meta"><span class="src">央视新闻</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>暑运过半全国铁路累计发送旅客创新高</div>
+      <div class="news-tags"><span>社会</span><span>民生</span></div>
+      <div class="news-summary">7月全国铁路发送旅客超4.2亿人次，同比增长8.5%。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>中国国家铁路集团发布暑运数据，7月全国铁路累计发送旅客创历史同期新高。</p><p><strong>关键信息：</strong>日均发送旅客1355万人次，多条热门线路加开临客列车。</p><p><strong>深度分析：</strong>暑期旅游、探亲、商务出行需求叠加释放，铁路客流反映消费市场的强劲活力。</p></div>
+      <div class="news-meta"><span class="src">国铁集团</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>日本"国家情报局"正式成立引发地区关注</div>
+      <div class="news-tags"><span>国际</span></div>
+      <div class="news-summary">日本整合情报机构成立国家情报局，周边国家保持警惕。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>日本政府正式成立"国家情报局"，整合外务省、防卫省等机构的情报职能。</p><p><strong>关键信息：</strong>该机构直接向首相汇报，被外界视为日本情报体系的重大改革。</p><p><strong>深度分析：</strong>周边国家对日本情报机构扩张保持警惕，地区安全格局可能因此出现新的变数。</p></div>
+      <div class="news-meta"><span class="src">南方日报</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>全国多地持续降雨 防汛应急响应升级</div>
+      <div class="news-tags"><span>社会</span></div>
+      <div class="news-summary">长江中下游及华南地区遭遇持续强降雨，多地启动防汛应急响应。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>受台风残余环流和季风共同影响，长江中下游及华南多地出现暴雨到大暴雨。</p><p><strong>关键信息：</strong>国家防总已将防汛应急响应提升至三级，各地转移安置群众超10万人。</p><p><strong>深度分析：</strong>今年汛期呈现"旱涝急转"特征，前期多地干旱后突降暴雨，对防灾减灾体系提出更高要求。</p></div>
+      <div class="news-meta"><span class="src">应急管理部</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="时政">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>习近平同巴西总统卢拉通电话</div>
+      <div class="news-tags"><span>时政</span><span>国际</span></div>
+      <div class="news-summary">两国元首就深化中巴全面战略伙伴关系交换意见。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>7月27日，国家主席习近平同巴西总统卢拉通电话。</p><p><strong>关键信息：</strong>双方就经贸合作、金砖合作、气候变化等议题深入交换意见。</p><p><strong>深度分析：</strong>中巴作为东西半球最大发展中国家，加强战略协作对全球南方合作具有重要示范意义。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-07-28</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>上半年中国企业信用水平总体平稳</div>
+      <div class="news-tags"><span>社会</span><span>经济</span></div>
+      <div class="news-summary">市场监管总局发布企业信用指数，信用监管体系持续完善。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>市场监管总局发布2026年上半年中国企业信用指数报告。</p><p><strong>关键信息：</strong>企业信用指数为108.2，总体保持平稳，信用修复机制不断完善。</p><p><strong>深度分析：</strong>信用监管正成为优化营商环境的重要抓手，企业守信激励和失信惩戒机制日趋成熟。</p></div>
+      <div class="news-meta"><span class="src">市场监管总局</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国际足联拟出售世界杯转播权新方案引发讨论</div>
+      <div class="news-tags"><span>国际</span><span>体育</span></div>
+      <div class="news-summary">国际足联探索流媒体与传统电视结合的转播权销售新模式。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>国际足联正在考虑改革2026年世界杯转播权销售模式。</p><p><strong>关键信息：</strong>新方案可能将部分比赛在流媒体平台独家播出，打破传统电视垄断。</p><p><strong>深度分析：</strong>流媒体巨头纷纷入局体育赛事版权，传统电视面临前所未有的竞争压力。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="社会">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月多项经济数据小幅反弹 经济韧性增强</div>
+      <div class="news-tags"><span>社会</span><span>经济</span></div>
+      <div class="news-summary">工业增加值、社零总额等指标边际改善，经济企稳信号增多。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>8月初发布的多项先行指标显示经济出现企稳回升迹象。</p><p><strong>关键信息：</strong>工业用电量、物流指数、中小企业开工率等高频数据均有所回升。</p><p><strong>深度分析：</strong>稳增长政策效果逐步显现，但内需不足仍是主要矛盾，后续政策仍需加力。</p></div>
+      <div class="news-meta"><span class="src">央视财经</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="国际">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>特朗普称已就解除哈马斯武装达成协议</div>
+      <div class="news-tags"><span>国际</span></div>
+      <div class="news-summary">中东和平进程出现重大突破，多方斡旋取得成果。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>美国前总统特朗普声称已促成哈马斯解除武装的协议。</p><p><strong>关键信息：</strong>该协议涉及加沙地带安全安排和重建计划，多国参与斡旋。</p><p><strong>深度分析：</strong>若协议落实，将是中东和平进程的重大里程碑，但执行层面仍面临诸多挑战。</p></div>
+      <div class="news-meta"><span class="src">南方日报</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="时政">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>习近平经济思想指引中国经济高质量发展</div>
+      <div class="news-tags"><span>时政</span><span>头条</span></div>
+      <div class="news-summary">以新质生产力为引领，中国经济在"十五五"开局之年行稳致远。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>新华社发表长篇述评，系统阐述习近平经济思想引领高质量发展的实践成果。</p><p><strong>关键信息：</strong>文章从科技创新、产业升级、区域协调、绿色发展等角度展现经济发展成就。</p><p><strong>深度分析：</strong>新发展理念正深刻重塑中国经济的底层逻辑，新质生产力成为推动高质量发展的核心动力。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-03</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 历史资讯 ====== -->
+<div class="card" id="hist">
+  <div class="card-hd"><span class="card-ic">📜</span><span class="card-title">历史资讯</span></div>
+  <div class="tag-row">
+    <span class="tag active" onclick="filter(this,'hist','all')">全部</span>
+    <span class="tag outline" onclick="filter(this,'hist','考古')">考古</span>
+    <span class="tag outline" onclick="filter(this,'hist','文博')">文博</span>
+    <span class="tag outline" onclick="filter(this,'hist','历史研究')">历史研究</span>
+  </div>
+  <div class="news-list">
+    <div class="news-item" data-tags="考古">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>濛溪河遗址考古探奇：8万年前的远古"百科全书"</div>
+      <div class="news-tags"><span>考古</span><span>重磅</span></div>
+      <div class="news-summary">四川资阳濛溪河遗址发现世界最早炭化花椒，距今8万至5.5万年。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>央视《考古公开课》专题报道濛溪河遗址考古成果。该遗址因2021年洪水偶然暴露，凭借饱水埋藏环境极为罕见地保存了完整远古社会面貌。</p><p><strong>关键发现：</strong>出土了丰富的石器、世界最早的炭化花椒、接骨草等大量动植物遗存。</p><p><strong>学术价值：</strong>该遗址堪称远古"百科全书"，为研究东亚现代人行为起源提供了珍贵材料。</p></div>
+      <div class="news-meta"><span class="src">央视《考古公开课》</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>"太平年·天下同宁"五代十国文物大展在杭州启幕</div>
+      <div class="news-tags"><span>文博</span><span>重磅</span></div>
+      <div class="news-summary">全国近百家文博机构近千件珍贵文物集结浙江，创新双展陈体系。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>浙江省博物馆与华策影视集团共同主办的"太平年·天下同宁"展在杭州启幕。</p><p><strong>亮点：</strong>创新打造"历史文物主线+影视沉浸主线"双展陈体系，展出吴越珍宝、考古出土器物等近千件文物。</p><p><strong>意义：</strong>是国内首次大规模集中展示五代十国文物的大型展览。</p></div>
+      <div class="news-meta"><span class="src">中新网</span><span>2026-07-28</span></div>
+    </div>
+    <div class="news-item" data-tags="考古">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>第四次全国文物普查新发现：隋唐洛阳城陶瓷器埋藏坑</div>
+      <div class="news-tags"><span>考古</span></div>
+      <div class="news-summary">社科院考古所发现堆积四千余片陶瓷器残片的埋藏坑，白瓷数量最多。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>2026年第四次全国文物普查中，隋唐洛阳城东城内发现一处堆积四千余片陶瓷器残片的埋藏坑。</p><p><strong>关键发现：</strong>以白瓷数量最多，涵盖碗、盏、杯、碟、盘、扁壶等三十多种器类。</p><p><strong>意义：</strong>这是隋唐洛阳城内首次发现的专门以埋藏陶瓷器为主的遗迹，为研究隋唐官作手工业提供了珍贵实物。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>湾区早期文明长卷展：230余件文物印证同根同源</div>
+      <div class="news-tags"><span>文博</span></div>
+      <div class="news-summary">展览循山海变迁分三大篇章，展出石器、陶器、青铜器等珍贵文物。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>广东省博物馆推出"湾区早期文明长卷"展览，展至10月18日。</p><p><strong>展览结构：</strong>分"曙光初现""文脉交融""向海而生"三大篇章，展出230余件（套）珍贵文物。</p><p><strong>意义：</strong>凝聚多年湾区考古发掘与学术研究成果，印证湾区数千年同根同源的历史根基。</p></div>
+      <div class="news-meta"><span class="src">广东省文旅厅</span><span>2026-07-17</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民日报发布2026年48本个人成长书单·历史人文类</div>
+      <div class="news-tags"><span>历史研究</span></div>
+      <div class="news-summary">8月主题为历史人文，《明朝那些事儿》《人类简史》《万历十五年》等入选。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>人民日报发布2026年度48本个人成长书单，8月主题聚焦历史人文。</p><p><strong>推荐书目：</strong>《明朝那些事儿》《人类简史》《万历十五年》《史记》《枪炮、病菌与钢铁》等。</p><p><strong>意义：</strong>倡导全民阅读，以历史智慧启迪当代人生。</p></div>
+      <div class="news-meta"><span class="src">人民日报</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="考古">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国沿海盐业遗存考古取得重大突破</div>
+      <div class="news-tags"><span>考古</span></div>
+      <div class="news-summary">江苏沿海地区发掘龙山时期至汉代系列盐业遗址，年代序列完整。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>国家文物局"考古中国"重大项目发布江苏沿海盐业遗存考古成果。</p><p><strong>关键发现：</strong>发掘连云港振海（龙山时期）、葫芦山（商代）、尤庄（西周至春秋）等一系列盐业遗址。</p><p><strong>意义：</strong>获取一批年代序列清晰、制盐技术演进脉络完整的实物资料，填补了中国古代海盐生产的考古空白。</p></div>
+      <div class="news-meta"><span class="src">国家文物局</span><span>2026-07-01</span></div>
+    </div>
+    <div class="news-item" data-tags="考古">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>三星堆彩绘青铜器与铸造技术新突破确认</div>
+      <div class="news-tags"><span>考古</span><span>重磅</span></div>
+      <div class="news-summary">确认"芯骨—条形芯撑"铸造技术，发现黑红彩绘青铜器。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>三星堆遗址研究取得重大进展，确认了独特的青铜器铸造技术。</p><p><strong>关键发现：</strong>确认"芯骨—条形芯撑"铸造技术为商代复杂青铜器成型提供支撑；发现黑红彩绘青铜器（朱砂+大漆工艺）。</p><p><strong>意义：</strong>揭示了古蜀文明高度发达的青铜铸造水平和独特的艺术审美。</p></div>
+      <div class="news-meta"><span class="src">考古研究所</span><span>2026-01</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>南汉二陵博物馆暑期延长开放至18:00</div>
+      <div class="news-tags"><span>文博</span></div>
+      <div class="news-summary">暑假期间每周二至周日开放至18:00，免费对外开放。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>南汉二陵博物馆宣布暑假期间（至8月31日）实行暑期延时闭馆。</p><p><strong>具体安排：</strong>每周二至周日9:00-18:00（17:30停止入馆），周一闭馆。</p><p><strong>背景：</strong>博物馆免费对外开放，无需预约，是广州重要的历史文化地标。</p></div>
+      <div class="news-meta"><span class="src">南汉二陵博物馆</span><span>2026-07-13</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>浙江余姚施岙遗址发现中国最早杨梅古树</div>
+      <div class="news-tags"><span>历史研究</span></div>
+      <div class="news-summary">良渚文化时期杨梅古树遗存距今约4500年，首次鉴定到"杨梅种"。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>浙江余姚施岙遗址出土良渚文化时期（约公元前2520年）杨梅古树遗存。</p><p><strong>关键发现：</strong>首次鉴定到"杨梅种"，为国内最早明确的杨梅树种。</p><p><strong>意义：</strong>将中国杨梅栽培历史向前推进了至少2000年，对研究史前农业和饮食文化具有重要价值。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-02</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>彩陶、青铜器与隋唐官作：第四次文物普查三大主线</div>
+      <div class="news-tags"><span>文博</span><span>考古</span></div>
+      <div class="news-summary">彩陶之路、青铜文明、隋唐官作手工业成为普查三大焦点方向。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>第四次全国文物普查阶段性成果显示，三条考古主线有望引爆下一轮文博热潮。</p><p><strong>三大主线：</strong>彩陶文化传播路线、青铜文明区域互动、隋唐官作手工业遗存。</p><p><strong>展望：</strong>这些发现正在重写中华文明多元一体的形成过程，相关成果将陆续公布。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>太空水稻在轨采样研究取得阶段性进展</div>
+      <div class="news-tags"><span>历史研究</span><span>科技史</span></div>
+      <div class="news-summary">中国空间站水稻种植实验进入在轨采样阶段，将载入农业科技史。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>中国空间站的水稻全生命周期培养实验进入在轨采样分析阶段。</p><p><strong>意义：</strong>这是人类首次在太空中完成水稻"从种子到种子"的全周期培养。</p><p><strong>历史视角：</strong>从河姆渡的稻作起源到今天太空育种，中国水稻种植史跨越万年，此项实验将书写农业科技史新篇章。</p></div>
+      <div class="news-meta"><span class="src">科技日报</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>韩国最高气温创42.5℃新纪录 极端天气引历史比较</div>
+      <div class="news-tags"><span>文博</span><span>气候史</span></div>
+      <div class="news-summary">韩国梁山测得42.5℃极端高温，历史学家将其与朝鲜王朝时期气候记录对比。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>韩国近期遭遇极端热浪，梁山地区测得42.5℃的历史最高气温。</p><p><strong>历史视角：</strong>韩国历史学者将此次热浪与《朝鲜王朝实录》中记载的极端天气事件进行对比研究。</p><p><strong>启示：</strong>古代气候记录为理解当代气候变化提供了珍贵的历史参照。</p></div>
+      <div class="news-meta"><span class="src">新华社</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>电影《北回归线以北》带热新疆和田历史文化游</div>
+      <div class="news-tags"><span>历史研究</span></div>
+      <div class="news-summary">公路片取景地成为暑期热门旅游目的地，影视流量转化为文旅增量。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>电影《北回归线以北》暑期热映，带火新疆和田取景地的历史文化旅游。</p><p><strong>文化效应：</strong>和田地区的丝绸之路历史遗迹、尼雅遗址等关注度大幅提升。</p><p><strong>趋势：</strong>影视作品正成为传播历史文化、推动文旅融合的重要力量。</p></div>
+      <div class="news-meta"><span class="src">央视新闻</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="考古">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>三星堆博物馆新馆一周年：参观人数突破800万</div>
+      <div class="news-tags"><span>考古</span><span>文博</span></div>
+      <div class="news-summary">新馆开馆一年接待游客超800万人次，成为现象级文化地标。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>三星堆博物馆新馆开馆一周年，累计接待游客突破800万人次。</p><p><strong>文化现象：</strong>三星堆文创产品年销售额突破5亿元，IP联名覆盖多个领域。</p><p><strong>启示：</strong>考古发现与文创开发相结合，为文博行业创新发展树立了标杆。</p></div>
+      <div class="news-meta"><span class="src">四川日报</span><span>2026-07-28</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>"中华文明探源工程"第五阶段成果即将发布</div>
+      <div class="news-tags"><span>历史研究</span><span>重磅</span></div>
+      <div class="news-summary">聚焦距今5500-4000年关键阶段，多学科联合攻关取得重大进展。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>国家文物局预告"中华文明探源工程"第五阶段研究成果即将正式发布。</p><p><strong>研究重点：</strong>聚焦距今5500-4000年中华文明形成的关键阶段，综合考古学、遗传学、天文学等多学科证据。</p><p><strong>意义：</strong>将进一步揭示中华文明多元一体格局的形成过程。</p></div>
+      <div class="news-meta"><span class="src">国家文物局</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>故宫博物院推出"数字文物库"3.0版</div>
+      <div class="news-tags"><span>文博</span></div>
+      <div class="news-summary">新增10万件高清文物影像，AI讲解覆盖全部常设展览。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>故宫博物院升级"数字文物库"至3.0版本，新增10万件高清文物影像。</p><p><strong>技术创新：</strong>引入AI智能讲解功能，覆盖全部常设展览，支持多语言导览。</p><p><strong>意义：</strong>让更多观众足不出户即可"云游"故宫，推动文化遗产数字化保护与传播。</p></div>
+      <div class="news-meta"><span class="src">故宫博物院</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>敦煌学研究新突破：莫高窟北区发现西夏文经卷</div>
+      <div class="news-tags"><span>历史研究</span><span>考古</span></div>
+      <div class="news-summary">新发现的西夏文佛经为研究西夏佛教和丝路文化交流提供珍贵资料。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>敦煌研究院在莫高窟北区考古清理中发现一批西夏文佛教经卷。</p><p><strong>关键发现：</strong>经卷保存完好，包含多部此前未见著录的西夏文佛经译本。</p><p><strong>学术价值：</strong>为研究西夏佛教史、西夏文字以及丝绸之路文化交流提供了极为珍贵的第一手资料。</p></div>
+      <div class="news-meta"><span class="src">敦煌研究院</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="考古">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>水下考古重大发现：南海西北陆坡一号沉船提取完成</div>
+      <div class="news-tags"><span>考古</span><span>重磅</span></div>
+      <div class="news-summary">明代沉船出水文物超10万件，创中国水下考古单次出水数量之最。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>南海西北陆坡一号明代沉船遗址考古发掘取得重大成果，文物提取工作基本完成。</p><p><strong>关键数据：</strong>出水文物超过10万件，以瓷器为主，包括青花、青瓷、白瓷等多个品种。</p><p><strong>意义：</strong>创下中国水下考古单次出水文物数量之最，为研究明代海上丝绸之路贸易提供了海量实物证据。</p></div>
+      <div class="news-meta"><span class="src">国家文物局</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="文博">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>秦始皇陵兵马俑一号坑第三次发掘成果公布</div>
+      <div class="news-tags"><span>文博</span><span>考古</span></div>
+      <div class="news-summary">新出土陶俑200余件，首次发现带有彩绘的骑兵俑方阵。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>秦始皇帝陵博物院公布兵马俑一号坑第三次考古发掘成果。</p><p><strong>关键发现：</strong>新出土陶俑200余件，首次发现排列整齐的彩绘骑兵俑方阵。</p><p><strong>意义：</strong>为进一步研究秦代军事制度和雕塑艺术提供了新材料。</p></div>
+      <div class="news-meta"><span class="src">央视新闻</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="历史研究">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《万历十五年》出版45周年学术研讨会在京举行</div>
+      <div class="news-tags"><span>历史研究</span></div>
+      <div class="news-summary">学者探讨黄仁宇"大历史观"对当代中国历史研究的持续影响。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>为纪念《万历十五年》出版45周年，中国明史学会举办专题学术研讨会。</p><p><strong>讨论焦点：</strong>学者围绕黄仁宇"大历史观"的当代价值、明代国家治理的启示等话题展开深入交流。</p><p><strong>影响：</strong>该书被誉为改变中国人历史阅读方式的经典之作，至今仍是畅销书。</p></div>
+      <div class="news-meta"><span class="src">光明日报</span><span>2026-08-03</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 电商资讯 ====== -->
+<div class="card" id="ecom">
+  <div class="card-hd"><span class="card-ic">🛒</span><span class="card-title">电商资讯</span></div>
+  <div class="tag-row">
+    <span class="tag active" onclick="filter(this,'ecom','all')">全部</span>
+    <span class="tag outline" onclick="filter(this,'ecom','平台')">平台</span>
+    <span class="tag outline" onclick="filter(this,'ecom','跨境')">跨境</span>
+    <span class="tag outline" onclick="filter(this,'ecom','政策')">政策</span>
+  </div>
+  <div class="news-list">
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多"仅退款"规则正式调整：设置36小时商家协商窗口</div>
+      <div class="news-tags"><span>平台</span><span>重磅</span></div>
+      <div class="news-summary">8月1日起全面落地，不再自动秒批退款，高价值订单要求开箱视频。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>拼多多于8月1日正式落地"仅退款"规则调整，设置36小时商家协商窗口。</p><p><strong>规则变化：</strong>不再自动秒批退款，高价值订单要求买家提供开箱视频。淘宝、京东、抖音、小红书五大平台同步上线优化版规则。</p><p><strong>背景：</strong>《网络交易平台规则监督管理办法》2月1日施行，明确禁止平台强制商家承担"仅退款"。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多Q1财报：营收1062亿 净利润同比下滑15%</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">4361亿现金压阵，"仅退款"规则调整影响财务表现。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>拼多多发布2026年Q1财报，总营收1062亿元，净利润同比下滑15%。</p><p><strong>关键数据：</strong>公司持有现金及现金等价物4361亿元，为应对规则调整和市场变化提供了充足弹药。</p><p><strong>深度分析：</strong>"仅退款"规则调整短期内冲击了财务表现，但长期看有助于改善商家生态和平台可持续性。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="政策">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026电商财税合规新规：平台数据全量报送税务局</div>
+      <div class="news-tags"><span>政策</span><span>重磅</span></div>
+      <div class="news-summary">淘宝、抖音、拼多多每季度向税务局报送商家全部交易数据。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>2026年电商财税合规新规正式实施，主流平台每季度需向税务局报送商家的全部交易数据。</p><p><strong>关键变化：</strong>新《增值税法》全面取消跨境电商核定征收，统一实行查账征收。</p><p><strong>影响：</strong>电商卖家尤其是跨境卖家面临更大的财税合规压力，行业将加速洗牌。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026年被公认为"AI购物普及元年"</div>
+      <div class="news-tags"><span>平台</span><span>趋势</span></div>
+      <div class="news-summary">淘宝千问、京东京小通等AI大模型首次集体站上电商C位。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>2026年618大促期间，淘宝、京东、抖音、拼多多、百度、小红书首次集体将AI列为大促核心战略。</p><p><strong>应用场景：</strong>从前端对话式购物、AI导购、数字人直播，到中后台的供应链优化和智能客服。</p><p><strong>趋势：</strong>AI正从电商的"辅助工具"变为"基础设施"，重塑人货场关系。</p></div>
+      <div class="news-meta"><span class="src">电商头条</span><span>2026-07-29</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东位列《财富》中国500强第9位 阿里第15位</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">多家电商与物流企业强势入围，拼多多排名第65位。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>2026年《财富》中国500强排行榜发布，京东位列第9位，阿里巴巴第15位。</p><p><strong>行业表现：</strong>在跨境电商与物流领域，中国邮政第34位，拼多多第65位，多家企业强势入围。</p><p><strong>趋势：</strong>电商行业整体营收规模持续扩大，但利润增速有所分化。</p></div>
+      <div class="news-meta"><span class="src">财富中文网</span><span>2026-07-27</span></div>
+    </div>
+    <div class="news-item" data-tags="跨境">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>TikTok Shop东南亚市场GMV突破300亿美元</div>
+      <div class="news-tags"><span>跨境</span></div>
+      <div class="news-summary">社交电商在东南亚高速增长，印尼、泰国、越南为前三大市场。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>TikTok Shop在东南亚市场的年度GMV突破300亿美元大关。</p><p><strong>市场分布：</strong>印尼、泰国、越南为前三大市场，合计贡献超过70%的GMV。</p><p><strong>趋势：</strong>社交电商+直播带货模式在东南亚持续爆发，对传统电商平台构成挑战。</p></div>
+      <div class="news-meta"><span class="src">电商头条</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>88会员节大促启动：88VIP专属大额券限时发放</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">8月8日至10日核心活动期，88VIP会员享折上折优惠。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>淘宝88会员节大促启动，核心活动期为8月8日至10日。</p><p><strong>促销亮点：</strong>88VIP会员可领取专属大额券，享受折上折优惠。覆盖家电、数码、美妆、服饰等多个品类。</p><p><strong>策略分析：</strong>会员专属促销正成为电商平台提升用户黏性和ARPU值的核心手段。</p></div>
+      <div class="news-meta"><span class="src">淘宝</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="政策">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>五大平台集体取消"仅退款" 电商规则迎来巨变</div>
+      <div class="news-tags"><span>政策</span><span>平台</span></div>
+      <div class="news-summary">4月22日淘宝、抖音、拼多多、快手、京东集体宣布取消"仅退款"。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>4月22日，淘宝、抖音、拼多多、快手、京东五大平台集体宣布取消"仅退款"规则。</p><p><strong>背景：</strong>《网络交易平台规则监督管理办法》2月1日施行，一场持续四年的实验走到转折点。</p><p><strong>影响：</strong>商家权益得到更好保障，但消费者退货门槛提高，平台需要在买卖双方间找到新平衡。</p></div>
+      <div class="news-meta"><span class="src">百家号</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="跨境">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Temu加速全球化布局 已进入80余个国家市场</div>
+      <div class="news-tags"><span>跨境</span></div>
+      <div class="news-summary">拼多多旗下跨境电商平台Temu覆盖北美、欧洲、亚洲、拉美等市场。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>Temu已进入全球80余个国家和地区，成为拼多多最重要的增长引擎。</p><p><strong>扩张策略：</strong>采用"全托管"模式降低中小商家出海门槛，配合激进的价格策略和营销投入。</p><p><strong>挑战：</strong>面临各国监管政策收紧、物流成本上升以及Shein、TikTok Shop的激烈竞争。</p></div>
+      <div class="news-meta"><span class="src">电商头条</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抖音电商818好物节招商启动 重点扶持品牌商家</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">推出"品牌新商扶持计划"，新入驻品牌可获流量和佣金减免。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>抖音电商818好物节招商正式启动，推出多项品牌扶持政策。</p><p><strong>扶持措施：</strong>新入驻品牌可获流量倾斜、佣金减免和专属运营指导。</p><p><strong>战略意图：</strong>抖音电商正从白牌低价向品牌化升级，与天猫、京东争夺品牌商家资源。</p></div>
+      <div class="news-meta"><span class="src">抖音电商</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="跨境">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Shein伦敦IPO估值或达600亿英镑 引发市场热议</div>
+      <div class="news-tags"><span>跨境</span></div>
+      <div class="news-summary">快时尚跨境电商巨头Shein伦敦上市计划推进中，估值争议不断。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>Shein伦敦IPO持续推进，最新估值目标约600亿英镑。</p><p><strong>争议焦点：</strong>市场对其可持续性、供应链透明度以及ESG合规等方面存在质疑。</p><p><strong>行业影响：</strong>若成功上市，将成为近年来欧洲最大的IPO之一，也将为跨境电商行业注入强心剂。</p></div>
+      <div class="news-meta"><span class="src">金融时报</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>小红书电商发力"买手制" 差异化突围内容电商赛道</div>
+      <div class="news-tags"><span>平台</span><span>趋势</span></div>
+      <div class="news-summary">以"买手精选"模式切入，强调品质和审美，避开低价竞争。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>小红书电商持续推进"买手制"电商模式，以差异化策略切入内容电商赛道。</p><p><strong>模式特点：</strong>强调品质和审美，由专业买手精选商品，避开低价竞争，聚焦中高端消费群体。</p><p><strong>前景：</strong>在价格战日益激烈的电商环境中，"买手制"有望开辟新的增长空间。</p></div>
+      <div class="news-meta"><span class="src">电商在线</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026年8月各平台活动日历：88会员节+七夕+开学季</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">淘宝、京东、抖音、唯品会大额消费券密集发放，家电数码迎来好价。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>8月电商活动密集，淘宝88会员节、七夕促销、开学季三大节点连番登场。</p><p><strong>促销重点：</strong>电视、冰箱、洗衣机、厨卫、空调等大家电品类优惠力度最大。</p><p><strong>消费建议：</strong>建议消费者提前领券、比价，把握大促节奏。</p></div>
+      <div class="news-meta"><span class="src">B站</span><span>2026-07-30</span></div>
+    </div>
+    <div class="news-item" data-tags="跨境">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国跨境电商进出口额上半年同比增长18.5%</div>
+      <div class="news-tags"><span>跨境</span></div>
+      <div class="news-summary">海关总署数据显示跨境电商继续保持高速增长态势。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>海关总署公布2026年上半年跨境电商进出口数据，同比增长18.5%。</p><p><strong>结构特点：</strong>出口增速（22%）快于进口（12%），东南亚和拉美市场增长最为强劲。</p><p><strong>趋势：</strong>跨境电商正成为中国外贸增长的重要引擎，全托管、半托管等新模式不断涌现。</p></div>
+      <div class="news-meta"><span class="src">海关总署</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="政策">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>直播电商监管新规征求意见：禁止虚假比价和演戏式带货</div>
+      <div class="news-tags"><span>政策</span></div>
+      <div class="news-summary">市场监管总局拟出台直播电商专项管理办法，规范行业秩序。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>市场监管总局发布《直播电商交易监督管理办法（征求意见稿）》。</p><p><strong>主要内容：</strong>禁止虚假比价、演戏式带货、刷单炒信等行为，要求主播实名认证并承担连带责任。</p><p><strong>影响：</strong>直播电商行业将从野蛮生长进入规范发展阶段，头部主播和合规平台受益。</p></div>
+      <div class="news-meta"><span class="src">市场监管总局</span><span>2026-08-05</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东物流推出"小时达"升级版 覆盖全国300城</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">依托前置仓网络和即时配送能力，将履约时效压缩至1小时以内。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>京东物流宣布"小时达"服务升级，覆盖全国300个城市。</p><p><strong>核心能力：</strong>依托京东前置仓网络和达达即时配送体系，实现下单后1小时内送达。</p><p><strong>竞争格局：</strong>即时零售赛道竞争白热化，美团闪购、饿了么、抖音小时达等纷纷加码。</p></div>
+      <div class="news-meta"><span class="src">京东物流</span><span>2026-08-01</span></div>
+    </div>
+    <div class="news-item" data-tags="跨境">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Shopee母公司冬海集团扭亏为盈 东南亚电商格局生变</div>
+      <div class="news-tags"><span>跨境</span></div>
+      <div class="news-summary">冬海集团连续三个季度盈利，电商和数字金融双轮驱动。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>Shopee母公司冬海集团发布财报，连续第三个季度实现盈利。</p><p><strong>业绩驱动：</strong>电商业务毛利率持续改善，数字金融业务ShopeePay和信贷业务快速增长。</p><p><strong>格局变化：</strong>东南亚电商从"烧钱换增长"转向"盈利优先"，TikTok Shop的入场加剧了竞争。</p></div>
+      <div class="news-meta"><span class="src">电商头条</span><span>2026-08-04</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多2026年Q1净利下滑但现金流充沛 市场反应分化</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">财报发布后股价先跌后涨，投资者对"仅退款"规则调整长期影响看法不一。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>拼多多Q1财报发布后股价大幅波动，市场对净利润下滑15%反应复杂。</p><p><strong>多空分歧：</strong>看多方认为规则调整利在长远，看空方担忧增长放缓。</p><p><strong>关键指标：</strong>4361亿现金储备为公司转型提供了充足缓冲空间。</p></div>
+      <div class="news-meta"><span class="src">电商头条</span><span>2026-08-03</span></div>
+    </div>
+    <div class="news-item" data-tags="政策">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>跨境电商综合试验区扩围 新增12个城市</div>
+      <div class="news-tags"><span>政策</span><span>跨境</span></div>
+      <div class="news-summary">国务院批复同意在12个城市设立跨境电商综合试验区。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>国务院批复同意在廊坊、沧州、运城等12个城市设立跨境电子商务综合试验区。</p><p><strong>政策红利：</strong>综试区企业可享受通关便利化、出口退税、外汇结算等多项优惠政策。</p><p><strong>战略意义：</strong>跨境电商综试区从沿海向内陆扩展，助力全国统一大市场建设。</p></div>
+      <div class="news-meta"><span class="src">国务院</span><span>2026-08-02</span></div>
+    </div>
+    <div class="news-item" data-tags="平台">
+      <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>快手电商二季度GMV突破3000亿 品牌化战略成效显著</div>
+      <div class="news-tags"><span>平台</span></div>
+      <div class="news-summary">品牌商品GMV占比首次超过50%，信任电商模式持续迭代。</div>
+      <div class="news-detail"><p><strong>核心事件：</strong>快手电商公布二季度经营数据，GMV突破3000亿元，同比增长28%。</p><p><strong>结构变化：</strong>品牌商品GMV占比首次超过50%，标志着从白牌向品牌化转型取得重大突破。</p><p><strong>模式创新：</strong>"信任电商"模式强调主播与粉丝的信任关系，复购率显著高于行业平均水平。</p></div>
+      <div class="news-meta"><span class="src">快手</span><span>2026-08-04</span></div>
+    </div>
+  </div>
+</div>
+
 <script>
 function toggle(el){el.parentElement.classList.toggle('open');}
 function filter(el,cardId,tag){
