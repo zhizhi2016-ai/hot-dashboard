@@ -30,27 +30,39 @@ jobs:
 
       - name: Update GitHub Pages via API
         if: env.ok == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           OWNER=zhizhi2016-ai
           REPO=hot-dashboard
 
-          SHA=$(curl -sH "Authorization: token ${{ secrets.GITHUB_TOKEN }}"             -H "Accept: application/vnd.github.v3+json"             "https://api.github.com/repos/$OWNER/$REPO/contents/index.html?ref=main"             | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
+          SHA=$(curl -sH "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/contents/index.html?ref=main" \
+            | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
 
           B64=$(base64 -w 0 index.html)
           MSG="Auto update $(date +%Y.%m.%d)"
 
-          PAYLOAD=$(jq -n \
-            --arg msg "$MSG" \
-            --arg content "$B64" \
-            --arg sha "$SHA" \
-            --arg branch "main" \
-            '{message: $msg, content: $content, sha: $sha, branch: $branch}')
+          python3 - "$MSG" "$SHA" <<'PY'
+          import json, sys, base64
+          msg, sha = sys.argv[1], sys.argv[2]
+          with open('index.html', 'rb') as f:
+            content = base64.b64encode(f.read()).decode('utf-8')
+          payload = json.dumps({
+            'message': msg,
+            'content': content,
+            'sha': sha,
+            'branch': 'main'
+          }, ensure_ascii=False)
+          print(payload)
+          PY > payload.json
 
           curl -X PUT \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
-            -d "$PAYLOAD" \
+            -d @payload.json \
             "https://api.github.com/repos/$OWNER/$REPO/contents/index.html"
 
           echo "Done"
