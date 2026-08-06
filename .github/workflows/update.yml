@@ -12,24 +12,45 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Fetch latest hot.html
+      - name: Download latest hot.html
         run: |
-          curl -sL -o index.html "https://ad5cc899921aa2028.bj7.agentos-app.net/hot.html"
+          curl -sL -o index.html 'https://ad5cc899921aa2028.bj7.agentos-app.net/hot.html'
           SIZE=$(wc -c < index.html)
-          SECS=$(grep -c card-title index.html || echo 0)
-          echo "Size: $SIZE bytes"
-          echo "Sections: $SECS"
-          [ "$SIZE" -lt 100000 ] && { echo "File too small, skip"; exit 0; }
-          [ "$SECS" -lt 7 ] && { echo "Need 7 sections, got $SECS"; exit 0; }
+          SECS=$(grep -c 'card-title' index.html || echo 0)
+          echo "Size: $SIZE bytes, Sections: $SECS"
+          if [ "$SIZE" -lt 100000 ]; then
+            echo "File too small, abort"
+            exit 0
+          fi
+          if [ "$SECS" -lt 7 ]; then
+            echo "Need 7 sections, abort"
+            exit 0
+          fi
+          echo "ok=true" >> $GITHUB_ENV
 
-      - name: Commit and push
+      - name: Update GitHub Pages via API
+        if: env.ok == 'true'
         run: |
-          git config user.name "bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add index.html
-          git diff --staged --quiet && { echo "No changes"; exit 0; }
-          git commit -m "Auto update $(date +%Y.%m.%d)"
-          git push
-          echo "Updated GitHub Pages"
+          OWNER=zhizhi2016-ai
+          REPO=hot-dashboard
+
+          SHA=$(curl -sH "Authorization: token ${{ secrets.GITHUB_TOKEN }}"             -H "Accept: application/vnd.github.v3+json"             "https://api.github.com/repos/$OWNER/$REPO/contents/index.html?ref=main"             | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
+
+          B64=$(base64 -w 0 index.html)
+          MSG="Auto update $(date +%Y.%m.%d)"
+
+          PAYLOAD=$(jq -n \
+            --arg msg "$MSG" \
+            --arg content "$B64" \
+            --arg sha "$SHA" \
+            --arg branch "main" \
+            '{message: $msg, content: $content, sha: $sha, branch: $branch}')
+
+          curl -X PUT \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "https://api.github.com/repos/$OWNER/$REPO/contents/index.html"
+
+          echo "Done"
