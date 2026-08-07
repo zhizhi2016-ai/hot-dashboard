@@ -82,13 +82,13 @@ a{color:var(--accent);text-decoration:none}
 
 <div class="top-nav">
   <div class="nav-inner">
-    <button class="nav-btn active" onclick="scrollTo('ai')">🤖 AI/科技</button>
-    <button class="nav-btn" onclick="scrollTo('fin')">💰 财经新闻</button>
-    <button class="nav-btn" onclick="scrollTo('view')">🧠 观点认知</button>
-    <button class="nav-btn" onclick="scrollTo('fem')">✊ 女性主义</button>
-    <button class="nav-btn" onclick="scrollTo('news')">🌍 新闻资讯</button>
-    <button class="nav-btn" onclick="scrollTo('hist')">📜 历史资讯</button>
-    <button class="nav-btn" onclick="scrollTo('ecom')">🛒 电商资讯</button>
+    <button class="nav-btn active" onclick="navTo('ai')">🤖 AI/科技</button>
+    <button class="nav-btn" onclick="navTo('fin')">💰 财经新闻</button>
+    <button class="nav-btn" onclick="navTo('view')">🧠 观点认知</button>
+    <button class="nav-btn" onclick="navTo('fem')">✊ 女性主义</button>
+    <button class="nav-btn" onclick="navTo('news')">🌍 新闻资讯</button>
+    <button class="nav-btn" onclick="navTo('hist')">📜 历史资讯</button>
+    <button class="nav-btn" onclick="navTo('ecom')">🛒 电商资讯</button>
   </div>
 </div>
 
@@ -1193,7 +1193,7 @@ function filter(el,cardId,tag){
     else item.classList.add('hidden');
   });
 }
-function scrollTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'});var btns=document.querySelectorAll('.nav-btn');btns.forEach(function(b){b.classList.remove('active');if(b.textContent.includes(id.charAt(0).toUpperCase()+id.slice(1)))b.classList.add('active');});}
+function navTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'});var btns=document.querySelectorAll('.nav-btn');btns.forEach(function(b){b.classList.remove('active');if(b.textContent.includes(id.charAt(0).toUpperCase()+id.slice(1)))b.classList.add('active');});}
 </script>
 <!-- cache-bust: 2026-08-06T17:35:00 -->
 </body>
