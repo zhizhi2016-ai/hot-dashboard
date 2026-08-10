@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Download latest hot.html
         run: |
-          curl -sL -o index.html 'https://ad5cc899921aa2028.bj7.agentos-app.net/hot.html'
+          curl -sL -o index.html "https://ad5cc899921aa2028.bj7.agentos-app.net/hot.html?t=$(date +%s)"
           SIZE=$(wc -c < index.html)
           SECS=$(grep -c 'card-title' index.html || echo 0)
           echo "Size: $SIZE bytes, Sections: $SECS"
