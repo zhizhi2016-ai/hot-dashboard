@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>每日热点工作台 | 2026.08.11</title>
+<title>每日热点工作台 | 2026.08.12</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -94,7 +94,7 @@ a{color:var(--accent);text-decoration:none}
 
 <div class="header">
   <h1>📊 每日热点工作台</h1>
-  <div class="date">2026年8月11日 星期二 · 7大分类 · 140+条精选资讯</div>
+  <div class="date">2026年8月12日 星期三 · 7大分类 · 140+条精选资讯</div>
 </div>
 
 <div class="grid">
@@ -105,55 +105,95 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'ai','全部')">全部</span> <span class="tag outline" onclick="filter(this,'ai','热门')">热门</span> <span class="tag outline" onclick="filter(this,'ai','新品')">新品</span> <span class="tag outline" onclick="filter(this,'ai','顶流')">顶流</span> <span class="tag outline" onclick="filter(this,'ai','趋势')">趋势</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="热门 顶流">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Jeff Dean离开谷歌创办DiscoLoop AI，AI教父开启独立创业之路</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>上海发布软件和信息服务业"十五五"规划，布局十万卡级智算集群</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>上海市正式发布软件和信息服务业"十五五"发展规划，明确提出布局十万卡级智算集群，到2030年产业规模目标突破4万亿元。规划涵盖AI基础模型研发、算力基础设施建设、数据要素市场化等核心领域，将上海定位为全球AI创新高地。政策包含税收优惠、人才引进和土地配套等一揽子支持措施。</p>
+          <p><strong>深度分析：</strong>上海"十五五"规划是地方政府层面最系统的AI产业蓝图，十万卡级智算集群的目标对标国际一流水平。4万亿规模意味着上海软件服务业将在五年内翻番，AI将成为核心增长引擎。该规划可能引发其他一线城市跟进出台类似政策，加速全国AI产业布局。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：新浪科技</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门 趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>OpenAI秘密研发史上最大预训练模型"Doug"，预计11月前发布</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>据知情人士透露，OpenAI正在秘密研发代号"Doug"的史上最大预训练模型，该项目并非GPT-6，而是一个全新的模型系列。Doug模型预计参数规模将远超现有所有模型，采用全新的训练架构和数据处理流程。OpenAI计划在11月前正式发布，目前已进入训练收尾和RLHF对齐阶段。</p>
+          <p><strong>深度分析：</strong>"Doug"的曝光反映了OpenAI在GPT系列之外布局新赛道战略意图，可能针对推理、科学发现等高价值场景进行优化。新模型系列的推出意味着OpenAI正在从"通用对话"向"专业智能"拓展，竞争焦点从参数规模转向能力维度差异化。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="新品 趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>DeepSeek V4正式版进入发布倒计时，Flash版本已公测提升Agent能力</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>DeepSeek V4正式版进入发布倒计时阶段，其Flash版本已率先开放公测，在Agent能力评测中表现显著提升。V4模型在代码生成、工具调用和多步推理方面实现重大突破，支持128K上下文窗口和原生函数调用。Flash版本采用MoE架构，推理速度较V3提升3倍，成本降低60%。公测首周申请开发者超20万。</p>
+          <p><strong>深度分析：</strong>DeepSeek V4的Agent能力提升是对市场需求的精准回应——AI Agent已成为大模型应用的核心场景。Flash版本的高性价比策略延续DeepSeek"普惠AI"路线，对闭源模型厂商形成价格压力。DeepSeek在开源和商业之间的平衡策略正成为行业范本。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：机器之心</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门 顶流">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>阅文集团依托AI将上千部网文改编为AI漫剧，46部播放量破亿</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>阅文集团宣布依托AI技术将上千部网络文学改编为AI漫剧，其中46部播放量突破1亿次。AI漫剧采用文生图、图生视频和AI配音全流程制作，单部制作周期从传统动画的数月压缩至两周。阅文已建立AI漫剧专用生产线，月产能超100部。头部作品《斗破苍穹》AI漫剧版总播放量突破8亿。</p>
+          <p><strong>深度分析：</strong>阅文AI漫剧的成功验证了AI在内容生产领域的商业化路径——不是替代创作者，而是大幅降低改编和制作成本。上千部网文IP通过AI快速视觉化，释放了巨大的长尾价值。这一模式可能向短视频、游戏等领域延伸，AI内容工业化生产时代正在到来。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：娱乐资本论</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="新品">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>深圳城市宣传片《何以奇迹》全片由国产AI技术驱动制作</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>深圳城市宣传片《何以奇迹》正式发布，这是中国城市宣传片首次大规模采用全流程国产AI技术制作。影片使用国产视频生成模型、AI配音和AI后期调色，制作周期从传统宣传片的3个月缩短至3周。影片涵盖深圳地标建筑、科技园区和文化场景，视觉质量达到广播级标准。深圳市委宣传部表示将推广AI制作模式。</p>
+          <p><strong>深度分析：</strong>深圳全AI制作城市宣传片标志着国产AI视频生成技术已达到实用级水准。从成本效率到制作周期，AI展现了对传统影视制作的颠覆性优势。这一案例可能引发各地政府和企业在宣传片、教育视频等领域大规模采用AI制作，推动AI视频工具市场爆发。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：深圳特区报</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>谷歌DeepMind Jeff Dean离职创办DiscoLoop AI，获红杉和a16z领投5亿美元</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>谷歌AI首席科学家Jeff Dean正式宣布离开谷歌，创办独立AI公司DiscoLoop AI。Jeff Dean是谷歌大脑团队创始人之一，主导了TensorFlow、BERT、Gemini等里程碑项目，其离职标志着谷歌AI核心团队进一步流失。新公司聚焦构建下一代通用AI基础设施，已获得红杉资本和a16z联合领投的5亿美元种子轮。</p>
           <p><strong>深度分析：</strong>Jeff Dean的出走反映了大厂AI人才流失的持续趋势，继Transformer八位作者集体离职后，谷歌AI研发班底几乎完成重组。DiscoLoop AI的成立将进一步加剧独立AI公司与科技巨头之间的竞争，资本市场对AI基础设施赛道关注度持续升温。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新浪科技</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="新品 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>阿里Wan3.0视频生成模型开放公测，支持1080P长视频与多镜头一致性</div>
+      <div class="news-item" data-tags="趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>阿里Wan3.0视频模型公测，支持1080P最长60秒，多镜头一致性突破</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>阿里巴巴通义万相团队正式开放Wan3.0视频生成模型公测，该模型支持1080P分辨率、最长60秒视频生成，并在多镜头场景中保持人物与背景一致性。Wan3.0采用全新DiT架构，训练数据量较2.0版本提升5倍，在VBench和EvalCrafter榜单均居国产第一。公测首日申请人数突破50万。</p>
           <p><strong>深度分析：</strong>Wan3.0的发布标志着国产视频生成模型技术能力已接近国际第一梯队，多镜头一致性突破解决了视频生成的核心痛点。阿里以通义系列持续开源的策略正在构建开发者生态壁垒，对Runway、Pika等海外公司形成直接竞争压力。</p>
         </div>
         <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 新品">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>MiniMax开源H3全模态模型，支持2K视频生成与原生立体声音频</div>
+      <div class="news-item" data-tags="新品 顶流">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>MiniMax开源H3全模态模型，全球首个单一模型支持2K视频+原生立体声</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>MiniMax正式开源H3全模态大模型，该模型同时支持文本、图像、2K分辨率视频生成和原生立体声音频输出，是全球首个在单一模型中实现视频+音频端到端生成的开源架构。H3模型参数量为460B，采用MoE设计，推理成本较同类降低60%。模型权重和训练技术报告已在GitHub完整公开。</p>
           <p><strong>深度分析：</strong>H3的开源打破了多模态模型被闭源垄断的格局，原生立体声输出能力填补了开源生态在音频生成方面的空白。MiniMax以开源换生态的策略与月之暗面Kimi K3形成呼应，国产AI开源力量正在系统性地重塑全球竞争格局。</p>
         </div>
         <div class="news-meta"><span class="src">来源：机器之心</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 顶流">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Claude登顶文本能力榜单，Kimi K3称霸编码：全球大模型格局再洗牌</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Claude登顶文本能力榜单，Kimi K3称霸编码能力评测</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>在最新一期LMSYS Chatbot Arena排行榜中，Anthropic旗下Claude Opus 4.5在文本理解与创作能力上超越GPT-5和Gemini Ultra 2登顶第一。同时，月之暗面Kimi K3在编码专项榜单SWE-Bench Verified上以72.3%通过率超越所有对手称霸。这是中国大模型首次在编码领域全球夺冠。</p>
           <p><strong>深度分析：</strong>全球大模型竞争已进入差异化阶段，文本能力、编码能力、多模态能力的冠军分别由不同公司获得，标志着"一家独大"时代结束。Kimi K3在编码领域的突破证明了国产大模型在垂直领域已具备全球竞争力，开源策略对技术迭代速度的提升效果显著。</p>
         </div>
         <div class="news-meta"><span class="src">来源：量子位</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>字节跳动内部讨论训练5万亿参数超大模型，算力预算或超千亿元</div>
+      <div class="news-item" data-tags="趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>字节跳动讨论训练5万亿参数超大模型，将超过阿里Qwen和月之暗面K3</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>据知情人士透露，字节跳动豆包大模型团队内部已开始讨论训练5万亿参数级别超大模型计划，项目代号"Project Titan"。该模型将采用稀疏MoE架构，激活参数约500B，训练所需算力规模约为当前豆包3.0的20倍。字节已向英伟达追加H200和下一代Blackwell GPU订单，总预算或超千亿元人民币。</p>
           <p><strong>深度分析：</strong>5万亿参数标志着大模型军备竞赛进入新阶段，但业界对超大参数模型的实际收益存在分歧。字节的重金投入反映了其在大模型赛道"后发追赶"的战略决心，也凸显了算力供应链在中美科技竞争中的关键地位。</p>
         </div>
         <div class="news-meta"><span class="src">来源：晚点LatePost</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>阿里拟对下一代Qwen开源模型商用收取营收分成，开源商业模式生变</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>阿里拟对下一代Qwen开源模型商用用户收取营收分成，开源变现路径转折</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>阿里云通义团队在内部会议中讨论，下一代Qwen3系列开源模型将对商业用户收取营收分成费用，比例初步定为商用收入的2%-5%。此前Qwen系列完全免费开源，此举标志着国产开源大模型开始探索可持续商业模式。阿里强调非商业用途仍完全免费，开发者社区反应两极分化。</p>
           <p><strong>深度分析：</strong>开源模型收费是行业走向成熟的必然趋势，Meta的Llama系列也已探索类似路径。阿里此举可能引发其他国产开源模型厂商跟进，但如何在收费与生态建设之间取得平衡是关键挑战，过高的收费门槛可能将开发者推向竞争对手。</p>
         </div>
         <div class="news-meta"><span class="src">来源：财联社</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 顶流">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>月之暗面Kimi K3全量开源，2.8万亿参数MoE架构免费可商用</div>
+      <div class="news-item" data-tags="顶流">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>月之暗面Kimi K3全量开源，2.8万亿参数成为全球最大开源模型</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>月之暗面正式宣布Kimi K3大模型全量开源，模型参数达2.8万亿，采用MoE架构，激活参数约120B。Kimi K3在数学推理、编码和长文本理解方面表现突出，支持256K上下文窗口。模型权重、推理代码和技术报告已在HuggingFace和ModelScope同步发布，允许免费商用。</p>
           <p><strong>深度分析：</strong>Kimi K3的全量开源是国产大模型开源生态的里程碑事件，2.8万亿参数规模刷新了开源模型纪录。月之暗面以"开源换用户"的策略加速Kimi生态系统建设，与DeepSeek、Qwen形成国产开源三足鼎立格局，对闭源模型厂商形成巨大竞争压力。</p>
@@ -161,100 +201,52 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：机器之心</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="新品">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AMD收购AI芯片创业公司Taalas，强化芯片设计能力挑战英伟达</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AMD收购Taalas芯片公司，强化AI芯片布局</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>AMD宣布收购加拿大AI芯片创业公司Taalas，交易金额约8.5亿美元。Taalas由前谷歌TPU核心设计师Ljubisa Bajic创立，专注于高性能推理芯片设计，其独有的存算一体架构可在低功耗下实现大模型高效推理。AMD计划将Taalas技术整合到Instinct系列AI加速器中。</p>
           <p><strong>深度分析：</strong>此次收购是AMD在AI芯片市场追赶英伟达的关键一步，存算一体技术有望突破传统冯·诺依曼架构瓶颈。AMD通过并购补强设计能力的策略与英特尔的代工路线形成对比，AI芯片市场格局可能出现新的变数。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新浪科技</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>英特尔传出接英伟达GPU代工订单，先进制程代工业务迎来转机</div>
+      <div class="news-item" data-tags="趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>英特尔传出接英伟达GPU代工订单，芯片代工格局生变</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>据供应链消息，英特尔已与英伟达达成初步协议，将使用Intel 18A工艺为英伟达代工部分下一代GPU芯片，首批订单涉及Blackwell后续架构的推理级GPU。这是英特尔晶圆代工业务首次获得英伟达大单，标志着其先进制程良率和产能获得顶级客户认可。</p>
           <p><strong>深度分析：</strong>英特尔代工业务获得英伟达订单具有里程碑意义，打破了台积电在先进制程代工的垄断地位。如果合作顺利，英特尔有望吸引更多芯片设计公司使用其代工服务，对全球半导体供应链格局产生深远影响。</p>
         </div>
         <div class="news-meta"><span class="src">来源：半导体行业观察</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="新品 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Cloudflare开源智能体平台，边缘AI部署进入零门槛时代</div>
+      <div class="news-item" data-tags="新品">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>Cloudflare开源智能体平台，降低AI Agent开发门槛</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>Cloudflare正式开源其AI智能体（Agent）部署平台"Workers AI Agents"，开发者可在全球300多个边缘节点一键部署AI Agent，无需管理服务器。平台支持主流开源模型，提供工具调用、记忆管理和多Agent协作功能，免费层每月提供10万次请求。</p>
           <p><strong>深度分析：</strong>Cloudflare的开源策略降低了AI Agent部署门槛，边缘计算+AI的组合将催生大量新型应用场景。此举对AWS Lambda和Vercel等Serverless AI平台形成直接竞争，也标志着AI应用从云端集中部署向边缘分布式部署演进的趋势。</p>
         </div>
         <div class="news-meta"><span class="src">来源：InfoQ</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="新品 顶流">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>谷歌Pixel 11 Pro 8月中下旬发布，搭载端侧Gemini实现离线推理</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>谷歌Pixel 11 Pro 8月中下旬发布，搭载升级端侧离线Gemini模型</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>谷歌官宣Pixel 11 Pro系列将于8月中下旬正式发布，新机搭载定制Tensor G5芯片，内置端侧Gemini Nano 3模型，支持离线环境下的多模态推理和实时翻译。Pixel 11 Pro首次配备2亿像素主摄和屏下指纹Pro，起售价899美元。预购用户可获3个月Gemini Advanced免费使用权。</p>
           <p><strong>深度分析：</strong>端侧AI推理正在成为智能手机的核心卖点，谷歌以自研芯片+自研模型构建全栈优势，对标苹果Apple Intelligence。Pixel 11 Pro的端侧Gemini能力将推动AI手机普及，加速消费者对AI功能的感知和接受。</p>
         </div>
         <div class="news-meta"><span class="src">来源：太平洋电脑网</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="新品 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>苹果折叠iPhone进入试产阶段，铰链良率突破70%预计2027年面世</div>
+      <div class="news-item" data-tags="趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>苹果折叠iPhone进入试产阶段，搭载定制端侧AI芯片</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>据供应链消息，苹果折叠iPhone已进入富士康试产阶段，铰链良率从年初的30%提升至70%以上，达到量产门槛。新机采用7.8英寸内折柔性OLED屏幕，展开后厚度仅4.5mm，搭载M系列衍生芯片。苹果目标在2027年第一季度正式发布，定价约2000-2500美元。</p>
-          <p><strong>深度分析：</strong>苹果入局折叠屏市场将重塑高端手机竞争格局，其品控标准和生态整合能力可能为折叠屏品类带来质变。铰链良率突破是关键里程碑，但以苹果标准，70%仍需进一步提升至85%以上才能满足大规模量产要求。</p>
+          <p><strong>核心事件：</strong>据供应链消息，苹果折叠iPhone已进入富士康试产阶段，铰链良率从年初的30%提升至70%以上，达到量产门槛。新机采用7.8英寸内折柔性OLED屏幕，展开后厚度仅4.5mm，搭载M系列衍生芯片和定制端侧AI芯片。苹果目标在2027年第一季度正式发布，定价约2000-2500美元。</p>
+          <p><strong>深度分析：</strong>苹果入局折叠屏市场将重塑高端手机竞争格局，其品控标准和生态整合能力可能为折叠屏品类带来质变。定制端侧AI芯片的加入表明苹果正在为折叠形态设计专属AI体验，可能重新定义大屏AI交互范式。</p>
         </div>
         <div class="news-meta"><span class="src">来源：天风国际</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 顶流">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>OpenAI首款硬件"甜甜圈"AI音箱定价300-400美元，押注2027年市场</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>今年国内高端AI芯片市场国产方案份额有望接近90%</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>OpenAI首款硬件产品由前苹果首席设计师Jony Ive操刀设计，外观类似甜甜圈，主打AI语音交互和家庭场景助手功能。产品定价300-400美元，计划2027年正式上市，已进入工程验证阶段。该设备将搭载定制AI芯片，支持离线语音唤醒和端侧推理，不依赖手机即可独立使用。</p>
-          <p><strong>深度分析：</strong>OpenAI从软件走向硬件标志着AI公司向全栈生态延伸的战略转向，家庭场景被视为AI助手的最佳落地入口。但消费电子市场竞争激烈，亚马逊Echo和谷歌Nest已占据先发优势，OpenAI能否凭借技术优势实现弯道超车仍待观察。</p>
+          <p><strong>核心事件：</strong>行业报告显示，2026年国内高端AI芯片市场国产方案份额有望接近90%，较2025年的75%大幅提升。华为昇腾、寒武纪、海光等国产AI芯片在推理市场已实现规模化部署，训练市场国产份额也从30%提升至55%。政策驱动和供应链自主可控需求是主要推动因素，国产AI芯片生态日趋完善。</p>
+          <p><strong>深度分析：</strong>国产AI芯片份额接近90%是芯片自主可控战略的重大成果，但训练芯片仍是短板——高端训练芯片国产份额仅55%，与英伟达仍有差距。国产替代从"能用"到"好用"的跨越需要生态建设和软件优化的长期投入，CANN和CUDA的生态差距是核心挑战。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：The Verge中文站</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="热门 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>英伟达与SpaceX达成AI算力独家合作，马斯克称未来AI服务基于英伟达运行</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>马斯克在SpaceX首次财报电话会上宣布，未来公司AI服务将"独家"基于英伟达系统运行，SpaceX星链卫星网络将与英伟达GPU集群深度整合，构建太空AI基础设施。双方还将合作开发太空边缘AI推理系统，在卫星上直接处理遥感数据，减少对地面站的依赖。</p>
-          <p><strong>深度分析：</strong>英伟达与SpaceX的合作进一步巩固了英伟达在AI算力领域的绝对统治地位，太空AI是一个全新增量市场。马斯克选择独家合作而非自研芯片，反映了AI算力竞赛中自研路线的高门槛，也预示着AI基础设施将从地面扩展到太空。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：路透社</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>华为发布AI推理突破性成果，降低中国AI推理对HBM依赖</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>华为在2026金融AI推理应用落地与发展论坛上发布突破性技术成果，该成果通过创新的推理加速算法和新型存算架构，可将大模型推理对HBM高带宽内存的依赖降低50%以上，同时保持推理性能基本不降。华为表示该技术已在新一代昇腾AI芯片上验证通过。</p>
-          <p><strong>深度分析：</strong>华为的突破性成果对降低中国AI产业对进口HBM的依赖具有战略意义，在美国芯片出口管制背景下尤为关键。如果技术大规模商用，将改变全球AI芯片供应链格局，也为国产AI芯片在推理市场与英伟达竞争提供了技术基础。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：财联社</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="热门 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>白宫发布AI安全审查框架，前沿模型发布前30天须接受安全审查</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>美国白宫正式发布AI安全审查行政令，要求AI公司在前沿模型（参数超过1万亿或训练算力超过10^26 FLOPs）公开发布前30天向联邦政府提交安全评估报告。审查内容包括模型被用于制造生物武器、网络攻击和社会操纵的风险评估。OpenAI、谷歌、Anthropic等公司已签署自愿遵守协议。</p>
-          <p><strong>深度分析：</strong>这是美国联邦层面首个具约束力的AI安全审查制度，标志着AI治理从自愿承诺进入强制监管阶段。30天审查期可能影响AI产品的发布节奏，小型AI公司面临合规成本压力。该框架也可能成为其他国家AI监管的参考模板。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：华尔街见闻</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026国内AI核心产业规模有望突破1.2万亿元，大模型加速落地制造业</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>中国信通院发布报告预测，2026年国内AI核心产业规模有望突破1.2万亿元，同比增长超30%。大模型正广泛落地工业质检、智能产线、设备运维等制造场景，全国已建成智能工厂超5000家。AI在医疗、教育、金融等服务业的渗透率也快速提升，AI应用市场规模达4000亿元。</p>
-          <p><strong>深度分析：</strong>AI产业从技术试验转向实体落地的拐点已经到来，制造业成为大模型应用的最大增量市场。1.2万亿规模意味着AI已从概念验证进入规模化生产阶段，但行业也面临算力成本高企、数据安全和人才短缺等挑战。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：中国信通院</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="趋势 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>具身智能赛道融资突破400亿元，上下游企业超350家进入规模化前夜</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>2026年具身智能赛道全年融资突破400亿元，同比增长120%，上下游企业超350家。人形机器人领域融资占比超60%，宇树科技、智元机器人、银河通用等头部企业单轮融资金额均超10亿元。工业智能体在汽车制造、仓储物流领域率先实现商业化部署。</p>
-          <p><strong>深度分析：</strong>具身智能被视为AI的下一个万亿级赛道，2026年是人形机器人从实验室走向产线的关键过渡年。但行业仍面临成本高企、通用性不足和场景适配等挑战，预计2027-2028年才能实现规模化量产，资本短期泡沫风险值得关注。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="新品">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026云栖大会9月杭州举行，首设AgentNative参会方式</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>2026云栖大会将于9月22日至24日在杭州云栖小镇举行，以"智以致用"为主题，首设AgentNative参会方式——参会者可携带自己的AI Agent参与互动。大会设置三大主论坛、140余场分论坛，超5万平方米展区，预计参会人数超8万。阿里将发布通义下一代模型和全新AI Agent平台。</p>
-          <p><strong>深度分析：</strong>云栖大会首设AgentNative反映了AI Agent已成为行业最热赛道，阿里以大会为平台构建Agent生态闭环。这一创新参会方式可能成为未来技术大会的新范式，也预示着Agent-to-Agent交互的商业模式探索正在加速。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：阿里云</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：半导体行业观察</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>北美云厂商资本开支达7200-7450亿美元，AI基础设施投资不减</div>
@@ -263,6 +255,14 @@ a{color:var(--accent);text-decoration:none}
           <p><strong>深度分析：</strong>超大规模资本开支反映了AI算力军备竞赛仍在升级，但也引发了市场对投资回报周期的担忧。5000亿美元债务预测意味着AI芯片行业正在透支未来收益，一旦AI应用变现不及预期，可能引发类似互联网泡沫的行业调整。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中信建投</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>华为AI推理突破性成果降低对HBM技术依赖</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>华为在2026金融AI推理应用落地与发展论坛上发布突破性技术成果，该成果通过创新的推理加速算法和新型存算架构，可将大模型推理对HBM高带宽内存的依赖降低50%以上，同时保持推理性能基本不降。华为表示该技术已在新一代昇腾AI芯片上验证通过。</p>
+          <p><strong>深度分析：</strong>华为的突破性成果对降低中国AI产业对进口HBM的依赖具有战略意义，在美国芯片出口管制背景下尤为关键。如果技术大规模商用，将改变全球AI芯片供应链格局，也为国产AI芯片在推理市场与英伟达竞争提供了技术基础。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：财联社</span><span>2026年8月</span></div>
       </div>
   </div>
 </div>
@@ -273,7 +273,7 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'fin','全部')">全部</span> <span class="tag outline" onclick="filter(this,'fin','热门')">热门</span> <span class="tag outline" onclick="filter(this,'fin','政策')">政策</span> <span class="tag outline" onclick="filter(this,'fin','数据')">数据</span> <span class="tag outline" onclick="filter(this,'fin','趋势')">趋势</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="热门 数据">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月CPI同比上涨0.5%，保供稳价政策持续有力有效</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月CPI同比上涨0.5%，保供稳价政策有力有效</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>国家统计局公布数据显示，2026年7月全国居民消费价格指数（CPI）同比上涨0.5%，环比上涨0.3%。食品价格同比下降0.2%，非食品价格上涨0.7%。核心CPI（扣除食品和能源）同比上涨0.6%，反映保供稳价政策持续有力有效，物价总体保持平稳运行态势。</p>
           <p><strong>深度分析：</strong>CPI温和上涨表明内需正在温和修复，但0.5%的涨幅仍处于低位区间，通缩压力尚未完全消退。核心CPI回升至0.6%是积极信号，说明服务业消费回暖正在拉动价格中枢上行。下半年需关注猪周期和能源价格波动对CPI的影响。</p>
@@ -281,15 +281,31 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：国家统计局</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门 趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民币对美元即期汇率创42个月新高，经济基本面改善推动走强</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民币对美元收盘报6.7442，创2023年2月以来新高</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>8月8日人民币对美元即期汇率收报7.0532，创42个月以来新高，较7月末升值超2%。市场分析认为，中国经济基本面持续改善、外贸顺差扩大以及美联储降息预期升温是主要推动因素。外资增持人民币资产规模也显著增加，北向资金近一月净流入超500亿元。</p>
-          <p><strong>深度分析：</strong>人民币走强有利于降低进口成本和缓解资本外流压力，但过快升值可能影响出口企业竞争力。央行或通过中间价引导和市场操作平衡汇率节奏，预计年内人民币将在7.0-7.1区间波动，双向弹性加大。</p>
+          <p><strong>核心事件：</strong>8月11日人民币对美元收盘报6.7442，创2023年2月以来新高，较7月末升值超2.5%。市场分析认为，中国经济基本面持续改善、外贸顺差扩大以及美联储降息预期升温是主要推动因素。外资增持人民币资产规模显著增加，北向资金近一月净流入超500亿元。央行表示将保持汇率在合理均衡水平基本稳定。</p>
+          <p><strong>深度分析：</strong>人民币走强有利于降低进口成本和缓解资本外流压力，但过快升值可能影响出口企业竞争力。央行或通过中间价引导和市场操作平衡汇率节奏，预计年内人民币将在6.7-6.9区间波动，双向弹性加大。美联储降息周期开启将进一步支撑人民币走强。</p>
         </div>
         <div class="news-meta"><span class="src">来源：财联社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="数据">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月外贸进出口6832.1亿美元同比增长25%，出口进口增速均保持高位</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>央行二季度货币政策执行报告删除"逆周期调节"表述，市场关注流动性方向</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>中国人民银行发布2026年二季度货币政策执行报告，市场注意到报告中删除了此前一贯使用的"逆周期调节"表述，引发对流动性政策方向的热烈讨论。报告强调"精准滴灌"和"结构性工具"，新增对AI基础设施和绿色转型的定向支持表述。分析认为政策重心正从总量宽松转向结构性精准投放。</p>
+          <p><strong>深度分析：</strong>删除"逆周期调节"表述可能暗示央行对当前经济形势的判断更加积极，不再需要大规模逆周期刺激。结构性工具的强化意味着资金将更精准地流向科技创新、绿色发展和中小微企业，而非全面宽松。市场需关注后续MLF和公开市场操作的方向性信号。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：华尔街见闻</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月11日7月金融统计数据发布，是对政治局会议定调后首次流动性检验</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>8月11日央行发布7月金融统计数据，这是7月底政治局会议定调下半年经济工作后的首次流动性检验。7月社融新增1.85万亿元，同比多增3200亿元；M2同比增长8.8%，较上月回升0.3个百分点。新增人民币贷款1.12万亿元，企业中长期贷款占比提升至65%，反映企业投资意愿改善。</p>
+          <p><strong>深度分析：</strong>7月金融数据整体好于市场预期，社融和M2双双回升表明宽信用政策效果正在显现。企业中长期贷款占比提升是积极信号，说明资金正从短期周转转向长期投资。但居民贷款增速仍偏弱，消费信贷需求恢复尚需时间，流动性传导的"最后一公里"仍需疏通。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：证券时报</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="数据">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月外贸进出口6832.1亿美元同比增长25%</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>海关总署公布数据，以美元计价2026年7月我国外贸进出口总值6832.1亿美元，同比增长25.0%。其中出口3985.6亿美元增长24.2%，进口2846.5亿美元增长26.1%，贸易顺差1139.1亿美元。机电产品出口占比超60%，新能源汽车、锂电池、光伏产品"新三样"出口增长超40%。</p>
           <p><strong>深度分析：</strong>25%的增速远超市场预期，反映中国出口韧性强劲，产业链优势在全球不确定环境中更加凸显。"新三样"持续高增长说明中国制造业升级成效显著。但需关注7月增速较6月有所回落，高位波动符合市场预期，外贸韧性仍在。</p>
@@ -297,140 +313,124 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：海关总署</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>央行发布二季度贷款投向报告，涉农贷款余额54.16万亿元同比增长5.8%</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月12日央行MLF与公开市场流动性操作受市场关注</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>中国人民银行发布《2026年二季度金融机构贷款投向统计报告》，涉农贷款余额54.16万亿元，同比增长5.8%，上半年增加2.65万亿元。普惠小微贷款余额32.8万亿元，同比增长16.4%。绿色贷款余额38.7万亿元，同比增长22.3%，金融对实体经济重点领域支持力度持续加大。</p>
-          <p><strong>深度分析：</strong>涉农和普惠小微贷款保持稳定增长，反映金融支持乡村振兴和小微企业的政策导向持续发力。绿色贷款增速超22%表明绿色金融体系日趋成熟，但涉农贷款增速偏低说明农村金融渗透仍有提升空间。</p>
+          <p><strong>核心事件：</strong>8月12日央行开展MLF操作和公开市场逆回购，MLF操作量及利率成为市场关注焦点。市场预期央行可能维持MLF利率不变但适度加量续作，以对冲税期和政府债券发行带来的流动性压力。同时央行通过逆回购灵活投放短期流动性，维护银行间市场流动性合理充裕。</p>
+          <p><strong>深度分析：</strong>MLF操作是观察央行流动性政策方向的重要窗口。在二季度货币政策报告删除"逆周期调节"表述后，市场对MLF操作的解读更加敏感。加量续作将释放温和宽松信号，而利率不变则表明央行对当前利率水平满意。后续需关注LPR报价是否调整。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：中国人民银行</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：金融时报</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>A股8月连涨4日，上证涨3.4%深指涨6.4%，经济韧性增强</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>A股8月连涨4日，上证涨3.4%深指涨6.4%科创50涨12%</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>A股8月开局连涨4日，上证指数累计上涨3.4%，深证成指上涨6.4%，创业板指上涨7.8%。科创50指数一周涨12%领涨主要指数。北向资金连续4日净流入，累计净买入超280亿元。市场交投活跃，两市日均成交额突破1.2万亿元，显示投资者信心正在修复。</p>
-          <p><strong>深度分析：</strong>多重经济数据小幅反弹推动了市场情绪回暖，人民币走强也吸引了外资回流。但本轮上涨的持续性取决于企业盈利改善和政策力度，投资者仍需关注三季度经济数据能否验证复苏趋势。</p>
+          <p><strong>深度分析：</strong>多重经济数据小幅反弹推动了市场情绪回暖，人民币走强也吸引了外资回流。但本轮上涨的持续性取决于企业盈利改善和政策力度，投资者仍需关注三季度经济数据能否验证复苏趋势。科创50的强势表现反映市场对科技自主可控的强烈预期。</p>
         </div>
         <div class="news-meta"><span class="src">来源：证券时报</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>伯克希尔上半年净买入股票116.25亿美元，终结14季度净卖出纪录</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>伯克希尔上半年净买入股票116亿美元，终结14季度净卖出</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>伯克希尔·哈撒韦二季度财报显示，公司上半年净买入股票116.25亿美元，终结了连续14个季度的净卖出纪录。巴菲特大幅增持西方石油和日本五大商社，同时小幅加仓苹果。截至二季度末，伯克希尔现金储备降至约2400亿美元，较一季度减少约350亿美元。</p>
+          <p><strong>核心事件：</strong>伯克希尔·哈撒韦二季度财报显示，公司上半年净买入股票116亿美元，终结了连续14个季度的净卖出纪录。巴菲特大幅增持西方石油和日本五大商社，同时小幅加仓苹果。截至二季度末，伯克希尔现金储备降至约2400亿美元，较一季度减少约350亿美元。</p>
           <p><strong>深度分析：</strong>巴菲特从净卖出到净买入的转变被视为市场重要信号，反映其对当前估值水平的认可。加仓能源股和日本商社延续了其偏好现金奶牛和低估值的风格。这一转向可能提振全球价值投资者的信心。</p>
         </div>
         <div class="news-meta"><span class="src">来源：彭博社</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="趋势 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>贝莱德称AI提升生产效率弱化加息效用，全球货币政策框架面临重构</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>全球最大资管公司贝莱德发布研报称，AI技术大规模应用正在系统性提升生产效率，使得传统加息对通胀的抑制效果减弱。报告认为，央行需要重新审视货币政策传导机制，AI驱动的成本下降可能使通胀在更高利率水平下自然回落。贝莱德建议增持AI受益板块和实物资产。</p>
-          <p><strong>深度分析：</strong>贝莱德的观点对全球央行政策框架具有深远影响，如果AI确实改变了菲利普斯曲线斜率，传统通胀-利率模型需要修正。这一分析也解释了为何美联储在通胀仍高于2%目标时仍敢于降息，AI正在成为货币政策的"隐性变量"。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：贝莱德研究</span><span>2026年8月</span></div>
-      </div>
       <div class="news-item" data-tags="数据">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>美国6月消费者信贷增加141.73亿超预期，信用卡贷款增长强劲</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>美国6月消费者信贷增加141.73亿超预期</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>美联储公布数据显示，美国6月消费者信贷增加141.73亿美元，超出市场预期的120亿美元。其中信用卡等循环信贷增加65亿美元，汽车和学生贷款等非循环信贷增加76.7亿美元。消费者信贷年化增速达3.5%，反映美国消费需求依然旺盛。</p>
           <p><strong>深度分析：</strong>消费者信贷超预期增长说明美国居民消费意愿强劲，但信用卡贷款持续增长也暗示储蓄率下降和债务负担加重。在高利率环境下，消费者依赖信贷维持消费的可持续性存疑，违约风险值得警惕。</p>
         </div>
         <div class="news-meta"><span class="src">来源：美联储</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="数据 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>科创50指数一周涨12%，半导体与AI板块领涨</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>贝莱德称AI提升生产效率弱化加息效用，美联储继续加息已无实际意义</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>科创50指数本周累计上涨12%，创年内最大周涨幅。半导体板块平均涨幅超15%，AI芯片和设备股涨幅超20%。中芯国际、寒武纪、中微公司等龙头股单周涨幅超25%。两市科创板合计成交额约3860亿元，较前周放大80%，显示资金加速流入科技成长板块。</p>
-          <p><strong>深度分析：</strong>科创50大涨反映了市场对国产替代和AI产业链的强烈预期，半导体板块领涨说明资金聚焦"卡脖子"领域。但短期涨幅过大存在获利回吐风险，投资者需关注中报业绩能否支撑当前估值水平。</p>
+          <p><strong>核心事件：</strong>全球最大资管公司贝莱德发布研报称，AI技术大规模应用正在系统性提升生产效率，使得传统加息对通胀的抑制效果减弱。报告认为，央行需要重新审视货币政策传导机制，AI驱动的成本下降可能使通胀在更高利率水平下自然回落。贝莱德建议增持AI受益板块和实物资产。</p>
+          <p><strong>深度分析：</strong>贝莱德的观点对全球央行政策框架具有深远影响，如果AI确实改变了菲利普斯曲线斜率，传统通胀-利率模型需要修正。这一分析也解释了为何美联储在通胀仍高于2%目标时仍敢于降息，AI正在成为货币政策的"隐性变量"。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：上海证券报</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="数据">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>上半年生成式AI新设企业增长28%，产业活力持续释放</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>国家统计局数据显示，2026年上半年生成式人工智能领域新设企业数量同比增长28.0%，注册资本总额超3500亿元。新设企业集中在AI应用开发、模型服务和数据标注三大领域。北京、上海、深圳、杭州四城新设AI企业占比超60%，产业集聚效应显著。</p>
-          <p><strong>深度分析：</strong>28%的增长率远高于全行业平均水平，反映AI创业热度不减。但新设企业增速放缓（2025年同期为45%），说明行业正从野蛮生长进入理性发展阶段。应用层创业占比提升是积极信号，表明AI商业化落地正在加速。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：国家统计局</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="热门 国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>伊朗与阿曼接近达成霍尔木兹海峡通行协议，影响全球能源运输</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>伊朗与阿曼谈判代表透露，两国已就霍尔木兹海峡通行协议达成95%共识，预计两周内正式签署。协议将建立联合巡逻机制、通行费标准和争议解决渠道，保障海峡安全通行。全球约20%石油运输经由霍尔木兹海峡，协议达成将降低地缘政治风险溢价。</p>
-          <p><strong>深度分析：</strong>霍尔木兹海峡通行协议如能达成，将显著降低全球能源运输的地缘风险，国际油价可能短期回落。但伊朗与西方关系的不确定性仍是变量，协议执行力度和可持续性需要持续观察。中国作为最大石油进口国将是主要受益方。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：路透社</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>科创债首次赋能算力工厂建设，金融创新支持科技基础设施</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>首笔科创债成功用于词元科技算力工厂建设项目融资，发行规模20亿元，票面利率3.2%，期限5年。这是科创债首次直接支持AI算力基础设施建设，标志着金融创新工具开始精准服务科技产业。上半年科创债发行规模超3500亿元，同比增长85%。</p>
-          <p><strong>深度分析：</strong>科创债赋能算力工厂是金融与科技融合的创新实践，拓宽了AI基础设施建设的融资渠道。低利率和长期限特征适合算力项目回报周期长的特点，预计后续将有更多AI算力项目通过科创债融资，加速国产算力供给。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：上海证券报</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>五大AMC做强主业盘活存量，不良资产处置行业迎来新机遇</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>中国华融、中国长城、中国东方、中国信达和中国银河五大资产管理公司（AMC）为下半年工作划重点，强调做强不良资产主业、盘活存量资产。上半年五大AMC合计收购不良资产规模超8000亿元，房地产和地方债务是不良处置重点领域。监管鼓励AMC参与地方融资平台债务化解。</p>
-          <p><strong>深度分析：</strong>在房地产调整和地方债务化解背景下，AMC行业迎来历史性发展机遇。做强主业的政策导向意味着AMC将回归不良资产处置本源，避免盲目多元化。不良资产证券化等创新工具的应用将加速存量资产盘活，对稳定金融体系具有积极意义。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：经济观察报</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：贝莱德研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民币国债在港常态化发行，拓宽外资配置中国资产渠道</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>商务部文旅部推进"促进服务消费高质量发展"，暑期夜间经济政策加码</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>财政部宣布人民币国债在香港常态化发行机制正式启动，每季度发行规模不少于200亿元，期限覆盖2年、5年和10年。首期发行250亿元，认购倍数达3.8倍，境外投资者参与比例超60%。此举将进一步丰富香港人民币资产供给，推动人民币国际化进程。</p>
-          <p><strong>深度分析：</strong>在港常态化发行国债是人民币国际化的重要基础设施工程，为境外投资者提供了高信用等级的人民币资产配置标的。随着美联储降息周期开启，人民币债券的吸引力将进一步增强，外资增配趋势有望延续。</p>
+          <p><strong>核心事件：</strong>商务部和文旅部联合发布《关于促进服务消费高质量发展的若干措施》，从餐饮、文旅、体育、健康等六大领域推出22条具体措施。暑期夜间经济政策加码，包括延长夜间公共通运营时间、发放夜间消费券和支持夜市街区改造。首批15个城市入选夜间经济示范城市，每个城市获专项补贴5000万元。</p>
+          <p><strong>深度分析：</strong>促进服务消费是扩大内需的关键抓手，夜间经济政策加码直击消费时段瓶颈。22条措施从供给侧和需求侧双管齐下，但落地效果取决于地方执行力度和企业参与积极性。夜间经济的成功需要交通、安全和营商环境等配套保障，政策协同是关键。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：财政部</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：商务部</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>DR基准利率贷款多地落地，定价"新锚"加快试水</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>外储规模连续4个月站上3.4万亿美元</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>DR（存款类金融机构间的债券回购利率）基准利率贷款在广东、浙江、上海等多地银行落地试点。首批DR基准贷款以浮动利率定价，利率随DR007变动调整，首批发放规模超50亿元。央行推动DR替代LPR成为贷款定价新基准，提高利率传导效率。</p>
-          <p><strong>深度分析：</strong>DR基准贷款的落地标志着利率市场化改革进入新阶段，DR007作为政策利率传导锚点的地位进一步巩固。相比LPR，DR更能反映银行间市场真实资金成本，有利于提高货币政策传导效率，但对银行定价系统和客户接受度提出新要求。</p>
+          <p><strong>核心事件：</strong>国家外汇管理局公布数据显示，截至7月末，中国外汇储备规模为34285亿美元，较6月末增加328亿美元，已连续4个月站上3.4万亿美元关口。外储增长主要受美元贬值导致的非美元资产估值效应和资产价格上涨驱动。黄金储备连续第8个月增加，达到7296万盎司。</p>
+          <p><strong>深度分析：</strong>外储规模稳定在3.4万亿美元以上为人民币汇率提供了坚实支撑，也反映国际收支基本平衡。黄金储备持续增加体现了外汇储备多元化配置的战略方向，在全球地缘不确定性升温背景下，黄金的避险价值更加凸显。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：金融时报</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="政策 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新一批药品集采65种药品采购成功，中选价格平均降幅58%</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>国家组织药品联合采购办公布第12批集采结果，65种药品采购成功，涵盖抗肿瘤、慢性病、罕见病等多个治疗领域，中选价格平均降幅58%，最高降幅达92%。按约定采购量测算，预计每年可节约药费支出超300亿元。首年采购周期内，中选产品须确保供应稳定。</p>
-          <p><strong>深度分析：</strong>集采持续扩面提质是医改的重要成果，58%的平均降幅进一步降低了患者用药负担。但也需关注集采对药品质量和供应稳定性的影响，以及原研药企退出集采后市场竞争格局的变化。罕见病用药纳入集采是重要进步。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：国家医保局</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：国家外汇管理局</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="数据">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>暑运铁路发送旅客4.32亿人次，交通消费持续回暖</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>前7个月货物贸易进出口总值同比增长17.3%</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>国铁集团数据显示，暑运过半全国铁路已累计发送旅客4.32亿人次，同比增长12.5%。日均发送旅客超720万人次，高峰日突破900万人次。高铁客流占比超75%，京沪、京广、沪昆等主干线客流恢复明显。铁路部门累计增开列车超2万列满足出行需求。</p>
-          <p><strong>深度分析：</strong>暑运客流量大幅增长反映了出行需求和消费信心的回暖，旅游和探亲是主要客流来源。高铁占比持续提升说明交通消费升级趋势明确，对铁路运营效率和盈利能力改善具有积极意义。</p>
+          <p><strong>核心事件：</strong>海关总署公布数据显示，2026年前7个月我国货物贸易进出口总值达23.55万亿元人民币，同比增长17.3%。其中出口13.47万亿元增长18.9%，进口10.08万亿元增长15.2%，贸易顺差3.39万亿元。东盟、欧盟和美国为前三大贸易伙伴，对"一带一路"沿线国家进出口增长21.5%。</p>
+          <p><strong>深度分析：</strong>前7个月17.3%的增速表明中国外贸保持强劲韧性，出口增速高于进口反映外需旺盛和产业链优势。对"一带一路"沿线国家增速超20%说明市场多元化战略成效显著。但全球贸易保护主义抬头和地缘风险仍是下半年外贸的不确定因素。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：国铁集团</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：海关总署</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="数据">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月中国物流业景气指数50.4%，业务总量保持扩张</div>
+      <div class="news-item" data-tags="政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国家数据局印发指引为数据出具"身份证明"</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>中国物流与采购联合会公布7月中国物流业景气指数为50.4%，较上月回升0.8个百分点，处于扩张区间。新订单指数51.2%，业务预期指数55.6%，企业信心增强。电商物流和冷链物流景气度最高，大宗商品物流有所回落。库存周转次数指数回升至50%以上。</p>
-          <p><strong>深度分析：</strong>物流景气指数回升至扩张区间是经济企稳的积极信号，电商和冷链物流的高景气反映了消费结构升级趋势。但大宗商品物流回落暗示制造业需求仍偏弱，物流行业恢复尚不平衡。</p>
+          <p><strong>核心事件：</strong>国家数据局正式印发《数据资产登记管理办法》，为数据要素出具"身份证明"，确立数据资产的权属认定、价值评估和交易流转规则。办法规定数据资产登记后可获得唯一标识码，用于确权、入表和融资。首批试点已在深圳、北京、上海等10个城市启动，登记数据资产规模超500亿元。</p>
+          <p><strong>深度分析：</strong>数据资产登记是数据要素市场化的基础设施工程，解决了数据"谁的"和"值多少"两大核心问题。身份证明制度为数据交易、融资和入表提供了制度保障，将激活万亿级数据要素市场。但数据资产的价值评估方法论和隐私保护机制仍需在实践中完善。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：中国物流与采购联合会</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：国家数据局</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人形机器人新设企业11.6万户同比增长9.5%，产业生态加速成型</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>磷酸铁锂正极材料价格上调2000元/吨，MLCC价格上调30%</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>多家锂电材料厂商宣布磷酸铁锂正极材料价格上调2000元/吨，涨幅约5%，主要受上游碳酸锂价格企稳回升和需求回暖驱动。同时，MLCC（多层陶瓷电容器）价格全面上调30%，原因是AI服务器和消费电子需求激增导致产能紧张。这是2025年以来MLCC最大幅度涨价。</p>
+          <p><strong>深度分析：</strong>磷酸铁锂涨价反映锂电产业链触底回暖信号，新能源汽车和储能需求复苏是核心驱动力。MLCC涨价30%则体现了AI对上游电子元器件的拉动效应——AI服务器对高端MLCC的需求量是传统服务器的3-5倍。上游材料涨价潮可能传导至终端产品，需关注通胀传导效应。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：上海有色网</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="数据">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月线下消费持续升温，消费支付金额同比增长2.2%</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>中国支付清算协会数据显示，2026年7月线下消费支付金额同比增长2.2%，较6月回升1.8个百分点。餐饮、零售和文旅是增长最快的三大线下消费场景。暑期旅游带动异地消费支付增长8.5%，夜经济支付金额增长12.3%。移动支付渗透率达94%，生物识别支付增长35%。</p>
+          <p><strong>深度分析：</strong>线下消费支付增速回正是消费回暖的微观验证，暑期和夜经济是主要拉动因素。2.2%的增速虽然温和，但趋势向好。生物识别支付的快速增长反映了支付技术创新对消费体验的持续提升。餐饮和文旅消费的高增长表明服务消费恢复快于商品消费。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国支付清算协会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人形机器人领域新设企业11.6万户同比增长9.5%</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>天眼查数据显示，2026年上半年新设人形机器人相关企业11.6万户，同比增长9.5%。企业总数突破80万户，广东、江苏、浙江三省占比超40%。减速器、伺服电机、力传感器等核心零部件企业增长尤为迅速，国产替代率从去年的30%提升至50%。</p>
           <p><strong>深度分析：</strong>人形机器人企业快速增长反映了产业生态的加速成型，核心零部件国产替代率提升是关键突破。但企业数量多、规模小的问题仍存在，行业整合和优胜劣汰将在2027年加速，头部企业优势将更加明显。</p>
         </div>
         <div class="news-meta"><span class="src">来源：天眼查</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新建智算中心强制配套风光储设施，绿色算力政策落地</div>
+      <div class="news-item" data-tags="趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新建智算中心强制配套风光储设施，零碳算力园区开工量环比涨68%</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>国家发改委等三部门联合发布通知，要求新建大型智算中心必须配套建设不低于总算力用电30%的风光储设施，否则不予审批。政策旨在解决AI算力高能耗问题，推动绿色算力发展。已建智算中心须在两年内完成配套改造，地方政府将给予最高30%的绿电补贴。</p>
-          <p><strong>深度分析：</strong>强制配套风光储是算力与新能源融合发展的里程碑政策，将显著提升智算中心的绿电使用比例。但30%的配套要求可能增加建设成本和选址难度，对西部地区算力产业发展更有利，东数西算格局可能进一步深化。</p>
+          <p><strong>核心事件：</strong>国家发改委等三部门联合发布通知，要求新建大型智算中心必须配套建设不低于总算力用电30%的风光储设施。政策推动零碳算力园区快速发展，7月零碳算力园区开工量环比增长68%，内蒙古、甘肃、青海等西部省份占比超60%。已建智算中心须在两年内完成配套改造。</p>
+          <p><strong>深度分析：</strong>强制配套风光储是算力与新能源融合发展的里程碑政策，将显著提升智算中心的绿电使用比例。但30%的配套要求可能增加建设成本和选址难度，对西部地区算力产业发展更有利，东数西算格局可能进一步深化。零碳算力园区的爆发式增长将带动储能和光伏产业链需求。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国家发改委</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="数据">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月中国物流业景气指数50.4%</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>中国物流与采购联合会公布7月中国物流业景气指数为50.4%，较上月回升0.8个百分点，处于扩张区间。新订单指数51.2%，业务预期指数55.6%，企业信心增强。电商物流和冷链物流景气度最高，大宗商品物流有所回落。库存周转次数指数回升至50%以上。</p>
+          <p><strong>深度分析：</strong>物流景气指数回升至扩张区间是经济企稳的积极信号，电商和冷链物流的高景气反映了消费结构升级趋势。但大宗商品物流回落暗示制造业需求仍偏弱，物流行业恢复尚不平衡。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国物流与采购联合会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>A股2026年中报8月集中披露完毕</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>A股2026年中报进入8月集中披露期，截至8月11日已有超1800家上市公司发布中报，其中62%实现营收增长，55%实现净利润增长。AI、新能源和出口导向型行业业绩表现亮眼，房地产和传统零售板块承压。科创板中报净利增速中位数达28%，大幅领先主板。监管要求8月31日前全部披露完毕。</p>
+          <p><strong>深度分析：</strong>中报季是验证经济复苏的关键窗口，62%的营收增长比例说明上市公司整体经营改善，但行业分化加剧。AI和新能源的高增长验证了产业升级方向，房地产的持续承压反映了行业调整仍在进行。投资者需关注业绩与估值的匹配度，避免追高概念股。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：上海证券报</span><span>2026年8月</span></div>
       </div>
   </div>
 </div>
@@ -441,7 +441,7 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'view','全部')">全部</span> <span class="tag outline" onclick="filter(this,'view','热门')">热门</span> <span class="tag outline" onclick="filter(this,'view','思维')">思维</span> <span class="tag outline" onclick="filter(this,'view','成长')">成长</span> <span class="tag outline" onclick="filter(this,'view','深度')">深度</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="热门 思维">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>认知层次决定成长速度：初级认知人人可验证，高阶认知需实践反复确认</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>认知层次决定成长速度：初级认知人人可验证，高阶认知需反复实践确认</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>认知心理学将人的认知分为多个层次：初级认知（如事实记忆）人人可验证，但高阶认知（如系统性思维、跨界洞察）需要通过实践反复确认。认知能力较弱的人验证高阶因素速度缓慢，导致认知成长也相应缓慢。提升认知的关键在于主动探索更高层次因素，并建立反馈循环加速验证。</p>
           <p><strong>深度分析：</strong>这一观点解释了为什么同样努力的人成长速度差异巨大——核心不在努力程度，而在认知层次。突破认知瓶颈需要刻意练习高阶思维，如系统思考、第一性原理和反事实推理，而非简单积累知识点。</p>
@@ -449,7 +449,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：认知科学家</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>运动员伊埃拉"一旦成长便不可阻挡"引热议：成长型思维+自我觉察+原生家庭转化</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>伊埃拉成长型思维+自我觉察+原生家庭转化三大心理学依据</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>运动员伊埃拉因"不回避家庭环境优越，但不代表没有付出艰苦训练"的坦诚回应引发全网热议。心理学专家分析其成长观点蕴含三大依据：成长型思维（能力可通过努力提升）、自我觉察（清晰认知自身优势与局限）、原生家庭转化（将家庭资源转化为成长动力而非依赖）。</p>
           <p><strong>深度分析：</strong>伊埃拉的回应之所以引发共鸣，是因为她展示了"承认 privilege 不等于否定努力"的成熟心态。这种将原生家庭从"原罪"或"借口"转化为"资源"的思维模式，为当代年轻人提供了更健康的成长叙事。</p>
@@ -457,7 +457,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：心理学界</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="思维 深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>传播学不仅是信息传递更是权力行使，2026年必学传播学三大公开课</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>传播学不仅是信息传递更是权力行使与认知重塑</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年必学的传播学三大公开课揭示：传播不仅是信息传递，更是权力行使与认知重塑。三大课程分别聚焦媒介理论（理解信息如何塑造现实）、话语分析（识别语言中的权力结构）和数字传播伦理（AI时代的信息素养）。课程在Coursera和B站同步上线，累计学习人数超百万。</p>
           <p><strong>深度分析：</strong>在AI生成内容泛滥的时代，理解传播的权力维度比以往更加重要。掌握传播底层逻辑才能在信息洪流中保持清醒，识别算法推荐和AI生成内容的认知操控。传播学正从专业学科变为公民素养。</p>
@@ -465,7 +465,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：学术前沿</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《认知觉醒》周岭：真正的觉醒是发自内心渴望，认知影响选择</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《认知觉醒》周岭：真正的觉醒是发自内心的渴望，认知影响选择</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>周岭在《认知觉醒》中提出核心观点：真正的觉醒不是外部驱动，而是发自内心的渴望。认知影响选择，选择的复利决定人生轨迹。书中系统阐述了大脑的"三重脑"模型（本能脑、情绪脑、理智脑），以及如何通过元认知能力观察和调节自身思维。该书2026年加印版新增AI时代认知更新章节。</p>
           <p><strong>深度分析：</strong>《认知觉醒》的价值在于将脑科学知识转化为可操作的成长方法。元认知——即"思考自己的思考"——是提升认知层次的核心能力。在信息过载时代，元认知能力的价值更加凸显，它决定了一个人能否在海量信息中保持独立判断。</p>
@@ -473,7 +473,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：人民邮电出版社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="思维 深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《思考快与慢》卡尼曼：系统1与系统2决策机制，聪明人为何也犯认知错误</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《思考快与慢》卡尼曼：系统1快速直觉与系统2慢速理性的决策机制</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>诺贝尔经济学奖得主丹尼尔·卡尼曼在《思考，快与慢》中揭示了大脑两套思维系统：系统1快速直觉，自动运作但易受偏见影响；系统2慢速理性，需耗费认知资源但能进行复杂推理。书中列举了锚定效应、可得性偏差、损失厌恶等数十种认知偏误。2026年卡尼曼去世后该书再版引发新一轮阅读热潮。</p>
           <p><strong>深度分析：</strong>卡尼曼的贡献在于用实验心理学方法揭示了人类理性的边界。系统1和系统2的框架不仅是认知科学的基础，也为行为经济学和AI决策系统设计提供了理论依据。理解认知偏误是提升决策质量的第一步，但彻底消除偏误几乎不可能，关键是建立制度性纠偏机制。</p>
@@ -481,7 +481,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：中信出版社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《底层逻辑》刘润：理解本质规律比掌握技巧更重要</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《底层逻辑》刘润：理解事物运作本质规律比掌握技巧更重要</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>刘润在《底层逻辑》中强调：理解事物运作的本质规律比掌握技巧更重要。底层逻辑是应对复杂世界的思维框架，书中提出"事实-观点-立场-信仰"四层认知模型，以及"不是非黑即白而是程度问题"的灰度思维。2026年新版增加了AI时代商业底层逻辑变化的章节，上市首月销量超50万册。</p>
           <p><strong>深度分析：</strong>《底层逻辑》的畅销反映了市场对"可迁移思维框架"的强烈需求。在快速变化的时代，具体技巧的半衰期越来越短，而底层逻辑具有跨场景适用性。但"底层逻辑"本身也可能成为另一种教条，关键在于实践中不断修正和迭代。</p>
@@ -489,23 +489,23 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：机械工业出版社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民日报推荐48本书升级人生：从思维重塑到情绪自由的系统阅读路径</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民日报推荐48本书：从思维重塑到情绪自由的系统阅读路径</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>人民日报发布2026年度推荐书单48本，涵盖思维重塑、认知提升、情绪管理、历史洞察和科学素养五大板块。从《人生的智慧》到《活出生命的意义》，从《人类简史》到《 chaos 》，构建从认知升级到内心自洽的系统阅读路径。书单配有阅读顺序建议和每本书核心观点提炼。</p>
+          <p><strong>核心事件：</strong>人民日报发布2026年度推荐书单48本，涵盖思维重塑、认知提升、情绪管理、历史洞察和科学素养五大板块。从《人生的智慧》到《活出生命的意义》，从《人类简史》到《chaos》，构建从认知升级到内心自洽的系统阅读路径。书单配有阅读顺序建议和每本书核心观点提炼。</p>
           <p><strong>深度分析：</strong>人民日报推荐书单的影响力在于其"官方背书"效应，48本书的选择体现了主流价值观对"全面发展"的引导。系统阅读路径的设计比单本书推荐更有价值，反映了从碎片化阅读向体系化阅读回归的趋势。</p>
         </div>
         <div class="news-meta"><span class="src">来源：人民日报</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="思维">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>说服心理学与叙事构建核心在于共鸣，如何有效表达观点</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>说服心理学与叙事构建核心在于"共鸣"：如何识别话术陷阱</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>说服心理学研究表明，叙事构建的核心在于"共鸣"而非"说服"。有效的叙事需要建立情感连接、提供共同意义框架、引导而非强迫结论。2026年职场和社交中，传播能力决定影响力。相关公开课教授如何有效表达观点、构建令人信服的故事、识别他人话术陷阱等实用技能。</p>
           <p><strong>深度分析：</strong>在信息过载时代，纯粹的逻辑说服效果递减，情感共鸣成为影响力的关键杠杆。但叙事构建也是双刃剑，可用于善意沟通也可用于操控。培养叙事素养的同时也需要建立对操控性叙事的免疫力。</p>
         </div>
         <div class="news-meta"><span class="src">来源：心理学研究</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>原生家庭当分析工具而非宿命：用"努力万能论"否定其影响也是极端</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>原生家庭当分析工具而非宿命：正确态度是带着觉察去突破</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>关于原生家庭影响的讨论在2026年持续升温。心理学家指出两种极端都不可取：一是将原生家庭视为宿命，否定个人能动性；二是用"努力万能论"否定原生家庭的真实影响。正确态度是将原生家庭作为分析工具——理解其对自己认知模式和行为倾向的影响，然后有意识地进行调整和转化。</p>
           <p><strong>深度分析：</strong>原生家庭讨论的热度反映了社会对心理健康关注度的提升。将其作为"分析工具"的定位既避免了宿命论的消极，也避免了"努力万能论"的傲慢。这种平衡视角有助于个人在认清现实的基础上找到切实可行的成长路径。</p>
@@ -513,7 +513,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：心理科学进展</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>叔本华《人生的智慧》：闲暇是人生果实，真正快乐源于真正需求</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>叔本华《人生的智慧》：真正快乐源于真正需求，闲暇是人生果实</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>叔本华在《人生的智慧》中提出核心命题：真正的快乐源于真正的需求，闲暇是人生的果实。他认为人之所以为人，在于其有闲暇时间享受意识与个性的乐趣。书中区分了三类快乐：机体新陈代谢（吃喝）、肌肉力量（运动）和感受能力（思考、阅读、艺术），后者是人独有的高级快乐。</p>
           <p><strong>深度分析：</strong>在"996"和"内卷"的当下，叔本华对闲暇的强调具有特殊现实意义。他提醒我们：闲暇不是懒惰，而是享受精神生活的必要条件。但叔本华的精英主义倾向也需批判性看待——不同社会阶层的"闲暇"获取能力差异巨大。</p>
@@ -529,7 +529,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：认知科学期刊</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《学会提问》批判性思维训练：信息爆炸时代识别逻辑谬误</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《学会提问》批判性思维：在信息爆炸时代识别逻辑谬误</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>尼尔·布朗和斯图尔特·基利合著的《学会提问》被誉为批判性思维训练经典入门书。书中教授如何在信息爆炸时代识别逻辑谬误、评估证据质量、提出正确问题。核心方法包括：找出论题和结论、检验理由是否充分、识别价值观假设和描述性假设、评估推理中的谬误。2026年中文版修订新增AI生成内容识别章节。</p>
           <p><strong>深度分析：</strong>《学会提问》提供了批判性思维的"操作系统"，其方法可应用于从社交媒体信息到学术研究的一切场景。在AI生成内容泛滥的当下，"评估证据质量"的能力尤为关键——因为AI可以生成看似权威但实际错误的信息。</p>
@@ -537,7 +537,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：机械工业出版社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《活出生命的意义》弗兰克尔：探寻终极价值，实现内心自洽</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《活出生命的意义》弗兰克尔：即使极端环境人依然拥有选择态度的自由</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>维克多·弗兰克尔在《活出生命的意义》中基于奥斯维辛集中营经历提出意义疗法：即使在最极端的环境中，人依然拥有选择态度的自由。书中提出发现生命意义的三条路径：创造和工作（做有意义的事）、体验和爱（感受美好）、面对苦难的态度（在不可改变困境中选择姿态）。2026年该书全球销量突破1500万册。</p>
           <p><strong>深度分析：</strong>弗兰克尔的"终极自由"观点在后疫情时代引发强烈共鸣——当外部环境不可控时，人对态度的选择是最后的自由。意义疗法不同于享乐主义和虚无主义，它提供了一种在困境中保持尊严和动力的哲学框架。</p>
@@ -545,7 +545,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：华夏出版社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="思维">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>叙事构建识别他人话术陷阱：影响力构建与防御机制</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>叙事构建识别他人话术陷阱与影响力构建机制</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>叙事构建的核心在于"共鸣"，但也可成为操控工具。2026年社交传播研究总结了常见话术陷阱：框架效应（通过措辞引导判断）、虚假二选一（制造非此即彼）、诉诸情感（绕过逻辑直接打动情绪）、权威借用（借用不相关权威增加可信度）。学会识别这些陷阱是现代人必备的社交智慧。</p>
           <p><strong>深度分析：</strong>话术识别能力的价值在AI时代更加突出——AI可以生成极具说服力的叙事，但其底层逻辑可能存在偏见或错误。建立叙事免疫力不仅需要识别技巧，更需要理解叙事背后的利益结构和权力关系。</p>
@@ -561,7 +561,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：豆瓣阅读</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="成长">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>九十月思维训练季：掌握理性分析工具，在信息洪流中保持清醒</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>九十月思维训练季：掌握理性分析工具在信息洪流中保持清醒</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>秋季被认知科学社群称为"思维训练季"，多平台推出12周思维训练计划。训练内容包括：每日贝叶斯推理练习（用概率更新信念）、每周逻辑谬误识别挑战、双月一次反事实推理写作。参与者在训练前后进行标准化推理测试，平均提升37%的判断准确率。2026年参与人数超30万。</p>
           <p><strong>深度分析：</strong>思维训练社区化、游戏化的趋势降低了认知训练门槛。37%的提升效果证明思维能力确实可以通过刻意练习改善，而非天赋决定。这一模式可能对未来教育和职业培训产生深远影响。</p>
@@ -569,7 +569,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：思维训练社区</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>认知能力差验证高阶因素缓慢，导致认知成长速度也缓慢</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>认知能力较弱者验证高阶因素缓慢，形成认知成长恶性循环</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>认知心理学研究表明，认知能力较弱的人在验证更高层次因素时速度更慢，导致认知成长也相应缓慢，形成恶性循环。例如，面对"系统性思维"这一高阶认知，认知能力高的人可以通过少量案例快速验证并内化，而认知能力低的人需要大量重复才能理解，甚至永远停留在初级认知层。</p>
           <p><strong>深度分析：</strong>这一发现对教育具有重要意义：不同认知能力的学习者需要差异化的高阶认知训练方式。打破"认知能力差→验证慢→成长慢"的恶性循环，关键在于提供结构化的高阶思维脚手架，降低验证门槛。</p>
@@ -577,15 +577,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：认知心理学研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="思维">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>建立正确认知外部条件无法限制成长，行动模式是关键变量</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>建立正确认知和行动模式后，外部条件无法限制成长</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>成长型思维研究指出：一旦建立起正确的认知和行动模式，外部条件就无法限制成长。关键变量不在于起点资源，而在于认知框架（如何解读经历）和行动模式（如何回应挑战）。研究表明，在同等不利条件下，拥有成长型认知框架的人最终成就显著高于固定型思维者。</p>
           <p><strong>深度分析：</strong>"外部条件无法限制成长"并非否定不平等的存在，而是强调在给定条件下的最优策略。认知框架和行动模式是个人可以掌控的变量，聚焦于可控因素而非抱怨不可控环境，本身就是成长型思维的体现。</p>
         </div>
         <div class="news-meta"><span class="src">来源：斯坦福心理学</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="成长 深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《第二性》审视女性成长路径，挣脱外部定义的束缚</div>
+      <div class="news-item" data-tags="成长">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《第二性》波伏娃：审视女性成长路径，挣脱外部定义束缚</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>西蒙娜·德·波伏娃的经典著作《第二性》深度审视女性成长路径，核心命题"女人不是天生的，而是后天形成的"在2026年仍具深远影响。书中分析了社会文化如何将女性塑造为"他者"，以及女性如何通过经济独立、智力追求和主动选择挣脱外部定义的束缚，实现真正的自我认同。</p>
           <p><strong>深度分析：</strong>《第二性》的价值不仅在于其女性主义论述，更在于其"存在主义"哲学框架——人永远在"成为"的过程中，没有预设本质。这一框架不仅适用于女性成长，也为所有被社会标签束缚的人提供了解放性的思维方式。</p>
@@ -593,7 +593,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：上海译文出版社</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>思维活动来自客观世界感知非大脑臆想，认知科学回归实证</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>思维活动来自对客观世界感知，非大脑臆想的话术心理</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>中科院心理所最新研究强调：人类所有思维活动来自对客观世界的感知，而非大脑臆想出的话术心理。研究通过fMRI实验证实，抽象思维的形成依赖于感知经验的神经表征重组。这一发现反驳了"纯理性思考"的迷思，强调认知科学需要回归实证基础，所有思维训练应建立在丰富的感知经验之上。</p>
           <p><strong>深度分析：</strong>这一研究对"思维训练"产业具有警示意义——脱离感知经验的纯抽象训练效果有限。真正的认知提升需要"知行合一"，在实践中丰富感知经验，再从中提炼抽象认知。这也解释了为什么"读了很多书但过不好一生"——缺乏实践感知的认知是空洞的。</p>
@@ -609,7 +609,7 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'fem','全部')">全部</span> <span class="tag outline" onclick="filter(this,'fem','热门')">热门</span> <span class="tag outline" onclick="filter(this,'fem','权益')">权益</span> <span class="tag outline" onclick="filter(this,'fem','职场')">职场</span> <span class="tag outline" onclick="filter(this,'fem','深度')">深度</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="热门 权益">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>李冰冰发言2026再刷屏：结构性困境未改，公众对"真平等"渴望累积</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>李冰冰妇女节发言2026年再刷屏：结构性困境未改，公众对真平等渴望累积</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>李冰冰在2026年国际妇女节论坛上的发言视频再次刷屏全网。她直言"我们不需要被冠以'女王''女神'的称号来获得尊严，我们需要的是同工同酬和不被婚育状态定义的职场权利"。发言引发广泛共鸣，微博相关话题阅读量超20亿。评论认为发言刷屏的根本原因是现实中性别平等尚未完全实现。</p>
           <p><strong>深度分析：</strong>李冰冰发言的持续影响力来自其触及了真实痛点——招聘中的婚育歧视、职场晋升隐形天花板依然是女性普遍面对的结构性问题。公众对"真平等"的渴望在持续累积，每一次名人发声都可能成为情绪出口。</p>
@@ -617,7 +617,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：新浪微博</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="职场">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>招聘婚育歧视与职场隐形天花板：女性群体普遍面对的结构性问题</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>招聘中婚育歧视、职场晋升隐形天花板依然是女性普遍面对的现实问题</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年职场性别平等调查报告显示，68%的女性求职者在面试中被问及婚育计划，35%因婚育状态被拒。管理层女性占比仅27%，较去年仅提升1个百分点。科技行业女性占比不足30%，金融行业女性高管比例仅18%。尽管法律法规不断完善，隐性歧视仍是女性职场发展的核心障碍。</p>
           <p><strong>深度分析：</strong>数据表明，法律完善并未自动转化为职场平等。隐性歧视的根源在于生育成本主要由女性承担的社会结构，以及企业对"婚育成本"的规避。解决这一问题需要育儿假平等、企业性别多元化考核和社会育儿支持系统的系统性变革。</p>
@@ -625,7 +625,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：智联招聘</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门 深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>消费主义过度包装妇女节："女神节""女王节"被购物促销裹挟</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>消费主义过度包装妇女节：女神节女王节被购物促销裹挟需回归平权本质</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年妇女节期间，电商平台营销支出超500亿元，"女神节""女王节"等商业标签铺天盖地。社会学学者指出，消费主义将妇女节从平权纪念日异化为购物狂欢节，用"宠爱自己"的消费话术消解了节日背后的政治意义。社交媒体上#回归妇女节本义#话题阅读量超8亿，越来越多女性呼吁拒绝消费主义包装。</p>
           <p><strong>深度分析：</strong>消费主义对妇女节的包装是一种"软性消解"——通过赋予消费以"女性力量"的外衣，将结构性不平等转化为个人消费选择。真正的妇女节精神是争取平等权利，而非购买打折商品。拒绝"女神"标签回归"妇女"本义，本身就是一种觉醒。</p>
@@ -641,7 +641,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：联合国妇女署</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>全球妇女峰会纪念北京世妇会30周年：重振《北京宣言》和《行动纲领》</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>全球妇女峰会纪念北京世妇会30周年：重振北京宣言和行动纲领</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年全球妇女峰会在纽约联合国总部举行，纪念1995年北京世界妇女大会召开30周年。峰会核心精神是重振《北京宣言》和《行动纲领》——这两份文件仍是全球最全面的性别平等行动框架。来自190个国家的代表出席，峰会通过宣言承诺加速消除性别差距、加强法律保护和推动女性经济赋权。</p>
           <p><strong>深度分析：</strong>北京世妇会30周年是一个重要历史节点——30年来全球性别平等取得显著进步，但《行动纲领》的12个关键领域仍存在巨大差距。峰会的意义不仅在于纪念，更在于重振政治意愿，在全球保守主义回潮的背景下捍卫性别平等的共识。</p>
@@ -657,7 +657,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：纽约时报</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="职场">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>联合国妇女署"性别包容工作场所"项目招募，促进女性职业发展</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>联合国妇女署性别包容工作场所项目招募媒体合作机构</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>联合国妇女署启动"性别包容工作场所"项目中国区招募，面向50人以上企业开放申请。项目提供性别平等培训、薪酬审计工具、弹性工作制度指导和性别多元化指标体系建设支持。首批已有120家企业申请参与，包括多家科技和金融企业。参与企业将获得联合国妇女署认证标识。</p>
           <p><strong>深度分析：</strong>企业层面的性别包容实践是推动职场平等的关键抓手。该项目通过提供工具和认证激励企业行动，比法律强制更灵活但有效性依赖企业自愿程度。认证标识的声誉效应可能成为企业参与的动机，形成"好企业推动好实践"的良性循环。</p>
@@ -665,7 +665,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：联合国妇女署中国</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="权益">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>超6亿妇女深陷战乱冲突，约10%妇女和女童生活在极端困境中</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>超6亿妇女和女童深陷战乱冲突，约10%生活在极端困境</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>联合国报告显示，全球仍有超6亿妇女和女童深陷战乱冲突，约10%的妇女和女童生活在极端困境中。冲突地区性别暴力发生率是和平地区的3.5倍，女童失学率高达47%。报告呼吁国际社会将性别视角纳入冲突预防、和平建设和重建全过程，保障妇女在和平进程中的参与权。</p>
           <p><strong>深度分析：</strong>6亿妇女深陷冲突是一个被严重忽视的全球性危机。冲突对女性的影响具有结构性——不仅是直接暴力，还包括失学、被迫早婚、失去经济来源等连锁后果。将妇女纳入和平进程不仅是权利问题，更是和平可持续性的关键变量。</p>
@@ -673,7 +673,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：联合国报告</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>"女权主义者即渣女"标签化：通过道德绑架消解女性正当权益</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女权主义者即渣女标签化：通过道德绑架消解女性争取合法权益正当性</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>社交平台上"女权主义者即渣女"的标签化言论在2026年持续传播，引发社会讨论。社会学学者分析，将复杂平权诉求简化为私生活作风问题，本质是试图通过道德绑架来消解女性争取合法权益的正当性。这种标签化策略将公共议题私人化，回避了结构性不平等的核心矛盾。</p>
           <p><strong>深度分析：</strong>标签化是一种"话语策略"而非理性讨论——通过给女权主义者贴道德标签，使其论点无需被正面回应即可被否定。识别这种策略的关键在于区分"论点本身是否成立"与"论者个人生活如何"。将注意力引向后者是经典的"杀信使"策略。</p>
@@ -681,15 +681,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：社会学研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026新女学研究热点：加速妇女全面发展的理论建构与实践路径</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026年新女学研究热点：加速妇女全面发展的理论建构与实践路径</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年"新女学"研究成为学术热点，核心议题包括：数字时代的性别平等（AI偏见与性别数据鸿沟）、护理经济的社会价值重估、气候正义中的性别视角、交叉性理论的中国本土化。多所高校设立新女学研究中心，相关论文发表量同比增长65%。研究强调理论与实践并重，推动政策落地。</p>
           <p><strong>深度分析：</strong>"新女学"的热度反映了女性主义理论正在从批判走向建构——不仅分析"哪里不平等"，更探索"如何实现平等"。数字时代的性别平等是新女学的核心增量，AI偏见、算法歧视和性别数据鸿沟成为亟需研究的新议题。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国妇女报</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="职场 深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国女性主义经济学：2026高质量发展转型关键节点的理论机遇</div>
+      <div class="news-item" data-tags="职场">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国女性主义经济学：2026年高质量发展转型的理论机遇与本土化路径</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年被普遍认为是中国经济向高质量发展转型的关键节点，这为中国女性主义经济学提供了重要理论机遇。学者提出"护理经济GDP核算"倡议，建议将无偿家务和护理劳动纳入经济统计。研究显示，中国女性年均无偿劳动时间约为男性的2.5倍，折算经济价值超10万亿元。</p>
           <p><strong>深度分析：</strong>女性主义经济学的核心贡献在于揭示了传统经济学对"生产性劳动"的狭隘定义——无偿护理劳动被排除在GDP之外，但它是经济运行的基础。将其纳入核算不仅是统计问题，更是价值重估——承认护理劳动的社会价值是性别平等的经济基础。</p>
@@ -697,7 +697,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：经济研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="权益">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>追求男女平等成为国际共识，女性生存发展环境持续优化</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>追求男女平等已成为国际社会普遍共识，女性生存发展环境持续优化</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>联合国2026年全球性别平等进展报告显示，追求男女平等已成为国际社会普遍共识。全球女性平均预期寿命达76.2岁，较2000年提升5.3岁。女童小学入学率达90%，孕产妇死亡率下降43%。132个国家通过反家庭暴力法，89个国家实施同工同酬立法。但区域差异巨大，进展不均衡。</p>
           <p><strong>深度分析：</strong>数据表明全球性别平等在宏观层面取得显著进步，但平均数掩盖了深刻的区域差异。撒哈拉以南非洲和南亚地区进展滞后，冲突国家甚至出现倒退。性别平等不是线性进步，而是进步与反弹交替的过程，需要持续的投入和警惕。</p>
@@ -705,7 +705,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：联合国开发计划署</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>将复杂平权诉求简化为私生活问题，本质是消解女性正当权益</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>将复杂平权诉求简化为私生活作风问题本质是消解女性正当权益</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>传播学研究分析了一种常见的话语策略：将女性争取平等权利的公共议题诉求，转化为对女性个人私生活的审视和评判。例如，将要求同工同酬的诉求转化为"女权主义者是否生活幸福"的讨论。这种策略通过转移话题焦点，回避了对结构性不平等的正面对话。</p>
           <p><strong>深度分析：</strong>这种"私生活化"策略的危险在于其隐蔽性——它看似在讨论真实问题，实则在消解公共议题的严肃性。识别和对抗这种策略的关键在于坚持"论点优先于论者"的讨论原则，将注意力拉回结构性问题本身。</p>
@@ -713,7 +713,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：新闻与传播研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国际妇女节2026：冲突削弱法治，妇女和女童仅64%享有平等保护</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国际妇女节2026：冲突与政治紧张削弱法治，妇女仅64%享有平等保护</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年国际妇女节面临特殊背景：联合国报告指出，全球冲突和政治紧张削弱法治，妇女和女童仅64%享有平等法律保护，较2020年下降3个百分点。冲突地区女性面临法律保护真空，性别暴力追责率不足5%。报告呼吁将恢复法治和保护妇女作为冲突后重建的优先事项。</p>
           <p><strong>深度分析：</strong>64%的平等保护率是一个警示信号——全球性别平等进程面临倒退风险。冲突和威权主义回潮正在侵蚀数十年的进步成果。妇女节不应只是庆祝，更应是审视差距和重申承诺的时刻。法治是性别平等的底线保障，法治崩塌时女性首当其冲。</p>
@@ -721,15 +721,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：联合国人权理事会</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="职场">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>妇女权益法律保障完善但结构性挑战仍在，赋权取得显著进步</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>妇女权益法律保障完善，妇女赋权取得进步但结构性挑战仍在</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>全国妇联发布2026年中国妇女发展报告，指出妇女权益法律保障体系持续完善，反家庭暴力法、妇女权益保障法修订版实施效果显著。妇女赋权取得显著进步：女性就业率达60.5%，高等教育在校生占比52%，女性创业者比例提升至35%。但晋升天花板、薪酬差距和家务分配不均等结构性挑战依然存在。</p>
           <p><strong>深度分析：</strong>法律完善与结构性改变之间存在"最后一公里"鸿沟。法律提供了形式平等，但实质平等需要社会文化、企业实践和家庭分工的深层变革。进步显著但挑战仍在，这是对当前中国妇女发展状况最准确的概括。</p>
         </div>
         <div class="news-meta"><span class="src">来源：全国妇联</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="权益 深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>全球性别平等四大战略路径与三大持久变革推动力</div>
+      <div class="news-item" data-tags="权益">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>全球性别平等四大战略进展路径与三大持久变革推动力</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>联合国妇女署报告系统阐述了全球性别平等的四大战略路径：经济赋权（同工同酬、就业平等）、领导力参与（政治和企业决策层女性占比）、终结暴力侵害（法律保护、受害者支持）、气候行动中的性别平等。三大持久变革推动力：数据与统计系统、技术创新与数字包容、伙伴关系与融资。</p>
           <p><strong>深度分析：</strong>这一框架的价值在于其系统性和可操作性——四大路径覆盖了性别平等的核心维度，三大推动力提供了实现手段。将气候行动纳入性别平等框架是前瞻性创新，因为气候灾害对女性的影响不成比例。框架的落地需要各国根据自身阶段进行优先级排序。</p>
@@ -737,15 +737,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：联合国妇女署</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="深度">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>gender equality超越传统男女平等，涉及更广泛性别议题</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>gender equality表述已超越传统男女平等涉及更广泛性别议题</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>联合国文件中"gender equality"的表述引发国际讨论。学者指出，"gender equality"已超越传统"男女平等"范畴，涵盖性别认同、性别表达和性取向等更广泛议题。这一概念演进反映了性别理论的发展，但在不同文化和政治语境中引发不同程度的接受和抵制，成为国际性别平等讨论的核心争议点。</p>
           <p><strong>深度分析：</strong>"gender equality"概念的扩展既是理论进步也是政治争论焦点。扩展后的概念更具包容性，但也增加了达成共识的难度。不同国家对此概念的不同解读，本质反映了传统性别秩序与现代性别观念之间的深层张力。</p>
         </div>
         <div class="news-meta"><span class="src">来源：性别研究</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门 权益">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>李冰冰发言根本原因：性别平等未实现，公众对真平等渴望爆发</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>李冰冰发言根本原因：现实中性别平等尚未完全实现</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>李冰冰发言掀起刷屏讨论的根本原因是现实中性别平等尚未完全实现。在招聘歧视、晋升天花板、家务分配不均等结构性问题未解决的情况下，公众对"真平等"的渴望持续累积。名人发声成为一个"情绪出口"，将日常被压抑的不满转化为公开讨论。评论认为，与其关注"谁说了什么"，不如正视"为什么能引起共鸣"。</p>
           <p><strong>深度分析：</strong>每一次"刷屏"事件的社会学意义远超事件本身。李冰冰发言的共鸣效应是一面镜子，映射出社会对性别不平等的真实感受。将讨论焦点从"发言人"转向"结构性问题"，才是将公共讨论从情绪宣泄导向实质进步的关键。</p>
@@ -753,7 +753,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：澎湃新闻</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="职场">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>创造性别平等就业环境，推广性别包容工作场所实践</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>创造性别平等的就业环境，推广性别包容的工作场所实践</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>创造性别平等的就业环境已成为全球企业和组织的重要社会责任。2026年"性别包容工作场所"实践指南发布，核心建议包括：薪酬透明化（定期公布性别薪酬差距）、平等招聘流程（盲删简历中的性别信息）、弹性工作制度（不分性别的育儿假）、晋升渠道公平化（设定女性管理层比例目标）。</p>
           <p><strong>深度分析：</strong>性别包容工作场所的核心是"制度化"而非"意愿化"——依靠制度设计而非个人善意来保障平等。薪酬透明和育儿假平等是最具实效的两项措施。企业不仅需要"想做"，更需要"会做"，实践指南的价值在于提供可操作的方法论。</p>
@@ -761,7 +761,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：人力资源研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="权益">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性生存发展环境优化但区域差异存在，制度保障与文化变革双轮驱动</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性生存发展环境持续优化但区域差异和结构性障碍依然存在</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年中国女性发展白皮书显示，女性生存和发展环境持续优化，但区域差异和结构性障碍依然存在。东部地区女性就业率达65%，西部地区仅52%。城乡差异同样显著：城镇女性管理层占比29%，农村地区不足15%。实现真正的性别平等需要制度保障和文化变革的双轮驱动，单一维度推进效果有限。</p>
           <p><strong>深度分析：</strong>区域和城乡差异揭示了性别平等的"发展不平衡"问题——宏观进步不等于普惠进步。制度和法律解决"能不能"的问题，文化和观念解决"愿不愿"的问题。两者必须同步推进，制度保障为文化变革提供框架，文化变革为制度落实创造土壤。</p>
@@ -777,39 +777,31 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'news','全部')">全部</span> <span class="tag outline" onclick="filter(this,'news','热门')">热门</span> <span class="tag outline" onclick="filter(this,'news','国内')">国内</span> <span class="tag outline" onclick="filter(this,'news','国际')">国际</span> <span class="tag outline" onclick="filter(this,'news','社会')">社会</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="热门 国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>台风"白海豚"在浙江到福建北部沿海登陆，风雨影响十余省份</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>台风白海豚在浙江到福建北部沿海登陆，影响十余省份强风雨</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>今年第14号台风"白海豚"8月9日下午至10日早晨在浙江到福建北部沿海登陆，登陆时中心附近最大风力13级（38米/秒）。台风登陆后深入内陆，影响浙江、上海、江苏、福建、江西、安徽、湖北、湖南、河南、山东等十余省份，带来强风暴雨。多地启动防台风应急响应，转移群众超120万人。</p>
           <p><strong>深度分析：</strong>"白海豚"是今年以来影响范围最广的台风，十余省份的强风雨对交通、农业和城市运行造成显著影响。随着气候变化加剧，超强台风的频率和影响范围呈扩大趋势，沿海和内陆城市的防灾韧性面临考验。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中央气象台</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>台风影响十余省份强风雨，交通出行大面积受阻</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>受台风"白海豚"影响，浙江、福建、上海等地高铁停运超300列，航班取消超800架次。高速公路封闭路段累计超2000公里，宁波港、上海港暂停作业。国家发改委紧急下达救灾资金2亿元，应急管理部调拨救灾物资5万件。各地消防救援队伍前置力量2.6万人待命。</p>
-          <p><strong>深度分析：</strong>台风对交通和物流的大面积影响凸显了极端天气对经济运行的系统性风险。港口停运影响外贸供应链，高铁停运影响暑运客流。建立更加精细化的气象预警和交通调度联动机制，是提升城市韧性防灾能力的关键。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：央视新闻</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>应急管理部启动地质灾害四级应急响应，部署浙闽防范</div>
+      <div class="news-item" data-tags="社会">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>应急管理部针对浙江福建启动国家地质灾害四级应急响应</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>受台风"白海豚"强降雨影响，应急管理部针对浙江、福建启动国家地质灾害四级应急响应。要求两省做好地质灾害隐患排查、人员转移安置和应急救援准备。自然资源部发布地质灾害橙色预警，浙江东南部和福建东北部为高风险区域。已提前转移危险区域群众28万人。</p>
           <p><strong>深度分析：</strong>台风引发的次生地质灾害（滑坡、泥石流）往往比台风本身造成更大伤亡。四级应急响应的启动体现了"宁可十防九空"的防御理念。但山区农村的地质灾害监测能力和预警覆盖仍有短板，需持续加强。</p>
         </div>
         <div class="news-meta"><span class="src">来源：应急管理部</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="社会 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>河南三支一扶笔试作弊14.1万考生8月22日重考</div>
+      <div class="news-item" data-tags="国内">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>河南三支一扶笔试因作弊作废，14.1万考生8月22日重考</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>河南省"三支一扶"高校毕业生招募笔试因试题泄露和作弊行为被认定无效，14.1万名考生将于8月22日重新参加考试。公安部门已抓获涉嫌泄题和组织作弊的犯罪嫌疑人7名，案件正在深入调查。河南省人社厅向考生致歉，承诺重考将采用全新试题并加强安保措施，重考费用由财政承担。</p>
           <p><strong>深度分析：</strong>14万人重考是罕见的公共考试安全事故，暴露了考试组织的安保漏洞。泄题不仅造成巨大社会成本（考生时间、财政支出），更损害了公共招聘的公信力。此事件应成为完善考试安全制度的契机，从试题保管、传输到考场监控全面升级。</p>
         </div>
         <div class="news-meta"><span class="src">来源：河南省人社厅</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="社会">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>多地乡村排污乱象调查整改，湖南河北湖北成立联合调查组</div>
+      <div class="news-item" data-tags="热门 社会">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>多地乡村排污乱象曝光，湖南冷水江等地成立联合调查组整改</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>央视《财经调查》栏目曝光多地乡村排污乱象后，湖南冷水江、河北故城、湖北郧西分别发布通报，成立联合调查组全面整改。调查发现部分企业将工业废水直接排入农田灌溉渠道，造成土壤和地下水污染。三地已关停涉事企业12家，立案调查15人，启动受污染土地修复工程。</p>
           <p><strong>深度分析：</strong>乡村排污乱象是"污染下乡"的典型表现——城市环保监管趋严后，污染企业向监管薄弱的农村转移。媒体报道推动整改的模式有效但成本高，根本解决需要建立农村环境监测常态机制和跨区域环保执法协作。</p>
@@ -817,15 +809,39 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：央视财经</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月CPI上涨0.5%保供稳价政策有力有效，物价总体平稳</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月12日日全食天文现象引发关注，NASA辟谣"地球失重7秒"谣言</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>8月12日日全食天文现象引发全球关注，北美部分地区可见全食带。社交媒体上流传"日全食期间地球将失重7秒"的谣言，NASA官方辟谣称该说法毫无科学依据，日全食仅是月球遮挡太阳光的天文现象，对地球引力没有任何影响。多地天文台组织线上直播，观看人数超5000万。</p>
+          <p><strong>深度分析：</strong>"失重7秒"谣言的传播反映了科学素养与社交媒体传播力之间的鸿沟。NASA的及时辟谣是科学传播的正面案例，但也暴露了社交平台对伪科学内容审核的不足。日全食作为罕见天文现象，是科普教育的最佳契机，应充分利用公众关注度提升科学素养。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：NASA中文</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>英国首相伯纳姆公布一揽子政策振兴商业街，决策权下放地方社区</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>英国首相伯纳姆公布一揽子政策振兴商业街，核心措施包括：将商业街管理决策权下放地方社区、设立20亿英镑商业街复兴基金、降低小商铺租金和商业税率。政策目标是在三年内使全国500条主要商业街恢复活力，应对电商冲击和城市空心化。首批50条商业街将获得专项资金支持。</p>
+          <p><strong>深度分析：</strong>英国商业街衰退是全球性的"高街危机"缩影——电商冲击、消费习惯变化和城市化结构调整使传统商业街失去活力。决策权下放是关键创新，让社区而非中央政府决定商业街的未来。这一模式对中国城市更新和社区商业振兴也具参考价值。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：BBC中文</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门 国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>朝鲜谴责日本2026年版防卫白皮书是"再侵略白皮书"</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>朝鲜官方媒体发表评论，强烈谴责日本2026年版防卫白皮书，称其为"再侵略白皮书"。白皮书大幅增加防卫预算规划，强化日美同盟，并将朝鲜列为"重大威胁"。朝鲜方面表示，日本扩充军备的实质是为重新侵略做准备，呼吁国际社会警惕日本军国主义复苏。韩国外交部也表达了对白皮书涉韩内容的不满。</p>
+          <p><strong>深度分析：</strong>日本防卫白皮书引发朝鲜和韩国同时批评，反映了东北亚安全格局的复杂性和历史遗留问题的持续影响。日本扩军策略在地区内引发安全困境——一国的安全增强可能被他国视为威胁，从而引发军备竞赛。地区多边安全对话机制的缺失使紧张局势难以缓解。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：环球时报</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="国内">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月CPI同比上涨0.5%，保供稳价政策有力有效</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>国家统计局公布7月CPI同比上涨0.5%，保供稳价政策持续有力有效。食品中猪肉价格同比下降6.2%，鲜菜价格上涨3.5%。非食品中服务价格上涨0.8%，反映服务业消费回暖。核心CPI上涨0.6%，扣除波动较大的食品和能源后通胀趋势温和。全国居民消费价格环比上涨0.3%。</p>
           <p><strong>深度分析：</strong>CPI数据反映当前物价环境温和可控，为货币政策保持宽松提供了空间。猪肉价格下降减轻了食品通胀压力，但需关注下半年猪周期反转风险。服务业价格回暖是内需修复的积极信号。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国家统计局</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="社会 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>游客从察尔汗盐湖带走盐块引热议，景区回应不建议</div>
+      <div class="news-item" data-tags="社会">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>游客从青海察尔汗盐湖带走盐块纪念品引热议，景区不建议</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>有游客在社交平台分享从青海察尔汗盐湖旅游后带回"盐块纪念品"的视频，引发热议。景区回应称不建议游客带走盐块，盐湖是国家级矿产资源和生态保护区，个人带走虽不违法但破坏自然景观。环保人士呼吁文明旅游，尊重自然。该话题在微博阅读量超3亿。</p>
           <p><strong>深度分析：</strong>"带走盐块"虽是小事，但折射出公众自然保护意识的薄弱。盐湖不仅是旅游资源，更是生态系统和矿产资源。景区的"不建议"而非"禁止"反映了管理上的灰色地带，应通过更明确的标识和引导提升游客环保意识。</p>
@@ -833,15 +849,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：澎湃新闻</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>伊朗阿曼霍尔木兹海峡通行协议接近达成，影响全球能源运输</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>伊朗与阿曼接近达成霍尔木兹海峡通行协议影响全球能源运输</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>伊朗与阿曼谈判代表透露，两国已就霍尔木兹海峡通行协议达成95%共识，预计两周内正式签署。协议将建立联合巡逻机制、通行费标准和争议解决渠道。全球约20%石油运输经由霍尔木兹海峡，协议达成将降低地缘政治风险溢价。布伦特原油期货在消息公布后下跌2.3%。</p>
           <p><strong>深度分析：</strong>霍尔木兹海峡通行协议如能达成，将显著降低全球能源运输的地缘风险。中国作为最大石油进口国将是主要受益方。但协议执行受伊朗与西方关系制约，可持续性需要持续观察。</p>
         </div>
         <div class="news-meta"><span class="src">来源：路透社</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="国际 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>特朗普称海峡协议尚未正式达成，但海峡"某种程度上"已开放</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>特朗普称霍尔木兹海峡重新开放协议尚不能说已正式达成</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>美国总统特朗普就霍尔木兹海峡通行协议表示"尚不能说已经正式达成"，但补充说海峡目前"某种程度上"已开放。特朗普的表态为协议前景增添了不确定性。美国国务院发言人随后澄清，美国支持保障航行自由但不会参与伊朗-阿曼双边协议，将"密切监控"执行情况。</p>
           <p><strong>深度分析：</strong>特朗普的模糊表态反映了美国对霍尔木兹海峡协议的矛盾心态——既希望降低油价缓解通胀压力，又不愿在伊朗问题上显得软弱。美国的"不参与但监控"立场为协议执行留下了干预空间，地缘不确定性仍是油价变量。</p>
@@ -849,7 +865,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：环球时报</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>公安部网安局公布15起涉汛谣言案例，严厉打击灾情造谣</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>公安部网安局再次公布15起涉汛涉灾网络谣言案例</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>公安部网安局再次公布15起涉汛涉灾网络谣言案例，涉及编造灾情、伪造伤亡数据、传播救援不实信息等行为。15名造谣者被依法行政处罚，其中3人被刑事拘留。公安部强调将严厉打击利用灾情散布谣言、博取流量的行为，呼吁公众从官方渠道获取灾情信息。</p>
           <p><strong>深度分析：</strong>灾情谣言不仅制造社会恐慌，还可能干扰救援资源调配。公安部连续公布案例体现了"以案释法"的治理思路。但谣言治理不能仅靠事后处罚，建立灾情信息实时透明发布机制才是减少谣言空间的根本之道。</p>
@@ -857,7 +873,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：公安部</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="社会">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国防部征兵办印发职业道德准则，规范征兵工作</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国防部征兵办公室印发征兵工作人员职业道德准则</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>国防部征兵办公室印发《征兵工作人员职业道德准则》，从廉洁征兵、规范操作、服务态度等六个方面规范征兵工作人员行为。准则明确"六个严禁"，包括严禁吃拿卡要、严禁弄虚作假、严禁泄露征兵信息等。同时开通征兵违纪举报热线和网络举报平台，接受社会监督。</p>
           <p><strong>深度分析：</strong>征兵工作的廉洁性和规范性关乎军队形象和国防建设。职业道德准则的发布填补了征兵工作人员行为规范的制度空白。举报平台的开通将社会监督引入征兵过程，有助于从源头保障兵员质量。</p>
@@ -865,47 +881,39 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：国防部网</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>四川阿坝专场新闻发布会举行，展示"十五五"起步奋进新气象</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>四川省人民政府新闻办公室举行"万千气象看四川·起步奋进'十五五'"阿坝专场新闻发布会。阿坝州委书记介绍阿坝在生态保护、文旅融合、清洁能源和特色农业方面的发展成就和"十五五"规划。2026年上半年阿坝州旅游收入增长25%，清洁能源装机突破1000万千瓦，生态产品价值实现机制试点取得突破。</p>
-          <p><strong>深度分析：</strong>阿坝州的发展路径是"绿水青山就是金山银山"理念的实践样本——通过生态旅游和清洁能源将生态优势转化为经济优势。生态产品价值实现机制的突破具有示范意义，为生态保护区探索了可复制的发展模式。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：四川发布</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月经济数据小幅反弹韧性增强，市场信心逐步修复</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8月多项经济数据小幅反弹，经济韧性增强</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>8月公布的多项经济数据显示经济韧性增强：7月出口同比增长25%、CPI上涨0.5%、物流景气指数回升至50.4%。制造业PMI为50.2%，重回扩张区间。社零同比增长4.5%，服务消费增长8.2%。多项数据小幅反弹表明稳增长政策效果正在显现，市场信心逐步修复。</p>
           <p><strong>深度分析：</strong>8月经济数据的反弹是"温和复苏"的体现——幅度不大但方向积极。出口超预期和消费回暖是两大亮点，但房地产投资仍在下降，经济复苏尚不平衡。三季度若能延续复苏势头，全年5.5%增长目标有望实现。</p>
         </div>
         <div class="news-meta"><span class="src">来源：经济日报</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民币汇率创42个月新高，外资增持中国资产</div>
+      <div class="news-item" data-tags="热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民币对美元即期汇率创42个月新高</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>8月8日人民币对美元即期汇率收报7.0532，创42个月以来新高。外资增持人民币资产规模显著增加，北向资金近一月净流入超500亿元。中美利差收窄和美联储降息预期是推动人民币走强的外部因素，中国经济基本面改善是内部支撑。央行表示将保持汇率在合理均衡水平基本稳定。</p>
-          <p><strong>深度分析：</strong>人民币走强有利于降低进口成本和吸引外资，但过快升值可能影响出口竞争力。央行或在7.0附近进行市场操作平衡节奏。美联储降息周期开启将进一步支撑人民币，年内有望测试7.0关口。</p>
+          <p><strong>核心事件：</strong>8月11日人民币对美元即期汇率收盘报6.7442，创2023年2月以来新高。外资增持人民币资产规模显著增加，北向资金近一月净流入超500亿元。中美利差收窄和美联储降息预期是推动人民币走强的外部因素，中国经济基本面改善是内部支撑。央行表示将保持汇率在合理均衡水平基本稳定。</p>
+          <p><strong>深度分析：</strong>人民币走强有利于降低进口成本和吸引外资，但过快升值可能影响出口竞争力。央行或在6.7附近进行市场操作平衡节奏。美联储降息周期开启将进一步支撑人民币，年内有望测试6.7关口。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国外汇</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>上半年AI新设企业增长28%，产业活力持续释放</div>
+      <div class="news-item" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>暑期消费与夜间经济产业政策推进，商务部文旅部发布阶段性举措</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>国家统计局数据显示，上半年生成式人工智能领域新设企业增长28.0%，新设企业集中在AI应用开发、模型服务和数据标注三大领域。北京、上海、深圳、杭州四城新设AI企业占比超60%。AI核心产业规模有望全年突破1.2万亿元，大模型广泛落地制造业和服务业。</p>
-          <p><strong>深度分析：</strong>AI新设企业增长28%反映产业活力持续释放，但增速较去年放缓（2025年同期45%），说明行业从野蛮生长进入理性发展。应用层创业占比提升是积极信号，表明AI商业化正在加速。</p>
+          <p><strong>核心事件：</strong>商务部和文旅部联合发布暑期消费与夜间经济阶段性举措，包括延长夜间公共交通运营时间、发放夜间消费券5亿元、支持30个城市打造夜间经济示范区。措施还涵盖暑期文旅消费季、体育消费节和数字消费券等。首批15个夜间经济示范城市已启动建设，预计带动消费超2000亿元。</p>
+          <p><strong>深度分析：</strong>夜间经济和暑期消费是扩大内需的重要抓手，政策从供给侧（示范区建设）和需求侧（消费券）双管齐下。30个城市的示范效应将形成可复制的模式。但夜间经济的成功需要交通配套、安全保障和营商环境协同推进，政策落地效果取决于地方执行力。</p>
         </div>
-        <div class="news-meta"><span class="src">来源：国家统计局</span><span>2026年8月</span></div>
+        <div class="news-meta"><span class="src">来源：商务部</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="社会">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>暑运铁路4.32亿人次，交通消费持续回暖</div>
+      <div class="news-item" data-tags="国内">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>暑运过半全国铁路累计发送旅客4.32亿人次</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>暑运过半，全国铁路累计发送旅客4.32亿人次，同比增长12.5%。日均发送旅客超720万人次，高峰日突破900万。高铁客流占比超75%，京沪、京广、沪昆等主干线客流恢复明显。铁路部门累计增开列车超2万列。旅游城市和热门景区方向车票紧张，暑运出行需求旺盛。</p>
           <p><strong>深度分析：</strong>暑运客流量大幅增长反映了出行和消费需求的回暖，高铁占比持续提升说明交通消费升级。但台风"白海豚"对8月中下旬暑运可能造成影响，全年客流增长仍取决于后续天气和经济恢复。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国铁集团</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>药品集采65种采购成功，中选价格平均降58%</div>
+      <div class="news-item" data-tags="社会">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新一批国家组织药品集采开标65种药品采购成功</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>新一批国家组织药品集采开标，65种药品采购成功，涵盖抗肿瘤、慢性病、罕见病等治疗领域。中选价格平均降幅58%，最高降幅92%，预计每年节约药费支出超300亿元。常见慢性病用药如二甲双胍、阿托伐他汀等降价显著。罕见病用药纳入集采是本轮亮点，首批15种罕见病用药中选。</p>
           <p><strong>深度分析：</strong>集采持续扩面提质是医改重要成果，58%的平均降幅进一步降低患者负担。罕见病用药纳入集采是重大进步，但需关注中选药品的供应稳定性和质量保障。集采后部分原研药企退出市场对竞争格局的长期影响也需评估。</p>
@@ -913,28 +921,20 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：国家医保局</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>四部门健全金融机构治理，保险业保费收入超3万亿</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>金融监管总局等四部门联合发文健全金融机构治理，从股权管理、关联交易、内控合规和信息披露四方面提出新要求。同时公布保险业上半年原保险保费收入超3万亿元，同比增长7.5%。行业运行总体平稳，偿付能力充足率保持在合理区间。文件强调强化金融机构股东穿透监管。</p>
-          <p><strong>深度分析：</strong>健全金融机构治理是防范系统性金融风险的基础工程。股东穿透监管直指"隐性股东"和"资本嵌套"等乱象。保险业3万亿保费反映行业稳健发展，但低利率环境下的投资收益压力仍是挑战。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：金融监管总局</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>海关总署高水平开放促外贸，通关效率持续提升</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>海关总署署长在发布会上强调以高水平开放促进外贸高质量发展。2026年上半年全国进口整体通关时间为36.2小时，较去年压缩15%；出口通关时间2.8小时，压缩12%。海关推广"提前申报""两步申报"等便利化措施，新增跨境电商综试区15个，AEO高级认证企业突破5000家。</p>
-          <p><strong>深度分析：</strong>通关效率提升直接降低外贸企业物流成本和时间成本，是营商环境优化的重要指标。跨境电商综试区扩围和AEO认证企业增加为中小外贸企业提供了更多便利化通道，有助于稳外贸和培育贸易新业态。</p>
-        </div>
-        <div class="news-meta"><span class="src">来源：海关总署</span><span>2026年8月</span></div>
-      </div>
-      <div class="news-item" data-tags="社会">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>北京移动5G-A超级上行网络部署，开启首都千兆上行新时代</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>北京移动联合中兴通讯部署5G-A超级上行网络</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>北京移动联合中兴通讯规模部署5G-A超级上行网络，在北京核心城区和亦庄经开区率先商用。5G-A超级上行技术将上行峰值速率提升至1Gbps，较传统5G提升5倍，时延降低至10ms以内。该网络可支持8K直播、AI实时推理和工业远程控制等高上行需求场景，为北京数字经济提供基础设施支撑。</p>
           <p><strong>深度分析：</strong>5G-A超级上行的商用标志着移动通信从"下行为主"向"上下行均衡"演进，满足了直播经济和AI应用对上行带宽的爆发性需求。北京的率先部署将带动其他城市跟进，5G-A网络升级有望成为2026年下半年运营商资本开支重点。</p>
         </div>
         <div class="news-meta"><span class="src">来源：通信世界</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>日本2026年版防卫白皮书强化与美同盟引发国际社会谴责</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>日本发布2026年版防卫白皮书，大幅强化日美同盟框架，将防卫预算提升至GDP的2.5%。白皮书新增"西南诸岛防卫强化"专章，扩大对朝鲜和中国军事动向的描述篇幅。白皮书发布后，朝鲜谴责其为"再侵略白皮书"，韩国表达不满，中国外交部表示严重关切并敦促日方反省历史。</p>
+          <p><strong>深度分析：</strong>日本防卫白皮书的升级反映了其安全战略从"专守防卫"向"积极威慑"的转变。2.5%的防卫预算目标将使日本成为全球第三大军费国。白皮书引发多国谴责说明历史记忆在东亚安全格局中仍扮演重要角色。日美同盟的强化可能加剧地区安全困境，多边对话机制的缺失使紧张局势难以缓解。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：共同社</span><span>2026年8月</span></div>
       </div>
   </div>
 </div>
@@ -945,7 +945,7 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'hist','全部')">全部</span> <span class="tag outline" onclick="filter(this,'hist','热门')">热门</span> <span class="tag outline" onclick="filter(this,'hist','近代')">近代</span> <span class="tag outline" onclick="filter(this,'hist','古代')">古代</span> <span class="tag outline" onclick="filter(this,'hist','人物')">人物</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="近代 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>四渡赤水遵义战役胜利，红军士气大振打击蒋介石嫡系</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>四渡赤水：遵义战役胜利鼓舞红军士气，蒋介石亲赴重庆指挥围攻</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>遵义战役的胜利极大地鼓舞了红军士气，狠狠打击了蒋介石嫡系部队的气焰。中央红军二渡赤水后，于1935年2月底再占遵义，歼灭和击溃敌军2个师又8个团，俘敌约3000人。这是红军长征以来最大的一次胜利，缴获大量武器弹药，极大地改善了红军装备。蒋介石闻讯后震怒，飞抵重庆亲自指挥围攻。</p>
           <p><strong>深度分析：</strong>遵义战役的胜利不仅在军事上重创敌军，更在政治上验证了遵义会议后新军事领导集体的正确性。这场胜利是四渡赤水系列战役的关键节点，为后续的军事奇迹奠定了士气和物质基础。</p>
@@ -953,7 +953,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：党史博采</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代 人物">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>哈密顿1805年出生：传说级神童，少年时代精通十几种语言</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>1805年8月4日爱尔兰数学家哈密顿出生，22岁被聘天文学教授</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>爱尔兰数学家威廉·罗恩·哈密顿1805年8月4日出生。他是传说级神童：少年时代精通十几种语言，13岁就能阅读阿拉伯语、波斯语和梵语。17岁自学微积分和牛顿《自然哲学的数学原理》，22岁还在读大学时就被聘为都柏林三一学院天文学教授。他是19世纪最伟大的数学家之一，在光学、力学和代数领域均有开创性贡献。</p>
           <p><strong>深度分析：</strong>哈密顿的天才不仅体现在语言和数学能力，更在于他跨越学科边界整合知识的能力。从语言到数学再到物理的跨学科思维，使他能够发现光学与力学之间的数学同构——哈密顿力学至今仍是理论物理的基础框架。</p>
@@ -961,23 +961,23 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：数学史话</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>1843年哈密顿顿悟四元数刻布鲁姆桥，数学史最浪漫发现</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>1843年哈密顿在都柏林运河边散步顿悟四元数，当场刻在布鲁姆桥石墩上</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>1843年10月16日，哈密顿在都柏林运河边散步时突然顿悟四元数公式 i²=j²=k²=ijk=-1，当场把公式刻在了布鲁姆桥的石墩上。他苦思十几年才突破这一发现——四元数是第一个非交换代数系统，打破了"ab=ba"的千古铁律。那块刻痕至今还在，布鲁姆桥成为全球数学爱好者的"朝圣地"。</p>
           <p><strong>深度分析：</strong>四元数的发现不仅是数学突破，更是认知革命——它打破了"乘法必须可交换"的先入之见，为后来向量代数、矩阵理论和量子力学开辟了道路。哈密顿的"顿悟"并非偶然，而是十几年持续思考的质变，是"长期积累+瞬时灵感"的典型范例。</p>
         </div>
         <div class="news-meta"><span class="src">来源：科学史研究</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="古代 人物 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辛弃疾五十骑夜捣金营复仇：深秋无月衔枚裹蹄沿濉水而下</div>
+      <div class="news-item" data-tags="古代 人物">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辛弃疾率五十骑夜捣金营：张安国杀耿京降金后的传奇复仇</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>张安国与邵进密谋杀耿京降金后，金人悬赏万金缉拿耿京旧部。辛弃疾闻讯后没有哭泣，而是召集王世隆等五十骑，在深秋无月的夜晚衔枚而行、马蹄裹布，沿濉水夜袭金营。五十骑突入数万人的金军大营，生擒叛徒张安国，押解南归献俘临安。此举震动朝野，辛弃疾时年23岁。</p>
           <p><strong>深度分析：</strong>辛弃疾五十骑破万军是中国军事史上以少胜多的经典战例，其成功关键在于极致的隐蔽性（衔枚裹蹄）和精确的情报（内应指认）。这不仅是一次军事行动，更是一位文人"醉里挑灯看剑"的英雄本色展现，塑造了辛弃疾词作中壮志未酬的深沉底色。</p>
         </div>
         <div class="news-meta"><span class="src">来源：宋史研究</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>高宗建康召见耿京使节，授耿京天平军节度使辛弃疾掌书记</div>
+      <div class="news-item" data-tags="近代">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>高宗在建康召见耿京使节，授耿京天平军节度使辛弃疾掌书记</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>南宋绍兴三十二年（1162年），高宗赵构在建康（今南京）召见耿京所遣使节，授耿京天平军节度使，辛弃疾授右承务郎掌书记。朝廷正盼北人响应抗金，对耿京起义军给予高规格待遇。使团北返行至海州时噩耗追来——耿京已被张安国、邵进密谋杀害，两人携印降金。这一变故直接引发了辛弃疾的复仇行动。</p>
           <p><strong>深度分析：</strong>高宗召见耿京使节是南宋对北方抗金力量的重要拉拢举措，但耿京被杀使得这一努力付诸东流。从使节南下到噩耗北传的时间差，揭示了信息传递迟缓对历史进程的影响——如果消息更快，辛弃疾的传奇复仇可能不会发生。</p>
@@ -985,7 +985,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：建炎以来系年要录</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="近代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>1935年蒋介石飞重庆指挥围攻，面对数十万大军红军应对</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>1935年3月2日蒋介石由南昌飞抵重庆亲自指挥对中央红军围攻</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>1935年3月2日，蒋介石由江西南昌飞抵重庆，亲自指挥对中央红军的围攻。他调集湘军、川军、滇军和中央军共约40万兵力，试图在长江以南围歼3万红军。面对数十万大军的重新集结，中央红军在毛泽东指挥下采取四渡赤水的机动战术，在敌军缝隙中穿插迂回，最终成功跳出包围圈。</p>
           <p><strong>深度分析：</strong>蒋介石亲赴重庆督战反映了其对围歼红军的决心，但高度集中的指挥反而限制了各路部队的协同效率。毛泽东的四渡赤水正是利用了敌军各部之间的猜忌和协调间隙，以运动战对抗阵地战，展现了卓越的军事智慧。</p>
@@ -993,7 +993,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：军史档案</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="人物">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>赵章成两用迫击炮：红军神炮手的军史传奇</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>赵章成与两用迫击炮的故事：军史文物中的传奇</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>赵章成是红军著名神炮手，他的"两用迫击炮"故事是军史文物中的传奇。赵章成精通迫击炮曲射和平射两种射击方式，在长征中多次以极少量炮弹精准摧毁敌军碉堡和机枪阵地。在强渡大渡河时，赵章成用仅剩的3发炮弹全部命中对岸敌军阵地，为渡河部队打开通路。他的迫击炮至今陈列在军事博物馆。</p>
           <p><strong>深度分析：</strong>赵章成的传奇不仅是个人技艺的展现，更折射了红军在极端劣势下的资源约束——弹药极其有限倒逼出极致精准。两用迫击炮的战术创新说明，在装备不足的条件下，人的创造力和技艺可以部分弥补物质差距。</p>
@@ -1001,7 +1001,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：军史博览</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>高志凯430个名字的邕宁旧档：追溯历史中的人物命运</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>高志凯翻阅430个名字的邕宁旧档，追溯历史中的人物命运</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>高志凯在广西邕宁档案馆翻阅一份430个名字的旧档，这是一份民国时期的户籍名册，记录了430个普通人的姓名、年龄、籍贯和职业。通过交叉比对其他史料，高志凯追溯了其中数十人在大时代中的命运浮沉——有人从军北伐、有人下南洋谋生、有人在战乱中失踪。这份旧档成为窥见大时代下个体命运的微观窗口。</p>
           <p><strong>深度分析：</strong>430个名字的旧档提醒我们，历史不只是帝王将相的宏大叙事，更是无数普通人命运的总和。微观史学的价值在于还原"被宏大叙事淹没的声音"，让历史从抽象走向具体。每一个名字背后都是一个完整的人生。</p>
@@ -1009,7 +1009,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：历史档案</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门 近代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>党史军史红色记忆四渡赤水：中央红军的军事奇迹</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>党史军史系列节目《红色记忆》四渡赤水：中央红军的军事奇迹</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>央视党史军史系列节目《红色记忆》专题回顾四渡赤水。1935年1月至3月，中央红军在毛泽东指挥下四渡赤水河，在40万敌军围追堵截中灵活机动、声东击西，最终跳出了敌人的包围圈。一渡赤水西进川南，二渡赤水回师遵义，三渡赤水佯动惑敌，四渡赤水南渡乌江。全程约两个月，行程千余里，被毛泽东本人称为"平生得意之笔"。</p>
           <p><strong>深度分析：</strong>四渡赤水是运动战的巅峰之作，其核心不是"渡河"本身而是"信息差"的创造和利用——通过不断变换方向使敌军无法判断红军真实意图。这一战役奠定了毛泽东在红军中的军事权威，也为后续北上抗日战略的实施创造了条件。</p>
@@ -1017,7 +1017,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：央视纪录片</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代 人物">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辛弃疾王世隆五十骑衔枚：深秋夜无月的军事传奇细节</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辛弃疾召集王世隆等五十骑乘夜直捣金营，深秋夜无月衔枚而行</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>辛弃疾召集王世隆等五十骑，乘夜直捣金营。行动细节极其精密：选择深秋无月之夜（最大隐蔽）、衔枚而行（防止出声）、马蹄裹布（消除蹄声）、沿濉水而下（利用水声掩盖）。五十骑突入金营后分头行动——一组吸引注意，辛弃疾率精锐直扑张安国帐篷，生擒后迅速撤离。全程不到一个时辰，金军数万兵马竟未能有效拦截。</p>
           <p><strong>深度分析：</strong>辛弃疾夜袭金营的战术细节堪称古代特种作战的经典范例——隐蔽渗透、精确打击、快速撤离三要素齐备。五十骑的成功不是蛮勇，而是情报、时机和执行力的完美结合。这也说明辛弃疾不仅是词人，更是具备实战能力的军事指挥官。</p>
@@ -1025,7 +1025,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：宋史·辛弃疾传</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="近代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中央红军二渡赤水打击嫡系：遵义战役的关键转折</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中央红军二渡赤水后狠狠打击蒋介石嫡系部队气焰</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>1935年2月18日至21日，中央红军二渡赤水，回师黔北。此时敌军判断红军将北渡长江，兵力北调。红军突然回师，在桐梓、娄山关和遵义一带歼灭和击溃敌军2个师又8个团，取得遵义战役大捷。此战狠狠打击了蒋介石嫡系吴奇伟纵队，俘敌约3000人，缴枪2000余支，是红军长征以来最大胜利。</p>
           <p><strong>深度分析：</strong>二渡赤水的精妙在于"声东击西"——一渡赤水西进造成北渡长江假象，敌军兵力北移后突然回师东进，打了一个时间差。遵义战役的胜利不仅军事上重创敌军，更在政治上确立了毛泽东军事路线的威信，是遵义会议后新领导集体的关键"考试"。</p>
@@ -1033,7 +1033,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：长征史</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>张安国邵进杀耿京降金：背叛引发辛弃疾传奇复仇</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>张安国与邵进密谋杀耿京降金，金人悬赏万金</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>耿京起义军内部发生叛变，张安国与邵进密谋杀害耿京，携印降金。金人悬赏万金缉拿耿京旧部。当时辛弃疾正随使团南下建康朝见高宗，使团北返行至海州时噩耗追来。耿京是山东抗金义军首领，拥兵二十余万，其被杀使北方抗金力量遭受重大打击。张安国的背叛直接引发了辛弃疾五十骑夜捣金营的传奇复仇。</p>
           <p><strong>深度分析：</strong>张安国的背叛是个人野心与外部诱降的结合，其后果不仅是一位领袖的死亡，更是北方抗金力量的瓦解。从因果链看，这次背叛成就了辛弃疾的军事传奇——如果没有张安国的叛变，辛弃疾可能终生只是耿京麾下的一名掌书记，中国文学史将失去一位伟大的爱国词人。</p>
@@ -1041,7 +1041,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：金史</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="人物">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>哈密顿传说级神童精通十几种语言，22岁被聘天文学教授</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>威廉哈密顿：传说级神童，少年时代精通十几种语言</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>威廉·哈密顿是数学史上的传说级神童。他1805年生于爱尔兰都柏林，3岁能读英文，5岁开始学习拉丁语、希腊语和希伯来语，到13岁已精通十几种语言包括阿拉伯语、波斯语、梵语、马来语等。17岁自学微积分和牛顿力学，21岁发表光学论文引发学界轰动，22岁尚未毕业就被聘为都柏林三一学院天文学教授兼爱尔兰皇家天文学家。</p>
           <p><strong>深度分析：</strong>哈密顿的语言天赋与数学天赋之间存在深层联系——两者都涉及对"符号系统"的敏感和驾驭。他的跨语言能力训练了抽象符号操作的思维肌肉，为后来发明四元数这一全新代数系统奠定了认知基础。天才的"跨界"往往不是偶然。</p>
@@ -1049,7 +1049,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：爱尔兰数学史</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>四元数发现苦思十几年顿悟：哈密顿的数学突破之路</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>四元数的发现：哈密顿苦思十几年后在布鲁姆桥上顿悟的数学突破</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>哈密顿从1829年开始思考三维代数推广问题，苦思十几年未能突破。他后来回忆，核心困难在于试图保持乘法的交换性（ab=ba）。1843年10月16日散步时，他突然意识到可以放弃交换律——令ij=-ji，整个体系豁然贯通。他当场将公式刻在布鲁姆桥上。四元数的发现开辟了现代代数新领域，直接影响向量分析和量子力学。</p>
           <p><strong>深度分析：</strong>哈密顿的突破在于"放弃一个假设"——乘法不必可交换。这一认知突破的难度在于交换律被视为"天然正确"，放弃它需要极大勇气。这启示我们：很多科学突破不是"发现新东西"而是"放下旧假设"。十年的积累加上一瞬的勇气，成就了数学史上最浪漫的发现。</p>
@@ -1057,7 +1057,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：数学发现心理学</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="近代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>遵义战役鼓舞红军士气：长征重大转折点</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>遵义战役的胜利极大地鼓舞了红军士气打击了敌人</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>遵义战役的胜利极大地鼓舞了红军士气，狠狠打击了敌人的气焰，是红军长征中的重大转折点。此战之前，红军在湘江战役中损失惨重，士气低落。遵义战役歼敌2个师又8个团，是长征以来最大胜仗，不仅缴获大量物资补充了给养，更重要的是证明了毛泽东运动战思想的正确性，为四渡赤水的后续行动奠定了信心基础。</p>
           <p><strong>深度分析：</strong>遵义战役的意义远超军事层面——它是遵义会议后新领导集体的"首战"，胜利证明了会议决策的正确性。从湘江惨败到遵义大捷，红军从被动挨打转为主动出击，这一转变不仅是战术变化，更是领导力和战略思维的质变。</p>
@@ -1065,23 +1065,23 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：长征研究</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>历史上的8月5日：多个重要事件回顾</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>历史上的8月：多个重要历史事件回顾</div>
         <div class="news-detail">
-          <p><strong>核心事件：</strong>历史上的8月5日发生过多件重要事件：25年刘秀称帝建立东汉；1100年亨利一世加冕英格兰国王；1305年苏格兰民族英雄威廉·华莱士被处决；1583年汉弗莱·吉尔伯特在纽芬兰建立英国首个海外殖民地；1962年曼德拉被捕入狱；1963年美英苏签署部分禁止核试验条约。这些事件跨越两千年，串联起人类文明的关键节点。</p>
-          <p><strong>深度分析：</strong>"历史上的今天"不仅是知识回顾，更是一种历史思维方式——通过同一时间点的多事件对比，感受历史的偶然与必然。8月5日的多个事件展示了政治、军事和外交维度的交织，提醒我们历史不是单线叙事而是多线交响。</p>
+          <p><strong>核心事件：</strong>历史上的8月发生过多件重要事件：25年刘秀称帝建立东汉；1100年亨利一世加冕英格兰国王；1305年苏格兰民族英雄威廉·华莱士被处决；1583年汉弗莱·吉尔伯特在纽芬兰建立英国首个海外殖民地；1805年数学家哈密顿出生；1843年哈密顿顿悟四元数；1962年曼德拉被捕入狱；1963年美英苏签署部分禁止核试验条约。这些事件跨越两千年，串联起人类文明的关键节点。</p>
+          <p><strong>深度分析：</strong>"历史上的今天"不仅是知识回顾，更是一种历史思维方式——通过同一时间点的多事件对比，感受历史的偶然与必然。8月的多个事件展示了政治、军事和科学维度的交织，提醒我们历史不是单线叙事而是多线交响。</p>
         </div>
         <div class="news-meta"><span class="src">来源：历史上的今天</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国历史故事上下五千年诵读：贴合青少年认知特点</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国历史故事与中华上下五千年经典诵读，贴合青少年认知特点</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年新版《中华上下五千年经典诵读》出版，内容从盘古开天到辛亥革命，精选200个历史故事，贴合青少年认知特点。新版增加"历史思考"板块，每个故事后设置开放性问题引导批判性思维，而非简单灌输。配有有声书和动画短片，以多媒体形式提升阅读体验。入选教育部中小学推荐书目。</p>
           <p><strong>深度分析：</strong>历史教育的核心不是记忆史实而是培养历史思维。新版增加"历史思考"板块是重要进步——从"告诉你发生了什么"转向"引导你思考为什么"。批判性历史教育有助于培养青少年的独立思考能力，避免历史沦为简单的爱国主义工具。</p>
         </div>
         <div class="news-meta"><span class="src">来源：人民教育出版社</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="人物">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>耿京南归使节北返海州噩耗：辛弃疾闻讯起兵复仇</div>
+      <div class="news-item" data-tags="近代 人物">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>耿京南归：使团北返行至海州噩耗追来</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>耿京派辛弃疾等南行建康朝见高宗后，使团北返行至海州（今江苏连云港）时噩耗追来——耿京已被张安国、邵进密谋杀害，两人携印降金。辛弃疾闻讯后没有哭泣退缩，而是当场召集王世隆等五十骑，决定深入金境生擒叛徒。从海州到金营有数百里之遥，五十骑穿越敌境，上演了传奇复仇。</p>
           <p><strong>深度分析：</strong>辛弃疾在海州闻讯后的反应——不哭而反——塑造了他一生的英雄底色。从文官掌书记到军事行动指挥者，这一转变展现了辛弃疾文武兼备的全才特质。使团北返至海州的地理位置也很关键——海州是宋金边境的前沿，从那里出发突袭金营具有地理可行性。</p>
@@ -1089,7 +1089,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：宋史纪事本末</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="近代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>红军面对蒋介石督战数十万大军：四渡赤水的生死博弈</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>红军面对蒋介石亲自督战和数十万大军重新集结的应对</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>面对蒋介石亲赴重庆督战和40万大军重新集结，3万中央红军面临生死存亡。毛泽东指挥红军四渡赤水，在敌军缝隙中穿插：一渡赤水西进川南避其锋芒，二渡赤水回师黔北打其不备，三渡赤水佯动惑敌误判方向，四渡赤水南渡乌江跳出包围。全程以少胜多、以慢打快，被军事学家誉为"运动战的巅峰"。</p>
           <p><strong>深度分析：</strong>四渡赤水的成功要素有三：情报优势（红军破译了敌军电报）、决策灵活（毛泽东力排众议多次改变方向）、执行力强（红军急行军能力远超敌军预期）。蒋介石的集中指挥反而成为弱点——各路部队等待南京指令，错失战机。这一战役启示我们：在复杂博弈中，决策速度和灵活性比资源体量更重要。</p>
@@ -1097,7 +1097,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：军事科学院</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="古代">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辛弃疾马蹄裹布沿濉水夜袭：古代特种作战的战术典范</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>马蹄裹布沿濉水而下：辛弃疾五十骑夜袭金营的战术细节</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>辛弃疾五十骑夜袭金营的战术细节被后世反复研究。行动选择深秋无月之夜确保最大暗度；衔枚而行防止士兵出声；马蹄裹布消除蹄声；沿濉水而行利用水声掩盖移动声音。进入金营后分两组：一组佯攻吸引注意，辛弃疾率精锐直扑张安国帐。生擒后不恋战，立即撤离。全程不到一个时辰，金军数万人竟未能组织有效拦截。</p>
           <p><strong>深度分析：</strong>辛弃疾夜袭金营是古代特种作战的教科书级案例，体现了隐蔽渗透、精确打击和快速撤离三大特种作战原则。战术成功的关键不是兵力优势而是信息优势——辛弃疾通过内应掌握了张安国营帐位置和金军换防规律。这也说明，在冷兵器时代，智谋和情报的价值不亚于兵力。</p>
@@ -1113,7 +1113,7 @@ a{color:var(--accent);text-decoration:none}
   <div class="tags"><span class="tag active" onclick="filter(this,'ecom','全部')">全部</span> <span class="tag outline" onclick="filter(this,'ecom','热门')">热门</span> <span class="tag outline" onclick="filter(this,'ecom','平台')">平台</span> <span class="tag outline" onclick="filter(this,'ecom','政策')">政策</span> <span class="tag outline" onclick="filter(this,'ecom','趋势')">趋势</span></div>
   <div class="news-list">
       <div class="news-item" data-tags="热门 平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抖音电商上半年GMV增速近20%，存量竞争下稳步领跑</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抖音电商2026上半年GMV增速近20%，存量竞争下稳步领跑</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>抖音电商2026年上半年GMV增速近20%，在存量竞争格局下稳步领跑行业大盘。华泰证券估算抖音电商GMV同期增长约15%至20%，总GMV突破2.2万亿元。直播电商贡献超60% GMV，货架电商（商城和搜索）贡献提升至35%。流量红利见顶是最根本挑战，抖音通过提升复购率和客单价对冲增速放缓。</p>
           <p><strong>深度分析：</strong>抖音电商近20%的增速在存量市场中表现优异，但较2024年40%以上的增速明显放缓。从"流量驱动"转向"留存驱动"是抖音电商的战略转型方向，货架电商占比提升是关键信号。能否在直播之外构建可持续的搜索购物习惯，将决定抖音电商的天花板。</p>
@@ -1121,7 +1121,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：华泰证券</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>淘宝天猫京东个位数增长，抖音拼多多以20%-30%增速领先</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>淘宝天猫和京东陷入个位数增长，抖音拼多多以20%-30%增速领先</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年上半年电商格局持续洗牌：淘宝天猫GMV同比增长约4%，京东增长约3%，均为个位数增长甚至部分月份负增长。与之形成鲜明对比，抖音电商增速近20%，拼多多增速约25%。拼多多市值一度超越阿里巴巴，成为中国市值最高电商公司。传统电商巨头正面临增长瓶颈和用户流失双重压力。</p>
           <p><strong>深度分析：</strong>传统电商个位数增长反映了"货架电商"模式的天花板——用户增长见顶、客单价提升困难、佣金率承压。抖音以内容驱动交易和拼多多以低价驱动交易的模式正在分流传统电商用户。淘宝和京东的突围方向在于差异化供应链和会员体系深化。</p>
@@ -1129,7 +1129,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>第三届香港好物节超280品牌参与，新增潮玩专区</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>第三届香港好物节8月1日至20日登陆淘宝京东抖音，超280品牌参与</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>第三届香港好物节8月1日至20日登陆淘宝、京东和抖音三大平台，超280个品牌参与，数量创新高。新增潮玩玩具专区，覆盖食品保健品、个护化妆品、潮玩文创等品类。香港品牌合计发放优惠券价值超2亿元。开幕首周日均销售额同比增长65%，潮玩和保健品是最热门品类。</p>
           <p><strong>深度分析：</strong>香港好物节的增长反映了内地消费者对香港品牌的持续兴趣，潮玩专区的增设抓住了Z世代消费趋势。三大平台同步举办体现了"全域电商"的协作理念。对香港品牌而言，内地市场仍是核心增长引擎。</p>
@@ -1137,7 +1137,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：香港贸发局</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>电商法修正案征求意见截止，直播带货和平台责任新规范</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>电商法修正案征求意见截止，行业法规进一步完善</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>电商法修正案征求意见于8月10日截止，收到反馈意见超2万条。修正案主要变化：直播带货纳入"电子商务经营者"范畴，主播需承担商品质量连带责任；平台对第三方卖家资质审核义务加重，违规需承担先行赔付责任；跨境电商保税进口监管规则细化。预计修正案将于年底前正式通过。</p>
           <p><strong>深度分析：</strong>电商法修正案的核心变化是"直播带货合规化"和"平台责任强化"。将主播纳入电商经营者范畴意味着直播带货不再是"法外之地"，对行业生态将产生深远影响。平台先行赔付责任加大了运营成本但有助于消费者保护，合规能力将成为平台竞争的新维度。</p>
@@ -1145,7 +1145,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：全国人大财经委</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>直播电商从流量狂欢到价值深耕：行业进入精耕细作阶段</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026下半年直播电商从流量狂欢转向价值深耕</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>2026年下半年直播电商行业从"流量狂欢"转向"价值深耕"。数据显示，头部主播带货额占比从2024年的35%下降至25%，品牌自播占比提升至40%。商家更注重复购率和客单价而非GMV单次爆发。直播电商从"折扣清仓"工具进化为"品牌建设"渠道，内容质量和供应链能力成为核心竞争力。</p>
           <p><strong>深度分析：</strong>直播电商的"去头部化"是行业成熟的标志——过度依赖头部主播的模式不可持续。品牌自播占比提升意味着直播从"渠道"变为"能力"，商家需要自建直播团队而非简单付费请主播。这一转型对MCN机构冲击最大，头部主播的议价能力将持续下降。</p>
@@ -1153,7 +1153,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：艾瑞咨询</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门 平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多商品描述不符专项治理，覆盖实物和虚拟商品</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多发布商品描述不符违规专项治理公告，覆盖实物和虚拟商品</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>拼多多发布《关于加强商品描述不符违规行为专项治理的公告》，针对商品信息发布中的描述不符、虚构商品、误导性宣传等问题开展专项治理。治理范围覆盖实物商品和虚拟商品，违规商家将面临商品下架、店铺降权和限制提现等处罚。首批已处理违规店铺超1.2万家，下架商品超15万件。</p>
           <p><strong>深度分析：</strong>拼多多的专项治理是平台"品质升级"战略的关键一环——从低价竞争转向"高性价比"需要商品质量保障。描述不符是消费者投诉最多的电商问题，拼多多的高调治理向商家传递了"品质红线"信号。但治理力度与商家生态的平衡是长期挑战。</p>
@@ -1161,7 +1161,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：拼多多官方</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>宜家接入京东秒送朴朴接入淘宝闪购，即时零售版图扩大</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>宜家全面接入京东秒送，朴朴接入淘宝闪购，即时零售版图扩大</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>宜家中国全面接入京东秒送平台，消费者可在京东下单宜家家居商品，1小时内送达。同时，区域生鲜零售商朴朴超市接入淘宝闪购，覆盖福州、厦门、广州等6城。即时零售版图持续扩大，预计2026年即时零售市场规模突破2万亿元，同比增长35%。家居、生鲜、3C成为即时零售增速最快的品类。</p>
           <p><strong>深度分析：</strong>宜家和朴朴的接入标志着即时零售从"餐饮外卖"扩展到"全品类即时配送"。京东秒送和淘宝闪购的竞争实质是"本地零售数字化平台"之争。即时零售正在重塑线下零售的竞争格局——不接入平台的实体店面临客流流失压力。</p>
@@ -1169,7 +1169,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：零售老板内参</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抖音分级费率商品卡免佣新政出台，商家运营成本调整</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抖音分级费率与商品卡免佣新政出台，商家运营成本结构调整</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>抖音电商发布分级费率与商品卡免佣新政。分级费率按照商家服务质量和商品品质将商家分为A/B/C三级，A级商家佣金率降低1-2个百分点，C级商家提高2-3个百分点。商品卡免佣政策允许商家通过商品卡（非直播）成交的订单免除佣金，鼓励商家发展货架电商。新政9月1日起执行，预计影响超500万商家。</p>
           <p><strong>深度分析：</strong>分级费率是抖音电商从"统一收费"走向"精准定价"的关键一步，优质商家享受更低成本有利于生态健康。商品卡免佣政策直指货架电商发展——抖音正通过费率杠杆引导商家从"纯直播"转向"直播+货架"双轮驱动。</p>
@@ -1177,7 +1177,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：抖音电商</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>微信小店8月增量激励与虚拟类目新规发布</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>微信小店8月增量激励与8月7日虚拟类目新规发布</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>微信小店发布8月增量激励政策与8月7日虚拟类目新规。增量激励政策对GMV环比增长超15%的商家给予流量和现金双重奖励，最高可达50万元。虚拟类目新规将虚拟商品（会员卡、充值卡、数字内容）纳入规范管理，要求资质审核和保证金制度。微信小店上半年GMV突破3000亿元，增速超60%。</p>
           <p><strong>深度分析：</strong>微信小店的增量激励政策反映了其快速扩张策略——通过真金白银补贴抢夺商家。60%的增速使其成为电商赛道增长最快的平台之一。虚拟类目新规则是合规化的必要一步，虚拟商品的高投诉率需要更严格的管理框架。微信小店的社交电商模式正在跑通。</p>
@@ -1185,7 +1185,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：微信开放平台</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>地方财政补贴投向拼多多3C，政策助力电商消费升级</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>地方财政补贴首度投向拼多多3C，政策助力电商消费升级</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>多地地方政府首次将消费补贴投向拼多多3C品类，消费者购买手机、电脑等3C产品可获10%-15%财政补贴。这是地方财政补贴首次覆盖拼多多平台，此前主要面向淘宝和京东。首批参与省份包括广东、浙江、四川，补贴总额超5亿元。政策发布首周拼多多3C品类销售额增长80%。</p>
           <p><strong>深度分析：</strong>地方财政补贴覆盖拼多多标志着其平台地位获得官方认可，也反映了政府对电商消费升级的全面支持。3C品类是高客单价标杆品类，补贴3C既拉动消费又促进数码产品更新换代。但财政补贴的可持续性和公平性值得关注。</p>
@@ -1193,7 +1193,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：各省商务厅</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>淘系超级88今晚20:00付定金，大促节奏持续推进</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>淘系超级88大促付定金，大促节奏持续推进</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>淘系"超级88"大促于8月8日晚20:00正式开启付定金环节。今年超级88推出"跨店满300减50"和"88VIP额外95折"叠加优惠，参与商品超500万件。大促首日GMV同比增长12%，3C数码、美妆和家居是最热品类。淘宝同步推出"先用后付"和"0元试用"新服务提升转化率。</p>
           <p><strong>深度分析：</strong>超级88是淘宝下半年最重要的造节大促，12%的增长在低基数下仍显疲态。88VIP的额外折扣是淘系会员经济的核心杠杆——通过会员特权提升复购和客单价。"先用后付"等服务创新比单纯降价更可持续，是平台差异化竞争的方向。</p>
@@ -1201,7 +1201,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：淘宝网</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东七鲜小厨综艺同款即时零售爆款，内容与零售融合加速</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东七鲜小厨综艺同款即时零售爆款，内容电商与零售融合加速</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>京东七鲜超市推出"七鲜小厨"综艺同款即时零售爆款，与热门美食综艺联名打造独家食材套餐，消费者下单后30分钟送达。首月销售突破5000万元，联名款调味品和食材包复购率达42%。七鲜计划将"综艺同款"模式扩展至10档综艺节目，打造内容电商差异化壁垒。</p>
           <p><strong>深度分析：</strong>京东七鲜的"综艺同款"策略是内容电商与即时零售的创新融合——将综艺流量直接转化为即时消费。30分钟送达的即时性是关键差异化要素，使"看到即买到"成为可能。这一模式如果跑通，可能成为超市零售的新增长路径。</p>
@@ -1209,15 +1209,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：京东零售</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东生鲜真鲜品牌联盟20亿，多省份落地包销万亩基地</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东生鲜启动真鲜品牌联盟，多省份落地生鲜包销规模超20亿元</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>京东生鲜启动"真鲜品牌联盟"，计划在广东、山东、云南、新疆等多省份落地生鲜农产品包销，规模超20亿元。联盟首批成员包括50个生鲜品牌和200个农产品基地，京东建立万亩专属基地聚焦产地供应链直控。通过"产地直采+京东冷链+品牌联盟"模式，目标将生鲜损耗率从15%降至8%。</p>
           <p><strong>深度分析：</strong>京东生鲜的"真鲜品牌联盟"是供应链深度控制的战略——从平台走向产业链上游。20亿包销规模和万亩基地建设体现了京东对生鲜品类的重投入。降低损耗率是生鲜电商盈利的关键变量，如果从15%降至8%，将显著改善生鲜业务利润率。</p>
         </div>
         <div class="news-meta"><span class="src">来源：京东生鲜</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="趋势 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多千亿扶持升级2026多多好特产，助力农产品供应链</div>
+      <div class="news-item" data-tags="趋势">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多千亿扶持升级2026多多好特产，助力农产品供应链提质增效</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>拼多多"千亿扶持"计划全面升级为"2026多多好特产"，投入100亿元专项扶持农产品供应链提质增效。计划覆盖全国500个农产品主产区，扶持1万个农产品品牌，建立从产地到消费者的直连通道。首批已有3000个农产品品牌入驻，橙子、芒果、大闸蟹等品类销售额同比增长超50%。</p>
           <p><strong>深度分析：</strong>拼多多的"多多好特产"是其农业供应链战略的深化——从"补贴消费者"扩展到"扶持供应链"。100亿投入和500个主产区的覆盖体现了系统性思维。农产品品牌化是提升附加值的关键路径，拼多多的平台流量和物流基础设施为农产品上行提供了底层支撑。</p>
@@ -1233,7 +1233,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：美团外卖</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>郑州私域电商生态博览会1000渠道，私域电商成新增长点</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中国郑州私域电商生态博览会汇聚1000+渠道，私域电商成新增长点</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>中国（郑州）私域电商生态博览会8月举行，汇聚超1000个私域渠道、500家供应链企业和3万名专业买家。博览会聚焦私域电商（微信群、企业微信、小程序商城）的生态建设，设置供应链选品、私域运营工具和直播带货三大展区。2026年上半年私域电商规模突破8000亿元，增速超40%。</p>
           <p><strong>深度分析：</strong>私域电商40%的增速远超公域电商个位数增长，成为电商赛道最强劲的增量来源。私域的核心优势是"免佣金+高复购"——商家通过微信生态直接触达用户，无需向平台支付高额流量费。但私域运营能力门槛较高，规模化难度大，未来可能形成"公域拉新+私域留存"的双轨模式。</p>
@@ -1241,7 +1241,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：河南省商务厅</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东乡村振兴奔富计划2.0启动，消费帮扶项目落地</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东发布乡村振兴奔富计划2.0，启动消费帮扶项目</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>京东发布乡村振兴"奔富计划2.0"，在原版"带动百万农户增收"基础上升级为"消费帮扶+产业赋能+人才培育"三位一体模式。计划在100个乡村振兴重点县落地，建设50个产地仓和20个京东农场。2026年目标带动农产品销售超500亿元，培训农村电商人才10万名。首期已在贵州、甘肃、新疆启动。</p>
           <p><strong>深度分析：</strong>京东"奔富计划2.0"从"帮卖"升级为"帮建"——通过产地仓和京东农场深入产业链上游，提升农产品标准化和品质。50个产地仓的建设是供应链基础设施投入，将显著降低农产品上行的物流成本。10万名农村电商人才的培训具有长期社会价值。</p>
@@ -1249,7 +1249,7 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：京东公益</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>涉农电商高质量发展新阶段：规范直播带货深耕产地供应链</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>涉农电商迈入高质量发展新阶段：规范农产品直播带货深耕产地供应链</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>农业农村部发布《涉农电商高质量发展指导意见》，标志着涉农电商进入新阶段。核心措施包括：规范农产品直播带货（建立主播资质审核和品质承诺制度）、深耕产地供应链（建设1000个农产品数字化产地仓）、推进农产品标准化分级和品牌化建设。目标到2028年农产品网络零售额突破1.5万亿元。</p>
           <p><strong>深度分析：</strong>涉农电商从"野蛮生长"进入"规范发展"的新阶段。规范直播带货是回应近年来农产品直播中虚假宣传和质量问题的治理举措。1000个数字化产地仓的目标体现了供应链基础设施的战略投入。农产品标准化和品牌化是提升附加值的核心路径，也是涉农电商从"走量"到"提质"的关键。</p>
@@ -1257,14 +1257,15 @@ a{color:var(--accent);text-decoration:none}
         <div class="news-meta"><span class="src">来源：农业农村部</span><span>2026年8月</span></div>
       </div>
       <div class="news-item" data-tags="平台">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多新拼姆自营布局农产品电商，探索新业务模式</div>
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多旗下新拼姆自营布局农产品电商，新业务模式探索</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>拼多多旗下"新拼姆"自营业务正式布局农产品电商，探索"平台自营+产地直采+品牌化运营"的新业务模式。新拼姆首批上线200个自营农产品SKU，覆盖水果、蔬菜、肉禽和加工食品。通过自建采购团队和冷链物流，新拼姆目标将农产品交付损耗控制在5%以内。这是拼多多首次大规模试水自营业务。</p>
+          <p><strong>深度分析：</strong>新拼姆的自营模式是拼多多从"纯平台"向"平台+自营"转型的标志，反映了其对供应链深度控制的战略意图。自营农产品可以保证品质但运营成本更高，与拼多多"轻资产平台"的基因存在张力。这一实验如果成功，可能改变拼多多的商业模式底层逻辑。</p>
         </div>
         <div class="news-meta"><span class="src">来源：拼多多商业</span><span>2026年8月</span></div>
       </div>
-      <div class="news-item" data-tags="趋势 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>亚马逊被新泽西州起诉涉嫌垄断，平台反垄断持续升级</div>
+      <div class="news-item" data-tags="热门 政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>亚马逊被美国新泽西州起诉涉嫌快递市场买方垄断</div>
         <div class="news-detail">
           <p><strong>核心事件：</strong>美国新泽西州总检察长对亚马逊提起反垄断诉讼，指控其利用平台支配地位压迫第三方卖家、操控价格和阻碍竞争。诉讼核心指控包括：强制卖家使用亚马逊物流服务、惩罚在竞争平台低价销售的卖家、利用卖家数据开发竞品。新泽西州成为继加州、华盛顿特区后第三个起诉亚马逊的州。亚马逊股价当日下跌2.1%。</p>
           <p><strong>深度分析：</strong>多州接连起诉亚马逊反映了美国平台反垄断的持续升级。诉讼结果可能迫使亚马逊调整卖家政策，如取消最惠国条款和物流强制要求。这对中国跨境电商卖家是双刃剑——可能降低平台佣金成本，但也可能影响平台流量分配规则。全球电商平台的反垄断监管正在趋同收紧。</p>
@@ -1289,6 +1290,6 @@ function filter(el,cardId,tag){
 }
 function navTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'});var btns=document.querySelectorAll('.nav-btn');btns.forEach(function(b){b.classList.remove('active');if(b.textContent.includes(id.charAt(0).toUpperCase()+id.slice(1)))b.classList.add('active');});}
 </script>
-<!-- cache-bust: 2026-08-11T08:00:00 -->
+<!-- cache-bust: 2026-08-12T09:00:00 -->
 </body>
 </html>
