@@ -89,12 +89,13 @@ a{color:var(--accent);text-decoration:none}
     <button class="nav-btn" onclick="navTo('news')">🌍 新闻资讯</button>
     <button class="nav-btn" onclick="navTo('hist')">📜 历史资讯</button>
     <button class="nav-btn" onclick="navTo('ecom')">🛒 电商资讯</button>
+    <button class="nav-btn" onclick="navTo('baby')">👶 母婴</button>
   </div>
 </div>
 
 <div class="header">
   <h1>📊 每日热点工作台</h1>
-  <div class="date">2026年8月13日 星期四 · 7大分类 · 140+条精选资讯</div>
+  <div class="date">2026年8月13日 星期四 · 8大分类 · 160+条精选资讯</div>
 </div>
 
 <div class="grid">
@@ -1339,9 +1340,177 @@ a{color:var(--accent);text-decoration:none}
   </div>
 </div>
 
+  <!-- ====== 母婴 / 育儿 ====== -->
+<div class="card" id="baby">
+  <div class="card-hd"><span class="card-ic">👶</span><span class="card-title">母婴 / 育儿</span></div>
+  <div class="tags"><span class="tag active" onclick="filter(this,'baby','全部')">全部</span> <span class="tag outline" onclick="filter(this,'baby','热门')">热门</span> <span class="tag outline" onclick="filter(this,'baby','孕产')">孕产</span> <span class="tag outline" onclick="filter(this,'baby','育儿')">育儿</span> <span class="tag outline" onclick="filter(this,'baby','好物')">好物</span></div>
+  <div class="news-list">
+      <div class="news-item" data-tags="热门 孕产">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>多地延长产假与育儿假落地，生育支持政策进入"精细化"阶段</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>截至8月，全国已有超过20个省份陆续出台延长产假、增设育儿假及配偶护理假的具体细则，部分城市将育儿假天数与子女数量挂钩。多地同步明确假期期间的社保补贴由用人单位所在地财政分级承担，减轻企业用人成本。政策执行口径趋于统一，一线用工单位已开始更新内部考勤制度。</p>
+          <p><strong>深度分析：</strong>从"鼓励生育"到"可落地的假期保障"，地方政策正在从口号走向可执行细则。配套的成本分担机制是关键，若财政补贴到位，企业抵触情绪有望缓解。下一步真正的挑战在于灵活就业人群与新就业形态劳动者的权益覆盖。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：国家卫健委</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门 育儿">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>普惠托育服务扩面提速，社区"嵌入式"托育点成新趋势</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>今年中央财政继续安排普惠托育专项补助，多地以社区为依托建设"15分钟托育圈"，将托育点嵌入社区党群服务中心与闲置物业。部分试点城市普惠托位价格较市场机构低三成以上，排队入园现象有所缓解。行业数据显示上半年新增备案普惠托位同比明显增长。</p>
+          <p><strong>深度分析：</strong>嵌入式托育降低了场地与获客成本，是普惠化最现实的路径。但师资供给与卫生安全仍是短板，未来监管重心应从"建得多"转向"管得好"。社区托育能否可持续，取决于运营补贴能否长期稳定。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国妇幼保健协会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="热门 好物">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>婴幼儿配方奶粉新国标实施一周年，市场加速向头部集中</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>配方奶粉新国标落地满一年，对蛋白质、维生素及必需成分的含量与检测方法提出更严要求，中小品牌因配方注册与检测成本上升而陆续退出。头部国产品牌市占率持续抬升，进口品牌则通过跨境电商维持高端份额。终端零售价整体平稳，促销力度较去年收窄。</p>
+          <p><strong>深度分析：</strong>新国标实质抬高了行业门槛，长期有利于品质与口碑沉淀。国产替代的拐点已经出现，但消费者信任仍需靠持续的透明溯源来巩固。未来竞争将从"配方参数"转向"供应链与安全叙事"。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：母婴行业观察</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母乳喂养宣传周启动，职场背奶与公共场所母婴室覆盖率受关注</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>2026年世界母乳喂养周期间，多地卫健部门发起"暖链行动"，重点推动用人单位设置母乳储存与哺乳空间。第三方评估显示，大型商场、交通枢纽的母婴室配置率已超过八成，但中小型写字楼与产业园仍是短板。部分城市将母婴设施纳入文明城市考核指标。</p>
+          <p><strong>深度分析：</strong>母乳喂养率提升不能只靠倡议，更需要物理空间与制度兜底。职场背奶妈妈的真实困境在通勤与会议密集场景中尤为突出。把母婴室从"有"变成"好用"，是衡量城市友好度的细微标尺。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="孕产">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>产后康复纳入多地医保门诊统筹讨论，盆底与乳腺护理需求上升</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>随着生育政策配套推进，部分城市医保部门开始研究将产后42天复查、盆底功能评估等基础项目纳入门诊统筹的可行方案。民营产后康复机构扩张明显，但服务标准与定价差异较大，消费投诉集中在过度营销。行业协会正牵头制定康复服务规范。</p>
+          <p><strong>深度分析：</strong>产后康复从"可选消费"走向"健康刚需"，反映女性健康意识提升。医保能否覆盖应优先保基本、防过度医疗化。规范化的核心在于区分医疗行为与商业服务，避免把焦虑当成生意。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国妇幼保健协会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>0-3岁科学育儿指南修订，强调"回应性照护"替代超前训练</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>权威机构发布新版0-3岁养育照护指南，将"回应性照护"和亲子互动列为核心，明确不推荐对婴幼儿进行超前识字、刷题式训练。指南建议家长通过游戏、共读与稳定陪伴促进发育，并提供分月龄的互动建议。多地早教机构据此调整课程方向。</p>
+          <p><strong>深度分析：</strong>育儿理念正从"抢跑焦虑"回归儿童发展规律，这是专业共识的胜利。但商业早教的惯性很强，家长仍需要可操作的日常方法而非抽象原则。政策与科普要合力，才能把理念变成家庭里的真实行为。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：国家卫健委</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="好物 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母婴国货品牌上半年增长强劲，纸尿裤与洗护品类份额反超进口</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>行业报告显示，2026年上半年国产母婴品牌在纸尿裤、婴童洗护两大品类线上份额首次超过进口品牌，主打性价比与成分透明的产品受到年轻父母欢迎。新锐品牌通过短视频与私域运营快速起量，传统国际大牌则加大本土化研发。渠道端，内容电商贡献了主要增量。</p>
+          <p><strong>深度分析：</strong>国货崛起背后是供应链成熟与新一代父母的务实消费观。但份额领先不等于品牌护城河牢固，复购与口碑才是关键。未来比拼的是研发沉淀，而非单纯的流量打法。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：天猫国际</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>儿童早期教育去"学科化"，亲子阅读与户外游戏重回主流</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>在"双减"向低龄延伸的背景下，多地叫停面向3岁以下幼儿的学科类培训，鼓励幼儿园与社区开展亲子阅读、自然探索等活动。家长社群中"自然养育""慢养育"话题热度上升，户外装备与绘本销量走高。部分城市图书馆增设低幼亲子阅读专区。</p>
+          <p><strong>深度分析：</strong>早教去学科化顺应了儿童认知发展规律，也缓解了家庭的教育焦虑。但需求不会消失，可能转向更隐蔽的形式。真正要解决的，是家长对"不落后"的深层不安。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国教育报</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="孕产 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>高龄孕产妇比例上升，产前筛查与高危妊娠管理被提至重点</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>统计显示二孩三孩政策后，35岁以上高龄孕产妇占比持续走高，妊娠期高血压、糖尿病等并发症管理压力增大。多地妇幼保健院强化高危妊娠分级随访，推广无创产前检测与超声结构筛查的规范应用。基层机构与三甲医院的转诊通道进一步打通。</p>
+          <p><strong>深度分析：</strong>生育年龄后移是结构性趋势，母婴安全防线必须前移。强化基层首诊与高危专案管理，比单纯扩建产房更重要。信息技术赋能的远程随访，有望补齐偏远地区的专家资源缺口。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国妇幼保健协会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>婴童辅食安全监管升级，高铁米粉与无添加罐头成抽检重点</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>市场监管部门近期公布婴童食品专项抽检结果，重点覆盖米粉、果泥、肉松等辅食的重金属、微生物与添加剂指标。多数主流品牌合格，但个别小众网红产品因菌落超标被通报。监管同时要求电商平台的婴幼儿食品专区落实资质审核。</p>
+          <p><strong>深度分析：</strong>辅食是婴幼儿接触除奶以外食物的第一关，安全容错率极低。抽检常态化有助于淘汰"贴牌代工"式的草莽品牌。家长选购时应更关注执行标准与检测报告，而非包装上的营销话术。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：市场监管总局</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="好物">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>智能育儿硬件走红，婴儿监护器与温奶器主打"省心"卖点</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>今年母婴智能硬件品类增长明显，具备呼吸监测、夜视与APP提醒的婴儿监护器，以及精准控温的即热式温奶器受到新手父母青睐。主流品牌在续航、误报率与数据安全上展开竞争。部分产品通过接入家庭智能音箱实现语音看护。</p>
+          <p><strong>深度分析：</strong>智能硬件切中了独生子女父母"带娃经验少、陪伴时间碎"的痛点。但监测类设备不能替代人工看护，厂商应避免制造焦虑式营销。隐私与数据合规将是下一阶段监管重点。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="孕产">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辅助生殖纳入医保范围再扩大，多地报销比例与项目清单公布</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>继部分省份试点后，更多地区将取卵、胚胎移植等辅助生殖技术项目纳入医保支付，并公布具体报销比例与次数限制。公立生殖中心门诊量随之上升，等待周期有所拉长。相关部门同步加强辅助生殖机构资质与伦理审查。</p>
+          <p><strong>深度分析：</strong>辅助生殖入医保显著降低不孕不育家庭的经济门槛，是生育支持的重要一环。但供需矛盾可能短期加剧，需同步扩容合规服务能力。伦理与技术规范必须跟上，防止市场无序扩张。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：国家医保局</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>亲子陪伴时长调查出炉，父亲参与照护比例显著提升</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>一项面向城市家庭的育儿调查显示，父亲每日平均陪伴婴幼儿时长较五年前明显增加，换尿布、哄睡等原本"妈妈专属"的照料分工趋于均摊。弹性工作与育儿假制度被认为推动了这一变化。社交平台上"丧偶式育儿"的讨论热度明显下降。</p>
+          <p><strong>深度分析：</strong>父亲参与度的提升，是政策、文化与职场弹性共同作用的结果。共同照护不仅减轻母亲负担，也更利于儿童社会性与情绪发展。让男性敢休、能休育儿假，比单纯延长假期更有意义。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国青年报</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="好物">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母婴电商内容化转型，直播讲解与成分测评成下单关键</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>主流母婴电商平台将流量重心从图文转向直播与短视频测评，主播以成分配方、适用月龄和使用场景讲解取代单纯促销。品牌旗舰店自播占比提高，第三方测评机构的内容影响力扩大。平台加强了对"母婴功效宣称"的审核。</p>
+          <p><strong>深度分析：</strong>内容化让决策信息更透明，也抬高了营销的专业门槛。父母越来越愿意为"看得懂的专业"买单。但测评生态需要中立性约束，否则又会陷入另一种流量变现游戏。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新生儿遗传代谢病筛查扩大病种，足跟血检测覆盖更全</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>多地扩大新生儿疾病筛查免费项目，将苯丙酮尿症、先天性甲状腺功能减低症等基础病种之外，新增多种遗传代谢与听力、先心病筛查。基层助产机构与筛查中心的信息系统实现互通，阳性病例随访闭环逐步建立。</p>
+          <p><strong>深度分析：</strong>筛查扩面是"早发现、早干预"的典型公共卫生收益，成本远低于后期治疗。难点在于偏远地区的召回与确诊能力。把筛查结果真正转化为干预效果，需要更稳定的妇幼三级网络。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国妇幼保健协会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="孕产 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>孕期营养门诊受热捧，个体化膳食与体重管理需求增长</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>越来越多三甲医院开设孕期营养联合门诊，提供个体化膳食方案、体重增长曲线与妊娠糖尿病饮食指导。挂号需求旺盛，部分医院开通线上营养随访。专业营养师在母婴机构的驻点服务也明显增加。</p>
+          <p><strong>深度分析：</strong>孕期营养从"多吃"转向"科学吃"，体现围产保健理念升级。体重与血糖管理直接关联母婴远期健康，投入产出比高。但要警惕商业机构把正常饮食包装成昂贵方案的过度服务倾向。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：国家卫健委</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>儿童青少年近视防控前移，0-6岁眼健康档案逐步建立</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>近视防控关口持续前移，多地要求托育机构与幼儿园开展屈光筛查，并为0-6岁儿童建立眼健康电子档案。户外活动时长被写入部分地区的幼小衔接指导建议。家长对防蓝光、护眼灯等产品的关注同步升温。</p>
+          <p><strong>深度分析：</strong>把近视防线拉到学龄前，抓住了可塑期的关键窗口。但产品焦虑不能替代行为改变，保证户外时长才是证据最充分的手段。档案的连续性与跨机构互通，决定了防控能否真正见效。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国教育报</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="好物 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>婴童服装新国标执行趋严，A类面料与安全绳带成抽检红线</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>市场监管部门加大对婴童服装的抽查力度，重点检测甲醛、pH值、可分解致癌芳香胺染料及绳带安全性，要求婴幼儿服装必须符合A类标准。多家网店因销售不达标"网红同款"被下架处理。主流品牌普遍公示了第三方检测报告。</p>
+          <p><strong>深度分析：</strong>服装是离皮肤最近的接触品，安全标准没有"低价例外"。抽检与公示联动，正在压缩劣质产品的生存空间。家长建立"看标准而非看颜值"的选购习惯，是市场净化的根本动力。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：市场监管总局</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="孕产">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母婴友好医院建设提速，无痛分娩与家属陪产覆盖率提高</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>"母婴友好医院"评估标准在更多省市落地，将无痛分娩开展率、导乐陪伴与家属陪产纳入考核，鼓励机构优化产房人文服务。部分医院将椎管内分娩镇痛列为常规可选项，产妇满意度调查显示疼痛感与紧张情绪明显缓解。</p>
+          <p><strong>深度分析：</strong>分娩体验是生育意愿的隐性影响因素，人文服务正从"加分项"变为"基本功"。无痛分娩的普及仍受麻醉医师短缺制约，需从人才培养与绩效激励两端破题。让分娩更被尊重，本身就是一种生育支持。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：中国妇幼保健协会</span><span>2026年8月</span></div>
+      </div>
+      <div class="news-item" data-tags="育儿 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>隔代育儿观念冲突引关注，社区家庭教育指导服务补位</div>
+        <div class="news-detail">
+          <p><strong>核心事件：</strong>随着双职工家庭增多，祖辈参与带娃成为普遍现象，喂养、作息与屏幕时间上的代际分歧频繁引发家庭矛盾。多地将家庭教育指导纳入社区公共服务，开设隔代养育沙龙与亲子工作坊。部分街道引入社工协助家庭沟通。</p>
+          <p><strong>深度分析：</strong>隔代育儿是现实选择而非问题本身，冲突多源于信息差而非善意缺失。社区提供中立、专业的沟通平台，比说教更有效。把"科学育儿"翻译成长辈听得懂的语言，是科普落地的关键一环。</p>
+        </div>
+        <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月</span></div>
+      </div>
+  </div>
+</div>
+
 </div><!-- end grid -->
 
-<div class="updated">最后更新：2026年8月13日 09:00 · 每日自动刷新</div>
+<div class="updated">最后更新：2026年8月13日 10:34 · 每日更新</div>
 
 <script>
 function toggle(el){el.parentElement.classList.toggle('open');}
