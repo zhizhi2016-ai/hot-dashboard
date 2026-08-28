@@ -43,6 +43,20 @@ a{color:var(--accent);text-decoration:none}
 .news-meta .src{color:var(--accent2)}
 .hidden{display:none}
 .updated{text-align:center;font-size:11px;color:#475569;margin-top:30px;padding:0 16px}
+
+/* ===== 新闻快讯（参考微信快讯样式）===== */
+.flash .card-hd{border-left:4px solid #fa5151}
+.flash .news-item{padding:9px 0 9px 11px;border-left:3px solid #fa5151;border-bottom:1px solid var(--border);background:linear-gradient(90deg,rgba(250,81,81,.05),transparent 60%)}
+.flash .news-item:last-child{border-bottom:none}
+.flash .news-title{font-size:14px;font-weight:700;color:#1f2937}
+.flash .news-summary{font-size:12.5px;line-height:1.6;color:#475569;margin:5px 0 0 0}
+.flash .news-detail{margin:8px 0 0 0;font-size:12.5px;line-height:1.7;color:#475569}
+.flash .news-detail p{margin-bottom:6px}
+.flash .news-detail strong{color:#fa5151}
+.flash .news-meta{margin:6px 0 0 0}
+.flash .news-meta .src{color:#fa5151}
+.flash .news-tag-kx{display:inline-block;background:#fa5151;color:#fff;font-size:10px;font-weight:700;line-height:1;padding:2px 5px;border-radius:3px;margin-right:6px;vertical-align:middle}
+
 </style>
 <script src="https://beacon.cdn.qq.com/sdk/4.5.9/beacon_web.min.js"></script>
 <script>
@@ -69,7 +83,7 @@ a{color:var(--accent);text-decoration:none}
 <body>
 <div class="top-nav">
   <div class="nav-inner">
-    <button class="nav-btn active" data-nav="ai" onclick="navTo('ai')">🤖 AI/科技</button><button class="nav-btn" data-nav="fin" onclick="navTo('fin')">💰 财经新闻</button><button class="nav-btn" data-nav="view" onclick="navTo('view')">🧠 观点认知</button><button class="nav-btn" data-nav="fem" onclick="navTo('fem')">✊ 女性主义</button><button class="nav-btn" data-nav="news" onclick="navTo('news')">🌍 新闻资讯</button><button class="nav-btn" data-nav="hist" onclick="navTo('hist')">📜 历史资讯</button><button class="nav-btn" data-nav="ecom" onclick="navTo('ecom')">🛒 电商资讯</button><button class="nav-btn" data-nav="baby" onclick="navTo('baby')">👶 母婴</button>
+    <button class="nav-btn active" data-nav="ai" onclick="navTo('ai')">🤖 AI/科技</button><button class="nav-btn" data-nav="fin" onclick="navTo('fin')">💰 财经新闻</button><button class="nav-btn" data-nav="view" onclick="navTo('view')">🧠 观点认知</button><button class="nav-btn" data-nav="fem" onclick="navTo('fem')">✊ 女性主义</button><button class="nav-btn" data-nav="news" onclick="navTo('news')">🌍 新闻快讯</button><button class="nav-btn" data-nav="hist" onclick="navTo('hist')">📜 历史资讯</button><button class="nav-btn" data-nav="ecom" onclick="navTo('ecom')">🛒 电商资讯</button><button class="nav-btn" data-nav="baby" onclick="navTo('baby')">👶 母婴</button>
   </div>
 </div>
 
@@ -85,147 +99,147 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="新品 顶流">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>阿里 Qwen3.8-Flash 上线首周调用破纪录</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>阿里 Qwen3.8-Flash 开源模型上线一周，杭州的 HuggingFace 与上海 ModelScope 镜像站累计下载超 120 万次，企业 API 日调用峰值突破 8 亿次。</p><p><strong>深度分析：</strong>开源阵营用性价比正面挑战闭源，长上下文与低成本正成为撬动中小企业的杠杆。</p><p><strong>举例说明：</strong>比如深圳一家客服企业把主模型切到 Qwen3.8-Flash，千万级日会话的推理账单从约 2 万元降到约 600 元；128K 长上下文让合同摘要不再切片拼接。</p>
         </div>
         <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="热门 顶流">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>GPT-6 发布窗口传闻收敛至秋季</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多方爆料与 OpenAI 合作伙伴透露，GPT-6 有望于 10 月前后亮相，重点升级长链推理、原生多模态与多 Agent 协同。</p><p><strong>深度分析：</strong>基座模型竞赛进入平台期，下一个锚点不在参数，而在真实任务成本与可靠性。</p><p><strong>举例说明：</strong>比如若其 Agent 模块能本地完成"查航班—比价—填行程—发邮件"闭环，将冲击一批 SaaS 工具；北京某企业更关心幻觉率能否压到千分位。</p>
         </div>
         <div class="news-meta"><span class="src">来源：The Verge</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="新品">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>百度文心 5.0 多模态发布，主打产业落地</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>百度在 2026 智原大会上发布文心 5.0，强化工业质检与金融风控的多模态能力，已在苏州、重庆的制造与银行场景试点。</p><p><strong>深度分析：</strong>大模型竞争从榜单转向"能不能进产线"，产业落地才是真壁垒。</p><p><strong>举例说明：</strong>比如苏州一家电子厂用文心 5.0 做缺陷检测，漏检率从千分之三降到万分之六；重庆某农商行用它审贷前材料，单笔提速约 40 分钟。</p>
         </div>
         <div class="news-meta"><span class="src">来源：百度</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="市场 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>字节豆包企业版再降价，Agent 套餐上线</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>字节跳动豆包大模型企业版推出 Agent 编排套餐，文本千 token 调用压到约 0.8 分，并赠每月 1 亿 token 免费额度。</p><p><strong>深度分析：</strong>价格战把 AI 变水电煤，有场景的大厂才能把降价转化为留存。</p><p><strong>举例说明：</strong>比如杭州一家电商用豆包把商品文案从外包改自助，单条成本从 3 元降到几分钱；但复杂多步任务仍要人工兜底。</p>
         </div>
         <div class="news-meta"><span class="src">来源：界面新闻</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>华为昇腾 910C 大规模商用，国产算力闭环</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>华为昇腾 910C 在贵州贵安、内蒙古乌兰察布、安徽芜湖三地智算中心规模上线，按小时弹性出租训练与推理卡。</p><p><strong>深度分析：</strong>算力自主可控的胜负手在生态，软件栈与开发者才是护城河。</p><p><strong>举例说明：</strong>比如贵安智算中心上线昇腾云，中小企业按小时租卡，单价较海外低约三成；但开发者反馈 CUDA 代码迁移仍有坑。</p>
         </div>
         <div class="news-meta"><span class="src">来源：证券时报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人形机器人运动会闭幕，订单落地</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>世界人形机器人运动会（8/22—26 北京国家速滑馆）闭幕后，宇树、优必选等披露后续订单：某车企签下 50 台搬运样机试点。</p><p><strong>深度分析：</strong>赛事是量产前的能力阅兵，商业化仍取决于单位成本与稳定性。</p><p><strong>举例说明：</strong>比如北京亦庄一家整车厂试点宇树 H1 做零件转运，单台月租低于一名临时工；但换光照仍会识别失误，离工厂节拍还远。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="热门 市场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>宇树上市后首份预告：营收高增毛利承压</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>宇树科技（科创板人形机器人第一股）发布上市后首份业绩预告，上半年营收同比翻倍，但四足机器狗价格战拉低毛利率。</p><p><strong>深度分析：</strong>硬科技退出通道打通后，市场更看交付节奏与毛利兑现。</p><p><strong>举例说明：</strong>比如其 Go 系列机器狗已规模出口，杭州总部投资人不再问"能不能走"，而是问"单台毛利多少、交付排到几月"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：财新</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>工信部就 AI 终端标准征求意见</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>工信部就《人工智能终端通用能力要求》公开征求意见，覆盖端侧推理、隐私计算、安全标识与互通接口，手机、PC、汽车、家电均在列。</p><p><strong>深度分析：</strong>标准先行是产业规模化的前提，也利于打破终端孤岛。</p><p><strong>举例说明：</strong>比如深圳一家手机厂按征求稿提前适配，不同品牌端侧助手可调用同一套本地模型接口，开发者一次适配多端。</p>
         </div>
         <div class="news-meta"><span class="src">来源：工信部</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>银行业 Agent 规模化：对公尽调从3天到4小时</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多家股份行将多智能体编排平台嵌入主流程，上海某股份行把一笔对公尽调从 3 天压到 4 小时，多个 Agent 分工查工商、读财报、写风险摘要。</p><p><strong>深度分析：</strong>Agent 让 AI 从对话变成数字员工，可观测性与权限治理是规模化前提。</p><p><strong>举例说明：</strong>比如该行一次权限配置失误曾误发邮件，凸显权限治理不是可选项；上线前提是全链路留痕、可回滚。</p>
         </div>
         <div class="news-meta"><span class="src">来源：量子位</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="新品">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>端侧70亿模型跑进手机，离线摘要成卖点</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>新旗舰 SoC 本地跑通约 70 亿参数多模态模型，拍照问答、实时字幕、离线翻译与摘要不联网即可完成。</p><p><strong>深度分析：</strong>端云协同是消费 AI 主流路线，离线能力成差异化。</p><p><strong>举例说明：</strong>比如广州一位用户新旗舰拍照后本地一键生成游记文案完全不联网；地铁里翻译耳机离线出实时字幕，只超长句才叫云端兜底。</p>
         </div>
         <div class="news-meta"><span class="src">来源：雷锋网</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>多模态统一模型新进展，单一模型看图又生视频</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>Meta、Google 推进单一模型统一图文视频理解与生成，Meta 的 Emu/Chameleon 路线减少多模型拼接的运维成本。</p><p><strong>深度分析：</strong>多模态统一是降本增效关键路径，也加剧与开源阵营的竞争。</p><p><strong>举例说明：</strong>比如某团队用单一模型既看图问答又生成短视频，省去拼接运维；但也意味着闭源壁垒更高，上海开源社区想追更费劲。</p>
         </div>
         <div class="news-meta"><span class="src">来源：The Verge</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>生成式 AI 服务管理细则落地</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>生成式 AI 服务管理办法配套细则发布，明确训练数据来源报备、显著标识、未成年人保护与违规处罚。</p><p><strong>深度分析：</strong>监管从原则走向细则，合规成本将重塑产品形态。</p><p><strong>举例说明：</strong>比如成都一家小应用因未备案被下架；北京大厂上线前必过合规团队关，合规从"可有可无"变必过关口。</p>
         </div>
         <div class="news-meta"><span class="src">来源：网信办</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策 热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>深度伪造诈骗新判例：平台承担溯源责任</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>某地法院就一起 AI 换脸诈骗案宣判，除主犯外，未尽溯源义务的内容平台被责令承担连带赔偿。</p><p><strong>深度分析：</strong>责任下沉到平台，倒逼"生成即留痕"，否则连带担责。</p><p><strong>举例说明：</strong>比如武汉一起换脸诈骗案因平台未提供溯源线索难锁定源头，法院判平台担责；此后平台上线生成内容指纹库。</p>
         </div>
         <div class="news-meta"><span class="src">来源：路透</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AI 客服新规落地：必须留人工入口</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地消协新规要求 AI 客服须保留显著人工通道、禁止"转人工难"；有用户退订会员被绕圈 20 分钟转不进人工被点名。</p><p><strong>深度分析：</strong>效率不能牺牲体验，人工兜底不应被省掉。</p><p><strong>举例说明：</strong>比如南京某运营商首屏放"转人工"按钮，投诉量降三成；所谓"AI 挡访"本质是省成本却损害体验。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国消费者报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AI for Science：材料发现周期从18月到5月</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>英矽智能、晶泰等将 AI 蛋白与分子设计用于候选发现，多条管线进入临床前；某药企用蛋白设计算出候选分子，苗头发现从约 18 个月压到 5 个月。</p><p><strong>深度分析：</strong>AI for Science 从论文走向产线，生物医药是确定性最高的落地场景之一。</p><p><strong>举例说明：</strong>比如上海药物所靠 AI 大幅提速候选筛选；北京气象部门用 AI 提速台风路径预报，但临床大关仍靠真实试验。</p>
         </div>
         <div class="news-meta"><span class="src">来源：Nature</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国产 GPU 推理性价比显现</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>寒武纪、沐曦、壁仞等国产 GPU 完成主流大模型与框架适配，推理场景性价比接近国际同类，短视频审核、智能客服等已规模商用。</p><p><strong>深度分析：</strong>国产算力突围关键不在训练峰值，而在把推理生态做厚做稳。</p><p><strong>举例说明：</strong>比如合肥一家短视频平台用国产 GPU 跑审核模型，性价比接近国际卡；但训练峰值仍落后，突围靠生态厚度。</p>
         </div>
         <div class="news-meta"><span class="src">来源：第一财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>具身智能融资新高，资本转向专用机</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>上半年具身智能融资额同比翻番，搬运、装配、巡检等工业场景出货提速；某专用机器人厂商单笔融资 8 亿。</p><p><strong>深度分析：</strong>垂直场景机器人比通用人形更易商业化，是具身落地第一波真需求。</p><p><strong>举例说明：</strong>比如常州一家车企产线试点已交付 30 台搬运专机；对比仍在演示厅的通用人形，能搬能装配的专机先赚到真金白银。</p>
         </div>
         <div class="news-meta"><span class="src">来源：21世纪经济报道</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>智算中心能耗承压，绿电成硬指标</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地新建智算中心被要求绿电消纳比例不低于 60%，西部"算力+风光"一体化项目密集开工。</p><p><strong>深度分析：</strong>算力竞争下半场比的是能源成本与碳约束，绿电即竞争力。</p><p><strong>举例说明：</strong>比如乌兰察布一训练集群把非紧急任务排到深夜风电富余时段，单卡时成本降两成；无绿电指标的新建中心拿不到能耗批复。</p>
         </div>
         <div class="news-meta"><span class="src">来源：经济日报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>开源模型商业授权再起纠纷</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>有海外 SaaS 将国产开源模型闭源包装收费，社区改用更严的"不可商用/需署名"条款；Llama、Qwen 系商用边界讨论升温。</p><p><strong>深度分析：</strong>开源与商业的张力长期存在，清晰授权比道义更可持续。</p><p><strong>举例说明：</strong>比如杭州一家创业公司被闭源包装后收费，社区改回更严条款；授权写清楚比靠道义管用。</p>
         </div>
         <div class="news-meta"><span class="src">来源：OSCHINA</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>苹果端侧 Siri 中文测试，本地隐私主打</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>彭博称苹果正用端侧大模型重写 Siri 底层，把摘要与调度留在设备端，中文理解与本地化进入内测。</p><p><strong>深度分析：</strong>在监管收紧下，端侧 AI 是苹果差异化抓手，也是对云厂商的回应。</p><p><strong>举例说明：</strong>比如重写后 Siri 可本地把"把今天会议总结发给我妈"拆步骤执行，数据不过云；但中文理解仍被吐槽落后安卓同代。</p>
         </div>
         <div class="news-meta"><span class="src">来源：彭博</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势 热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>机器人"超级月"收官总结：看订单而非声势</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>8月上海具身智能大会、世界机器人大会、世界人形机器人运动会连轴举行，宇树上市把产业热度推到顶点；业内提醒"看订单而非声势"。</p><p><strong>深度分析：</strong>产业集中度骤升，既加速成熟也放大泡沫，需看订单而非声势。</p><p><strong>举例说明：</strong>比如北京经开区三地展会连轴、宇树上市当天朋友圈刷屏；但业内人士提醒订单比声势重要，某展区签约金额被指水分不少。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新浪科技</span><span>2026年8月28日</span></div>
@@ -238,140 +252,140 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="A股 热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>8/28 A股震荡收平，成交回至1.6万亿</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>8月28日 A 股三大指数窄幅震荡，沪指微涨 0.12%、深成指约平、创业板指小跌 0.2%，全天成交约 1.6 万亿，较前两日回落。</p><p><strong>深度分析：</strong>成交缩量下的横盘，反映资金在等待新催化，追高需谨慎。</p><p><strong>举例说明：</strong>比如上海陆家嘴一家私募当天减了科技仓位；深圳散户追高 AI 硬件当日吃面，券商尾盘护盘却未放量。</p>
         </div>
         <div class="news-meta"><span class="src">来源：腾讯财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="全球">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>美联储9月降息概率回摆，PCE仍是关键</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>Jackson Hole 年会后，期货隐含 9 月降息概率在五成到七成间反复；市场紧盯 8 月非农与核心 PCE。</p><p><strong>深度分析：</strong>分歧制造波动，资产配置应从赌方向转向控回撤。</p><p><strong>举例说明：</strong>比如一份偏热数据出来美债收益率跳升、黄金跳水；北京一家资管交易员隔天因官员放鸽又反向平仓，来回抽风。</p>
         </div>
         <div class="news-meta"><span class="src">来源：CNBC</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="全球 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>人民币双向波动，企业套保需求上升</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>人民币对美元在 7.15—7.25 区间双向波动，与多国本币结算合作推进；出口企业远期锁汇与期权使用率上升。</p><p><strong>深度分析：</strong>汇率弹性增强是成熟标志，企业需用好套保而非赌单边。</p><p><strong>举例说明：</strong>比如宁波一家外贸企业签美元订单不做远期锁汇，汇率波动 3% 就把利润吃掉；如今苏州同行开始用期权对冲。</p>
         </div>
         <div class="news-meta"><span class="src">来源：第一财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="全球 热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>黄金高位震荡，央行购金支撑</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>国际金价在每盎司 2400—2600 美元区间高位震荡，多国央行连续购金与降息预期共同支撑，黄金 ETF 持续净流入。</p><p><strong>深度分析：</strong>去美元化与地缘不确定性使黄金战略配置价值重获青睐。</p><p><strong>举例说明：</strong>比如上海黄金交易所实物提货量走高；成都一位市民半年攒了 200 克金豆，"乱世藏金"逻辑回归。</p>
         </div>
         <div class="news-meta"><span class="src">来源：金十数据</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="全球 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>油价受中东风险溢价支撑</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>中东风险溢价支撑油价，布伦特围绕每桶 80—85 美元区间波动，叠加主要经济体政策博弈，原油波动加剧。</p><p><strong>深度分析：</strong>能源通道安全是全球通胀隐性变量，任何扰动快速传导。</p><p><strong>举例说明：</strong>比如一艘油轮绕行好望角，到岸成本上升；广州一家化工厂的原料运费当月涨了一成，油价一涨全链敏感。</p>
         </div>
         <div class="news-meta"><span class="src">来源：路透</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="A股">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>北证50活跃，专精特新受捧</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>北交所成交与换手改善，专精特新"小巨人"成资金挖掘重点，北证50 一轮反弹。</p><p><strong>深度分析：</strong>多层次资本市场错位发展，中小硬科技企业融资更通畅。</p><p><strong>举例说明：</strong>比如常州一家做精密轴承的"小巨人"上市后拿到扩产资金，订单排到明年；北京游资与机构共同挖票。</p>
         </div>
         <div class="news-meta"><span class="src">来源：经济日报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>公募REITs扩围至消费基础设施</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>公募 REITs 底层资产扩至消费基础设施（商场、消费类资产），多只新品获批，盘活存量商业资产、改善房企现金流。</p><p><strong>深度分析：</strong>REITs 连接资本与实物资产，改善现金流也拓宽配置渠道。</p><p><strong>举例说明：</strong>比如上海一家商业地产把旗下购物中心打包成 REITs 上市，一次回笼几十亿还债；散户多了一个"收租"型低门槛品种。</p>
         </div>
         <div class="news-meta"><span class="src">来源：上海证券报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="市场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>可转债打新退热，破发提醒</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>部分新券上市首日仅涨约 1%、逼近破发，可转债"打新必赚"预期松动，信用与转股价值研究重新重要。</p><p><strong>深度分析：</strong>固收+光环退潮，信用与转股价值研究重新重要。</p><p><strong>举例说明：</strong>比如杭州一位投资者新券上市首日仅涨 1% 几乎破发，中签后悔没卖；闭眼打新时代过去，得先看正股质量。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国基金报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>量化私募规模回升，异常交易受控</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>量化私募规模回暖，监管重申程序化交易须报备、异常交易实时监控，防范尾盘集中报单引发踩踏。</p><p><strong>深度分析：</strong>技术驱动策略需置于透明框架，防范流动性踩踏。</p><p><strong>举例说明：</strong>比如深圳一家量化中性产品年内回撤小跑赢主观，规模回升；但监管强调异常报单要报备，避免尾盘集中砸盘。</p>
         </div>
         <div class="news-meta"><span class="src">来源：财新</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策 热门">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>一线城市楼市政策再优化</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地优化限购与公积金额度，二手房带看与成交环比改善，政策托底稳预期，行业向"好房子"与存量运营转型。</p><p><strong>深度分析：</strong>政策托底旨在稳预期，房地产向"好房子"与存量运营转型。</p><p><strong>举例说明：</strong>比如广州非核心区放开限购后周末带看涨三成，但多为以价换量；上海二手挂牌价能否止跌才是真回暖信号。</p>
         </div>
         <div class="news-meta"><span class="src">来源：经济观察报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>7月社融：企业中长期贷款改善</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>央行公布 7 月社融，企业中长期贷款同比多增、政府债发力支撑总量，信用扩张结构改善但居民端仍弱。</p><p><strong>深度分析：</strong>信用扩张结构改善是企稳先行信号，居民端仍需巩固。</p><p><strong>举例说明：</strong>比如苏州一家制造业企业中长期贷款多增，工厂愿上设备；但武汉居民短期贷款仍弱，大家不愿借钱消费。</p>
         </div>
         <div class="news-meta"><span class="src">来源：央行官网</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="市场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新能源分化：储能电网优于整车</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>新能源内部分化，储能、电网设备订单饱满，而整车价格战压制盈利，产业从扩产竞赛转向盈利质量。</p><p><strong>深度分析：</strong>产业从扩产竞赛转向盈利质量，上游与设备更稳健。</p><p><strong>举例说明：</strong>比如宁德一家储能企业海外大单不断毛利回升；合肥某车企又降价 3 万抢量，单车利润薄如纸。</p>
         </div>
         <div class="news-meta"><span class="src">来源：证券时报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="全球 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>CIPS扩容，多国银行接入</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>跨境银行间支付系统（CIPS）参与者再添多家外资与新兴市场银行，直参/间参网络扩至百余国。</p><p><strong>深度分析：</strong>支付基础设施是人民币国际化的管道，扩容降低对单一体系依赖。</p><p><strong>举例说明：</strong>比如迪拜一家贸易商用 CIPS 直接收人民币货款，省去美元中转；上海清算中心报文量同比走高。</p>
         </div>
         <div class="news-meta"><span class="src">来源：财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>多地优化公积金提取，刚需利好</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地优化住房公积金提取与贷款，租房可凭合同按月提、加装电梯可提取、异地贷款门槛下调。</p><p><strong>深度分析：</strong>公积金松绑是稳预期惠民生的细腻抓手，对刚需形成托底。</p><p><strong>举例说明：</strong>比如成都一位新市民凭租房合同每月可提 2000 元抵房租；南京老旧小区加装电梯也能用公积金。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新华财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="港股 市场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>港股震荡，硬科技成交回落</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>恒生科技近期波动加剧，硬科技成交活跃度较前期回落，南向资金由净买入转为小幅净卖出。</p><p><strong>深度分析：</strong>港股科技核心资产仍具配置价值，但估值已不便宜。</p><p><strong>举例说明：</strong>比如一家互联网龙头从高位回撤一成多，南向由净买入转小幅净卖出；但香港长线基金仍在逢低接。</p>
         </div>
         <div class="news-meta"><span class="src">来源：搜狐</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="A股">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>创业板中报：营收+24%净利+43%</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>截至 8 月下旬创业板半年报披露过半，合计营收同比+24%、净利+43%，新能源、医药、电子龙头领跑。</p><p><strong>深度分析：</strong>中报是业绩验证窗口，高景气赛道能否延续决定下半年风格。</p><p><strong>举例说明：</strong>比如深圳一家储能龙头中报净利翻倍次日高开 5%；一家靠补贴扭亏的公司被扒出主业仍亏，股价反而跌停。</p>
         </div>
         <div class="news-meta"><span class="src">来源：四大证券报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="A股">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>大金融走强，券商保险领涨</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>8月下旬券商、保险板块多次走强，多只券商股涨停，成为指数风向标。</p><p><strong>深度分析：</strong>大金融是行情风向标，持续性往往决定反弹能否变趋势。</p><p><strong>举例说明：</strong>比如上海一家头部券商涨停带动板块，保险股跟涨；历史上大金融连续 3 天放量上攻才更像真行情。</p>
         </div>
         <div class="news-meta"><span class="src">来源：央广财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="市场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>居民理财回流现金管理类</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>低利率与波动下，货币基金、短债等现金管理类产品规模与申赎回升，居民风险偏好趋保守。</p><p><strong>深度分析：</strong>居民风险偏好趋保守，"稳一点"成阶段共识，财富管理进入再平衡。</p><p><strong>举例说明：</strong>比如北京一位投资者把股市赎回的钱转去短债，"不亏就好"成共识；某货币基金 7 日年化回到 2% 附近规模季度增千亿。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国基金报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="A股">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>科创板解禁高峰临近，承接受关注</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>8月底至9月科创板多只标的迎解禁高峰，涉及半导体与生物医药龙头，市场关注解禁规模与产业资本减持节奏。</p><p><strong>深度分析：</strong>解禁带来供给压力，但力度可控，关键看基本面与市场承接。</p><p><strong>举例说明：</strong>比如上海一家半导体公司解禁当天低开后被买盘接住，因同期发了大单中标；业绩差的小票同样比例解禁可能直接砸出跌停。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新浪财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="市场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>消费数据弱复苏，服务消费领跑</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>7月社零同比温和回升，餐饮、文旅、出行等服务消费领跑，商品消费分化，必选稳健、可选仍弱。</p><p><strong>深度分析：</strong>消费修复呈 K 型，服务强于商品，政策促消费需精准。</p><p><strong>举例说明：</strong>比如西安暑期文旅人次创新高带动周边消费；但武汉一家汽车 4S 店仍靠补贴托底，"悦己型"小额消费强于大件。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国家统计局</span><span>2026年8月28日</span></div>
@@ -384,203 +398,203 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="思维 认知">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AI焦虑背后：你怕的不是工具，是没想清自己要什么</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>当 Copilot、各类 Agent 越来越能写稿、写码、做分析，很多人反而更慌——怕被替代、怕掉队。焦虑的根源常是被工具定义，而非想清自己要什么。</p><p><strong>深度分析：</strong>工具放大人的差异：想得清的人用它放大产出，想不清的人被它淹没。</p><p><strong>举例说明：</strong>比如北京一位产品经理用 AI 先列框架再让 AI 扩写，产出更清晰；深圳一位同事直接复制粘贴，三个月后表达反而退化。</p>
         </div>
         <div class="news-meta"><span class="src">来源：认知笔记</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="思维 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>双重标准：我们常觉得自己有理却说服不了人</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>我们常觉得自己有理却说服不了人，问题常在双重标准——对自己宽松、对别人苛刻，还误以为这是"客观"。</p><p><strong>深度分析：</strong>批判性思维的第一步，是把审视标准也用回自己身上。</p><p><strong>举例说明：</strong>比如上海一对夫妻，你熬夜刷剧叫"放松"，伴侣熬夜叫"不自律"；一旦把同一把尺子量自己，很多争论立马降温。</p>
         </div>
         <div class="news-meta"><span class="src">来源：思维实验室</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="成长 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>复利思维：慢就是快的另一种写法</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>很多人追风口、找捷径，却忽略每天进步 1% 的复利；一年后是 37 倍，但前提是别中途清零。</p><p><strong>深度分析：</strong>真正稀缺的不是机会，而是持续不中断的能力。</p><p><strong>举例说明：</strong>比如成都一位读者每天读 10 页书，一年读 3600 页约 12 本；但一次"躺平两周"不会归零，归零的是彻底放弃的那次。</p>
         </div>
         <div class="news-meta"><span class="src">来源：成长观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>信息偏食：算法喂什么你就信什么</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>推荐算法把人困在同质信息里，观点越来越极端、耐心越来越薄；"信息茧房"不是比喻，是每天的体验。</p><p><strong>深度分析：</strong>主动打破信息源多样性，是成年人的基本素养。</p><p><strong>举例说明：</strong>比如广州一位大学生只刷一种立场短视频，以为"全世界都这么想"；刻意关注对立观点后，才发现很多事没那么非黑即白。</p>
         </div>
         <div class="news-meta"><span class="src">来源：媒介批评</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 社会">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>情绪劳动：你以为的"脾气好"是隐形成本</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>客服、教师、医护等职业长期"管理情绪"，这种情绪劳动消耗不比体力小，却常被视作理所当然。</p><p><strong>深度分析：</strong>承认情绪劳动的价值，才能谈公平与边界。</p><p><strong>举例说明：</strong>比如武汉一位空乘被无理指责仍微笑回应，回家后却一点话都不想说；这不是"性格好"，是下班后还要为白天透支的情绪买单。</p>
         </div>
         <div class="news-meta"><span class="src">来源：社会观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 成长">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>稀缺心态：穷的不是钱，是带宽</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>行为经济学发现，人在资源稀缺时会把全部注意力压在缺口上，反而忽略长远——这不是笨，是"带宽"被占满。</p><p><strong>深度分析：</strong>理解稀缺心态，能少一点对他人的苛责，多一点制度设计。</p><p><strong>举例说明：</strong>比如西安一位外卖骑手月底缺钱更可能借高息贷救急，不是不懂利息，是眼前窟窿必须填；给缓冲比讲道理更有效。</p>
         </div>
         <div class="news-meta"><span class="src">来源：经济心智</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="成长 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>钝感力：不是麻木，是选择性不内耗</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>渡边淳一提出的"钝感力"被重新讨论：对无关评价慢半拍反应，反而更能守住节奏。</p><p><strong>深度分析：</strong>敏感是天赋，钝感是训练；两者平衡才扛得住长期主义。</p><p><strong>举例说明：</strong>比如杭州一位设计师同事一句随口吐槽，敏感者复盘一整晚，钝感者转头继续干活；后者不是不在乎，是把能量留给重要的事。</p>
         </div>
         <div class="news-meta"><span class="src">来源：心理随笔</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="思维 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>第二序改变：别在问题里打转</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>很多问题越用力越糟，因为你在同一层面应对；真正的突破是跳到更高一层——改变"框架"而非"内容"。</p><p><strong>深度分析：</strong>第一序是解问题，第二序是换系统。</p><p><strong>举例说明：</strong>比如南京一对夫妻总为谁洗碗吵，第一序是排班，第二序是买洗碗机；换个框架，争吵本身消失。</p>
         </div>
         <div class="news-meta"><span class="src">来源：系统思维</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 思维">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>叙事自我：你记住的未必是真的</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>大脑不是录像机而是编剧，记忆会被每次回忆改写；我们赖以决策的"过去"，常是重构的版本。</p><p><strong>深度分析：</strong>对"我记得很清楚"保持警惕，是理性的一部分。</p><p><strong>举例说明：</strong>比如重庆一位女士坚信某次吵架对方先动手，多年后看聊天记录才发现是自己先发难；但那个叙事已影响她多年。</p>
         </div>
         <div class="news-meta"><span class="src">来源：认知科学</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="成长 思维">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>能力陷阱：越擅长越被困</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>人倾向于重复已擅长的事，因为它带来正反馈；久而久之，真正重要的新能力反而没空学，被"成功"困住。</p><p><strong>深度分析：</strong>专长既是护城河，也是天花板。</p><p><strong>举例说明：</strong>比如深圳一位销售高手一直冲业绩，从不当管理，公司升他当主管后反而崩盘；他最强的本事成了转型的阻力。</p>
         </div>
         <div class="news-meta"><span class="src">来源：管理随笔</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="方法 成长">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>最小可行行动：先动起来再说</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>想得越周全越不动，是完美主义下的瘫痪；与其等"最佳时机"，不如先做一个最小可行动作。</p><p><strong>深度分析：</strong>行动会修正认知，空想只会繁殖恐惧。</p><p><strong>举例说明：</strong>比如苏州一位作者想写作，先每天写 200 字，比"等灵感"的人半年后多写出一本书；动起来，方向才慢慢显形。</p>
         </div>
         <div class="news-meta"><span class="src">来源：行动派</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 成长">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>比较级幸福：锚点一旦错了就永远不够</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>幸福感很大程度来自比较的锚点；把参照换成"别人晒的"，永远差一截，焦虑是默认设定。</p><p><strong>深度分析：</strong>主动选择比较框架，比努力赚钱更能决定满意度。</p><p><strong>举例说明：</strong>比如北京两位同薪资同事，一个和网红比觉得穷，一个和去年比觉得富；客观收入没变，主观幸福感天差地别。</p>
         </div>
         <div class="news-meta"><span class="src">来源：幸福研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="思维 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>可证伪性：什么才叫真观点</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>波普尔说，一个观点若不能被证伪就不算科学；很多"听起来有理"的话，其实永远不会对，也永远错不了。</p><p><strong>深度分析：</strong>敢说"在什么情况下我错了"，才算真有立场。</p><p><strong>举例说明：</strong>比如一位健身教练说"成功靠努力"难以证伪；但"每周练 3 次、三个月内配速提升 30 秒"可被检验，后者才是能行动的结论。</p>
         </div>
         <div class="news-meta"><span class="src">来源：科学哲学</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="思维 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>沉没成本：别为已经花掉的买单</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>电影难看还硬看完、饭难吃还硬吃完，只因为"钱都花了"——沉没成本不该左右下一步决策。</p><p><strong>深度分析：</strong>理性的决策只看未来收益，不回头算旧账。</p><p><strong>举例说明：</strong>比如上海一位女士一段明显错的关系，因"在一起五年"而不舍，但那五年已过去；继续不是珍惜，是为过去惩罚未来。</p>
         </div>
         <div class="news-meta"><span class="src">来源：决策笔记</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>注意力稀缺：你卖的不是产品是时间</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>在信息过载时代，最贵的是注意力；所有内容争夺的不是钱包，是先被看见的那几秒。</p><p><strong>深度分析：</strong>保护自己的注意力，是性价比最高的自我管理。</p><p><strong>举例说明：</strong>比如一位广州白领本想查个资料，半小时后在短视频里迷失；不是意志薄，是产品精心设计了"不让你走"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：注意力经济</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="成长 认知">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>成长型心智：能力是动词不是名词</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>德韦克研究发现，相信"能力可训练"的人更扛挫折、更愿意挑战；相信"天赋固定"的人遇挫就缩。</p><p><strong>深度分析：</strong>把"我不行"改成"我现在还不行"，一句话改写人生脚本。</p><p><strong>举例说明：</strong>比如南京一位琴童被夸"很努力"比被夸"有天赋"后来坚持更久；前者把失败当练习，后者把失败当判决书。</p>
         </div>
         <div class="news-meta"><span class="src">来源：教育心智</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 社会">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>边界感：成年关系的必修课</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>很多关系耗尽在"不分彼此"——既入侵别人边界，也放弃自己边界；健康的亲密需要明确"这是我的、那是你的"。</p><p><strong>深度分析：</strong>边界不是疏远，是关系能长久的前提。</p><p><strong>举例说明：</strong>比如成都一位朋友借钱你不借，不等于不爱他；说"不"之后关系还在，才是真关系，否则只是怕得罪。</p>
         </div>
         <div class="news-meta"><span class="src">来源：关系笔记</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 成长">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>延迟满足：被误读的自我控制</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>棉花糖实验常被简化为"忍住就成功"，但后续研究发现，能否延迟满足取决于"信不信承诺会被兑现"。</p><p><strong>深度分析：</strong>自控力不是天生，而是环境可信度训练出来的。</p><p><strong>举例说明：</strong>比如武汉一位孩子若常被忽悠"下次补"，自然现在就抢；成人亦然，长期被画饼的人更难相信"以后更好"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：行为实验</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="思维 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>解释水平：离远点看问题更清楚</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>心理学的解释水平理论：distant 视角让人看全局，近距视角陷细节；吵架时设想"一年后还重要吗"，火气常消。</p><p><strong>深度分析：</strong>调节心理距离，是免费的情绪调节术。</p><p><strong>举例说明：</strong>比如一位深圳白领被领导当众批评，当场觉得天塌；问自己"这事放十年算什么"，瞬间轻了；距离改写了意义。</p>
         </div>
         <div class="news-meta"><span class="src">来源：心理工具</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="认知 成长">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>习得性无助：被环境教会放弃</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>塞利格曼实验显示，反复受不可控打击的狗会停止挣扎；人若长期"努力也没用"，也会学会放弃。</p><p><strong>深度分析：</strong>无助是学来的，也能通过"可控小胜"重新学回。</p><p><strong>举例说明：</strong>比如一位天津员工长期被否定不再提方案；但只要连续几次"说了就被听"，主动性会慢慢回来，关键是给可控的正反馈。</p>
         </div>
         <div class="news-meta"><span class="src">来源：积极心理</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="思维 方法">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>元认知：盯着自己的思考去思考</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>最高级的效率是"想自己怎么想"——元认知让人从自动驾驶里跳出来，发现自己在绕圈。</p><p><strong>深度分析：</strong>会学习的人，学的是"学习的方法"。</p><p><strong>举例说明：</strong>比如一位杭州程序员发现每次焦虑都先刷手机，于是设"焦虑时先写三行"；一旦能观察自己，习惯就不再是主人。</p>
         </div>
         <div class="news-meta"><span class="src">来源：思维进阶</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《思辨与立场》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>批判性思维不是抬杠，而是对自己的诚实与对标准的坚持。本书把"公正理性"拆成可训练的思维习性。</p><p><strong>核心观点：</strong>真正的批判性思维者，首要审查的是自己的前提与偏见，而非对手的漏洞。</p><p><strong>举例说明：</strong>比如读完你会习惯在表态前先问"我的证据够吗、我有没有只挑有利的看"；讨论不再是赢，而是更接近真相。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《穷查理宝典》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>查理·芒格的多元思维模型与逆向思考，是普通人也能借用的决策框架。</p><p><strong>核心观点：</strong>反过来想，总是反过来想；避免愚蠢比追求聪明更可靠。</p><p><strong>举例说明：</strong>比如想成功先列"怎样会失败"：酗酒、嫉妒、怨恨、自怜——躲开这些，平庸也能变优秀；用多学科模型看问题，少犯单视角错误。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《刻意练习》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>推翻"一万小时"神话，指出有效进步靠有反馈的针对性练习，而非简单重复。</p><p><strong>核心观点：</strong>天道酬"对"勤——走出舒适区、即时反馈、修正错误，才是练习的本质。</p><p><strong>举例说明：</strong>比如同样练琴，机械重复十年仍是业余，紧盯弱点、录下自己、对照大师修正的人三年超车；区别在"练"还是"刻意练"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《把时间当作朋友》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>李笑来把"时间管理"还原为"自我管理"，提醒你无法管理时间，只能管理自己。</p><p><strong>核心观点：</strong>焦虑多来自"想得太快、做得太慢"，用积累对抗速成幻觉。</p><p><strong>举例说明：</strong>比如你焦虑"还不会英语"，书里让你每天固定 30 分钟、记录进度；半年后不是变神，是终于不再为空想内耗。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《厌女》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>上野千鹤子用"厌女"这一概念，揭示社会结构如何同时规训男女，是性别认知的入门必读。</p><p><strong>核心观点：</strong>厌女不是个别偏见，而是深嵌关系的秩序，觉察是改变的第一步。</p><p><strong>举例说明：</strong>比如"男主外女主内"被说成"为你好"，书里帮你看见背后的权力分配；读它不是站队，是看清剧本。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《一间自己的房间》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>伍尔夫百年前提出女性写作需要"一间自己的房间与每年五百磅"，至今仍是独立与创作的物质前提。</p><p><strong>核心观点：</strong>精神独立需要物质与空间兜底，空洞喊"做自己"不够。</p><p><strong>举例说明：</strong>比如今天女性不必真有那间房，但"可支配的时间与钱"仍是创造力的地基；没有空间，灵感无处安放。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《人类简史》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>赫拉利从认知革命讲到智人何以统治地球，刷新你对"我们是谁"的理解。</p><p><strong>核心观点：</strong>虚构故事（钱、国家、公司）让大规模协作成为可能，也让我们被故事束缚。</p><p><strong>举例说明：</strong>比如"公司"在法律上是一个人却摸不着，全靠共同相信；读懂这点，你再看品牌、货币、舆论会有全新视角。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="书单">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>《乌合之众》</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>为什么读：</strong>勒庞百年前写群体心理，解释人为何在人群中变冲动、易被暗示、丧失责任。</p><p><strong>核心观点：</strong>群体不生产智慧，只放大情绪；保持独立判断在群体中尤其难。</p><p><strong>举例说明：</strong>比如抢购、网暴、跟风投资，都是个体清醒、群体失智的典型；读它不是鄙视大众，是警惕自己也在其中。</p>
         </div>
         <div class="news-meta"><span class="src">来源：豆瓣书单</span><span>2026年8月28日</span></div>
@@ -593,364 +607,364 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="职场 社会">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>智联报告：女性晋升天花板仍厚</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>智联招聘最新报告显示，女性管理者占比约三成，但总监级以上骤降，育儿期被认为是关键断层；弹性工作与托育支持被指直接影响晋升。</p><p><strong>深度分析：</strong>天花板不是玻璃，是结构——缺乏支持系统，天赋再高也卡在中层。</p><p><strong>举例说明：</strong>比如上海一家互联网公司同样能力的男女，女方因产假与照护中断两年，回来岗位已被替补；北京某司提供托育与带薪育儿假，断层明显收窄。</p>
         </div>
         <div class="news-meta"><span class="src">来源：智联招聘</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="职场 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>全职妈妈再就业：履历空白如何破</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地人社推出"宝妈返岗"技能与对接计划，但履历断层、年龄与工时限制仍是大山；远程与灵活岗成主要出口。</p><p><strong>深度分析：</strong>照护劳动长期不被计入人力资本，重返职场成本由个人独自承担。</p><p><strong>举例说明：</strong>比如成都一位前会计妈妈靠社区"共享财务"接单重拾手感，半年后回全职；但更多人卡在"空窗期"被系统自动筛掉。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国妇女报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="健康 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>月经假落地难：善意为何变负担</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地试点生理假，但申报率低——怕被打标签、怕影响考核；研究显示"可请但不愿请"是普遍尴尬。</p><p><strong>深度分析：</strong>没有隐私与反歧视兜底，福利反而成 stigmatize 的来源。</p><p><strong>举例说明：</strong>比如杭州某公司在系统里单独标"例假假"，反而让请假的女同事被另眼相看；改为并入带薪病假、不单列，申报率才上来。</p>
         </div>
         <div class="news-meta"><span class="src">来源：性别研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 认知">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>代际女性观念变迁：妈妈和女儿吵什么</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>一项代际调研显示，母女在婚育、职业、着装上分歧最大，但都认同"经济独立是底线"；冲突常是表达代差而非价值对立。</p><p><strong>深度分析：</strong>代际裂痕里藏着时代进步，理解比说服更有用。</p><p><strong>举例说明：</strong>比如武汉一对母女，女儿要丁克母亲急得睡不着；但两人都认同"别为结婚降低生活质量"，吵的只是路径不是终点。</p>
         </div>
         <div class="news-meta"><span class="src">来源：社会调查</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="健康 职场">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性职业健康：被忽视的肌肉骨骼伤害</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>护理、家政、流水线等以女性为主的岗位，腰背与关节劳损高发，却很少被纳入职业防护重点。</p><p><strong>深度分析：</strong>"女性工种"的工伤更隐蔽，也更该被算进劳动保护。</p><p><strong>举例说明：</strong>比如广州一家月子中心护理员每天弯腰数十次，三年后腰椎出问题；这类慢性伤不突然，却把人一点点熬退。</p>
         </div>
         <div class="news-meta"><span class="src">来源：职业健康</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>彩礼讨论：从习俗到议价的异化</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地天价彩礼引发治理讨论，部分农村地区把彩礼与"养老保障"挂钩；政策倡导移风易俗但难触根本。</p><p><strong>深度分析：</strong>彩礼异化的背后是社会保障不足与女性权益缺位，禁不如补。</p><p><strong>举例说明：</strong>比如甘肃某村彩礼高因女儿出嫁等于失去劳动力，父母要"养老钱"；若农村养老与土地权保障到位，天价自然降温。</p>
         </div>
         <div class="news-meta"><span class="src">来源：乡村观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="健康 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性健身消费崛起</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>女性健身、瑜伽与普拉提消费快速增长，场馆女性友好改造（灯光、更衣、课程）成差异化；某连锁女性专属馆会员年增四成。</p><p><strong>深度分析：</strong>女性健康消费从"瘦"转向"强"，是身体自主意识的进步。</p><p><strong>举例说明：</strong>比如北京一家女性专属馆让人敢举铁；上海年轻女性把"练背"当日常，消费选择背后是"我的身体我说了算"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：消费洞察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 认知">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>家务分工：算法也救不了的公平</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>调查显示已婚女性无偿家务时长远高于男性，即便双职工；"谁闲谁做"的默契常变成"谁忍谁做"。</p><p><strong>深度分析：</strong>家务不是体力活，是关系里的权力地图。</p><p><strong>举例说明：</strong>比如南京一对双职工，扫地机器人省了扫地却没省"谁记得按开关"；真正的平分是共同规划，而非一方包揽一方无视。</p>
         </div>
         <div class="news-meta"><span class="src">来源：家庭研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="职场 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性创业：小而美的突围</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>女性创业者更集中在消费、服务、文创等"关系型"赛道，融资占比仍低但存活率不弱；社群与口碑是核心资产。</p><p><strong>深度分析：</strong>女性创业常被低估，却往往更稳、更懂用户。</p><p><strong>举例说明：</strong>比如长沙一位妈妈创业者做辅食社群，三年做到区域性品牌；没拿大钱却活得好，因为离用户近、转身快。</p>
         </div>
         <div class="news-meta"><span class="src">来源：创业观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>媒体里的女性形象：从被看到到被听见</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>影视与广告中女性形象从"被观看"转向"有主张"，但"大女主"仍多靠恋爱线衬托；真实多元仍然稀缺。</p><p><strong>深度分析：</strong>表征进步重要，但别用新模板替代旧模板。</p><p><strong>举例说明：</strong>比如某剧女主事业线完整、不靠男主救，收视口碑双收；说明观众要的是"完整的人"，不是换皮的花瓶。</p>
         </div>
         <div class="news-meta"><span class="src">来源：媒介批评</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="政策 社会">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>生育成本社会化：谁该买单</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地探索生育补贴、普惠托育与带薪育儿假，核心争议在成本分摊——家庭、企业、政府如何各担其份。</p><p><strong>深度分析：</strong>生育是社会的再生产成本，全压家庭一端必然抑制意愿。</p><p><strong>举例说明：</strong>比如北欧由高税收托底托育，女性就业率与生育率不冲突；我们在成都试点普惠托育，效果好于只鼓励不生钱。</p>
         </div>
         <div class="news-meta"><span class="src">来源：政策研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="职场 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性与AI：被低估的参与落差</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>数据显示女性使用生成式 AI 的比例不低，但深耕模型与工程层的比例偏低；"用得多、造得少"是隐忧。</p><p><strong>深度分析：</strong>技术红利若由单一性别主导定义，偏见会被写进系统。</p><p><strong>举例说明：</strong>比如深圳一家 AI 公司语音助手默认温柔女声，强化"女性服务"刻板印象；让更多女性进算法团队，产品才会少点无意识偏见。</p>
         </div>
         <div class="news-meta"><span class="src">来源：科技性别</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>校园性别教育：从防狼到平等</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地中小学尝试把性别平等纳入课程，从"自我保护"扩展到"尊重与多元"，避免只教女孩害怕。</p><p><strong>深度分析：</strong>性别教育不是女孩专属，男孩同样需要脱敏与尊重训练。</p><p><strong>举例说明：</strong>比如北京市某小学一课同时讲"如何说不"与"如何不越界"，男孩女孩都上；比只办女生防狼讲座，更能从根上减少伤害。</p>
         </div>
         <div class="news-meta"><span class="src">来源：教育观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="健康 社会">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>更年期的沉默该结束了</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>更年期被长期视作"难言之隐"，职场与公共空间缺乏支持；近期科普与产品升温，激素治疗与心理支持被正名。</p><p><strong>深度分析：</strong>把生理现象污名化，本质是忽视女性全生命周期健康。</p><p><strong>举例说明：</strong>比如一位广州主管因潮热失眠被误认"情绪化"，确诊后才被理解；公开讨论让后来者少走十年弯路。</p>
         </div>
         <div class="news-meta"><span class="src">来源：健康时报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 健康">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性友谊：被低估的社会支持</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>研究发现女性友谊在减压、抗病与幸福感上作用显著，却常被浪漫关系遮蔽；"闺蜜经济"与互助社群兴起。</p><p><strong>深度分析：</strong>友谊不是恋爱备胎，是女性重要的心理基础设施。</p><p><strong>举例说明：</strong>比如西安一位新手妈妈产后抑郁期，是一对闺蜜每天来电撑过来的；比起"找个依靠"，平等的陪伴更可持续。</p>
         </div>
         <div class="news-meta"><span class="src">来源：心理随笔</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="权益 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>反家暴：人身安全保护令落地率提升</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地法院人身安全保护令签发量与执行率提升，警情联动与临时庇护所扩容；但取证与执行仍是难点。</p><p><strong>深度分析：</strong>保护令不是一张纸，闭环执行才拦得住暴力。</p><p><strong>举例说明：</strong>比如温州市某地公安接警即同步法院，24 小时内保护令生效、施暴者被责令搬离；快速响应让受害者敢报案。</p>
         </div>
         <div class="news-meta"><span class="src">来源：权益观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性向内容出海</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>国产女频网文、短剧在东南亚与欧美走红，本土化改编带动文化输出；某女频 APP 海外月活破千万。</p><p><strong>深度分析：</strong>女性叙事是全球通用语言，商业成功倒逼内容多元。</p><p><strong>举例说明：</strong>比如一部国产重生短剧在拉美刷屏，当地观众追更；"爽感+情感"穿越文化，比硬输出更有效。</p>
         </div>
         <div class="news-meta"><span class="src">来源：出海观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="职场 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>性骚扰投诉机制待完善</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多起职场性骚扰事件推动企业设独立投诉通道，但举证难、报复怕仍是拦路虎；匿名与第三方受理被呼吁。</p><p><strong>深度分析：</strong>没有安全闭环，沉默就是加害者的护身符。</p><p><strong>举例说明：</strong>比如上海市某公司设工会之外的第三方热线后，投诉量上升而报复投诉为零；通道可信，人才敢开口。</p>
         </div>
         <div class="news-meta"><span class="src">来源：劳工观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="社会 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性与养老：更长的晚年谁照顾</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>女性预期寿命更长、独居比例更高，养老照护需求更突出；社区助老与女性互助网络成为重要支撑。</p><p><strong>深度分析：</strong>老龄化叙事里女性既是被照护者，也是主要照护者。</p><p><strong>举例说明：</strong>比如成都市社区"老帮老"小组里，低龄奶奶照顾高龄奶奶，既省钱又有人陪；女性互助是养老网里最韧的一根线。</p>
         </div>
         <div class="news-meta"><span class="src">来源：老龄研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="权益 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>身体自主权：从月经到堕胎的连续光谱</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>全球围绕女性身体自主的争论持续，从月经免税到生殖权，核心是"谁来替我的身体做决定"。</p><p><strong>深度分析：</strong>这些议题看似分散，实则共享一个根：自主即尊严。</p><p><strong>举例说明：</strong>比如多地 menstrual 用品免税被视作"基本卫生公平"；同一逻辑延伸到避孕与生殖决策，是一以贯之的。</p>
         </div>
         <div class="news-meta"><span class="src">来源：性别评论</span><span>2026年8月28日</span></div>
       </div>
     </div>
   </div>
-  <div class="card" id="news">
-    <div class="card-hd"><span class="card-ic">🌍</span><span class="card-title">新闻资讯</span></div>
+  <div class="card flash" id="news">
+    <div class="card-hd"><span class="card-ic">🌍</span><span class="card-title">新闻快讯</span></div>
     <div class="tags"><span class="tag active" onclick="filter(this,'news','全部')">全部</span> <span class="tag outline" onclick="filter(this,'news','国际')">国际</span> <span class="tag outline" onclick="filter(this,'news','国内')">国内</span> <span class="tag outline" onclick="filter(this,'news','科技')">科技</span> <span class="tag outline" onclick="filter(this,'news','民生')">民生</span> </div>
     <div class="news-list">
-      <div class="news-item" data-tags="国内 热门">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>上合峰会落幕，中吉乌铁路等务实清单推进</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>8 月下旬在吉尔吉斯斯坦比什凯克举行的上合组织峰会闭幕，10 个成员国就互联互通、安全与经贸合作发表联合声明；中吉乌铁路、跨境物流与海关便利被列入合作清单。</p><p><strong>深度分析：</strong>多边峰会与国事访问密集，凸显周边与全球南方外交的主动布局。</p><p><strong>举例说明：</strong>比如中吉乌铁路把中国—中亚—南亚通道打通，货运不必再绕行；比什凯克的峰会往往与具体合作清单绑定，而非单纯合影。</p>
+      <div class="news-item flash" data-tags="国内 热门">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>上合峰会落幕，中吉乌铁路等务实清单推进</div>
+        <div class="news-summary">8 月下旬上合组织峰会在吉尔吉斯斯坦比什凯克闭幕，10 个成员国发表联合声明，中吉乌铁路等列入合作清单。</div>        <div class="news-detail">
+          <p>在比什凯克举行的上合组织峰会闭幕，各方就互联互通、安全与经贸合作发表联合声明，中吉乌铁路、跨境物流与海关便利被列入合作清单。</p><p>中吉乌铁路将打通中国—中亚—南亚通道，货运不必再绕行，是峰会对接具体合作清单的务实成果。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国内 科技">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>2026数博会闭幕，数据要素交易实景落地</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>8 月 27—30 日贵阳数博会闭幕，近 400 家机构参展，首次把"数据要素×"行动方案落地为可交易案例，公共数据授权运营、隐私计算专题馆成焦点。</p><p><strong>深度分析：</strong>数据要素市场化进入实操层，制度供给比技术展示更关键。</p><p><strong>举例说明：</strong>比如贵阳市演示"公共数据授权运营"分成机制，气象、交通数据脱敏后供企业调用并付费；真正落地的是"数据怎么合规变现"的规则。</p>
+      <div class="news-item flash" data-tags="国内 科技">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>2026数博会闭幕，数据要素交易实景落地</div>
+        <div class="news-summary">8 月 27—30 日贵阳数博会闭幕，近 400 家机构参展，首次把"数据要素×"行动方案落地为可交易案例。</div>        <div class="news-detail">
+          <p>贵阳数博会闭幕，近 400 家机构参展，公共数据授权运营、隐私计算专题馆成焦点，数据要素市场化进入实操层。</p><p>制度供给比技术展示更关键，"数据怎么合规变现"成为核心议题。</p>
         </div>
         <div class="news-meta"><span class="src">来源：央视新闻</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="科技">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AGIC深圳AI博览会收官，订单超概念</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>8 月 26—28 日深圳 AGIC 闭幕，逾 1200 家企业参展，工业质检、具身智能与 AI 终端签下多笔订单，主办方称"能成交的方案"占比较上年明显提升。</p><p><strong>深度分析：</strong>AI 产业从概念走向成交，场景落地能力成分水岭。</p><p><strong>举例说明：</strong>比如深圳福田一家工业质检厂商现场签下汽车厂订单，靠"漏检率从千分之三降到万分之五"；纯讲大模型的展台反而没人停步。</p>
+      <div class="news-item flash" data-tags="科技">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>AGIC深圳AI博览会收官，订单超概念</div>
+        <div class="news-summary">8 月 26—28 日深圳 AGIC 闭幕，逾 1200 家企业参展，工业质检、具身智能签下多笔订单。</div>        <div class="news-detail">
+          <p>深圳 AGIC 闭幕，逾 1200 家企业参展，工业质检、具身智能与 AI 终端签下多笔订单，主办方称"能成交的方案"占比明显提升。</p><p>AI 产业从概念走向成交，场景落地能力成为分水岭。</p>
         </div>
         <div class="news-meta"><span class="src">来源：网易科技</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>开学季来临，教育装备需求升温</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>秋季学期临近，文具数码、校服、课后托管与研学需求集中释放；多地调研显示家长单笔开学装备常花 2000—3000 元，托管班一位难求。</p><p><strong>深度分析：</strong>开学经济是消费韧性缩影，也折射家庭对教育与陪伴的投入。</p><p><strong>举例说明：</strong>比如北京市海淀区一位家长给孩子换平板、买护眼台灯，单笔花掉三千；上海徐汇课后托管一位难求。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>开学季来临，教育装备需求升温</div>
+        <div class="news-summary">秋季学期临近，开学装备需求集中释放，多地家长单笔花 2000—3000 元，托管班一位难求。</div>        <div class="news-detail">
+          <p>秋季学期临近，文具数码、校服、课后托管与研学需求集中释放，家长单笔开学装备常花 2000—3000 元。</p><p>开学经济是消费韧性缩影，也折射家庭对教育与陪伴的投入。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国教育报</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>极端天气与汛情考验城市韧性</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>8 月下旬华北、黄淮多地遭遇强降雨与高温交替，城市排涝、供电与应急承压；郑州、合肥等市启动防汛 III 级应急响应，地铁口布防沙袋与挡水板。</p><p><strong>深度分析：</strong>气候风险常态化，城市需从救灾前移到韧性规划。</p><p><strong>举例说明：</strong>比如郑州市一场短时暴雨致部分地铁口临时管控，暴露排水标准偏低；而合肥市提前布好移动泵车，停水停电时间明显更短。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>极端天气与汛情考验城市韧性</div>
+        <div class="news-summary">8 月下旬华北、黄淮强降雨与高温交替，郑州、合肥启动防汛 III 级响应，地铁口布防。</div>        <div class="news-detail">
+          <p>8 月下旬华北、黄淮多地遭遇强降雨与高温交替，城市排涝、供电与应急承压，郑州、合肥启动防汛 III 级响应。</p><p>气候风险常态化，城市需从救灾前移到韧性规划。</p>
         </div>
         <div class="news-meta"><span class="src">来源：央视新闻</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国内 民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>就业优先政策加力，灵活就业纳入工伤</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>稳就业置于宏观政策优先位置，高校毕业生、灵活就业与技能培训获多重支持；成都、武汉等地给招应届生中小企业每人补贴 1 万—1.5 万元，杭州对外卖骑手开放工伤保险。</p><p><strong>深度分析：</strong>就业是民生底盘，政策重心从增长更明确转向吸纳就业。</p><p><strong>举例说明：</strong>比如成都市给招应届生企业每人补贴上万元；杭州市对外卖骑手开放工伤保险，政策着力点从 GDP 增速转向"一个岗位、一份收入"。</p>
+      <div class="news-item flash" data-tags="国内 民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>就业优先政策加力，灵活就业纳入工伤</div>
+        <div class="news-summary">稳就业优先，成都、武汉给招应届生企业每人补贴 1 万—1.5 万元，杭州对外卖骑手开放工伤保险。</div>        <div class="news-detail">
+          <p>稳就业置于宏观政策优先位置，高校毕业生、灵活就业与技能培训获多重支持，成都、武汉给招应届生中小企业每人补贴 1 万—1.5 万元。</p><p>政策重心从增长更明确转向吸纳就业，着力点转向"一个岗位、一份收入"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生 政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>医保便民服务再推进，异地结算扩面</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>门诊统筹、异地结算与集采扩围落地；冠脉支架集采后单价从万元降到 700—800 元，外地看病可直接刷医保卡结算，跨省联网定点机构增至 60 万家以上。</p><p><strong>深度分析：</strong>医保每少跑腿少花钱，都是对民生安全感的直接充值。</p><p><strong>举例说明：</strong>比如上海市一位参保人在武汉看病直接刷医保卡结算，不用垫钱回老家报销；南京市支架集采后一台手术耗材费省下大半。</p>
+      <div class="news-item flash" data-tags="民生 政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>医保便民服务再推进，异地结算扩面</div>
+        <div class="news-summary">门诊统筹、异地结算与集采扩围落地，冠脉支架集采后单价降至 700—800 元，跨省联网定点机构超 60 万家。</div>        <div class="news-detail">
+          <p>门诊统筹、异地结算与集采扩围落地，冠脉支架集采后单价从万元降到 700—800 元，跨省联网定点机构增至 60 万家以上。</p><p>医保少跑腿少花钱，直接充值民生安全感。</p>
         </div>
         <div class="news-meta"><span class="src">来源：健康报</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>乡村振兴：人才资本双回流</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>电商、文旅与返乡创业带动人才资本回流县域；丽水、遵义等地返乡青年用直播把土特产卖向全国，带出包装、物流一整条链。</p><p><strong>深度分析：</strong>振兴关键在可持续造血，而非一次性投入。</p><p><strong>举例说明：</strong>比如浙江丽水一位返乡青年直播卖菌菇带出整条链；不是靠补贴养产业，而是让年轻人看到"在老家也能赚钱"。</p>
+      <div class="news-item flash" data-tags="国内">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>乡村振兴：人才资本双回流</div>
+        <div class="news-summary">电商、文旅带动人才回流县域，丽水、遵义返乡青年直播卖土特产，带出整条链。</div>        <div class="news-detail">
+          <p>电商、文旅与返乡创业带动人才资本回流县域，丽水、遵义等地返乡青年用直播把土特产卖向全国。</p><p>振兴关键在可持续造血，让年轻人看到"在老家也能赚钱"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：农民日报</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="科技">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>航天深海成果频出，低轨卫星组网提速</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>卫星互联网低轨组网、深空探测与深海科考密集产出；低轨卫星让远洋渔船也能视频通话，深海潜水器带回热液样品催生新论文，在轨卫星数量年内新增逾百颗。</p><p><strong>深度分析：</strong>硬科技突破是国家能力能见度，也牵引上下游产业链。</p><p><strong>举例说明：</strong>比如三亚一艘远洋渔船借低轨卫星视频通话；青岛深海基地潜水器带回样品催生新论文，投入最终变通信与就业红利。</p>
+      <div class="news-item flash" data-tags="科技">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>航天深海成果频出，低轨卫星组网提速</div>
+        <div class="news-summary">低轨卫星组网、深海科考密集产出，低轨卫星让远洋渔船视频通话，在轨卫星年内新增逾百颗。</div>        <div class="news-detail">
+          <p>卫星互联网低轨组网、深空探测与深海科考密集产出，低轨卫星让远洋渔船也能视频通话，在轨卫星年内新增逾百颗。</p><p>硬科技突破牵引上下游产业链，最终变通信与就业红利。</p>
         </div>
         <div class="news-meta"><span class="src">来源：科技日报</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>尼泊尔北部山洪致579人遇难、1924人失联</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>据尼泊尔国家减少灾害风险管理局 8 月 28 日公布的数据，尼泊尔北部地区山洪已造成死亡人数升至 579 人，失联人数升至 1924 人；8 月 26 日热索瓦地区暴发山洪后，尼泊尔政府同日决定将受灾地区部分行政单位划为灾害危机地区，期限 3 个月，以便集中调动救援资源并推进灾后恢复。</p><p><strong>深度分析：</strong>季风期极端降雨仍是南亚最大自然灾害风险，灾后统计往往在救援推进中持续修正；短期看搜救与防疫，中长期看山区防灾预警与住房选址。</p><p><strong>举例说明：</strong>比如热索瓦地区多条道路被冲毁，加德满都救援队需徒步或直升机进入；邻国中国西藏日喀则边境口岸一度暂停跨境通行，救援物资从加德满都空运中转。</p>
+      <div class="news-item flash" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>尼泊尔北部山洪致579人遇难、1924人失联</div>
+        <div class="news-summary">尼泊尔国家减灾局 8 月 28 日公布，北部山洪死亡升至 579 人、失联 1924 人；热索瓦地区 8 月 26 日暴发山洪，灾区划为危机地区 3 个月。</div>        <div class="news-detail">
+          <p>据尼泊尔国家减少灾害风险管理局 8 月 28 日公布的数据，尼泊尔北部地区山洪死亡人数升至 579 人，失联升至 1924 人；8 月 26 日热索瓦地区暴发山洪后，尼泊尔政府将受灾地区部分行政单位划为灾害危机地区，期限 3 个月。</p><p>季风期极端降雨是南亚主要自然灾害风险，灾后统计随救援推进持续修正；中国西藏日喀则边境口岸一度暂停跨境通行，救援物资经加德满都空运中转。</p>
         </div>
         <div class="news-meta"><span class="src">来源：北京青年报 / 尼泊尔国家减少灾害风险管理局</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>粮食安全：耕地占补平衡监管收紧</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>高标准农田建设与耕地占补平衡监管加强，主粮自给被反复强调；河南、湖南等地清退"占一补一"虚报地块，补的耕地必须真种粮、能验收。</p><p><strong>深度分析：</strong>饭碗端在自己手里，是大国博弈中最不显眼却最关键的底气。</p><p><strong>举例说明：</strong>比如河南周口沈丘县清退虚报地块，补的耕地必须真种粮；高标准农田"旱能灌、涝能排"，亩产比普通田高。</p>
+      <div class="news-item flash" data-tags="国内">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>粮食安全：耕地占补平衡监管收紧</div>
+        <div class="news-summary">高标准农田与耕地占补平衡监管收紧，河南、湖南清退"占一补一"虚报地块，补的耕地须真种粮。</div>        <div class="news-detail">
+          <p>高标准农田建设与耕地占补平衡监管加强，河南、湖南等地清退"占一补一"虚报地块，补的耕地必须真种粮、能验收。</p><p>饭碗端在自己手里，是大国博弈中最不显眼却最关键的底气。</p>
         </div>
         <div class="news-meta"><span class="src">来源：经济日报</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="科技 政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>网络安全与个人信息保护升级</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>针对数据泄露、诈骗与 AI 深伪治理加码，平台合规责任被压实；工信部通报下架一批违规收集个人信息 App，深伪内容须留痕溯源。</p><p><strong>深度分析：</strong>数字生活信任建立在可追责的安全底座之上。</p><p><strong>举例说明：</strong>比如北京市网信办下架一款过度索权 App；深圳一起 AI 换脸诈骗案中平台被要求提供溯源线索。</p>
+      <div class="news-item flash" data-tags="科技 政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>网络安全与个人信息保护升级</div>
+        <div class="news-summary">数据泄露、AI 深伪治理加码，工信部通报下架一批违规收集个人信息 App，深伪内容须留痕溯源。</div>        <div class="news-detail">
+          <p>针对数据泄露、诈骗与 AI 深伪治理加码，平台合规责任被压实，工信部通报下架一批违规收集个人信息 App。</p><p>数字生活信任建立在可追责的安全底座之上，深伪内容须留痕溯源。</p>
         </div>
         <div class="news-meta"><span class="src">来源：网信办</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>体育赛事带动城市消费</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>足球、马拉松等赛事重启人气，带动周边消费与城市品牌；一场城市马拉松可带来数万外地跑者，周边酒店满房、餐馆排队，单场拉动消费过亿元。</p><p><strong>深度分析：</strong>赛事经济是流量变现范本，但安全保障是前提。</p><p><strong>举例说明：</strong>比如杭州市一场马拉松带来数万外地跑者，周边酒店满房；韩国首尔梨泰院 2022 年踩踏事故警示，人流管控失当会让流量反成风险。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>体育赛事带动城市消费</div>
+        <div class="news-summary">足球、马拉松带动城市消费，一场马拉松带来数万外地跑者、拉动消费过亿元，周边酒店满房。</div>        <div class="news-detail">
+          <p>足球、马拉松等赛事带动周边消费与城市品牌，一场城市马拉松可带来数万外地跑者，单场拉动消费过亿元。</p><p>赛事经济是流量变现范本，但安全保障是前提。</p>
         </div>
         <div class="news-meta"><span class="src">来源：体育周刊</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国内">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国风文博持续出圈</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>文博文创、国风影视与沉浸式演出走红；陕西历史博物馆"考古盲盒"上线即售罄，带动文创收入同比翻倍，一部古装剧带火取景地小城。</p><p><strong>深度分析：</strong>文化自信不是口号，而是年轻人愿为之买单的内容力。</p><p><strong>举例说明：</strong>比如西安一家博物馆考古盲盒上线即售罄；一部古装剧带火山西平遥取景地，文旅订单涨数倍。</p>
+      <div class="news-item flash" data-tags="国内">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>国风文博持续出圈</div>
+        <div class="news-summary">文博文创走红，陕西历史博物馆"考古盲盒"上线即售罄，带动文创收入同比翻倍。</div>        <div class="news-detail">
+          <p>文博文创、国风影视与沉浸式演出走红，陕西历史博物馆"考古盲盒"上线即售罄，带动文创收入同比翻倍。</p><p>文化自信是年轻人愿为之买单的内容力。</p>
         </div>
         <div class="news-meta"><span class="src">来源：文化观察</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中东局势牵动油价与航运</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>中东地缘风险叠加主要经济体政策博弈，国际油价与避险资产波动；霍尔木兹海峡航运保险费率一度翻倍，油轮绕行好望角推高到岸成本。</p><p><strong>深度分析：</strong>能源通道安全是全球通胀隐性变量，扰动快速传导。</p><p><strong>举例说明：</strong>比如一艘油轮绕行好望角，到岸成本上升；广州一家炼厂原料运费当月走高，油价一涨全链敏感。</p>
+      <div class="news-item flash" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>中东局势牵动油价与航运</div>
+        <div class="news-summary">中东风险叠加政策博弈，国际油价波动，霍尔木兹海峡航运保险费率一度翻倍，油轮绕行好望角。</div>        <div class="news-detail">
+          <p>中东地缘风险叠加主要经济体政策博弈，国际油价与避险资产波动，霍尔木兹海峡航运保险费率一度翻倍。</p><p>能源通道安全是全球通胀隐性变量，扰动快速传导。</p>
         </div>
         <div class="news-meta"><span class="src">来源：路透</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>俄乌冲突呈消耗态势</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>8 月俄乌战场呈俄空防施压、乌地面推进的差异化格局；俄军在顿涅茨克方向用无人机与滑翔炸弹加大空袭，乌军在波克罗夫斯克一线靠步兵推进。</p><p><strong>深度分析：</strong>消耗战走向取决于补给、动员与国际援助节奏，短期难见转折。</p><p><strong>举例说明：</strong>比如俄军加强对顿涅茨克方向的滑翔炸弹空袭，乌军在波克罗夫斯克靠步兵推进夺回村落；别尔哥罗德州遭袭凸显纵深目标也难幸免。</p>
+      <div class="news-item flash" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>俄乌冲突呈消耗态势</div>
+        <div class="news-summary">8 月俄乌呈俄空防施压、乌地面推进格局；俄军加强顿涅茨克方向滑翔炸弹空袭，乌军在波克罗夫斯克推进。</div>        <div class="news-detail">
+          <p>8 月俄乌战场呈俄空防施压、乌地面推进的差异化格局，俄军在顿涅茨克方向用无人机与滑翔炸弹加大空袭。</p><p>消耗战走向取决于补给、动员与国际援助节奏，短期难见转折。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="国际">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>经贸与产业链博弈持续</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>主要经济体在关税、产业链与关键矿产上的博弈持续；印尼以资源民族主义为由限制镍矿出口，下游电池厂被迫找替代来源、加速出海建厂。</p><p><strong>深度分析：</strong>产业链"友岸""近岸"重构中，自主与开放需再平衡。</p><p><strong>举例说明：</strong>比如印尼限制镍矿出口，下游电池厂找替代；宁德一家电池厂一边出海建厂贴近客户，一边补链强链。</p>
+      <div class="news-item flash" data-tags="国际">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>经贸与产业链博弈持续</div>
+        <div class="news-summary">关税与关键矿产博弈持续，印尼限制镍矿出口，下游电池厂被迫找替代来源、加速出海建厂。</div>        <div class="news-detail">
+          <p>主要经济体在关税、产业链与关键矿产上的博弈持续，印尼以资源民族主义为由限制镍矿出口。</p><p>产业链"友岸""近岸"重构中，自主与开放需再平衡。</p>
         </div>
         <div class="news-meta"><span class="src">来源：财经</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>公共急救预案再受关注，AED配置提速</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>近期赛事与公共场所突发健康事件，让急救预案、AED 配置与现场保障重回视野；深圳、上海地铁站配 AED 并培训站务员，多次成功除颤救回乘客。</p><p><strong>深度分析：</strong>城市安全治理的细处，往往决定悲剧能否被避免。</p><p><strong>举例说明：</strong>比如深圳市地铁站配 AED 并培训站务员，曾成功除颤救回乘客；而上海也曾出现设备配齐但会使用者不足、关键时刻靠路人急救的情况。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>公共急救预案再受关注，AED配置提速</div>
+        <div class="news-summary">赛事与公共场所突发健康事件让 AED 配置重回视野，深圳、上海地铁站配 AED 并培训站务员，多次成功除颤。</div>        <div class="news-detail">
+          <p>近期赛事与公共场所突发健康事件让急救预案、AED 配置与现场保障重回视野，深圳、上海地铁站配 AED 并培训站务员。</p><p>城市安全治理的细处，往往决定悲剧能否被避免。</p>
         </div>
         <div class="news-meta"><span class="src">来源：央广网</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>暑期文旅收尾，县域游研学走热</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>暑期临近尾声，县域旅游、文博研学与演出经济人气仍旺；云南大理、湖南凤凰等地靠"非遗夜市+汉服巡游"周末涌进十万游客，民宿一房难求。</p><p><strong>深度分析：</strong>文旅从看景转向体验，内容供给决定一个地方能否出圈。</p><p><strong>举例说明：</strong>比如云南大理一县城靠非遗夜市周末涌进十万游客；西安家长带娃去博物馆做拓印、去茶园采茶，"逛吃"升级成"边玩边学"。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>暑期文旅收尾，县域游研学走热</div>
+        <div class="news-summary">暑期收尾，县域游、研学仍旺，云南大理、湖南凤凰"非遗夜市+汉服"周末涌进十万游客。</div>        <div class="news-detail">
+          <p>暑期临近尾声，县域旅游、文博研学与演出经济人气仍旺，云南大理、湖南凤凰靠"非遗夜市+汉服巡游"周末涌进十万游客。</p><p>文旅从看景转向体验，内容供给决定一个地方能否出圈。</p>
         </div>
         <div class="news-meta"><span class="src">来源：文旅部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生 政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>养老服务体系补短板</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>居家社区养老与助餐、助浴服务扩面，上海、成都等地推行"长者食堂"与上门护理；静安区把养老驿站开进小区，日托与康复一站解决。</p><p><strong>深度分析：</strong>老龄化下，居家社区养老是性价比最高的兜底网络。</p><p><strong>举例说明：</strong>比如上海市静安区一个长者食堂两荤一素 8 元，独居老人顿顿有着落；成都市社区上门护理把失能家庭负担从全天候降到定期专业照料。</p>
+      <div class="news-item flash" data-tags="民生 政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>养老服务体系补短板</div>
+        <div class="news-summary">居家社区养老扩面，上海静安、成都推行"长者食堂"与上门护理，长者食堂两荤一素 8 元。</div>        <div class="news-detail">
+          <p>居家社区养老与助餐、助浴服务扩面，上海、成都等地推行"长者食堂"与上门护理，长者食堂两荤一素 8 元。</p><p>老龄化下，居家社区养老是性价比最高的兜底网络。</p>
         </div>
         <div class="news-meta"><span class="src">来源：民政部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生 政策">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>教育减负与课后服务深化</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>多地深化课后服务与作业管理，探索"5+2"全覆盖与暑期托管；北京、南京将围棋、编程、农耕纳入课后课，家长接娃时间更从容。</p><p><strong>深度分析：</strong>减负不是减质量，而是把时间与选择权还给家庭。</p><p><strong>举例说明：</strong>比如北京市海淀区一所小学课后开围棋、编程、农耕课，接娃从下午 3 点半延到 5 点半；南京双职工不再为"放学后两小时"请假奔波。</p>
+      <div class="news-item flash" data-tags="民生 政策">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>教育减负与课后服务深化</div>
+        <div class="news-summary">多地深化课后服务，北京、南京将围棋、编程、农耕纳入课后课，接娃从 15:30 延至 17:30。</div>        <div class="news-detail">
+          <p>多地深化课后服务与作业管理，北京、南京将围棋、编程、农耕纳入课后课，接娃从 15:30 延至 17:30。</p><p>减负是把时间与选择权还给家庭。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国教育报</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>老旧小区改造提速，加装电梯成标配</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>2026 年城镇老旧小区改造继续加码，重点在管线、停车与加装电梯；广州、武汉推行"居民点单、政府兜底"模式，电梯加装补贴提高到每台 20 万。</p><p><strong>深度分析：</strong>旧改是稳投资与惠民生的交汇点，改的是房子也改出消费。</p><p><strong>举例说明：</strong>比如广州市越秀区一个 90 年代小区加装 6 部电梯后，顶楼老人下楼频次翻倍；武汉市某社区旧改后新增停车位 120 个，停车纠纷明显下降。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>老旧小区改造提速，加装电梯成标配</div>
+        <div class="news-summary">2026 老旧小区改造加码，广州、武汉推行"居民点单、政府兜底"，电梯加装补贴提至每台 20 万。</div>        <div class="news-detail">
+          <p>2026 年城镇老旧小区改造继续加码，重点在管线、停车与加装电梯，广州、武汉推行"居民点单、政府兜底"，补贴提至每台 20 万。</p><p>旧改是稳投资与惠民生的交汇点。</p>
         </div>
         <div class="news-meta"><span class="src">来源：住建部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>社区长者食堂走红，15分钟养老圈成形</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>多地布局"15分钟养老服务圈"，社区长者食堂、日间照料中心密集开业；杭州、成都一份两荤一素控制在 8—12 元，对 80 岁以上老人再补贴。</p><p><strong>深度分析：</strong>养老不离社区，"一顿热饭"是最朴素的刚需，也是撬动居家养老的支点。</p><p><strong>举例说明：</strong>比如杭州市拱墅区一家长者食堂日服务 300 人次，两荤一素 10 元；成都市社区食堂对 90 岁老人免费，子女远程充值即可。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>社区长者食堂走红，15分钟养老圈成形</div>
+        <div class="news-summary">"15 分钟养老圈"布局，杭州、成都长者食堂两荤一素 8—12 元，80 岁以上再补贴。</div>        <div class="news-detail">
+          <p>多地布局"15 分钟养老服务圈"，社区长者食堂、日间照料中心密集开业，杭州、成都一份两荤一素 8—12 元。</p><p>养老不离社区，"一顿热饭"是撬动居家养老的支点。</p>
         </div>
         <div class="news-meta"><span class="src">来源：民政部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>普惠托育扩容，托位进社区进园区</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>普惠托育专项行动扩面，2026 年成都、南京新增社区与产业园区嵌入式托育点，每孩每月托费压到 1500—2500 元，缓解"带娃难"。</p><p><strong>深度分析：</strong>托育是生育支持的第一环，成本与可达性决定年轻父母敢不敢生。</p><p><strong>举例说明：</strong>比如成都市高新区一家园区托育点开在写字楼里，员工下楼即送；南京市某社区托育点按 1500 元/月收费，排队从半年缩到两周。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>普惠托育扩容，托位进社区进园区</div>
+        <div class="news-summary">普惠托育扩面，2026 成都、南京新增社区与园区嵌入式托育点，月托费压到 1500—2500 元。</div>        <div class="news-detail">
+          <p>普惠托育专项行动扩面，2026 年成都、南京新增社区与产业园区嵌入式托育点，月托费 1500—2500 元。</p><p>托育是生育支持第一环，成本与可达性决定年轻父母敢不敢生。</p>
         </div>
         <div class="news-meta"><span class="src">来源：卫健委</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>城市内涝治理：海绵城市与排涝双管</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>郑州、合肥等地把海绵城市与排水防涝提标结合，易涝点改造、调蓄池与移动泵车前置；暴雨预警触发"一点一策"布防。</p><p><strong>深度分析：</strong>内涝是城市病的集中爆发，治理要从末端抽水前移到源头蓄滞。</p><p><strong>举例说明：</strong>比如郑州市改造后核心区 50 毫米/小时降雨不再积水；合肥市建设调蓄池，暴雨时削峰三成，地铁口不再临时管控。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>城市内涝治理：海绵城市与排涝双管</div>
+        <div class="news-summary">郑州、合肥结合海绵城市与排涝提标，易涝点改造、调蓄池与移动泵车前置，暴雨预警"一点一策"。</div>        <div class="news-detail">
+          <p>郑州、合肥等地把海绵城市与排水防涝提标结合，易涝点改造、调蓄池与移动泵车前置，暴雨预警触发"一点一策"布防。</p><p>内涝治理从末端抽水前移到源头蓄滞。</p>
         </div>
         <div class="news-meta"><span class="src">来源：住建部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>高温下的劳动者：津贴与休息室落地</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>多地发布高温劳动保护提示，建筑、环卫、外卖等行业须发高温津贴并提供休息场所；重庆、杭州规定气温超 40℃ 停止室外露天作业。</p><p><strong>深度分析：</strong>高温不是"忍一忍"，而是受法律保护的劳动条件，落实才见城市温度。</p><p><strong>举例说明：</strong>比如重庆市为环卫工设空调休息室、发防暑包；杭州市外卖平台在高温日下调派单密度并开放驿站，骑手中暑明显减少。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>高温下的劳动者：津贴与休息室落地</div>
+        <div class="news-summary">多地发高温劳动保护提示，建筑、环卫、外卖须发津贴并设休息场所，超 40℃ 停室外作业。</div>        <div class="news-detail">
+          <p>多地发布高温劳动保护提示，建筑、环卫、外卖等行业须发高温津贴并提供休息场所，气温超 40℃ 停止室外露天作业。</p><p>高温是受法律保护的劳动条件，落实才见城市温度。</p>
         </div>
         <div class="news-meta"><span class="src">来源：人社部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>菜篮子保供稳价，冷链直供进社区</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>夏秋"伏缺期"菜价波动，武汉、郑州等多地启动平价菜店与冷链直供，社区团购对接产地，叶菜价格涨幅被压在个位数。</p><p><strong>深度分析：</strong>菜价是民生温度计，保供稳价靠链条缩短而非行政限价。</p><p><strong>举例说明：</strong>比如武汉市在社区设平价菜柜，云南蔬菜冷链直供，小白菜每斤比周边便宜 1 元；郑州市"菜篮子"车开进小区，老年居民不用跑远。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>菜篮子保供稳价，冷链直供进社区</div>
+        <div class="news-summary">夏秋"伏缺期"菜价波动，武汉、郑州启动平价菜店与冷链直供，叶菜涨幅压至个位数。</div>        <div class="news-detail">
+          <p>夏秋"伏缺期"菜价波动，武汉、郑州等多地启动平价菜店与冷链直供，叶菜价格涨幅被压在个位数。</p><p>菜价是民生温度计，保供稳价靠链条缩短而非行政限价。</p>
         </div>
         <div class="news-meta"><span class="src">来源：农业农村部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>公交地铁适老化，免费与无障碍扩面</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>上海、西安等地推进公交地铁适老化与无障碍改造，低地板公交、语音报站、轮椅坡道成标配；多地对 65 岁以上老人公交免费。</p><p><strong>深度分析：</strong>无障碍不是小众设施，而是衡量城市包容度的硬指标。</p><p><strong>举例说明：</strong>比如上海市新购公交全低地板，轮椅一键上；西安市地铁全站配无障碍电梯，65 岁以上老人刷卡免费，通勤与就医都方便。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>公交地铁适老化，免费与无障碍扩面</div>
+        <div class="news-summary">上海、西安推进公交地铁适老化，低地板公交、无障碍电梯成标配，65 岁以上老人公交免费。</div>        <div class="news-detail">
+          <p>上海、西安等地推进公交地铁适老化与无障碍改造，低地板公交、语音报站、轮椅坡道成标配。</p><p>无障碍是衡量城市包容度的硬指标。</p>
         </div>
         <div class="news-meta"><span class="src">来源：交通运输部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>保障性租赁住房入市，新市民安家</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>深圳、南京等地保障性租赁住房集中入市，主打小户型、低租金、可就近上班，优先保障新市民与青年人；租金约为同地段市场价七到八折。</p><p><strong>深度分析：</strong>保租房是房住不炒的承托，解决"住得上"才能谈"留得下"。</p><p><strong>举例说明：</strong>比如深圳市南山一处保租房项目月租 1800 元起，应届生通勤 20 分钟；南京市产业区旁保租房优先企业员工，离职不退、换工作可续租。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>保障性租赁住房入市，新市民安家</div>
+        <div class="news-summary">深圳、南京保障性租赁房集中入市，小户型低租金，租金约为同地段市场价七到八折。</div>        <div class="news-detail">
+          <p>深圳、南京等地保障性租赁住房集中入市，主打小户型、低租金，租金约为同地段市场价七到八折。</p><p>保租房是房住不炒的承托，解决"住得上"才能谈"留得下"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：住建部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>城市公园绿地开放，推窗见绿</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>西安、成都等地推进公园绿地开放共享，草坪、林下空间允许露营休憩，口袋公园补齐"500 米见园"短板，西安新建口袋公园 30 个。</p><p><strong>深度分析：</strong>绿地开放是把生态红利变成日常可及的休憩权。</p><p><strong>举例说明：</strong>比如西安市新建 30 个口袋公园，老人下楼有处遛弯；成都市开放公园草坪供露营，周末家庭客流翻倍，邻里关系也更热。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>城市公园绿地开放，推窗见绿</div>
+        <div class="news-summary">西安、成都推进公园绿地开放共享，草坪允许露营，西安新建口袋公园 30 个。</div>        <div class="news-detail">
+          <p>西安、成都等地推进公园绿地开放共享，草坪、林下空间允许露营休憩，西安新建口袋公园 30 个。</p><p>绿地开放是把生态红利变成日常可及的休憩权。</p>
         </div>
         <div class="news-meta"><span class="src">来源：住建部</span><span>2026年8月28日</span></div>
       </div>
-      <div class="news-item" data-tags="民生">
-        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>根治欠薪：工资支付监控预警</div>
-        <div class="news-detail">
-          <p><strong>核心事件：</strong>工程建设领域全面推行工资保证金与分账管理，苏州、深圳等地将农民工工资支付纳入实时监控，欠薪案件同比明显下降。</p><p><strong>深度分析：</strong>根治欠薪靠制度兜住"钱从哪来、发给谁"，而非年底集中清欠。</p><p><strong>举例说明：</strong>比如苏州市一工地工资由专户直发银行卡，系统预警某项目余额不足即约谈；春节前欠薪投诉量同比下降四成。</p>
+      <div class="news-item flash" data-tags="民生">
+        <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span><span class="news-tag-kx">快讯</span>根治欠薪：工资支付监控预警</div>
+        <div class="news-summary">工程建设领域全面推行工资保证金与分账管理，苏州、深圳将农民工工资支付纳入实时监控。</div>        <div class="news-detail">
+          <p>工程建设领域全面推行工资保证金与分账管理，苏州、深圳等地将农民工工资支付纳入实时监控，欠薪案件同比明显下降。</p><p>根治欠薪靠制度兜住"钱从哪来、发给谁"，而非年底集中清欠。</p>
         </div>
         <div class="news-meta"><span class="src">来源：人社部</span><span>2026年8月28日</span></div>
       </div>
@@ -962,147 +976,147 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="近代 红色">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>1963年8月28日：华盛顿"我有一个梦想"</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>1963年8月28日，马丁·路德·金在华盛顿林肯纪念堂前发表《我有一个梦想》演说，约 25 万人参与的"向华盛顿进军"成为美国民权运动转折点。</p><p><strong>深度分析：</strong>一句演说把抽象权利变成可共情的图像，是公共修辞改变历史的范例。</p><p><strong>举例说明：</strong>比如这场游行直接推动次年《民权法案》通过；今天看华盛顿现场影像，仍能感到"以非暴力争取平等"如何在电视时代点燃一代人。</p>
         </div>
         <div class="news-meta"><span class="src">来源：世界历史</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="近代 红色">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抗战胜利81周年纪念延续</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>8月15日日本宣布无条件投降 81 周年前后，南京、沈阳等地纪念馆、学校举行纪念活动，强调铭记历史、珍爱和平。</p><p><strong>深度分析：</strong>纪念不是延续仇恨，而是确认和平从何而来，为当下提供价值锚点。</p><p><strong>举例说明：</strong>比如南京市侵华日军南京大屠杀遇难同胞纪念馆幸存者证言逐页数字化；年轻人带鲜花去献，不是为恨，而是怕"没人记得"之后悲剧重演。</p>
         </div>
         <div class="news-meta"><span class="src">来源：新华社</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="传统 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>中元节刚过，传统仪俗回望</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>农历七月半（中元节）刚过，祭祖、放河灯、焚包袱等习俗在多地复苏，被赋予更温和的情感表达。</p><p><strong>深度分析：</strong>节俗是民族记忆的活态载体，在当代安放思念、连接代际。</p><p><strong>举例说明：</strong>比如广西柳州三江的河灯节，人们把思念写进灯放进水里；城市年轻人也用"云端祭祀"寄哀思，仪式在变，"记得你"没变。</p>
         </div>
         <div class="news-meta"><span class="src">来源：民俗研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="近代 红色">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>九一八临近，勿忘国耻教育升温</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>9月18日前夕，沈阳"九一八"历史博物馆及多地学校开展爱国主义与历史教育，用文物与亲历叙事让青年共情。</p><p><strong>深度分析：</strong>历史教育要避免说教，用真实文物与亲历叙事让年轻一代共情。</p><p><strong>举例说明：</strong>比如沈阳市残历碑定格在 1931年9月18日；北京市某中学让学生读抗战家书、拼老地图，比背年代更让人记住"为什么不能忘"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国国防报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="文化 考古">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>敦煌新发现引发关注</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>敦煌研究院数字化与石窟保护取得新进展，"数字敦煌"把 30 个洞窟高清建模上线，罕见文书与壁画细节公开展示。</p><p><strong>深度分析：</strong>数字化让千年文明可携带，是文化传承与全球共享的中国方案。</p><p><strong>举例说明：</strong>比如甘肃敦煌数字敦煌把 30 个洞窟高清建模上网，在家就能 360 度看飞天；新发现唐代文书里甚至有当时"请假条"和账本。</p>
         </div>
         <div class="news-meta"><span class="src">来源：敦煌研究院</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="近代 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>故宫文物南迁回望</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>围绕抗战时期故宫文物南迁（1.9 万余箱书画瓷器辗转南京、上海、四川）的史料与纪录片引发热议，展现乱世护宝历程。</p><p><strong>深度分析：</strong>文物南迁是文化救国的缩影，提醒文明延续需主动守护。</p><p><strong>举例说明：</strong>比如1.9 万余箱书画瓷器在战火中辗转十几年无一毁于炮火；当年押运人写"人在文物在"，今天看仍让人鼻酸。</p>
         </div>
         <div class="news-meta"><span class="src">来源：故宫博物院</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="考古">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>考古新成果揭示早期社会</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多项新石器与青铜时代遗址考古成果公布，如浙江良渚挖出 5000 年前的粮仓与排水沟，刷新对早期城市、手工业与礼制的认识。</p><p><strong>深度分析：</strong>考古用实物重写教科书，让"从哪里来"更扎实。</p><p><strong>举例说明：</strong>比如良渚古城挖出 5000 年前粮仓与排水沟，证明已有"城市规划"意识；一件青铜爵纹饰把"礼制"从文献坐实成器物。</p>
         </div>
         <div class="news-meta"><span class="src">来源：社科院考古所</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>历史剧纪录片持续走红</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多部历史题材剧集与纪录片获高口碑，如某纪录片请学者按壁画一步步复原唐代妆容，严谨考据成观众新刚需。</p><p><strong>深度分析：</strong>观众不再满足架空爽剧，对真历史的渴求折射文化自信。</p><p><strong>举例说明：</strong>比如某平台纪录片为还原唐代妆容请学者按壁画复原，弹幕夸细节；相比"披古装谈恋爱"，观众更买账"说了人话、讲了真事"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：影视独舌</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>长城保护：从抢修到活态传承</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>长城国家文化公园建设与段落修缮推进，北京怀柔某段塌方老城墙用"原有砖、原工艺"补而非水泥抹平，保护与文旅平衡成焦点。</p><p><strong>深度分析：</strong>遗产保护不是封存，而是在使用中传承，避免开发即破坏。</p><p><strong>举例说明：</strong>比如怀柔某段塌了的老城墙用原砖原工艺补；沿线村民开民宿讲长城故事，保护有了收入来源更可持续。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国家文物局</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="传统 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>大运河文化带：流动的历史经济带</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>大运河文化带保护与文旅融合提速，扬州三湾、杭州拱宸桥段改造后成网红打卡地，摇橹船载游客看两岸老粮仓变书店。</p><p><strong>深度分析：</strong>一条河串起半部中国史，是文旅客旅融合的样本。</p><p><strong>举例说明：</strong>比如江苏扬州三湾、浙江杭州拱宸桥改造后成网红地，摇橹船看老粮仓变书店；千年漕运的市井气成了流量密码。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国文化报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="红色 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>红色旅游年轻化</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>红色地标借助沉浸式展陈与研学路线吸引年轻游客，如井冈山把"挑粮小道"做成体验路线，年轻人背竹筐走一趟就懂"艰辛"。</p><p><strong>深度分析：</strong>当历史可感可触，爱国主义从抽象概念变成具体体验。</p><p><strong>举例说明：</strong>比如江西井冈山挑粮小道体验路线，年轻人背竹筐走一趟就懂艰辛；陕西延安某纪念馆用 AR 还原会议场景，00 后边玩边记。</p>
         </div>
         <div class="news-meta"><span class="src">来源：文旅部</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="传统">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>非遗活化：老手艺的新流量</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>短视频与直播让刺绣、陶瓷、木作等非遗走进日常，贵州苗绣主播一场卖空整寨绣片，年轻匠人崭露头角。</p><p><strong>深度分析：</strong>非遗要活下去，得先被看见被使用，商业是温和的保存方式。</p><p><strong>举例说明：</strong>比如贵州雷山苗绣主播一场卖空整寨绣片，订单排到半年后；江西景德镇年轻柴窑主靠直播开窑，残次品也被抢。</p>
         </div>
         <div class="news-meta"><span class="src">来源：非遗头条</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="文化 考古">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>古籍数字化：孤本不再孤独</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>大量珍稀古籍完成高清扫描与公开，《永乐大典》残卷高清上线，海外学者不用飞北京也能逐页研究。</p><p><strong>深度分析：</strong>数字化是文明的备份与分发，让知识从藏书架走向世界。</p><p><strong>举例说明：</strong>比如国家图书馆《永乐大典》残卷高清上线，海外学者不用飞北京；某宋刻本经 AI 识字，生僻字自动标注，研究生省下大半年校勘。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国家图书馆</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="近代">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>近代城市史：把街道读成档案</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>以上海、武汉、广州为代表的近代城市史研究升温，如上海"租界马路"走向藏着当年华洋分治的边界，街巷地名成解读窗口。</p><p><strong>深度分析：</strong>城市不是水泥森林，每块路牌都藏着现代化进程的褶皱。</p><p><strong>举例说明：</strong>比如上海租界马路走向藏着华洋分治边界；武汉"一元路、二曜路"命名见证民国市政实验，走路即可读史。</p>
         </div>
         <div class="news-meta"><span class="src">来源：近代史研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="考古 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>丝绸之路：文明互鉴的千年通道</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>丝路考古与展览持续上新，新疆尼雅遗址出土"五星出东方"锦护臂，纹样融合中原与西域审美，商贸宗教技术交流史被重新讲述。</p><p><strong>深度分析：</strong>丝路证明互通早于对抗，是今天全球化叙事的历史注脚。</p><p><strong>举例说明：</strong>比如新疆尼雅遗址出土的"五星出东方"锦护臂纹样融合中原与西域审美；葡萄、苜蓿、佛教都沿这条路进来，谁都不是孤岛。</p>
         </div>
         <div class="news-meta"><span class="src">来源：考古杂志</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="传统">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>传统节日考：节令里的中国时间</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>从立春到冬至，传统节令知识与习俗被系统梳理与复现，如"冬至饺子夏至面"对应阴阳转换的农耕经验，年轻人重拾节气节奏。</p><p><strong>深度分析：</strong>节令是农耕文明的时间美学，重新认识它有助于安顿现代节奏。</p><p><strong>举例说明：</strong>比如"冬至饺子夏至面"对应阴阳转换经验；北京年轻人重拾"忙趁东风放纸鸢"，在节气里找回慢下来的节奏。</p>
         </div>
         <div class="news-meta"><span class="src">来源：民俗研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>科技史回望：被遗忘的发明家</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多档节目与展览重提中国古代与近现代技术发明，如宋代水运仪象台已具机械钟雏形、比西方早数百年，纠正西方中心叙事。</p><p><strong>深度分析：</strong>讲好自己的科技史，是建立自主创新信心的文化地基。</p><p><strong>举例说明：</strong>比如宋代水运仪象台已具机械钟雏形，比西方早数百年；当代展览把祖冲之、沈括与今天航天人对接，让人明白自主创新有根。</p>
         </div>
         <div class="news-meta"><span class="src">来源：科技日报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="传统 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>饮食史：一碗饭里的文明交流</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>从作物传播到菜系形成，饮食史成为大众读史新入口，如辣椒明朝才传入却重塑川湘菜，番茄土豆进中国不过几百年。</p><p><strong>深度分析：</strong>最日常的餐桌，往往藏着最深远的文明交融。</p><p><strong>举例说明：</strong>比如辣椒明朝才传入却重塑川湘菜；番茄、土豆进中国不过几百年，如今是家常主角，成都一口饭里全是世界史。</p>
         </div>
         <div class="news-meta"><span class="src">来源：三联生活周刊</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="近代 文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>女性史：被遮蔽的半部历史</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>更多研究关注女性在农耕、手工业、革命与家庭中的真实角色，如抗战中"十万木兰"承担后勤与救护，过去课本却寥寥数笔。</p><p><strong>深度分析：</strong>补全女性史，历史才从他者叙事变成共同的故事。</p><p><strong>举例说明：</strong>比如抗战中"十万木兰"承担后勤与救护，过去课本寥寥数笔；口述史把纺线、送粮、护伤的婆婆妈妈们写进正史。</p>
         </div>
         <div class="news-meta"><span class="src">来源：历史研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="近代 红色">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>战争与和平：历史给出的反复教训</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>结合抗战与两次世界大战纪念，关于战争代价与和平机制的讨论升温，如一战"圣诞节停火"说明士兵本无深仇，二战后欧洲用煤钢共同体把宿敌绑成伙伴。</p><p><strong>深度分析：</strong>历史最大的善意，是让后来者不必重交同样的学费。</p><p><strong>举例说明：</strong>比如一战圣诞节停火说明士兵本无深仇；二战后欧洲用煤钢共同体把宿敌绑成伙伴，证明制度设计能降低再战概率。</p>
         </div>
         <div class="news-meta"><span class="src">来源：世界历史</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="文化">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>口述史：普通人的时代注脚</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>社区与高校推动口述史采集，如一位老纺织工讲清"下岗那年怎么撑过来"，工人、农民、移民的个体记忆被系统记录。</p><p><strong>深度分析：</strong>宏大叙事之外，普通人的讲述才是历史最湿润的质地。</p><p><strong>举例说明：</strong>比如沈阳一位老纺织工讲清"下岗那年怎么撑过来"，一句抵过十张统计表；移民二代录下父母方言故事，让家族史不随老人离世消失。</p>
         </div>
         <div class="news-meta"><span class="src">来源：口述史月刊</span><span>2026年8月28日</span></div>
@@ -1115,147 +1129,147 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="大促 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>99划算节正式开打，下半年A级大促</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>天猫 99 划算节（9月1—9日）预热转正式，被视为仅次于双11的下半年 A 级大促；平台把"官方立减"与"跨店满减"并行。</p><p><strong>深度分析：</strong>大促日历密集化，消费者渐生疲劳，平台需在节奏与体验间找平衡。</p><p><strong>举例说明：</strong>比如杭州一位品牌方把新品首发放在 99 而非双11，省下与巨头的流量厮杀；但同样满 300 减 50，上海用户点开的人比双11少了一半。</p>
         </div>
         <div class="news-meta"><span class="src">来源：天下网商</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>开学季：文具数码换新成主力</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>秋季开学带动笔记本、平板、智能手表与文具套装热销；某品牌平板上新"错题本"功能，开学前两周销量同比涨四成。</p><p><strong>深度分析：</strong>开学经济确定性强、复购稳定，是品牌教育心智的窗口。</p><p><strong>举例说明：</strong>比如北京市海淀区家长给孩子换平板，单笔订单破千；南京市一家文具店开学前两周笔芯销量翻番。</p>
         </div>
         <div class="news-meta"><span class="src">来源：第一财经</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="大促">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>夏秋换季：服饰家居折扣开启</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>夏秋换季带动秋季服饰、床品家居、运动户外折扣；某快时尚把夏装打到 3 折清仓、秋装同步上新。</p><p><strong>深度分析：</strong>换季是刚需型消费，价格敏感用户在此集中释放。</p><p><strong>举例说明：</strong>比如上海一家快时尚夏装 3 折清仓、秋装同步上新；一套四件套从 299 降到 129，成都囤货党集中在立秋前后三天下单。</p>
         </div>
         <div class="news-meta"><span class="src">来源：亿邦动力</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="大促 直播">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>818大促收官复盘：从流量到信任</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>818 大促落幕，平台与主播更强调合规、透明与售后；某主播把"全网最低"改成"明码标价+30天价保"，退货率反而下降。</p><p><strong>深度分析：</strong>直播电商从流量狂奔进入信任经营，合规能力成核心竞争力。</p><p><strong>举例说明：</strong>比如广州一位主播把"全网最低"改成"明码标价+30天价保"，退货率反降；监管点名虚标原价后，平台强制展示近 30 天最低价。</p>
         </div>
         <div class="news-meta"><span class="src">来源：亿邦动力</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="大促 国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>京东热8购物季叠加国补</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>京东 8 月以热8购物季为主线，叠加家电数码国补；一级能效空调国补加平台券后便宜约 800 元。</p><p><strong>深度分析：</strong>国补是需求放大器，补贴退坡后的留存才是真考题。</p><p><strong>举例说明：</strong>比如武汉市一位用户一级能效空调国补加券后便宜 800；业内担心补贴一停，这波提前消费会透支下半年需求。</p>
         </div>
         <div class="news-meta"><span class="src">来源：京东黑板报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="大促">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>815家电周年庆点燃以旧换新</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>815 家电周年庆叠加以旧换新，空调冰箱等大家电迎换新高峰；旧冰箱折价 200 再补 10%，一台新风空调到手省近千元。</p><p><strong>深度分析：</strong>大家电低频高客单，靠节点与补贴集中释放，绿色智能是方向。</p><p><strong>举例说明：</strong>比如成都市一位用户旧冰箱折价 200 再补 10%，新风空调到手省近千元；门店数据智能款占比首超六成。</p>
         </div>
         <div class="news-meta"><span class="src">来源：中国家电网</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="大促">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>818手机节：旗舰价格探底</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>818 手机节期间主流厂商降价冲量，折叠屏与影像旗舰价格下探；某影像旗舰降 1500 还送耳机，旧机再抵 800。</p><p><strong>深度分析：</strong>换机周期拉长，厂商用降价保份额，以旧换新是关键增量。</p><p><strong>举例说明：</strong>比如深圳市华强北一家门店影像旗舰降 1500 还送耳机，旧机再抵 800；用户平均三年换一次机，以旧换新是杠杆。</p>
         </div>
         <div class="news-meta"><span class="src">来源：手机中国</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>拼多多百亿补贴稳基本盘</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>拼多多延续百亿补贴，在标品与农产品上保持价格优势；同一款纸巾比线下便宜三成还包邮，"农地云拼"把产地苹果直发用户。</p><p><strong>深度分析：</strong>补贴是手段不是目的，供应链与农业上行才是护城河。</p><p><strong>举例说明：</strong>比如上海用户同款纸巾拼多多比线下便宜三成还包邮；陕西洛川苹果经"农地云拼"直发，果农多赚、买家少花。</p>
         </div>
         <div class="news-meta"><span class="src">来源：晚点LatePost</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="直播 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>抖音电商内容化纵深</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>抖音电商强化"内容即货架"，短视频种草与商城搜索协同；某服饰品牌自播占比超六成，达人种草引流到商城搜索成交。</p><p><strong>深度分析：</strong>兴趣电商进入深水区，从靠主播到靠内容与货盘。</p><p><strong>举例说明：</strong>比如杭州一家服饰品牌自播占比超六成，达人种草引流到商城搜索成交；用户从刷到就买变成搜了再比，货架承接决定复购。</p>
         </div>
         <div class="news-meta"><span class="src">来源：抖音电商</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="直播 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>直播带货税务与合规收紧</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>针对主播税务、虚假宣传与售后责任的监管持续加码；某头部主播因偷税被罚后淡出，平台上线"虚假宣传词库"自动拦截违规话术。</p><p><strong>深度分析：</strong>合规不是束缚，而是把行业从割韭菜导向长期经营。</p><p><strong>举例说明：</strong>比如广州市某头部主播因偷税被罚后淡出，团队转做合规培训；平台上线虚假宣传词库，"全网最低"直接发不出去。</p>
         </div>
         <div class="news-meta"><span class="src">来源：证券时报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>即时零售：30分钟达重塑本地消费</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>外卖平台与商超打通即时零售，生鲜、药品、数码近场配送快速增长；半夜孩子发烧半小时送到退烧药，便利店成 3 公里"云货架"。</p><p><strong>深度分析：</strong>履约半径缩短到分钟级，本地实体店被重新激活为前置仓。</p><p><strong>举例说明：</strong>比如北京市朝阳区一位用户半夜孩子发烧半小时送到退烧药；成都市便利店不再是路过买，而成 3 公里云货架。</p>
         </div>
         <div class="news-meta"><span class="src">来源：36氪</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>私域运营从加粉到留人</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>品牌私域从疯狂加微信转向会员分层与精细化运营，复购成核心指标；某母婴品牌按宝宝月龄分层推送而非群发广告，复购率翻倍。</p><p><strong>深度分析：</strong>私域的尽头是产品力，没好货再精细的触达也是骚扰。</p><p><strong>举例说明：</strong>比如上海市一家母婴品牌按宝宝月龄分层推送复购率翻倍；天天甩链接的群三天就被设免打扰，触达等于无效。</p>
         </div>
         <div class="news-meta"><span class="src">来源：见实</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国货美妆集体上探中高端</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>珀莱雅、薇诺娜等国货以成分与研发上探价格带；某国货把"早C晚A"做成科学护肤 IP，精华卖到 300+ 仍断货。</p><p><strong>深度分析：</strong>国货突围靠研发而非情怀，能从平替走到首选才算赢。</p><p><strong>举例说明：</strong>比如杭州市一家国货把早C晚A做成科学护肤 IP，精华卖 300+ 仍断货；靠临床报告而非只请明星，慢慢和国际大牌摆到同一排。</p>
         </div>
         <div class="news-meta"><span class="src">来源：青眼</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>银发经济成电商新蓝海</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>适老化商品、健康管理与陪伴服务在电商升温；带语音大字版手机、防滑浴椅在长辈群热销，某平台开"长辈模式"、货到付款。</p><p><strong>深度分析：</strong>老龄化不是负担叙事，而是规模巨大的新消费市场。</p><p><strong>举例说明：</strong>比如重庆市一位老人买大字版手机、防滑浴椅；某平台开长辈模式、货到付款，银发族下单量一年涨数倍。</p>
         </div>
         <div class="news-meta"><span class="src">来源：AgeClub</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货 跨境">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>农产品上行：直播助农常态化</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>产地直播、冷链与仓配协同，地标农货直连城市餐桌；主播在荔枝园现摘现发，消费者次日收到，价低三成、果农多赚两成。</p><p><strong>深度分析：</strong>助农本质在缩短链路、提升溢价归属，让农民分到更多。</p><p><strong>举例说明：</strong>比如广东茂名主播荔枝园现摘现发，价低三成、果农多赚两成；损耗从层层批发两三成压到个位数。</p>
         </div>
         <div class="news-meta"><span class="src">来源：农民日报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="跨境">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>跨境出口：品牌出海转向本土化</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>跨境电商从铺货走向品牌化，本地仓、本地客服与合规成出海标配；某扫地机品牌海外建仓，配送从两周缩到两天。</p><p><strong>深度分析：</strong>出海下半场比的是本土运营能力，而非单纯性价比。</p><p><strong>举例说明：</strong>比如深圳市一家扫地机品牌海外建仓，配送从两周缩到两天、退货本地处理；按当地插座和法规改产品，复购率远超铺货店。</p>
         </div>
         <div class="news-meta"><span class="src">来源：雨果网</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>AI选品：从经验到数据驱动</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>商家用 AI 做趋势预测、标题优化与库存管理；某卖家让 AI 分析评论挖出"露营防蚊"需求，提前备货卖爆。</p><p><strong>深度分析：</strong>AI 把赌爆款变成算概率，但审美与供应链仍靠人。</p><p><strong>举例说明：</strong>比如义乌一位卖家让 AI 分析评论挖出露营防蚊需求提前备货卖爆；但 AI 看不出"丑萌"为啥火，最终拍板靠买手。</p>
         </div>
         <div class="news-meta"><span class="src">来源：亿邦动力</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>退货率治理成商家痛点</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>高退货率侵蚀利润，平台与商家通过尺码模型、真实测评与运费险优化体验；某女装接入"AI尺码助手"后退货率从四成降到两成。</p><p><strong>深度分析：</strong>退货是体验与成本的拉锯，治理得当才既留人又保利。</p><p><strong>举例说明：</strong>比如杭州市一家女装接入 AI 尺码助手退货率从四成降到两成；平台推真实买家秀替代精修图，用户预期更准。</p>
         </div>
         <div class="news-meta"><span class="src">来源：电商报</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>会员体系：从积分到关系</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>平台将会员权益从折扣扩展到服务、内容与身份认同；某咖啡会员生日送手写卡+免费券，复购明显更高。</p><p><strong>深度分析：</strong>会员的终点是被记住，而非被打折。</p><p><strong>举例说明：</strong>比如上海市一家咖啡会员生日送手写卡+免费券复购更高；电商把会员日做成专属内容+先行购，让人觉得被当自己人。</p>
         </div>
         <div class="news-meta"><span class="src">来源：增长黑客</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>下沉市场：性价比与体验并重</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>县域与乡镇消费力释放，平台以社区团购、自提与本地服务渗透下沉；某镇自提点一天取上百单，生鲜靠"今日订明日提"降损耗。</p><p><strong>深度分析：</strong>下沉不是低端代名词，而是更精打细算的成熟市场。</p><p><strong>举例说明：</strong>比如山东曹县一个镇自提点一天取上百单，生鲜今日订明日提降损耗；用户会货比三家也会为送货上门多花两元。</p>
         </div>
         <div class="news-meta"><span class="src">来源：易观</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="大促 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新品首发避开双11，错峰抢心智</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>越来越多品牌把重磅新品放在 99 划算节与 815 等节点首发，而非挤双11；某清洁电器把旗舰新品放在 99 首发，预约量超去年双11 同款。</p><p><strong>深度分析：</strong>错峰首发既抢曝光又避开流量天价，是品牌心智战的务实选择。</p><p><strong>举例说明：</strong>比如苏州市一家清洁电器旗舰新品放 99 首发，预约量超去年双11 同款；避开与巨头同台竞价，单获客成本低三成。</p>
         </div>
         <div class="news-meta"><span class="src">来源：亿邦动力</span><span>2026年8月28日</span></div>
@@ -1268,140 +1282,140 @@ a{color:var(--accent);text-decoration:none}
     <div class="news-list">
       <div class="news-item" data-tags="国际 喂养">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>吸奶器十大品牌榜：美德乐仍领跑</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>最新母婴电器榜单显示，美德乐、兰思诺、Babycare 居前三；美德乐凭借医用级电机与低噪仍占高端，国货 Babycare 靠性价比抢中端。</p><p><strong>深度分析：</strong>吸奶器是母婴"第一台电器"，体验差异直接决定妈妈坚持母乳的信心。</p><p><strong>举例说明：</strong>比如上海市一位职场妈妈选美德乐 Swing 静音夜用，杭州市朋友选兰思诺手动便携出差；新手常先借再买，复购集中在配件。</p>
         </div>
         <div class="news-meta"><span class="src">来源：母婴研究院</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国际 喂养">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>奶瓶材质之争：PPSU 成主流</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>奶瓶市场 PPSU 逐步取代传统 PC 与玻璃，布朗博士、贝亲、Hegen 主打防胀气设计；宽口与弧形奶嘴更受新手欢迎。</p><p><strong>深度分析：</strong>材质安全+减少胀气，是奶瓶迭代的两大主线。</p><p><strong>举例说明：</strong>比如北京市一位妈妈选布朗博士导气管减少吸入空气，宝宝吐奶减少；广州市朋友选 Hegen 方瓶可叠放省空间，贵但收纳党买单。</p>
         </div>
         <div class="news-meta"><span class="src">来源：育儿实验室</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国际 洗护">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>牙胶怎么选：硅胶还是凉水</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>出牙期牙胶需求旺，硅胶磨牙棒、凉水牙胶与硅胶牙刷三件套走俏；MAM、苏菲小鹿是高频复购款。</p><p><strong>深度分析：</strong>牙胶要可高温消毒、无小零件，安全是底线。</p><p><strong>举例说明：</strong>比如成都市一位妈妈选苏菲小鹿但注意接缝清洁；深圳市朋友选 MAM 牙胶可煮沸、带收纳盒，出门更省心。</p>
         </div>
         <div class="news-meta"><span class="src">来源：母婴评测</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>国产母婴崛起：Babycare、可优比、戴可思</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>Babycare、可优比、戴可思等国货靠设计+供应链抢占中高端，纸尿裤、洗护、餐具全面对标国际；某国货年增速超三成。</p><p><strong>深度分析：</strong>母婴国潮赢在"更懂中国宝宝"与设计审美，而非单纯低价。</p><p><strong>举例说明：</strong>比如杭州市一位妈妈选 Babycare 山茶系列纸尿裤主打薄透气，南京市朋友选戴可思婴儿洗发水无泪配方；国货把颜值+成分做成卖点。</p>
         </div>
         <div class="news-meta"><span class="src">来源：国货观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="洗护 健康">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>新生儿护肤：湿疹季来临</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>换季湿疹高发，婴儿保湿与屏障修护产品搜索量翻倍；薇诺娜宝贝、艾维诺、戴可思成首选，无香精低敏是硬指标。</p><p><strong>深度分析：</strong>婴儿皮肤屏障薄，保湿比"功效"更重要，少即是多。</p><p><strong>举例说明：</strong>比如武汉市一位宝宝入秋湿疹，医生让每天厚涂保湿霜两次比频繁换药膏更稳；家长避开花香型选"无香精"标识。</p>
         </div>
         <div class="news-meta"><span class="src">来源：育儿健康</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货 喂养">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>辅食添加：高铁米粉成第一步</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>6 月龄辅食首选高铁米粉，地球最好、小皮、嘉宝与国产英氏竞争激烈；肉泥与蔬果泥紧随其后。</p><p><strong>深度分析：</strong>第一口辅食补铁是关键，别被"有机"营销带偏营养优先级。</p><p><strong>举例说明：</strong>比如西安市一位妈妈选小皮有机米粉粉细易冲，广州市朋友选英氏分段米粉按月龄配；都更看铁含量而非包装。</p>
         </div>
         <div class="news-meta"><span class="src">来源：营养笔记</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势 育儿">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>月子中心分级：从奢华到普惠</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>月子中心从高端走向分层，普惠型与社区嵌入型升温；某连锁推"28天基础套餐"降价三成抢市场。</p><p><strong>深度分析：</strong>月子服务正从奢侈品变阶段性刚需，标准化与透明定价是方向。</p><p><strong>举例说明：</strong>比如深圳市一家普惠月子中心把价格打到 3 万出头；成都市社区嵌入型更便宜，但家长都该看清"隐形加项"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：母婴消费</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="育儿 认知">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>早教焦虑：0岁就要抢跑？</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>早教机构从 1 岁下探到亲子课，部分推"0岁启蒙"；儿科与心理专家提醒，陪伴质量优于课程数量。</p><p><strong>深度分析：</strong>早教的坑在"用课程替代陪伴"，花钱买心安却未必有效。</p><p><strong>举例说明：</strong>比如南京市一位妈妈每天 20 分钟高质量共读，比一周一节早教课更能促语言；机构贩卖焦虑，家长需清醒。</p>
         </div>
         <div class="news-meta"><span class="src">来源：育儿观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="育儿 健康">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>婴儿睡眠：睡眠训练争议再起</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>哭声免疫法与温和法再引争论，儿科建议按月龄分清醒间隔、建立作息，而非硬训。</p><p><strong>深度分析：</strong>睡眠是发育不是服从，方法要匹配亲子依恋。</p><p><strong>举例说明：</strong>比如重庆市一位 4 月宝宝清醒 1.5 小时就哄睡更易接觉；一刀切"哭够才抱"伤依恋，温和法虽慢但稳。</p>
         </div>
         <div class="news-meta"><span class="src">来源：睡眠门诊</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货 洗护">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>纸尿裤成分党：拒绝荧光与香精</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>新一代父母成"成分党"，纸尿裤看芯体、底膜透气与无添加；帮宝适一级帮、露安适、Babycare 高端线受捧。</p><p><strong>深度分析：</strong>纸尿裤是"24小时贴身"，舒适与安全权重最高。</p><p><strong>举例说明：</strong>比如上海市一位妈妈选帮宝适一级帮薄软贵但红屁屁少；广州市朋友选露安适夜用吸量大；都翻检测报告而非只看广告。</p>
         </div>
         <div class="news-meta"><span class="src">来源：母婴评测</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="喂养 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母乳喂养支持：背奶妈妈的空间缺口</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>返岗背奶妈妈面临吸奶室少、时间紧；多地推动写字楼与商场设母婴室，但覆盖率仍低。</p><p><strong>深度分析：</strong>支持母乳不该只靠妈妈个人意志，公共设施是底线。</p><p><strong>举例说明：</strong>比如广州市天河区一栋写字楼设 3 间母婴室后，背奶妈妈不再躲厕所；杭州市某公司给每天两次"挤奶时间"，离职率明显下降。</p>
         </div>
         <div class="news-meta"><span class="src">来源：职场母婴</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="洗护 健康">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>宝宝防晒：物理优先</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>婴幼儿防晒以物理遮挡为主，防晒衣、宽檐帽与婴儿专用物理防晒走俏；6 月以下不建议化学防晒。</p><p><strong>深度分析：</strong>宝宝皮肤薄，硬防晒比涂抹更安全。</p><p><strong>举例说明：</strong>比如三亚一位家长推车加遮阳篷、穿 UPF50 防晒衣；化学防晒留到 6 月后且先局部试敏。</p>
         </div>
         <div class="news-meta"><span class="src">来源：护肤科普</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="育儿 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母婴决策依赖同侪：妈妈群的力量</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>调研显示母婴消费高度依赖妈妈群与博主实测，口碑转化高于广告；"别人踩过的坑"是核心信息源。</p><p><strong>深度分析：</strong>母婴是高风险低容错决策，真实经验比品牌声量更可信。</p><p><strong>举例说明：</strong>比如一位北京市妈妈因群友反馈某奶粉便秘被劝退；反之某小众面霜靠真实测评出圈，广告费省了。</p>
         </div>
         <div class="news-meta"><span class="src">来源：消费洞察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="育儿 趋势">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>分月龄育儿：按阶段买不浪费</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>分月龄产品与内容走红，从黑白卡到学饮杯到感统玩具，按阶段配置减少闲置；某品牌按月订阅盒复购高。</p><p><strong>深度分析：</strong>宝宝长得快，按阶段买比囤货更省钱也更对症。</p><p><strong>举例说明：</strong>比如成都市一位妈妈 0—3 月用黑白卡，4 月加牙胶，6 月换学饮杯；按月订阅避免买错月龄，闲置率大降。</p>
         </div>
         <div class="news-meta"><span class="src">来源：育儿实验室</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="国货 育儿">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>婴儿出行：安全座椅成标配</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>多地严查儿童安全座椅，0—4 岁反向安装、ISOFIX 接口成选购重点；猫头鹰、宝得适、惠尔顿领跑。</p><p><strong>深度分析：</strong>安全座椅是"一秒保命"的刚需，别用抱娃侥幸替代。</p><p><strong>举例说明：</strong>比如上海市一位爸爸选宝得适双面骑士可正反装用到 4 岁；急刹时怀抱婴儿如抱 30 公斤重物，根本抱不住。</p>
         </div>
         <div class="news-meta"><span class="src">来源：出行安全</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="洗护 国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>宝宝洗衣：专用除菌成痛点</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>婴儿专用洗衣液主打除菌除螨、无荧光，滴露婴孩、保宁、子初受捧；高温煮洗与单独分区是家庭做法。</p><p><strong>深度分析：</strong>宝宝衣物贴身且易沾奶渍，清洁力与温和需兼顾。</p><p><strong>举例说明：</strong>比如一位武汉市妈妈奶渍当天洗否则发黄，保宁发酵型温和去味；多备一桶专洗宝宝衣，避免与成人混洗交叉感染。</p>
         </div>
         <div class="news-meta"><span class="src">来源：母婴洗护</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="育儿 社会">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>爸爸参与：育儿不是妈妈一个人的事</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>新一代父亲育儿参与度上升，陪产、夜奶轮班、亲子早教成新风；研究显示父亲参与利于宝宝语言与社交。</p><p><strong>深度分析：</strong>育儿分工平等，是对妈妈最好的支持，也对孩子更好。</p><p><strong>举例说明：</strong>比如一位成都市爸爸负责睡前流程，妈妈得以连续睡整觉；爸爸带娃不再被笑"妻管严"，而是被夸"靠谱"。</p>
         </div>
         <div class="news-meta"><span class="src">来源：家庭研究</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="趋势 国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>母婴二手：循环经济的温情面</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>闲置母婴交易火热，推车、婴儿床、衣物在社群流转；某平台母婴二手年增五成，贵价大件最常被转。</p><p><strong>深度分析：</strong>宝宝长得快，闲置流转既省钱又环保，母婴是循环最温情的战场。</p><p><strong>举例说明：</strong>比如一位杭州市妈妈千元推车宝宝坐半年就转，下家三折收走；消毒到位的前提下，循环让好物不被浪费。</p>
         </div>
         <div class="news-meta"><span class="src">来源：循环观察</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="喂养 国货">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>宝宝辅食机与蒸煮一体</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>辅食机、蒸煮研磨一体机成 6 月+家庭标配，BEABA、小白熊、博朗受欢迎；一键蒸打省时但注意清洁。</p><p><strong>深度分析：</strong>辅食机解决"现做现吃"，但死角藏污是卫生隐患。</p><p><strong>举例说明：</strong>比如一位南京市妈妈选 BEABA 贵但蒸打一体保留营养；每次用完拆洗刀头，比机器本身更重要。</p>
         </div>
         <div class="news-meta"><span class="src">来源：厨房母婴</span><span>2026年8月28日</span></div>
       </div>
       <div class="news-item" data-tags="健康 政策">
         <div class="news-title" onclick="toggle(this)"><span class="arrow">▶</span>疫苗与体检：0—1岁时间表里的事</div>
-        <div class="news-detail">
+                <div class="news-detail">
           <p><strong>核心事件：</strong>0—1 岁免疫规划与体检节点密集，家长靠 APP 提醒不漏针；自费疫苗（如肺炎、手足口）咨询量上升。</p><p><strong>深度分析：</strong>按时接种与体检，是宝宝健康最确定的投资。</p><p><strong>举例说明：</strong>比如一位天津市妈妈靠微信提醒，漏针率降一半；把接种本拍照存云，换城市也能续上。</p>
         </div>
         <div class="news-meta"><span class="src">来源：育儿健康</span><span>2026年8月28日</span></div>
@@ -1426,6 +1440,6 @@ function filter(el,cardId,tag){
 }
 function navTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'});var btns=document.querySelectorAll('.nav-btn');btns.forEach(function(b){b.classList.remove('active');if(b.dataset.nav===id)b.classList.add('active');});}
 </script>
-<!-- cache-bust: 2026-08-29T00:42:24.912431 -->
+<!-- cache-bust: 2026-08-29T00:56:15.821449 -->
 </body>
 </html>
