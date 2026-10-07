@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日热点工作台 · 2026.10.07 星期三</title>
+<title>每日热点工作台 · 2026.10.08 星期四</title>
 <style>
+
 * { box-sizing: border-box; }
 body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:#f5f6fa; color:#222; }
 header { background:linear-gradient(135deg,#5b6cff,#8a5bff); color:#fff; padding:22px 18px 16px; text-align:center; }
 header h1 { margin:0 0 6px; font-size:26px; }
 header .sub { margin:0; opacity:.95; font-size:14px; }
 header .updated { margin:6px 0 0; font-size:12px; opacity:.85; }
-nav.filters { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; padding:14px 12px; background:#fff; border-bottom:1px solid #eee; }
+nav.filters { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; padding:14px 12px; background:#fff; border-bottom:1px solid #eee; position:sticky; top:0; z-index:10; }
 .filter-btn { border:1px solid #d8dae6; background:#fff; color:#444; padding:7px 14px; border-radius:18px; cursor:pointer; font-size:13px; transition:.2s; }
 .filter-btn:hover { border-color:#5b6cff; color:#5b6cff; }
 .filter-btn.active { background:#5b6cff; border-color:#5b6cff; color:#fff; }
@@ -29,19 +30,17 @@ main { max-width:1180px; margin:18px auto; padding:0 12px; }
 .news-item.open .news-meta { display:block; }
 footer { text-align:center; color:#aaa; font-size:12px; padding:20px; }
 
-.news-list{max-height:none;overflow-y:visible;padding-right:0}
-.news-detail{display:block;margin-top:8px}
-.news-title{cursor:default;pointer-events:none}
-.news-title .arrow{display:none}
+.news-list{max-height:none;overflow-y:visible;padding-right:0} .news-detail{display:block;margin-top:8px} .news-title{cursor:default;pointer-events:none} .news-title .arrow{display:none}
+
 </style>
 </head>
 <body>
 <header>
-<h1>每日热点工作台 · 平铺视图</h1>
-<p class="sub">2026.10.07 星期三 · 8大分类·173条精选资讯</p>
+<h1>每日热点工作台</h1>
+<p class="sub">2026.10.08 星期四 · 8大分类·173条精选资讯</p>
 <p class="updated">每日更新</p>
 </header>
-<nav class="filters">
+
 <button class="filter-btn active" data-cat="all" onclick="filter('all')">全部</button>
 <button class="filter-btn" data-cat="ai" onclick="filter('ai')">AI/科技</button>
 <button class="filter-btn" data-cat="finance" onclick="filter('finance')">财经</button>
@@ -51,214 +50,214 @@ footer { text-align:center; color:#aaa; font-size:12px; padding:20px; }
 <button class="filter-btn" data-cat="history" onclick="filter('history')">历史</button>
 <button class="filter-btn" data-cat="ecom" onclick="filter('ecom')">电商</button>
 <button class="filter-btn" data-cat="baby" onclick="filter('baby')">👶母婴</button>
-</nav>
+
 <main>
 <section class="cat" data-cat="ai">
 <h2>AI/科技</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">OpenAI 据传筹备 GPT-6 多模态预览</div><div class="news-detail">内部路线图显示新模型将统一图像、音视频与代码生成，预计明年上半年开放受限预览。</div><div class="news-meta">AI前线 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">英伟达下一代 Rubin 架构细节曝光</div><div class="news-detail">新架构采用全新互联与 HBM4 内存，单集群可扩展至数十万卡，面向超大规模训练。</div><div class="news-meta">芯智观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">国产 AI 视频模型登顶国际榜单</div><div class="news-detail">某团队视频生成模型在一致性与指令遵循评测中超越同参数竞品，开源权重同步放出。</div><div class="news-meta">机器之心 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">华为昇腾生态新增万卡集群案例</div><div class="news-detail">西部某智算中心基于昇腾完成万卡互联验证，支撑大模型分布式训练稳定跑批。</div><div class="news-meta">昇腾社区 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">百度文心一言开放长文档解析</div><div class="news-detail">新功能可一次性解析上百页研报并生成结构化摘要，面向金融与科研场景。</div><div class="news-meta">百度百科 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">阿里通义千问支持实时联网搜索</div><div class="news-detail">模型可调用搜索插件核对最新事实，降低长尾知识幻觉。</div><div class="news-meta">通义实验室 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">字节豆包大模型接入办公套件</div><div class="news-detail">会议纪要、表格公式与邮件草稿可在本地助手一键生成，强调企业数据不出域。</div><div class="news-meta">火山引擎 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">月之暗面 Kimi 长上下文再扩容</div><div class="news-detail">上下文窗口扩展至百万 token 级别，适合整本代码库与法律卷宗分析。</div><div class="news-meta">Kimi 观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">智谱 GLM 开源版社区下载破百万</div><div class="news-detail">开发者基于开源权重微调出多款行业模型，政务与医疗落地案例增多。</div><div class="news-meta">智谱 AI · 10月7日</div></div>
-<div class="news-item"><div class="news-title">具身智能创业公司获新一轮融资</div><div class="news-detail">资金将用于双臂操作数据采集与仿真平台建设，目标工业分拣场景。</div><div class="news-meta">创投日报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">大模型推理成本年内下降六成</div><div class="news-detail">蒸馏、量化与专用芯片叠加，企业调用单价持续走低，应用门槛降低。</div><div class="news-meta">IDC圈 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">上海发布人工智能三年行动方案</div><div class="news-detail">聚焦智能算力、数据要素与垂直应用，提出建设世界级 AI 产业集群。</div><div class="news-meta">上证报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">深圳建设智能算力调度平台</div><div class="news-detail">全市闲置算力统一编排，中小企业可按需租用，缓解旺季排队。</div><div class="news-meta">深圳特区报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">欧盟拟设 AI 基础模型透明登记制</div><div class="news-detail">超大规模模型须登记训练数据与能耗，违规将面临透明度处罚。</div><div class="news-meta">路透社 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">美国加州通过 AI 安全测试法案</div><div class="news-detail">要求高风险系统上线前通过红队测试与偏见审计。</div><div class="news-meta">The Verge · 10月7日</div></div>
-<div class="news-item"><div class="news-title">机器人导购在连锁商超试点</div><div class="news-detail">轮式机器人可指引货架与促销，夜间补货巡检同步进行。</div><div class="news-meta">零售科技 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">AI 辅助新药进入二期临床</div><div class="news-detail">生成式平台筛出的候选分子获监管许可，验证平台有效性。</div><div class="news-meta">生物世纪 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">自动驾驶卡车干线物流开跑</div><div class="news-detail">多条跨省高速试点编队行驶，单程人力成本显著下降。</div><div class="news-meta">出行观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">脑机接口获批抑郁症辅助治疗</div><div class="news-detail">无创设备通过随机对照试验，进入医院康复科处方。</div><div class="news-meta">NeuralWire · 10月7日</div></div>
-<div class="news-item"><div class="news-title">量子通信骨干网新增城域节点</div><div class="news-detail">密钥分发时延下降，政务与金融专线率先接入。</div><div class="news-meta">量子信息 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">低空经济 eVTOL 完成跨城试飞</div><div class="news-detail">电动垂直起降飞行器完成百公里级航线，观光与急救场景先行。</div><div class="news-meta">低空参考 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">OpenAI 推出实时语音智能体套件<span class="arrow">▶</span></div><div class="news-detail">新套件支持打断与多轮上下文记忆，面向客服与伴游场景开放 API 申请。</div><div class="news-meta">AI前线 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">谷歌 Gemini 发布端侧轻量版<span class="arrow">▶</span></div><div class="news-detail">可在高端手机本地运行的多模态模型，离线也能完成图文问答与摘要。</div><div class="news-meta">硅星观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">苹果据称将智能摘要引入系统相册<span class="arrow">▶</span></div><div class="news-detail">新功能自动归集团聚与旅行照片并生成时间线，强调设备端处理。</div><div class="news-meta">果链观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">微软 Copilot 接入企业知识图谱<span class="arrow">▶</span></div><div class="news-detail">允许员工用自然语言检索内部制度与项目文档，权限随岗随人。</div><div class="news-meta">科技云 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">智谱 GLM 开放长思考推理模式<span class="arrow">▶</span></div><div class="news-detail">模型先拆解再作答，复杂数学与代码题准确率明显提升。</div><div class="news-meta">智谱动态 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">百度文心推出多模态检索增强<span class="arrow">▶</span></div><div class="news-detail">上传图纸与表格即可追问，工程与医疗检索新增版式理解。</div><div class="news-meta">文心实验室 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">阿里 Qwen 放出百万上下文开源版<span class="arrow">▶</span></div><div class="news-detail">社区可本地部署长文档分析，政务与法务场景率先试用。</div><div class="news-meta">通义社区 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">字节豆包上线实时同声传译<span class="arrow">▶</span></div><div class="news-detail">中英日多语互译延迟压到秒级，视频会议与直播同步字幕。</div><div class="news-meta">火山引擎 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">月之暗面 Kimi 推出文档智能体<span class="arrow">▶</span></div><div class="news-detail">可跨多份合同抽取条款并给出风险提示，法务助理走红。</div><div class="news-meta">Kimi观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">华为昇腾 910C 量产交付多家<span class="arrow">▶</span></div><div class="news-detail">.新一代算力卡良率爬坡，智算中心批量下单支撑国产训练。</div><div class="news-meta">昇腾社区 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">英伟达据传准备对华特供新版<span class="arrow">▶</span></div><div class="news-detail">传新卡在算力与互联上再做取舍，云厂商已启动适配测试。</div><div class="news-meta">芯智观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">国产存算一体芯片流片成功<span class="arrow">▶</span></div><div class="news-detail">近存计算架构在推理能效上刷新纪录，边缘端落地可期。</div><div class="news-meta">电子时报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">上海人工智能立法草案征求意见<span class="arrow">▶</span></div><div class="news-detail">明确训练数据合规与算法备案，划定高风险应用红线。</div><div class="news-meta">上证报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">北京亦庄建成无人配送示范区<span class="arrow">▶</span></div><div class="news-detail">外卖与快递无人车常态化穿行园区，事故率远低于人工。</div><div class="news-meta">北京日报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">人形机器人进入汽车工厂总装线<span class="arrow">▶</span></div><div class="news-detail">双臂装配与质检岗位试岗，节拍稳定性通过产线验收。</div><div class="news-meta">智能制造 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">AI 编程助手通过软件工程师认证<span class="arrow">▶</span></div><div class="news-detail">在限定题库上达到中级工程师水平，代码评审初见成效。</div><div class="news-meta">开发者头条 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">特斯拉 Optimus 进入小批量试产<span class="arrow">▶</span></div><div class="news-detail">工厂内搬运与分拣由机器人承担，成本曲线逐季下探。</div><div class="news-meta">出行观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">量子计算原型机比特数再突破<span class="arrow">▶</span></div><div class="news-detail">纠错码改进后逻辑比特稳定性提升，瞄准化学模拟。</div><div class="news-meta">量子信息 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">低空物流无人机跨江常态化<span class="arrow">▶</span></div><div class="news-detail">生鲜与急件经空中航线过江，单程耗时缩短七成。</div><div class="news-meta">低空参考 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">脑机接口助渐冻症患者发声<span class="arrow">▶</span></div><div class="news-detail">意念转语音系统离线可用，家属沟通负担明显减轻。</div><div class="news-meta">NeuralWire · 10月8日</div></div>
+<div class="news-item"><div class="news-title">多智能体协作框架宣布开源<span class="arrow">▶</span></div><div class="news-detail">任务拆解与角色调度标准化，企业可自建数字员工团队。</div><div class="news-meta">开源观察 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="finance">
 <h2>财经</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">央行开展中期借贷便利操作</div><div class="news-detail">本月 MLF 等量续作并小幅加量，维护银行体系流动性合理充裕。</div><div class="news-meta">央行公告 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">9月 CPI 同比温和上涨</div><div class="news-detail">食品与服务业价格带动，核心通胀保持低位，通缩担忧缓和。</div><div class="news-meta">国家统计局 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">9月 PPI 降幅继续收窄</div><div class="news-detail">工业品价格受需求回暖与基数影响，同比降幅连续收窄。</div><div class="news-meta">国家统计局 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">A股 节后首日成交额破两万亿</div><div class="news-detail">科技与新能源领涨，两融余额回升，风险偏好修复。</div><div class="news-meta">财联社 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">港股 恒生科技指数反弹</div><div class="news-detail">外资回流与平台股回购共振，指数收复关键整数关口。</div><div class="news-meta">香港信报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">北向资金恢复净流入</div><div class="news-detail">连续多日净买入核心资产，食品饮料与医药获加仓。</div><div class="news-meta">沪深港通 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">人民币 兑美元中间价上调</div><div class="news-detail">汇率在合理均衡区间波动，外贸企业套保意愿增强。</div><div class="news-meta">外汇交易中心 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">十年期国债收益率回落</div><div class="news-detail">宽松预期与配置需求推动，债市走出修复行情。</div><div class="news-meta">债券圈 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">新能源汽车 9月交付量创新高</div><div class="news-detail">多车企月交付破纪录，电池与智能驾驶供应链同步受益。</div><div class="news-meta">中汽协 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">光伏组件出口环比改善</div><div class="news-detail">海外装机旺季带动，头部厂商海外订单能见度提升。</div><div class="news-meta">能源财经 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">黄金 站上历史高位后震荡</div><div class="news-detail">避险与降息预期兑现后获利盘涌出，波动加大。</div><div class="news-meta">金十数据 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">原油 受供给扰动短线走强</div><div class="news-detail">地缘与减产预期交织，国内成品油调价窗口临近。</div><div class="news-meta">国际财经 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">一线城市 楼市新政效应显现</div><div class="news-detail">限购优化后改善型需求释放，核心区带看回暖。</div><div class="news-meta">房产观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">消费 以旧换新带动家电旺销</div><div class="news-detail">补贴政策撬动更新需求，高能效品类增速领先。</div><div class="news-meta">商务部 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">半导体 设备招标提速</div><div class="news-detail">晶圆厂扩产带动本土设备订单，刻蚀环节进展明显。</div><div class="news-meta">电子时报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">银行 净息差企稳</div><div class="news-detail">负债成本管控见效，行业息差环比止跌。</div><div class="news-meta">银行观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">保险 新准则下利润波动</div><div class="news-detail">准则切换令利润对资本市场更敏感，分红险策略调整。</div><div class="news-meta">保险周刊 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">基金公司 自购旗下权益产品</div><div class="news-detail">多家机构公告自购，传递对市场中长期信心。</div><div class="news-meta">基金报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">跨境电商 出口保持高景气</div><div class="news-detail">平台与海外仓协同，小家电与服饰出海增势延续。</div><div class="news-meta">电商财经 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">国内 旅游收入同比正增长</div><div class="news-detail">县域游与银发游崛起，人均停留天数延长。</div><div class="news-meta">文旅之声 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">央行重启逆回购呵护跨季流动性<span class="arrow">▶</span></div><div class="news-detail">节后资金面边际收紧，公开市场加码投放稳定短端利率。</div><div class="news-meta">央行公告 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">9月社融数据超预期回暖<span class="arrow">▶</span></div><div class="news-detail">政府债与企业中长贷共同发力，信用扩张初现拐点。</div><div class="news-meta">国家统计局 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">A股三季报预披露拉开帷幕<span class="arrow">▶</span></div><div class="news-detail">逾百家公司抢先报喜，半导体与新能源链成预增主力。</div><div class="news-meta">财联社 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">港股恒指站上两万点整数关<span class="arrow">▶</span></div><div class="news-detail">平台股与生物科技领涨，南向资金连续净买入。</div><div class="news-meta">香港信报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">北交所做市商扩容改革落地<span class="arrow">▶</span></div><div class="news-detail">更多券商入场提供双边报价，小盘流动性改善。</div><div class="news-meta">北交所 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">人民币即期汇率走强<span class="arrow">▶</span></div><div class="news-detail">结汇需求释放叠加美元回落，在岸人民币升破关键位。</div><div class="news-meta">外汇交易中心 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">黄金避险买盘推动再创新高<span class="arrow">▶</span></div><div class="news-detail">地缘不确定性令实物金与 ETF 同步吸金。</div><div class="news-meta">金十数据 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">原油受欧佩克+延长减产提振<span class="arrow">▶</span></div><div class="news-detail">供给约束预期升温，国内成品油调价窗口临近。</div><div class="news-meta">国际财经 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">新能源整车三季报普遍超预期<span class="arrow">▶</span></div><div class="news-detail">规模效应摊薄成本，多家车企毛利率环比回升。</div><div class="news-meta">中汽协 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">国产光刻与刻蚀环节传来进展<span class="arrow">▶</span></div><div class="news-detail">晶圆厂验证提速，设备国产化率稳步抬升。</div><div class="news-meta">电子时报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">国庆档电影票房创近年新高<span class="arrow">▶</span></div><div class="news-detail">多部主旋律与动画共振，下沉市场贡献增量。</div><div class="news-meta">艺恩数据 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">一线城市二手房成交量回暖<span class="arrow">▶</span></div><div class="news-detail">限购优化后改善需求释放，核心区带看明显活跃。</div><div class="news-meta">房产观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">上市银行三季报不良率双降<span class="arrow">▶</span></div><div class="news-detail">资产质量改善与拨备厚实，分红预期升温。</div><div class="news-meta">银行观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">长期护理险试点城市再扩围<span class="arrow">▶</span></div><div class="news-detail">失能老人居家照护纳入支付，缓解家庭照护压力。</div><div class="news-meta">保险周刊 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">中证 A500ETF 持续吸金<span class="arrow">▶</span></div><div class="news-detail">宽基新标的成增量资金入口，成交居行业前列。</div><div class="news-meta">基金报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">特别国债发行平稳落地<span class="arrow">▶</span></div><div class="news-detail">募资投向数字基建与利农设施，利率定位符合预期。</div><div class="news-meta">财政部 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">9月出口展现较强韧性<span class="arrow">▶</span></div><div class="news-detail">机电与整车走强，对新兴市场出口增速领先。</div><div class="news-meta">海关总署 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">快递业务量长假创新高<span class="arrow">▶</span></div><div class="news-detail">县域与直播带货带动，单日揽收峰值再上台阶。</div><div class="news-meta">邮政局 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">服务消费成增长新引擎<span class="arrow">▶</span></div><div class="news-detail">文旅、演出与赛事拉动，人均停留与客单双升。</div><div class="news-meta">文旅之声 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">数字人民币试点场景扩围<span class="arrow">▶</span></div><div class="news-detail">工资代发与补贴发放接入，钱包活跃度提升。</div><div class="news-meta">数字政府 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="opinion">
 <h2>观点认知</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">随笔：把注意力当资产来管理</div><div class="news-detail">时间花在哪，人就成为谁。给每段专注标价，你会对碎片更清醒。</div><div class="news-meta">认知笔记 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">为什么我们总在深夜后悔白天的选择</div><div class="news-detail">白天被即时满足牵着走，夜里才轮到理性复盘，把决策提前能少很多内耗。</div><div class="news-meta">夜读 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">钝感力不是麻木，而是保护</div><div class="news-detail">对无关评价慢半拍反应，把敏感留给真正重要的人。</div><div class="news-meta">处世 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">真正的自由是被自己信任</div><div class="news-detail">外部约束再多，内心自我怀疑才是牢笼，重建信任从说到做到开始。</div><div class="news-meta">独立判断 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">少即是多的背后是取舍</div><div class="news-detail">什么都想要，等于把力气摊成薄薄一层，聚焦才能凿穿。</div><div class="news-meta">思考者 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">比较是快乐的杀手</div><div class="news-detail">别人的高光时刻被算法放大，拿它比自己的日常，注定失衡。</div><div class="news-meta">关系课 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">把承诺写下来的人更可信</div><div class="news-detail">口头承诺随风飘，落笔的那一刻才开始有重量。</div><div class="news-meta">效率观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">休息不是奖励，而是基础设施</div><div class="news-detail">把休息当 earned reward，往往拖到崩溃；当系统刚需，状态才稳。</div><div class="news-meta">慢思考 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">表达欲背后藏着未被看见的需求</div><div class="news-detail">急着说服别人前，先问自己到底想要被怎样对待。</div><div class="news-meta">共情练习 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">与其纠正别人不如照亮自己</div><div class="news-detail">改变自己是影响他人的最短路径，说教往往只制造对抗。</div><div class="news-meta">长期主义 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">确定性是奢侈品，接受不确定是修行</div><div class="news-detail">人生没有完整剧本，学会在信息不全时仍迈步。</div><div class="news-meta">智识录 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">边界感是成年人最贵的修养</div><div class="news-detail">能温和说不的人，反而更被尊重，关系也更长久。</div><div class="news-meta">相处 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">我们高估了一年能做的事</div><div class="news-detail">低估了十年能做的事，复利偏爱有耐心的人。</div><div class="news-meta">时间观 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">好奇心是抗衰老的解药</div><div class="news-detail">对世界保持提问，大脑就一直在生长。</div><div class="news-meta">学习科学 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">关系里最怕的不是吵而是冷</div><div class="news-detail">冲突至少说明还在意，沉默才是疏远的开始。</div><div class="news-meta">关系课 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">把愧疚变成行动而非自我攻击</div><div class="news-detail">内疚消耗能量，弥补才修复关系，方向比情绪重要。</div><div class="news-meta">成长录 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">信息很多，智慧很少</div><div class="news-detail">收藏不等于理解，能改变行为的才算学到。</div><div class="news-meta">媒介素养 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">慢决策胜过快反应</div><div class="news-detail">多数紧急都不紧急，留出一夜常能看清真伪。</div><div class="news-meta">行动派 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">能示弱的人其实更有力量</div><div class="news-detail">承认不会，才腾出空间让人帮、让人教。</div><div class="news-meta">独处笔记 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">习惯比意志力更可靠</div><div class="news-detail">靠意志撑的事难长久，把好事做成默认动作才稳。</div><div class="news-meta">效率观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">活成一个动词而非名词</div><div class="news-detail">我是谁，取决于每天在做什么，而非贴了什么标签。</div><div class="news-meta">写作课 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《思辨与立场》</div><div class="news-detail">理查德·保罗经典之作，系统讲解批判性思维与心智成熟度，教你跳出自我中心与社群中心。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《穷查理宝典》</div><div class="news-detail">查理·芒格的智慧合集，多元思维模型与逆向思考，是投资与决策者的常备书。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《刻意练习》</div><div class="news-detail">安德斯·艾利克森揭示高手养成密码：有反馈的针对性训练远胜机械重复。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《把时间当作朋友》</div><div class="news-detail">李笑来谈时间与心智管理，核心是用积累对抗焦虑，用行动换取自由。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《厌女》</div><div class="news-detail">上野千鹤子剖析父权社会中的厌女结构，是女性主义入门必读。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《一间自己的房间》</div><div class="news-detail">伍尔夫以优雅笔触论述女性与创作、经济独立与精神空间的关系。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《人类简史》</div><div class="news-detail">尤瓦尔·赫拉利梳理智人如何凭借虚构故事登上食物链顶端，视野恢宏。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">《乌合之众》</div><div class="news-detail">勒庞剖析群体心理，揭示人群如何失去独立判断，至今读来发人深省。</div><div class="news-meta">书单推荐 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">随笔：把想做的事和该做的事分开列<span class="arrow">▶</span></div><div class="news-detail">两类清单分开后，焦虑少一半，行动反而更聚焦。</div><div class="news-meta">认知笔记 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">拖延往往不是懒，而是怕做不好<span class="arrow">▶</span></div><div class="news-detail">把任务降到能立刻开头的最小动作，启动就不难了。</div><div class="news-meta">夜读 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">真正的松弛感来自把事做完<span class="arrow">▶</span></div><div class="news-detail">悬而未决才消耗人，收尾比开始更解压。</div><div class="news-meta">处世 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">社交断舍离：少而深的连接更养人<span class="arrow">▶</span></div><div class="news-detail">把精力留给彼此在意的人，关系质量显著提高。</div><div class="news-meta">关系课 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">把等我准备好换成先开始<span class="arrow">▶</span></div><div class="news-detail">准备永远没尽头，边做边补往往比空想更快。</div><div class="news-meta">独立判断 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">情绪稳定是一种可以练习的能力<span class="arrow">▶</span></div><div class="news-detail">识别触发点、留三秒再回应，肌肉会慢慢长出来。</div><div class="news-meta">慢思考 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">别用别人的节奏丈量自己的路<span class="arrow">▶</span></div><div class="news-detail">每个人时区不同，盲目追赶只会弄丢自己。</div><div class="news-meta">思考者 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">学会对无效会议说不<span class="arrow">▶</span></div><div class="news-detail">保护整块时间，比刷存在感重要得多。</div><div class="news-meta">效率观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">复盘不是自责，是给下次留路标<span class="arrow">▶</span></div><div class="news-detail">记录哪里卡住、怎样绕过，经验才真正沉淀。</div><div class="news-meta">成长录 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">允许自己阶段性躺平再出发<span class="arrow">▶</span></div><div class="news-detail">张弛有度比硬撑更可持续，休息也是策略。</div><div class="news-meta">长期主义 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">精通一样比样样稀松更有底气<span class="arrow">▶</span></div><div class="news-detail">把一把剑磨利，胜过摆满钝刀。</div><div class="news-meta">智识录 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">距离产生美，也产生清醒<span class="arrow">▶</span></div><div class="news-detail">跳出当下情绪，很多纠结会自动变小。</div><div class="news-meta">相处 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">把钱花在体验上更不容易后悔<span class="arrow">▶</span></div><div class="news-detail">物质会折旧，经历会变成你的一部分。</div><div class="news-meta">时间观 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">主动争取的人运气更好不是玄学<span class="arrow">▶</span></div><div class="news-detail">机会常留给先举手的人，被动等待大多落空。</div><div class="news-meta">行动派 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">批评来了先别急着反驳<span class="arrow">▶</span></div><div class="news-detail">问问其中有没有一句真话，比争输赢更有用。</div><div class="news-meta">共情练习 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">把大目标拆成今天就能做的小事<span class="arrow">▶</span></div><div class="news-detail">宏图让人瘫痪，微步让人上瘾。</div><div class="news-meta">写作课 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">独处是找回自己的低成本方式<span class="arrow">▶</span></div><div class="news-detail">关掉外界噪音，才听得见内心的优先级。</div><div class="news-meta">独处笔记 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">信任需要时间，但值得等待<span class="arrow">▶</span></div><div class="news-detail">急不得的关系，往往也最经得起风浪。</div><div class="news-meta">关系课 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">信息焦虑的解药是关掉一半推送<span class="arrow">▶</span></div><div class="news-detail">少看一点热闹，多留一点专注给自己。</div><div class="news-meta">媒介素养 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">温柔而坚定是最难也最稳的姿态<span class="arrow">▶</span></div><div class="news-detail">不攻击也不退让，边界因此清晰而友好。</div><div class="news-meta">相处 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">今天比昨天进步一点点就够了<span class="arrow">▶</span></div><div class="news-detail">复利藏在日拱一卒中，不必苛求突变。</div><div class="news-meta">学习科学 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《思辨与立场》<span class="arrow">▶</span></div><div class="news-detail">理查德·保罗经典之作，系统讲解批判性思维与心智成熟度，教你跳出自我中心与社群中心。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《穷查理宝典》<span class="arrow">▶</span></div><div class="news-detail">查理·芒格的智慧合集，多元思维模型与逆向思考，是投资与决策者的常备书。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《刻意练习》<span class="arrow">▶</span></div><div class="news-detail">安德斯·艾利克森揭示高手养成密码：有反馈的针对性训练远胜机械重复。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《把时间当作朋友》<span class="arrow">▶</span></div><div class="news-detail">李笑来谈时间与心智管理，核心是用积累对抗焦虑，用行动换取自由。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《厌女》<span class="arrow">▶</span></div><div class="news-detail">上野千鹤子剖析父权社会中的厌女结构，是女性主义入门必读。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《一间自己的房间》<span class="arrow">▶</span></div><div class="news-detail">伍尔夫以优雅笔触论述女性与创作、经济独立与精神空间的关系。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《人类简史》<span class="arrow">▶</span></div><div class="news-detail">尤瓦尔·赫拉利梳理智人如何凭借虚构故事登上食物链顶端，视野恢宏。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">《乌合之众》<span class="arrow">▶</span></div><div class="news-detail">勒庞剖析群体心理，揭示人群如何失去独立判断，至今读来发人深省。</div><div class="news-meta">书单推荐 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="feminism">
 <h2>女性主义</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">新修订妇女权益保障法落地评估发布</div><div class="news-detail">多地报告显示就业性别歧视投诉渠道更畅通，举证规则向劳动者倾斜。</div><div class="news-meta">性别观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">多省市将 HPV 疫苗纳入惠民工程</div><div class="news-detail">适龄女性免费或补贴接种范围扩大，宫颈癌一级预防提速。</div><div class="news-meta">公共卫生 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性高管比例纳入国企考核导向</div><div class="news-detail">部分央企在治理评估中披露女性董事占比，推动决策层多元。</div><div class="news-meta">平等实验室 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">职场隐性歧视举证责任探讨升温</div><div class="news-detail">简历姓名与生育计划成焦点，算法招聘偏见受审视。</div><div class="news-meta">职场女性 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">全职照护者社会保障试点扩围</div><div class="news-detail">部分城市为居家育儿与赡养老人者提供缴费补贴与工龄认定。</div><div class="news-meta">妇女权益 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性参政比例地方人大代表提升</div><div class="news-detail">新一届代表中女性占比创新高，基层声音更充分。</div><div class="news-meta">公共政策 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">反性骚扰指引覆盖更多行业</div><div class="news-detail">演艺、餐饮与互联网平台陆续公布内部投诉与隔离机制。</div><div class="news-meta">权益前沿 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">月经贫困议题进入公共讨论</div><div class="news-detail">公共场所免费卫生用品试点，打破相关话题污名。</div><div class="news-meta">城市生活 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性科学家获国家级奖项占比上升</div><div class="news-detail">青年女学者在基础学科获奖名单中比例提高，导师制度见效。</div><div class="news-meta">科技她力量 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">影视行业推动女性幕后岗位</div><div class="news-detail">更多女性担任编剧与摄影指导，叙事视角走向多元。</div><div class="news-meta">文化观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">母亲就业补贴在试点城市发放</div><div class="news-detail">为产后返岗提供岗位衔接与培训券，缓解职业中断。</div><div class="news-meta">育儿与职场 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性运动品牌融资活跃</div><div class="news-detail">专注女性力量训练与生理期设计的初创获早期投资。</div><div class="news-meta">她经济 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">家暴告诫制度执行力度加强</div><div class="news-detail">警方出具告诫书与回访联动，保护令执行更刚性。</div><div class="news-meta">妇女权益 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性向内容社区用户破亿</div><div class="news-detail">共读与共情类社群成为城市青年新型连接。</div><div class="news-meta">阅读社群 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">性别统计制度逐步建立</div><div class="news-detail">分性别数据纳入更多领域公报，政策评估更精准。</div><div class="news-meta">ESG前沿 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">少女青春期健康教育进校</div><div class="news-detail">生理与心理课程前置，减少误区与羞耻。</div><div class="news-meta">教育观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性养老金融需求被关注</div><div class="news-detail">长寿风险与养老金缺口推动专属产品设计与投教。</div><div class="news-meta">银发关怀 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">家政工权益保障立法讨论</div><div class="news-detail">灵活就业者劳动合同与工伤覆盖进入议程。</div><div class="news-meta">经济与社会 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">女性非遗手艺人扶持计划</div><div class="news-detail">专项资金与展销渠道助力技艺传承与增收。</div><div class="news-meta">非遗笔记 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">城市安全步道改善夜行体验</div><div class="news-detail">照明与监控优化让女性夜间通勤更安心。</div><div class="news-meta">城市生活 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">反家暴法新司法解释出台<span class="arrow">▶</span></div><div class="news-detail">明确精神暴力认定与证据标准，保护令申请门槛进一步降低。</div><div class="news-meta">性别观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">多省将免费孕前检查纳入民生实事<span class="arrow">▶</span></div><div class="news-detail">优生优育关口前移，基层筛查覆盖率显著提升。</div><div class="news-meta">公共卫生 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">女性科技人才专项培养计划启动<span class="arrow">▶</span></div><div class="news-detail">面向基础学科与工程的巾帼项目开放申报。</div><div class="news-meta">科技她力量 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">职场生育成本共担机制引讨论<span class="arrow">▶</span></div><div class="news-detail">呼吁由社会与雇主共担，减少隐性就业壁垒。</div><div class="news-meta">职场女性 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">全职妈妈再就业培训券发放<span class="arrow">▶</span></div><div class="news-detail">覆盖数字技能与家政管理，助力职业中断后回归。</div><div class="news-meta">育儿与职场 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">地方两会女性委员提案聚焦托育<span class="arrow">▶</span></div><div class="news-detail">普惠托育供给与弹性工作成为高频关切。</div><div class="news-meta">公共政策 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">互联网行业发布反骚扰自律公约<span class="arrow">▶</span></div><div class="news-detail">明确投诉闭环与隔离机制，平台主体责任压实。</div><div class="news-meta">权益前沿 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">经期保护写入更多集体合同<span class="arrow">▶</span></div><div class="news-detail">女职工特殊期调休与防护条款逐步普及。</div><div class="news-meta">城市生活 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">青年女科学家论坛热议科研回归<span class="arrow">▶</span></div><div class="news-detail">长周期评价与减负清单，让探索更从容。</div><div class="news-meta">科技她力量 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">女性导演扶持基金设立<span class="arrow">▶</span></div><div class="news-detail">鼓励多元视角创作，幕后女性岗位扩容。</div><div class="news-meta">文化观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">母亲弹性工作制立法调研启动<span class="arrow">▶</span></div><div class="news-detail">居家办公与弹性工时纳入劳动关系讨论。</div><div class="news-meta">妇女权益 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">女子马拉松参赛人数创新高<span class="arrow">▶</span></div><div class="news-detail">大众女子路跑热度攀升，装备与社群双增长。</div><div class="news-meta">她经济 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">家暴庇护所床位扩容<span class="arrow">▶</span></div><div class="news-detail">多地加密 shelter 网点，联动司法与心理支持。</div><div class="news-meta">妇女权益 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">女性播客厂牌获新一轮融资<span class="arrow">▶</span></div><div class="news-detail">陪伴式内容受资本青睐，声音经济升温。</div><div class="news-meta">阅读社群 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">上市公司 ESG 报告增列性别指标<span class="arrow">▶</span></div><div class="news-detail">董事会与高管性别结构透明化提速。</div><div class="news-meta">ESG前沿 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">中学开设月经健康教育必修课<span class="arrow">▶</span></div><div class="news-detail">去污名化从课堂开始，青春期关怀前置。</div><div class="news-meta">教育观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">长寿时代女性养老规划升温<span class="arrow">▶</span></div><div class="news-detail">专属养老目标产品与投教需求同步增长。</div><div class="news-meta">银发关怀 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">家政工职业伤害保障落地<span class="arrow">▶</span></div><div class="news-detail">灵活就业者纳入保险，工伤赔付有章可循。</div><div class="news-meta">经济与社会 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">非遗女能手直播带货破圈<span class="arrow">▶</span></div><div class="news-detail">手艺借短视频走出山乡，增收与传承兼得。</div><div class="news-meta">非遗笔记 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">夜间公交女性优先车厢试点<span class="arrow">▶</span></div><div class="news-detail">错峰通勤安全感知提升，城市友好度加分。</div><div class="news-meta">城市生活 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="news">
 <h2>新闻</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">寒潮蓝色预警影响北方多地</div><div class="news-detail">气温骤降超十度，农业与供暖部门启动应对，提醒添衣保暖。</div><div class="news-meta">气象台 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">多地启动供暖设施调试</div><div class="news-detail">北方城市陆续试水试压，确保按期稳定供热。</div><div class="news-meta">住建部 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">进博会 筹备进入最后阶段</div><div class="news-detail">展馆搭建与展品通关完成，服务贸易展区规模扩大。</div><div class="news-meta">新华社 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">航天 某型火箭成功发射卫星</div><div class="news-detail">一箭多星将遥感卫星送入预定轨道，组网能力增强。</div><div class="news-meta">航天参考 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">国产大飞机新增商业航线</div><div class="news-detail">再获两家航司订单，干线运力网络持续完善。</div><div class="news-meta">民航报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">深中通道 车流量创新高</div><div class="news-detail">跨海集群通车后通勤时间大幅压缩，湾区融合加速。</div><div class="news-meta">交通新闻 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">乡村振兴 示范县名单公布</div><div class="news-detail">一批产业与生态兼备的县入选，配套资金同步下达。</div><div class="news-meta">农业农村部 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">医保 门诊统筹报销比例提高</div><div class="news-detail">常见病多发病在基层报销更实惠，就医下沉明显。</div><div class="news-meta">国家医保局 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">多部门联合整治网络谣言</div><div class="news-detail">重点打击涉灾涉警不实信息，压实平台审核责任。</div><div class="news-meta">公安资讯 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">高校 扩招专业学位研究生</div><div class="news-detail">面向产业急需的工程与医科专硕名额增加。</div><div class="news-meta">教育部 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">京杭运河 智慧航道升级</div><div class="news-detail">电子巡航与船闸联动提升通行效率，货运成本下降。</div><div class="news-meta">运河史话 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">台风 路径转向华南</div><div class="news-detail">沿海发布防风预警，渔船回港、滨海景区临时关闭。</div><div class="news-meta">气象台 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">全国 社保基金预算执行良好</div><div class="news-detail">收支总体平衡，养老金发放保障有力。</div><div class="news-meta">财政部 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">碳市场 扩容至水泥行业</div><div class="news-detail">新增控排行业纳入交易，减排激励更立体。</div><div class="news-meta">生态环境 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">农村 客货邮融合提速</div><div class="news-detail">公交带货与快递进村结合，农产品出村更顺畅。</div><div class="news-meta">三农新闻 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">文旅 博物馆夜游走热</div><div class="news-detail">多地延长开放并推出沉浸展，年轻观众回流。</div><div class="news-meta">文旅之声 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">体育 全运会场馆试运行</div><div class="news-detail">新建与改造场馆陆续验收，赛事筹备进入冲刺。</div><div class="news-meta">体育新闻 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">食品安全 抽检合格率提升</div><div class="news-detail">节令食品与校园餐专项抽检结果向好。</div><div class="news-meta">市场监管 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">应急 城市内涝治理攻坚</div><div class="news-detail">管网清疏与排涝泵站改造同步推进。</div><div class="news-meta">应急新闻 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">数字 政务一网通办扩面</div><div class="news-detail">高频事项跨省通办，材料免提交范围扩大。</div><div class="news-meta">数字政府 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">海洋 伏季休渔结束开渔</div><div class="news-detail">渔船有序出海，水产市场供应回暖。</div><div class="news-meta">农业农村部 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">寒露至北方昼夜温差加大<span class="arrow">▶</span></div><div class="news-detail">节气转换提醒添衣防燥，农业抢收进入关键期。</div><div class="news-meta">气象台 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">北方多地正式供暖首日平稳<span class="arrow">▶</span></div><div class="news-detail">热源与管网联动调试完成，室温达标率较高。</div><div class="news-meta">住建部 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">进博会参展商密集抵沪布展<span class="arrow">▶</span></div><div class="news-detail">展台搭建与设备进馆同步推进，服务贸易区扩容。</div><div class="news-meta">新华社 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">探月工程新任务转入发射准备<span class="arrow">▶</span></div><div class="news-detail">嫦娥系列后续探测进入最后联试，窗口临近。</div><div class="news-meta">航天参考 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">C919 再获洲际航司意向订单<span class="arrow">▶</span></div><div class="news-detail">国产干线客机海外认可度提升，交付节奏加快。</div><div class="news-meta">民航报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">跨海集群通勤量稳步爬升<span class="arrow">▶</span></div><div class="news-detail">湾区日常往返更便捷，产业协作半径扩大。</div><div class="news-meta">交通新闻 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">脱贫县特色产业链巩固提升<span class="arrow">▶</span></div><div class="news-detail">帮扶产业目录更新，联农带农机制更扎实。</div><div class="news-meta">农业农村部 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">门诊慢特病跨省结算扩病种<span class="arrow">▶</span></div><div class="news-detail">异地就医便利性再提升，慢病人群负担减轻。</div><div class="news-meta">国家医保局 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">短视频虚假摆拍专项整治启动<span class="arrow">▶</span></div><div class="news-detail">打击编造剧情引流，压实平台审核责任。</div><div class="news-meta">公安资讯 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">高校保研拟录取名单公示季开启<span class="arrow">▶</span></div><div class="news-detail">推免工作收官，交叉学科名额受追捧。</div><div class="news-meta">教育部 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">京杭运河岸电覆盖泊位过半<span class="arrow">▶</span></div><div class="news-detail">靠港船舶接电减排，绿色航道建设提速。</div><div class="news-meta">运河史话 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">东海低压带来沿海大风预警<span class="arrow">▶</span></div><div class="news-detail">渔船回港避风，滨海景区有序管控。</div><div class="news-meta">气象台 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">城乡居民基础养老金上调落地<span class="arrow">▶</span></div><div class="news-detail">待遇调整惠及广大城乡老年居民。</div><div class="news-meta">财政部 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">全国碳市场扩围至钢铁行业<span class="arrow">▶</span></div><div class="news-detail">新增控排行业纳入交易，减排激励更立体。</div><div class="news-meta">生态环境 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">县域物流统仓共配降本<span class="arrow">▶</span></div><div class="news-detail">多家快递合仓分拣，农村单件成本再下探。</div><div class="news-meta">三农新闻 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">国家级夜间文旅消费区扩容<span class="arrow">▶</span></div><div class="news-detail">灯光演艺与市集联动，年轻客流回流。</div><div class="news-meta">文旅之声 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">运动会火炬传递路线公布<span class="arrow">▶</span></div><div class="news-detail">圣火采集与传递安排敲定，赛事氛围升温。</div><div class="news-meta">体育新闻 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">中小学食堂明厨亮灶全覆盖<span class="arrow">▶</span></div><div class="news-detail">后厨可视化让家长更安心，食安闭环更紧。</div><div class="news-meta">市场监管 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">秋季高火险期靠前驻防<span class="arrow">▶</span></div><div class="news-detail">森林消防前置兵力，巡查与演练同步。</div><div class="news-meta">应急新闻 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">电子营业执照跨域互认<span class="arrow">▶</span></div><div class="news-detail">企业异地办事少跑腿，营商环境再优化。</div><div class="news-meta">数字政府 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">近海增殖放流成效评估发布<span class="arrow">▶</span></div><div class="news-detail">渔业资源恢复信号积极，生态红利渐显。</div><div class="news-meta">农业农村部 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="history">
 <h2>历史</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">丝绸之路 上的粟特商人</div><div class="news-detail">中亚粟特人沿商道建起贸易驿站，成为东西方物资与信仰的摆渡者。</div><div class="news-meta">丝路史话 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">北宋 交子：世界最早纸币</div><div class="news-detail">蜀地铁钱笨重催生纸质信用，金融创新比欧洲早数百年。</div><div class="news-meta">货币史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">明代 郑成功收复台湾</div><div class="news-detail">海上力量驱逐殖民者，维护东南海疆完整。</div><div class="news-meta">明史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">商鞅变法 与秦制奠基</div><div class="news-detail">军功授爵与郡县推行，重塑战国权力结构。</div><div class="news-meta">制度史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">古罗马 引水渠工程</div><div class="news-detail">拱券与重力流技术把清水送进城市，见证工程组织力。</div><div class="news-meta">工程史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">京杭大运河 的元代裁弯</div><div class="news-detail">弃绕洛阳改直连大都，缩短航程千余里。</div><div class="news-meta">运河史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">敦煌 莫高窟营造史</div><div class="news-detail">千年开窟留下壁画与彩塑，多元文明在此交汇。</div><div class="news-meta">敦煌学 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">拿破仑 与大陆封锁</div><div class="news-detail">以贸易封锁对抗海上强权，终被经济反噬。</div><div class="news-meta">欧洲史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">大航海 麦哲伦环球</div><div class="news-detail">首次环球的航行证明地球之广，开启全球联结。</div><div class="news-meta">海洋史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">宋代 书院与活字并行</div><div class="news-detail">教育普及与印刷革新彼此成就，知识传播提速。</div><div class="news-meta">印刷史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">古埃及 金字塔建造</div><div class="news-detail">动员与测量体系的奇迹，折射早期国家动员力。</div><div class="news-meta">古代史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">鸦片战争 与五口通商</div><div class="news-detail">坚船利炮撞开国门，近代变局由此开启。</div><div class="news-meta">近代史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">青铜器 二里头起源</div><div class="news-detail">中原最早王朝的礼器，埋下等级与秩序的基因。</div><div class="news-meta">考古 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">明治维新 的近代化</div><div class="news-detail">倒幕与殖产兴业，东亚首个系统性西化转型。</div><div class="news-meta">东亚史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">丝绸之路 佛教东传</div><div class="news-detail">驼铃声中梵呗入华，石窟与译经改变精神版图。</div><div class="news-meta">思想史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">工业革命 蒸汽机车</div><div class="news-detail">铁轨与蒸汽把速度交给机器，时空被重新丈量。</div><div class="news-meta">经济史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">唐代 科举诗赋取士</div><div class="news-detail">以文取士塑造士大夫气质，文学与政治深度绑定。</div><div class="news-meta">城市史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">拜占庭 千年帝国</div><div class="news-detail">以法典与城墙续写罗马余晖，扼守东西要冲。</div><div class="news-meta">世界史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">殷墟 妇好墓发现</div><div class="news-detail">女将之墓出土大量礼器，重写商代社会图景。</div><div class="news-meta">文字史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">美国 独立宣言时刻</div><div class="news-detail">天赋人权理念立国，激发后续革命浪潮。</div><div class="news-meta">现代史 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">良渚 古城水利系统</div><div class="news-detail">五千年前的坝体与河道，展现史前工程智慧。</div><div class="news-meta">考古 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">河西走廊汉简里的边塞日常<span class="arrow">▶</span></div><div class="news-detail">一枚枚木简记录屯戍、粮簿与家书，边关烟火跃然。</div><div class="news-meta">丝路史话 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">唐朝长安西市胡商云集<span class="arrow">▶</span></div><div class="news-detail">波斯珠宝与西域香料在此交易，国际都会气象万千。</div><div class="news-meta">城市史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">宋代海上丝绸之路勃兴<span class="arrow">▶</span></div><div class="news-detail">市舶司与商船把瓷器丝绸送往南洋与波斯湾。</div><div class="news-meta">海洋史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">元朝行省制度奠定<span class="arrow">▶</span></div><div class="news-detail">中央派出机构统辖辽阔疆域，影响后世政区。</div><div class="news-meta">制度史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">郑和下西洋宝船舰队<span class="arrow">▶</span></div><div class="news-detail">七下西洋宣示和平交往，航海技艺惊艳当时。</div><div class="news-meta">航海史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">文艺复兴美第奇家族<span class="arrow">▶</span></div><div class="news-detail">艺术 patronage 点燃人文之光，佛罗伦萨群星璀璨。</div><div class="news-meta">欧洲史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">英国大宪章立宪起点<span class="arrow">▶</span></div><div class="news-detail">王权受限确立法治传统，影响深远。</div><div class="news-meta">世界史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">法国大革命攻占巴士底<span class="arrow">▶</span></div><div class="news-detail">民众怒涛揭开现代政治新篇章。</div><div class="news-meta">近代史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">工业革命珍妮纺纱机<span class="arrow">▶</span></div><div class="news-detail">纺纱效率跃升，工厂制度由此奠基。</div><div class="news-meta">经济史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">美国西部拓荒与铁路<span class="arrow">▶</span></div><div class="news-detail">铁轨贯通东西，机遇与冲突交织。</div><div class="news-meta">现代史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">一战凡尔登绞肉机<span class="arrow">▶</span></div><div class="news-detail">漫长堑壕战改写战争形态与一代人命运。</div><div class="news-meta">战争史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">二战诺曼底登陆<span class="arrow">▶</span></div><div class="news-detail">史上最大规模两栖作战，扭转欧洲战场。</div><div class="news-meta">战争史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">雅典民主与公民大会<span class="arrow">▶</span></div><div class="news-detail">直接民主实验照亮西方政治思想源头。</div><div class="news-meta">思想史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">玛雅天文历法文明<span class="arrow">▶</span></div><div class="news-detail">精确历法与观星术揭示雨林古国的智慧。</div><div class="news-meta">古代史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">印加帝国路网<span class="arrow">▶</span></div><div class="news-detail">崇山峻岭间铺设的官道连接庞大帝国。</div><div class="news-meta">世界史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">丝绸之路香料贸易<span class="arrow">▶</span></div><div class="news-detail">胡椒与丁香串起东西方财富与味觉交换。</div><div class="news-meta">丝路史话 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">明清晋商票号<span class="arrow">▶</span></div><div class="news-detail">汇兑网络先于现代银行，商业信用远播。</div><div class="news-meta">商业史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">汉朝张骞凿空西域<span class="arrow">▶</span></div><div class="news-detail">使节通途开启中原与中亚的官方往来。</div><div class="news-meta">古代史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">秦统一度量衡<span class="arrow">▶</span></div><div class="news-detail">标准器与律令巩固大一统，经济血脉贯通。</div><div class="news-meta">制度史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">宋朝火药武器应用<span class="arrow">▶</span></div><div class="news-detail">火器登上战场，军事技术悄然革命。</div><div class="news-meta">军事史 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">古巴比伦汉谟拉比法典<span class="arrow">▶</span></div><div class="news-detail">刻石立规，最早成文法之一昭示秩序。</div><div class="news-meta">古代史 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="ecom">
 <h2>电商</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">双11 首波尾款日战报出炉</div><div class="news-detail">平台披露预售转化与品类榜单，家电与美妆领跑。</div><div class="news-meta">电商报 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">即时零售 平台接入医保购药</div><div class="news-detail">线上下单、线下药房直送，慢病人群购药更便捷。</div><div class="news-meta">即时零售观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">直播 头部机构转做白牌供应链</div><div class="news-detail">从带货到控品，机构向上游延伸提升毛利。</div><div class="news-meta">直播财经 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">跨境电商 墨西哥市场爆发</div><div class="news-detail">近岸制造与免税红利吸引中国卖家密集入驻。</div><div class="news-meta">出海笔记 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">银发 适老版 App 购物增长</div><div class="news-detail">大字体与语音下单降低门槛，老年 GMV 提速。</div><div class="news-meta">银发经济 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">生鲜 前置仓盈利模型跑通</div><div class="news-detail">高密度社区单仓日单量达标，履约转正。</div><div class="news-meta">生鲜前线 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">会员店 自有品牌占比提升</div><div class="news-detail">高复购标品转自有，价格优势转化为黏性。</div><div class="news-meta">零售观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">大模型 写商品详情页降本</div><div class="news-detail">商家用生成式工具批量产出卖点文案，上架更快。</div><div class="news-meta">电商技术 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">二手 3C 质检标准化</div><div class="news-detail">统一验机分级让闲置手机流转更放心。</div><div class="news-meta">循环经济学 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">助农 产地仓直发提速</div><div class="news-detail">田间预冷与分级包装，次日达覆盖更多城市。</div><div class="news-meta">助农电商 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">退货运费险 智能定价</div><div class="news-detail">按品类与信用浮动费率，平台与买家双赢。</div><div class="news-meta">消费者权益 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">种草 内容平台闭环交易</div><div class="news-detail">笔记内嵌下单，转化路径缩短带动长尾品牌。</div><div class="news-meta">品牌观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">跨境 人民币结算扩面</div><div class="news-detail">本币直收降低汇损，中小卖家现金流改善。</div><div class="news-meta">支付观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">社区 团长向服务转型</div><div class="news-detail">从赚差价到做代管与售后，信任资产沉淀。</div><div class="news-meta">社区商业 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">虚拟 试戴眼镜上线</div><div class="news-detail">AR 测脸型配镜框，退货率明显下降。</div><div class="news-meta">电商前沿 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">县域 共配中心降本</div><div class="news-detail">多家快递合仓共配，农村单件成本大幅下降。</div><div class="news-meta">物流观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">国货 运动品牌出海中东</div><div class="news-detail">本地化尺码与营销打开高客单市场。</div><div class="news-meta">国货出海 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">财税 数电票全面推广</div><div class="news-detail">全链路无纸化，商家对账与报销效率提升。</div><div class="news-meta">财税观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">礼赠 情绪价值礼盒</div><div class="news-detail">附手写卡与仪式感包装，非节日也热销。</div><div class="news-meta">消费趋势 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">循环 包装押金制试点</div><div class="news-detail">可循环箱扫码归还返押金，减塑见效。</div><div class="news-meta">可持续电商 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">私域 企业微信客户资产化</div><div class="news-detail">标签分层驱动复购，LTV 成为核心指标。</div><div class="news-meta">私域观察 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">平台取消预售改现货开卖<span class="arrow">▶</span></div><div class="news-detail">双十一节奏前置，现货直降取代复杂定金玩法。</div><div class="news-meta">电商报 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">即时零售超市半小时达扩城<span class="arrow">▶</span></div><div class="news-detail">高频日用品线上下单，前置仓密度决定时效。</div><div class="news-meta">即时零售观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">店播成品牌官方新阵地<span class="arrow">▶</span></div><div class="news-detail">自播常态化，品牌把流量与数据握在自己手里。</div><div class="news-meta">直播财经 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">东南亚直播带货升温<span class="arrow">▶</span></div><div class="news-detail">中国供应链叠加本地主播， GMV 快速起量。</div><div class="news-meta">出海笔记 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">银发族语音下单渗透提速<span class="arrow">▶</span></div><div class="news-detail">大字号与语音交互降低门槛，老年客群活跃。</div><div class="news-meta">银发经济 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">社区团购回暖现盈利<span class="arrow">▶</span></div><div class="news-detail">聚焦生鲜与日百，履约成本压到健康区间。</div><div class="news-meta">生鲜前线 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">会员店线上配送上线<span class="arrow">▶</span></div><div class="news-detail">仓配一体把低价自有品牌送到家。</div><div class="news-meta">零售观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">AI 客服替代率显著提升<span class="arrow">▶</span></div><div class="news-detail">问答与售后自动化，人工转向复杂诉求。</div><div class="news-meta">电商技术 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">中古包循环交易升温<span class="arrow">▶</span></div><div class="news-detail">鉴定标准化让闲置奢侈品流转更放心。</div><div class="news-meta">循环经济学 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">村播达人培育计划启动<span class="arrow">▶</span></div><div class="news-detail">培训加流量扶持，田间地头长出新主播。</div><div class="news-meta">助农电商 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">运费险反欺诈模型上线<span class="arrow">▶</span></div><div class="news-detail">识别异常退货，平台与买家双向减负。</div><div class="news-meta">消费者权益 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">短剧带货成新增长极<span class="arrow">▶</span></div><div class="news-detail">剧情植入即转化，品牌内容化提速。</div><div class="news-meta">品牌观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">海外仓前置缩短跨境时效<span class="arrow">▶</span></div><div class="news-detail">热点市场本地发货，退换更顺滑。</div><div class="news-meta">支付观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">即时团购拼单走俏社区<span class="arrow">▶</span></div><div class="news-detail">邻里拼团降低单价，团长回归服务本质。</div><div class="news-meta">社区商业 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">AR 虚拟试妆上线美妆<span class="arrow">▶</span></div><div class="news-detail">手机前置摄像头试色，退货率明显下降。</div><div class="news-meta">电商前沿 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">客货邮融合再降农村成本<span class="arrow">▶</span></div><div class="news-detail">公交带货与快递进村一体，出村进村双通。</div><div class="news-meta">物流观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">国货彩妆攻占东南亚<span class="arrow">▶</span></div><div class="news-detail">高性价比与本地化色号打开年轻市场。</div><div class="news-meta">国货出海 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">商家全电票合规改造<span class="arrow">▶</span></div><div class="news-detail">报销与对账全链路无纸化，财务效率提升。</div><div class="news-meta">财税观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">企业团购礼盒定制升温<span class="arrow">▶</span></div><div class="news-detail">附手写卡与品牌故事，非节令也旺销。</div><div class="news-meta">消费趋势 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">绿色包装减塑行动扩面<span class="arrow">▶</span></div><div class="news-detail">可降解填充与循环箱并行，ESG 成卖点。</div><div class="news-meta">可持续电商 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">小程序会员复购体系成型<span class="arrow">▶</span></div><div class="news-detail">积分通兑与分层权益，私域 LTV 提升。</div><div class="news-meta">私域观察 · 10月8日</div></div>
 </div></section>
 <section class="cat" data-cat="baby">
 <h2>母婴</h2>
 <div class="news-list">
-<div class="news-item"><div class="news-title">美德乐 无线吸乳器续航升级</div><div class="news-detail">新款单次充电支持多次泵乳，通勤背奶更无忧。</div><div class="news-meta">母婴前沿 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">兰思诺 母乳储存袋新国标</div><div class="news-detail">预灭菌双层加厚，标注刻度防漏，冷冻更安心。</div><div class="news-meta">育儿好物 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">苏菲 婴儿湿巾敏感肌款</div><div class="news-detail">无香精无酒精配方，新生儿臀部护理友好。</div><div class="news-meta">产后护理 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">MAM 训练杯防龋设计</div><div class="news-detail">重力球与软嘴帮助过渡到敞口杯，护齿理念。</div><div class="news-meta">奶瓶评测 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">汤美天地 辅食研磨碗</div><div class="news-detail">防滑底座配研磨棒，外出也能现做果泥。</div><div class="news-meta">出牙好物 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">布朗博士 奶瓶刷套装</div><div class="news-detail">弯头刷深入导气管，无死角清洁更卫生。</div><div class="news-meta">奶瓶实验室 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">飞利浦 新安怡 Natural 奶嘴</div><div class="news-detail">花瓣纹路模拟母乳触感，混喂过渡更顺。</div><div class="news-meta">背奶装备 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">贝亲 婴儿洗发沐浴二合一</div><div class="news-detail">弱酸无泪配方，洗头洗澡一步完成。</div><div class="news-meta">新生儿用品 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">可优比 隔尿垫可洗款</div><div class="news-detail">TPU 防水层反复水洗，换尿布台常备。</div><div class="news-meta">睡眠好物 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">Babycare 婴儿洗衣液</div><div class="news-detail">酵素去奶渍尿渍，无荧光剂配方。</div><div class="news-meta">纸尿裤评测 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">好奇 拉拉裤夜用款</div><div class="news-detail">360度腰围防侧漏，学步期夜里更安稳。</div><div class="news-meta">夜用护理 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">帮宝适 纯净纸尿片</div><div class="news-detail">无香精添加，红屁屁敏感肌适用。</div><div class="news-meta">肌肤护理 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">英氏 米饼无添加</div><div class="news-detail">仅米与油的简单配方，出牙期磨牙小食。</div><div class="news-meta">辅食观察 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">小皮 果泥多口味</div><div class="news-detail">欧盟有机果菜泥，无添加糖盐，便携袋装。</div><div class="news-meta">辅食工具 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">美德乐 乳头保护罩</div><div class="news-detail">超薄硅胶贴合，缓解衔乳疼痛。</div><div class="news-meta">母乳支持 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">婴儿恒温调奶器 智能款</div><div class="news-detail">一键定温冲奶，夜间喂养免试温。</div><div class="news-meta">沐浴好物 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">宝宝餐椅 便携折叠</div><div class="news-detail">可登机收纳，亲子外食稳坐不闹。</div><div class="news-meta">出行装备 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">安全座椅 0-12岁全龄</div><div class="news-detail">可旋转调节随龄使用，反向乘坐更安全。</div><div class="news-meta">出行安全 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">婴儿背带 人体工学</div><div class="news-detail">M 型坐姿分担腰部压力，亲子贴身安抚。</div><div class="news-meta">城市育儿 · 10月7日</div></div>
-<div class="news-item"><div class="news-title">产后 骨盆修复仪</div><div class="news-detail">低频理疗辅助盆底肌训练，居家康复更私密。</div><div class="news-meta">产后护理 · 10月7日</div></div>
+<div class="news-item"><div class="news-title">美德乐泌乳顾问线上问诊开通<span class="arrow">▶</span></div><div class="news-detail">持证顾问一对一指导含乳姿势，新手妈妈少走弯路。</div><div class="news-meta">母婴前沿 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">兰思诺羊脂膏乳头护理<span class="arrow">▶</span></div><div class="news-detail">纯羊毛脂舒缓皲裂，亲喂前后均可使用。</div><div class="news-meta">育儿好物 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">苏菲夜用拉拉裤安心防漏<span class="arrow">▶</span></div><div class="news-detail">加长吸收体应对翻身频繁，整夜干爽。</div><div class="news-meta">产后护理 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">MAM 防胀气奶瓶导气设计<span class="arrow">▶</span></div><div class="news-detail">减少吞入空气，肠绞痛宝宝喂养更舒适。</div><div class="news-meta">奶瓶评测 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">汤美天地感温变色勺<span class="arrow">▶</span></div><div class="news-detail">过热变白提醒，辅食喂养更安心。</div><div class="news-meta">出牙好物 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">布朗博士宽口奶瓶好清洗<span class="arrow">▶</span></div><div class="news-detail">导气系统设计减少气泡，宽口冲调更顺手。</div><div class="news-meta">奶瓶实验室 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">飞利浦新安怡手动吸乳器<span class="arrow">▶</span></div><div class="news-detail">轻巧便携适合偶尔背奶，手感省力。</div><div class="news-meta">背奶装备 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">贝亲哺乳文胸无钢圈<span class="arrow">▶</span></div><div class="news-detail">前开扣方便亲喂，无压舒适居家外出口感。</div><div class="news-meta">新生儿用品 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">可优比婴儿分腿睡袋<span class="arrow">▶</span></div><div class="news-detail">防踢被设计四季可选，夜间少着凉。</div><div class="news-meta">睡眠好物 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">Babycare 储奶袋预灭菌<span class="arrow">▶</span></div><div class="news-detail">双层密封防漏，冷冻标注日期更省心。</div><div class="news-meta">母乳支持 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">好奇铂金装纸尿裤<span class="arrow">▶</span></div><div class="news-detail">弱酸表层亲肤，长时间穿戴也少红屁屁。</div><div class="news-meta">肌肤护理 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">帮宝适一级帮超薄<span class="arrow">▶</span></div><div class="news-detail">空气感芯体透气，夏天穿戴无闷感。</div><div class="news-meta">夜用护理 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">英氏高铁米粉初添辅食<span class="arrow">▶</span></div><div class="news-detail">二价铁易吸收，细腻好吞咽适合六月龄。</div><div class="news-meta">辅食观察 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">小皮酸奶果泥新口味<span class="arrow">▶</span></div><div class="news-detail">无添加糖盐，冷链果泥丰富味觉体验。</div><div class="news-meta">辅食工具 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">Hegen 母乳储存杯<span class="arrow">▶</span></div><div class="news-detail"> PPSU 材质密封防漏，冷藏冷冻一体转换。</div><div class="news-meta">母乳支持 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">Nuby 硅胶牙胶可冷藏<span class="arrow">▶</span></div><div class="news-detail">冰凉触感缓解出牙不适，形态易抓握。</div><div class="news-meta">出牙好物 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">Richell 吸盘辅食碗<span class="arrow">▶</span></div><div class="news-detail">强力吸盘防打翻，分隔设计搭配多样辅食。</div><div class="news-meta">辅食工具 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">波咯咯紫外线消毒烘干<span class="arrow">▶</span></div><div class="news-detail">一体消毒烘干，奶瓶奶嘴随取随用。</div><div class="news-meta">新生儿用品 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">小白熊恒温暖奶器<span class="arrow">▶</span></div><div class="news-detail">精准控温不破坏营养，夜奶冲泡省心。</div><div class="news-meta">沐浴好物 · 10月8日</div></div>
+<div class="news-item"><div class="news-title">可登机轻便婴儿推车<span class="arrow">▶</span></div><div class="news-detail">一键折叠进登机箱，亲子出行说走就走。</div><div class="news-meta">出行装备 · 10月8日</div></div>
 </div></section>
 </main>
-<footer>每日热点工作台 · 数据每日自动更新 · 2026.10.07</footer>
+<footer>每日热点工作台 · 数据每日自动更新 · 2026.10.08</footer>
 </body>
 </html>
