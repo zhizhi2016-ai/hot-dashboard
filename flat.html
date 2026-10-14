@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>平铺视图 · 每日热点工作台 · 2026.10.13 · 星期二</title>
+<title>每日热点工作台 · 2026.10.14 · 星期三</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -76,135 +76,139 @@ footer { text-align: center; padding: 20px 0 10px; }
     header h1 { font-size: 21px; }
 }
 
-/* 平铺视图覆盖 */
-.news-list{max-height:none;overflow-y:visible;padding-right:0} .news-detail{display:block;margin-top:8px} .news-title{cursor:default;pointer-events:none} .news-title .arrow{display:none}
+
+/* flat view overrides */
+.news-list{max-height:none;overflow-y:visible;padding-right:0}
+.news-detail{display:block;margin-top:8px}
+.news-title{cursor:default;pointer-events:none}
+.news-title .arrow{display:none}
 </style>
 </head>
 <body>
 <header>
     <h1>🔥 每日热点工作台</h1>
-    <div class="date-info">📅 2026.10.13 · 星期二</div>
+    <div class="date-info">📅 2026.10.14 · 星期三</div>
     <div class="subtitle">8大分类 · 173条精选资讯</div>
 </header>
 <nav class="filter-bar">
     <button class="filter-btn active" onclick="filterNews('全部')">🌐 全部</button>
-            <button class="filter-btn" onclick="filterNews('AI科技')">🤖 AI/科技</button>
-            <button class="filter-btn" onclick="filterNews('财经')">💰 财经</button>
-            <button class="filter-btn" onclick="filterNews('观点认知')">💡 观点认知</button>
-            <button class="filter-btn" onclick="filterNews('女性主义')">✊ 女性主义</button>
-            <button class="filter-btn" onclick="filterNews('新闻')">📰 新闻</button>
-            <button class="filter-btn" onclick="filterNews('历史')">📜 历史</button>
-            <button class="filter-btn" onclick="filterNews('电商')">🛒 电商</button>
-            <button class="filter-btn" onclick="filterNews('母婴')">👶 母婴</button>
+    <button class="filter-btn" onclick="filterNews('AI科技')">🤖 AI/科技</button>
+    <button class="filter-btn" onclick="filterNews('财经')">💰 财经</button>
+    <button class="filter-btn" onclick="filterNews('观点认知')">💡 观点认知</button>
+    <button class="filter-btn" onclick="filterNews('女性主义')">✊ 女性主义</button>
+    <button class="filter-btn" onclick="filterNews('新闻')">📰 新闻</button>
+    <button class="filter-btn" onclick="filterNews('历史')">📜 历史</button>
+    <button class="filter-btn" onclick="filterNews('电商')">🛒 电商</button>
+    <button class="filter-btn" onclick="filterNews('母婴')">👶 母婴</button>
 </nav>
 <main class="container">
     <section class="category" data-category="AI科技">
             <h2 class="category-title">🤖 AI/科技<span class="count">21条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Meta发布Muse Wonder模型，内部代号“西瓜”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10月13日，据《华尔街日报》报道，Meta发布新一代AI模型Muse Wonder，称其具备“前沿能力”，在编程及金融、法律问题处理上已达到ChatGPT与Claude的水平。这是扎克伯格重组AI业务、重金延揽人才以来性能最强的模型，Meta首席AI官汪滔称之为“一个重大时刻”。</div>
-                <div class="news-meta">2026.10.13 · 巨头动向</div>
+                <div class="news-title"><span class="title-text">2026人工智能产业大会今日济南开幕，300余家企业参展</span><span class="arrow">▸</span></div>
+                <div class="news-detail">10月14日至16日，2026人工智能产业大会在济南举行，主题为“加快推进人工智能赋能新型工业化”，由中国信通院、山东省工信厅、济南市政府联合主办，系首次走出北京。华为、浪潮、英伟达、阿里、腾讯、宇树、优必选等300余家企业参展，从算力底座到大模型应用再到具身智能全链条亮相。</div>
+                <div class="news-meta">2026.10.14 · 产业大会</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Muse Wonder押注个人智能体：Muse下载近900万但留存承压</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Meta上月推出的个人助理智能体Muse全球下载量已近900万次，但Sensor Tower数据显示增长开始放缓，发布14天后留存率低于ChatGPT。Muse Wonder能否拉高留存成为关键考验；用户须订阅每月20美元或100美元档位才能在Muse中使用新模型。</div>
-                <div class="news-meta">2026.10.13 · 模型前沿</div>
+                <div class="news-title"><span class="title-text">华为昇腾950超节点首次在山东亮相：最高支持8192张NPU互联</span><span class="arrow">▸</span></div>
+                <div class="news-detail">本届济南大会现场，华为昇腾950超节点首次落地山东展示，最高支持8192张NPU卡高速互联，是业界已亮相超节点中规模最大的，面向工业、能源、金融场景展示国产大规模算力集群的工程化落地能力。</div>
+                <div class="news-meta">2026.10.14 · 算力基建</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Meta同步上线Muse Code与Active Memory，开发者先尝鲜</span><span class="arrow">▸</span></div>
-                <div class="news-detail">除Muse Wonder外，Meta同步推出Muse Code，订阅用户可用完整版Muse Wonder Full；新模型新增跨对话的“主动记忆”（Active Memory）与面向长任务的“主动聚焦”（Active Focus）能力。消费端Muse的更新仍在路上，完整安全报告将随后发布。</div>
-                <div class="news-meta">2026.10.13 · 模型前沿</div>
+                <div class="news-title"><span class="title-text">Google将Gemini 4 Argon推向全球：定位最强前沿模型</span><span class="arrow">▸</span></div>
+                <div class="news-detail">谷歌宣布Gemini 4 Argon通过API、Gemini应用与Google Antigravity在全球可用，称其为公司最强前沿模型。不过独立基准测试显示其在部分项目上仍落后于竞争对手，“发布即最强”的说法引发评测圈讨论。</div>
+                <div class="news-meta">2026.10.14 · 模型前沿</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">微软Maia 200投产：Copilot生产负载迁移至自研芯片</span><span class="arrow">▸</span></div>
-                <div class="news-detail">微软宣布自研AI芯片Maia 200已投入生产负载为Copilot服务，GitHub Copilot与Foundry计划年底前跟进。下一代Maia 300规划2027年量产，预计每兆瓦token产出比领先GPU系统高40%，机架吞吐最高为Maia 200的七倍，多吉瓦级部署已在路上。</div>
-                <div class="news-meta">2026.10.13 · 硬件发布</div>
+                <div class="news-title"><span class="title-text">Character.ai申请破产保护：从27亿美元交易到无人接盘</span><span class="arrow">▸</span></div>
+                <div class="news-detail">Character.ai已申请破产保护并警告若找不到买家将直接关停。此前与谷歌拟议的27亿美元交易告吹，叠加诉讼缠身与运营问题，这家曾经的明星AI创企以令人唏嘘的方式退场，也给“AI应用泡沫”再添一个注脚。</div>
+                <div class="news-meta">2026.10.14 · 行业变局</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">谷歌可穿戴AI活动识别从10项扩展至100余项</span><span class="arrow">▸</span></div>
-                <div class="news-detail">谷歌10月12日更新把可穿戴设备自动活动检测从10项扩展到100余项，离线对比准确率接近前代两倍，本月晚些时候滚动推送。Health Guardian趋势报告也将面向部分高级订阅用户上线——官方强调这些功能用于健康管理，不构成医疗诊断。</div>
-                <div class="news-meta">2026.10.13 · 产品更新</div>
+                <div class="news-title"><span class="title-text">406名科学家联名：要求立即切断AI模型与互联网的连接</span><span class="arrow">▸</span></div>
+                <div class="news-detail">406名科学家联名呼吁企业立即将AI模型与互联网断开，并要求建立强制安全标准、设立国际监督机构、上报所有“失控”事件。这封信代表了AI安全光谱中最激进的一极，也折射出前沿能力加速下安全派的深度焦虑。</div>
+                <div class="news-meta">2026.10.14 · AI安全</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Google AI Studio上线Nano Banana 2.1图像生成模型</span><span class="arrow">▸</span></div>
-                <div class="news-detail">谷歌在AI Studio发布图像生成与编辑模型Nano Banana 2.1，在视觉设计、遮罩编辑、主体一致性与画面自然度上全面升级，用户当天即可在AI Studio环境中体验。轻量版本与既有工作流的组合，让“AI修图”进一步平民化。</div>
-                <div class="news-meta">2026.10.13 · 模型前沿</div>
+                <div class="news-title"><span class="title-text">阶跃星辰发布大模型原生智能体手机STEPX Neo，3999元起</span><span class="arrow">▸</span></div>
+                <div class="news-detail">10月13日，阶跃星辰在上海发布大模型原生智能体手机STEPX Neo，先行版售价3999元，包含Step Studio开发工具与12个月STEPX Token Plan权益，10月13日开启预售、10月16日正式首销，覆盖京东、天猫、抖音渠道。模型厂商亲自下场做终端，“设备+AI服务+开发能力”一体化是最大卖点。</div>
+                <div class="news-meta">2026.10.14 · 智能终端</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">谷歌开源EmbeddingGemma 2：740M参数端侧多模态检索</span><span class="arrow">▸</span></div>
-                <div class="news-detail">谷歌发布EmbeddingGemma 2，740M参数、基于Gemma 4架构，把文本、代码、图像、视频与音频映射进统一嵌入空间，上下文8K，代码检索性能较前代提升9.92分。Apache 2.0开源协议，主打端侧RAG与语义搜索。</div>
-                <div class="news-meta">2026.10.13 · 开源动态</div>
+                <div class="news-title"><span class="title-text">马斯克披露Terafab芯片工厂蓝图：每年制造测试约10款芯片</span><span class="arrow">▸</span></div>
+                <div class="news-detail">马斯克透露特斯拉与SpaceX的目标是在得州Giga Texas研究工厂每年制造和测试约10种芯片设计：快速测试、重做光刻掩模、再迭代下一版，无需中断周期。把软件的敏捷节奏搬进晶圆厂，即便他自己也承认“还不知道具体怎么造”，可能需要数年。</div>
+                <div class="news-meta">2026.10.14 · 芯片制造</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Sierra发布个人智能体协议Poppy草案，35家伙伴共建</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Sierra发布“个人智能体协议”（Personal Agent Protocol，Poppy）首份草案，标准化AI智能体如何向企业完成身份认证与交互，定义发现、会话管理与权限框架，基于OAuth与MCP等标准。美国银行、Cloudflare、OpenAI等35家新设计伙伴加入共建。</div>
-                <div class="news-meta">2026.10.13 · 行业协议</div>
+                <div class="news-title"><span class="title-text">高盛研报：高带宽闪存HBF有望破解AI“内存墙”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">高盛指出，AI推理需求快速增长之下，存储容量不足正成为制约算力效率的瓶颈，高带宽闪存（HBF）等新型NAND技术有望缓解“内存墙”并显著降低AI基建成本。若GPU采用率达15%—50%，HBF潜在市场规模可达400亿—1500亿美元。</div>
+                <div class="news-meta">2026.10.14 · 行业研报</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Nous Research发布“用户自有智能体”原则宣言</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Nous Research发布宣言，为AI智能体的“所有权”划定核心原则：用户对模型选择、数据隐私与执行环境拥有控制权，智能体推理与工具访问需透明，并保证导出、阅读与修改底层代码的完整权利。当智能体开始替用户办事，“谁拥有智能体”正在成为公共议题。</div>
-                <div class="news-meta">2026.10.13 · 行业观察</div>
+                <div class="news-title"><span class="title-text">“黄仁勋世界巡演”86秒AI视频海内外爆火</span><span class="arrow">▸</span></div>
+                <div class="news-detail">一段用AI将黄仁勋“换脸”上迈克尔·杰克逊演唱会舞台的86秒视频火爆出圈，台下“观众”包括库克、马斯克、盖茨，盖茨还因“激动晕倒”被担架抬走，马斯克本人评论“这就是RAM这么贵的原因”。律师提醒：AI二创同样面临肖像权与著作权侵权风险。</div>
+                <div class="news-meta">2026.10.14 · AI内容</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">ngram 2.0上线：动画解说、录屏与AI主播三合一</span><span class="arrow">▸</span></div>
-                <div class="news-detail">ngram 2.0在Product Hunt发布，把动画解说、录屏演示与AI数字人主播合并进一条流水线，其智能体可从文档或录音出发自动完成脚本、旁白与视觉剪辑。制作者坦言产品界面变化后需重新录制，GitHub驱动的自动更新仍在规划中。</div>
-                <div class="news-meta">2026.10.13 · 产品发布</div>
+                <div class="news-title"><span class="title-text">苹果发布智能家居中枢HomeView：售价299美元</span><span class="arrow">▸</span></div>
+                <div class="news-detail">苹果首款带屏智能家居“大脑”HomeView登场，Siri完成AI联动升级，同步推出家居配件“全家桶”，被视为苹果押注智能家居的新入口。受新品与AI预期推动，苹果股价表现强势，盘中市值一度突破5万亿美元。</div>
+                <div class="news-meta">2026.10.14 · 智能家居</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Gamma 5发布：智能体全程规划演示文稿</span><span class="arrow">▸</span></div>
-                <div class="news-detail">演示工具Gamma发布第5代，引入能根据上下文与视觉参考规划整套幻灯片的智能体，并新增自由编辑器，元素可任意拖放排版；同步上线企业连接器，支持导入PowerPoint与PDF等既有文件。</div>
-                <div class="news-meta">2026.10.13 · 产品发布</div>
+                <div class="news-title"><span class="title-text">长鑫科技4F² DRAM架构取得进展，年底推服务器内存</span><span class="arrow">▸</span></div>
+                <div class="news-detail">长鑫科技在4F² DRAM架构上取得进展并计划年底推出服务器内存产品。消息传出后，韩国、美国等全球存储芯片股应声抛售，国产存储的技术逼近正在重塑全球存储竞争格局。</div>
+                <div class="news-meta">2026.10.14 · 存储芯片</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Grok Imagine视频模型Video 1.5 Lite进入API</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Grok Imagine在API中推出Video 1.5 Lite，支持文生视频与图生视频，分级定价：480p每秒0.02美元、720p每秒0.03美元、1080p每秒0.14美元。AI视频生成进入按秒计价的精细化时代。</div>
-                <div class="news-meta">2026.10.13 · 模型前沿</div>
+                <div class="news-title"><span class="title-text">Anthropic实验：AI模型“分裂”后在15个安卓电视盒上分布式运行</span><span class="arrow">▸</span></div>
+                <div class="news-detail">Anthropic在由15个廉价杂牌安卓电视盒组成的网络上测试小型模型Gemma4-26B-A4B，发现过大而无法装入单机的模型可以“分裂成碎片”跨设备运行。研究警示：安全性薄弱的边缘设备，可能成为AI自主复制的温床。</div>
+                <div class="news-meta">2026.10.14 · AI安全</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Perplexity开源pplx-embed-v2-late多模态嵌入模型</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Perplexity开源pplx-embed-v2-late，提供0.6B与9B两个规格的晚交互嵌入模型，支持文本、图像与视觉文档检索并共享同一嵌入空间，小模型可直接查询大模型构建的索引，在ViDoRe v3等基准上达到当前最优。</div>
-                <div class="news-meta">2026.10.13 · 开源动态</div>
+                <div class="news-title"><span class="title-text">MIT科技评论：开源模型的好处与风险如何平衡</span><span class="arrow">▸</span></div>
+                <div class="news-detail">MIT Technology Review刊文分析开源模型：研究访问、成本下降与权力去中心化是实在的好处，但也带来安全风险，建议采用分阶段发布与技术防御等缓解策略。开源与安全的拉扯，正在成为AI治理的核心议题。</div>
+                <div class="news-meta">2026.10.14 · 深度观察</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Einsia发布视频世界模型物理基准：最高分只有57.76</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Einsia推出面向视频世界模型的物理学基准，覆盖40个受控任务、评测8个视频模型，用任务级测量追踪物理一致性。最高分的Seedance 2.5仅得57.76分，通过连续性筛查的自由落体视频平均只有26.61分——AI视频离“懂物理”还有很远。</div>
-                <div class="news-meta">2026.10.13 · 技术评测</div>
+                <div class="news-title"><span class="title-text">倒闭公司的数据成了新商品：AI实验室购买“死亡初创”档案</span><span class="arrow">▸</span></div>
+                <div class="news-detail">SimpleClosure新增数据经纪服务，撮合AI实验室与供应商收购已倒闭初创公司的代码与工作区档案（邮件、聊天、文档）用于训练与评估模型。人去楼空之后，数据还在交易——“死亡初创数据”正在形成一个新兴市场。</div>
+                <div class="news-meta">2026.10.14 · 数据市场</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">Higgsfield推出Ads Studio：从一个URL生成整批广告图</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Higgsfield上线Ads Studio，输入网站链接即可抓取Logo、配色与商品信息，追踪流行版式，为最多10个商品批量生成静态广告，工具通过其ChatGPT扩展免费提供。广告投放的“草稿环节”正在被AI接管。</div>
-                <div class="news-meta">2026.10.13 · 营销科技</div>
+                <div class="news-title"><span class="title-text">快手披露：平台每天新增109万条AIGC视频</span><span class="arrow">▸</span></div>
+                <div class="news-detail">快手公布数据显示，仅其单一平台每天就新增109万条AIGC视频，日均带来1600万新增关注和1.7亿次互动。AI内容生产与消费，已成为内容生态中增长最快、效率最高的部分。</div>
+                <div class="news-meta">2026.10.14 · AIGC</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">第28届韩国半导体展14日开幕，三星主打HBM</span><span class="arrow">▸</span></div>
-                <div class="news-detail">第28届韩国半导体展将于10月14-16日举行，300家企业参展创历届最大规模。三星电子以“AI系统设计”为主题，重点展示高带宽存储HBM与下一代3D存储技术。AI存储竞赛的主战场移至首尔。</div>
-                <div class="news-meta">2026.10.13 · 产业动态</div>
+                <div class="news-title"><span class="title-text">宇树机器人携春晚同款人形机器人亮相济南：拳台灶台产线齐开</span><span class="arrow">▸</span></div>
+                <div class="news-detail">宇树科技在济南AI大会现场带来春晚同款人形机器人，复刻《武BOT》经典拳击武术表演；同场还有智能炒菜机器人颠勺分餐。从擂台到厨房再到工厂巡检，具身智能正从“秀”走向产线。</div>
+                <div class="news-meta">2026.10.14 · 具身智能</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">上海启动新一代智能制造行动：2028年产业规模瞄准2000亿</span><span class="arrow">▸</span></div>
-                <div class="news-detail">《上海加快发展新一代智能制造行动倡议》正式启动，将实施四大工程、19项重点任务，目标到2028年AI赋能的新一代智能制造装备产业规模突破2000亿元，智能制造系统集成产业规模达到1000亿元。</div>
-                <div class="news-meta">2026.10.13 · 产业政策</div>
+                <div class="news-title"><span class="title-text">英伟达Vera Rubin新一代AI平台登场：MoE训练GPU用量省四分之三</span><span class="arrow">▸</span></div>
+                <div class="news-detail">英伟达Vera Rubin平台在济南与昇腾超节点同台竞技，其MoE模型训练GPU用量较上代缩减约四分之三，以极致成本优势回应工业AI规模化商用的经济性门槛。</div>
+                <div class="news-meta">2026.10.14 · 算力平台</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">铁路“十五五”科技创新规划：稳妥推进600km/h磁浮研究</span><span class="arrow">▸</span></div>
-                <div class="news-detail">《铁路“十五五”科技创新规划》发布，明确芯片自主可控、新一代通信技术融合等关键任务，并提出稳妥有序推进时速600公里高速磁浮技术攻关与国产化关键技术的试验验证。</div>
-                <div class="news-meta">2026.10.13 · 产业政策</div>
+                <div class="news-title"><span class="title-text">千TOPS上桌面：DGX Spark把200B参数模型微调搬进办公室</span><span class="arrow">▸</span></div>
+                <div class="news-detail">正阳恒卓在现场展示NVIDIA DGX Spark桌面级算力设备，将约1000 TOPS算力浓缩进桌面主机，可对200B参数大模型进行本地微调与推理，补齐了从智算中心到桌面端的算力全栈链条。</div>
+                <div class="news-meta">2026.10.14 · 桌面算力</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">AI硬件深度回调：光通信、覆铜板概念领跌市场</span><span class="arrow">▸</span></div>
-                <div class="news-detail">周一A股AI板块领跌，光通信、覆铜板、玻璃基板概念大跌；隔夜费城半导体指数跌超2%，Lumentum、Coherent、康宁等海外光通信公司集体调整。AI硬件叙事迎来近期最实质的一次分歧，资金开始重新审视算力链条的拥挤度。</div>
-                <div class="news-meta">2026.10.13 · 市场观察</div>
+                <div class="news-title"><span class="title-text">思维光谱AnySearch：给AI Agent配一台“专用搜索引擎”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">面向AI Agent的专用搜索基础设施AnySearch亮相济南大会，为工业企业的供应链研判、竞品调研、行业标准检索提供结构化、可溯源的信息底座，直击智能体“信息获取”这一短板。</div>
+                <div class="news-meta">2026.10.14 · Agent基建</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">资金切换进行时：AI影视与传媒逆势掀涨停潮</span><span class="arrow">▸</span></div>
-                <div class="news-detail">弱势市场中出版、影视院线与数字媒体逆势走强，博纳影业连续涨停、中文在线放量活跃。字节PineDrama、AI漫剧与AI影视定档消息推动资金从硬件向应用迁移，“从算力到内容”的切换正在被市场定价。</div>
-                <div class="news-meta">2026.10.13 · 市场观察</div>
+                <div class="news-title"><span class="title-text">豆包智能打通企业业务系统：“AI生产力”成为大会关键词</span><span class="arrow">▸</span></div>
+                <div class="news-detail">豆包智能在大会展示面向企业端的AI生产力体系，将豆包大模型与智能体Agent能力同企业业务系统打通。当考核标准从“模型能不能跑分”变成“产线能不能用、成本能不能降”，AI企业服务正进入落地深水区。</div>
+                <div class="news-meta">2026.10.14 · 企业AI</div>
             </div>
             <div class="news-item" data-category="AI科技">
-                <div class="news-title"><span class="title-text">低资源训练新法：4GB显存把0.8B模型准确率拉到74.3%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">开源社区新方法结合Clef头与LoRA，在4GB显存上把Qwen3.5 0.8B三基准综合准确率从20.7%提升至74.3%，提供UI与代码双工作流。消费级显卡训练小模型的路线继续“向下兼容”。</div>
-                <div class="news-meta">2026.10.13 · 开源动态</div>
+                <div class="news-title"><span class="title-text">AI交易降温论抬头：存储股续跌拖累科技股</span><span class="arrow">▸</span></div>
+                <div class="news-detail">存储概念股连续下跌打压科技板块，纳指小幅走低，市场开始重新审视AI基础设施资本开支的可持续性。华尔街的多空分歧点在于：算力投资的回报周期，究竟比乐观者预期的长多少。</div>
+                <div class="news-meta">2026.10.14 · 市场观察</div>
             </div>
             </div>
         </section>
@@ -212,104 +216,104 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">💰 财经<span class="count">20条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">何立峰会见苹果执行董事长库克</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国务院副总理何立峰会见美国苹果公司执行董事长蒂姆·库克，表示欢迎包括苹果公司在内的各国科技企业持续深化对华互利共赢合作，共享中国式现代化发展机遇。</div>
-                <div class="news-meta">2026.10.13 · 高层会见</div>
+                <div class="news-title"><span class="title-text">今日10时：国新办公布前三季度进出口数据</span><span class="arrow">▸</span></div>
+                <div class="news-detail">国新办10月14日上午10时举行新闻发布会，海关总署新闻发言人、副署长王军介绍2026年前三季度进出口情况。外贸表现如何，将成为判断全年经济成色的关键一环。</div>
+                <div class="news-meta">2026.10.14 · 宏观数据</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">新能源汽车出口退税率将下调：13%降至9%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">财政部、税务总局发布公告，自2027年4月1日起将新能源汽车增值税出口退税率由13%下调至9%，同时取消电子烟设备装置等产品的增值税出口退税。退税梯度调整释放出产业政策从普惠扶持转向择优扶持的信号。</div>
-                <div class="news-meta">2026.10.13 · 财税政策</div>
+                <div class="news-title"><span class="title-text">中国9月CPI、PPI今日9时30分出炉</span><span class="arrow">▸</span></div>
+                <div class="news-detail">国家统计局今日9:30公布9月居民消费价格指数（CPI）与工业生产者价格指数（PPI）月度报告。通胀走势将直接影响市场对货币政策空间的预期。</div>
+                <div class="news-meta">2026.10.14 · 宏观数据</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">9月新能源汽车销量182.3万辆，月度占比再创新高</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中汽协数据：9月新能源汽车产销分别完成181.4万辆和182.3万辆，同比增长12.2%和13.6%；月度新车销量占比连续三个月突破60%，9月达61.6%的历史新高。1-9月累计产销均超1247万辆。</div>
-                <div class="news-meta">2026.10.13 · 行业数据</div>
+                <div class="news-title"><span class="title-text">今晚20时30分：美国9月CPI揭晓</span><span class="arrow">▸</span></div>
+                <div class="news-detail">北京时间10月14日20:30，美国劳工部公布9月CPI。在美联储官员持续放鹰的背景下，这份通胀数据将为12月是否再加息一锤定音提供依据。</div>
+                <div class="news-meta">2026.10.14 · 海外宏观</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">欧佩克下调2026年全球石油需求增长预期至40万桶/日</span><span class="arrow">▸</span></div>
-                <div class="news-detail">欧佩克秘书长盖斯表示，已将2026年全球日均石油需求增长预期从年初的140万桶下调至40万桶，并预计被推迟释放的需求将在2027年逐步显现。需求预期收缩叠加地缘冲突，油价陷入双向拉锯。</div>
-                <div class="news-meta">2026.10.13 · 能源市场</div>
+                <div class="news-title"><span class="title-text">IMF上调2026年全球经济增长预期至3.1%</span><span class="arrow">▸</span></div>
+                <div class="news-detail">国际货币基金组织发布最新《世界经济展望》，将2026年全球增长预期上调0.1个百分点至3.1%，预计2027年回升至3.4%。IMF称，AI投资热潮对部分经济体的提振，抵消了中东冲突对其他经济体的拖累。</div>
+                <div class="news-meta">2026.10.14 · 国际机构</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">国际油价高位波动：WTI报93美元、布伦特106美元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">受中东局势与运力短缺影响，WTI原油涨至93美元/桶，布伦特报106美元/桶，阿联酋穆尔班原油维持112美元高位。欧佩克下调需求预期后油价一度松动，但供给担忧令市场再度紧张。</div>
-                <div class="news-meta">2026.10.13 · 能源市场</div>
+                <div class="news-title"><span class="title-text">美联储“三把手”威廉姆斯：今年或再加息一次</span><span class="arrow">▸</span></div>
+                <div class="news-detail">纽约联储主席威廉姆斯表示，今年再加息一次是合适的，目前认为2027年没有必要继续加息。美联储柯林斯则称政策路径取决于数据，并指出数据中心建设正在对通胀数据施加压力。</div>
+                <div class="news-meta">2026.10.14 · 货币政策</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">超大型油轮运费飙升至60年来最高</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美以对伊朗军事打击重塑中东原油贸易格局，叠加船队供给严重短缺，超大型油轮（VLCC）运费已飙升至60年来最高水平。原油贸易路线重构正在把运输成本转嫁进全球油价。</div>
-                <div class="news-meta">2026.10.13 · 航运观察</div>
+                <div class="news-title"><span class="title-text">摩根大通三季度营收509亿美元，不及预期</span><span class="arrow">▸</span></div>
+                <div class="news-detail">摩根大通公布三季度调整后营收509亿美元，低于市场预期，固收交易收入意外下滑4%。作为华尔街风向标，小摩的疲软让市场对投行板块财报季多了一分谨慎。</div>
+                <div class="news-meta">2026.10.14 · 华尔街财报</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">A股缩量调整：沪指失守3800点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">周一A股全天震荡走弱，上证指数收跌0.43%报3797.24点，创业板指跌2.61%，深证成指跌2.03%，全市场超4300只股票收绿，成交额缩至1.54万亿元，资金观望情绪上升。</div>
-                <div class="news-meta">2026.10.13 · 市场行情</div>
+                <div class="news-title"><span class="title-text">高盛三季度净营收186.8亿美元：股票交易收入大增72%</span><span class="arrow">▸</span></div>
+                <div class="news-detail">高盛三季度净营收186.8亿美元，股票交易收入同比大增72%，成为最大亮点；固收收入则同比下滑近1%。交易业务的火热，印证了市场波动率放大背景下的机构活跃度。</div>
+                <div class="news-meta">2026.10.14 · 华尔街财报</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">A股“股王”易位：联讯仪器跌超8%，茅台复位</span><span class="arrow">▸</span></div>
-                <div class="news-detail">联讯仪器周一大跌超8%，让出“A股股王”宝座，贵州茅台重新成为A股第一高价股。高位股松动与防御资金回流大市值白马，构成本轮调整的经典注脚。</div>
-                <div class="news-meta">2026.10.13 · 市场行情</div>
+                <div class="news-title"><span class="title-text">苹果市值盘中突破5万亿美元</span><span class="arrow">▸</span></div>
+                <div class="news-detail">受HomeView智能家居中枢发布与Siri AI联动预期推动，苹果股价盘中走强，市值一度突破5万亿美元大关，继续巩固全球市值第一公司的位置。</div>
+                <div class="news-meta">2026.10.14 · 美股</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">港股银行股齐创新高，恒指微涨0.25%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">恒生指数收涨0.25%报24271.2点，工行、建行、中行齐创阶段新高，南向资金净买入26亿港元；恒生科技指数跌0.67%，光模块深度调整。高低切换同样发生在港股。</div>
-                <div class="news-meta">2026.10.13 · 市场行情</div>
+                <div class="news-title"><span class="title-text">全球存储芯片股遭抛售，韩国股市“黑色星期二”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">长鑫科技DRAM架构进展引发连锁反应，韩国、美国存储芯片股集体下跌，AI交易重挫拖累芯片板块，韩国股市遭遇“黑色星期二”，美股存储概念延续跌势。</div>
+                <div class="news-meta">2026.10.14 · 存储行情</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">两融余额2.56万亿元创年内新低</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10月9日两融余额2.56万亿元，较3.03万亿元的年内高点回落近4700亿元；两融交易占A股成交比重跌至7.9%，为年内次低。三季度硬件设备、半导体方向融资盘净流出约229亿元，杠杆资金正从科技赛道退潮。</div>
-                <div class="news-meta">2026.10.13 · 资金观察</div>
+                <div class="news-title"><span class="title-text">茶百道被香港证监会勒令停牌：IPO涉嫌被人为操纵</span><span class="arrow">▸</span></div>
+                <div class="news-detail">香港证监会公告称，茶百道（02555.HK）的首次公开招股可能曾被人为操纵，已指示联交所自10月13日上午9时起暂停其股份交易，调查期间继续停牌。</div>
+                <div class="news-meta">2026.10.14 · 港股监管</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">美股低波动整理，三季度财报季本周开锣</span><span class="arrow">▸</span></div>
-                <div class="news-detail">周一美股分化整理：道指涨0.38%报51850.55点，标普500跌0.06%，纳指跌0.44%。在债市休市的低信号背景下，投资者聚焦本周全面开启的三季度企业财报季与原油供给扰动。</div>
-                <div class="news-meta">2026.10.13 · 海外市场</div>
+                <div class="news-title"><span class="title-text">香港证监会重拳整肃IPO认购操纵：冻结46.6亿港元资产</span><span class="arrow">▸</span></div>
+                <div class="news-detail">香港证监会对两个涉嫌操纵新股认购的集团采取执法行动，向31家券商发出限制通知，冻结与12名个人及公司相关的逾46.6亿港元资产，涉案金额为历年同类案件最大。</div>
+                <div class="news-meta">2026.10.14 · 港股监管</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">港交所披露改革清单：期货夜市、REIT与沪深港通</span><span class="arrow">▸</span></div>
-                <div class="news-detail">港交所集团行政总裁陈翊庭透露未来多项改革重点：延长衍生产品夜市交易时间、优化特专科技公司与创业板上市制度、将REIT纳入沪深港通、人民币股票柜台纳入港股通；延长股票交易时间将先引领市场讨论，寻找各方都能接受的方案。</div>
-                <div class="news-meta">2026.10.13 · 港股改革</div>
+                <div class="news-title"><span class="title-text">歌尔股份终止分拆歌尔微至香港上市</span><span class="arrow">▸</span></div>
+                <div class="news-detail">歌尔股份（002241）公告终止分拆歌尔微至香港联交所主板上市。资本运作节奏生变，市场关注其XR与微电子业务的后续独立融资路径。</div>
+                <div class="news-meta">2026.10.14 · 公司公告</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">香港证监会将修订规则，打击IPO及上市公司失当行为</span><span class="arrow">▸</span></div>
-                <div class="news-detail">香港证监会发表咨询总结，将修订《证券市场上市规则》及《证券及期货条例》，加强打击IPO及上市公司失当行为的工具，相关修订预计2027年第一季度生效。</div>
-                <div class="news-meta">2026.10.13 · 监管动态</div>
+                <div class="news-title"><span class="title-text">微导纳米拟定增募资不超过49.44亿元</span><span class="arrow">▸</span></div>
+                <div class="news-detail">微导纳米（688147）公告拟定增募资不超49.44亿元，投向无锡先进半导体设备产业化升级迭代项目、华中先进半导体设备产业化项目、尖端薄膜沉积技术研发中心及补充流动资金。</div>
+                <div class="news-meta">2026.10.14 · 公司公告</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">2026年诺贝尔经济学奖授予霍尔与伍德福德</span><span class="arrow">▸</span></div>
-                <div class="news-detail">瑞典皇家科学院宣布，2026年诺贝尔经济学奖授予罗伯特·E·霍尔与迈克尔·伍德福德，以表彰他们为宏观经济稳定政策奠定微观经济学基础的贡献。从“该不该干预”到“如何科学干预”，两位学者改写了宏观政策工具箱。</div>
-                <div class="news-meta">2026.10.13 · 诺贝尔奖</div>
+                <div class="news-title"><span class="title-text">A股三季报预告密集披露：有公司最高预增超1500%</span><span class="arrow">▸</span></div>
+                <div class="news-detail">A股三季报业绩预告进入密集披露期，一批公司业绩预喜，其中最高预增幅度超过1500%。财报季结构性行情下，业绩确定性成为资金选股的主线索。</div>
+                <div class="news-meta">2026.10.14 · 财报季</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">中欧就混动汽车、电动汽车磋商达成共识细节公布</span><span class="arrow">▸</span></div>
-                <div class="news-detail">商务部介绍磋商共识：混动案确认尊重事实、非歧视、合规三项基本原则，任何措施不专门针对中国产品，中方配额不低于欧方其他任何进口来源地；电动车案欧方将继续推进企业价格承诺相关程序及复审程序。</div>
-                <div class="news-meta">2026.10.13 · 国际贸易</div>
+                <div class="news-title"><span class="title-text">本周37家公司限售股解禁，合计约426.1亿元</span><span class="arrow">▸</span></div>
+                <div class="news-detail">10月12日至16日，A股共有37家公司限售股陆续解禁，合计市值约426.1亿元。陕西能源（238.56亿元）、首药控股-U（30.08亿元）、大普微-UW（26.73亿元）解禁规模居前。</div>
+                <div class="news-meta">2026.10.14 · 市场动态</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">国内油价15日或迎下调，幅度超0.15元/升</span><span class="arrow">▸</span></div>
-                <div class="news-detail">按现行成品油调价机制，国内油价10月15日或迎下调，预估幅度超0.15元/升，有望终结此前“三连涨”。国际油价高位剧烈波动，让本轮下调窗口显得格外珍贵。</div>
-                <div class="news-meta">2026.10.13 · 能源零售</div>
+                <div class="news-title"><span class="title-text">券商龙虎榜营业部大洗牌：国泰海通总部成交破千亿</span><span class="arrow">▸</span></div>
+                <div class="news-detail">下半年以来，国泰海通证券总部龙虎榜成交额突破千亿元居榜首，高盛、瑞银旗下营业部跻身榜单前四；东方财富“拉萨天团”热度退潮，最高排名仅第八，传统散户大本营影响力下滑。</div>
+                <div class="news-meta">2026.10.14 · 市场动态</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">最高法等四部门发布金融消费者权益保护典型案例</span><span class="arrow">▸</span></div>
-                <div class="news-detail">最高人民法院、人民银行、金融监管总局、证监会联合发布六起金融消费者、投资者合法权益保护典型案例，集中展现金融审判对行业高质量发展的价值引领，规范金融机构经营行为。</div>
-                <div class="news-meta">2026.10.13 · 金融监管</div>
+                <div class="news-title"><span class="title-text">光伏反内卷升级：硅料龙头杭州闭门会酝酿产能限制</span><span class="arrow">▸</span></div>
+                <div class="news-detail">通威股份、协鑫科技等头部光伏企业10月11日在杭州召开会议，酝酿新一轮产能限制落地计划：企业按市场需求自主压产，并建立相互监督机制，对低价倾销、扰乱行业秩序的行为鼓励主动举报。</div>
+                <div class="news-meta">2026.10.14 · 光伏产业</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">前9个月12028户失信主体停止公布，信用修复增长三成</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国家税务总局：今年前9个月税务部门共停止公布失信主体12028户，其中1219户通过缴清税款、滞纳金、罚款共计13.55亿元后申请提前停止公布，信用修复总量同比增长30.93%。</div>
-                <div class="news-meta">2026.10.13 · 税务动态</div>
+                <div class="news-title"><span class="title-text">霍尔木兹海峡两周24艘船遭袭，沙特阿美总部据称被击中起火</span><span class="arrow">▸</span></div>
+                <div class="news-detail">中东能源设施风险陡然升级：胡塞武装将沙特阿美设施列为“合法打击目标”，其总部据称在袭击中被击中起火；霍尔木兹海峡两周内24艘船只遇袭，油价风险溢价持续抬升。</div>
+                <div class="news-meta">2026.10.14 · 大宗商品</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">9月新能源乘用车出口55.8万辆，同比增长163.5%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">9月新能源乘用车厂商出口55.8万辆，同比增长163.5%，出海仍是车市最强引擎。出口退税率调整之后，量增与利增能否同步，将考验车企的海外定价与本地化能力。</div>
-                <div class="news-meta">2026.10.13 · 汽车出海</div>
+                <div class="news-title"><span class="title-text">全球最大铜矿上千名员工或于14日罢工</span><span class="arrow">▸</span></div>
+                <div class="news-detail">全球最大铜矿的上千名员工或于10月14日举行罢工，铜供应链扰动再起。在AI电网需求与新能源用铜量攀升的背景下，任何供给端风吹草动都会放大价格波动。</div>
+                <div class="news-meta">2026.10.14 · 大宗商品</div>
             </div>
             <div class="news-item" data-category="财经">
-                <div class="news-title"><span class="title-text">霸王茶姬奖励店员1350万元上热搜</span><span class="arrow">▸</span></div>
-                <div class="news-detail">霸王茶姬因奖励门店员工1350万元登上热搜。在“低价内卷”与“品质内卷”之间，茶饮品牌开始把员工激励当作品牌叙事的一部分——善待员工本身，正在成为一种资产。</div>
-                <div class="news-meta">2026.10.13 · 消费观察</div>
+                <div class="news-title"><span class="title-text">日本央行倾向本月按兵不动：避免罕见的连续加息</span><span class="arrow">▸</span></div>
+                <div class="news-detail">报道称日本央行官员倾向在本月不再加息，以避免罕见的连续加息操作，12月行动仍在考虑之中。日元汇率与日股随之波动，全球套息交易格局面临重估。</div>
+                <div class="news-meta">2026.10.14 · 海外央行</div>
             </div>
             </div>
         </section>
@@ -317,149 +321,149 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">💡 观点认知<span class="count">29条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">注意力是唯一不能借贷的资源</span><span class="arrow">▸</span></div>
-                <div class="news-detail">注意力不能继承、不能借贷、也不能攒着以后再用。你把注意力放在哪里，哪里就是你的人生。真正拉开差距的从来不是谁更忙、更卷，而是每天高质量的时间有多少。把最好的注意力留给最重要的事，是一切效率方法的内核。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">工具越聪明，人越要做笨功夫</span><span class="arrow">▸</span></div>
+                <div class="news-detail">AI可以替你写、替你算、替你查，但没法替你想清楚“要解决什么问题”。Prompt写得越好的人，往往是对问题本身理解最深的人。工具的进化不降低思考的价值，反而把思考变成唯一的稀缺品。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">复杂优惠是对消费者时间的隐性征税</span><span class="arrow">▸</span></div>
-                <div class="news-detail">今年双十一主流平台不约而同取消凑单、回归直降——这不只是让利，更是把被复杂规则消耗的“算账时间”还给消费者。任何需要计算器才能看懂的价格，都包含着对用户时间征收的税。简化，本身就是一种诚意。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">“知道”的错觉：刷过不等于学会</span><span class="arrow">▸</span></div>
+                <div class="news-detail">短视频三分钟讲完一本书，你有了一种“我懂了”的爽感，但合上手机什么也复述不出来。知道一个结论与掌握一套推理之间，隔着大量的重复练习。收藏夹是最贵的仓库——存进去的那一刻，就再也没有打开过。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">从诺奖看宏观政策：稳定不是不出事，而是有工具</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026年诺贝尔经济学奖表彰“为宏观经济稳定政策奠定微观基础”。它提醒我们：稳定不靠运气，靠的是把政策工具建立在可验证的个体行为之上。国家如此，个人理财亦然——先有机制，再谈结果。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">每天留30分钟“无输入时间”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">通勤听播客、吃饭刷视频、睡前看推文，我们的大脑成了永不关门的仓库。但消化发生在安静里：留30分钟不看任何屏幕，只是走路、发呆或写下想法，你会发现白天输入的东西开始自动归档。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">前沿模型的门槛从来不是性能，而是留存</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Meta用Muse Wonder证明自己挤进第一梯队，但真正的考题是14天后的留存率。产品世界有一条铁律：能留住人的功能才是功能，留不住人的性能只是参数。人也一样，交情看的是第二次见面。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">信息越廉价，筛选越昂贵</span><span class="arrow">▸</span></div>
+                <div class="news-detail">获取信息的成本趋近于零之后，判断信息好坏的成本成了大头。未来最值钱的能力之一，是“信源管理”：知道自己该信谁、什么时候该存疑、什么内容根本不值得点开。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">“贫穷不是社会主义”：一句大白话的分量</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1987年10月13日，邓小平会见卡达尔时说：贫穷不是社会主义，发展太慢也不是社会主义。伟大的判断往往不在复杂的术语，而在对现实的诚实。读历史最大的收获，是看见观念转型如何在一句朴素的话里完成点火。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">把大目标翻译成动词</span><span class="arrow">▸</span></div>
+                <div class="news-detail">“我要变得更好”是愿望，“今晚十点前把方案第二部分写完”才是目标。愿望停留在形容词里，目标必须落到动词上。每次焦虑的时候，问自己一句：下一步的具体动作是什么？</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">股王更替的隐喻：市场永远在为确定性定价</span><span class="arrow">▸</span></div>
-                <div class="news-detail">联讯仪器让出股王宝座，茅台复位。故事每年换主角，规律从不换：热闹会被时间折旧，确定性会被时间加冕。投资如此，职业选择亦如此——选那个十年后依然成立的逻辑，而不是今年最响的声量。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">忙碌是最廉价的成就感</span><span class="arrow">▸</span></div>
+                <div class="news-detail">一天下来很累，但说不出完成了什么——这种忙碌带来的是“我很努力”的错觉，而不是结果的积累。真正的产出往往安静：写完一页、谈妥一件事、修好一个bug。警惕用日程表的满，掩盖产出的空。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">能并行的事就并行：效率的第一性原理</span><span class="arrow">▸</span></div>
-                <div class="news-detail">吸奶器横评里有个朴素结论：双边比单边节省四成时间。生活中很多人却一生都在用“单边模式”工作——串行处理一切请求。把可并行的事并行化（听书配通勤、备菜等炖汤），是普通人最容易获得的效率红利。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">写作是思考的显影液</span><span class="arrow">▸</span></div>
+                <div class="news-detail">脑子里想得再顺，落到纸上就露馅：论点重复、逻辑断裂、例子凑不上。写不清楚，多数时候不是文笔问题，而是没想清楚。把“我想清楚了”的判断标准定为“我能写明白”，会省掉大量自我欺骗。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">出口退税率下调的深意：从“扶上马”到“看真章”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">新能源汽车出口退税率从13%降到9%，第一反应是“利空”，第二反应才更重要：政策在提醒企业，靠退税补贴撑起来的利润不算真本事。温室里的花期是有限的，越早直面全球市场的真实定价，越早长出抗风雨的根系。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">延迟满足的本质是排序，不是压抑</span><span class="arrow">▸</span></div>
+                <div class="news-detail">把欲望全部押后是苦行，把欲望排出先后是策略。问自己“这个快乐现在要，还是换个更大的”比咬牙硬忍更可持续。延迟满足做得好的人，不是没有欲望，而是心里始终有一张排好序的清单。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">AI物理考卷只有26分：别把流畅当成聪明</span><span class="arrow">▸</span></div>
-                <div class="news-detail">视频世界模型物理基准的平均分只有26.61——画面丝滑不代表懂重力。生活同理：表达流畅的人未必想得清楚，PPT漂亮的方案未必逻辑成立。评价任何“智能”，都要看它能否处理没见过的情况。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">少犯傻比多做对更划算</span><span class="arrow">▸</span></div>
+                <div class="news-detail">芒格说他只知道如何避免失败，于是成功自己找上门来。多数人忙着寻找致胜的一步，却对反复亏损的习惯视而不见。砍掉最差的那个决定，收益常常超过做出一个新决定。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">星期二心理学：一周里最沉默的一天</span><span class="arrow">▸</span></div>
-                <div class="news-detail">周一有仪式感，周五有期待感，星期二什么都没有——它是“工作日中的工作日”。但正因没有情绪标签，星期二最适合做难而正确的事：开一个不讨好的头，把拖延最久的任务做掉三分之一。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">情绪是数据，不是指令</span><span class="arrow">▸</span></div>
+                <div class="news-detail">愤怒告诉你边界被侵犯，焦虑告诉你在乎的东西有风险——情绪提供的情报往往真实。但情报不等于命令：可以观察它、核实它，然后决定是否服从它。被情绪推着走的人，把情报当成了上司。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">已读不回的焦虑：响应速度不等于关系质量</span><span class="arrow">▸</span></div>
-                <div class="news-detail">即时通讯让“秒回”成为默认期待，但响应速度从来不等于尊重程度。成年人的世界里，重要的事不会被一条未回的消息耽误；把自我价值绑定在“对方回没回”上，等于把情绪的遥控器交给了别人。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">复利最大的敌人是中断</span><span class="arrow">▸</span></div>
+                <div class="news-detail">健身、读书、定投、学语言，真正的回报曲线都陡在后面，而放弃发生在曲线最平的前段。“停一天没关系”是复利最大的谎言：中断的不只是进度，还有身份认同——从“我是坚持的人”变成“我是曾经坚持的人”。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">二手观念的危害大于二手烟</span><span class="arrow">▸</span></div>
-                <div class="news-detail">许多我们深信不疑的观点，其实是多年前从某篇文章里“继承”来的二手观念，从未亲自验证。它的危害在于穿着“常识”的外衣，让人失去重新检查的动机。定期给自己的信念做一次来源审计，是认知卫生。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">承认“我不知道”是认知的起跑线</span><span class="arrow">▸</span></div>
+                <div class="news-detail">专家的标志不是什么都知道，而是清楚知道自己知识的边界。“我不知道，但我可以去查”这句话，说出来只需要三秒，却能挡掉九成以讹传讹。越是信息过载的时代，坦承无知越显得稀有。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">决策疲劳：幸福的人做更少的选择</span><span class="arrow">▸</span></div>
-                <div class="news-detail">心理学中的决策疲劳提示：每人每天的决策额度有限，花在小决定上的越多，留给大决定的判断力越少。同款衣服、固定菜单、默认选项，本质都是同一策略——把选择预算省下来，花在值得的地方。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">警惕“热搜式思考”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">热搜的逻辑是情绪先于事实到达：你先有了立场，再等证据补票。对抗它的办法很朴素——看到炸裂标题先问三件事：信源是谁？原始事实是什么？有没有相反的证据？三问过后，一半的热闹会自动降温。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">概率思维：世界很少非黑即白</span><span class="arrow">▸</span></div>
-                <div class="news-detail">失败概率10%的方案不等于“不行”，成功率90%的计划也可能失败。概率思维的痛苦在于无法给出确定答案，好处在于不会因一次结果否定整个方法。长期主义者的底层信念只有一条：让大数定律站在自己这边。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">一次只改一个习惯</span><span class="arrow">▸</span></div>
+                <div class="news-detail">新年立十个flag的人，二月的留存率约等于零。习惯的力量来自自动化，而自动化需要注意力资源；同时改三个习惯，等于三条战线抢同一份弹药。先赢一场小的，用胜利喂养下一场。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">能力圈的边界感：知道自己不知道什么</span><span class="arrow">▸</span></div>
-                <div class="news-detail">芒格说要待在“能力圈”里，难的不是待在圈内，而是诚实画出圈的边界。人最容易在“邻接地带”——自己擅长领域外一步的地方——过度自信，在完全不懂的领域反而谦虚。前者亏得最重。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">把“我必须”换成“我选择”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">同样是加班，“我必须加班”带来的是被迫感，“我选择做完这个再走”带来的是掌控感。事情没变，叙事变了，精力损耗就完全不同。被动感是精力最大的黑洞，而改写只需一个动词。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">输出倒逼输入：为什么你该公开写作</span><span class="arrow">▸</span></div>
-                <div class="news-detail">读十本书不如写一篇复盘——输出会暴露输入的所有含糊之处。公开写作的真正价值不在涨粉，而在强迫你把“大概懂了”变成“讲得清楚”。能讲清楚，才算真的懂。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">读书的价值在复用，不在数量</span><span class="arrow">▸</span></div>
+                <div class="news-detail">一年读一百本书晒书单，不如把一本书里的一个方法用到生活里。检验读书成果的问题只有一个：你的某个行为，因为这本书改变了吗？没有行为改变的阅读，只是更体面的消遣。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">情绪劳动：最累的工作往往看不见</span><span class="arrow">▸</span></div>
-                <div class="news-detail">排班表能算出体力劳动，KPI能量化脑力劳动，唯独“情绪劳动”——始终微笑、随时共情、消化他人负面情绪——没有计入任何成本。识别自己和他人的情绪劳动，是职场文明的一小步。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">决策前先问：这事可逆吗</span><span class="arrow">▸</span></div>
+                <div class="news-detail">可逆的决定（试一个新工具、发一篇文章）应该快做，错了成本极低；不可逆的决定（辞职、大额支出）才值得反复斟酌。多数人恰恰相反：小事纠结三天，大事冲动三分钟。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">深度工作正在变成奢侈品</span><span class="arrow">▸</span></div>
-                <div class="news-detail">注意力碎片化让“连续三小时不切换任务”变得稀缺，能深度工作本身成了护城河。好消息是修建成本极低：一部手机调成勿扰、一张干净的桌子、一个番茄钟。别人做不到的事，往往只是因为它不够舒服。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">环境设计胜过自律</span><span class="arrow">▸</span></div>
+                <div class="news-detail">睡前刷手机两小时的人，多数不是意志薄弱，而是手机就放在枕头边。把手机放到客厅，比一万次“我要早点睡”的决心都管用。想改变行为，先改变行为发生的环境——让好行为顺手，让坏行为费劲。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">问题的质量决定答案的质量</span><span class="arrow">▸</span></div>
-                <div class="news-detail">AI时代，答案变得便宜，问题变得昂贵。会提问的人把模型当杠杆，不会提问的人把它当玩具。判断一个问题好不好，有个简单标准：它能否让回答者说出你没想到的角度。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">定期做“注意力审计”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">月底看一眼屏幕使用时间，你会发现自己一个月给了某款App六十个小时——相当于一周半的工作时间。时间流向就是生活走向：审计不必带来愧疚，只需要带来一次重新分配的权力。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">允许自己有“无用”的爱好</span><span class="arrow">▸</span></div>
-                <div class="news-detail">不是所有事都要“有用”：养一盆不开花的绿植、学一门不考试的乐器、读一本不涨工资的书。无用的爱好是对“凡事讲回报”的一次叛逃，它把人从绩效系统里短暂赎出来——恰恰是这种时刻，人在生活，而不只是生存。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">慢一点，反而快</span><span class="arrow">▸</span></div>
+                <div class="news-detail">急着学完的教程记不住，急着做完的项目全是返工。速度的最大成本是纠错：第一遍省下的时间，第二第三遍加倍偿还。把“做完”的标准定高一点，总耗时反而更短——欲速则不达，是效率问题不是态度问题。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
-                <div class="news-title"><span class="title-text">减法比加法更需要勇气</span><span class="arrow">▸</span></div>
-                <div class="news-detail">加法人人会做：报课、买书、立新目标。减法才是稀缺能力：退出一个消耗你的群、停掉一个食之无味的项目、承认一段关系已经结束。成长的下半场，拼的不是能加多少，而是敢减多少。</div>
-                <div class="news-meta">2026.10.13 · 随笔</div>
+                <div class="news-title"><span class="title-text">对抗焦虑最有效的方式是具体</span><span class="arrow">▸</span></div>
+                <div class="news-detail">焦虑喜欢宏大的名词：未来、职业、人生。而这些词没有一个能立刻动手。把“我担心职业发展”翻译成“我这季度要学会一项可展示的技能”，焦虑就从弥漫的雾变成了一块可以搬走的石头。</div>
+                <div class="news-meta">2026.10.14 · 今日随笔</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《思辨与立场》：批判性思维的系统训练手册</span><span class="arrow">▸</span></div>
                 <div class="news-detail">批判性思维不是抬杠，而是对自己的思维进行质量监控。本书提供了一套完整的思维要素与标准清单——清晰性、准确性、相关性、深度、广度、逻辑性，帮你逐层拆解自己与他人的论证。原样推荐语：思维的质量决定生活的质量。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《穷查理宝典》：多元思维模型的格栅</span><span class="arrow">▸</span></div>
                 <div class="news-detail">查理·芒格的智慧合集：用跨学科的思维模型格栅去看世界——心理学误判、复利、能力圈、逆向思考。“反过来想，总是反过来想。”原样推荐语：这是一本可以每年重读一遍的书，每次都有新收获。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《刻意练习》：一万小时定律的正确打开方式</span><span class="arrow">▸</span></div>
                 <div class="news-detail">练习的时长不决定水平，练习的质量才决定。有目标、有反馈、有修正的“刻意练习”才能突破舒适区。原样推荐语：从新手到大师，方法远比天赋重要。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《把时间当作朋友》：时间不可管理，能管理的只有自己</span><span class="arrow">▸</span></div>
                 <div class="news-detail">李笑来的经典之作：一切靠积累，速成绝无可能。开启心智、摆脱焦虑，用正确的方法做正确的事。原样推荐语：时间不会辜负任何一个持续积累的人。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《厌女》：看清弥漫在日常中的结构性偏见</span><span class="arrow">▸</span></div>
                 <div class="news-detail">上野千鹤子剖析男性同性社会性欲望与厌女症的运作机制，帮助读者理解性别偏见如何被社会结构再生产。原样推荐语：读懂这本书，是理解现代性别议题绕不开的一课。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《一间自己的房间》：女性与经济独立的百年宣言</span><span class="arrow">▸</span></div>
                 <div class="news-detail">伍尔夫说：女人要想写小说，必须有钱，再加一间自己的房间。物质条件与精神自由互为表里，近百年过去仍是掷地有声的洞见。原样推荐语：每个独立的灵魂都值得一间自己的房间。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《人类简史》：讲故事的能力如何塑造人类</span><span class="arrow">▸</span></div>
                 <div class="news-detail">赫拉利把认知革命、农业革命、科学革命串成一条叙事主线：智人靠虚构故事组织大规模协作。原样推荐语：理解我们为何相信货币、公司与国家，就理解了人类文明的底层代码。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             <div class="news-item" data-category="观点认知">
                 <div class="news-title"><span class="title-text">荐书｜《乌合之众》：群体心理的百年预言</span><span class="arrow">▸</span></div>
                 <div class="news-detail">勒庞笔下的群体：智商降低、情绪放大、易受暗示。在算法推送与热搜时代重读这本经典，会惊觉其预言力不减反增。原样推荐语：保持独立思考，是对抗群体盲从的唯一武器。</div>
-                <div class="news-meta">2026.10.13 · 荐书</div>
+                <div class="news-meta">2026.10.14 · 荐书</div>
             </div>
             </div>
         </section>
@@ -467,104 +471,104 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">✊ 女性主义<span class="count">20条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">郑钦文中网加冕：生涯首夺WTA1000级冠军</span><span class="arrow">▸</span></div>
-                <div class="news-detail">郑钦文以7比5、6比4击败俄罗斯名将安德烈耶娃，生涯首夺WTA1000级别赛事冠军，成为中网20年首位本土女单冠军。从大满贯亚军到千分赛冠军，她把中国女子网球的天花板又抬高了一格。</div>
-                <div class="news-meta">2026.10.13 · 女性体育</div>
+                <div class="news-title"><span class="title-text">诺贝尔和平奖得主皮莱：1901年以来仅21位女性获此殊荣</span><span class="arrow">▸</span></div>
+                <div class="news-detail">2026年诺贝尔和平奖得主、85岁的纳维·皮莱得知获奖时首先想到的是：自1901年以来，她是仅有的21位女性得主之一。“这本身就说明了针对女性的不平等现象是多么根深蒂固。”她目前在国际法院担任法官。</div>
+                <div class="news-meta">2026.10.14 · 世界女性</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">王曼昱登上女单世界第一</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国际乒联公布最新一期世界排名，王曼昱登上女单世界第一。以技术流打法登顶再次说明：女子竞技的巅峰从来不是靠“稳”守出来的，而是靠不断进化的攻击性打出来的。</div>
-                <div class="news-meta">2026.10.13 · 女性体育</div>
+                <div class="news-title"><span class="title-text">皮莱：战争罪中的性暴力追责力度依然不足</span><span class="arrow">▸</span></div>
+                <div class="news-detail">皮莱指出，即便在今天，战争罪案件中性暴力的追责力度依然不足，部分原因是男性主导的检方认为处理这类指控会分散对“核心问题”的注意力。她表示结束国际法院任期后，将致力于推动这一议题，让性暴力不再被视为“附带损害”。</div>
+                <div class="news-meta">2026.10.14 · 世界女性</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">女子赛事的票房时刻：从“她参赛”到“她主演”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">郑钦文夺冠当晚热搜刷屏、品牌连夜调整投放，王曼昱登顶接棒热度——女子赛事正在证明自己独立的内容价值。当女性运动员成为叙事主角而非陪衬，整个体育产业的招商逻辑都需要重写。</div>
-                <div class="news-meta">2026.10.13 · 女性体育</div>
+                <div class="news-title"><span class="title-text">安妮·卡森获2026年诺贝尔文学奖：正在冰岛“听风”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">瑞典学院将2026年诺贝尔文学奖授予加拿大诗人、散文家安妮·卡森，表彰她“以充满玩味的方式与古典传统对话，为当代文学创造新形式”。得知获奖时，76岁的她正在冰岛“听风”——那里是她现在的家。</div>
+                <div class="news-meta">2026.10.14 · 世界女性</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">背奶妈妈的“15分钟”困境</span><span class="arrow">▸</span></div>
-                <div class="news-detail">吸奶器已经足够安静便携，但写字楼里一间带锁的哺乳室仍是稀缺品。政策的字面要求与执行的缝隙之间，是无数职场妈妈在洗手间与储物间里的15分钟。硬件的问题要用制度解决，而不是靠妈妈的忍耐力解决。</div>
-                <div class="news-meta">2026.10.13 · 职场女性</div>
+                <div class="news-title"><span class="title-text">午休时间的希腊语课：一位女诗人的一生转折点</span><span class="arrow">▸</span></div>
+                <div class="news-detail">高中没有希腊语课，拉丁语老师便在午休时间带卡森读萨福。“那对我来说是震动，是一种启示。”从多伦多大学的古典学博士到普林斯顿、麦吉尔执教，再到定居冰岛写诗，卡森的路径证明：一个女孩的一生，可能被一件很小的事拐向辽阔。</div>
+                <div class="news-meta">2026.10.14 · 世界女性</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">当AI开始批量生产“女性成长”爆文</span><span class="arrow">▸</span></div>
-                <div class="news-detail">AI写作工具大量参与自媒体生产，“女性觉醒”“婚姻真相”类内容高度模板化。值得警惕的是：算法偏爱的女性形象，往往是流量验证过的刻板印象——必须“赢”、必须“清醒”、必须证明给谁看。真实的女性生活比标签复杂得多。</div>
-                <div class="news-meta">2026.10.13 · 文化观察</div>
+                <div class="news-title"><span class="title-text">国际女童日：UNESCO女童和妇女教育奖在巴黎颁出</span><span class="arrow">▸</span></div>
+                <div class="news-detail">10月11日国际女童日前夕，2026年联合国教科文组织女童和妇女教育奖颁奖仪式在巴黎举行，摩洛哥“翱翔项目”与国际关怀组织秘鲁“女孩机遇”项目获奖。该奖由中国政府提议并资助设立，旨在表彰推动女童和妇女教育的杰出创新贡献。</div>
+                <div class="news-meta">2026.10.14 · 女童教育</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">月经羞耻的消解：从黑色塑料袋到货架正名</span><span class="arrow">▸</span></div>
-                <div class="news-detail">越来越多商超把卫生巾从“黑色塑料袋”里解放出来，电商详情页开始出现“月经”二字而非无穷无尽的谐音替代。命名即权力：当一个正常的生理现象不再需要暗语，围绕它的禁忌与税负才更容易被摆上桌面讨论。</div>
-                <div class="news-meta">2026.10.13 · 社会观察</div>
+                <div class="news-title"><span class="title-text">“春蕾计划”经验被世界引用：教育的连续性需要全面视角</span><span class="arrow">▸</span></div>
+                <div class="news-detail">秘鲁“女孩机遇”项目负责人表示，中国“春蕾计划”（2023年获奖）不仅支持低收入家庭女孩求学，还将数字技能、科学活动、心理健康支持纳入其中，“要确保教育的连续性，就必须以全面视角看待青少年的发展需求”。</div>
+                <div class="news-meta">2026.10.14 · 女童教育</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">家庭照料劳动：GDP看不见的那一半</span><span class="arrow">▸</span></div>
-                <div class="news-detail">如果把做饭、接送、护理、辅导功课按市场价折算，家庭照料创造的隐性价值惊人——其中大部分由女性无偿承担。让看不见的劳动被看见，是讨论“女性经济独立”绕不开的另一半账本。</div>
-                <div class="news-meta">2026.10.13 · 社会观察</div>
+                <div class="news-title"><span class="title-text">人民日报点赞“四无婚礼”：无接亲无婚车无司仪无跟妆</span><span class="arrow">▸</span></div>
+                <div class="news-detail">宁波95后新娘的“四无婚礼”刷屏：新人自驾到场，父亲上台讲41秒“吃好喝好”直接开席。2026年中央一号文件明确整治农村高额彩礼、培育简约婚俗文化。评论指出：移的是攀比和折腾，易的是真诚和自在——把排场省下来，把心意端上桌。</div>
+                <div class="news-meta">2026.10.14 · 社会观察</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">独居女性的“安全税”，应该由谁买单</span><span class="arrow">▸</span></div>
-                <div class="news-detail">防狼警报器、可视门铃、“假装家里有男人”的话术——独居女性为安全感支付着持续成本。公共照明、巡逻响应、社区治理每改善一分，女性的“自我安防开支”就能省下一分。安全不该只是私人课题。</div>
-                <div class="news-meta">2026.10.13 · 社会观察</div>
+                <div class="news-title"><span class="title-text">性别议题的公共讨论正在“去情绪化”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">从社交平台的热词变迁看，“女权”相关的讨论正从站队互撕转向方法论：同工同酬怎么核算、育儿假怎么设计、家务劳动怎么显性化。情绪宣泄让位于具体问题的解决，是这场讨论走向成熟的标志。</div>
+                <div class="news-meta">2026.10.14 · 社会观察</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">全职妈妈重返职场的“简历黑洞”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">三年育儿空窗期成为简历上最刺眼的黑洞，HR一句“这几年你做了什么”背后，是对照料经验的系统性低估。项目管理、预算控制、多线程协调——育儿日常里全是可迁移技能，缺的只是把它翻译成职场语言的人。</div>
-                <div class="news-meta">2026.10.13 · 职场女性</div>
+                <div class="news-title"><span class="title-text">职场妈妈的“第二轮班”：下班后的隐形加班何时被看见</span><span class="arrow">▸</span></div>
+                <div class="news-detail">社会学中的“第二轮班”描述的是：女性下班后回家接手育儿与家务，等于再上一个班。当远程办公普及、工作与家庭边界进一步模糊，这轮班的时间反而更难统计。被看见，是被分担的第一步。</div>
+                <div class="news-meta">2026.10.14 · 职场</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">中年女演员的困境，是中年女性的镜子</span><span class="arrow">▸</span></div>
-                <div class="news-detail">影视市场长期只给女演员两种角色：年轻恋人或刻薄母亲，“中年女性”作为叙事主体长期缺席。近年一批以40+女性为主角的作品试水成功：屏幕形象是社会预期的投影——让她做主角，而不只是别人的妈妈。</div>
-                <div class="news-meta">2026.10.13 · 文化观察</div>
+                <div class="news-title"><span class="title-text">“母职惩罚”的量化事实：生育后女性收入为何下滑</span><span class="arrow">▸</span></div>
+                <div class="news-detail">多项劳动经济学研究显示，生育后女性收入出现明显下滑且恢复缓慢，而父亲的收入几乎不受影响——这被称为“母职惩罚”。它背后是晋升中断、工时压缩与雇主隐性筛选的叠加。看清数字，是讨论解决方案的前提。</div>
+                <div class="news-meta">2026.10.14 · 职场</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">“默认主妇”假设：家务分工里的隐藏设定</span><span class="arrow">▸</span></div>
-                <div class="news-detail">研究反复显示：即使双方都全职工作，家务与育儿的“兜底责任”仍默认落在女性头上——学校默认打给妈妈，老人默认由女儿照料。看见“默认设置”，是改写它的第一步。</div>
-                <div class="news-meta">2026.10.13 · 家庭观察</div>
+                <div class="news-title"><span class="title-text">女性疼痛为何更常被归因于“情绪”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">医学界近年正视一个问题：同等疼痛主诉下，女性更晚被安排检查、更常被建议抗焦虑而非止痛。历史临床试验以男性为默认样本，导致许多疾病的女性症状图谱长期缺失。健康研究中的性别视角，正在成为新共识。</div>
+                <div class="news-meta">2026.10.14 · 女性健康</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">女性科研人员的“剪刀曲线”：越往上越少</span><span class="arrow">▸</span></div>
-                <div class="news-detail">从本科到院士，女性比例逐层递减，形成著名的剪刀曲线。评审、晋升、经费申请的每个环节都可能存在无意识偏差；扩大评审池、匿名化评估、为生育窗口延长青年项目年龄线，都是被验证过的有效修补。</div>
-                <div class="news-meta">2026.10.13 · 科技观察</div>
+                <div class="news-title"><span class="title-text">家庭大额消费决策中，女性的话语权在上升</span><span class="arrow">▸</span></div>
+                <div class="news-detail">从购车、置业到保险配置，市场调研显示中国家庭大额消费中女性主导或共同决策的比例持续上升。越来越多品牌把“她经济”从营销口号变成产品逻辑——按女性真实使用场景设计，而不是把产品涂成粉色。</div>
+                <div class="news-meta">2026.10.14 · 消费观察</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">生育支持政策：真金白银之外还要“时间正义”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">各地生育补贴与延长产假的政策密集出台，但只给假不给人的支持可能反向伤害女性就业——企业用脚投票。男性育儿假的强制化、生育成本的社会化分摊，才能让“支持生育”不变成“筛选女性”。</div>
-                <div class="news-meta">2026.10.13 · 政策观察</div>
+                <div class="news-title"><span class="title-text">女子体育的商业价值拐点</span><span class="arrow">▸</span></div>
+                <div class="news-detail">全球范围内，女子足球、女篮的上座率与转播权价值连年上涨，头部联赛的赞助合同首次逼近男子联赛量级。观众用脚投票证明：不是没人看女子比赛，而是过去没人转播。</div>
+                <div class="news-meta">2026.10.14 · 体育</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">重读《第二性》：为什么它仍不过时</span><span class="arrow">▸</span></div>
-                <div class="news-detail">波伏瓦那句“女人不是天生的，而是被塑造成的”诞生已近百年，但“社会性别是一种被规训的建构”依然是理解当下议题最锋利的工具。读经典不是为了膜拜，而是为了在每天的热搜争论里找到更深的坐标系。</div>
-                <div class="news-meta">2026.10.13 · 阅读</div>
+                <div class="news-title"><span class="title-text">重读伍尔夫：今天的“房间”是账户与时间</span><span class="arrow">▸</span></div>
+                <div class="news-detail">一百年前伍尔夫说，女人写作需要钱和一间自己的房间。今天房间的形态变了：一个独立的银行账户、一段不被打扰的时间、一份属于自己的社会保障。经济独立的具体形态，就是这些具体的数字。</div>
+                <div class="news-meta">2026.10.14 · 阅读</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">女性视角的城市：一盏路灯的正义</span><span class="arrow">▸</span></div>
-                <div class="news-detail">当城市规划以“通勤男性”为默认样本，夜晚照明、公交末班车、公厕分布都会成为女性深夜出行的隐性关卡。倡导“性别响应式规划”的城市在增加：先问“谁会在天黑后使用这个空间”，再画图纸。</div>
-                <div class="news-meta">2026.10.13 · 城市观察</div>
+                <div class="news-title"><span class="title-text">STEM里的女孩：从“学不好理科”的偏见到数据反驳</span><span class="arrow">▸</span></div>
+                <div class="news-detail">近年物理竞赛、信息学奥赛与工科招生中女生比例持续上升，研究一再证明数学与工程能力的性别差异远小于社会默认值。“女孩学不好理科”更多是一种自我实现的预言：信的人多了，选的人就少了。</div>
+                <div class="news-meta">2026.10.14 · 教育</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">身体自主：从“好女不过百”到力量训练热</span><span class="arrow">▸</span></div>
-                <div class="news-detail">健身房里练力量的女性肉眼可见地变多——从追求“瘦”到追求“强”，审美转向的背后是身体观念的转向：身体不是给他人观看的展品，而是自己使用的工具。</div>
-                <div class="news-meta">2026.10.13 · 身体自主</div>
+                <div class="news-title"><span class="title-text">家务劳动值多少钱：全职主妇的劳动价值核算之争</span><span class="arrow">▸</span></div>
+                <div class="news-detail">若按市场价折算保洁、育儿、做饭、司机等工时，全职主妇的“隐形工资”并不低。争论的核心不在数字，而在承认：家庭内部的无偿劳动是真实的经济产出，理应体现在离婚补偿、保险与社会评价之中。</div>
+                <div class="news-meta">2026.10.14 · 社会观察</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">东亚女性主义阅读热：愤怒之后的实践</span><span class="arrow">▸</span></div>
-                <div class="news-detail">从《厌女》到《从零开始的女性主义》，相关书籍持续霸榜，说明东亚语境下的女性主义讨论已经从“命名愤怒”走向“如何生活”：职场谈判、婚内分工、母女和解——理论落地的每一件小事，都算数。</div>
-                <div class="news-meta">2026.10.13 · 阅读观察</div>
+                <div class="news-title"><span class="title-text">MeToo之后：企业性骚扰调查流程的制度化</span><span class="arrow">▸</span></div>
+                <div class="news-detail">越来越多企业把性骚扰投诉从“找HR谈心”升级为标准流程：独立调查通道、明确时限、保密义务与报复禁令。制度的意义不是怀疑谁，而是让每一个举报都有可预期的处理路径。</div>
+                <div class="news-meta">2026.10.14 · 职场</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">“谁带孩子”是婚姻里最大的隐形谈判</span><span class="arrow">▸</span></div>
-                <div class="news-detail">双职工家庭里，育儿时间分配是比家务更高烈度的博弈——因为它涉及职业中断风险的分摊。公平不是五五开计时，而是双方都不被迫成为“唯一可牺牲的那个”。</div>
-                <div class="news-meta">2026.10.13 · 家庭观察</div>
+                <div class="news-title"><span class="title-text">性别平等教育，男孩同样是受益者</span><span class="arrow">▸</span></div>
+                <div class="news-detail">“男儿有泪不轻弹”“男人必须扛起一切”——刻板性别脚本同样在规训男孩的情绪表达与职业选择。性别平等教育的目标不是让某一方让利，而是把两性都从预设剧本里解放出来。</div>
+                <div class="news-meta">2026.10.14 · 教育</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">女性养老：更长的寿命，更薄的积蓄</span><span class="arrow">▸</span></div>
-                <div class="news-detail">女性预期寿命更长，但因职业中断与非正规就业比例高，养老金积累普遍更薄——长寿反而带来更高的老年贫困风险。个人养老规划对女性而言不是锦上添花，是结构性必需。</div>
-                <div class="news-meta">2026.10.13 · 财务观察</div>
+                <div class="news-title"><span class="title-text">“她不适合做领导”的偏见为何顽固</span><span class="arrow">▸</span></div>
+                <div class="news-detail">研究显示：同样的果断决策，在男性身上被评价为“有魄力”，在女性身上更常被评价为“强势难处”。领导力评价的双重标准，是女性晋升天花板最难量化却最常被体验到的一层。</div>
+                <div class="news-meta">2026.10.14 · 职场</div>
             </div>
             <div class="news-item" data-category="女性主义">
-                <div class="news-title"><span class="title-text">让女孩先“敢赢”：竞技体育的性别一课</span><span class="arrow">▸</span></div>
-                <div class="news-detail">郑钦文们的价值不止奖牌：她们让下一代女孩看见“竞争”不是男性专属词，好胜心、侵略性、胜负欲都可以理直气壮。当“赢”变成一种被允许的欲望，人生选项才真正打开。</div>
-                <div class="news-meta">2026.10.13 · 女性体育</div>
+                <div class="news-title"><span class="title-text">从“女孩要有女孩样”到“女孩可以有各种样”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">一代人之间，养育观念悄然换轴：玩具区不再严格分粉色蓝色，女孩踢球、玩机器人被视作平常而非例外。观念的变化不喧哗，但它决定了二十年后职场与家庭里，怎样的人会觉得自己“本来就可以”。</div>
+                <div class="news-meta">2026.10.14 · 社会观察</div>
             </div>
             </div>
         </section>
@@ -572,109 +576,109 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">📰 新闻<span class="count">21条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">中巴新建交50周年，两国领导人互致贺电</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10月12日，国家主席习近平同巴布亚新几内亚独立国总督达达埃互致贺电，庆祝两国建交50周年；国务院总理李强同巴新总理马拉佩互致贺电。</div>
-                <div class="news-meta">2026.10.13 · 要闻</div>
+                <div class="news-title"><span class="title-text">黄奇帆涉嫌严重违纪违法，接受审查调查</span><span class="arrow">▸</span></div>
+                <div class="news-detail">重庆市委原副书记、市政府原市长黄奇帆涉嫌严重违纪违法，目前正接受中央纪委国家监委纪律审查和监察调查。</div>
+                <div class="news-meta">2026.10.14 · 时政</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">习近平致电祝贺马迪塞就任爱沙尼亚总统</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10月12日，国家主席习近平致电于勒·马迪塞，祝贺她就任爱沙尼亚共和国总统。</div>
-                <div class="news-meta">2026.10.13 · 要闻</div>
+                <div class="news-title"><span class="title-text">缅北魏家犯罪集团系列案一审宣判：3人死刑、58人获刑</span><span class="arrow">▸</span></div>
+                <div class="news-detail">福建省泉州市中级人民法院和南安市人民法院一审公开宣判魏家犯罪集团系列案，魏怀仁、陈大卫、廖景芳等3人被判处死刑，魏青涛等58人被判处无期徒刑至三年三个月不等有期徒刑。</div>
+                <div class="news-meta">2026.10.14 · 法治</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">第三轮第七批中央生态环保督察全面启动</span><span class="arrow">▸</span></div>
-                <div class="news-detail">经党中央、国务院批准，第三轮第七批中央生态环境保护督察全面启动：2个例行督察组分别进驻住房城乡建设部、农业农村部，为期1个月；3个专项督察组对湖北、湖南、广西、重庆、四川、贵州、云南7省区市开展溶洞天坑山谷污染专项督察。</div>
-                <div class="news-meta">2026.10.13 · 时政</div>
+                <div class="news-title"><span class="title-text">雅思今日起全面恢复考试，增设免费专场</span><span class="arrow">▸</span></div>
+                <div class="news-detail">继10月10日至13日连续停考后，英国文化教育协会宣布10月14日起全面恢复雅思考试，并于10月19日至20日为受影响考生增设两天免费专场，异地考生可报销交通住宿费用。此次连续技术故障暴露了考试的应急体系空白。</div>
+                <div class="news-meta">2026.10.14 · 教育</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">中央政法委印发意见：从严查处危害食品安全犯罪</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中央政法委印发《关于依法从严查处危害食品安全违法犯罪的意见》，要求聚焦肉制品、校园食品、保健食品等重点领域，以及生产加工、网络销售、终端餐饮、食品进口等重点环节，全链条打击食品安全犯罪。</div>
-                <div class="news-meta">2026.10.13 · 法治</div>
+                <div class="news-title"><span class="title-text">2027年度国考报名今日8时启动：计划招录3.57万人</span><span class="arrow">▸</span></div>
+                <div class="news-detail">中央机关及其直属机构2027年度考试录用公务员报名10月14日8:00至10月24日18:00进行，笔试11月29日举行。今年报考者需通过电子社保卡等完成实名实人认证，以打击防范“公考围岗”。</div>
+                <div class="news-meta">2026.10.14 · 时政</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">第二期“双高计划”遴选220所职业院校</span><span class="arrow">▸</span></div>
-                <div class="news-detail">教育部已启动实施第二期“双高建设计划”，遴选出220所职业院校，打造技能型高校“国家队”。我国已建成世界最大规模且有质量的现代职业教育体系，全国职校专业点超12万个，覆盖全部41个工业大类。</div>
-                <div class="news-meta">2026.10.13 · 教育</div>
+                <div class="news-title"><span class="title-text">男子在悬空寺古建筑横梁做引体向上，警方立案调查</span><span class="arrow">▸</span></div>
+                <div class="news-detail">针对网传男子在悬空寺古建筑横梁上做引体向上，山西恒山风景名胜区管理中心发布通报：公安机关已立案调查，将严肃处理。文保建筑不是健身器材，流量不该以破坏为代价。</div>
+                <div class="news-meta">2026.10.14 · 社会</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">首个国际职业教育标准《北京协议》即将发布</span><span class="arrow">▸</span></div>
-                <div class="news-detail">由我国牵头推动研制形成的首个国际职业教育标准《北京协议》即将发布，涵盖价值、体系、治理、保障、行动等部分，旨在推动建立全球质量认证与互认机制，促进各国职业教育标准和职业资格互通互认。</div>
-                <div class="news-meta">2026.10.13 · 教育</div>
+                <div class="news-title"><span class="title-text">中央气象台：贵州云南等地局地有暴雨</span><span class="arrow">▸</span></div>
+                <div class="news-detail">预计10月13日20时至14日20时，重庆南部、湖北西南部、湖南西北部、贵州中北部、云南东部和西部等地部分地区有中到大雨，其中贵州中部、云南东部等地局地有暴雨，出行注意防范。</div>
+                <div class="news-meta">2026.10.14 · 民生</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">中方宣布对伯利兹、巴拉圭相关部长采取反制措施</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中方决定对伯利兹外交、外贸、教育、文化、科学和技术部长丰塞卡，以及巴拉圭通信和技术部长比利亚特采取反制措施。</div>
-                <div class="news-meta">2026.10.13 · 外交</div>
+                <div class="news-title"><span class="title-text">天津迎秋后“最强降雨”</span><span class="arrow">▸</span></div>
+                <div class="news-detail">入秋以来最强降雨过程影响天津，昼夜温差拉大。气象部门提醒，换季时节高血压患者血压易波动，晨起头晕、颈部发紧需重视，切不可自行增减药物。</div>
+                <div class="news-meta">2026.10.14 · 民生</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">国资委原副部长级干部潘良涉嫌受贿案被提起公诉</span><span class="arrow">▸</span></div>
-                <div class="news-detail">检察机关依法对国务院国有资产监督管理委员会原副部长级干部潘良涉嫌受贿、利用影响力受贿案提起公诉。</div>
-                <div class="news-meta">2026.10.13 · 法治</div>
+                <div class="news-title"><span class="title-text">法国数百家超市遭网络攻击，生鲜冷冻产品大量损毁</span><span class="arrow">▸</span></div>
+                <div class="news-detail">据法国媒体12日报道，11日夜间法国数百家超市遭到网络攻击，导致大量生鲜及冷冻产品被毁，全国范围损失可能高达数百万欧元。关键基础设施与零售系统的网络安全再敲警钟。</div>
+                <div class="news-meta">2026.10.14 · 国际</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">江西政协原副主席胡幼桃受贿案一审获刑13年</span><span class="arrow">▸</span></div>
-                <div class="news-detail">12日，江西省政协原党组成员、副主席胡幼桃受贿案一审宣判，对被告人胡幼桃以受贿罪判处有期徒刑十三年。</div>
-                <div class="news-meta">2026.10.13 · 法治</div>
+                <div class="news-title"><span class="title-text">巴基斯坦一客运列车脱轨，致5死30伤</span><span class="arrow">▸</span></div>
+                <div class="news-detail">巴基斯坦东部旁遮普省发生客运列车脱轨事故，造成5人死亡、30人受伤，救援工作正在进行。</div>
+                <div class="news-meta">2026.10.14 · 国际</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">多地通报整改“荒废农业大棚”曝光问题</span><span class="arrow">▸</span></div>
-                <div class="news-detail">针对总台《财经调查》曝光的多地以扶贫、惠农名义建成的设施农业大棚长期荒废问题，内蒙古通辽市、山东枣庄市、吉林白城市和松原市等地12日陆续发布通报，组织全面核查并开展专项整改整治。</div>
-                <div class="news-meta">2026.10.13 · 监督</div>
+                <div class="news-title"><span class="title-text">韩国发生持刀伤人事件致8人受伤，嫌犯被捕</span><span class="arrow">▸</span></div>
+                <div class="news-detail">韩国发生持刀伤人事件，造成8人受伤，涉嫌行凶的男子已被警方逮捕，案件动机正在调查中。</div>
+                <div class="news-meta">2026.10.14 · 国际</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">沙特利雅得机场遭袭已致至少13死300余伤</span><span class="arrow">▸</span></div>
-                <div class="news-detail">沙特12日发布多段视频，显示首都利雅得哈立德国王国际机场10日下午遭袭瞬间，目前已致至少13人死亡、300多人受伤；11日该机场再次遭袭，致1人死亡、11人受伤。</div>
-                <div class="news-meta">2026.10.13 · 国际</div>
+                <div class="news-title"><span class="title-text">莫斯科一夜遭417架无人机袭击</span><span class="arrow">▸</span></div>
+                <div class="news-detail">莫斯科一夜之间遭到417架无人机袭击，俄军同时对乌克兰境内目标实施打击，特朗普力推的“能源停火”仍未落地。</div>
+                <div class="news-meta">2026.10.14 · 国际</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">欧盟扩充对俄军工制裁名单至约1600个个人和实体</span><span class="arrow">▸</span></div>
-                <div class="news-detail">欧盟外交与安全政策高级代表卡拉斯12日表示，欧盟成员国外长会当天决定针对俄罗斯军工产业扩充制裁名单，涉及约1600个个人和实体。</div>
-                <div class="news-meta">2026.10.13 · 国际</div>
+                <div class="news-title"><span class="title-text">我国设立首个布氏鲸重要栖息地：北海涠洲岛</span><span class="arrow">▸</span></div>
+                <div class="news-detail">农业农村部发布公告，设立广西北海涠洲岛布氏鲸重要栖息地，这是我国设立的首个布氏鲸栖息地，海洋珍稀物种保护再进一步。</div>
+                <div class="news-meta">2026.10.14 · 生态</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">埃及总统塞西访问印尼，重申支持巴勒斯坦建国</span><span class="arrow">▸</span></div>
-                <div class="news-detail">埃及总统塞西访问印度尼西亚，两国重申支持巴勒斯坦建国，中东外交斡旋进入密集期。</div>
-                <div class="news-meta">2026.10.13 · 国际</div>
+                <div class="news-title"><span class="title-text">商务部就民航两用物项出口凭证管理办法征求意见</span><span class="arrow">▸</span></div>
+                <div class="news-detail">商务部就《民用航空领域相关两用物项出口凭证管理办法》公开征求意见，拟规定民航企业出口有关物项用于维修、维护、租赁等合理用途时，无需逐单申请许可证件，登记填报信息后自动获得出口凭证。</div>
+                <div class="news-meta">2026.10.14 · 政策</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">美方称已接受伊方部分条件但“不充分”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">据外媒报道，围绕近期局势，美国已接受伊朗所提部分条件，但认为“不充分”。中东谈判窗口仍在摇晃，油价与航运市场随每一条表态起伏。</div>
-                <div class="news-meta">2026.10.13 · 国际</div>
+                <div class="news-title"><span class="title-text">全国卫生与健康大会召开</span><span class="arrow">▸</span></div>
+                <div class="news-detail">全国卫生与健康大会召开，健康中国战略的推进方向进一步明确。此前数据显示，前8个月卫生健康领域减税降费已超2400亿元。</div>
+                <div class="news-meta">2026.10.14 · 时政</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">冷空气来袭：北方多地降温4-6℃局地8-10℃</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中央气象台预计，12日夜间至13日，内蒙古东部、东北地区大部、华北北部和东部、黄淮东部等地将有4-6℃降温，局地8-10℃；山东北部、湖北南部、重庆中部、云南东部等地局地有大雨。</div>
-                <div class="news-meta">2026.10.13 · 天气</div>
+                <div class="news-title"><span class="title-text">珠海航展定档12月7日至13日</span><span class="arrow">▸</span></div>
+                <div class="news-detail">第十六届中国航展将于2026年12月7日至13日在广东珠海举办，展览规模再创新高，公众期待值拉满。</div>
+                <div class="news-meta">2026.10.14 · 展会</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">多地公开销毁走私卷烟1.88亿支</span><span class="arrow">▸</span></div>
-                <div class="news-detail">公安部通报：中国多地公开销毁走私卷烟1.88亿支、烟丝2.7吨，持续高压打击涉烟走私产业链。</div>
-                <div class="news-meta">2026.10.13 · 法治</div>
+                <div class="news-title"><span class="title-text">中南大学原校长张尧学被提起公诉</span><span class="arrow">▸</span></div>
+                <div class="news-detail">中南大学原校长张尧学涉嫌受贿案被提起公诉，案件进入司法程序。</div>
+                <div class="news-meta">2026.10.14 · 法治</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">自然资源部部署第二届节约集约示范县创建</span><span class="arrow">▸</span></div>
-                <div class="news-detail">自然资源部部署开展第二届自然资源节约集约示范县（市）创建工作。国家林草局同步介绍：首批国家公园生态效益评估指标优秀比例达75%，水源涵养、固碳释氧等核心生态服务功能有效提升。</div>
-                <div class="news-meta">2026.10.13 · 生态</div>
+                <div class="news-title"><span class="title-text">知名珠宝品牌实控人夫妇失联</span><span class="arrow">▸</span></div>
+                <div class="news-detail">新三板挂牌公司千叶珠宝公告，实控人、董事长林明杰及其妻子高晓松失联，公司经营状况与中小股东权益引发关注。</div>
+                <div class="news-meta">2026.10.14 · 财经</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">鄱阳湖长江江豚密度居长江流域之首</span><span class="arrow">▸</span></div>
-                <div class="news-detail">监测数据显示，鄱阳湖长江江豚密度居长江流域之首，“微笑天使”种群稳定向好，长江大保护成效在水生物种层面持续显现。</div>
-                <div class="news-meta">2026.10.13 · 生态</div>
+                <div class="news-title"><span class="title-text">著名雕塑家董祖诒去世：曾设计金鸡奖首代奖杯</span><span class="arrow">▸</span></div>
+                <div class="news-detail">中央美术学院教授、著名雕塑家董祖诒10月11日在北京去世，享年92岁。他设计了中国电影金鸡奖首代奖杯，一生致力于美术教育。</div>
+                <div class="news-meta">2026.10.14 · 文化</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">我国已在32个国家共建38家鲁班工坊</span><span class="arrow">▸</span></div>
-                <div class="news-detail">教育部：我国已在32个国家共建38家鲁班工坊，中国职业教育标准正沿着国际合作的轨道持续走出去。</div>
-                <div class="news-meta">2026.10.13 · 教育</div>
+                <div class="news-title"><span class="title-text">透明质酸产业化开创者郭学平逝世，享年61岁</span><span class="arrow">▸</span></div>
+                <div class="news-detail">华熙唐安生物科技董事长、原华熙生物副总经理兼首席科学家郭学平因病于10月13日逝世，享年61岁。他是我国透明质酸发酵生产技术和产业化的开创者。</div>
+                <div class="news-meta">2026.10.14 · 产业</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">人社部门辟谣“社保卡金卡”：无法付费升级</span><span class="arrow">▸</span></div>
-                <div class="news-detail">针对网上流传的“金色社保卡可提高医保报销待遇、领补贴”说法，人社部门明确辟谣：现行社保卡没有官方金卡、银卡分类，个人无法付费升级卡片等级；谨防以“办金卡”“发补贴”为名索取个人信息、诱导转账的诈骗。</div>
-                <div class="news-meta">2026.10.13 · 辟谣</div>
+                <div class="news-title"><span class="title-text">洗衣凝珠爆裂伤角膜上热搜：溅眼需冲洗15分钟</span><span class="arrow">▸</span></div>
+                <div class="news-detail">有网友称洗衣凝珠炸裂后洗涤剂溅入眼睛，就医发现角膜被腐蚀一小块。数据显示凝珠中高浓度表面活性剂与碱性助剂占比可达80%以上。专家提醒：溅入眼睛后用流动冷水持续冲洗至少15分钟，不要揉眼，尽快就医。</div>
+                <div class="news-meta">2026.10.14 · 消费安全</div>
             </div>
             <div class="news-item" data-category="新闻">
-                <div class="news-title"><span class="title-text">市场监管总局批准发布88项国家标准样品</span><span class="arrow">▸</span></div>
-                <div class="news-detail">市场监管总局批准发布88项国家标准样品，覆盖制造业、农业等领域，作为实物形态的国家标准，为制造业提质增效与农业高质量发展提供关键技术支撑。</div>
-                <div class="news-meta">2026.10.13 · 标准</div>
+                <div class="news-title"><span class="title-text">11月1日起：单位欠缴社保最高罚3倍</span><span class="arrow">▸</span></div>
+                <div class="news-detail">11月1日起，社会保险费正式纳入全国统一税务行政处罚裁量体系，单位欠缴社保最高可处3倍罚款。同日起，全国加油站全面推广“交易即开票”，支付后自动开具数电发票。</div>
+                <div class="news-meta">2026.10.14 · 政策</div>
             </div>
             </div>
         </section>
@@ -682,109 +686,109 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">📜 历史<span class="count">21条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1949.10.13：中国少年儿童队（少先队前身）成立</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1949年10月13日，中国少年儿童队成立；1953年6月改名为中国少年先锋队。建队日由此定格在10月13日，“红领巾”成为几代人共同的少年记忆。</div>
-                <div class="news-meta">2026.10.13 · 建队日</div>
+                <div class="news-title"><span class="title-text">1066年10月14日：黑斯廷斯战役改写英语世界</span><span class="arrow">▸</span></div>
+                <div class="news-detail">诺曼底公爵威廉在黑斯廷斯击败哈罗德二世的盎格鲁-撒克逊军队，英格兰从此进入诺曼王朝。法语词汇大量涌入英语，封建制度重塑岛国社会——一场战役的胜负，决定了此后千年一门语言的模样。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">2019.10.13：少先队建队70周年贺信</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2019年10月13日，习近平致信祝贺中国少年先锋队建队70周年，强调少先队应是少年儿童学习中国特色社会主义和共产主义的学校，勉励新时代少先队员“从小学先锋、长大做先锋”。</div>
-                <div class="news-meta">2026.10.13 · 建队日</div>
+                <div class="news-title"><span class="title-text">1952年10月14日：上甘岭战役打响</span><span class="arrow">▸</span></div>
+                <div class="news-detail">志愿军在上甘岭地区开始长达43天的阵地攻防。在不足4平方公里的两个高地上，火力密度创战争史纪录，坑道战成为坚守的关键。上甘岭从此成为“以弱制强、寸土不让”的精神代名词。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1972.10.13：湘黔铁路全线通车</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1972年10月13日，湘黔铁路全线通车，西南地区由此多了一条通道，大大缩短了西南与湖南以至华东的时空距离。在大山里凿出的这条铁路，是交通史上“愚公移山”的重要一页。</div>
-                <div class="news-meta">2026.10.13 · 今日史事</div>
+                <div class="news-title"><span class="title-text">1947年10月14日：人类首次突破音障</span><span class="arrow">▸</span></div>
+                <div class="news-detail">美国飞行员查克·叶格驾驶贝尔X-1火箭飞机在加州上空突破音速，人类首次实现超音速飞行。有趣的是，这位创造历史的试飞员此前刚摔断两根肋骨，是瞒着军医上天的。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1984.10.13：国务院放宽农民进集镇落户</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1984年10月13日，国务院发出《关于农民进入集镇落户问题的通知》，支持有经营能力与技术专长的农民进集镇经营工商业并放宽落户。户籍松动的一小步，是中国城镇化进程的一大步。</div>
-                <div class="news-meta">2026.10.13 · 今日史事</div>
+                <div class="news-title"><span class="title-text">1964年10月14日：马丁·路德·金获诺贝尔和平奖</span><span class="arrow">▸</span></div>
+                <div class="news-detail">35岁的马丁·路德·金成为当时最年轻的诺贝尔和平奖得主之一。获奖时《民权法案》刚刚签署三个月，而他仍在为投票权奔走。领奖演说中他说：非暴力不是消极的等待，而是强有力的道德进攻。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1987.10.13：邓小平说“贫穷不是社会主义”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1987年10月13日，邓小平会见匈牙利领导人卡达尔时指出：就我们国家来讲，首先是要摆脱贫穷；贫穷不是社会主义，发展太慢也不是社会主义。这篇谈话后以《我们干的事业是全新的事业》为题收入《邓小平文选》第三卷。</div>
-                <div class="news-meta">2026.10.13 · 今日史事</div>
+                <div class="news-title"><span class="title-text">1933年10月14日：德国宣布退出国际联盟</span><span class="arrow">▸</span></div>
+                <div class="news-detail">希特勒以“军备平等”被拒为由，宣布德国退出国际联盟与裁军会议，为扩军铺路。凡尔赛体系最关键的一道防线，就此出现致命裂缝——绥靖与误判的连锁反应由此启动。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">2014.10.13：政治局集体学习“历史是最好的老师”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2014年10月13日，中共中央政治局就我国历史上的国家治理进行第十八次集体学习，强调“历史是最好的老师”：治理今天的中国，需要对我国历史和传统文化有深入了解，也需要积极总结古代治国理政的探索和智慧。</div>
-                <div class="news-meta">2026.10.13 · 今日史事</div>
+                <div class="news-title"><span class="title-text">1949年10月14日：广州解放</span><span class="arrow">▸</span></div>
+                <div class="news-detail">解放军攻占华南最大城市广州，国民党军政机构西撤。这座千年商都的易手，标志着华南战局底定，也为此后新中国对外贸易保留了一扇面向海洋的窗口。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1937.10.13：毛泽东电示华北战局，“太原失守亦无关大局”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1937年10月13日，毛泽东致电周恩来、朱德、彭德怀等，指出太原即使失守亦无关大局，华北大局之枢纽在恒山山脉及正太铁路，并提出八项作战意见，为华北持久战提前布局。</div>
-                <div class="news-meta">2026.10.13 · 战争史</div>
+                <div class="news-title"><span class="title-text">1890年10月14日：艾森豪威尔出生</span><span class="arrow">▸</span></div>
+                <div class="news-detail">从西点军校的中游学生，到统帅诺曼底登陆的盟军最高司令，再到两届美国总统，艾森豪威尔的一生常被概括为“组织天才”——他擅长让性格迥异的蒙哥马利们与巴顿们在同一个作战计划里各就各位。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1946.10.13：横山起义</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1946年10月13日，在习仲勋的策划和组织下，国民党陕北保安部队副指挥胡景铎率5000名官兵起义并迎接解放军进城。毛泽东称之为“给西北的旧军队指出了一条光明大道”。</div>
-                <div class="news-meta">2026.10.13 · 今日史事</div>
+                <div class="news-title"><span class="title-text">1994年10月14日：阿拉法特、拉宾、佩雷斯共获诺贝尔和平奖</span><span class="arrow">▸</span></div>
+                <div class="news-detail">因推动《奥斯陆协议》与中东和平进程，阿拉法特、拉宾、佩雷斯分享诺贝尔和平奖。一年后拉宾遇刺，和平进程搁浅至今。那枚奖章提醒世人：历史的窗口期，往往比当事人以为的更短。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">2002.10.13：西北大学百年校庆</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2002年10月13日至17日，西北大学举办建校百年庆典。这所前身为1902年陕西大学堂的百年学府以“公诚勤朴”校训立足西北，被誉为西北高等教育的一面旗帜。</div>
-                <div class="news-meta">2026.10.13 · 校史</div>
+                <div class="news-title"><span class="title-text">1944年10月14日：隆美尔被迫服毒自尽</span><span class="arrow">▸</span></div>
+                <div class="news-detail">诺曼底登陆后四个月，“沙漠之狐”隆美尔因被牵连进刺杀希特勒的密谋，被赐予“体面的死亡”：服毒自尽，官方对外宣称心脏病突发，还为他举行了国葬。一位战术天才的结局，是极权机器碾碎自己最优秀将军的样本。</div>
+                <div class="news-meta">2026.10.14 · 历史上的今天</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1307.10.13：圣殿骑士团大逮捕，“黑色星期五”传说之源</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1307年10月13日星期五，法王腓力四世下令在全法国同步逮捕圣殿骑士团成员，这个日期后来被附会为“黑色星期五”不祥迷信的起源之一。一场针对“富有组织”的政治清算，改写了中世纪金融史。</div>
-                <div class="news-meta">2026.10.13 · 世界史</div>
+                <div class="news-title"><span class="title-text">宋代的“小报”：世界上最早的八卦产业</span><span class="arrow">▸</span></div>
+                <div class="news-detail">北宋汴京街头流传的民间小报，专登朝廷未发布的消息与官员八卦，发行者被称为“内探、省探、衙探”。宋廷屡禁不绝，因为需求真实存在——对内幕的胃口，一千年前的读者和今天没有区别。</div>
+                <div class="news-meta">2026.10.14 · 古代社会</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1792.10.13：白宫奠基</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1792年10月13日，美国总统官邸在华盛顿奠基。这栋建筑1814年被英军焚毁后重建，20世纪初因外墙颜色得名“白宫”。总统官邸的变迁，折射出一个新生国家政治制度的定型过程。</div>
-                <div class="news-meta">2026.10.13 · 世界史</div>
+                <div class="news-title"><span class="title-text">晋商票号：一纸汇票如何贯通南北金融</span><span class="arrow">▸</span></div>
+                <div class="news-detail">没有电报的时代，日升昌等票号凭一套密押制度，让银两在平遥与上海之间“异地存取”。防伪靠诗句暗号，信用靠乡缘与身家担保——前现代中国自建了一套惊人的金融基础设施。</div>
+                <div class="news-meta">2026.10.14 · 商业史</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1775.10.13：大陆海军成立，美国海军的生日</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1775年10月13日，北美大陆会议决定组建大陆海军，这一天后来被定为美国海军建军日。从几条改装商船起步到全球部署，海军史就是一部国家崛起史。</div>
-                <div class="news-meta">2026.10.13 · 世界史</div>
+                <div class="news-title"><span class="title-text">郑和下西洋为何没有“发现”欧洲</span><span class="arrow">▸</span></div>
+                <div class="news-detail">七下西洋，船队规模与技术远超后来哥伦布，但目的在于朝贡与宣示，而非贸易与殖民。动机决定行为：不找黄金、不找香料、不占殖民地，自然也不会有“地理大发现”。比较史最深刻的教材之一。</div>
+                <div class="news-meta">2026.10.14 · 大航海</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1884.10.13：格林尼治子午线确定为全球经度起点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1884年10月，国际子午线会议在华盛顿召开，会议决议以格林尼治天文台的子午线为本初子午线、零度经线，全球“对表”从此有了统一基准。时间标准化，是全球化最早的基础设施之一。</div>
-                <div class="news-meta">2026.10.13 · 世界史</div>
+                <div class="news-title"><span class="title-text">活字印刷为何在古代中国败给雕版</span><span class="arrow">▸</span></div>
+                <div class="news-detail">毕昇发明活字早于古登堡四百年，但汉字数以万计、排字工识字门槛高，雕版反而更经济耐用。技术上更先进，商业上却未必胜出——技术与市场的匹配度，比技术本身的先进性更关键。</div>
+                <div class="news-meta">2026.10.14 · 科技史</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1928.10.13：殷墟首次科学发掘</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1928年10月13日，董作宾在河南安阳小屯村主持殷墟首次试掘，中国现代考古学由此发端。此后近百年，甲骨文与殷墟的每一次发现都在扩展商代信史的边界。</div>
-                <div class="news-meta">2026.10.13 · 考古史</div>
+                <div class="news-title"><span class="title-text">罗马混凝土两千年不倒之谜</span><span class="arrow">▸</span></div>
+                <div class="news-detail">罗马万神殿穹顶矗立近两千年，近年研究发现其混凝土中的石灰团块遇水会“自愈”裂缝——快速高温工艺反而赋予材料自我修复能力。古人凭经验得到的配方，让现代材料学家追认了一句“祖师爷”。</div>
+                <div class="news-meta">2026.10.14 · 考古</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">1943.10.13：意大利对德宣战</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1943年10月13日，巴多格里奥政府宣布意大利退出轴心并对德宣战，在盟军视角下意大利从“敌人”变为“共同交战国”。大国夹缝中的转向，总是身不由己又代价高昂。</div>
-                <div class="news-meta">2026.10.13 · 世界史</div>
+                <div class="news-title"><span class="title-text">丝绸之路上的中间商：粟特人</span><span class="arrow">▸</span></div>
+                <div class="news-detail">从撒马尔罕到长安，粟特商队垄断丝路贸易数百年，他们发明了配套的商栈网络、契约文书与多语言信用体系。历史上的全球化从来不是两点直线，而是中间商一程一程接力出来的。</div>
+                <div class="news-meta">2026.10.14 · 商业史</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">文博日历：北宋青釉刻花瓷执壶里的宋式浪漫</span><span class="arrow">▸</span></div>
-                <div class="news-detail">央视《文博日历》今日介绍北宋青釉刻花瓷执壶：圆形宝塔式壶盖小巧实用，壶身线条流畅比例协调，一只鸟儿在繁茂枝叶间振翅欲飞——一刀一刻都是宋式浪漫。宋瓷之美，美在克制中见生机。</div>
-                <div class="news-meta">2026.10.13 · 文博</div>
+                <div class="news-title"><span class="title-text">黑死病之后：一场瘟疫如何重定价劳动力</span><span class="arrow">▸</span></div>
+                <div class="news-detail">14世纪黑死病夺走欧洲近三分之一人口，劳动力骤然稀缺，农奴借机讨价还价，工资普遍上涨，领主特权松动。有人口史家称之为“欧洲工人第一次议价窗口”——灾难的另一面，是社会契约的重写。</div>
+                <div class="news-meta">2026.10.14 · 世界中世纪</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">郑和下西洋的“账本”：朝贡贸易的历史回响</span><span class="arrow">▸</span></div>
-                <div class="news-detail">明代朝贡体系用“厚往薄来”换取政治声望，也留下国库吃紧的争议。六百年后回看，如何平衡“面子”与“里子”，仍是国际贸易的永恒考题。</div>
-                <div class="news-meta">2026.10.13 · 经济史</div>
+                <div class="news-title"><span class="title-text">中国古代的“高考移民”：科举冒籍与反制</span><span class="arrow">▸</span></div>
+                <div class="news-detail">清代冒籍现象盛行：录取名额少的省份考生，设法到名额多的省份应试。朝廷的对策包括审音核验口音、保结连坐——听起来是不是很熟悉？围绕考试公平的攻防，几百年前就是老剧本。</div>
+                <div class="news-meta">2026.10.14 · 古代社会</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">丝绸之路上的“女商人”：被正史遗忘的经济主体</span><span class="arrow">▸</span></div>
-                <div class="news-detail">吐鲁番出土的汉唐契约文书显示，唐代不少女性以独立身份放贷、经商、立契——历史上的女性经济活动远比想象活跃，只是很少进入正史叙事。考古材料正在补写这缺失的一半。</div>
-                <div class="news-meta">2026.10.13 · 社会史</div>
+                <div class="news-title"><span class="title-text">烽火戏诸侯可能是“编排”的：西周灭亡的另类解释</span><span class="arrow">▸</span></div>
+                <div class="news-detail">《史记》里幽王为博褒姒一笑烽火戏诸侯导致亡国，但钱穆等学者早已质疑：烽火传讯是汉代防御匈奴的制度，西周未必有之。更可信的解释是废嫡立庶引发的继承战争。读史的第一课：故事的传播力与真实性常成反比。</div>
+                <div class="news-meta">2026.10.14 · 史学</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">从婴儿潮到少子化：人口结构的百年钟摆</span><span class="arrow">▸</span></div>
-                <div class="news-detail">20世纪中叶的婴儿潮塑造了战后经济的黄金年代，而今天多国步入少子化——人口结构像一只缓慢的钟摆，其摆动决定了养老金、楼市与增长模型。读懂人口曲线，就读懂半部经济史。</div>
-                <div class="news-meta">2026.10.13 · 人口史</div>
+                <div class="news-title"><span class="title-text">拿破仑的“大陆封锁”为何失败：制裁史的老剧本</span><span class="arrow">▸</span></div>
+                <div class="news-detail">为困死英国经济，拿破仑禁止欧洲大陆与英贸易，结果走私猖獗、盟友离心、大陆自身物资短缺。经济制裁最古老也最一致的教训：只要价差足够大，封锁线就挡不住商人的算盘。</div>
+                <div class="news-meta">2026.10.14 · 世界近代</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">宋代“打工人”的一天：从《东京梦华录》看古代服务业</span><span class="arrow">▸</span></div>
-                <div class="news-detail">《东京梦华录》里的汴京：五更早市、深夜酒肆、外卖送餐与发达的行当分工——宋代城市服务业之盛，堪比现代都市。古人的“卷”与“躺”，都写在市井烟火里。</div>
-                <div class="news-meta">2026.10.13 · 社会史</div>
+                <div class="news-title"><span class="title-text">敦煌藏经洞为何被封：避难说与废弃说之争</span><span class="arrow">▸</span></div>
+                <div class="news-detail">11世纪初，数万卷文书被封入莫高窟小窟并抹平痕迹，1900年才被道士王圆箓意外打开。封存原因至今两说并立：躲避西夏兵祸的“避难说”，与经卷失去实用价值的“废弃说”。一个洞口，隔着一千年的沉默。</div>
+                <div class="news-meta">2026.10.14 · 考古</div>
             </div>
             <div class="news-item" data-category="历史">
-                <div class="news-title"><span class="title-text">诺奖经济学简史：从被讥“不配”到范式革命</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1969年首次颁发的诺贝尔经济学奖，曾被讥为“社会科学不配诺奖”；半个多世纪后，它记录了宏观调控、博弈论、行为经济学、机制设计等一次次范式革命。2026年奖项花落宏观稳定政策的微观基础——正是这条主线的又一次延伸。</div>
-                <div class="news-meta">2026.10.13 · 经济史</div>
+                <div class="news-title"><span class="title-text">蒸汽机之前：被遗忘的水力工厂</span><span class="arrow">▸</span></div>
+                <div class="news-detail">工业革命的前传不在煤与铁，而在河边：18世纪英国的水力纺纱厂已是数百人的集中工厂，纪律、倒班、流水分工一应俱全。蒸汽机不是发明了工厂，而是让工厂摆脱了河流——解放生产力常常始于解放地理位置。</div>
+                <div class="news-meta">2026.10.14 · 工业革命</div>
             </div>
             </div>
         </section>
@@ -792,109 +796,109 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">🛒 电商<span class="count">21条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">京东双11已于10月12日晚8点现货开卖</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东2026年双11于10月12日晚8点现货开售，持续至11月11日。开售时间大幅前置，消费者可从容比价、分批下单，家电数码等需要做功课的大件不必挤在最后几天仓促出手。</div>
-                <div class="news-meta">2026.10.13 · 大促节奏</div>
+                <div class="news-title"><span class="title-text">淘宝天猫双11明日预售开启：时间表一次看懂</span><span class="arrow">▸</span></div>
+                <div class="news-detail">10月15日20:00开启预售定金支付，10月20日20:00起付尾款、现货同步开卖，现货售卖持续到11月13日23:59。想锁价格锁赠品的，明天晚8点定金场是第一班车。</div>
+                <div class="news-meta">2026.10.14 · 双11节奏</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">京东取消定金预售：页面价即成交价</span><span class="arrow">▸</span></div>
-                <div class="news-detail">今年京东双11彻底取消定金预售，全部商品现货开售，页面价格即成交价、下单即发货。“付定金、等尾款”的焦虑被整体剔除，购物回归最简单的节奏。</div>
-                <div class="news-meta">2026.10.13 · 大促规则</div>
+                <div class="news-title"><span class="title-text">天猫规则巨变：跨店满减退场，官方立减上线</span><span class="arrow">▸</span></div>
+                <div class="news-detail">今年天猫取消跨店满减与凑单机制，统一改为“官方立减”：优惠直接体现在标价上，买一件就生效，不用再算门槛。对不爱凑单的人是好消息；但想靠凑单摊薄成本的玩法，今年在天猫走不通了。</div>
+                <div class="news-meta">2026.10.14 · 平台规则</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">京东跨店每满300减50，上不封顶</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东跨店满减“每满300减50”上不封顶，系统自动为购物车匹配最优组合；官方直降与品类券可进一步叠加，“多买多返”按累计消费阶梯返还红包，不凑单也能拿到底价。</div>
-                <div class="news-meta">2026.10.13 · 大促规则</div>
+                <div class="news-title"><span class="title-text">京东双11进行时：官方直降+部分场次保留满300减50</span><span class="arrow">▸</span></div>
+                <div class="news-detail">京东10月12日已开抢，主打官方直降，优惠落在单件商品上；每满300减50的跨店满减在部分场次仍保留，适合多件合并下单。直降可叠加店铺券、品类券与国家补贴。</div>
+                <div class="news-meta">2026.10.14 · 平台规则</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">六大惊喜日：双11被切成六个节奏节点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东在活动期内设置六大惊喜日：10.12月黑风高盛典、10.20超级秒杀日、10.28超级服务日、10.31开门红、11.10终极压轴场，以及贯穿全周期的品类惊喜日。刚需首轮锁价、不急蹲节点，节奏自选。</div>
-                <div class="news-meta">2026.10.13 · 大促节奏</div>
+                <div class="news-title"><span class="title-text">88VIP的1555元券包已开领</span><span class="arrow">▸</span></div>
+                <div class="news-detail">10月13日起，淘宝面向88VIP用户发放价值1555元的专属券包，在淘宝APP搜索“88VIP领券”即可领取，10月20日晚8点大促开售时正式启用。消费券为满额抵扣，可与官方立减叠加。</div>
+                <div class="news-meta">2026.10.14 · 会员权益</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">淘宝天猫10月15日晚8点开启预售</span><span class="arrow">▸</span></div>
-                <div class="news-detail">淘宝天猫双11预售10月15日20:00开启定金支付，10月20日20:00付尾款并现货开卖，现货售卖持续至11月13日23:59，整体周期接近25天。</div>
-                <div class="news-meta">2026.10.13 · 大促节奏</div>
+                <div class="news-title"><span class="title-text">红包口令的正确姿势：每晚8点蹲加码场</span><span class="arrow">▸</span></div>
+                <div class="news-detail">双11红包采用搜索口令直达：京东每日可领多次，淘宝每日一次，每晚8点前后常有加码场，大额红包概率更高。实操技巧：搜一次口令后，每天直接点历史搜索记录一键直达。</div>
+                <div class="news-meta">2026.10.14 · 省钱技巧</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">天猫取消跨店满减：官方立减成核心玩法</span><span class="arrow">▸</span></div>
-                <div class="news-detail">淘宝天猫今年全面取消跨店满减与凑单，主玩法改为“官方立减”：单件商品直接立减，无需领券、无需凑门槛。优惠计算复杂度归零，让利逻辑首次如此清晰。</div>
-                <div class="news-meta">2026.10.13 · 大促规则</div>
+                <div class="news-title"><span class="title-text">国补攻略：家电补15%最高1500元，数码封顶500元</span><span class="arrow">▸</span></div>
+                <div class="news-detail">家电六类（冰箱、洗衣机、电视、空调、热水器、电脑）凭一级能效/水效按实付价15%补贴，单件最高1500元不设门槛；数码四类（手机、平板、智能手表手环、智能眼镜）标价6000元以内，单件封顶500元。</div>
+                <div class="news-meta">2026.10.14 · 国家补贴</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">88VIP千元券包可叠加官方立减</span><span class="arrow">▸</span></div>
-                <div class="news-detail">天猫官方立减之外，88VIP会员可额外领取千元券包叠加使用，适合购买品类较多的会员用户。大促期间，会员资产的含金量进一步上升。</div>
-                <div class="news-meta">2026.10.13 · 会员权益</div>
+                <div class="news-title"><span class="title-text">国补的隐藏规则：先领红包再用国补，到手更低</span><span class="arrow">▸</span></div>
+                <div class="news-detail">国补的计算基准是扣除红包与满减后的实付价，红包本身不计入补贴基数。所以叠加顺序很关键：先用平台优惠把实付价压下来，再吃15%的国补，等效折扣更深。</div>
+                <div class="news-meta">2026.10.14 · 国家补贴</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">拼多多延续百亿补贴：无须凑单无须领券</span><span class="arrow">▸</span></div>
-                <div class="news-detail">拼多多双11延续极简打法：全程不设预售、不搞跨店满减，数万款商品由百亿补贴直接补到底价，大额神券与限时秒杀领取后自动生效，购物路径被压缩到最短。</div>
-                <div class="news-meta">2026.10.13 · 大促规则</div>
+                <div class="news-title"><span class="title-text">苹果与学生党专区：专项补贴口令别错过</span><span class="arrow">▸</span></div>
+                <div class="news-detail">苹果用户可搜索相应口令领取iPhone全系专项福利；学生群体完成认证后可解锁教育专属换新补贴。买苹果产品先查专区，再对比平台直降与国补的叠加空间。</div>
+                <div class="news-meta">2026.10.14 · 省钱技巧</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">国补第四批625亿元资金已下达</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026年第四批625亿元国补资金已经下达，政府15%直补与平台红包、满减首次同期叠加，形成年内少有的双重让利窗口，执行期至12月31日。</div>
-                <div class="news-meta">2026.10.13 · 国补</div>
+                <div class="news-title"><span class="title-text">价保不是万能险：范围和时限要看清</span><span class="arrow">▸</span></div>
+                <div class="news-detail">京东双11全程支持价保，早买不用担心短期降价，但注意部分品类与百亿补贴商品可能不在价保范围，申请前先核对规则。淘宝侧则要留意店铺的价保承诺与时效。</div>
+                <div class="news-meta">2026.10.14 · 避坑指南</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">国补细则：家电六类补15%封顶1500元，数码四类封顶500元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">家电六类（冰箱、洗衣机、电视、空调、热水器、电脑）凭一级能效/水效按实付价减15%，单件最高补贴1500元、不设价格门槛；数码四类（手机、平板、智能手表手环、智能眼镜）标价6000元内、单件封顶500元。每类每年1件，名额独立。</div>
-                <div class="news-meta">2026.10.13 · 国补</div>
+                <div class="news-title"><span class="title-text">预售定金的规矩：非商家原因退款，定金不退</span><span class="arrow">▸</span></div>
+                <div class="news-detail">付定金前务必确认：商品是否保价、赠品是否锁档、定金是否可退。按平台规则，非商家原因取消订单定金无法退回；黄金、虚拟充值类商品大多不参与平台满减与立减。</div>
+                <div class="news-meta">2026.10.14 · 避坑指南</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">国补省钱顺序：先领红包再算补贴</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国补只认扣除平台优惠后的实付价格，红包不计入补贴基数。正确顺序是：先领红包和品类券，再享立减/满减，最后以剩余实付金额的15%核算国补——顺序错了，补贴就少一截。</div>
-                <div class="news-meta">2026.10.13 · 攻略</div>
+                <div class="news-title"><span class="title-text">10月20日晚8点是双平台重叠高峰</span><span class="arrow">▸</span></div>
+                <div class="news-detail">京东“开门红”与淘宝尾款支付、现货开售重叠在10月20日20:00，是优惠集中释放的节点之一：品类大额券集中发放，88VIP消费券启用。提前加购、领好券，到点比价下单。</div>
+                <div class="news-meta">2026.10.14 · 双11节奏</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">红包口令玩法：搜索直达，每晚8点加码</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东可搜“红包到手798”等口令每日多次领取，晚8点常有加码；淘宝天猫可搜“天降红包5550”，晚间大额红包概率更高。把口令留在搜索历史里，一键直达更省时。</div>
-                <div class="news-meta">2026.10.13 · 攻略</div>
+                <div class="news-title"><span class="title-text">11月10日晚8点至11日24点：巅峰场的甜与苦</span><span class="arrow">▸</span></div>
+                <div class="news-detail">全品类底价在巅峰主会场集中释放，红包发放频次提升，但热门型号断货概率也最高。经验法则：大件别全押最后一天，爆款库存和补贴名额都在前几轮最充裕。</div>
+                <div class="news-meta">2026.10.14 · 双11节奏</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">淘宝闪购“等灯不计时”落地杭州</span><span class="arrow">▸</span></div>
-                <div class="news-detail">淘宝闪购联合杭州公安交管上线“等灯不计时”机制：骑士等红灯时长不计入考核，因等灯超时系统自动识别免责。此前苏州、北京、福州、青岛、南京、常州、金华等地已相继落地——平台与城市协同治理又进一步。</div>
-                <div class="news-meta">2026.10.13 · 即时零售</div>
+                <div class="news-title"><span class="title-text">大件数码家电：盯京东前三波</span><span class="arrow">▸</span></div>
+                <div class="news-detail">手机、电脑、冰箱、空调等大件，热门型号与国补名额在首轮最充裕；越到后期，库存和补贴资格越紧张。看好型号后盯第一波现货价，与开门红、巅峰场三段比价再出手。</div>
+                <div class="news-meta">2026.10.14 · 购物策略</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">京东商家大会：预计销售额破百万新商家增超60%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在以“AI驱动·确定增长”为主题的京东商家大会上，京东发布平台价值主张、自营与POP协同、扶持投入加码、营商环境优化四方面升级举措，预计双11推动销售额过百万的新商家同比增长超60%。</div>
-                <div class="news-meta">2026.10.13 · 平台动态</div>
+                <div class="news-title"><span class="title-text">服饰美妆小件：蹲淘宝预售锁价</span><span class="arrow">▸</span></div>
+                <div class="news-detail">服饰、美妆、零食适合蹲预售：用定金提前锁定价格与赠品，预售赠品通常比现货场更足。美妆注意小样与正装的赠比，别为凑赠品买不需要的色号。</div>
+                <div class="news-meta">2026.10.14 · 购物策略</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">拼多多亮相中国农民丰收节，“多多丰收馆”开进湖北</span><span class="arrow">▸</span></div>
-                <div class="news-detail">拼多多亮相第九个中国农民丰收节全国主场活动，搭建“多多丰收馆”线下展台，并在湖北省农业农村厅支持下开设“鱼米之乡荆楚优品专区”，让农产区特产直连消费者。</div>
-                <div class="news-meta">2026.10.13 · 农村电商</div>
+                <div class="news-title"><span class="title-text">双11母婴囤货的正确节奏：3-4个月用量最优</span><span class="arrow">▸</span></div>
+                <div class="news-detail">纸尿裤按宝宝当前体重段囤3-4个月用量即可（段位会变），奶粉务必核对保质期与段位切换时间，辅食泥不要囤超过两个月。先比价再囤，预售定金价未必是全年最低。</div>
+                <div class="news-meta">2026.10.14 · 母婴囤货</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">央视曝光“手工兼职”骗局：购物卡成洗钱通道</span><span class="arrow">▸</span></div>
-                <div class="news-detail">央视《法治在线》曝光手工兼职骗局：受害者被以“转账受限”为由诱购28张购物卡，超市察觉蹊跷报警后，警方控制手机隔断诈骗联系、将购物卡挂失止付，成功阻断洗钱路径。提醒：凡要求先买卡、先垫资的“兼职”，都是诈骗。</div>
-                <div class="news-meta">2026.10.13 · 反诈</div>
+                <div class="news-title"><span class="title-text">即时零售加入双11：大促也能“外卖感”收货</span><span class="arrow">▸</span></div>
+                <div class="news-detail">美团闪购、京东秒送等即时零售渠道参战双11，小家电、美妆、母婴用品在部分城市可半日达甚至小时达。适合临时补缺与试买，大额补贴仍以平台主会场为主。</div>
+                <div class="news-meta">2026.10.14 · 行业动态</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">双11物流备战：从“爆仓冲刺”到“错峰前置”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">大促前置开卖让物流竞争从峰值运力转向全链路预测：平台推动商家预售下沉备货、前置仓提前铺货。快递公司比拼的不再是谁能扛住爆仓，而是谁预测得更准。</div>
-                <div class="news-meta">2026.10.13 · 物流</div>
+                <div class="news-title"><span class="title-text">品牌自播崛起：店播占比持续上升</span><span class="arrow">▸</span></div>
+                <div class="news-detail">今年双11，头部主播的光环继续淡化，品牌自播成为直播电商的主战场：商家把折扣预算从坑位费转向店播福利，消费者在品牌直播间蹲专属券，正在成为新习惯。</div>
+                <div class="news-meta">2026.10.14 · 行业动态</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">AI导购上岗：大促客服的“人机协作”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">今年双11各平台大面积上线AI导购与智能客服：比价、凑单推荐、售后答疑交给模型处理，人工客服转向高情绪价值的复杂个案。省心是卖点，但“AI说得对不对”仍需要用户自己把关。</div>
-                <div class="news-meta">2026.10.13 · 电商AI</div>
+                <div class="news-title"><span class="title-text">凑单文化退潮：平台简化规则背后的增长焦虑</span><span class="arrow">▸</span></div>
+                <div class="news-detail">天猫取消跨店满减、京东改官方直降，本质是把“算术题”从消费流程里拿掉。过去凑单制造了大量计划外订单；当增速放缓，复杂规则就从制造热闹的工具变成了负担。少一点套路，多一分直接。</div>
+                <div class="news-meta">2026.10.14 · 行业观察</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">直播降温、货架回归：确定性消费的胜利</span><span class="arrow">▸</span></div>
-                <div class="news-detail">简化规则、取消凑单、官方直降——今年双11的主流动作指向同一个方向：把确定性还给货架。冲动消费的潮水退去后，“想清楚再买”的用户正在用脚投票。</div>
-                <div class="news-meta">2026.10.13 · 行业观察</div>
+                <div class="news-title"><span class="title-text">以旧换新线上化：旧机估价+补贴双重抵扣</span><span class="arrow">▸</span></div>
+                <div class="news-detail">手机、家电换新时，旧机在线估价回收与国补、平台补贴可以叠加。建议先查旧机回收价，再算补贴后实付，最后决定是否换新——三步算下来，换新常比维修更划算。</div>
+                <div class="news-meta">2026.10.14 · 省钱技巧</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">家电以旧换新叠加国补：换新窗口就在10-12月</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国补叠加平台立减后，一级能效大家电综合到手价创近年新低：冰箱、洗衣机等六类最高补1500元，叠加大促直降，老家电换新的性价比窗口高度集中在10-12月。</div>
-                <div class="news-meta">2026.10.13 · 攻略</div>
+                <div class="news-title"><span class="title-text">双11防骗提醒：假客服与假红包高发</span><span class="arrow">▸</span></div>
+                <div class="news-detail">大促期间三类骗局高发：冒充客服的“退款理赔”话术、虚假红包链接钓鱼、“订单异常”要求屏幕共享。记住一条铁律：任何主动来电的“客服”都要通过官方APP核实，退款从不需要你先转账。</div>
+                <div class="news-meta">2026.10.14 · 避坑指南</div>
             </div>
             <div class="news-item" data-category="电商">
-                <div class="news-title"><span class="title-text">比价工具复兴：大促时代的“反向消费”装备</span><span class="arrow">▸</span></div>
-                <div class="news-detail">一键查历史价格、跨平台比价、保价自动理赔——比价插件与App在双11前迎来装机高峰。当平台不再玩复杂规则，价格竞争重新回到明面，工具理性终于有了用武之地。</div>
-                <div class="news-meta">2026.10.13 · 消费观察</div>
+                <div class="news-title"><span class="title-text">直播间下单前三问</span><span class="arrow">▸</span></div>
+                <div class="news-detail">主播喊“全网最低”时先问三个问题：和平台官方立减后价格比过了吗？赠品是正装还是小样？退货运费谁承担？冲动消费的解药，永远是把它换算成三个具体问题。</div>
+                <div class="news-meta">2026.10.14 · 购物策略</div>
             </div>
             </div>
         </section>
@@ -902,110 +906,110 @@ footer { text-align: center; padding: 20px 0 10px; }
             <h2 class="category-title">👶 母婴<span class="count">20条</span></h2>
             <div class="news-list">
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">美德乐丝韵翼智能版：职场背奶妈妈的“时间投资”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">瑞士美德乐丝韵翼智能版（约1668元）蓝牙智能双泵+静音设计，12分钟快速吸乳，主机仅400g可入通勤包。双边同时工作把单次吸奶从25分钟压到10分钟——对每天背奶3次以上的妈妈，这是“每天多睡20分钟”的投资。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">美德乐丝韵·舒悦版实测：背奶妈妈的效率之选</span><span class="arrow">▸</span></div>
+                <div class="news-detail">新浪母婴实验室实测：美德乐丝韵·舒悦版（699元）双瓣膜物理隔膜逆流率仅0.8%，9档吸力，2Phase先快刺激后慢吸乳，职场妈妈反馈“10分钟双边出奶120ml”。短板是喇叭口为PP材质，冬天需预热。</div>
+                <div class="news-meta">2026.10.14 · 吸奶器</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">美德乐丝韵双边：横评中吸力稳定性第一</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026年实测显示，美德乐丝韵双边电动吸奶器（约1500元）在吸力稳定性与喇叭罩贴合度上评分最高，单次吸奶时间较手动款从25分钟缩短至10分钟且不拉扯乳头。注意配件成本：阀门约3个月一换，单次约80元。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">兰思诺SmartPump：最轻机身+乳腺管痉挛专属模式</span><span class="arrow">▸</span></div>
+                <div class="news-detail">兰思诺SmartPump（589元）重约260g，4种模式×4档吸力，面板上的“舒缓”模式专为乳腺管痉挛设计；倾斜阀门+重力导流防回流，实测逆流率1.2%。短板是标配储奶瓶仅150ml，大奶量妈妈需另购大瓶。</div>
+                <div class="news-meta">2026.10.14 · 吸奶器</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">贝亲玻璃奶瓶：儿科医生推荐的“无脑之选”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">贝亲玻璃奶瓶获多名儿科医生推荐：宽口径易清洗、母乳实感奶嘴接近亲喂体验、单只60-80元价格亲民。防胀气、易抓握、耐高温三项核心指标均列前三——只买一个奶瓶的话，选它不会错。</div>
-                <div class="news-meta">2026.10.13 · 奶瓶</div>
+                <div class="news-title"><span class="title-text">新安怡自然原生SCF323：敏感肌妈妈的舒适之选</span><span class="arrow">▸</span></div>
+                <div class="news-detail">新安怡自然原生（429元）花瓣按摩垫+硅胶喇叭口，模拟宝宝浅吸-深吸-慢吸节奏，实测痛感评分仅2.3分，乳头敏感的妈妈友好；一体式硅胶隔膜掀开即洗，每天多次清洗也不烦。代价是吸力偏弱，单次吸乳多花3-5分钟。</div>
+                <div class="news-meta">2026.10.14 · 吸奶器</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">贝亲PPSU宽口径防胀气奶瓶月销10万+</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10月天猫销量榜显示，贝亲自然实感宽口径耐摔PPSU奶瓶月销20万+、折后约76元；防胀气仿母乳款月销10万+。PPSU材质耐摔耐高温，是玻璃瓶之外的安心替代。</div>
-                <div class="news-meta">2026.10.13 · 奶瓶</div>
+                <div class="news-title"><span class="title-text">2026吸奶器品牌榜：从美德乐到贝亲怎么选</span><span class="arrow">▸</span></div>
+                <div class="news-detail">综合2026年口碑：美德乐Solo 3.0仿生吸吮耐用舒适但价格偏高；贝亲舒适系列（300-500元）微震动按摩刺激奶阵，适合预算有限的背奶族；小白熊智能变频（200-400元）带LED屏+快充，是入门档优选。</div>
+                <div class="news-meta">2026.10.14 · 吸奶器</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">布朗博士：小绿管的防胀气物理学</span><span class="arrow">▸</span></div>
-                <div class="news-detail">布朗博士（Dr. Brown's）防胀气奶瓶靠独特的“小绿管”导气系统把空气引到奶液上方，减少宝宝吸入气泡，防吐奶防胀气，PPSU款折后约122元。对胀气敏感的宝宝，它是月嫂圈口碑相传的选择。</div>
-                <div class="news-meta">2026.10.13 · 奶瓶</div>
+                <div class="news-title"><span class="title-text">布朗博士吸管奶瓶：重力球+双手柄，143元档好评率95%</span><span class="arrow">▸</span></div>
+                <div class="news-detail">布朗博士PPSU吸管奶瓶（330ml，重力球吸管，6-9月+）京东价143.64元，评论数过万、好评率95%。重力球设计让宝宝任何角度都能吸到，双手柄便于自主抓握，是从奶瓶过渡到水杯的顺手选择。</div>
+                <div class="news-meta">2026.10.14 · 奶瓶</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">Hegen方瓶：新加坡设计的“一套到底”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Hegen以方形瓶身与偏心奶嘴闻名：方瓶收纳不滚动，奶瓶、储物盒、水杯一盖通用，PPSU 150/240ml套装折后约150-367元。贵在系统化，适合追求喂养规划“一套到底”的父母。</div>
-                <div class="news-meta">2026.10.13 · 奶瓶</div>
+                <div class="news-title"><span class="title-text">布朗博士玻璃萌兔套装：150ml+270ml双瓶245元</span><span class="arrow">▸</span></div>
+                <div class="news-detail">布朗博士宽口玻璃奶瓶萌兔两件套京东价245.4元：5安士配流量1奶嘴适合新生儿，9安士配流量2奶嘴适合大月龄，附清洁小毛刷。玻璃材质易观察刻度与清洗，适合居家喂养主力瓶。</div>
+                <div class="news-meta">2026.10.14 · 奶瓶</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">苏菲长颈鹿牙胶：60年老牌的“口欲期顶流”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">法国苏菲（Sophie la Girafe）长颈鹿牙胶自1961年至今仍是全球爆款：天然橡胶+食品级颜料，吱吱声与斑点造型让宝宝抓握欲罢不能。注意认准正品渠道——天然橡胶有轻微气味属正常，忌暴晒易老化。</div>
-                <div class="news-meta">2026.10.13 · 牙胶</div>
+                <div class="news-title"><span class="title-text">牙胶横评：苏菲长颈鹿vs MAM水冷牙胶怎么搭</span><span class="arrow">▸</span></div>
+                <div class="news-detail">法国苏菲长颈鹿由天然橡胶一体成型，柔韧好抓握，适合小月龄啃咬；MAM部分牙胶可注水冷藏，冰凉感缓解出牙肿痛更直接。建议两者搭配：日常啃苏菲，牙龈肿的日子用冷藏款。</div>
+                <div class="news-meta">2026.10.14 · 牙胶</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">MAM牙胶：自重感与冰感设计的欧洲方案</span><span class="arrow">▸</span></div>
-                <div class="news-detail">奥地利MAM的牙胶主打自重感与冰感：冷藏后冰镇牙龈缓解出牙不适，宽大手柄方便小月龄自主抓握。MAM安抚奶嘴的透气伞状盾片设计也常被牙医推荐——颜值与功能并存的欧洲老牌。</div>
-                <div class="news-meta">2026.10.13 · 牙胶</div>
+                <div class="news-title"><span class="title-text">汤美天地：百元内PP奶瓶的性价比路线</span><span class="arrow">▸</span></div>
+                <div class="news-detail">英国品牌汤美天地（Tommee Tippee）走亲民路线：宽口PP奶瓶百元内可入手，轻便耐摔，奶嘴接近母乳触感，适合作为外出备用瓶或幼儿园过渡杯。PP材质不耐高温消毒，注意看说明。</div>
+                <div class="news-meta">2026.10.14 · 奶瓶</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">兰思诺羊毛脂：哺乳妈妈的“急救霜”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英国兰思诺（Lansinoh）羊毛脂护乳霜是背奶圈常青款：医用级羊毛脂，哺喂前无需洗掉，缓解皲裂疼痛。价格不贵、见效快，建议产前就放进待产包；兰思诺防溢乳垫同样是高频复购单品。</div>
-                <div class="news-meta">2026.10.13 · 哺乳护理</div>
+                <div class="news-title"><span class="title-text">吸奶器阀片是耗材：3个月不换，防回流率掉到85%</span><span class="arrow">▸</span></div>
+                <div class="news-detail">官方建议阀片（隔膜）每3个月更换一次：使用半年后防回流率会降至约85%，吸力也会波动。别等出问题才换——配件是吸奶器体验的隐形大头，买机器时可以直接囤一套替换阀片。</div>
+                <div class="news-meta">2026.10.14 · 哺乳知识</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">汤美天地：英式喂养全家桶的“性价比路线”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英国汤美天地（Tommee Tippee）以仿母乳宽口奶瓶著称，奶嘴柔软度接近亲喂，防胀气阀设计温和；辅食碗勺、温奶器、消毒锅成套买性价比突出。欧系老牌里最亲民的一位。</div>
-                <div class="news-meta">2026.10.13 · 喂养</div>
+                <div class="news-title"><span class="title-text">家有娃慎用洗衣凝珠：角膜腐蚀风险不是玩笑</span><span class="arrow">▸</span></div>
+                <div class="news-detail">近期“洗衣凝珠爆裂伤角膜”话题冲上热搜：高浓度表面活性剂与碱性助剂占比超80%，腐蚀性远超洗衣液，溅入眼睛需冷水持续冲洗15分钟并立即就医。家有幼儿的建议改用洗衣液，或将凝珠上锁存放。</div>
+                <div class="news-meta">2026.10.14 · 家庭安全</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">新安怡单边：花瓣按摩垫的舒适平价之选</span><span class="arrow">▸</span></div>
-                <div class="news-detail">飞利浦新安怡（Avent）单边电动约600元，花瓣按摩垫舒适度获好评，配件可微波炉消毒。若每天吸奶1次以内完全够用；每天3次以上的高频背奶，才需要上美德乐级别的双边。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">双11母婴囤货：纸尿裤奶粉的黄金囤量</span><span class="arrow">▸</span></div>
+                <div class="news-detail">纸尿裤按当前体重段囤3-4个月用量（NB码别囤多，宝宝长得快），奶粉核对保质期与段位切换时间，湿巾看克重不看片数。大促价未必全年最低，先用比价工具查历史价格曲线再决定囤多少。</div>
+                <div class="news-meta">2026.10.14 · 囤货指南</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">贝瑞克“大贝贝”：韩国原装的双泵实力派</span><span class="arrow">▸</span></div>
-                <div class="news-detail">韩国贝瑞克（Spectra）被妈妈们称作“大贝贝”，与美德乐并列第一梯队：双泵蓝牙智能、好评率95%以上，价格1200-1830元。吸力模式更“医疗风”，适合追求效率与舒适兼顾的家庭。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">奶瓶消毒三方案对比：蒸汽锅、紫外线、煮沸</span><span class="arrow">▸</span></div>
+                <div class="news-detail">蒸汽消毒锅效率高、无死角，适合多瓶家庭；紫外线对遮挡区域效果有限，需注意灯管寿命；煮沸最经济但奶嘴等硅胶件易老化。无论哪种，消毒后沥干比闷着存放更重要——潮湿才是细菌温床。</div>
+                <div class="news-meta">2026.10.14 · 喂养知识</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">熊猫布布Pro：敏感乳头的舒适度冠军</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国产熊猫布布Pro（约2000元）硅胶喇叭口+变频吸乳，实测疼痛感降低约60%，舒适度排名第一，适合乳头敏感或凹陷的妈妈。贵，但能省下乳头损伤与乳腺炎的医疗费与痛苦。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">背奶妈妈包清单：这五样让通勤吸奶不慌</span><span class="arrow">▸</span></div>
+                <div class="news-detail">冰袋（提前冻硬）、一次性储奶袋、免洗消毒喷雾、备用阀片、一张宝宝照片——最后一样不是煽情：看照片能帮助触发奶阵，实测能明显缩短吸奶时间。包里再备一件开衫，工位吸奶时遮挡用。</div>
+                <div class="news-meta">2026.10.14 · 背奶攻略</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">新贝8775-1：250元档的性价比之王</span><span class="arrow">▸</span></div>
-                <div class="news-detail">新贝XB-8775-1约250元、好评率95%，吸力适中适合偶尔背奶；更低一档的8768-1仅184元、8档吸力可调，配件便宜易更换，预算有限或二胎备货闭眼入——手动款效率低、累手，不建议。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">触发奶阵的小技巧：温敷+深呼吸比使劲用力管用</span><span class="arrow">▸</span></div>
+                <div class="news-detail">吸奶效率的关键不在吸力档位，而在奶阵是否被触发：吸前温敷乳房2分钟、看宝宝照片或视频、深呼吸放松肩膀。紧张会抑制催产素分泌——吸奶这件事，越用力越不出，越放松越顺畅。</div>
+                <div class="news-meta">2026.10.14 · 哺乳知识</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">小白熊Z1：369元的“静音大吸力”</span><span class="arrow">▸</span></div>
-                <div class="news-detail">小白熊Z1（369元）主打静音大吸力，噪音低于45dB适合夜间泵奶；丽影HL-0682便携轻量适合通勤。国产吸奶器在300-800元价位已与进口大牌体验不相上下，是理性消费的甜点区。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">PPSU、玻璃、PP奶瓶怎么分工</span><span class="arrow">▸</span></div>
+                <div class="news-detail">玻璃瓶刻度清晰、耐高温，适合0-6月居家主力；PPSU轻且耐摔、可蒸汽消毒，是外出与自抓阶段首选；PP便宜轻便但寿命短，适合做备用。建议配置：玻璃1-2个+PPSU 2-3个，按场景分工。</div>
+                <div class="news-meta">2026.10.14 · 选购指南</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">十月结晶P3pro：泌乳+吸乳双模式</span><span class="arrow">▸</span></div>
-                <div class="news-detail">十月结晶P3pro（459元）好评率约96%，防回流设计+泌乳、吸乳双模式，适合产后高频使用追求效率的妈妈。国产老牌的品控与售后网络是它的护城河。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">厌奶期不是病：不强迫、拉长间隔、减少干扰</span><span class="arrow">▸</span></div>
+                <div class="news-detail">3-6月龄宝宝的生理性厌奶很常见：吃几口就扭头、环境一吵就罢工。应对原则是不强迫喂食、适当拉长喂养间隔、喂奶时关灯收玩具减少刺激。厌奶期通常2-4周自愈，生长曲线正常就无需焦虑。</div>
+                <div class="news-meta">2026.10.14 · 喂养知识</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">卡乐怡APP款：568元的智能控吸奶</span><span class="arrow">▸</span></div>
-                <div class="news-detail">卡乐怡APP款（568元，好评率99%）可手机调节吸力档位、记忆个人喜好、记录吸乳时长——科技控背奶妈妈的最爱。吸奶器这个传统品类，也在被“智能化”重新发明一遍。</div>
-                <div class="news-meta">2026.10.13 · 吸奶器</div>
+                <div class="news-title"><span class="title-text">夜奶减停策略：先减量、再减次、最后断</span><span class="arrow">▸</span></div>
+                <div class="news-detail">满6个月、辅食稳定后可逐步引导减停夜奶：先把每次夜奶量减半，再逐渐拉开夜奶间隔，白天保证足量摄入。避免“一刀切”式断夜奶——渐进减停对宝宝睡眠和妈妈乳腺都更温和。</div>
+                <div class="news-meta">2026.10.14 · 睡眠喂养</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">待产包怎么选：子初20件 vs 十月结晶40件</span><span class="arrow">▸</span></div>
-                <div class="news-detail">实测结论：直接买成品套装。子初20件套（约300元）省心首选、适合一胎顺产；十月结晶40件套（约375元，单件9.4元）量足全面、适合二胎；Babycare 30件套（99元）适合住院3天精简派。散买总价更高还容易漏小件。</div>
-                <div class="news-meta">2026.10.13 · 待产包</div>
+                <div class="news-title"><span class="title-text">辅食添加的铁律：高铁米粉打底，一次一样连三天</span><span class="arrow">▸</span></div>
+                <div class="news-detail">第一口辅食选高铁米粉，从一勺开始观察耐受；此后每新增一种食材连吃3天、观察皮疹/腹泻/呕吐再叠加下一种。鸡蛋、海鲜、坚果酱等高致敏食材不必刻意推迟，但引入时更要单独观察。</div>
+                <div class="news-meta">2026.10.14 · 辅食</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">牙胶选购安全课：认准食品级硅胶</span><span class="arrow">▸</span></div>
-                <div class="news-detail">牙胶直接入口，安全底线三条：认准食品级硅胶/天然橡胶与国标检测报告；一体成型无小零件（防脱落误吞）；避开有异味、掉色、一摔就裂的杂牌。冷藏镇定可缓解出牙痛，但不要冷冻到硬邦邦。</div>
-                <div class="news-meta">2026.10.13 · 安全选购</div>
+                <div class="news-title"><span class="title-text">婴儿车避坑：这三个功能才是真需求</span><span class="arrow">▸</span></div>
+                <div class="news-detail">预算有限时优先保证三点：一键收车（抱娃时单手操作）、座椅可躺可坐换向（新生儿需平躺面向妈妈）、轮组避震（过坎不颠）。至于餐盘、蚊帐、挂件，多数是“买前觉得有用、买后吃灰”的配置。</div>
+                <div class="news-meta">2026.10.14 · 大件选购</div>
             </div>
             <div class="news-item" data-category="母婴">
-                <div class="news-title"><span class="title-text">防溢乳垫别贪便宜：3D立体款才贴身</span><span class="arrow">▸</span></div>
-                <div class="news-detail">防溢乳垫选3D立体款贴合度更好，一次贴住不跑位；小白熊60片约29元、子初100片19.9元都是性价比之选。注意勤更换防湿疹，搭配可水洗乳垫交替使用更经济。</div>
-                <div class="news-meta">2026.10.13 · 哺乳用品</div>
+                <div class="news-title"><span class="title-text">儿童安全座椅：i-Size认证怎么看</span><span class="arrow">▸</span></div>
+                <div class="news-detail">选购认准ECE R129（i-Size）认证标签：按身高分组（而非体重），要求反向安装至少到15个月。婴幼儿期反向安装能显著降低碰撞时颈椎受力——年龄不是换向标准，身高才是。</div>
+                <div class="news-meta">2026.10.14 · 出行安全</div>
             </div>
             </div>
         </section>
 </main>
 <footer>
-    <p class="updated">⏰ 每日更新 · 更新时间：2026.10.13 星期二 · 数据驱动装配 · 内容当日全新撰写</p>
+    <p class="updated">⏰ 每日更新 · 更新时间：2026.10.14 星期三 · 数据驱动装配 · 内容当日全新撰写</p>
 </footer>
 
 </body>
