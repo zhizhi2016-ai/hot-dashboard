@@ -3,1036 +3,1029 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日热点工作台 · 2026.10.22 · 星期四</title>
+<title>每日热点工作台 · 2026.10.23 星期五</title>
 <style>
 
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf5 100%);
-    min-height: 100vh; color: #2c3e50; padding-bottom: 40px;
-}
-.container { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
-header { text-align: center; padding: 30px 16px 18px; }
-header h1 {
-    font-size: 26px; background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-    margin-bottom: 8px;
-}
-.date-info { font-size: 14px; color: #7f8c8d; margin-bottom: 4px; }
-.subtitle { font-size: 13px; color: #95a5a6; }
-.filter-bar {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-    padding: 14px 12px; margin: 10px auto 22px; max-width: 860px;
-    background: rgba(255,255,255,0.7); border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(102,126,234,0.10); backdrop-filter: blur(6px);
-}
-.filter-btn {
-    padding: 8px 16px; border: none; border-radius: 20px; cursor: pointer;
-    background: #fff; color: #555; font-size: 14px; font-weight: 500;
-    transition: all .25s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-.filter-btn:hover { transform: translateY(-2px); color: #667eea; }
-.filter-btn.active { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; }
-.category { margin-bottom: 28px; }
-.category-title {
-    font-size: 19px; margin-bottom: 12px; padding-left: 12px;
-    border-left: 4px solid #667eea; display: flex; align-items: center; gap: 8px;
-}
-.category-title .count {
-    font-size: 12px; color: #fff; background: #a29bfe; padding: 2px 10px;
-    border-radius: 10px; font-weight: normal;
-}
-.news-list {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
-    max-height: 640px; overflow-y: auto; padding-right: 8px;
-}
-.news-list::-webkit-scrollbar { width: 6px; }
-.news-list::-webkit-scrollbar-thumb { background: #c3cfe2; border-radius: 3px; }
-.news-item {
-    background: #fff; border-radius: 14px; padding: 16px 18px;
-    box-shadow: 0 3px 12px rgba(44,62,80,0.07);
-    transition: transform .25s ease, box-shadow .25s ease;
-    display: flex; flex-direction: column;
-}
-.news-item:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(102,126,234,0.16); }
-.news-title {
-    font-size: 15px; font-weight: 600; color: #2c3e50; cursor: pointer;
-    display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
-    line-height: 1.5;
-}
-.news-title:hover { color: #667eea; }
-.news-title .arrow { color: #a29bfe; transition: transform .25s; flex-shrink: 0; font-size: 13px; margin-top: 3px; }
-.news-item.open .news-title .arrow { transform: rotate(90deg); }
-.news-detail {
-    display: none; font-size: 13.5px; color: #636e72; line-height: 1.75;
-    margin-top: 10px; padding-top: 10px; border-top: 1px dashed #dfe6e9;
-}
-.news-item.open .news-detail { display: block; }
-.news-meta { font-size: 12px; color: #b2bec3; margin-top: 8px; }
-footer { text-align: center; padding: 20px 0 10px; }
-.updated { font-size: 13px; color: #95a5a6; }
-@media (max-width: 760px) {
-    .news-list { grid-template-columns: 1fr; max-height: none; overflow-y: visible; }
-    header h1 { font-size: 21px; }
-}
-
-
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+background:#f4f5f7;color:#1f2328;line-height:1.6;padding:20px}
+.container{max-width:1280px;margin:0 auto}
+.header{background:linear-gradient(135deg,#2b3a55 0%,#3d5a80 100%);color:#fff;
+border-radius:14px;padding:24px 28px;margin-bottom:16px;box-shadow:0 4px 16px rgba(43,58,85,.18)}
+.header h1{font-size:26px;font-weight:700;letter-spacing:1px}
+.header .date{font-size:15px;opacity:.9;margin-top:6px}
+.header .subtitle{font-size:14px;margin-top:10px;background:rgba(255,255,255,.16);
+display:inline-block;padding:4px 12px;border-radius:20px}
+.header .updated{font-size:12px;opacity:.75;margin-top:10px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:1px solid #d6dae0;background:#fff;color:#3d4752;padding:7px 16px;border-radius:20px;
+font-size:13px;cursor:pointer;transition:all .18s}
+.tab:hover{border-color:#3d5a80;color:#3d5a80}
+.tab.active{background:#3d5a80;border-color:#3d5a80;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.card{background:#fff;border-radius:12px;padding:16px 18px;
+box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid #eceef1}
+.card-head{display:flex;align-items:center;gap:8px;padding-bottom:10px;
+border-bottom:2px solid #f0f2f5;margin-bottom:10px}
+.card-icon{font-size:18px}
+.card-head h2{font-size:16px;font-weight:700;color:#243447;flex:1}
+.card-head .count{font-size:12px;color:#8b95a3;background:#f4f6f8;padding:2px 8px;border-radius:10px}
+.news-list{max-height:520px;overflow-y:auto;padding-right:6px}
+.news-list::-webkit-scrollbar{width:5px}
+.news-list::-webkit-scrollbar-thumb{background:#d3d8de;border-radius:3px}
+.news-item{padding:9px 0;border-bottom:1px dashed #f0f2f5}
+.news-item:last-child{border-bottom:none}
+.news-title{font-size:14px;font-weight:600;color:#2c3542;cursor:pointer;
+display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.news-title:hover{color:#3d5a80}
+.news-title .arrow{font-size:11px;color:#a9b1bb;transition:transform .2s;flex-shrink:0}
+.news-item.open .news-title .arrow{transform:rotate(180deg)}
+.news-detail{display:none;font-size:13px;color:#5a6472;margin-top:8px;
+padding-left:10px;border-left:3px solid #d9e2ec;background:#fafbfc;padding:8px 10px;border-radius:0 6px 6px 0}
+.news-item.open .news-detail{display:block}
+.news-meta{display:none;font-size:11px;color:#98a1ad;margin-top:6px;padding-left:10px}
+.news-item.open .news-meta{display:block}
+.footer{text-align:center;font-size:12px;color:#9aa3af;padding:22px 0 8px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}body{padding:12px}}
 
 </style>
 </head>
 <body>
-<header>
-    <h1>🔥 每日热点工作台</h1>
-    <div class="date-info">📅 2026.10.22 · 星期四</div>
-    <div class="subtitle">8大分类 · 173条精选资讯</div>
-</header>
-<nav class="filter-bar">
-    <button class="filter-btn active" onclick="filterNews('全部')">🌐 全部</button>
-    <button class="filter-btn" onclick="filterNews('AI科技')">🤖 AI/科技</button>
-    <button class="filter-btn" onclick="filterNews('财经')">💰 财经</button>
-    <button class="filter-btn" onclick="filterNews('观点认知')">💡 观点认知</button>
-    <button class="filter-btn" onclick="filterNews('女性主义')">✊ 女性主义</button>
-    <button class="filter-btn" onclick="filterNews('新闻')">📰 新闻</button>
-    <button class="filter-btn" onclick="filterNews('历史')">📜 历史</button>
-    <button class="filter-btn" onclick="filterNews('电商')">🛒 电商</button>
-    <button class="filter-btn" onclick="filterNews('母婴')">👶 母婴</button>
-</nav>
-<section class="category" data-category="AI科技">
-        <h2 class="category-title">🤖 AI/科技<span class="count">21条</span></h2>
-        <div class="news-list">
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">Anthropic 发布全天候 AI 智能体 Claude Duet，与 Meta、OpenAI 正面交锋</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Anthropic 推出可全天候运行的 AI 智能体 Claude Duet，主打长时程自主执行与跨应用协同，直接与 Meta、OpenAI 在智能体赛道展开竞争。与前一代产品不同，Duet 强调「常驻」而非「应答」：它在后台持续维护任务上下文，用户离开后再回来仍能接续。智能体竞争的下半场，比的不是谁答得快，而是谁能把一件事从头盯到尾。</div>
-                <div class="news-meta">2026.10.22 · AI 智能体</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">黄仁勋在 GTC 柏林发布模块化 AI 工厂 DSX POD，投产周期压缩至最短 14 天</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英伟达首席执行官黄仁勋在 GTC 柏林大会发表主题演讲，展示公司在 AI 基础设施、智能体、开放模型、工业机器人和自动驾驶等领域的最新布局，并发布模块化 AI 工厂 DSX POD，计划于 2027 年初在全球交付。DSX POD 可将部署时间从传统方式的约 6 个月压缩至最短 14 天，加快客户从基础设施就绪到产出生产级 token 的速度。算力交付的瓶颈，正从芯片产能转向工程交付效率。</div>
-                <div class="news-meta">2026.10.22 · GTC 柏林</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">英伟达联手六家供应商大规模扩产，三年内光学引擎产能将扩 15 倍</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英伟达宣布与 Amkor、IBIDEN、京元电子、三星电机、矽品及欣兴电子六家供应商签署大规模扩产协议，涵盖基板、先进封装、半导体测试及光学引擎等关键环节：三年内基板产能提升 2.5 倍、封装增幅逾 300%、光学引擎扩产 15 倍。把供应链的扩产节奏写进公开协议，等于把未来三年的算力供给曲线提前摊开给市场看。</div>
-                <div class="news-meta">2026.10.22 · 算力供应链</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">AI 挖出 PHP 严重漏洞，欧洲多国政府网站周三接连下线</span><span class="arrow">▸</span></div>
-                <div class="news-detail">欧洲多国政府网站周三相继下线，起因是广泛使用的 PHP 编程语言被披露存在严重安全漏洞，且已有黑客开始主动利用该漏洞实施攻击。全球约 75% 的可识别编程语言网站以 PHP 运行，此次事件规模之大引发网络安全界高度警惕。值得玩味的是漏洞由 AI 发现——攻防两侧的自动化水平正在同时抬升。</div>
-                <div class="news-meta">2026.10.22 · 网络安全</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">宇树发布人形机器人 H2-X「功夫传奇」，站立续航约 8 小时、可从 4 米高台落地</span><span class="arrow">▸</span></div>
-                <div class="news-detail">宇树科技发布「H2-X（功夫传奇）」人形机器人，站立工况下续航可达约 8 小时。该款机器人机身可撞击车门并致其变形，可从 4 米高台安全落地，完成流畅的武术动作。从「能走」到「能挨一下」，人形机器人的评测标准正在从表演性指标转向结构强度与环境耐受。</div>
-                <div class="news-meta">2026.10.22 · 人形机器人</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">智元宣布 10 月 22 日起连发七项成果，覆盖数据集、重载机器人与具身 Agent 框架</span><span class="arrow">▸</span></div>
-                <div class="news-detail">智元宣布自 10 月 22 日起连续七个工作日发布七项成果，覆盖数据集、作业平台、重载机器人 G2 Max、具身 Agent 框架 GenieMaster、仿真平台、基座大模型与群体经验学习范式。把发布会拆成连续七天的节奏，本质是在争夺具身智能叙事的定义权。</div>
-                <div class="news-meta">2026.10.22 · 具身智能</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">OpenAI 将 ChatGPT 广告业务拓展至另外 26 个国家，为可能到来的 IPO 铺路</span><span class="arrow">▸</span></div>
-                <div class="news-detail">OpenAI 宣布将把 ChatGPT 广告业务拓展至另外 26 个国家，以进一步扩大广告业务规模、增加收入，为公司未来可能进行的 IPO 做准备；广告将仅面向 ChatGPT 免费版和 Go 订阅用户展示。广告覆盖面的扩张速度，往往是判断一家 AI 公司距离上市还有多远的最诚实指标。</div>
-                <div class="news-meta">2026.10.22 · OpenAI</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">中办国办发文推动科技创新与产业创新深度融合，提出探索「沙盒监管」</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中共中央办公厅、国务院办公厅发布《关于推动科技创新和产业创新深度融合的意见》，要求推动全链条贯通、全领域覆盖、全要素融通、全方位保障，形成科技创新和产业创新互融共促新格局；提出推动集成电路、工业母机、高端仪器、先进材料、生物制造等重点领域关键核心技术攻关取得决定性突破，在新业态新领域开展放宽市场准入试点、探索承诺即入制，加强新技术应用监管、探索「沙盒监管」方式。给创新留空间与给风险设边界，第一次被写进同一份文件的同一段话里。</div>
-                <div class="news-meta">2026.10.22 · 科技政策</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">金融街论坛金融科技大会开幕，三部门明确金融领域 AI 发展与治理方向</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026 金融街论坛年会金融科技大会在京开幕。国家外汇局局长朱鹤新表示，积极稳妥深化「人工智能+」，安全有序推进「数据要素×」，坚持风险可控；金融监管总局副局长肖远企表示，把人工智能治理纳入全周期管理体系，确保应用安全可控；证监会副主席刘浩凌表示，要建立健全全生命周期管理，科学划定高价值应用场景的边界和风险容忍尺度。金融业的 AI 叙事，正从「要不要用」转向「用到什么程度需要刹车」。</div>
-                <div class="news-meta">2026.10.22 · 金融 AI 治理</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">数字人民币年会公布基础设施服务体系，推出 DCEPS 与智能合约生态框架</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026 金融街论坛数字人民币年会召开，数字人民币运营管理中心对外公布数字人民币基础设施服务体系，推出央行端数字人民币系统（DCEPS）、数字人民币智能合约生态服务框架（e-CNY SMART Contract）两大核心成果。当智能合约成为标准件，货币的可编程性才真正从概念走向清算。</div>
-                <div class="news-meta">2026.10.22 · 数字人民币</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">工信部副部长辛国斌：审慎推进智能网联汽车准入，加快自动驾驶规模化示范</span><span class="arrow">▸</span></div>
-                <div class="news-detail">工信部副部长辛国斌在 2026 世界智能网联汽车大会上表示，下一步将加快出台关于加强汽车产品创新设计和研发测试验证有关管理工作的相关规定，审慎推进智能网联汽车准入和上路通行试点，加快自动驾驶重点场景规模化示范。试点二字前面的「审慎」，是监管对技术成熟度最直接的定价。</div>
-                <div class="news-meta">2026.10.22 · 智能网联汽车</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">万钢：上半年 L2 级辅助驾驶新车渗透率破 70%，2030 年 L3 有望超 35%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中国科学技术协会名誉主席万钢表示，2026 年上半年我国具备 L2 级辅助驾驶功能的乘用车新车渗透率已突破 70%，预计 2030 年将达到 95% 以上；预期到 2030 年 L3 级自动驾驶渗透率将超过 35%。从 70% 到 95% 是规模问题，从 L2 到 L3 才是责任主体的重新划分。</div>
-                <div class="news-meta">2026.10.22 · 自动驾驶</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">特斯拉 Q3 营收 280.5 亿美元略逊预期，自由现金流意外转正至 15.31 亿</span><span class="arrow">▸</span></div>
-                <div class="news-detail">特斯拉 2026 年第三季度营收 280.5 亿美元、同比下降 0.2%（预期 281.3 亿），其中汽车业务营收 205.6 亿美元、下降 3%；经营利润 7.18 亿美元、下降 56%；调整后每股收益 0.48 美元（预期 0.44）；毛利率 19.6%，较二季度回升近 2 个百分点；自由现金流 15.31 亿美元，市场预期为负 49.9 亿。电话会提出目标到 2030 年年产 500 万辆车，并称 2027 年所有 Megapacks 几乎售罄。储能拖累了营收，却救回了现金流。</div>
-                <div class="news-meta">2026.10.22 · 特斯拉财报</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">Meta 全年资本开支指引上调至 1350 亿—1450 亿美元，AI 投入继续加码</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Meta 在第三季度财报中将全年资本开支指引上调至 1350 亿—1450 亿美元（此前上限 1300 亿），并披露将于 2027 年 1 月发行一类新的无表决权 C 类普通股，用于资助收购和留住顶尖人才，同时在硅谷 AI 竞赛加剧中保持扎克伯格的控制权。扎克伯格称「我们的投资正在回应，核心业务强劲」。用股权结构设计换取长期控制权，是 AI 竞赛进入重资本阶段后的典型动作。</div>
-                <div class="news-meta">2026.10.22 · Meta 资本开支</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">iPhone Duo 明日发售全球限购 2 台，苹果未说明原因</span><span class="arrow">▸</span></div>
-                <div class="news-detail">苹果中国官网信息显示，计划在本月 23 日发售的 iPhone Duo 每位顾客限购 2 台。苹果客服表示，不仅是中国，iPhone Duo 在全球范围内均开启了限购；苹果并未发布限购原因，分析认为或是为了抑制黄牛囤货。限购，是供给不足最含蓄的告白。</div>
-                <div class="news-meta">2026.10.22 · 苹果</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">IBM 第三季度营收 171 亿美元超预期，自由现金流同比增长 28%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">IBM 第三季度营收 171 亿美元、同比增长 4.7%（预期 168.3 亿）；每股运营收益 2.95 美元（上年同期 2.65，预期 2.86）；自由现金流 30.3 亿美元、同比增长 28%（预期 26.3 亿）。在 AI 叙事被资本开支主导的年份，IBM 用一份「稳健但不激进」的财报证明老巨头仍有自己的节奏。</div>
-                <div class="news-meta">2026.10.22 · IBM</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">超微电脑单日涨超 9%，半导体与计算机硬件板块领涨美股</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美股周三半导体、计算机硬件板块涨幅居前，超微电脑涨超 9%，美光科技、SK 海力士涨超 2%，IBM 涨超 3%、英伟达涨逾 2% 领涨道指，万得美国科技七巨头指数涨 0.8%。AI 硬件侧的热度，正从 GPU 向外溢到存储、基板与整机。</div>
-                <div class="news-meta">2026.10.22 · AI 硬件</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">MLCC 供需失衡加剧，三星电机全线产品交货期延长至 52 周</span><span class="arrow">▸</span></div>
-                <div class="news-detail">积层陶瓷电容器（MLCC）市场供需失衡持续加剧，行业正逼近新一轮价格上行周期的临界点。三星电机旗下低容量、高容量及车载用 MLCC 全线产品交货期在 10 月延长至 52 周；中国台湾厂商 YAGEO 的主要 MLCC 产品交货期同样维持在 30 至 52 周。一年的交货期意味着：被动元件已经从成本项变成了排产约束。</div>
-                <div class="news-meta">2026.10.22 · 电子元件</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">工信部明确碳排放双控目标：2030 年建成国家级零碳算力设施约 500 个</span><span class="arrow">▸</span></div>
-                <div class="news-detail">我国工业和信息化领域碳排放双控重点任务目标明确：到 2030 年，建设国家级零碳工厂和零碳算力设施 500 个左右，规模以上工业单位增加值二氧化碳排放比、能耗比较 2025 年分别降低 17%、10% 以上。算力的尽头是电力，电力的尽头是碳指标。</div>
-                <div class="news-meta">2026.10.22 · 绿色算力</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">A 股 AI 硬件侧热度上升，光通信与存储板块逆势活跃</span><span class="arrow">▸</span></div>
-                <div class="news-detail">A 股周三震荡收跌，但 AI 硬件侧热度上升，光通信、存储板块表现活跃；同期港股半导体产业链同步走强。指数层面的涨跌与产业层面的景气度，正在越来越频繁地各说各话。</div>
-                <div class="news-meta">2026.10.22 · A股科技</div>
-            </div>
-            <div class="news-item" data-category="AI科技">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">SpaceX 单日涨近 8% 点燃 AI 交易，纳指反弹超 1%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">强劲季报提振 AI 交易，纳指反弹超 1%，SpaceX 涨近 8%，Meta 财报公布后美股盘后继续走高。市场把 SpaceX 一并计入 AI 交易篮子，说明投资者对「AI 概念」的边界划定，已经让位于对增长故事的偏好。</div>
-                <div class="news-meta">2026.10.22 · 美股 AI 交易</div>
-            </div>
+<div class="container">
+  <header class="header">
+    <h1>每日热点工作台</h1>
+    <div class="date">2026.10.23 星期五</div>
+    <div class="subtitle">8大分类·173条精选资讯</div>
+    <div class="updated">每日更新 · 2026.10.23</div>
+  </header>
+  <nav class="tabs">
+        <button class="tab active" onclick="filter('全部', this)">全部</button>
+        <button class="tab" onclick="filter('AI/科技', this)">🤖AI/科技</button>
+        <button class="tab" onclick="filter('财经', this)">💰财经</button>
+        <button class="tab" onclick="filter('观点认知', this)">💡观点认知</button>
+        <button class="tab" onclick="filter('女性主义', this)">♀️女性主义</button>
+        <button class="tab" onclick="filter('新闻', this)">📰新闻</button>
+        <button class="tab" onclick="filter('历史', this)">🏛️历史</button>
+        <button class="tab" onclick="filter('电商', this)">🛒电商</button>
+        <button class="tab" onclick="filter('母婴', this)">👶母婴</button>
+  </nav>
+  <main class="grid">
+      <section class="card" data-cat="AI/科技">
+        <div class="card-head">
+          <span class="card-icon">🤖</span>
+          <h2>AI/科技</h2>
+          <span class="count">21 条</span>
         </div>
-</section>
-<section class="category" data-category="财经">
-        <h2 class="category-title">💰 财经<span class="count">20条</span></h2>
         <div class="news-list">
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">法国 10 年期国债收益率突破 5%，创 2002 年以来新高</span><span class="arrow">▸</span></div>
-                <div class="news-detail">财政恶化与社会动荡交织，10 月 21 日法国 10 年期国债收益率突破 5% 的重要关口，创 2002 年以来新高；法国、德国 10 年期国债收益率利差升至 2011 年以来最高水平。分析人士警告，法国或成为欧元区新一轮主权债务危机的风险源。主权信用一旦被重新定价，传导速度远快于财政整顿的速度。</div>
-                <div class="news-meta">2026.10.22 · 欧债风险</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">英国 9 月 CPI 同比涨 3.5% 创 11 个月最大涨幅，交易员押注下月加息</span><span class="arrow">▸</span></div>
-                <div class="news-detail">受汽油和柴油价格飙升推动，英国 9 月 CPI 同比大幅上涨 3.5%，创 11 个月最大涨幅；作为国内价格压力指标的服务业通胀率升至 3.7%。交易员押注英国央行下月加息 25 个基点至 4% 的概率达到 98%。当市场给出 98% 的概率，真正的新闻反而是那剩下的 2%。</div>
-                <div class="news-meta">2026.10.22 · 英国通胀</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">英国公共部门净债务首破 3 万亿英镑，相当于 GDP 的 94%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">受政府支出增加、债务利息上升等因素影响，英国 9 月公共部门净借款额为 245 亿英镑，净债务总额首次突破 3 万亿英镑，达到 3.005 万亿英镑，相当于 GDP 的 94%，处于上世纪 60 年代初以来的高位。债务利息本身已成为财政支出中增长最快的科目。</div>
-                <div class="news-meta">2026.10.22 · 英国财政</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">日本央行副行长暗示准备加息，抗通缩框架或迎象征性转折</span><span class="arrow">▸</span></div>
-                <div class="news-detail">日本央行副行长冰见野良三表示，日本基础通胀水平已相当接近 2% 目标，且金融环境依然保持宽松，暗示该行已准备好加息。另据知情人士透露，日本央行将在 10 月政策会议就是否实现 2% 通胀目标作出正式判断，若确认实现，将标志着日本历时近 14 年的抗通缩政策框架迎来象征性转折。达成一个追求了十四年的目标，同时意味着告别一套运行了十四年的逻辑。</div>
-                <div class="news-meta">2026.10.22 · 日本央行</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">日本 1—9 月中国内地访日游客同比下降 55.5%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">日本政府观光局公布的数据显示，今年 1 月至 9 月中国内地访日游客数量同比下降 55.5%。自日本首相高市早苗发表涉台错误言论以来，中国内地赴日游客数量持续走低。旅游数据往往是政治温度最先显形的体温计。</div>
-                <div class="news-meta">2026.10.22 · 中日旅游</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">印尼央行维持基准利率 5.75% 不变，分两步降准应对 MSCI 降级威胁</span><span class="arrow">▸</span></div>
-                <div class="news-detail">印尼央行维持基准利率在 5.75% 不变，同时决定分两步降低存款准备金率，并继续采取有针对性的措施来支撑印尼盾，以应对 MSCI 对印尼市场降级威胁引发的市场波动。汇率、利率与指数评级，新兴市场常常要在三条战线上同时防守。</div>
-                <div class="news-meta">2026.10.22 · 新兴市场</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">A 股震荡收跌，上证指数跌 0.6% 报 3713.03 点，创业板连跌八日</span><span class="arrow">▸</span></div>
-                <div class="news-detail">A 股周三震荡收跌，上证指数跌 0.6% 报 3713.03 点；创业板指跌 1.62%，连跌八日并失守 2700 关口；深证成指跌 0.82%，万得全 A 跌 0.41%，大市成交 1.44 万亿元。家电、白酒板块疲软，新能源汽车产业链整体承压。</div>
-                <div class="news-meta">2026.10.22 · A股</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">恒生指数收跌 0.9% 报 23651.87 点，南向资金净卖出超 44 亿港元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">恒生指数收跌 0.9% 报 23651.87 点，恒生科技指数跌 1.26%，恒生中国企业指数跌 1.08%。新能源汽车、锂电池、固态电池概念集体下挫，半导体产业链走强。南向资金净卖出超 44 亿港元，腾讯控股遭净卖出 17 亿港元。</div>
-                <div class="news-meta">2026.10.22 · 港股</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">宁德时代单日跌 12%，公司回应：行业需求没有那么悲观</span><span class="arrow">▸</span></div>
-                <div class="news-detail">宁德时代股价单日下跌 12%，新能源汽车产业链整体承压。公司回应市场担忧称，行业需求没有那么悲观，接下来产能利用率仍将处于较高水平。龙头对需求的表态，往往比券商模型更能影响短期情绪。</div>
-                <div class="news-meta">2026.10.22 · 宁德时代</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">泡泡玛特连跌五日创 2025 年 4 月以来新低，段永平称还会再买一些</span><span class="arrow">▸</span></div>
-                <div class="news-detail">泡泡玛特已连续 5 个交易日下跌，股价创 2025 年 4 月以来新低，五日累计跌幅超过 13%。有网友向段永平提问是否会趁股价下跌继续买入，段永平回应称应该还会再买一些，但不会超过公司的 10%。加仓与抄底的区别，在于有没有提前设定上限。</div>
-                <div class="news-meta">2026.10.22 · 泡泡玛特</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">美股三大指数全线收涨，道指涨 0.69% 报 52856.09 点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美国三大股指全线收涨，道指涨 0.69% 报 52856.09 点，标普 500 指数涨 0.58% 报 7757.17 点，纳指涨 1.05% 报 26702.86 点；特斯拉涨超 3%，苹果涨逾 1%。纳斯达克中国金龙指数跌 2.35%，好未来跌超 9%，禾赛科技跌逾 5%。</div>
-                <div class="news-meta">2026.10.22 · 美股</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">Meta 第三季度营收 646 亿美元同比增长 26%，盘后涨超 3%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">Meta 2026 年第三季度营收 646 亿美元、同比增长 26%（预估 633.3 亿）；经营利润 129.9 亿美元、同比下降 37%（预估 208.5 亿）；每股收益 3.83 美元（上年同期 1.05，预估 3.57）。公司第四季度预计营收 730 亿—760 亿美元（预估 735.7 亿）。自由现金流为负 21.2 亿美元，去年同期为 106.3 亿。营收超预期而利润低于预期，是重投入期最典型的财报形态。</div>
-                <div class="news-meta">2026.10.22 · Meta 财报</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">韩国综合指数收涨 3.29% 触发侧车机制，SK 海力士结束 40 万亿韩元回购</span><span class="arrow">▸</span></div>
-                <div class="news-detail">韩国综合指数收涨 3.29% 报 5735.66 点，盘中一度涨近 5% 触发「侧车机制」、暂停程序化买入；SK 海力士、三星电子均涨近 6%。继三星电子之后，SK 海力士也于 10 月 21 日结束历时两个月、规模达 40 万亿韩元的股票回购，此次回购股份约占公司已发行股份总数的 3.3%，是韩国上市公司规模最大的股票注销操作。</div>
-                <div class="news-meta">2026.10.22 · 韩国股市</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">证监会与北交所明确下一步路线图，推进北证 50 ETF 落地</span><span class="arrow">▸</span></div>
-                <div class="news-detail">证监会和北交所共同明确北交所下一步发展路线图：将发布北交所创新性评价标准，让企业「对号入座」、明确申报预期；完善北交所发行承销制度，稳妥实施新股市值配售；推进北证 50 ETF 落地，加大公募基金供给力度；完善做市商激励约束机制，降低做市成本；促进北交所、新三板一体化高质量发展。</div>
-                <div class="news-meta">2026.10.22 · 北交所</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">上交所召开首批主动 ETF 市场动员会，强化全链条监管</span><span class="arrow">▸</span></div>
-                <div class="news-detail">上海证券交易所召开首批主动 ETF 市场动员会，旨在保障首批主动 ETF 平稳落地运行、引导中长期资金入市。上交所相关负责人表示，首批主动 ETF 要开好头、起好步，将强化对主动 ETF 发行上市、投资运作、信息披露的全链条监管。</div>
-                <div class="news-meta">2026.10.22 · 主动 ETF</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">银行理财存续规模达 35.37 万亿元再创新高，三季度创造收益 1417 亿元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">银行业理财登记托管中心报告显示，截至三季度末全市场理财产品存续规模 35.37 万亿元，同比增长 10.08%，再创新高；三季度理财产品累计为投资者创造收益 1417 亿元，其中理财公司贡献 1252 亿元，银行机构贡献 165 亿元。规模创新高与收益创新高同时出现，说明资金仍在寻找确定性。</div>
-                <div class="news-meta">2026.10.22 · 银行理财</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">在岸人民币收报 6.6777，刷新 2022 年 6 月以来新高</span><span class="arrow">▸</span></div>
-                <div class="news-detail">周三在岸人民币对美元 16:30 收盘报 6.6777，较上一交易日上涨 14 个基点，刷新 2022 年 6 月以来新高，夜盘收报 6.6760；人民币对美元中间价报 6.7192，较上一交易日升值 8 个基点，再度刷新 2023 年 2 月 2 日以来最高。</div>
-                <div class="news-meta">2026.10.22 · 人民币汇率</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">美债收益率多数上行，10 年期报 5.119%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美债收益率多数上涨，2 年期涨 2.77 个基点报 4.802%，3 年期涨 2.27 个基点报 4.886%，5 年期涨 1.97 个基点报 4.947%，10 年期涨 0.85 个基点报 5.119%，30 年期跌 1.2 个基点报 5.409%。长端与短端的分歧，通常比绝对水平更值得关注。</div>
-                <div class="news-meta">2026.10.22 · 美债</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">COMEX 黄金涨 0.41% 报 4159.50 美元/盎司，布油站上 110 美元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国际贵金属期货普遍收涨，COMEX 黄金期货涨 0.41% 报 4159.50 美元/盎司，COMEX 白银期货涨 0.20% 报 58.12 美元/盎司，主要受地缘局势升级推升避险买盘、央行持续购金支撑实物需求，叠加美联储政策分歧下的双向对冲。美油主力合约收跌 0.11% 报 97.71 美元/桶，布油主力涨 1.13% 报 110.02 美元/桶。</div>
-                <div class="news-meta">2026.10.22 · 大宗商品</div>
-            </div>
-            <div class="news-item" data-category="财经">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">长三角前三季度进出口 15.19 万亿元创历史同期新高，同比增 20.3%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">据上海海关统计，今年前三季度长三角区域进出口总值 15.19 万亿元，规模创历史同期新高，同比增长 20.3%，占全国进出口总值的 38%，已连续 19 个月实现增长。连续十九个月的增长，比单月新高更能说明产业结构的韧性。</div>
-                <div class="news-meta">2026.10.22 · 外贸</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">第23届中国计算机大会在成都开幕，注册人数突破1.1万<span class="arrow">▾</span></div>
+            <div class="news-detail">10月22日，第23届中国计算机大会（CNCC）在成都西部国际博览城开幕，注册人数超过1.1万人，这是该会议创办二十余年来首次落地四川。会场内外被反复提起的三个词是数据、算力与实验室，反映出人工智能基础设施与创新范式正在同步转向。CNCC 作为中国计算机领域规模最大的学术会议之一，其议题重心的迁移，往往被视为产业风向的提前信号。</div>
+            <div class="news-meta">来源：新华网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">曙光8000（登峰）全国产十万卡AI超集群已支撑300多个重点科学工程<span class="arrow">▾</span></div>
+            <div class="news-detail">中科曙光高级副总裁李斌在大会上介绍，今年7月上线的曙光8000（登峰）全国产十万卡AI超集群，目前已支撑300多个重点科学工程仿真和万卡级模型预训练。该集群采用“超节点+超集群”的系统级创新思路，围绕计算、存储、互连、供电、冷却进行一体紧耦合设计，目标是把 Token 的生产效率作为系统工程指标来优化。</div>
+            <div class="news-meta">来源：CNCC 现场 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">从“堆单卡”到“系统工程”：AI基础设施的评价标准正在改写<span class="arrow">▾</span></div>
+            <div class="news-detail">海光信息智算量化设计专家孙建鹏表示，大模型参数量正从千亿级向万亿级乃至十万亿级跃升，单卡、单机已难以支撑大规模训练与推理。基础设施建设正从优化单一部件，转向计算、通信、存储以及芯片与软件协同调度的复杂系统工程，只有把整体系统效率提上去，算力成本才可能真正下降。</div>
+            <div class="news-meta">来源：CNCC 现场 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">四川“天府·慧研”人工智能赋能科技创新一体化平台正式上线<span class="arrow">▾</span></div>
+            <div class="news-detail">大会期间，由四川省建设的“天府·慧研”人工智能赋能科技创新一体化平台正式上线。该平台面向科研全链条，整合算力调度、数据治理与模型服务，试图解决科研团队“各自找卡、各自训模型”的重复投入问题，把 AI 能力做成可按需取用的公共服务。</div>
+            <div class="news-meta">来源：新华网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">矿山大模型落地：岩矿识别准确率从85%提升至93%<span class="arrow">▾</span></div>
+            <div class="news-detail">四川省自然资源数字科技有限责任公司首席技术官樊启武介绍，该企业主导的矿山大模型探矿环节已在十余家单位应用，采矿环节正在红格南矿和四川黄金旗下矿山试用，预计明年年底完成全部建设。在岩矿识别上，传统人工鉴定需要研究生学历加2至3年经验、日均处理10多张片子；用5万张高质量标注数据训练后，AI日均处理上千甚至上万张片子，准确率从85%提升至93%。</div>
+            <div class="news-meta">来源：CNCC 现场 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">谷歌发布 Gemini 4 Argon，输出 token 上限提升至100万<span class="arrow">▾</span></div>
+            <div class="news-detail">谷歌发布新一代旗舰模型 Gemini 4 Argon，官方将其描述为“前沿智能的新阶段”，主打复杂长周期工作流中的深度推理。其输出 token 上限从上一代的6.4万提升到100万，在 DeepSWE v1.1 基准上得分77.9%。长输出窗口的意义在于，模型可以把过去需要多轮拆解的任务一次性完成。</div>
+            <div class="news-meta">来源：谷歌官方 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">OpenAI 公布 GPT-6 家族选型指南：Astra、Sol、Luna 分工明确<span class="arrow">▾</span></div>
+            <div class="news-detail">OpenAI 发布 GPT-6 家族模型选型指南，面向开发者说明 Astra、Sol 与 Luna 三款模型的定位，以及推理档位、速度与上下文管理方面的实践建议。三款模型分别对应超快推理、均衡通用与长上下文深度思考三类场景，开发者可按任务的时延预算与预算约束做组合，而非一味追求最强档。</div>
+            <div class="news-meta">来源：OpenAI 开发者文档 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">英伟达 Blackwell 支撑 GPT-6 Astra，最高8倍输出生成速度<span class="arrow">▾</span></div>
+            <div class="news-detail">英伟达官方博客披露，OpenAI 的 GPT-6 Astra 超快推理模式运行在英伟达 Blackwell GPU 之上，借助持续推理优化实现最高8倍于标准模式的输出生成速度，现已面向开发者开放。这也意味着推理侧的竞争焦点，正从“能不能跑”转向“单位成本下每秒出多少 token”。</div>
+            <div class="news-meta">来源：英伟达官方博客 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">黑森林实验室发布 FLUX 3 Image，支持4K分辨率与精确边界框控制<span class="arrow">▾</span></div>
+            <div class="news-detail">德国 AI 公司黑森林实验室发布图像生成模型 FLUX 3 Image，支持生成最高4K分辨率图片。用户可指定每个元素的编号、描述文本和精确边界框，单次生成最多可融入10张参考图像。对电商素材、广告海报等需要严格构图的商业场景而言，可控性比画质更早构成采购决策的门槛。</div>
+            <div class="news-meta">来源：黑森林实验室 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">CoreWeave 部署 Vera Rubin NVL72，Cognition 成为首个生产客户<span class="arrow">▾</span></div>
+            <div class="news-detail">AI 云服务商 CoreWeave 宣布，英伟达 Vera Rubin NVL72 系统已在其云平台正式投入生产，AI 软件公司 Cognition 成为首个在该平台运行生产工作负载的客户。实测总 Token 吞吐量较 GB200 NVL72 提升最高4.8倍，在强化学习场景中每 GPU 输出 Token 吞吐量达到后者的3.8倍。</div>
+            <div class="news-meta">来源：CoreWeave · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">腾讯与甲骨文签署最大海外租赁协议，涉及约10万块先进AI芯片<span class="arrow">▾</span></div>
+            <div class="news-detail">有报道称，腾讯已与甲骨文签署其最大海外租赁协议，在东南亚多个甲骨文数据中心获取约10万块先进 AI 芯片，交易估值约70亿美元，为期五年。在国内算力供给趋紧的背景下，头部云厂商把算力采购半径扩展到海外，已成为能力补缺的现实路径。</div>
+            <div class="news-meta">来源：腾讯新闻 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">日本 JERA 联合戴尔建标准化AI基础设施，首个数据中心落地千叶县<span class="arrow">▾</span></div>
+            <div class="news-detail">日本供电规模最大的电力公司 JERA 与戴尔、主权人工智能基础设施开发商签署谅解备忘录，三方将共同制定日本人工智能基础设施建设的标准化框架。首个数据中心将落地千叶县，设计容量达400MW，是日本最大的单一数据中心站点。电力公司直接下场做算力，说明能源约束已成为 AI 扩张的前置变量。</div>
+            <div class="news-meta">来源：腾讯新闻 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Anthropic 设立公共收益基金，规模随公司估值增长<span class="arrow">▾</span></div>
+            <div class="news-detail">Anthropic 宣布设立 Public Benefit Fund（公共收益基金），基金规模将随公司估值增长而扩大。这一安排把公司治理结构与公共利益绑定，试图在追求商业回报的同时，为 AI 安全研究与普惠应用预留长期资金池。</div>
+            <div class="news-meta">来源：AI News · 10月19日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Anthropic 寻求最早11月中旬启动IPO，争取感恩节前挂牌<span class="arrow">▾</span></div>
+            <div class="news-detail">有消息称 Anthropic 正寻求最早于11月中旬启动 IPO，争取在感恩节前挂牌。若成行，这将是继大型云厂商之后又一家头部模型公司进入公开市场，投资者对 AI 商业化节奏的定价方式也将获得新的参照系。</div>
+            <div class="news-meta">来源：IT时代网 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">ElevenLabs 允许员工按220亿美元估值兑现部分股权，半年翻倍<span class="arrow">▾</span></div>
+            <div class="news-detail">语音 AI 初创公司 ElevenLabs 允许员工按220亿美元估值兑现一部分已归属股权，这一数字较今年2月的110亿美元翻了一倍。语音合成赛道在客服、有声内容与企业培训等场景的渗透加速，是估值抬升的主要支撑。</div>
+            <div class="news-meta">来源：IT时代网 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Cloudflare 发布开源多模态决策模型 Clef，基于 Qwen 基座<span class="arrow">▾</span></div>
+            <div class="news-detail">Cloudflare 发布基于 Qwen 基座的多模态决策模型 Clef，原生配备视觉编码器，可直接解析图像输入并对视觉内容进行判别分类，上下文窗口扩展至64k。开源决策模型把“看懂图片再判断”的能力下沉到边缘网络，为内容审核、无障碍描述等场景提供低延迟选项。</div>
+            <div class="news-meta">来源：IT时代网 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">谷歌 Gemini 上线 Skills 功能，斜杠命令即可调用可复用指令集<span class="arrow">▾</span></div>
+            <div class="news-detail">谷歌宣布 Skills 功能正式在 Gemini 对话体验中上线。Skills 是可复用的指令集，用户无需再进入 Gem 管理器，直接在输入框以斜杠命令即可调用，免费用户可用。把提示词从“每次重写”变成“一次沉淀、随时调用”，是降低 AI 使用门槛的关键一步。</div>
+            <div class="news-meta">来源：IT时代网 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">豆包桌面客户端上架鸿蒙电脑平台，同时搭载两款自研模型<span class="arrow">▾</span></div>
+            <div class="news-detail">豆包桌面客户端正式上架鸿蒙电脑平台，首版本同时搭载豆包 2.1 Turbo 和豆包 2.1 Pro 两款模型，支持对话与工作两种模式随心切换。桌面端入口的价值在于常驻与上下文连续性，这也是国产模型争夺高频使用场景的必争之地。</div>
+            <div class="news-meta">来源：IT时代网 · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">SuperCLUE 具身大脑榜单：GPT-6 Astra 全球第一，阿里中兴并列国内第一<span class="arrow">▾</span></div>
+            <div class="news-detail">评测机构 SuperCLUE 公布最新具身大脑评测榜单，OpenAI 的 GPT-6 Astra 拿下综合全球第一；国内阵营中阿里、中兴两家并列国内第一。具身大脑评测关注的是模型驱动物理实体完成任务的能力，与纯语言评测的相关性正在减弱。</div>
+            <div class="news-meta">来源：SuperCLUE · 10月16日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">微软发布 2026 数字防御报告，为政府AI部署提出数据控制建议<span class="arrow">▾</span></div>
+            <div class="news-detail">微软 2026 数字防御报告建议，政府机构在采用 AI 时应建立数据分级控制、系统级测试与共享安全运营机制。报告特别指出，提示词、查询日志、智能体记忆存储与生成文本都应纳入访问管控，任何跨 API 或跨应用运行的智能体都需要可审计的身份记录。微软还提醒，外部内容中的嵌入式指令可能污染智能体记忆，建议对记忆写入路径做隔离。</div>
+            <div class="news-meta">来源：Microsoft Digital Defense Report · 10月2日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">UPS 探索用AI寻找替代飞机零件，应对维修件短缺<span class="arrow">▾</span></div>
+            <div class="news-detail">UPS 正在探索利用 AI 为飞机维修寻找替代零件，以缓解供应链短缺导致的停场压力。这类应用不追求模型能力的上限，而是把 AI 用作跨系统的检索与匹配层，在高度受监管的行业中先从“找得到”开始创造价值。</div>
+            <div class="news-meta">来源：AI News · 10月15日</div>
+          </div>
         </div>
-</section>
-<section class="category" data-category="观点认知">
-        <h2 class="category-title">💡 观点认知<span class="count">29条</span></h2>
+      </section>
+      <section class="card" data-cat="财经">
+        <div class="card-head">
+          <span class="card-icon">💰</span>
+          <h2>财经</h2>
+          <span class="count">20 条</span>
+        </div>
         <div class="news-list">
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">沙盒监管的真正含义：先承认自己不知道会发生什么</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中办国办文件提出探索「沙盒监管」，把监管从事前审批改成事中观察。这个词背后是一次认知让步——承认新技术的影响无法在落地前被完整推演。真正成熟的管理，不是把所有风险挡在门外，而是在可控范围内让风险显形。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">Meta 利润下滑 37% 而股价上涨，市场在为什么定价</span><span class="arrow">▸</span></div>
-                <div class="news-detail">营收增长 26%、经营利润下降 37%、股价盘后上涨，这三个数字放在一起并不矛盾：市场买的是未来现金流的折现，不是本季的分母。但它也提醒我们，「被理解」与「被奖励」之间存在时间差，而这段差值就是波动的来源。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">52 周的交货期：最不起眼的环节往往是最硬的约束</span><span class="arrow">▸</span></div>
-                <div class="news-detail">一颗 MLCC 电容的交货期延长到一年，就能卡住整条产线的排产。系统论里最朴素的结论是：整体速度由最慢的环节决定，而这个环节往往最不被讨论。识别瓶颈的能力，比优化非瓶颈的能力稀缺得多。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">AI 发现了 PHP 漏洞，这既是好消息也是坏消息</span><span class="arrow">▸</span></div>
-                <div class="news-detail">同一个能力提升攻防两侧：它让漏洞无处藏身，也让武器化的门槛降低。任何工具都有双面性，但人们总倾向于只看向自己受益的那一面。技术进步不会自动带来安全改善，只会加快双方的节奏。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">月活 3.8 亿而日收入不足百万：流量不等于商业</span><span class="arrow">▸</span></div>
-                <div class="news-detail">豆包坐拥 3.8 亿月活，却主要靠电商佣金获得每天不足百万元的收入。这说明流量只是入口，商业模式的成立需要独立的验证——能聚集注意力和能完成交易，是两种完全不同的能力。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">别人恐惧时加仓，前提是知道自己加的是什么</span><span class="arrow">▸</span></div>
-                <div class="news-detail">泡泡玛特连跌五日、段永平表示还会再买但不超过公司 10%。逆向投资的关键从来不是勇气，而是对自己的估值判断有足够把握，并且提前设定了仓位上限。没有上限的勇敢，只是另一种形式的赌博。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">达成一个追求十四年的目标，也是一种告别</span><span class="arrow">▸</span></div>
-                <div class="news-detail">日本央行即将判断是否实现 2% 通胀目标。目标达成的那一刻，往往伴随着身份的失落——过去十四年建立起来的一切方法论，都是为「尚未达成」这个状态服务的。人也一样，很多焦虑不是来自没得到，而是来自得到之后不知道下一步该往哪走。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">双 11 去狂欢化：从峰值叙事到日常叙事</span><span class="arrow">▸</span></div>
-                <div class="news-detail">平台不再熬夜冲零点、不再只盯成交额，大促周期被拉长到 28 天。峰值的消失不一定意味着衰退，也可能意味着这门生意从「事件」变成了「基础设施」。判断一个事物是否有生命力，要看它在非峰值状态下的样子。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">消费入座之争：空间从来不是免费的</span><span class="arrow">▸</span></div>
-                <div class="news-detail">星巴克入华 27 年首次明确「消费入座」。公共空间的成本总是由某个人承担，区别只在于是否明码标价。很多争议的本质不是道德问题，而是成本归属问题——把它说清楚，冲突就少一半。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">女性管理者增加 1%，碳排放减少 0.5%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">联合国妇女署引用的这组数据提醒我们：多元化不是装饰性的合规指标，它会真实改变决策的输出。当董事会、管理层性别多元的上市公司股价涨幅更高、波动更小，平等就不再是让渡效率的妥协。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">性别平等还需 171 年：把抽象目标换算成时间</span><span class="arrow">▸</span></div>
-                <div class="news-detail">联合国妇女署指出，若要实现可持续发展第 5 项目标还需 171 年，而叠加气候变化等挑战可能更久。抽象的「任重道远」一旦换算成具体年数，就会显露出它真实的重量。衡量进度的最好方式，是把口号翻译成可验证的数字。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">当母亲替女儿出头：制度的缺位由亲情补位</span><span class="arrow">▸</span></div>
-                <div class="news-detail">天津一公司男领导向刚毕业的女下属发送淫秽照片，最终是女孩母亲冲到公司门口举牌才引发关注。这一幕令人心酸之处在于——真正健康的职场不该让受害者靠家人「闹大」才能被看见。制度前置与畅通的投诉渠道，比事后的正义更有价值。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">从 L2 的 70% 到 L3 的 35%，中间隔着责任主体</span><span class="arrow">▸</span></div>
-                <div class="news-detail">辅助驾驶渗透率从 70% 走向 95% 只是规模问题，但 L3 意味着事故责任的归属从人转移到系统。技术上连续的演进，在制度上往往是非连续的跳跃。判断一项技术真正落地的时间点，要看制度何时准备好，而不是技术何时准备好。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">人形机器人开始比拼「能挨一下」</span><span class="arrow">▸</span></div>
-                <div class="news-detail">宇树 H2-X 的宣传重点包括撞击车门致其变形、从 4 米高台安全落地。评测标准从表演性转向耐受性，说明这个行业正在从演示阶段进入工况阶段。一个领域的成熟度，可以从它用什么指标来宣传自己看出来。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">限购两台：稀缺最含蓄的表达方式</span><span class="arrow">▸</span></div>
-                <div class="news-detail">苹果对 iPhone Duo 实施全球限购却不说明原因。供给不足会以各种间接形式显形——限购、排队、加价、缺货。读懂这些信号，比读懂官方口径更接近事实。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">3 万亿英镑的账单，是写给下一代的</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英国净债务突破 3 万亿英镑、相当于 GDP 的 94%，回到上世纪 60 年代初的水平。财政赤字本质上是代际转移，它把今天的消费记在明天的账上。所有关于债务的讨论，最终都是一个关于我们愿意为后代留下什么的问题。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">刚需品类的升级，发生在消费者看不见的地方</span><span class="arrow">▸</span></div>
-                <div class="news-detail">CKE 展会上，奶瓶从材质安全卷到感温刻度、免手扶与清洗自动化。当一个品类进入成熟期，竞争会从「有没有」转向「省不省事」。判断一个行业的阶段，看它宣传什么就够了。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">长征精神里最动人的一句：把终点当成起点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">1935 年吴起镇会议上，张闻天说「一个历史时期已经完结，一个新的历史时期开始了」。同一件事可以被描述为结束，也可以被描述为开始，而选择哪种描述几乎决定了后续的行动方向。叙事不是对事实的装饰，它是行动的前置条件。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">从 6 个月压缩到 14 天：交付效率本身就是产品</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英伟达 DSX POD 把 AI 工厂部署周期缩短到最短 14 天。当所有人都在比拼芯片性能时，有人把工程交付效率做成了差异化。在成熟的产业链里，时间往往比参数更值钱。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">你今天读的每一条资讯，三个月后都会过期</span><span class="arrow">▸</span></div>
-                <div class="news-detail">173 条精选里，绝大多数在三个月后不再有任何信息价值。真正留下来的是那些改变了你判断框架的东西——一个模型、一种视角、一次被修正的偏见。区分「知道」与「理解」的方式很简单：看它在三个月后是否还在发挥作用。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">确定性是有溢价的，但溢价本身会波动</span><span class="arrow">▸</span></div>
-                <div class="news-detail">银行理财规模创新高、黄金站上 4159 美元、人民币刷新四年新高——三件事指向同一个情绪：资金正在为确定性付费。问题在于，当所有人都为确定性付费时，确定性本身就成了最拥挤的交易。溢价的高低，取决于还有多少人愿意排队。</div>
-                <div class="news-meta">2026.10.22 · 认知随笔</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《思辨与立场》：批判性思维不是抬杠，是给自己的思维做体检</span><span class="arrow">▸</span></div>
-                <div class="news-detail">这本书把思维拆成元素、标准与特质三层，提醒我们大多数争论之所以无解，是因为双方连「问题是什么」都没对齐。真正的批判性思维首先指向自己：我的假设是什么，我有没有在选择性使用证据。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《穷查理宝典》：芒格的多元模型与反过来想的智慧</span><span class="arrow">▸</span></div>
-                <div class="news-detail">芒格强调不要只有一个锤子，要把心理学、历史、数学与物理学的模型装进同一个头脑。他最实用的方法论是逆向思考：与其研究怎样成功，不如研究怎样必然失败，然后避开它。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《刻意练习》：天才论最有力的反驳，也是有边界的结论</span><span class="arrow">▸</span></div>
-                <div class="news-detail">刻意练习的核心是明确目标、即时反馈与走出舒适区，它解释了为什么单纯的重复不能带来进步。但它也有边界：在缺乏清晰评价标准的领域，练习的回报会显著下降。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《把时间当作朋友》：心智力量比时间管理技巧更底层</span><span class="arrow">▸</span></div>
-                <div class="news-detail">作者的核心观点是时间无法被管理，能被管理的只有自己。开启心智、接受现实、用积累对抗速成心态，这些朴素的结论在信息过载的今天反而更稀缺。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《厌女》：上野千鹤子拆解一种无所不在的结构</span><span class="arrow">▸</span></div>
-                <div class="news-detail">厌女不是个体的恶意，而是一套让男性蔑视女性、女性自我厌恶的结构。它之所以难以察觉，是因为它已经内化为常识、幽默与审美偏好，甚至被当事人当作自愿的选择。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《一间自己的房间》：伍尔夫给出的答案朴素而昂贵</span><span class="arrow">▸</span></div>
-                <div class="news-detail">「一个女人如果要写小说，必须有钱和一间属于自己的房间。」伍尔夫在近百年前指出的物质条件问题，今天换成了时间、注意力与不被打扰的空间，形式变了，稀缺性没变。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《人类简史》：认知革命、农业革命与「想象的秩序」</span><span class="arrow">▸</span></div>
-                <div class="news-detail">赫拉利的关键洞见是人类合作规模之所以能远超其他物种，靠的是共同相信的故事——国家、货币、公司都是想象的秩序。这个视角对理解今天的品牌、平台与共识资产格外好用。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
-            <div class="news-item" data-category="观点认知">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">《乌合之众》：群体心理的经典，也需要带着距离读</span><span class="arrow">▸</span></div>
-                <div class="news-detail">勒庞对群体情绪化、易受暗示的判断至今锋利，但这本书的抽样与立场都有明显时代局限。读它的正确姿势是当作一面镜子：先理解群体如何形成，再警惕自己正在其中。</div>
-                <div class="news-meta">2026.10.22 · 推荐书</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">吴清在2026金融街论坛年会系统部署资本市场稳定与改革开放<span class="arrow">▾</span></div>
+            <div class="news-detail">10月19日，2026金融街论坛年会上，中国证监会主席吴清围绕资本市场稳定运行、投融资改革与高水平对外开放作出系统部署。他明确提出推动健全适配长期投资的长周期考核机制，扩大中长期资金来源、渠道和入市方式，同时鼓励有条件的上市公司加大回购增持力度。</div>
+            <div class="news-meta">来源：中国证券报 · 10月20日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">证监会同意首批18只主动ETF注册，丰富配置工具箱<span class="arrow">▾</span></div>
+            <div class="news-detail">证监会于金融街论坛年会当日同意首批18只主动ETF注册。主动ETF兼顾交易便利与主动管理，有望为投资者提供介于被动指数与主动权益之间的中间工具，也为公募机构提供了差异化的产品竞争空间。产品注册并不直接等同于资金净流入，后续仍需观察实际募集与持营情况。</div>
+            <div class="news-meta">来源：上证报 · 10月20日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">上半年上市公司营收37.7万亿元、净利润3.6万亿元，同比增长19.5%<span class="arrow">▾</span></div>
+            <div class="news-detail">证监会披露数据显示，上半年上市公司实现营业收入37.7万亿元、净利润3.6万亿元，净利润同比增长19.5%，创近三年同期新高。盈利修复正在从报表端向投资者回报端传导，这被认为是市场内在稳定性增强的最重要微观基础。</div>
+            <div class="news-meta">来源：证监会 · 10月19日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">年内分红回购2.1万亿元，相当于同期IPO和再融资规模的2.7倍<span class="arrow">▾</span></div>
+            <div class="news-detail">数据显示，上市公司年内分红回购合计2.1万亿元，相当于同期 IPO 和再融资规模的2.7倍。这意味着资本市场正在从“重融资”向投融资并重转变，股东回报成为衡量上市公司质量的重要维度。</div>
+            <div class="news-meta">来源：证监会 · 10月19日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">央行下调PSL利率0.25个百分点，并扩大支持领域<span class="arrow">▾</span></div>
+            <div class="news-detail">9月29日，中国人民银行集中调整四项货币政策工具，其中之一为下调抵押补充贷款（PSL）利率0.25个百分点，并扩大 PSL 支持领域。PSL 兼具基础货币投放与定向支持功能，其价格下调有助于降低政策性金融的资金成本。</div>
+            <div class="news-meta">来源：中国经济网 · 10月13日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">科技创新和技术改造再贷款额度增加2000亿元<span class="arrow">▾</span></div>
+            <div class="news-detail">在同批调整中，央行增加科技创新和技术改造再贷款额度2000亿元。这一工具直接对应设备更新与研发改造支出，指向的是把资金引导到有实物工作量和技术升级内容的领域，而非泛化的流动性投放。</div>
+            <div class="news-meta">来源：中国经济网 · 10月13日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">支农支小再贷款额度增加5000亿元<span class="arrow">▾</span></div>
+            <div class="news-detail">央行同日增加支农支小再贷款额度5000亿元。四项工具集中调整，体现货币政策在稳增长与调结构之间的协同安排，也为四季度财政支出与专项债投放提供了流动性配合。</div>
+            <div class="news-meta">来源：中国经济网 · 10月13日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">安排使用地方政府债务结存限额5500亿元，支持地方扩大有效投资<span class="arrow">▾</span></div>
+            <div class="news-detail">财政增量举措持续落地：安排使用地方政府债务结存限额5500亿元，支持地方扩大有效投资。结存限额的盘活无需新增额度即可形成支出，是四季度稳投资较为直接的政策抓手。</div>
+            <div class="news-meta">来源：中国经济网 · 10月13日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1500亿元中央金融机构注资特别国债招标发行<span class="arrow">▾</span></div>
+            <div class="news-detail">1500亿元中央金融机构注资特别国债已完成招标发行。通过特别国债为金融机构补充资本，有助于提升其服务实体经济的能力，也被市场视为财政与金融协同发力的具体体现。</div>
+            <div class="news-meta">来源：中国经济网 · 10月13日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">央行发布人民币汇率政策立场文件，降低政策不确定性<span class="arrow">▾</span></div>
+            <div class="news-detail">10月8日，中国人民银行发布关于人民币汇率的政策立场文件。分析认为，这将对以 A 股为代表的人民币资产产生三重积极影响：降低金融市场面临的政策不确定性、增强货币政策自主性、增强对中国经济和企业的信心。</div>
+            <div class="news-meta">来源：中国经济网 · 10月14日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">2026年上半年财政政策执行情况报告：加大逆周期调节力度<span class="arrow">▾</span></div>
+            <div class="news-detail">10月9日公布的《2026年上半年中国财政政策执行情况报告》明确，将根据宏观经济运行情况及时谋划出台务实管用的增量政策，加大逆周期调节力度，加力扩大内需、优化供给，并合理加快政府债券发行使用。</div>
+            <div class="news-meta">来源：财政部 · 10月9日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">美国初请失业金人数降至19.4万，为三个月新低并逼近约57年低点<span class="arrow">▾</span></div>
+            <div class="news-detail">美国上周初请失业金人数减少6000人至19.4万，低于经济学家预期的20万，为三个月来新低并逼近约57年低点；四周移动均值降至19.775万，为2022年以来最低水平。前一周续请失业救济人数则增加2.5万至173万，升至六周高位，显示就业市场仍呈现“低裁员、慢再就业”的分化特征。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">土耳其央行降息100个基点至36%，为今年1月以来首次降息<span class="arrow">▾</span></div>
+            <div class="news-detail">土耳其央行宣布将基准利率从37%下调100个基点至36%，这是该行今年1月以来首次降息。土耳其9月通胀率降至29.7%，连续四个月回落，为央行启动宽松创造了条件。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">韩国央行维持基准利率3%不变，并上调经济增长预测<span class="arrow">▾</span></div>
+            <div class="news-detail">韩国央行维持基准利率在3%不变，在连续两次加息后选择按兵不动，以评估加息效果。该行同步上调经济增长预测，预计今明两年增速将大幅高于8月预测的3.3%和2.9%。分析人士普遍认为，韩国央行11月将再次加息。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">菲律宾央行意外加息50个基点至5.5%，连续第四次提高基准利率<span class="arrow">▾</span></div>
+            <div class="news-detail">菲律宾央行意外大幅加息50个基点至5.5%，为连续第四次提高基准利率，以抑制通胀反弹并支撑跌至历史新低的比索。此前市场普遍预期该行仅加息25个基点，超预期幅度反映出汇率压力在政策函数中的权重上升。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">法国10年期国债收益率13年来首次超越美债，5年期CDS利差破100基点<span class="arrow">▾</span></div>
+            <div class="news-detail">法国5年期 CDS 利差突破100基点，为2012年10月以来首次；法国10年期国债收益率13年来首次超越美国国债。财政可持续性与政治不确定性正重新进入欧洲主权信用的定价框架。</div>
+            <div class="news-meta">来源：金十数据 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">美股三大指数涨跌不一，费城半导体指数收跌6.72%<span class="arrow">▾</span></div>
+            <div class="news-detail">美国三大股指收盘涨跌不一，道指涨0.02%报52867.98点，标普500指数跌1.21%报7663.43点，纳指跌2.6%报26008.86点。热门科技股下挫，费城半导体指数收跌6.72%，闪迪、SK海力士、英特尔、AMD 跌超8%；万得美国科技七巨头指数跌2.8%，脸书跌近7%，亚马逊跌逾4%。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Meta 支出承诺总额飙升至8250亿美元，5年期CDS升至约120个基点<span class="arrow">▾</span></div>
+            <div class="news-detail">Meta 支出承诺总额飙升至8250亿美元，衡量其信用风险的5年期 CDS 价格周四升至约120个基点。大规模资本开支在推高增长预期的同时，也在改变市场对大型科技公司信用状况的评估方式。</div>
+            <div class="news-meta">来源：金十数据 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">美国拟拨款3.89亿美元支持聚变能源与功率半导体研发<span class="arrow">▾</span></div>
+            <div class="news-detail">美国商务部表示，计划向四家公司提供总额最高达3.89亿美元的研发资金，支持功率半导体器件及关键材料技术研发，其中核聚变企业 Helion 将获得最高1.75亿美元的资金。功率半导体被视为电能转换效率的瓶颈环节，与数据中心供电、电网改造直接相关。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">《对外投资管理办法》发布，自12月1日起施行<span class="arrow">▾</span></div>
+            <div class="news-detail">《对外投资管理办法》正式发布，自12月1日起施行。办法对企业境外投资的备案、核准与事中事后监管作出规范，在支持企业合规出海的同时，也明确了风险防控与信息报送要求。</div>
+            <div class="news-meta">来源：金十数据 · 10月23日</div>
+          </div>
         </div>
-</section>
-<section class="category" data-category="女性主义">
-        <h2 class="category-title">✊ 女性主义<span class="count">20条</span></h2>
+      </section>
+      <section class="card" data-cat="观点认知">
+        <div class="card-head">
+          <span class="card-icon">💡</span>
+          <h2>观点认知</h2>
+          <span class="count">29 条</span>
+        </div>
         <div class="news-list">
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">联合国妇女署：实现性别平等目标还需 171 年</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026 可持续全球领导者大会于 10 月 20 日至 22 日在上海举行。联合国妇女署中国办公室临时代办王楚乔表示，根据联合国妇女署的调查，若要实现可持续发展第 5 项目标——性别平等，可能还需要 171 年；叠加气候变化、生物多样性退化等相互连接的挑战，所需时间可能更久。</div>
-                <div class="news-meta">2026.10.22 · 性别平等</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">研究显示：女性管理者每增加 1%，公司二氧化碳排放量减少 0.5%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">王楚乔在同场演讲中引述研究称，女性管理者每增加 1%，这家公司的二氧化碳排放量就会减少 0.5%；董事会、管理层性别多元的上市公司股价涨幅更高、波动更小。她还指出，女性掌握 75% 的可自由支配支出，但很多品牌的产品设计与市场策略尚未充分回应女性需求，企业在 ESG 评级之外更需要实质性吸纳女性参与决策。</div>
-                <div class="news-meta">2026.10.22 · 女性与决策</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">澳大利亚人权委员会报告：怀孕歧视仍是女性参与劳动的主要障碍</span><span class="arrow">▸</span></div>
-                <div class="news-detail">澳大利亚人权委员会一份新报告发现，怀孕歧视仍然是性别平等和劳动力参与的主要障碍，超过 100 名女性向媒体透露她们在怀孕后经历了职场歧视。报告建议对《性别歧视法》进行广泛变革，例如禁止雇主因家庭责任而间接歧视员工，并呼吁将灵活工作视为推定权利而非请求权。在分享经历的 104 名女性中，近三分之一的灵活工作请求被拒绝。</div>
-                <div class="news-meta">2026.10.22 · 怀孕歧视</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">性别歧视专员科迪：法律「未能跟上现代家庭的发展」</span><span class="arrow">▸</span></div>
-                <div class="news-detail">澳大利亚性别歧视专员安娜·科迪表示，该立法「未能跟上现代家庭的发展」：家庭依赖双份收入，不存在「一个养家糊口者、一个照护者」的家庭模式。报告还发现，21 名女性在被解雇后发现自己的职位仍然存在，这种做法被称为「虚假重组」；少数族裔背景的父母和临时工更容易受到侵害。</div>
-                <div class="news-meta">2026.10.22 · 法律改革</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">鄂尔多斯市妇联将性别平等审查植入劳动用工「双随机、一公开」抽查</span><span class="arrow">▸</span></div>
-                <div class="news-detail">鄂尔多斯市妇联联动市人社局、市场监管局、市总工会，抽取进入全市 20 家企业，将妇女权益刚性审查模块植入「双随机、一公开」监管流程。检查重点包括企业规章制度中是否藏有歧视婚育女性的条款、女职工「三期」调岗降薪与变相逼退、职场性骚扰防控机制是否真运转、母婴关爱设施是否只是摆样子。此举实现妇女劳动权益监督由「被动接诉」向「主动探源」转变。</div>
-                <div class="news-meta">2026.10.22 · 劳动监督</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">天津一男领导向女下属发淫秽照片，母亲上门讨说法引发关注</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10 月 9 日，天津一公司男领导给刚毕业的女下属发送淫秽露骨照片，女孩母亲得知后冲到公司门口将照片展示给每一个路过的人。目前涉事男领导已被停职，警方已介入。《民法典》第 1010 条明确规定，以言语、文字、图像等方式违背他人意愿实施性骚扰的，受害人有权依法请求行为人承担民事责任。</div>
-                <div class="news-meta">2026.10.22 · 职场性骚扰</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">职场性骚扰的根子在权力不对等，而非个体胆量</span><span class="arrow">▸</span></div>
-                <div class="news-detail">年轻女孩无法自己站出来，答案藏在权力不对等里：上级掌握转正、绩效、晋升的话语权，骚扰者赌的恰恰是新人「不敢吭声」。据《妇女权益保障法》，用人单位有义务制定禁止性骚扰的规章制度并明确负责机构——企业是否有预防机制、投诉渠道是否畅通，才是更根本的追问。</div>
-                <div class="news-meta">2026.10.22 · 制度前置</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">母职惩罚的现实形态：多出的两小时通勤，是挤不出来的奢求</span><span class="arrow">▸</span></div>
-                <div class="news-detail">对必须在下午五点半准时接孩子、或傍晚赶回家照顾长辈的女性来说，工作地点的重大变更意味着每天额外增加两小时。若雇主无法提供弹性工时、实质托育支援与合适的转任配套，这样的调动本质上是迫使承担主要照护责任的女性自愿离职。这种因地理位移造成的隐形冲击，常被企业资产活化的宏大叙事抹去。</div>
-                <div class="news-meta">2026.10.22 · 母职惩罚</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">家庭资产分配中被排除的人：长期照护者往往最后知情</span><span class="arrow">▸</span></div>
-                <div class="news-detail">长辈名下资产出售、资金在手足与男性继承人之间流转分配，但长年承担日常照护责任的女兒或媳婦，自始至终连知情与被尊重的权利都没有。习惯把女性的退让当作理所当然，却在利益分割的重要时刻将她们排除在决策圆桌之外——这是财务盲区，也是权力盲区。</div>
-                <div class="news-meta">2026.10.22 · 家庭财务</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">面对不合理调动，劳动法提供了正当防卫空间</span><span class="arrow">▸</span></div>
-                <div class="news-detail">劳动基准法第十条之一规范调动原则：调动工作地点过远，雇主应予以必要协助，且对劳动条件及生活利益不得有不利变更。若调动已严重破坏维系家庭生活的基本条件，劳工可依同法第十四条第一项第六款主动终止劳动契约并请求给付全额资遣费。盘点契约、收集出勤与工时记录、拒签自愿放弃权益的同意书，是把法律变成防卫盾牌的第一步。</div>
-                <div class="news-meta">2026.10.22 · 权益保护</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">生育率走低与晚育：澳大利亚正面对结构性人口挑战</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在怀孕歧视普遍存在的同时，澳大利亚生育率跌至历史低点，越来越多女性选择晚育。两者并非巧合：当职场对母亲不友好，推迟生育就成了理性选择。人口问题与性别问题从来是同一枚硬币的两面。</div>
-                <div class="news-meta">2026.10.22 · 生育率</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">女性掌握 75% 的可自由支配支出，但产品仍未充分回应</span><span class="arrow">▸</span></div>
-                <div class="news-detail">调查显示女性掌握 75% 的可自由支配支出，然而很多品牌的产品设计、市场策略尚未充分回应女性需求——从汽车安全测试假人到医疗剂量标准，大量的「中性」设计其实以男性为默认样本。消费力被看见，不等于需求被理解。</div>
-                <div class="news-meta">2026.10.22 · 消费与需求</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">ESG 之外：把性别因素纳入披露标准的尝试</span><span class="arrow">▸</span></div>
-                <div class="news-detail">联合国妇女署在中国联合中央财经大学开展研究，探索如何将性别因素纳入 ESG 披露标准；同时走进工厂与企业，推动职场性别平等实践对接国内政策与国际最佳实践。当性别议题进入披露框架，它就从倡导变成了可比的指标。</div>
-                <div class="news-meta">2026.10.22 · ESG 披露</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">无偿照护劳动：被计入 GDP 之外的那部分经济</span><span class="arrow">▸</span></div>
-                <div class="news-detail">家务、育儿、照护长辈——这些劳动支撑着整个劳动力市场的运转，却不被计入任何产值。当讨论「女性劳动参与率」时，很少有人同时讨论她们的总劳动时长。看不见的部分，往往是被低估的部分。</div>
-                <div class="news-meta">2026.10.22 · 照护劳动</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">董事会性别多元化的实证：股价涨幅更高、波动更小</span><span class="arrow">▸</span></div>
-                <div class="news-detail">研究与市场观察显示，董事会和管理层性别多元的上市公司，股价涨幅更高、波动更小。这类结论的价值在于把平等议题从道德论证中解放出来——它同时是一个关于治理质量与风险控制的论证。</div>
-                <div class="news-meta">2026.10.22 · 公司治理</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">数字性别暴力：从人肉搜索到 AI 换脸的新形态</span><span class="arrow">▸</span></div>
-                <div class="news-detail">随着生成式 AI 普及，针对女性的伪造影像、恶意拼贴与信息骚扰门槛大幅降低。技术把伤害的成本压到接近于零，而维权成本依然高昂。治理的方向应当是降低维权成本，而不是要求潜在受害者提高警惕。</div>
-                <div class="news-meta">2026.10.22 · 数字暴力</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">粉色税：同样功能的商品，女性版本更贵</span><span class="arrow">▸</span></div>
-                <div class="news-detail">从洗护用品到文具玩具，标榜「女性向」的同功能商品普遍存在溢价。这种定价之所以长期存在，是因为它被当作消费偏好而非价格歧视。识别它的第一步，是比较成分与参数，而不是比较包装。</div>
-                <div class="news-meta">2026.10.22 · 消费公平</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">单亲母亲的贫困风险：一份收入承担两份责任</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在多数社会保障体系里，单亲母亲家庭的贫困率显著高于其他家庭结构。这不是个人选择的结果，而是照护责任与收入结构错配的结果。支持政策的有效性，取决于它是否直接降低了照护的时间成本。</div>
-                <div class="news-meta">2026.10.22 · 社会保障</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">女性在 STEM 领域：流失发生在中段而非入口</span><span class="arrow">▸</span></div>
-                <div class="news-detail">大量数据显示，女性在 STEM 专业的入学比例并不低，真正的流失发生在从学业到职场的过渡期与生育窗口期。这说明问题不在「兴趣不足」，而在职业路径的结构设计。把注意力放在入口，会掩盖真正的漏水点。</div>
-                <div class="news-meta">2026.10.22 · STEM</div>
-            </div>
-            <div class="news-item" data-category="女性主义">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">更年期不是私事：职场需要为第二人生阶段留出空间</span><span class="arrow">▸</span></div>
-                <div class="news-detail">更年期症状影响大量在职女性，却长期被视为私人话题而缺乏 workplace 层面的适配。当劳动力结构整体老化，为这一阶段提供合理的工作安排，既是健康议题，也是人力资源议题。</div>
-                <div class="news-meta">2026.10.22 · 职场健康</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">当算力成为底座，竞争的单位就从“模型”变成了“系统”<span class="arrow">▾</span></div>
+            <div class="news-detail">CNCC 上反复出现的一句话是：单卡、单机已经撑不住万亿级参数。这句话的含义远不止技术层面——它意味着胜负手从某一个惊艳的模型，转移到了供电、冷却、互连、调度这些不那么性感的环节。任何行业成熟到一定阶段，都会经历从“英雄主义”到“工程主义”的转移，AI 正在走这条路。看清楚这一点，就不会再为一个 demo 的惊艳程度而高估或低估一家公司。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">关于 AI 泡沫：争论本身比结论更有信息量<span class="arrow">▾</span></div>
+            <div class="news-detail">同一周里，美国财长贝森特说 AI 行业不存在系统性问题、完全不能与互联网泡沫相提并论；英伟达的黄仁勋说“AI 毁灭人类”是廉价噱头。两句话看似方向不同，其实都在回应同一个焦虑。泡沫与否，最终不由表态决定，而由现金流决定：谁在用 AI 真实地省钱或赚钱，谁就站在泡沫的另一边。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">“确定性”正在取代“低价”，成为消费决策的第一关键词<span class="arrow">▾</span></div>
+            <div class="news-detail">母婴赛道今年最耐人寻味的变化是：家长愿意为检测报告、研发实力和真实口碑付溢价，却对倒计时逼单越来越无感。当一个品类的决策足够慢、后果足够重，价格就不再是第一排序项。这条规律不止适用于育儿——凡是“买错了代价很高”的领域，信任都会战胜便宜。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">数据比算法更难，这是 AI 进实验室的第一道坎<span class="arrow">▾</span></div>
+            <div class="news-detail">一位材料学教授说得很直白：AI 要进实验室，第一道坎是数据。材料科学长期存在资源零散、缺乏统筹标准化的问题。我们习惯把 AI 的进步想象成算法的胜利，但在真实产业里，脏活累活永远是数据。谁能把分散在文献、计算、实验、生产、服役各环节的链条打通，谁才握住了真正的壁垒。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">“被看见”比“被封神”更难，也更值得追求<span class="arrow">▾</span></div>
+            <div class="news-detail">调查显示，超过六成受访者对“女神”“女王”这类称谓无感，00后群体中仅16.12%表示受用。人们厌倦的不是赞美，而是被贴标签式的赞美——它把复杂的个体压扁成一个角色。真正的尊重从来不是把你抬上神坛，而是承认你正在做一件具体的事，并且做得不错。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">长周期考核，是在和时间做朋友还是做交易<span class="arrow">▾</span></div>
+            <div class="news-detail">监管提出健全适配长期投资的长周期考核机制，听上去是技术性安排，实质是在改变量表。考核周期决定了行为：用一年考核的人，必然做一年的事。想要长期资金，先得给长期资金一个被公平评价的环境。个人也一样，你用什么周期衡量自己，就会长成什么样子。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">慢决策的生意，急不得也骗不得<span class="arrow">▾</span></div>
+            <div class="news-detail">奶粉、纸尿裤、营养品这类商品自带的属性是重信任、慢决策、高复购。直播间可以把节奏拉满，却很难让一位母亲即兴下单。这类生意的正确做法不是把成交压缩到几秒内，而是在用户做功课的那几周里就已经站在她面前。快与慢不是效率问题，是匹配问题。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">开源的价值不在于免费，而在于可审查<span class="arrow">▾</span></div>
+            <div class="news-detail">Cloudflare 基于 Qwen 基座开源了多模态决策模型 Clef。开源最被低估的好处不是省钱，而是任何人都能检查它到底做了什么、没做什么。在一个模型开始参与判断的世界里，可审查性本身就是一种安全机制，它把信任从“相信供应商”变成了“验证实现”。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">透明化不是加分项，正在变成入场券<span class="arrow">▾</span></div>
+            <div class="news-detail">全批次检测报告公开可查、一包一码的产品数字档案、24小时产线直播——这些原本属于“额外努力”的动作，如今成了头部品牌的标配。当信任成为稀缺品，展示成本就是营销成本。与其解释自己有多好，不如把过程摊开让人看。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">信息过载时代，筛选能力比获取能力更值钱<span class="arrow">▾</span></div>
+            <div class="news-detail">每天有173条被挑出来的资讯，但被挑出来本身就是一种判断。获取信息的边际成本已经趋近于零，真正的稀缺是把噪音挡在门外的那套标准。建立自己的筛选器，比再多订阅十个渠道重要得多。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">霜降：一年里最后一次关于“收束”的提醒<span class="arrow">▾</span></div>
+            <div class="news-detail">今日霜降，秋季最后一个节气。古人把这个节点命名为“霜降”，是在提醒万物开始向内收拢。人的精力同样有节气，一味向外扩张而不知道收敛，往往在最接近成果的时候耗尽。收束不是退步，是把散开的力量重新聚拢。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">三候里藏着一套朴素的管理学<span class="arrow">▾</span></div>
+            <div class="news-detail">霜降三候：豺乃祭兽、草木黄落、蜇虫咸俯。一是储备，二是取舍，三是静待。这三件事的顺序很有讲究——先积累，再放下该放下的，最后才是沉住气等待。很多人把顺序搞反了，还没积累就谈放下，还没取舍就谈等待。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">确定性的反面不是风险，是焦虑<span class="arrow">▾</span></div>
+            <div class="news-detail">即时零售卖的从来不是低价，而是消除育儿焦虑的确定性。深夜纸尿裤告急、出门前奶嘴遗失，这类需求等不到零点开抢。用户愿意为“我现在就能拿到”付溢价，说明在很多场景里，焦虑的消除比金钱的节省更值钱。理解这一点，就理解了服务设计的起点。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">概率思维：把“会不会”换成“多大可能”<span class="arrow">▾</span></div>
+            <div class="news-detail">绝大多数争论之所以无解，是因为双方都在回答一个非黑即白的问题。把提问方式从“会不会发生”改成“发生的概率是多少、发生后影响多大”，讨论立刻就能推进。概率思维不是让人犹豫，而是让人把力气用在真正会改变结果的地方。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">能力圈的真义是知道边界在哪<span class="arrow">▾</span></div>
+            <div class="news-detail">知道自己懂什么不难，难的是准确说出自己不懂什么。能力圈的价值不在于大小，而在于边界是否清晰——清晰的小圈，远胜过模糊的大圈。投资如此，职业选择如此，接受一个任务亦如此。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">复利的敌人不是低收益率，是中断<span class="arrow">▾</span></div>
+            <div class="news-detail">人们总在计算收益率，却忽略了持续性。一个中等但从不中断的积累，长期会赢过那些高收益却频频归零的尝试。复利的公式里，时间是唯一无法用技巧替代的变量，而它恰恰最容易被人主动浪费。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">警惕那些让你停止思考的结论<span class="arrow">▾</span></div>
+            <div class="news-detail">无论是一个宏大判断，还是一句金句，只要它的作用是让你不再追问，就要警惕。好的结论应当打开更多问题，而不是关闭它们。判断一个观点是否值得吸收，可以看它让你更想了解，还是更想转发。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">专业与通识不是对立，是两种时间尺度<span class="arrow">▾</span></div>
+            <div class="news-detail">专业决定你今天能不能解决问题，通识决定你三年后还能不能换赛道。只学专业的人容易在行业下行时无路可走，只谈通识的人则常常停在正确的废话上。两者兼顾的办法是：用专业吃饭，用通识给自己留门。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">焦虑的解药常常是具体<span class="arrow">▾</span></div>
+            <div class="news-detail">育儿焦虑如此，职场焦虑也是如此。模糊的担忧最消耗人，一旦把它拆成具体的清单——缺什么、什么时候要、谁来解决——焦虑就失去了大半力气。具体化是最便宜也最有效的情绪管理工具。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">读历史不是为了预测，而是为了校准情绪<span class="arrow">▾</span></div>
+            <div class="news-detail">历史上的今天堆叠着战争、政变与灾难，也堆叠着桥梁开通、赛事夺冠。把时间轴拉长，会发现绝大多数“史无前例”其实都有先例。历史不提供答案，但它能让你在波动中保持一个不至于失真的比例感。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">每天留出一段不被算法安排的时间<span class="arrow">▾</span></div>
+            <div class="news-detail">推荐系统越来越懂你，代价是你越来越难遇到意外。信息茧房不是被强制关进去的，而是被舒适地请进去的。每天留一段自己挑选内容的时间，是保持认知弹性的最低成本投入。</div>
+            <div class="news-meta">随笔 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《思辨与立场》<span class="arrow">▾</span></div>
+            <div class="news-detail">理查德·保罗与琳达·埃尔德所著的批判性思维经典，系统拆解了思维的八要素与九项标准，指出多数人并非缺乏信息，而是缺乏对自身思维结构的审视。书中强调“强批判性思维”，即不仅批判他人，更要用同样严格的标准反思自己。对于每天被大量观点包围的人来说，这本书提供的是一套自检工具，而非一套结论。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《穷查理宝典》<span class="arrow">▾</span></div>
+            <div class="news-detail">查理·芒格的讲话与文章合集，核心是多元思维模型与逆向思考。他主张用来自不同学科的核心概念交叉验证一个判断，并反复强调“如果我知道自己会死在哪里，我就不去那个地方”。书中最有分量的部分并非投资技巧，而是关于如何避免愚蠢的系统性方法。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《刻意练习》<span class="arrow">▾</span></div>
+            <div class="news-detail">安德斯·艾利克森以大量实证研究说明，天赋并非决定因素，有目的的练习才是。刻意练习的关键不在于重复时长，而在于走出舒适区、获得即时反馈、保持高度专注，并建立高质量的心理表征。这本书纠正了“一万小时”的流行误读——时间只是容器，方法才是内容。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《把时间当作朋友》<span class="arrow">▾</span></div>
+            <div class="news-detail">李笑来从心智成长的角度讨论时间管理，提出核心观点：时间无法被管理，能被管理的只有自己。书中强调开启心智、积累复利、接受现实，并指出速成心态是最大的效率陷阱。它与常见的技巧型时间管理书不同，更像一本关于耐心与自制的手册。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《厌女》<span class="arrow">▾</span></div>
+            <div class="news-detail">上野千鹤子的代表作，剖析厌女症如何在男性与女性身上同时运作：男性通过贬低女性确认自身主体性，女性则可能被内化为自我厌恶。书中把性别问题从个体道德扩展到社会结构，指出父权制的维系并不只靠压迫，也靠被统治者的自我认同。该书为理解日常性别现象提供了锐利的分析框架。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《一间自己的房间》<span class="arrow">▾</span></div>
+            <div class="news-detail">弗吉尼亚·伍尔夫基于两场演讲写成的长文，提出女性若要从事创作，需要每年五百英镑的收入和一间可以上锁的房间。物质条件与精神空间，二者缺一不可。书中关于“莎士比亚的妹妹”的虚构段落，是讨论女性创作受阻最著名的文字之一，至今仍是关于独立空间的经典论述。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《人类简史》<span class="arrow">▾</span></div>
+            <div class="news-detail">尤瓦尔·赫拉利从认知革命、农业革命、人类的融合统一到科学革命，梳理智人何以崛起。其最富启发性的论点是：人类合作规模的关键在于共同虚构故事的能力——宗教、国家、货币、公司莫不如此。这本书迫使读者重新审视许多被视为理所当然的制度。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">推荐书《乌合之众》<span class="arrow">▾</span></div>
+            <div class="news-detail">古斯塔夫·勒庞研究群体心理的奠基之作，指出个体在群体中会出现理性下降、易受暗示、情绪化与道德松弛等现象，群体行为往往比个体更冲动也更极端。尽管书中部分论断带有时代局限，但它对理解舆论、恐慌、从众与群体极化仍具参考价值，尤其在算法放大情绪的今天。</div>
+            <div class="news-meta">推荐书目 · 常驻</div>
+          </div>
         </div>
-</section>
-<section class="category" data-category="新闻">
-        <h2 class="category-title">📰 新闻<span class="count">21条</span></h2>
+      </section>
+      <section class="card" data-cat="女性主义">
+        <div class="card-head">
+          <span class="card-icon">♀️</span>
+          <h2>女性主义</h2>
+          <span class="count">20 条</span>
+        </div>
         <div class="news-list">
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">美国国务院下令驻沙特非紧急雇员及家属撤离</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美国国务院证实，已下令要求驻沙特阿拉伯的非紧急岗位美国政府雇员及其家属撤离。此举是因为敌对行动可能重启，尤其是与也门胡塞武装之间的敌对行动。外交人员的撤离顺序，往往先于市场反应给出风险提示。</div>
-                <div class="news-meta">2026.10.22 · 国际时政</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">消息称以色列 10 月曾筹划对伊朗大规模攻势，因特朗普反对未实施</span><span class="arrow">▸</span></div>
-                <div class="news-detail">消息称以色列总理内塔尼亚胡 10 月早些时候曾指示军方筹划对伊朗发动新一轮大规模攻势，目标包括发电厂等民用基础设施与核设施；由于美国总统特朗普反对在 11 月中期选举前重启战事，该计划最终未实施。伊朗外长阿拉格齐表示，美国和以色列可能再次针对伊朗发动新的战争，伊朗已做好准备。</div>
-                <div class="news-meta">2026.10.22 · 中东局势</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">泽连斯基：愿在保留至少 75% 领土控制权基础上达成和平协议</span><span class="arrow">▸</span></div>
-                <div class="news-detail">乌克兰总统泽连斯基接受采访时表示，乌方可在保留至少 75% 领土控制权的基础上达成和平协议，并称俄罗斯已同意举行新一轮美乌俄三方谈判。美方提议尽快启动会谈，乌克兰予以支持，各方争取在 11 月初或更早时间召开会议。把底线公开说出来，通常是谈判进入实质阶段的信号。</div>
-                <div class="news-meta">2026.10.22 · 俄乌局势</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">普京通报：愿在 11 月中旬恢复乌克兰问题俄美乌三方谈判</span><span class="arrow">▸</span></div>
-                <div class="news-detail">据俄罗斯总统助理乌沙科夫介绍，俄罗斯总统普京在会见美国总统特使威特科夫期间，向其通报俄愿意在 11 月中旬恢复乌克兰问题俄美乌三方谈判。三方谈判的重启时间点，往往比谈判内容本身更能反映各方的紧迫程度。</div>
-                <div class="news-meta">2026.10.22 · 俄乌谈判</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">沙特阿美一处油田遭无人机袭击，造成两人死亡</span><span class="arrow">▸</span></div>
-                <div class="news-detail">援引三名美国官员报道，国务院准备下令美国驻海湾地区的部分人员及家属撤离；同时沙特阿美一处油田遭无人机袭击，造成两人死亡。能源设施遇袭与人员撤离安排同时出现，说明局势判断已从预防性转向应对性。</div>
-                <div class="news-meta">2026.10.22 · 能源安全</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">欧洲多国政府网站因 PHP 严重漏洞紧急下线，全球约 75% 网站受影响</span><span class="arrow">▸</span></div>
-                <div class="news-detail">欧洲多国政府网站周三相继下线，起因是广泛使用的 PHP 编程语言被披露存在严重安全漏洞，且已有黑客开始主动利用该漏洞实施攻击。全球约 75% 的可识别编程语言网站以 PHP 运行，此次事件规模之大引发网络安全界高度警惕。政府网站集体下线，是漏洞危害最直观的公告。</div>
-                <div class="news-meta">2026.10.22 · 网络安全</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">中俄总理第三十一次定期会晤举行，达成多领域合作文件</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国务院总理李强同俄罗斯总理米舒斯京共同主持中俄总理第三十一次定期会晤。双方一致认为，要推进经贸投资、能源资源、互联互通、航空航天、金融、工业等重点领域合作，培育人工智能、生物技术、数字经济等前沿领域发展新动能，并达成经贸、航天、科技、教育等领域合作文件。</div>
-                <div class="news-meta">2026.10.22 · 中外关系</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2026 可持续全球领导者大会在上海举行，主题聚焦韧性未来</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026 可持续全球领导者大会于 10 月 20 日至 22 日在上海举行，主题为「共筑韧性未来：全球治理、创新驱动与产业升级」。会议讨论性别平等、气候治理与产业升级等交叉议题，其中一个被反复引用的判断是：可持续发展第 5 项目标的实现仍需 171 年。</div>
-                <div class="news-meta">2026.10.22 · 国际会议</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">星巴克中国今起实施「消费入座」，入华 27 年首次明确规则</span><span class="arrow">▸</span></div>
-                <div class="news-detail">针对近期热议的「消费入座」传闻，星巴克中国正式官宣，新规自 10 月 22 日起将在全国门店施行，门店会摆放相关提示牌。这是星巴克入华 27 年来首次明确「消费入座」，此前已在北美、韩国等地区出台门店空间管控规则。</div>
-                <div class="news-meta">2026.10.22 · 消费观察</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">美国新墨西哥州法院下令 Meta 支付 250 亿美元罚款</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美国新墨西哥州法院下令 Meta 支付 250 亿美元罚款，该案是一起数据隐私诉讼，源于十多年前该公司卷入的剑桥分析丑闻。此前 Meta 已支付近 170 亿美元，和解了全美范围内多起与剑桥分析相关的数据隐私诉讼。数据隐私的账单，往往在十年后才寄到。</div>
-                <div class="news-meta">2026.10.22 · 数据隐私</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">特斯拉第三季度交付 486532 辆超预期，总交付量突破 1000 万辆</span><span class="arrow">▸</span></div>
-                <div class="news-detail">特斯拉第三季度交付 486532 辆，超过华尔街预期的约 461100 辆；公司表示总交付量突破 1000 万辆，Model Y 有望成为今年全球最畅销车型。销量增长的背后是欧洲汽油价格高企与储能单元增长的共同推动。</div>
-                <div class="news-meta">2026.10.22 · 汽车销量</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">俄罗斯首艘装载柴油的油轮今日启程前往美国</span><span class="arrow">▸</span></div>
-                <div class="news-detail">俄罗斯副总理诺瓦克表示，首艘装载俄罗斯柴油的油轮将于 10 月 22 日启程前往美国。诺瓦克认为，俄罗斯有望在今年年底前向美国以外的其他国家供应柴油，并可能全面恢复柴油出口规模。能源流向的改变，通常是地缘格局变化最具体的注脚。</div>
-                <div class="news-meta">2026.10.22 · 能源贸易</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">德国 DAX 涨 1.35%，欧洲三大股指收盘全线上涨</span><span class="arrow">▸</span></div>
-                <div class="news-detail">欧洲三大股指收盘全线上涨，德国 DAX 指数涨 1.35% 报 25645.04 点，法国 CAC40 指数涨 1.06% 报 7921.68 点，英国富时 100 指数涨 0.19% 报 10752.88 点。企业财报强劲提振市场，叠加前期超跌反弹与资金回流，风险偏好回暖。</div>
-                <div class="news-meta">2026.10.22 · 欧洲股市</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">亚太主要股指多数走高，日经 225 涨 0.85%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">亚太主要股指收盘多数走高，日经 225 指数涨 0.85% 报 64621.24 点，韩国综合指数涨 3.29% 报 5735.66 点。区域市场的分化，更多反映的是产业结构差异而非情绪差异。</div>
-                <div class="news-meta">2026.10.22 · 亚太股市</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">印度 SENSEX30 指数跌 0.19% 报 73709.69 点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">印度 SENSEX30 指数跌 0.19% 报 73709.69 点，是当日亚太主要市场中少数收跌的指数。在同一天的亚太交易时段里，涨跌幅的分化往往来自外资流向的短期变化。</div>
-                <div class="news-meta">2026.10.22 · 亚太股市</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">LME 期镍涨 4.01%，伦敦基本金属多数上涨</span><span class="arrow">▸</span></div>
-                <div class="news-detail">伦敦基本金属多数上涨，LME 期镍涨 4.01% 报 16290.0 美元/吨，LME 期锌涨 0.86% 报 3757.0 美元/吨，LME 期铝涨 0.82% 报 3027.0 美元/吨，LME 期铅涨 0.50% 报 1903.5 美元/吨；LME 期铜跌 0.35% 报 14370.5 美元/吨，LME 期锡跌 0.53% 报 51060.0 美元/吨。</div>
-                <div class="news-meta">2026.10.22 · 有色金属</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">央行开展 800 亿元隔夜逆回购，单日净投放 240 亿元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中国人民银行 7 天期逆回购继续零操作，同时开展 800 亿元隔夜逆回购操作，单日净投放 240 亿元，银行间市场资金面依旧充沛。短端操作的灵活调整，是为了在税期与跨月之间平滑波动。</div>
-                <div class="news-meta">2026.10.22 · 货币政策</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">国债期货集体下滑，30 年期主力合约收跌 0.38%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中国银行间债市出现调整，主要利率债收益率纷纷上行，30 年期国债升超 1bp，短券则较为坚挺。国债期货集体下滑，30 年期主力合约收跌 0.38%。长端收益率的上行，通常与对通胀与供给的预期变化同步。</div>
-                <div class="news-meta">2026.10.22 · 债券市场</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">腾讯股价跌破 400 港元创一年新低，年内累计跌幅接近四成</span><span class="arrow">▸</span></div>
-                <div class="news-detail">腾讯控股股价创一年新低，跌破 400 港元大关，年内累计跌幅接近四成；当日南向资金净卖出超 44 亿港元，其中腾讯控股遭净卖出 17 亿港元。龙头股的估值重定价，往往领先于板块整体的情绪修复。</div>
-                <div class="news-meta">2026.10.22 · 港股观察</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2026 金融街论坛年会在京开幕，聚焦全球治理与创新驱动</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026 金融街论坛年会在北京开幕，金融科技大会与数字人民币年会同步举行，多部门明确金融领域 AI 发展与治理方向，并对外公布数字人民币基础设施服务体系。论坛议题的分布，通常预示着下一阶段监管与产业的重点。</div>
-                <div class="news-meta">2026.10.22 · 金融街论坛</div>
-            </div>
-            <div class="news-item" data-category="新闻">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">白宫重申：美国不会在中期选举前的任何时间攻击伊朗</span><span class="arrow">▸</span></div>
-                <div class="news-detail">白宫发言人重申，美国不会在 11 月中期选举前的任何时间攻击伊朗。这一表态与「以色列 10 月曾筹划打击伊朗但因美方反对未实施」的消息相互印证，说明选举周期正在实质性地影响中东局势的节奏。</div>
-                <div class="news-meta">2026.10.22 · 美国政治</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">全球妇女峰会一周年：妇女与媒体的角色正在变化<span class="arrow">▾</span></div>
+            <div class="news-detail">全球妇女峰会召开一年后，媒体中的女性形象逐渐从“均衡化描绘”走向“主体化表达”，“她叙事”“女性主体性”在社交平台引发广泛讨论。各类女性议题不断涌入公共议程，媒介对女性生存境遇的捕捉愈发细腻，也反向推动着政策与制度的回应优化。</div>
+            <div class="news-meta">来源：中国妇女报 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">《反网络暴力法（征求意见稿）》公开征求意见，首次系统界定网络暴力<span class="arrow">▾</span></div>
+            <div class="news-detail">2026年7月，《中华人民共和国反网络暴力法（征求意见稿）》向社会公开征求意见。法案首次从国家法律层面系统界定网络暴力，明确平台事前预警、事中阻断的责任，并特别规定：对利用人工智能技术生成、合成网暴信息的，平台须落实标识制度并进行信息溯源，发现网暴风险时不得利用算法推荐扩散相关信息。</div>
+            <div class="news-meta">来源：法治日报 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">山东条例9月1日起施行：首次明确禁止AI生成贬损妇女人格尊严的信息<span class="arrow">▾</span></div>
+            <div class="news-detail">2026年9月1日起施行的《山东省妇女权益保障条例》首次明确，禁止利用生成式人工智能技术发布贬损妇女人格尊严的信息。这是地方立法首次针对“技术助长型性别暴力”作出直接回应，为后续司法适用提供了明确依据。</div>
+            <div class="news-meta">来源：山东省人大 · 9月1日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">浙江条例同日实施：将生成式AI性别歧视防治纳入法规<span class="arrow">▾</span></div>
+            <div class="news-detail">同日实施的《浙江省妇女权益保障条例》将生成式人工智能领域的性别歧视防治纳入法规，要求服务提供者优化算法、防止生成歧视性内容。从学理研究到立法实践，技术助长型性别暴力的系统治理路径正逐步清晰。</div>
+            <div class="news-meta">来源：浙江省人大 · 9月1日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">女性创业者比例从2020年的约17%跃升至36%<span class="arrow">▾</span></div>
+            <div class="news-detail">北京大学光华管理学院《中国小微经营者2026年第一季度调查报告》显示，女性创业者比例从2020年的约17%大幅跃升至36%。数字金融的普惠性让更多女性有机会迈出创业第一步，资金门槛的下降在这一变化中起到了关键作用。</div>
+            <div class="news-meta">来源：北大光华 · 2026Q1</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">智联招聘报告：60.9%的女性求职时被询问婚育情况<span class="arrow">▾</span></div>
+            <div class="news-detail">智联招聘《2026中国女性职场现状调查报告》显示，60.9%的女性在求职时曾被询问婚育情况。这类询问之所以难以取证，是因为它常发生在非正式交流中，但它对录用结果的影响却是实实在在的。如何把隐性询问转化为可举证的歧视，仍是执法难点。</div>
+            <div class="news-meta">来源：智联招聘 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">68.8%的女性将职场不平等归因于“生育是女性摆脱不掉的负担”<span class="arrow">▾</span></div>
+            <div class="news-detail">同一份报告显示，68.8%的女性把职场不平等归因于生育负担。这一归因指向的并非雇主个体的偏见，而是生育成本在用人单位、家庭与个人之间的分配方式。只要成本主要由雇佣方承担，统计性歧视就难以通过倡导消除。</div>
+            <div class="news-meta">来源：智联招聘 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">61.5%的职场妈妈晋升信心不足<span class="arrow">▾</span></div>
+            <div class="news-detail">报告还显示，61.5%的职场妈妈晋升信心不足，而超过半数女性明确表示不会为了家庭放弃事业。渴望向上与引力向下同时存在，构成了当下职场女性最真实的结构性处境，也解释了为什么单纯的励志叙事越来越难引起共鸣。</div>
+            <div class="news-meta">来源：智联招聘 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">SoulApp 报告：00后最期待的正是“强女”故事<span class="arrow">▾</span></div>
+            <div class="news-detail">SoulApp 发布的妇女节特别报告显示，00后最期待的是“强女”故事，期待能有更多榜样力量。年轻一代对女性叙事的偏好正在从“被保护的柔弱”转向“有能力的主体”，这种审美迁移会逐步传导到内容与消费市场。</div>
+            <div class="news-meta">来源：SoulApp · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">仅16.12%的00后受用“女神”“女王”类称谓<span class="arrow">▾</span></div>
+            <div class="news-detail">报告同时显示，超过六成受访者对“女神”“女王”等称谓持无感态度，在00后群体中仅16.12%表示对此类表达感到受用。年轻女性拒绝被标签化，她们要的不是被封神，而是被看见。这一数据对品牌营销的措辞选择具有直接参考价值。</div>
+            <div class="news-meta">来源：SoulApp · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">CBNData：93%的女性认为好生活应由自己定义<span class="arrow">▾</span></div>
+            <div class="news-detail">CBNData《2026女性品质生活洞察报告》指出，女性正在拒绝“好女人”“完美”“贤妻良母”等刻板叙事，撕掉外界强加的身份符码，接纳复杂而真实的自我；93%的女性认为好生活应该由自己来定义，而不是别人说了算。从被营销定义到自我定义，是一次深刻的主体性转向。</div>
+            <div class="news-meta">来源：CBNData · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Spes诗裴丝推出主题TVC《我偏要》，对准六个普通女性面孔<span class="arrow">▾</span></div>
+            <div class="news-detail">9月，Spes诗裴丝推出主题TVC《我偏要》，镜头对准六个女性面孔：手指渗血仍握紧鼓棒的女鼓手、为聋哑委托人打手语的女律师、35岁带伤重返赛场的摔跤选手、深夜独自挥臂的打铁花女孩、穿着野花缝制裙子走模特步的乡村姑娘、急诊室里推着病床狂奔的女医生。它并非一支关于成功的叙事，正因为如此才击中了人心——每个“偏要”背后都有一个“被劝退”的瞬间。</div>
+            <div class="news-meta">来源：新京报 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">中国妇女研究会2026年年会：AI时代妇女数字权益保护专题研讨<span class="arrow">▾</span></div>
+            <div class="news-detail">中国妇女研究会2026年年会设置“人工智能时代妇女数字权益保护与性别平等：治理的视角”专题，讨论就业反歧视政策、个人信息保护和人工智能治理规则能否有效回应技术变化，并分析国家在立法、监管与救济方面的责任。研讨提示应在保障妇女平等就业机会与避免过度干预技术应用之间保持适当界限。</div>
+            <div class="news-meta">来源：中国妇女研究网 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">全球约1/4就业可能受AI影响，女性占比4.7%高于男性2.4%<span class="arrow">▾</span></div>
+            <div class="news-detail">西安交通大学数字社会研究中心主任杨江华援引数据指出，全球约1/4的就业可能不同程度受到 AI 影响；在“AI 可能处理大部分任务”的工作中，女性占比4.7%、男性2.4%。他强调，技术演进本身不会带来职业性别平等化，只有通过个体努力、社会组织创新与制度系统性治理，才能实现包容性数字红利。</div>
+            <div class="news-meta">来源：中华女子学院 · 9月11日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">全国检察机关已研发应用80余个妇女儿童权益保护数字模型<span class="arrow">▾</span></div>
+            <div class="news-detail">据不完全统计，全国检察机关研发和应用保障妇女儿童合法权益场景的数字模型已超过80个，涵盖职场性别歧视筛查、生育期女性权益保障、公共场所母婴设施监督等领域。大数据平台通过“家暴风险算法”自动识别反复报警、反复就医却未申请保护令的高风险当事人，并向检察机关发出预警。</div>
+            <div class="news-meta">来源：全国妇联 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">家暴风险算法推动主动介入，人身安全保护令签发率从48%升至92%<span class="arrow">▾</span></div>
+            <div class="news-detail">在反家暴领域，数字化治理推动从被动受理转向主动介入，人身安全保护令签发率从48%提升至92%。这一变化的实质是把“当事人主动申请”这一前置条件，变成了系统识别后的官方提醒，显著降低了求助门槛。</div>
+            <div class="news-meta">来源：全国妇联 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">双职工家庭育儿成本分担的性别机制研究引发关注<span class="arrow">▾</span></div>
+            <div class="news-detail">北京航空航天大学马克思主义学院副院长陈萌在年会中基于双职工育儿家庭的访谈材料，从家庭日常实践出发考察夫妻双方育儿责任的实际分担，以重新理解育儿成本、照护责任与性别平等之间的关系。这类研究把性别平等从职场延伸到家庭内部的时间分配上。</div>
+            <div class="news-meta">来源：中国妇女研究网 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">深度伪造侵害女性人格权益的刑法定性问题进入学界视野<span class="arrow">▾</span></div>
+            <div class="news-detail">研讨中提出，针对深度伪造侵害女性人格权益行为的刑法定性问题，建议加强与刑法理论、人格权保护以及数字性别暴力研究的对话，进一步论证以侮辱罪评价相关行为的依据及其解释适用的边界。深度伪造的危害不只在于内容虚假，更在于受害者难以自证清白。</div>
+            <div class="news-meta">来源：中国妇女研究网 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">平台算法推荐被认定为网络性别暴力扩散的关键环节<span class="arrow">▾</span></div>
+            <div class="news-detail">数字空间以社交媒体、内容平台与算法推荐为枢纽，网络性别暴力的滋生、扩散与治理都与平台运作机制深度绑定。因此治理思路要求平台承担事前预警、事中阻断义务，并规定不得利用算法推荐扩散网暴风险信息，把责任从内容端前移到分发端。</div>
+            <div class="news-meta">来源：法治日报 · 2026</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">乡村女性成为AI训练师：新机会与岗位压力并存<span class="arrow">▾</span></div>
+            <div class="news-detail">主持人张越探访陕西“数字木兰”项目基地时记录下这样一幕：一位乡村女性在地里干活，到上班时间便穿上西服走进科技公司做 AI 训练师，下班后开着自己挣钱买的车去接孩子。AI 为女性带来新工作机会，也带来岗位变化的压力，技能更新的速度正在成为新的分水岭。</div>
+            <div class="news-meta">来源：中华女子学院 · 9月11日</div>
+          </div>
         </div>
-</section>
-<section class="category" data-category="历史">
-        <h2 class="category-title">📜 历史<span class="count">21条</span></h2>
+      </section>
+      <section class="card" data-cat="新闻">
+        <div class="card-head">
+          <span class="card-icon">📰</span>
+          <h2>新闻</h2>
+          <span class="count">21 条</span>
+        </div>
         <div class="news-list">
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1935 年 10 月 22 日：中共中央政治局在陕北吴起镇召开会议，宣告中央红军长征结束</span><span class="arrow">▸</span></div>
-                <div class="news-detail">毛泽东在关于目前行动方针的报告中指出，陕甘支队自俄界出发已走二千里，到达这一地区的任务已经完成。张闻天作总结发言指出，长途行军中间所决定的任务已经最后完成，一个历史时期已经完结，一个新的历史时期开始了。这次会议批准榜罗镇会议的战略决策，宣告中央红军长征结束。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1936 年 10 月 22 日：红一、红二方面军在甘肃隆德将台堡会师</span><span class="arrow">▸</span></div>
-                <div class="news-detail">红一、红二方面军在甘肃隆德将台堡（今属宁夏西吉）会师。将台堡会师与同年 10 月在甘肃会宁实现的红一、红四方面军会师一起，构成红军三大主力会合的完整图景，标志着长征的全面胜利。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1949 年 10 月 22 日：最高人民法院、最高人民检察署成立</span><span class="arrow">▸</span></div>
-                <div class="news-detail">最高人民法院、最高人民检察署成立。1954 年，最高人民检察署改名为最高人民检察院。新中国司法体系的建制，从新中国成立后第三周就开始了。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1978 年 10 月 22 日—29 日：邓小平访问日本，新中国领导人首次访日</span><span class="arrow">▸</span></div>
-                <div class="news-detail">邓小平访问日本，出席中日和平友好条约两国批准书互换仪式，这是中华人民共和国成立后中国领导人第一次访问日本。23 日他在同日本首相福田赳夫会谈时说：中日和平友好条约的签订，对中国、对日本、甚至对世界都是件大事，尽管我们社会制度不同，这没有关系。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1996 年 10 月 22 日：江泽民阐述长征精神的内涵</span><span class="arrow">▸</span></div>
-                <div class="news-detail">江泽民在纪念红军长征胜利六十周年大会上的讲话中阐述了长征精神的内涵：就是把全国人民和中华民族的根本利益看得高于一切，坚定革命的理想和信念；就是为了救国救民，不怕任何艰难险阻，不惜付出一切牺牲；就是坚持独立自主，实事求是；就是顾全大局、严守纪律、紧密团结；就是紧紧依靠人民群众，同人民群众生死相依、患难与共、艰苦奋斗。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1998 年 10 月 22 日：江泽民致信中共中央党史研究室</span><span class="arrow">▸</span></div>
-                <div class="news-detail">江泽民致信中共中央党史研究室指出：「学习理论要同了解历史事件、总结历史经验结合起来。我们党领导人民进行革命、建设和改革的历史，是一部蕴含和体现马列主义、毛泽东思想和邓小平理论的活生生的教科书。」他希望各级党委重视党史工作，充分发挥党史资政育人的作用。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2006 年 10 月 22 日：胡锦涛在纪念红军长征胜利七十周年大会上讲话</span><span class="arrow">▸</span></div>
-                <div class="news-detail">胡锦涛在讲话中提出要大力推进马克思主义中国化，指出我们继承和发扬红军长征的光荣革命传统，就要不断开拓马克思主义在当代中国发展的新境界，使当代中国的马克思主义具有更加鲜明的实践特色、民族特色与时代特色。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2015 年 10 月 22 日：习近平出席全英孔子学院和孔子课堂年会开幕式</span><span class="arrow">▸</span></div>
-                <div class="news-detail">习近平在致辞中指出，语言是了解一个国家最好的钥匙，孔子学院是世界认识中国的一个重要平台。当时英国已建立 29 所孔子学院和 126 个孔子课堂，数量居欧洲之首。他引用「为之不厌，诲人不倦」，希望在座各位教师为中英友好事业添砖加瓦。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2019 年 10 月 22 日：国务院公布《优化营商环境条例》</span><span class="arrow">▸</span></div>
-                <div class="news-detail">国务院公布《优化营商环境条例》，将近年来优化营商环境的实践经验与政策措施上升为行政法规，为各类市场主体平等参与市场竞争提供制度保障。条例的出台标志着营商环境建设从政策推动进入了法治化的阶段。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2020 年 10 月 22 日：中央政治局常委会听取「十三五」规划实施总结评估汇报</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中共中央政治局常务委员会召开会议，听取「十三五」规划实施总结评估汇报。会议指出「十三五」以来我国经济实力、科技实力、综合国力跃上新的台阶，重大战略任务和 165 项重大工程项目全面落地见效，规划确定的各项目标任务即将胜利完成。</div>
-                <div class="news-meta">2026.10.22 · 党史回眸</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1949 年 10 月 22 日：陕甘宁边区政府公布《金银管理暂行办法》</span><span class="arrow">▸</span></div>
-                <div class="news-detail">陕甘宁边区政府公布《金银管理暂行办法》，规定凡金块、金条、金叶、金砂、银块、银条、银锭、元宝、金银首饰及其他杂质金银，准许私人自行储存，不准流通和买卖，可向人民银行及其代办所兑换人民币使用，并要求加强缉私工作。</div>
-                <div class="news-meta">2026.10.22 · 地方史志</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1983 年 10 月 22 日：中共陕西省委部署全面整顿党的作风和组织</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中共陕西省委发出通知，要求各地认真学习《中共中央关于整党的决定》，从 1983 年冬季开始，用 3 年时间对党的作风和组织进行一次全面整顿。整党工作的推进，为随后的改革开放深化提供了组织保障。</div>
-                <div class="news-meta">2026.10.22 · 地方史志</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1988 年 10 月 22 日：中共陕西省委作出治理整顿中的「六条规定」</span><span class="arrow">▸</span></div>
-                <div class="news-detail">中共陕西省委作出「关于在治理经济环境、整顿经济秩序、全面深化改革中党组织和党员必须遵守的六条规定」，主要内容包括：坚决执行党的纪律，决不允许搞「上有政策、下有对策」；坚决执行党中央、国务院的各项决策；坚决执行党政机关和党政干部不准经商办企业的规定；坚决维护党中央权威；坚决同不正之风和腐败现象作斗争；坚决支持、保护改革开放。</div>
-                <div class="news-meta">2026.10.22 · 地方史志</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1962 年 10 月 22 日：肯尼迪发表电视讲话，宣布对古巴实施海上隔离</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美国总统肯尼迪通过电视讲话向全国披露苏联在古巴部署导弹的证据，并宣布对古巴实施海上「隔离」，要求苏联撤走进攻性武器。此后十三天的对峙被称为古巴导弹危机，是冷战时期人类最接近核战争的时刻，也直接促成了美苏首脑热线的建立。</div>
-                <div class="news-meta">2026.10.22 · 世界史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1944 年 10 月 22 日：莱特湾海战爆发</span><span class="arrow">▸</span></div>
-                <div class="news-detail">人类历史上规模最大的海战之一莱特湾海战在菲律宾附近打响，交战持续至 10 月 26 日。这场战役基本摧毁了日本海军的作战能力，也首次出现了大规模有组织的神风特攻作战，成为太平洋战争走向终局的转折点。</div>
-                <div class="news-meta">2026.10.22 · 世界史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1797 年 10 月 22 日：加纳林完成人类历史上首次热气球跳伞</span><span class="arrow">▸</span></div>
-                <div class="news-detail">法国人安德烈-雅克·加纳林在巴黎上空从热气球上以降落伞下降，完成了人类历史上第一次有记录的跳伞。在没有航空器的时代，他用一个布制伞盖证明了空气阻力可以被工程化利用。</div>
-                <div class="news-meta">2026.10.22 · 世界史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1883 年 10 月 22 日：纽约大都会歌剧院开幕</span><span class="arrow">▸</span></div>
-                <div class="news-detail">纽约大都会歌剧院以古诺的《浮士德》揭幕开张。此后它成为北美最重要的歌剧演出机构之一，也见证了欧洲艺术中心向新大陆的转移过程——文化机构的选址，往往跟随着资本与人口的流向。</div>
-                <div class="news-meta">2026.10.22 · 世界史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1975 年 10 月 22 日：苏联金星 9 号探测器成功着陆金星表面</span><span class="arrow">▸</span></div>
-                <div class="news-detail">苏联金星 9 号探测器成功在金星表面软着陆，并传回了人类历史上第一张来自金星表面的照片。在极端高温高压的环境下坚持约 53 分钟，它证明了行星探测可以在最恶劣的条件下获得有效数据。</div>
-                <div class="news-meta">2026.10.22 · 科技史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2008 年 10 月 22 日：印度成功发射首颗月球探测器月船 1 号</span><span class="arrow">▸</span></div>
-                <div class="news-detail">印度空间研究组织成功发射首颗月球探测器月船 1 号（Chandrayaan-1）。该探测器在月面探测中发现了广泛分布的水分子证据，为后续月球水资源研究提供了关键数据，也标志着亚洲航天格局的进一步多元化。</div>
-                <div class="news-meta">2026.10.22 · 科技史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1836 年 10 月 22 日：山姆·休斯顿就任德克萨斯共和国首任总统</span><span class="arrow">▸</span></div>
-                <div class="news-detail">山姆·休斯顿就任德克萨斯共和国首任总统。此前他在圣哈辛托战役中击败墨西哥军队，为德克萨斯的独立奠定基础。这位曾在美国政坛起伏的人物，最终以一个新国家的缔造者身份载入史册。</div>
-                <div class="news-meta">2026.10.22 · 世界史</div>
-            </div>
-            <div class="news-item" data-category="历史">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">1911 年 10 月 22 日：长沙、西安相继响应武昌起义</span><span class="arrow">▸</span></div>
-                <div class="news-detail">武昌起义爆发后第十二天，湖南长沙与陕西西安先后宣布响应，脱离清廷统治。各省在短短两个月内相继独立的连锁反应，最终促成了清朝的终结与亚洲第一个共和国的建立。</div>
-                <div class="news-meta">2026.10.22 · 中国近代史</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">法国卢浮宫、奥赛与毕加索博物馆将于24日因示威活动闭馆<span class="arrow">▾</span></div>
+            <div class="news-detail">当地时间10月22日，法国政府表示，由于巴黎将于24日举行示威活动，卢浮宫、奥赛博物馆和毕加索博物馆将于24日当天闭馆。这是法国近期社会动荡对公共文化机构造成的直接影响，也给计划前往参观的游客带来行程变数。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">巴黎部分区域宵禁延长至25日早晨6时<span class="arrow">▾</span></div>
+            <div class="news-detail">法国巴黎警察总局22日在社交媒体宣布，根据法国总理塞巴斯蒂安·勒科尔尼和内政部长洛朗·努涅斯的要求，巴黎共和国广场及大堂商业区周边划定区域将继续实施宵禁直至25日早晨6时。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">法国里昂禁止24日举行任何示威活动<span class="arrow">▾</span></div>
+            <div class="news-detail">法国罗讷省政府22日宣布，鉴于示威活动出现骚乱，禁止该省里昂市24日举行任何示威活动。从巴黎的宵禁到里昂的全面禁止，法国地方政府的应对强度正在逐级上调。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">马克龙批评某些外国领导人利用法国局势为自己助选<span class="arrow">▾</span></div>
+            <div class="news-detail">正在中东访问的法国总统马克龙21日表示，某些外国领导人利用法国当前形势为自己助选，发表愚蠢至极的言论。他称有关法国抗议的信息在境外被操纵，一些所谓法国现状的画面由人工智能生成。外媒认为这番话针对美国总统特朗普和以色列总理内塔尼亚胡。</div>
+            <div class="news-meta">来源：新华网 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">法国报告全球首例人类感染沙蒙达病毒病例<span class="arrow">▾</span></div>
+            <div class="news-detail">法国卫生部门22日表示，该国发现全球首例有正式记录的沙蒙达病毒人类感染病例，患者已于本月初死亡。沙蒙达病毒属于正布尼亚病毒属，主要通过库蠓属吸血蠓虫传播给动物，于20世纪60年代中期首次在尼日利亚被发现，此前从未有过人类感染记录。</div>
+            <div class="news-meta">来源：人民网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">伊朗军方称在装备方面已为非对称战争做好准备<span class="arrow">▾</span></div>
+            <div class="news-detail">伊朗伊斯兰共和国军队总司令哈塔米22日称，伊朗军队在装备方面已做好应对非对称战争的准备，在无人机领域已达到“相对成熟的水平”。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">伊朗议长警告：若与伊朗开战，美国将承担苦涩后果<span class="arrow">▾</span></div>
+            <div class="news-detail">伊朗议会议长卡利巴夫22日表示，如果美国认为与伊朗开战对其有利，那是大错特错，因为这个选择会给美国带来很多苦涩的后果——从股市崩盘到战斗机坠毁，从债务增加到通货膨胀加剧以及士兵伤亡，都将对美国社会造成影响。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">内塔尼亚胡披露曾于2025年2月向美方通报袭击伊朗计划<span class="arrow">▾</span></div>
+            <div class="news-detail">以色列总理内塔尼亚胡22日接受以色列第7频道电视台采访时披露，他在2025年2月与美国总统特朗普会面时便明确告知美方，以色列将对伊朗发动军事袭击。这是他首次公开说明当时双边会晤的核心细节。</div>
+            <div class="news-meta">来源：总台记者 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">普京称愿恢复俄美乌三方会谈，阿布扎比可能成为会谈地点<span class="arrow">▾</span></div>
+            <div class="news-detail">俄罗斯总统普京接受媒体采访时表示，俄罗斯直到现在仍然愿意通过对话解决俄乌冲突，愿意恢复俄美乌三方会谈，会谈话题应是结束冲突后彻底解决乌克兰和俄罗斯的安全问题。俄总统新闻秘书佩斯科夫22日说，普京尚未确定参与三方会谈的俄方代表团人选，阿布扎比可能成为会谈地点。</div>
+            <div class="news-meta">来源：陆家嘴财经早餐 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">泽连斯基称考虑停火但不考虑撤军<span class="arrow">▾</span></div>
+            <div class="news-detail">乌克兰总统泽连斯基22日接受英国媒体采访时称，停火是目前乌方能作出的最大让步。他表示，俄方要求乌方从斯拉维扬斯克、克拉马托尔斯克、德鲁日科夫卡等地撤军，如果将上述城市移交给俄方，乌方将面临巨大安全风险。</div>
+            <div class="news-meta">来源：新华社 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">乌方称俄军向基辅发射21枚弹道导弹，12个州遭袭<span class="arrow">▾</span></div>
+            <div class="news-detail">乌克兰总统泽连斯基22日称，俄军自21日晚起分三轮向基辅发射21枚弹道导弹，住宅、能源设施和地铁等受损，乌12个州遭袭，共34人受伤，其中包括5名儿童，另有2人死亡。</div>
+            <div class="news-meta">来源：环球网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">莫斯科地区遭630架无人机大规模袭击<span class="arrow">▾</span></div>
+            <div class="news-detail">莫斯科市市长索比亚宁22日称，21日20时30分至22日4时，共有630架无人机袭击莫斯科地区，另有163架在接近市区时被拦截，袭击造成2人受伤。俄国防部同日称，俄防空部队在17个州及黑海水域上空拦截808架乌方无人机。</div>
+            <div class="news-meta">来源：中新网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">以色列军方称哈马斯已恢复对加沙地带的控制<span class="arrow">▾</span></div>
+            <div class="news-detail">以色列军方高层近日向美方通报情报称，哈马斯无意解除武装，正修复地道网络并囤积武器，武装人员已恢复至3万至4万人，接近2023年新一轮巴以冲突爆发前水平。以安全部门认为武力是迫使其解除武装的唯一途径。</div>
+            <div class="news-meta">来源：环球网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">胡塞武装称48小时内对沙特境内目标发动四次军事行动<span class="arrow">▾</span></div>
+            <div class="news-detail">也门胡塞武装22日表示，过去48小时内使用弹道导弹和无人机打击沙特国防部大楼、法赫德国王国际机场、阿美石油公司延布设施以及艾卜哈国际机场。连日来沙特利雅得、达曼等地机场和重要设施持续遭袭击，中国驻沙特使领馆已提醒在沙中国公民提高安全防范意识。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">中欧班列累计开行突破14万列，发送货值超5600亿美元<span class="arrow">▾</span></div>
+            <div class="news-detail">截至22日，中欧班列累计开行突破14万列，发送货值超5600亿美元。目前中欧班列通达欧洲26个国家237个城市及12个亚洲国家超100个城市，服务范围基本覆盖亚欧全境。</div>
+            <div class="news-meta">来源：新华网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">美国新墨西哥州裁定元公司缴纳250亿美元罚金<span class="arrow">▾</span></div>
+            <div class="news-detail">21日，美国新墨西哥州一名法官裁定，元公司应就数据隐私误导用户问题缴纳250亿美元罚金。此案源于剑桥分析公司未经允许获取数千万脸书用户数据，陪审团此前认定元公司29份相关声明中26份存在误导。元公司称将提起上诉。</div>
+            <div class="news-meta">来源：经济日报 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">加拿大总理卡尼指责美关税政策害人害己<span class="arrow">▾</span></div>
+            <div class="news-detail">加拿大总理卡尼21日称，美关税政策推高美国家庭开支，颠覆美加延续数十年的贸易关系。他称加拿大输美汽车出口额下降逾10%，美国输加汽车出口额下降逾20%。</div>
+            <div class="news-meta">来源：环球网 · 10月22日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">英国时隔20年恢复大口径火炮炮管本土生产<span class="arrow">▾</span></div>
+            <div class="news-detail">英国国防部22日称，英国时隔20年恢复在本土生产大口径火炮炮管，位于英格兰中部特尔福德的生产车间已正式投产。英国政府已承诺在四年内投入2980亿英镑用于国防建设，并希望通过扩大国防开支推动国内制造业发展和经济增长。</div>
+            <div class="news-meta">来源：新华社 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">我国海洋能累计装机容量达12.3兆瓦，占全球新增装机30%以上<span class="arrow">▾</span></div>
+            <div class="news-detail">22日，自然资源部等部门发布《中国海洋能开发利用报告2026》称，“十四五”时期我国海洋能累计装机容量达到12.3兆瓦，新增装机超过3.3兆瓦，占全球新增装机30%以上。兆瓦级波浪能发电装置在国际上首次实现偏远海岛供电示范。</div>
+            <div class="news-meta">来源：中新网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">体操世锦赛中国女团时隔20年再夺冠，锁定洛杉矶奥运席位<span class="arrow">▾</span></div>
+            <div class="news-detail">北京时间22日，2026年体操世锦赛女子团体决赛，中国队以165.764分的成绩夺冠。这是中国队时隔20年再夺世锦赛女团冠军，并锁定2028年洛杉矶奥运会团体参赛席位。</div>
+            <div class="news-meta">来源：央视新闻 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">西藏那曲巴青7.0级地震已造成16人遇难、46人受伤<span class="arrow">▾</span></div>
+            <div class="news-detail">西藏那曲巴青7.0级地震已造成16人遇难、46人受伤。灾情发生后，各方救援力量已赶赴现场开展搜救与安置工作。</div>
+            <div class="news-meta">来源：金十数据 · 10月23日</div>
+          </div>
         </div>
-</section>
-<section class="category" data-category="电商">
-        <h2 class="category-title">🛒 电商<span class="count">21条</span></h2>
+      </section>
+      <section class="card" data-cat="历史">
+        <div class="card-head">
+          <span class="card-icon">🏛️</span>
+          <h2>历史</h2>
+          <span class="count">21 条</span>
+        </div>
         <div class="news-list">
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">抖音商城双 11「开门红」：店播破千万直播间数量同比增长 98%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">10 月 15 日至 18 日，2026 抖音商城双 11 好物节迎来「开门红」阶段，成交额破千万元的店播直播间数量同比增长 98%，其中破千万元的新商店播数量同比增长 133%。消费券带动成交额破百万元的商家数量同比增长 38%，破亿元商家数量同比增长 200%。店播正在取代达播成为增长的主引擎。</div>
-                <div class="news-meta">2026.10.22 · 抖音双11</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">抖音双 11 首日数据：破百万商家同比增长 74%，新商增长 96%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">抖音电商公布双 11 首日数据：平台成交额新突破百万元的商家数量同比增长 74%，店播成交额破千万元的商家数量同比增长 96%，首次参加双 11 且成交额突破百万元的达人数量同比增长 30%。服饰、美妆个护、快消、宠物用品等类目呈现高增长。</div>
-                <div class="news-meta">2026.10.22 · 抖音双11</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">抖音双 11 周期 28 天，采用现货销售模式不设预售</span><span class="arrow">▸</span></div>
-                <div class="news-detail">今年抖音电商双 11 活动周期为 28 天，采用现货销售模式，不设置预售环节，延续「立减折扣」（在商品报名价基础上立减 15%）与「一件直降」两种优惠方式，减少凑单要求，并通过平台出资消费券进一步增加优惠，累计最高可享万元优惠。取消预售意味着平台把库存风险从消费者转回自己身上。</div>
-                <div class="news-meta">2026.10.22 · 大促规则</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">豆包上线「双 11 问豆包」入口，直播间直接内嵌</span><span class="arrow">▸</span></div>
-                <div class="news-detail">双十一期间豆包 App 首页上线「双 11 问豆包」入口，用户可直接提问，也可点击「双 11 买什么、商品对比、商品测评、扒成分参数」等选项触发更精准的回答，输出的结果后面直接挂着商品链接和领券入口。同时抖音直播间被接入豆包，用户在豆包内即可观看直播、领券和下单支付，无需跳转。</div>
-                <div class="news-meta">2026.10.22 · AI 导购</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">豆包商业化压力显现：月活 3.8 亿，日收入不足百万元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">据《晚点 LatePost》报道，截至 2026 年上半年豆包每天收入不足百万元，主要来自电商佣金，每天产生的电商交易额约一千万元；年化 GMV 约 36.5 亿元、年化收入约 3.65 亿元。作为月活超过 4 亿的超级 App，这一收入规模与同为字节系的红果短剧形成鲜明对比。流量入口的变现，比聚集流量难得多。</div>
-                <div class="news-meta">2026.10.22 · 商业化</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">天猫双 11 有超 100 万个全球品牌、7200 万款商品参与，规模创新高</span><span class="arrow">▸</span></div>
-                <div class="news-detail">天猫今年有超过 100 万个全球品牌、7200 万款商品参与双 11，参与规模创历史新高。头部主播为预售开场聚集了人气：10 月 15 日李佳琦直播间开播一小时场观突破 1000 万人次，付定金首小时 SK-II、丝塔芙、珀莱雅、娇韵诗等多个爆款产品销量突破 10 万件。</div>
-                <div class="news-meta">2026.10.22 · 天猫双11</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">京东双 11 主推「服务」，AI 作为支撑体系运转的底层能力</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东在双十一发布会中用大量时间让一线服务从业者上台汇报，把确定性履约、上门服务、价保保障作为本次大促的竞争力。AI 更多作为支撑整套服务体系平稳运转的辅助能力出现：面向消费者升级 AI 购物助手「东东」，推出 JoyAI 视频购物数字人，帮助用户做商品对比、需求咨询与一键下单。</div>
-                <div class="news-meta">2026.10.22 · 京东双11</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">京东「超脑」大模型 3.0：包裹量预测准确率突破 94.2%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东在零售、物流、健康、工业、外卖、家政等场景应用 AI，其中「超脑」大模型 3.0 的包裹量预测准确率突破 94.2%，AI 推荐的最优配送路径采纳率突破 90.2%。物流效率的分母是预测精度，而不是运力规模。</div>
-                <div class="news-meta">2026.10.22 · 智慧物流</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">小红书双 11 推「混资券」，用补贴分配权倒逼供给端提升</span><span class="arrow">▸</span></div>
-                <div class="news-detail">小红书在双 11 上线面向优质商家和买手的「混资券」玩法，分为凑单混资与爆品混资：前者商家与平台各出资 50% 面向用户发满减券，适合直播为主、品多好凑单的商家；后者适合非直播、笔记型经营商家，平台补贴按档位递增，冲量档商家出资 10%、平台补贴 6% 至 15%。把补贴变成资格筛选，是内容平台最擅长的杠杆。</div>
-                <div class="news-meta">2026.10.22 · 小红书</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">微信小店推出「分享膨胀券」，把熟人关系链变成优惠放大器</span><span class="arrow">▸</span></div>
-                <div class="news-detail">微信小店的玩法是分享膨胀券：用户把优惠券发到微信群或好友聊天，和熟人一起解锁更大的优惠，膨胀出来的新增部分由平台全额承担，券还可以叠加直播专享价与店铺券使用。这类玩法只有在具备关系链的产品里才成立。</div>
-                <div class="news-meta">2026.10.22 · 微信小店</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">快手「天降粉丝券」：一次互动同时完成涨粉和促成交</span><span class="arrow">▸</span></div>
-                <div class="news-detail">快手的「天降粉丝券」比较特别：用户在直播间或店铺领取后，系统会自动完成对主播或店铺的关注，一次互动同时完成涨粉和促成交。把交易动作与关系沉淀绑定，是直播社区型平台的典型设计。</div>
-                <div class="news-meta">2026.10.22 · 快手</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">快手双 11 错峰抢跑：10 月 7 日开启预售，14 日转入现货期</span><span class="arrow">▸</span></div>
-                <div class="news-detail">快手的时间线更早，在 10 月 7 日至 13 日就已经开启预售，10 月 14 日至 11 月 11 日转入现货期，用错峰抢跑锁定第一波流量。当所有平台的规则趋同，时间差就成了少数可用的差异化手段。</div>
-                <div class="news-meta">2026.10.22 · 快手</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">与辉同行定制卫生巾首发 30 万单售罄，开播半小时销量超 10 万单</span><span class="arrow">▸</span></div>
-                <div class="news-detail">董宇辉和与辉同行在双 11 前打出「定制牌」，推出定制卫生巾及安睡裤。10 月 14 日上架首款定制卫生巾，开播半小时销量超过 10 万单，首发 30 万单全部售罄。第三方数据显示，当天仍有 1700 万人次涌入直播间，最高同时在线人数达 16 万。</div>
-                <div class="news-meta">2026.10.22 · 达人带货</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">贾乃亮芸裕高端家纺专场销售额 6600 万元，每小时转化超千万</span><span class="arrow">▸</span></div>
-                <div class="news-detail">贾乃亮在 10 月 10 日开启芸裕高端家纺专场，双 11 首场销售额达 6600 万元，直播期间每小时转化超过 1000 万元；10 月 17 日的骆驼羽绒服专场销售额也突破 1000 万元。垂直专场的效率，来自选品集中度而非流量规模。</div>
-                <div class="news-meta">2026.10.22 · 达人带货</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">淘天升级搜索：从关键词匹配走向理解长尾消费意图</span><span class="arrow">▸</span></div>
-                <div class="news-detail">淘天今年双 11 在洞察用户需求方面发力，升级传统搜索：在关键词匹配之外进一步理解消费者的长尾意图。例如消费者搜索「送闺蜜的生日礼物」时，系统会综合亲密度、喜好及预算进行决策，而非简单罗列商品。</div>
-                <div class="news-meta">2026.10.22 · 搜索产品</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">抖音电商做货架提效：商品卡与搜索承接成为重点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">抖音电商在货架侧集中做商品卡提效和搜索承接，把「看后搜」的流量往商品卡和搜索入口引，同时鼓励商家承诺 48 小时发货、提供运费险补贴，以提高货架商城的履约稳定性。内容场激发兴趣、货架场完成成交，两条腿必须一样粗。</div>
-                <div class="news-meta">2026.10.22 · 货架电商</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">河北清河羊绒产业带商家借消费券实现日销增长 250%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">来自河北清河羊绒产业带的一家商家借助直播介绍羊绒产品，今年双 11 期间借助平台消费券引导成交、备足现货，日销成交额增长 250%。产业带商家把源头好货直连全国消费者，是大促中受益最明显的一类供给。</div>
-                <div class="news-meta">2026.10.22 · 产业带</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">杭州宠物用品商家借平台扶持实现增长，宠物类目成高增长赛道</span><span class="arrow">▸</span></div>
-                <div class="news-detail">杭州一家宠物用品商家借助平台扶持取得不错的增长，宠物用品与服饰、美妆个护、快消一同成为今年双 11 的高增长类目。类目增长的结构性变化，往往比整体 GMV 更值得关注。</div>
-                <div class="news-meta">2026.10.22 · 类目趋势</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">京东加大直播与短视频流量扶持，JoyAI 数字人降低自播门槛</span><span class="arrow">▸</span></div>
-                <div class="news-detail">京东这两年持续强化内容种草和直播带货，今年双 11 很强调内容运营，加大了对直播、短视频内容的流量扶持力度，并推出 JoyAI 数字人直播工具降低商家的自播门槛。工具化是自播规模化的前提。</div>
-                <div class="news-meta">2026.10.22 · 商家工具</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">双 11 去狂欢化：平台从比拼 GMV 转向打磨技术与生态</span><span class="arrow">▸</span></div>
-                <div class="news-detail">今年双 11 消费者不再熬夜等零点，平台战报不再只盯着成交额。各家纷纷砍掉凑单、简化预售、推行官方直降，消费者在不同平台感受到的优惠方式越来越像，平台靠规则制造辨识度的空间被大幅压缩。大促对平台的意义变了：从峰值叙事转向生态价值叙事。</div>
-                <div class="news-meta">2026.10.22 · 行业观察</div>
-            </div>
-            <div class="news-item" data-category="电商">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">中小新商与达人成为今年双 11 的开局亮点</span><span class="arrow">▸</span></div>
-                <div class="news-detail">从首日到第一阶段，中小商家和新入场经营者持续展现经营活力：首次参加双 11 且成交额突破百万元的达人数量同比增长 30%，店播成交额破千万元的新商数量同比增长 133%。平台的分层扶持正在把增长机会向腰部以下扩散。</div>
-                <div class="news-meta">2026.10.22 · 商家生态</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">霜降：秋季最后一个节气，万物开始向内收拢<span class="arrow">▾</span></div>
+            <div class="news-detail">今日霜降，是二十四节气中的第十八个节气，也是秋季的最后一个。此时气温骤降、昼夜温差加大，初霜开始出现。古人以“霜降”命名，正是对一年中由收转藏这一节点的精确标记。</div>
+            <div class="news-meta">历史上的今天 · 霜降</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">霜降三候：豺乃祭兽、草木黄落、蜇虫咸俯<span class="arrow">▾</span></div>
+            <div class="news-detail">古人将霜降分为三候：一候豺乃祭兽，指豺狼开始大量捕猎并储存食物；二候草木黄落，树叶枯黄凋零；三候蜇虫咸俯，蛰虫进入洞穴不动不食、准备冬眠。三候构成了一套完整的过冬准备顺序。</div>
+            <div class="news-meta">历史上的今天 · 霜降</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">2016年11月30日：二十四节气列入联合国教科文组织人类非遗代表作名录<span class="arrow">▾</span></div>
+            <div class="news-detail">2016年11月30日，中国申报的“二十四节气——中国人通过观察太阳周年运动而形成的时间知识体系及其实践”被列入联合国教科文组织人类非物质文化遗产代表作名录。这套起源于黄河流域的时间制度，至今仍深刻影响着中国人的农事与生活节奏。</div>
+            <div class="news-meta">历史 · 2016年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">文博日历今日推荐：清代凸雕柿子灵芝纹碧玉如意<span class="arrow">▾</span></div>
+            <div class="news-detail">清代凸雕柿子灵芝纹碧玉如意，柿子与如意搭配寓意事事如意，灵芝自古被视为仙草、象征健康长寿。碧绿色和田玉温润雅致，集浮雕、透雕、凸雕等多种技法于一体，让柿子造型饱满逼真，枝叶作缠枝状环绕玉柄，如意头与柄端点缀灵芝。</div>
+            <div class="news-meta">来源：央视新闻文博日历 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">“柿柿如意”：中国吉祥图案里的谐音传统<span class="arrow">▾</span></div>
+            <div class="news-detail">以柿子配如意取“事事如意”之谐音，是中国传统装饰中“谐音取意”的典型手法。类似组合还有蝙蝠寓“福”、鹿寓“禄”、鱼寓“余”。这类图案之所以流传广远，是因为它把祝愿从文字转化为了可日常佩戴、陈设的视觉符号。</div>
+            <div class="news-meta">历史 · 民俗</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1856年10月23日：第二次鸦片战争爆发<span class="arrow">▾</span></div>
+            <div class="news-detail">1856年10月23日，英国军舰以“亚罗号事件”为借口炮击广州，第二次鸦片战争爆发。这场战争最终导致《天津条约》与《北京条约》的签订，中国半殖民地化程度进一步加深，也促成了此后洋务运动的兴起。</div>
+            <div class="news-meta">历史上的今天 · 1856年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1924年10月23日：冯玉祥发动北京政变<span class="arrow">▾</span></div>
+            <div class="news-detail">1924年10月，直奉战争期间，冯玉祥率部回师北京发动政变，囚禁总统曹锟，推翻直系控制的北京政府，随后电邀孙中山北上共商国是。这一事件使北方政局骤变，也成为此后国民革命兴起的重要背景。</div>
+            <div class="news-meta">历史上的今天 · 1924年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1942年10月23日：第二次阿拉曼战役打响<span class="arrow">▾</span></div>
+            <div class="news-detail">1942年10月23日，英联邦第八集团军在埃及阿拉曼发起“捷足行动”，第二次阿拉曼战役开始。这场战役扭转了北非战场的态势，被普遍视为第二次世界大战北非战局的转折点。</div>
+            <div class="news-meta">历史上的今天 · 1942年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1956年10月23日：匈牙利事件爆发<span class="arrow">▾</span></div>
+            <div class="news-detail">1956年10月23日，布达佩斯爆发大规模学生与市民游行，随后演变为持续数周的动荡。这一事件是冷战时期东欧阵营内部矛盾的一次集中爆发，对之后数十年的东欧政治格局产生了深远影响。</div>
+            <div class="news-meta">历史上的今天 · 1956年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1983年10月23日：贝鲁特军营爆炸案<span class="arrow">▾</span></div>
+            <div class="news-detail">1983年10月23日，黎巴嫩贝鲁特发生针对多国部队军营的卡车炸弹袭击，造成241名美国军人与58名法国军人死亡。这一事件直接促使此后大国在海外驻军方式上做出重大调整。</div>
+            <div class="news-meta">历史上的今天 · 1983年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">2002年10月23日：莫斯科轴承厂文化宫人质事件<span class="arrow">▾</span></div>
+            <div class="news-detail">2002年10月23日，莫斯科轴承厂文化宫发生人质事件，数百名观众被劫持。该事件以其惨烈后果，成为各国反恐与人质解救战术讨论中的经典案例，也推动了大型场馆安保标准的全面升级。</div>
+            <div class="news-meta">历史上的今天 · 2002年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">2018年10月23日：港珠澳大桥开通<span class="arrow">▾</span></div>
+            <div class="news-detail">2018年10月23日，港珠澳大桥开通仪式在广东珠海举行，大桥于次日正式通车运营。作为世界最长的跨海大桥，它把香港、珠海与澳门纳入一小时交通圈，成为粤港澳大湾区基础设施互联互通的标志性工程。</div>
+            <div class="news-meta">历史上的今天 · 2018年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">大运河：一条把粮食与政令运到北方的水路<span class="arrow">▾</span></div>
+            <div class="news-detail">自隋唐以来，大运河承担着把南方漕粮运往政治中心的功能。它不只是一条运输通道，更是一套维系大一统国家的物流与信息系统——沿线城市因河而兴，漕运的兴衰直接牵动着沿线经济的起伏。</div>
+            <div class="news-meta">历史 · 大运河</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">郑和下西洋：季风节律中的远洋能力<span class="arrow">▾</span></div>
+            <div class="news-detail">明代郑和七下西洋，船队规模与航海技术在当时的世界上处于领先地位。其航行高度依赖对季风规律的掌握——何时出发、何时返航，都由季风决定。技术能力与自然节律的结合，才是远洋航行得以持续的前提。</div>
+            <div class="news-meta">历史 · 明代</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">活字印刷：把复制知识的成本降了一个数量级<span class="arrow">▾</span></div>
+            <div class="news-detail">活字印刷的意义不在于“印得更快”，而在于让知识复制的边际成本大幅下降，从而使书籍从少数机构的珍藏变成可以流通的商品。每一次信息复制成本的下降，都会带来一次知识权力结构的重组。</div>
+            <div class="news-meta">历史 · 印刷史</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">科举制：一种把社会流动制度化的尝试<span class="arrow">▾</span></div>
+            <div class="news-detail">科举制以考试而非出身作为选官依据，在相当长的历史时期内提供了社会向上流动的通道。它的价值不仅在于选拔人才，更在于把“努力可以有回报”这一信念制度化，从而维持了社会的稳定运行。</div>
+            <div class="news-meta">历史 · 制度史</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">罗马道路：帝国治理的物理基础设施<span class="arrow">▾</span></div>
+            <div class="news-detail">罗马帝国修筑了覆盖地中海世界的道路网络，其首要目的是军队的快速调动与政令传递，商业流通是附带收益。“条条大路通罗马”的背后，是一套以基础设施支撑远距离治理的成熟思路。</div>
+            <div class="news-meta">历史 · 古罗马</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">大航海与物种交换：哥伦布大交换改变了餐桌<span class="arrow">▾</span></div>
+            <div class="news-detail">新航路开辟后，美洲的玉米、马铃薯、番茄传入欧亚，旧大陆的小麦、甘蔗与牲畜进入美洲。这场物种交换显著提升了旧大陆的人口承载力，也重塑了全球的农业结构与饮食版图。</div>
+            <div class="news-meta">历史 · 全球史</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">工业革命从棉纺织开始：一个行业如何带动一个时代<span class="arrow">▾</span></div>
+            <div class="news-detail">工业革命最早在棉纺织业取得突破。原因在于该行业工序清晰、市场广阔、劳动力密集，机械化改造的收益最容易测算。一项技术能否扩散，往往不取决于它有多先进，而取决于它落在哪个行业。</div>
+            <div class="news-meta">历史 · 工业革命</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">1929年大萧条与保护主义：关税如何放大一场危机<span class="arrow">▾</span></div>
+            <div class="news-detail">1929年经济危机后，主要经济体相继提高关税以求自保，结果全球贸易大幅萎缩，危机被显著放大。这段历史之所以被反复引用，是因为它展示了在下行周期中，以邻为壑的政策为何会形成集体受损的均衡。</div>
+            <div class="news-meta">历史 · 1929年</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">丝绸之路：贸易通道最终塑造了文化通道<span class="arrow">▾</span></div>
+            <div class="news-detail">丝绸之路最初的功能是商品流通，但真正留下深远影响的是随之而来的技术、宗教、艺术与作物传播。通道的价值往往超出设计它的初衷——这是理解交通与文化交流关系的一条基本经验。</div>
+            <div class="news-meta">历史 · 丝绸之路</div>
+          </div>
         </div>
-</section>
-<section class="category" data-category="母婴">
-        <h2 class="category-title">👶 母婴<span class="count">20条</span></h2>
+      </section>
+      <section class="card" data-cat="电商">
+        <div class="card-head">
+          <span class="card-icon">🛒</span>
+          <h2>电商</h2>
+          <span class="count">21 条</span>
+        </div>
         <div class="news-list">
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">2026 CKE 中国婴童用品展在上海开幕，洗护喂养品类集中亮相</span><span class="arrow">▸</span></div>
-                <div class="news-detail">2026 年 10 月 21 日至 23 日，CKE 中国婴童用品展在上海新国际博览中心举办，洗护喂养品类是本届重点之一。该品类兼具日常刚需与品质升级双重属性，覆盖喂养器具、婴童洗护、清洁消毒等细分领域，品牌在低敏配方、便携清洁等方向的布局日益深入。材质安全已从卖点变成入场券。</div>
-                <div class="news-meta">2026.10.22 · CKE 展会</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">贝亲展出自然实感第三代宽口径奶瓶，玻璃款耐 120℃、PPSU 款耐 180℃</span><span class="arrow">▸</span></div>
-                <div class="news-detail">贝亲管理（上海）有限公司在 E1 馆 E1T02 展位展出自然实感第三代宽口径奶瓶，搭配第三代宽口径硅橡胶奶嘴，仿母乳亲喂。玻璃款瓶身采用纯净硼硅酸玻璃、耐 120℃ 高温；PPSU 款选用优质进口材料、耐高温达 180℃，不含 BPA、BPS 及重金属，兼具轻盈、耐摔与耐磨耐腐蚀特性。</div>
-                <div class="news-meta">2026.10.22 · 贝亲 Pigeon</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">贝亲婴儿高保湿面霜：不添加 93 种争议成分，含五重神经酰胺</span><span class="arrow">▸</span></div>
-                <div class="news-detail">贝亲同场展出婴儿高保湿面霜，配方不添加 93 种争议成分，适用于敏感肌肤，含五重神经酰胺有助于保湿锁水、防止干燥，并添加金盏花精粹。产品可用于面部、手部及身体，适合宝宝、儿童、青少年及成人日常护肤使用。</div>
-                <div class="news-meta">2026.10.22 · 婴童洗护</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">小白熊星钻双仓消毒柜亮相，28L 容量配独立风道</span><span class="arrow">▸</span></div>
-                <div class="news-detail">小白熊（上海）供应链管理有限公司在 E1 馆 E1A10 展位展出具星钻双仓消毒柜，采用上下双舱设计、配备独立风道，搭载专利星钻大灯珠，容量 28L，可用于奶瓶、餐具等物品的消毒。双仓独立风道解决的是交叉污染这个老问题。</div>
-                <div class="news-meta">2026.10.22 · 小白熊</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">小白熊 T1 奶瓶清洗机全国线下首秀，同期发布 A3 消毒柜与 L3 泡奶机</span><span class="arrow">▸</span></div>
-                <div class="news-detail">小白熊在 CKE 现场带来重磅新品 T1 奶瓶清洗机的全国线下首秀，并同场发布年度新品 A3 消毒柜、L3 泡奶机与钛杯恒温杯，全系爆款大单品三合一喂养台、R1 摇奶器、Z2.1 吸奶器、啃咬系列与辅食机系列集中亮相。清洗自动化正在成为喂养场景的下一个刚需。</div>
-                <div class="news-meta">2026.10.22 · 小白熊</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">世喜带来大宝宝奶瓶与新生儿防呛奶瓶，主打底部回气设计</span><span class="arrow">▸</span></div>
-                <div class="news-detail">北京申创世纪信息技术有限公司在 E2 馆 E2D10 展位展出世喜大宝宝奶瓶与世喜新生儿防呛奶瓶。大宝宝款采用仿母乳形态奶嘴与超软液态硅胶材质；新生儿款采用底部回气设计、提供精准流速，奶嘴为仿母乳形态，适用于新生儿喂养。</div>
-                <div class="news-meta">2026.10.22 · 世喜</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">广州熊孩儿展出 PPSU 翻盖鸭嘴杯，45℃ 感温变色设计</span><span class="arrow">▸</span></div>
-                <div class="news-detail">广州熊孩儿婴童用品有限公司在 E1 馆 E1A12 展位展出 PPSU 翻盖鸭嘴杯与弯头玻璃奶瓶。鸭嘴杯适用于 6—12 个月宝宝，可用于吸奶和喝水；杯身左侧设有粉色感温刻度，温度超过 45℃ 时刻度变为白色；瓶身采用 PPSU 材质、不含 BPA、耐摔耐磨。</div>
-                <div class="news-meta">2026.10.22 · 喂养器具</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">美德乐丝韵翼智能版位居高端口碑榜，参考价约 1668 元</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在 2026 年喂养用品实测横评中，吸奶器高端档首选美德乐（Medela）丝韵翼智能版，参考价约 1668 元。美德乐作为国际一线哺乳品牌，其双韵律吸乳模式与医院级吸力标定一直是背奶妈妈群体中的参照标准。</div>
-                <div class="news-meta">2026.10.22 · 美德乐 Medela</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">兰思诺 Lansinoh：从羊脂膏到吸奶器的哺乳全链路品牌</span><span class="arrow">▸</span></div>
-                <div class="news-detail">兰思诺（Lansinoh）以羊毛脂乳头霜起家，逐步扩展至双边电动吸奶器、储奶袋与防溢乳垫，形成覆盖哺乳全链路的产品矩阵。其产品线设计的核心逻辑是把「开奶—吸乳—储存」的三个断点全部补齐，减少妈妈在不同品牌间拼凑配件的成本。</div>
-                <div class="news-meta">2026.10.22 · 兰思诺 Lansinoh</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">苏菲长颈鹿 Sophie the Giraffe：天然橡胶牙胶的长期经典</span><span class="arrow">▸</span></div>
-                <div class="news-detail">法国品牌苏菲（Sophie the Giraffe）长颈鹿牙胶采用天然橡胶与食用级颜料制作，凭借可啃咬的细长腿点与内置发声装置，长期占据牙胶品类的经典位置。它的难被复制之处在于触感与声效的组合，而非外形。</div>
-                <div class="news-meta">2026.10.22 · 苏菲 Sophie</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">MAM 安抚奶嘴与自消毒奶瓶：把消毒流程压缩进奶瓶本身</span><span class="arrow">▸</span></div>
-                <div class="news-detail">奥地利品牌 MAM（美安萌）以安抚奶嘴与自消毒奶瓶著称，其奶瓶设计可在微波炉内完成自消毒，省去独立消毒锅环节。MAM 的安抚奶嘴采用对称型奶嘴头设计，并由正畸材料制成，主打降低对口腔发育的影响。</div>
-                <div class="news-meta">2026.10.22 · MAM 美安萌</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">汤美天地 Tommee Tippee：英系防胀气与仿母乳奶嘴路线</span><span class="arrow">▸</span></div>
-                <div class="news-detail">英国品牌汤美天地（Tommee Tippee）以防胀气奶瓶与仿母乳奶嘴为主打，其奶嘴采用柔软硅胶与宽口径底座设计，便于宝宝含接。配套的消毒与暖奶体系在中英市场均有较高认知度，是国际母婴品牌中性价比导向的代表。</div>
-                <div class="news-meta">2026.10.22 · 汤美天地</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">布朗博士 Dr. Brown's：内置导气系统是防胀气的经典解法</span><span class="arrow">▸</span></div>
-                <div class="news-detail">美国品牌布朗博士（Dr. Brown's）以内置导气系统解决婴儿胀气问题，通过导管将空气与奶液分离，减少宝宝吞入空气。其独特的内部构件也带来了清洗复杂度上升的代价，这正是防胀气设计长期存在的取舍。</div>
-                <div class="news-meta">2026.10.22 · 布朗博士</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">NUK 感温奶瓶实测防胀气表现领先，参考价 170—240 元档</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在 2026 年喂养用品实测中，奶瓶首选贝亲 PPSU 宽口径（参考价 170—240 元）与 NUK 感温款，防胀气效果经实测领先。NUK 的感温设计通过颜色变化提示奶温，把「试温」这个依赖经验的动作变成可视化判断。</div>
-                <div class="news-meta">2026.10.22 · NUK</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">贝瑞克大贝贝参考价约 1830 元，高端吸奶器的另一选择</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在吸奶器高端档中，贝瑞克（Spectra）大贝贝参考价约 1830 元，与美德乐丝韵翼智能版并列为首选。其特点在于可分别调节吸力与周期，适合对舒适度敏感的妈妈；静音表现也是其被频繁提及的优势。</div>
-                <div class="news-meta">2026.10.22 · 贝瑞克 Spectra</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">熊猫布布 Pro 主打乳房敏感人群，好评率约 99%</span><span class="arrow">▸</span></div>
-                <div class="news-detail">针对乳房敏感人群，熊猫布布 Pro 参考价约 1980 元，在实测中好评率约 99%。该档位产品的竞争焦点已从吸力强度转向喇叭口贴合度与硅胶柔软度——吸乳体验的实际差异，往往出现在标称参数之外。</div>
-                <div class="news-meta">2026.10.22 · 吸奶器横评</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">十月结晶 P3pro 双核大吸力附带摇奶器，328 元档性价比突出</span><span class="arrow">▸</span></div>
-                <div class="news-detail">在 300—800 元档实测中，十月结晶 P3pro 参考价 328 元，采用 PP 材质奶瓶（不含 BPA），豪华版附带摇奶器功能，泵奶后直接摇匀、省一步；历史最低价约 306.85 元。其在京东有 1 万+ 评论、好评率约 98%，被称为百元档性价比之王。</div>
-                <div class="news-meta">2026.10.22 · 十月结晶</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">新贝 8768-1 不到 200 元，20 万条评论验证的双变频方案</span><span class="arrow">▸</span></div>
-                <div class="news-detail">预算有限的用户可选新贝 8768-1（参考价约 184 元）或十月结晶夕岚粉（约 174 元）。新贝 8775-1 配件最全，包含 2 个奶瓶、2 个吸力硅胶与鸭嘴阀，拆洗方便，主机带 USB 充电、续航约 6 次；该系列累计 20 万条评论、好评率约 95%。</div>
-                <div class="news-meta">2026.10.22 · 新贝</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">小白熊珍珠贝 Z2 以免手扶设计获高端妈妈青睐，建议蹲 682 元低价</span><span class="arrow">▸</span></div>
-                <div class="news-detail">小白熊珍珠贝 Z2 常卖价约 807 元、历史最低约 682 元，采用免手扶设计搭配内衣式固定器，可边吸边做家务，噪音不高于 45dB，双侧同时泵奶约 10 分钟。需注意免手扶设计对胸型有一定要求，大胸妈妈可能固定不稳，建议搭配运动内衣使用。</div>
-                <div class="news-meta">2026.10.22 · 小白熊</div>
-            </div>
-            <div class="news-item" data-category="母婴">
-                <div class="news-title" onclick="toggle(this)"><span class="title-text">卡乐怡 L19 微调频通乳活塞双泵吸奶器上市，主打通乳与频调</span><span class="arrow">▸</span></div>
-                <div class="news-detail">卡乐怡 L19 微调频通乳活塞双泵吸奶器全新上市，主打微调频与通乳功能，采用活塞泵结构以提供更接近婴儿吸吮节奏的负压曲线。其定位是兼顾开奶期通乳需求与日常吸乳效率，属于国产品牌向功能细分化升级的代表产品。</div>
-                <div class="news-meta">2026.10.22 · 卡乐怡</div>
-            </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">2026年抖音商城双11好物节10月15日正式启动<span class="arrow">▾</span></div>
+            <div class="news-detail">10月15日，2026年抖音商城双11好物节正式启动。与往年不同，今年大促节奏更注重前置蓄水与多波次爆发，平台在首日即公布品类级战报，纸尿裤成为增长最突出的品类之一。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">双11首日抖音电商纸尿裤支付GMV同比增长113%<span class="arrow">▾</span></div>
+            <div class="news-detail">数据显示，双11首日抖音电商纸尿裤品类支付GMV较去年首日同比增长113%；前两日累计支付GMV同比增长46%。被抑制的母婴刚需在大促首日集中释放，是这一增幅的重要背景。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">纸尿裤TOP10品牌成交同比增长253%，5家品牌单日破千万<span class="arrow">▾</span></div>
+            <div class="news-detail">双11首日，纸尿裤品类TOP10品牌成交同比增长253%，破千万品牌达5个以上。头部品牌在内容电商的集中度快速提升，中小品牌的流量获取成本同步抬升。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">帮宝适GMV同比增长超200%，单场达人合作突破2000万<span class="arrow">▾</span></div>
+            <div class="news-detail">帮宝适品牌GMV同比增长超200%，双11首日与抖音母婴类达人“拽爸吴喊喊”的单场合作突破2000万。达人专场的高客单集中成交，正在成为大牌冲刺开门红的标准动作。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">好奇同比增长超100%，多个品牌直播间位列婴童纸尿裤榜单前列<span class="arrow">▾</span></div>
+            <div class="news-detail">金佰利集团旗下的“好奇”同比增长超100%，多个品牌直播间位列婴童纸尿裤榜单前列。外资品牌在内容电商上的本地化运营能力，较前几年已有明显提升。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">东方甄选首次上线自营纸尿裤品类，首发成交超预期<span class="arrow">▾</span></div>
+            <div class="news-detail">东方甄选根据用户需求，首次上线自营纸尿裤品类，首发成交超预期。渠道品牌切入自有商品，依靠的是既有信任资产的迁移，而非价格优势。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">bebebus、贝肽斯、松达等国内品牌涨势喜人<span class="arrow">▾</span></div>
+            <div class="news-detail">其余国内纸尿裤品牌 bebebus、贝肽斯、松达等同样涨势喜人，并借助双11完成品牌新品类布局。国产品牌正从单一标品向护理、洗护、出行等场景延伸。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">市场监管总局等四部门公布婴幼儿纸尿裤甲酰胺问题调查结果<span class="arrow">▾</span></div>
+            <div class="news-detail">近期，市场监管总局等四部门公布婴幼儿纸尿裤甲酰胺问题调查结果，悬置四个月的行业疑问有了权威结论，行业随之复苏。权威结论对刚需品类的信心修复作用，往往比任何促销都更直接。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">好奇“透明查”机制实现全系列全批次检测报告公开可查<span class="arrow">▾</span></div>
+            <div class="news-detail">金佰利集团下属的“好奇”品牌将在双11期间开启品牌仓库溯源直播，已上线的“透明查”机制已实现全系列全批次检测报告公开可查。从报告可查、工厂可看到产品接受社会监督，头部品牌品控进入透明化运营的新阶段。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Babycare落地“安心溯源码”，一包一码建立品质数字档案<span class="arrow">▾</span></div>
+            <div class="news-detail">知名品牌 Babycare 同样落地“安心溯源码”机制，一包一码建立品质数字档案，家长扫码即可观看24小时产线直播。把生产流程本身变成可验证的内容，是当前母婴品牌建立信任最有效的手段之一。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">抖音电商对纸尿裤类目实行上架资质核验与检测报告联动公示<span class="arrow">▾</span></div>
+            <div class="news-detail">抖音电商对纸尿裤类目实行上架资质核验、检测报告联动公示等机制。平台把品控前移到上架环节，意味着单纯依靠投流驱动的增长路径正在被制度性收窄。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">母婴售后升级：7天无理由、15天质量问题退换、60天过敏可退<span class="arrow">▾</span></div>
+            <div class="news-detail">抖音电商配套推出7天无理由退货、15天质量问题退换货、签收60天内过敏凭凭证退货等售后政策。更长的退换窗口看似增加成本，实则降低了首次尝试的心理门槛，对高信任门槛品类尤为关键。</div>
+            <div class="news-meta">来源：中国日报网 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">即时零售成为母婴第二条增长曲线<span class="arrow">▾</span></div>
+            <div class="news-detail">双11战报之外，即时零售这条曲线最容易被忽视。此前大促周期，美团闪购奶粉品类交易额实现大幅增长；孩子王、爱婴室、Babycare 等头部母婴企业都在持续加码近场履约能力。</div>
+            <div class="news-meta">来源：母婴行业观察 · 10月20日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">母婴即时零售主打的不是低价，而是确定性<span class="arrow">▾</span></div>
+            <div class="news-detail">深夜纸尿裤告急、出门前奶嘴遗失、宝宝突发不适急需退热贴、新手爸妈想用小罐奶粉试喝——这类需求不看重跨店满减，也不用等到11号零点，却是育儿家庭最高频的消费场景。即时零售售卖的从来不是大促低价心智，而是消除育儿焦虑的确定性。</div>
+            <div class="news-meta">来源：母婴行业观察 · 10月20日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">阿里妈妈发布双11母婴亲子行业经营指南<span class="arrow">▾</span></div>
+            <div class="news-detail">阿里妈妈发布双11母婴亲子行业经营指南，提出以精细化赛道运营解锁亲子行业增长确定性。指南指出，母婴行业增长引擎正从人口红利转向价值红利，90、95后新一代父母的科学养娃理念催生了大量精细化消费需求。</div>
+            <div class="news-meta">来源：阿里妈妈 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">万相点睛上线：AI定向嵌入关键词与人群推广场景<span class="arrow">▾</span></div>
+            <div class="news-detail">阿里妈妈推出全新AI定向产品万相点睛，利用大模型理解消费人群意图和商品卖点，并通过跨场景推理，寻找传统标签难以识别的潜在消费人群。目前万相点睛已嵌入关键词推广、人群推广、品牌全域投放、内容种草等场景，商家无需额外学习新工具。</div>
+            <div class="news-meta">来源：阿里妈妈 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">母婴投放需前置：建议把重心前移到预售前两周<span class="arrow">▾</span></div>
+            <div class="news-detail">母婴家长的消费决策有清晰时序：在大促预售开启前，大量家长就已开始做功课、对比商品、锁定意向好物。平台因此推荐品牌将投放重心前置到大促预售前两周，用全周期品效组合蓄水人群、持续种草。</div>
+            <div class="news-meta">来源：阿里妈妈 · 10月23日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">母婴渠道格局三分：计划性囤货、内容种草与即时补货各司其职<span class="arrow">▾</span></div>
+            <div class="news-detail">2026年双11，母婴渠道格局已形成清晰的三分结构：天猫、京东承接家庭计划性囤货与高端大件；抖音、小红书承接科普种草、助力新品牌破圈；美团、京东秒送、淘宝闪购承接应急补货和社区近场服务。</div>
+            <div class="news-meta">来源：母婴行业观察 · 10月20日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">从0-3岁到全家：母婴消费版图正在系统性扩圈<span class="arrow">▾</span></div>
+            <div class="news-detail">解读今年大促机会不能只盯着奶粉、纸尿裤两大传统标品。2026年双11释放出一个更明确的信号：母婴消费的边界正在被系统性拓宽，育儿家庭的家庭消费、出行与教育支出逐步被纳入同一经营视野。</div>
+            <div class="news-meta">来源：母婴行业观察 · 10月20日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">内容电商成大促核心阵地：母婴日均GMV同比增38%<span class="arrow">▾</span></div>
+            <div class="news-detail">参考上一年度双11数据，宠物行业日均GMV同比增长47%，母婴行业日均GMV同比增长38%，二者增速均高于消费品大盘25%的水平。母婴行业日均GMV膨胀系数为1.48，显示大促期间增长弹性突出。</div>
+            <div class="news-meta">来源：道有道 · 10月14日</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">高客单价品类消费前置，开门红是核心增量窗口<span class="arrow">▾</span></div>
+            <div class="news-detail">攻略指出，高客单价产品的用户决策集中在大促第一波（抢跑/开门红阶段），第二波收官期以集中爆发为主。品牌需要提前调配资源，重点冲刺开门红阶段，抢占核心增量，并借助套装加优惠券提升转化。</div>
+            <div class="news-meta">来源：道有道 · 10月14日</div>
+          </div>
         </div>
-</section>
-<footer>
-    <div class="updated">🔄 2026.10.22 每日更新 · 共 173 条</div>
-</footer>
+      </section>
+      <section class="card" data-cat="母婴">
+        <div class="card-head">
+          <span class="card-icon">👶</span>
+          <h2>母婴</h2>
+          <span class="count">20 条</span>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">美德乐（Medela）：双韵律吸乳技术的代表性国际品牌<span class="arrow">▾</span></div>
+            <div class="news-detail">瑞士品牌美德乐是吸奶器领域最具国际认知度的品牌之一，其双韵律吸乳模式模拟婴儿先快后慢的吸吮节律，先刺激奶阵再进入吸乳阶段。除家用双边电动吸奶器外，美德乐在医用级吸乳设备与母乳收集配件上的产品线较为完整，是许多医院母乳库的常用配置。</div>
+            <div class="news-meta">品牌 · 吸奶器</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">美德乐母乳储存方案：从收集到冷冻的标准化流程<span class="arrow">▾</span></div>
+            <div class="news-detail">美德乐在母乳储存环节提供集乳瓶、储奶袋与配套转换接头，配合标注毫升刻度与时间栏的标签，形成从吸乳、冷藏、冷冻到解冻的标准化流程。对需要背奶的职场妈妈而言，配件之间的通用性往往比单一产品性能更影响使用体验。</div>
+            <div class="news-meta">品牌 · 吸奶器</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">兰思诺（Lansinoh）：以羊毛脂乳头霜著称的美国母婴品牌<span class="arrow">▾</span></div>
+            <div class="news-detail">美国品牌兰思诺最广为人知的产品是 HPA 羊毛脂乳头霜，用于哺乳初期乳头干裂的护理，其成分纯度与无需擦拭即可哺乳的特点是主要卖点。该品牌同时生产防溢乳垫、储奶袋与手动吸奶器等哺乳辅助用品。</div>
+            <div class="news-meta">品牌 · 哺乳护理</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">兰思诺手动吸奶器与集乳器：背奶场景的轻量选择<span class="arrow">▾</span></div>
+            <div class="news-detail">兰思诺的手动吸奶器与硅胶集乳器主打轻便、静音与易清洗，适合在通勤或差旅中临时使用。集乳器利用负压吸附在乳房上收集另一侧溢出的母乳，不需要电源与组装，是低奶量与短时外出场景的常见补充工具。</div>
+            <div class="news-meta">品牌 · 吸奶器</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">法国苏菲（Sophie la girafe）长颈鹿：天然橡胶牙胶的经典之作<span class="arrow">▾</span></div>
+            <div class="news-detail">法国苏菲长颈鹿自1961年问世以来，一直是天然橡胶牙胶的代表产品。它采用天然橡胶与食用级颜料制成，细长的腿、耳朵与犄角便于宝宝抓握啃咬，内置的哨音在按压时发声。其斑点图案与柔软质地设计，针对的是4个月以上出牙期婴儿的牙龈按摩需求。</div>
+            <div class="news-meta">品牌 · 牙胶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">MAM：奥地利品牌，安抚奶嘴与防胀气奶瓶并重<span class="arrow">▾</span></div>
+            <div class="news-detail">奥地利品牌 MAM 以安抚奶嘴与防胀气奶瓶为主要产品线。其奶嘴采用丝感硅胶，盾牌部分带通气孔以减少对口周皮肤的压迫；奶瓶则通过透气底阀设计减少吞入空气。MAM 还推出了带自消毒功能的微波蒸汽消毒奶瓶，适合外出场景。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">汤美天地（Tommee Tippee）：以仿母乳奶瓶著称的英国品牌<span class="arrow">▾</span></div>
+            <div class="news-detail">英国品牌汤美天地主打更接近母乳喂养体验的奶瓶设计，其奶嘴采用仿母乳柔软触感材质与宽口径造型，配合特有的防胀气阀，意在降低瓶喂与亲喂之间的转换成本。该品牌在英国市场的母婴用品渗透率长期位居前列。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">布朗博士（Dr. Brown&#x27;s）：内置导气系统的防胀气方案<span class="arrow">▾</span></div>
+            <div class="news-detail">美国品牌布朗博士的核心设计是奶瓶内部的导气系统：通过一根导管将空气引至瓶底，避免奶液与空气混合产生气泡，从而减少婴儿吞入空气导致的胀气、打嗝与吐奶。其缺点是配件较多、清洗步骤相对繁琐。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">新安怡（Philips Avent）：自然原生系列与宽口径奶瓶<span class="arrow">▾</span></div>
+            <div class="news-detail">新安怡的自然原生系列奶瓶采用宽口径花瓣形奶嘴，意在模拟母乳的柔软与延展性；其防胀气阀被集成在奶嘴根部。该品牌产品线覆盖奶瓶、吸奶器、消毒锅与辅食机，是国际品牌中品类协同度较高的代表。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">贝亲（Pigeon）：日本品牌的实感奶嘴与宽口径奶瓶<span class="arrow">▾</span></div>
+            <div class="news-detail">日本品牌贝亲以“实感奶嘴”著称，通过多次试验调整奶嘴的硬度、厚度与孔径，试图接近母亲乳头的触感与出奶节奏。其宽口径奶瓶便于冲泡与清洗，配套的奶瓶刷与消毒配件在国内市场保有量大。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">NUK：德国品牌的仿真奶嘴与 orthodontic 造型<span class="arrow">▾</span></div>
+            <div class="news-detail">德国品牌 NUK 的奶嘴采用仿母亲乳头形状的扁平设计，宣称更贴合婴儿口腔上颚，减少对牙齿排列的影响。其产品线还包括口径较宽的玻璃与塑料奶瓶、安抚奶嘴以及婴儿餐具，是欧洲较早系统化做口腔形态研究的母婴品牌。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">可么多么（Comotomo）：硅胶一体式奶瓶的便携代表<span class="arrow">▾</span></div>
+            <div class="news-detail">可么多么以医用级硅胶一体成型的奶瓶著称，瓶身柔软可挤压、不易摔碎，宽口径设计便于清洗，双防胀气阀位于奶嘴边缘。这类硅胶奶瓶在断奶期与宝宝自主抓握阶段的接受度较高。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">haakaa：新西兰的手动硅胶集乳器<span class="arrow">▾</span></div>
+            <div class="news-detail">haakaa 来自新西兰，以一体式硅胶手动集乳器走红。它依靠挤压后产生的负压吸附在乳房上，收集另一侧自然流出的母乳，无需电源、无配件、可直接蒸汽消毒。因其结构简单、价格亲民，常被视为入门级集乳工具。</div>
+            <div class="news-meta">品牌 · 吸奶器</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Spectra：韩国医用级吸奶器的代表品牌<span class="arrow">▾</span></div>
+            <div class="news-detail">韩国品牌 Spectra 的吸奶器以医用级定位进入市场，主打可调节的吸力与频率、封闭的防回流设计（避免奶液进入主机管路），在需要长时间、高频次吸乳的妈妈群体中使用较多。其 S1、S2 等型号在跨境渠道认知度较高。</div>
+            <div class="news-meta">品牌 · 吸奶器</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">Babycare落地“安心溯源码”，一包一码可看24小时产线直播<span class="arrow">▾</span></div>
+            <div class="news-detail">国产品牌 Babycare 在双11期间落地“安心溯源码”机制，一包一码建立品质数字档案，家长扫码即可观看24小时产线直播。从报告可查到工厂可看，头部品牌品控进入透明化运营阶段。</div>
+            <div class="news-meta">品牌 · 纸尿裤</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">帮宝适与好奇：国际纸尿裤品牌在内容电商的高增长<span class="arrow">▾</span></div>
+            <div class="news-detail">双11首日，帮宝适GMV同比增长超200%，单场达人合作突破2000万；金佰利旗下“好奇”同比增长超100%。好奇已上线“透明查”机制，实现全系列全批次检测报告公开可查，并在大促期间开启品牌仓库溯源直播。</div>
+            <div class="news-meta">品牌 · 纸尿裤</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">大王GOO.N、尤妮佳与花王妙而舒：日系纸尿裤的差异化竞争<span class="arrow">▾</span></div>
+            <div class="news-detail">日系品牌中，大王 GOO.N 主打柔软与透气，尤妮佳 moony 强调吸收速度与干爽表层，花王妙而舒则以凹凸柔点内层与腰围贴合度著称。三者在跨境渠道的份额长期稳定，竞争焦点集中在薄度、回渗量与夜间长效吸收。</div>
+            <div class="news-meta">品牌 · 纸尿裤</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">世喜：以断奶奶瓶切入细分场景的国产品牌<span class="arrow">▾</span></div>
+            <div class="news-detail">世喜从断奶奶瓶这一细分需求切入，产品采用接近母乳实感的硅胶奶嘴与偏柔软的瓶身，配合重力球吸管用于较大月龄宝宝的自主握持。把一个具体的育儿痛点做深，是国产品牌在成熟品类中突围的常见路径。</div>
+            <div class="news-meta">品牌 · 奶瓶</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">bebebus、可优比与十月结晶：国产品牌的场景化延伸<span class="arrow">▾</span></div>
+            <div class="news-detail">bebebus、可优比、十月结晶等国内品牌在本轮双11中涨势喜人，并借助大促完成新品类布局。它们从纸尿裤、待产包等标品出发，向出行、睡眠、洗护等场景延伸，形成高频触达的组合式产品矩阵。</div>
+            <div class="news-meta">品牌 · 国货</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title" onclick="toggle(this)">孩子王、爱婴室加码即时履约，实体店转向本地育儿服务站<span class="arrow">▾</span></div>
+            <div class="news-detail">孩子王、爱婴室等头部母婴企业持续加码近场履约能力。单纯坐等平台流量、靠进货囤货过日子的传统母婴门店生存空间被持续压缩，能活下去的实体店都在转型成为本地育儿服务站、即时履约网点与私域会员中心。</div>
+            <div class="news-meta">渠道 · 即时零售</div>
+          </div>
+        </div>
+      </section>
+  </main>
+  <div class="footer">每日热点工作台 · 2026.10.23 星期五 · 共 173 条</div>
+</div>
 <script>
-function toggle(el) {
-    var item = el.closest('.news-item');
-    item.classList.toggle('open');
+
+function toggle(el){
+  var item = el.parentNode;
+  item.classList.toggle('open');
 }
-function filterNews(category) {
-    var items = document.querySelectorAll('.news-item');
-    items.forEach(function(item) {
-        if (category === '全部' || item.getAttribute('data-category') === category) {
-            item.style.display = '';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-    var sections = document.querySelectorAll('.category');
-    sections.forEach(function(sec) {
-        if (category === '全部' || sec.getAttribute('data-category') === category) {
-            sec.style.display = '';
-        } else {
-            sec.style.display = 'none';
-        }
-    });
-    document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.classList.remove('active');
-    });
-    event.currentTarget.classList.add('active');
+function filter(cat, btn){
+  var cards = document.querySelectorAll('.card');
+  for (var i = 0; i < cards.length; i++){
+    var c = cards[i];
+    if (cat === '全部' || c.getAttribute('data-cat') === cat){ c.style.display = ''; }
+    else { c.style.display = 'none'; }
+  }
+  var tabs = document.querySelectorAll('.tab');
+  for (var j = 0; j < tabs.length; j++){ tabs[j].classList.remove('active'); }
+  if (btn){ btn.classList.add('active'); }
 }
 
 </script>
